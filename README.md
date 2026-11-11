@@ -13,17 +13,22 @@ Repo ini adalah versi statis dari aplikasi Cloudflare Workers `outage-map-app`. 
 
 ## Deploy ke GitHub Pages
 
-1. Buat repositori baru di GitHub (misal `outage-map-pages`) tanpa file awal.
-2. Dorong repo ini (ganti `USERNAME`):
+Repo ini diterbitkan ke repositori GitHub `andiarman/Pemadamanlistrikkotapalu`.
+
+1. Pastikan remote menunjuk ke repo yang benar:
 
    ```powershell
-   git remote add origin https://github.com/USERNAME/outage-map-pages.git
-   git branch -M main
-   git push -u origin main
+   git remote set-url origin https://github.com/andiarman/Pemadamanlistrikkotapalu.git
+   ```
+
+2. Dorong perubahan:
+
+   ```powershell
+   git push origin main
    ```
 
 3. Di GitHub, buka **Settings → Pages → Build and deployment** dan pilih **Source: GitHub Actions**.
-4. Workflow `.github/workflows/deploy.yml` otomatis menerbitkan situs setiap push ke `main`. Sitas akan tayang di `https://USERNAME.github.io/outage-map-pages/`.
+4. Workflow `.github/workflows/deploy.yml` otomatis menerbitkan situs setiap push ke `main`. Situs akan tayang di `https://andiarman.github.io/Pemadamanlistrikkotapalu/`.
 
 ## Pengembangan lokal
 
