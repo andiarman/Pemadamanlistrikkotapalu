@@ -1,0 +1,1 @@
+{"schema_version":1,"events":[{"eventId":"uji","startTime":"2026-11-24T09:00:00+08:00","affectedAreas":[{"points":[],"ulpName":"ULP Palu Kota","locations":["Jalan Gajah Mada"]}],"endTime":"2026-11-24T13:00:00+08:00","title":"Uji pipeline","locations":["Kota Palu"]}],"generated_at":"2026-11-11T00:00:00.000Z","date":"2026-11-24"}
