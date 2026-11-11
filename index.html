@@ -349,7 +349,7 @@
           </div>
           <button id="close-map-progress" type="button" aria-label="Sembunyikan progres">×</button>
         </div>
-        <div class="progress-track" role="progressbar" aria-label="Progres pencarian titik jalan" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-track" role="progressbar" aria-label="Progres pencarian titik lokasi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
           <div id="progress-bar"></div>
         </div>
         <div class="progress-footer">
@@ -398,7 +398,7 @@ Anda membaca gambar flyer resmi jadwal pemadaman listrik PLN di Sulawesi Tengah.
       "areas": [
         {
           "ulp_name": "ULP Palu Kota",
-          "locations": ["Jalan Gajah Mada", "Jalan Diponegoro"]
+          "locations": ["Jalan Gajah Mada", "Jalan Diponegoro", "Pasar Masomba", "Lolu Selatan"]
         }
       ]
     }
@@ -410,15 +410,18 @@ Ketentuan:
 - Salin judul kegiatan dari flyer. Jika judul tidak terbaca, gunakan tepat "Jadwal pemadaman listrik"; jangan menambah keterangan lain.
 - start_time dan end_time harus ISO 8601 lengkap dengan zona WITA +08:00, misalnya 2026-11-11T09:00:00+08:00. Pakai tanggal yang tercetak. Bila jam selesai melewati tengah malam, gunakan tanggal berikutnya.
 - locations hanya berisi kabupaten/kota administratif terdampak yang tercetak, masing-masing sekali, dengan ejaan kanonis: Kota Palu, Sigi, Donggala, Parigi Moutong, Poso, Morowali, Morowali Utara.
-- areas harus mengelompokkan jalan berdasarkan nama ULP yang tercetak. Salin nama ULP dengan tepat.
-- areas.locations hanya boleh berisi nama jalan yang benar-benar tercantum di flyer. Tulis awalan "Jalan " untuk setiap nama, termasuk bila flyer menyingkatnya sebagai "Jl.". Jangan masukkan desa, kelurahan, toko, gedung, landmark, atau keterangan lain.
-- Jika satu kelompok ULP tidak memiliki nama jalan yang dapat diverifikasi, lewati kelompok tersebut; jangan keluarkan "locations": [].
+- areas harus mengelompokkan lokasi berdasarkan nama ULP yang tercetak. Salin nama ULP dengan tepat.
+- areas.locations adalah daftar SETIAP nama lokasi yang tercetak di flyer dan dapat dicari di peta sebagai satu titik: nama jalan, nama desa/kelurahan, pasar, toko, gedung, kantor, sekolah, rumah sakit, masjid, gereja, terminal, pelabuhan, kampus, atau landmark lain yang disebut flyer.
+- Khusus nama jalan, selalu tulis awalan "Jalan " (contoh: flyer "Jl. Gajah Mada" menjadi "Jalan Gajah Mada"). Untuk nama tempat, desa, atau kelurahan, salin namanya saja tanpa menambahkan kata "Kelurahan", "Desa", "Kecamatan", "Toko", atau "Pasar" bila kata itu tidak tercetak.
+- Setiap nama harus spesifik dan cukup untuk dicari sebagai titik: gunakan nama diri yang tercetak, bukan kata umum. Jangan menulis "Pasar", "Terminal", "Pelabuhan", "Jalan Poros", "Wilayah ULP", "Beberapa Desa", "RT/RW", atau keterangan waktu sebagai lokasi.
+- Salin hanya nama yang benar-benar terlihat di flyer. Jangan menambahkan lokasi dari ingatan, peta, atau pengetahuan luar, dan jangan mengarang titik untuk melengkapi daftar.
+- Jika satu kelompok ULP tidak memiliki nama lokasi yang dapat diverifikasi, lewati kelompok tersebut; jangan keluarkan "locations": [].
 - Jika data kabupaten/kota tidak terbaca, gunakan "locations": []. Jangan mengarang wilayah.
-- LAKUKAN PEMERIKSAAN ULANG: setelah menyalin seluruh nama jalan, cocokkan satu per satu kembali dengan gambar asli. Pastikan ejaan dan nama jalan benar-benar terlihat pada gambar, tidak tertukar antar-ULP, tidak terduplikasi, dan tidak berasal dari ingatan atau tebakan. Jika satu nama tidak terbaca dengan yakin, jangan masukkan nama itu.
-- Jangan menebak tanggal, jam, wilayah, ULP, atau jalan. Jika tanggal atau jam suatu jadwal tidak terbaca dengan yakin, jangan masukkan event tersebut. Jangan mengarang jalan untuk melengkapi daftar.
-- Jika setelah pemeriksaan tidak ada kelompok ULP dengan jalan terverifikasi, lewati seluruh event tersebut.
+- LAKUKAN PEMERIKSAAN ULANG: setelah menyalin seluruh nama lokasi, cocokkan satu per satu kembali dengan gambar asli. Pastikan ejaan benar-benar terlihat pada gambar, tidak tertukar antar-ULP, tidak terduplikasi, dan setiap nama cukup spesifik untuk dicari sebagai satu titik di peta. Jika satu nama tidak terbaca dengan yakin, jangan masukkan nama itu.
+- Jangan menebak tanggal, jam, wilayah, ULP, atau lokasi. Jika tanggal atau jam suatu jadwal tidak terbaca dengan yakin, jangan masukkan event tersebut.
+- Jika setelah pemeriksaan tidak ada kelompok ULP dengan lokasi terverifikasi, lewati seluruh event tersebut.
 - Jangan mengeluarkan skor keyakinan, sumber, warnings, atau properti tambahan. Gunakan hanya properti pada format contoh.
-- Jika tidak ada jadwal lengkap dengan setidaknya satu nama jalan yang terverifikasi, keluarkan persis {"schema_version":1,"events":[]} tanpa teks tambahan.
+- Jika tidak ada jadwal lengkap dengan setidaknya satu nama lokasi yang terverifikasi, keluarkan persis {"schema_version":1,"events":[]} tanpa teks tambahan.
     </script>
 
     <script>
@@ -613,7 +616,7 @@ Ketentuan:
         statusLine.dataset.endTime = properties.endTime;
         content.append(statusLine);
         if (properties.isAreaShape) {
-          content.append(makeTextElement("span", "popup-note", "Bentuk garis menghubungkan titik jalan terdekat; bukan batas pemadaman resmi."));
+          content.append(makeTextElement("span", "popup-note", "Bentuk garis menghubungkan titik lokasi terdekat; bukan batas pemadaman resmi."));
         }
         return content;
       }
@@ -959,7 +962,7 @@ Ketentuan:
           }
           emptyState.hidden = mapEvents.length > 0 && streetPoints.length > 0;
           if (mapEvents.length && !streetPoints.length) {
-            emptyState.textContent = "Jadwal hari ini sudah tersimpan, tetapi belum ada titik jalan yang berhasil dicari.";
+            emptyState.textContent = "Jadwal hari ini sudah tersimpan, tetapi belum ada titik lokasi yang berhasil dicari.";
           } else if (!mapEvents.length) {
             emptyState.textContent = "Belum ada jadwal pemadaman untuk hari ini.";
           }
@@ -977,6 +980,50 @@ Ketentuan:
           .replace(/[^a-z0-9]+/g, " ")
           .trim();
       }
+
+      const locationStopWords = new Set([
+        "toko", "pasar", "gedung", "kantor", "rumah", "sakit", "puskesmas", "klinik",
+        "sekolah", "masjid", "mushola", "gereja", "terminal", "pelabuhan", "bandara",
+        "kampus", "universitas", "hotel", "mall", "plaza", "kelurahan", "desa",
+        "kecamatan", "jembatan", "taman", "lapangan", "kompleks", "perumahan", "blok",
+        "depan", "dekat", "samping", "seberang", "area", "kawasan"
+      ]);
+
+      function locationTokens(value) {
+        return normalizeStreetName(value).split(" ")
+          .filter((token) => token && !locationStopWords.has(token));
+      }
+
+      function geometryPoint(geometry) {
+        if (!geometry || !Array.isArray(geometry.coordinates)) return null;
+        let positions = [];
+        if (geometry.type === "Point") {
+          positions = [geometry.coordinates];
+        } else if (geometry.type === "Polygon") {
+          positions = geometry.coordinates[0] || [];
+        } else if (geometry.type === "MultiPolygon") {
+          positions = (geometry.coordinates || []).flatMap((polygon) => polygon[0] || []);
+        }
+        const points = positions.filter((position) =>
+          Array.isArray(position) && typeof position[0] === "number" && typeof position[1] === "number");
+        if (!points.length) return null;
+        let minLongitude = Infinity;
+        let maxLongitude = -Infinity;
+        let minLatitude = Infinity;
+        let maxLatitude = -Infinity;
+        for (const [longitude, latitude] of points) {
+          minLongitude = Math.min(minLongitude, longitude);
+          maxLongitude = Math.max(maxLongitude, longitude);
+          minLatitude = Math.min(minLatitude, latitude);
+          maxLatitude = Math.max(maxLatitude, latitude);
+        }
+        return [(minLongitude + maxLongitude) / 2, (minLatitude + maxLatitude) / 2];
+      }
+
+      const geocodablePlaceClasses = new Set([
+        "highway", "place", "boundary", "amenity", "shop", "building",
+        "tourism", "historic", "leisure", "office", "man_made"
+      ]);
 
       function streetSearchContext(ulpName) {
         const value = ulpName.toLocaleLowerCase("id-ID");
@@ -1040,20 +1087,19 @@ Ketentuan:
         if (cached && cached.expiresAt > Date.now()) return cached.result;
 
         const result = await fetchGeocodeResult(locationName, ulpName);
-        const requestedTokens = normalizeStreetName(locationName).split(" ").filter(Boolean);
-        const match = result.features?.find((feature) => {
+        const requestedTokens = locationTokens(locationName);
+        const match = requestedTokens.length ? result.features?.find((feature) => {
           const properties = feature.properties || {};
-          const coordinates = feature.geometry?.coordinates;
+          const coordinates = geometryPoint(feature.geometry);
           const candidateName = typeof properties.name === "string" ? properties.name : "";
           const category = properties.class || properties.category || "";
-          const candidateTokens = normalizeStreetName(candidateName).split(" ").filter(Boolean);
-          return feature.geometry?.type === "Point" &&
-            Array.isArray(coordinates) && coordinates.length === 2 &&
-            category === "highway" && requestedTokens.length > 0 &&
+          const candidateTokens = locationTokens(candidateName);
+          return coordinates !== null &&
+            geocodablePlaceClasses.has(category) && candidateTokens.length > 0 &&
             requestedTokens.every((token) => candidateTokens.includes(token)) &&
             candidateTokens.length - requestedTokens.length <= 2;
-        });
-        const coordinates = match?.geometry?.coordinates;
+        }) : null;
+        const coordinates = match ? geometryPoint(match.geometry) : null;
         const longitude = coordinates?.[0];
         const latitude = coordinates?.[1];
         const displayName = match?.properties?.display_name || "";
@@ -1104,7 +1150,7 @@ Ketentuan:
             alreadyMapped,
             0,
             "done",
-            "Semua jalan sudah dipetakan atau tidak ada jalan baru yang perlu dicari."
+            "Semua lokasi sudah dipetakan atau tidak ada lokasi baru yang perlu dicari."
           );
           return;
         }
@@ -1241,8 +1287,11 @@ Ketentuan:
             }
             const seenStreets = new Set();
             const streets = area.locations.filter((street) => typeof street === "string").map((street) => {
-              const value = street.trim().replace(/\s+/g, " ");
-              if (!/^(?:jalan|jl\.?)\s/i.test(value) || value.length > 150) return "";
+              const value = street.trim().replace(/\s+/g, " ")
+                .replace(/^jl\.?\s+/i, "Jalan ")
+                .replace(/^(?:kel\.?|kelurahan|desa|kec\.?|kecamatan)\s+/i, "");
+              if (value.length < 3 || value.length > 150 || !/[\p{L}]/u.test(value)) return "";
+              if (/^(?:rt|rw)\b/i.test(value)) return "";
               const key = value.toLocaleLowerCase("id-ID");
               if (seenStreets.has(key)) return "";
               seenStreets.add(key);
