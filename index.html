@@ -93,26 +93,42 @@
         background: rgba(8, 15, 25, .9);
         box-shadow: 0 8px 24px rgba(0, 0, 0, .23);
         backdrop-filter: blur(10px);
-        pointer-events: none;
+        pointer-events: auto;
       }
       .legend-label { padding: 0 .25rem; color: #8290a2; font-size: .57rem; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
       .legend-item {
         display: inline-flex;
         align-items: center;
         gap: .36rem;
-        padding: .28rem .48rem;
-        border: 1px solid rgba(203, 213, 225, .1);
+        padding: .28rem .5rem;
+        border: 1px solid rgba(203, 213, 225, .14);
         border-radius: 999px;
         background: rgba(255, 255, 255, .035);
         color: #d7dee8;
+        font-family: inherit;
         font-size: .64rem;
         white-space: nowrap;
+        cursor: pointer;
+        transition: background .15s ease, border-color .15s ease;
       }
-      .legend-dot { width: 26px; height: 7px; border-radius: 999px; }
-      .legend-dot.active { background: linear-gradient(90deg, #ff4268, #ffb547, #48d6a0); box-shadow: 0 0 8px rgba(255, 66, 104, .45); }
-      .legend-dot.upcoming { background: linear-gradient(90deg, #ffb547, #ff4268); box-shadow: 0 0 8px rgba(255, 181, 71, .5); }
-      .legend-dot.passed { background: linear-gradient(90deg, #48d6a0, #357a63); }
-      .legend-note { width: 100%; padding: .05rem .25rem 0; color: #8694a7; font-size: .58rem; }
+      .legend-item:hover { background: rgba(255, 255, 255, .09); border-color: rgba(203, 213, 225, .32); }
+      .legend-item[aria-pressed="true"] {
+        background: rgba(255, 255, 255, .14);
+        border-color: rgba(226, 232, 240, .58);
+        color: #ffffff;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06);
+      }
+      .legend-item:focus-visible { outline: 2px solid #93c5fd; outline-offset: 1px; }
+      .legend-item b { color: #f1f5f9; font-weight: 800; font-variant-numeric: tabular-nums; }
+      .legend-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; flex: 0 0 18px; }
+      .legend-icon svg { width: 18px; height: 18px; }
+      .legend-icon .street-marker.active { animation: none; }
+      .legend-icon-all {
+        border-radius: 4px;
+        background: linear-gradient(135deg, #ef4444 0 33%, #facc15 33% 66%, #22c55e 66% 100%);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .75);
+      }
+      .legend-note { width: 100%; padding: .05rem .25rem 0; color: #8694a7; font-size: .58rem; line-height: 1.45; }
       #empty-state {
         position: absolute;
         z-index: 400;
@@ -315,27 +331,26 @@
       .popup-note { display: block; margin-top: .4rem; color: #9a3412; font-size: .68rem; }
       .street-marker-icon { border: 0; background: transparent; }
       .street-marker {
-        position: relative;
         display: block;
-        width: 18px;
-        height: 18px;
-        border: 2px solid rgba(255, 255, 255, .96);
-        border-radius: 50% 50% 50% 5px;
-        background: var(--marker-color, #ff4268);
-        box-shadow: 0 0 0 4px var(--marker-glow, rgba(255, 66, 104, .35)), 0 0 15px var(--marker-glow, rgba(255, 66, 104, .35));
-        transform: rotate(-45deg);
+        width: 24px;
+        height: 24px;
+        overflow: visible;
+        filter: drop-shadow(0 0 1px rgba(15, 23, 42, .9)) drop-shadow(0 1px 2px rgba(0, 0, 0, .6));
+        transform-origin: center;
       }
-      .street-marker::after {
-        position: absolute;
-        inset: 4px;
-        border-radius: 50%;
-        background: white;
-        content: "";
-      }
-      .street-marker.active { animation: active-glow 1.8s ease-out infinite; }
+      .street-marker.active { animation: active-glow 1.6s ease-out infinite; }
       @keyframes active-glow {
-        0%, 100% { transform: rotate(-45deg) scale(1); }
-        50% { transform: rotate(-45deg) scale(1.12); }
+        0%, 100% {
+          transform: scale(1);
+          filter: drop-shadow(0 0 2px rgba(239, 68, 68, .8)) drop-shadow(0 0 1px rgba(15, 23, 42, .9)) drop-shadow(0 1px 2px rgba(0, 0, 0, .6));
+        }
+        50% {
+          transform: scale(1.16);
+          filter: drop-shadow(0 0 9px rgba(239, 68, 68, .95)) drop-shadow(0 0 1px rgba(15, 23, 42, .9)) drop-shadow(0 1px 2px rgba(0, 0, 0, .6));
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .street-marker.active { animation: none; }
       }
       .street-tooltip-shell { border: 1px solid #334155 !important; border-radius: 6px !important; background: rgba(8, 17, 30, .94) !important; color: #f8fafc !important; box-shadow: 0 2px 8px rgba(0,0,0,.35) !important; }
       .street-tooltip-shell::before { border-top-color: #334155 !important; }
@@ -352,8 +367,8 @@
         #open-import,
         #open-activity-log { min-height: 32px; padding: .35rem .55rem; border-radius: 8px; font-size: .68rem; }
         .map-legend { left: 7px; right: 7px; bottom: 8px; justify-content: space-around; gap: .25rem; max-width: none; padding: .45rem .4rem; border-radius: 10px; }
-        .legend-item { gap: .22rem; font-size: .62rem; }
-        .legend-dot { width: 20px; height: 6px; }
+        .legend-item { gap: .22rem; padding: .26rem .4rem; font-size: .62rem; }
+        .legend-icon, .legend-icon svg { width: 16px; height: 16px; flex-basis: 16px; }
         .legend-note { font-size: .56rem; text-align: center; }
         #map-progress-panel { top: 9px; right: 8px; width: min(340px, calc(100vw - 16px)); padding: .7rem .75rem; }
         #progress-title { font-size: .72rem; }
@@ -406,11 +421,25 @@
           <ol id="activity-log" aria-live="polite"></ol>
         </details>
       </section>
-      <div class="map-legend" aria-label="Warna status jadwal">
-        <span class="legend-item"><i class="legend-dot active"></i><span id="active-count">Aktif 0</span></span>
-        <span class="legend-item"><i class="legend-dot upcoming"></i><span id="upcoming-count">Akan datang 0</span></span>
-        <span class="legend-item"><i class="legend-dot passed"></i><span id="passed-count">Selesai 0</span></span>
-        <span class="legend-note">Warna titik berubah mengikuti waktu: kuning → merah saat mendekati padam, merah → hijau saat mendekati menyala. Garis area hanya perkiraan, bukan batas resmi PLN.</span>
+      <div class="map-legend" aria-label="Legenda dan filter status titik">
+        <span class="legend-label">Filter titik</span>
+        <button class="legend-item" type="button" data-filter="all" aria-pressed="true">
+          <i class="legend-icon legend-icon-all" aria-hidden="true"></i>
+          <span>Semua <b id="all-count">0</b></span>
+        </button>
+        <button class="legend-item" type="button" data-filter="active" aria-pressed="false">
+          <i class="legend-icon" aria-hidden="true"></i>
+          <span>Padam <b id="active-count">0</b></span>
+        </button>
+        <button class="legend-item" type="button" data-filter="upcoming" aria-pressed="false">
+          <i class="legend-icon" aria-hidden="true"></i>
+          <span>Akan padam <b id="upcoming-count">0</b></span>
+        </button>
+        <button class="legend-item" type="button" data-filter="passed" aria-pressed="false">
+          <i class="legend-icon" aria-hidden="true"></i>
+          <span>Menyala <b id="passed-count">0</b></span>
+        </button>
+        <span class="legend-note">Bentuk dan warna berbeda: oktagon merah ✕ = sedang padam, segitiga kuning (jam) = akan padam, lingkaran hijau ✓ = sudah menyala. Klik legenda untuk menyaring titik. Garis area hanya perkiraan, bukan batas resmi PLN.</span>
       </div>
     </main>
 
@@ -507,12 +536,12 @@ Ketentuan:
       let currentSchedule = null;
       let importSessions = 0;
 
-      const gradientWindowMs = 24 * 60 * 60 * 1000;
+      let pointFilter = "all";
+
       const markerColors = {
-        upcoming: "#ffb547",
-        active: "#ff4268",
-        passed: "#48d6a0",
-        passedFaded: "#357a63"
+        active: "#ef4444",
+        upcoming: "#facc15",
+        passed: "#22c55e"
       };
 
       function hexToRgb(hex) {
@@ -540,25 +569,30 @@ Ketentuan:
       }
 
       function glowAlphaFor(status) {
-        if (status === "ACTIVE") return .35;
-        if (status === "UPCOMING") return .28;
-        return .22;
+        if (status === "ACTIVE") return .38;
+        if (status === "UPCOMING") return .3;
+        return .2;
       }
 
       function pointColor(properties, now = Date.now()) {
-        const start = Date.parse(properties.startTime);
-        const end = Date.parse(properties.endTime);
-        const status = getEventStatus(properties, now);
-        if (status === "UPCOMING") {
-          return lerpColor(markerColors.upcoming, markerColors.active, 1 - (start - now) / gradientWindowMs);
-        }
-        if (status === "ACTIVE") {
-          const progress = (now - start) / Math.max(end - start, 1);
-          return progress < .5
-            ? lerpColor(markerColors.active, markerColors.upcoming, progress * 2)
-            : lerpColor(markerColors.upcoming, markerColors.passed, (progress - .5) * 2);
-        }
-        return lerpColor(markerColors.passed, markerColors.passedFaded, (now - end) / gradientWindowMs);
+        return markerColors[statusClass(getEventStatus(properties, now))];
+      }
+
+      function markerSvg(status, color) {
+        const shape = status === "ACTIVE"
+          ? `<polygon points="7.2,1.6 16.8,1.6 22.4,7.2 22.4,16.8 16.8,22.4 7.2,22.4 1.6,16.8 1.6,7.2"/>`
+          : status === "UPCOMING"
+            ? `<polygon points="12,1.6 22.6,22.2 1.4,22.2"/>`
+            : `<circle cx="12" cy="12" r="10.2"/>`;
+        const glyph = status === "ACTIVE"
+          ? `<path d="M8.8 8.8 L15.2 15.2 M15.2 8.8 L8.8 15.2" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>`
+          : status === "UPCOMING"
+            ? `<circle cx="12" cy="14.2" r="4.5" fill="none" stroke="#3f2d05" stroke-width="1.7"/>` +
+              `<path d="M12 11.7 V14.2 l1.9 1.3" fill="none" stroke="#3f2d05" stroke-width="1.7" stroke-linecap="round"/>`
+            : `<path d="M8.3 12.3 l2.6 2.7 l4.9 -5.3" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>`;
+        const glow = withAlpha(color, glowAlphaFor(status));
+        return `<svg class="street-marker ${statusClass(status)}" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" style="--marker-color:${color}; --marker-glow:${glow}">` +
+          `<g fill="${color}" stroke="#ffffff" stroke-width="1.6" stroke-linejoin="round">${shape}</g>${glyph}</svg>`;
       }
 
       function areaStyle(properties, geometryType, color, status) {
@@ -627,7 +661,11 @@ Ketentuan:
       }
 
       function statusLabel(status) {
-        return { ACTIVE: "SEDANG BERLANGSUNG", UPCOMING: "AKAN DATANG", PASSED: "SELESAI" }[status] || status;
+        return { ACTIVE: "SEDANG PADAM", UPCOMING: "AKAN PADAM", PASSED: "SUDAH MENYALA" }[status] || status;
+      }
+
+      function filterLabel(filter) {
+        return { active: "sedang padam", upcoming: "akan padam", passed: "sudah menyala" }[filter] || "";
       }
 
       function formatWita(value, includeDate) {
@@ -767,13 +805,47 @@ Ketentuan:
         return shapes;
       }
 
-      function updateStatusCounts(events, pointCount) {
+      function pointStatusCounts(events) {
         const counts = { ACTIVE: 0, UPCOMING: 0, PASSED: 0 };
-        for (const event of events) counts[event.status] = (counts[event.status] || 0) + 1;
-        document.getElementById("active-count").textContent = `Aktif ${counts.ACTIVE}`;
-        document.getElementById("upcoming-count").textContent = `Akan datang ${counts.UPCOMING}`;
-        document.getElementById("passed-count").textContent = `Selesai ${counts.PASSED}`;
-        badge.textContent = `${events.length} jadwal · ${pointCount} titik`;
+        for (const event of events) {
+          const points = (event.affectedAreas || []).reduce(
+            (sum, area) => sum + (area.points || []).length,
+            0
+          );
+          counts[event.status] = (counts[event.status] || 0) + points;
+        }
+        return counts;
+      }
+
+      function updateStatusCounts(events) {
+        const counts = pointStatusCounts(events);
+        const total = counts.ACTIVE + counts.UPCOMING + counts.PASSED;
+        document.getElementById("all-count").textContent = total;
+        document.getElementById("active-count").textContent = counts.ACTIVE;
+        document.getElementById("upcoming-count").textContent = counts.UPCOMING;
+        document.getElementById("passed-count").textContent = counts.PASSED;
+        badge.textContent = `${events.length} jadwal · ${total} titik`;
+      }
+
+      const filterButtons = [...document.querySelectorAll("[data-filter]")];
+      const filterStatusByKey = { active: "ACTIVE", upcoming: "UPCOMING", passed: "PASSED" };
+      for (const button of filterButtons) {
+        const status = filterStatusByKey[button.dataset.filter];
+        if (!status) continue;
+        button.querySelector(".legend-icon").innerHTML = markerSvg(status, markerColors[statusClass(status)]);
+      }
+
+      function setPointFilter(next) {
+        if (pointFilter === next) return;
+        pointFilter = next;
+        for (const button of filterButtons) {
+          button.setAttribute("aria-pressed", String(button.dataset.filter === next));
+        }
+        renderMapLayers();
+      }
+
+      for (const button of filterButtons) {
+        button.addEventListener("click", () => setPointFilter(button.dataset.filter));
       }
 
       document.getElementById("close-map-progress").addEventListener("click", () => {
@@ -965,30 +1037,117 @@ Ketentuan:
           total + (event.affectedAreas || []).reduce((sum, area) => sum + (area.points || []).length, 0), 0);
       }
 
-      function refreshDynamic() {
+      function buildStreetPointFeatures(now) {
+        return mapEvents.flatMap((event) =>
+          event.affectedAreas.flatMap((area) =>
+            (area.points || []).map((point) => ({
+              type: "Feature",
+              geometry: { type: "Point", coordinates: [point.longitude, point.latitude] },
+              properties: {
+                eventId: event.eventId,
+                title: event.title,
+                location: point.location,
+                ulpName: area.ulpName,
+                displayName: point.displayName,
+                startTime: event.startTime,
+                endTime: event.endTime,
+                status: getEventStatus(event, now),
+                isStreetPoint: true
+              }
+            }))
+          )
+        );
+      }
+
+      function featureMatchesFilter(feature, now) {
+        return pointFilter === "all" ||
+          statusClass(getEventStatus(feature.properties, now)) === pointFilter;
+      }
+
+      function renderMapLayers() {
         const now = Date.now();
         for (const event of mapEvents) event.status = getEventStatus(event, now);
-        if (geoJsonLayer) {
-          geoJsonLayer.eachLayer((layer) => {
-            const properties = layer.feature?.properties;
-            if (!properties?.startTime || !properties.endTime) return;
+        const allPoints = buildStreetPointFeatures(now);
+        const shapes = buildAreaShapes(allPoints);
+        const visiblePoints = allPoints.filter((feature) => featureMatchesFilter(feature, now));
+        const visibleShapes = shapes.filter((feature) => featureMatchesFilter(feature, now));
+        const mapFeatures = [...visibleShapes, ...visiblePoints];
+        if (geoJsonLayer) map.removeLayer(geoJsonLayer);
+        geoJsonLayer = L.geoJSON({ type: "FeatureCollection", features: mapFeatures }, {
+          style: (feature) => {
+            const properties = feature?.properties || {};
             const status = getEventStatus(properties, now);
-            properties.status = status;
             const color = pointColor(properties, now);
             if (properties.isAreaShape) {
-              layer.setStyle(areaStyle(properties, layer.feature.geometry.type, color, status));
-            } else {
-              const element = layer.getElement()?.querySelector(".street-marker");
-              if (element) {
-                element.style.setProperty("--marker-color", color);
-                element.style.setProperty("--marker-glow", withAlpha(color, glowAlphaFor(status)));
-                element.classList.remove("active", "upcoming", "passed");
-                element.classList.add(statusClass(status));
-              }
+              return areaStyle(properties, feature.geometry.type, color, status);
             }
-          });
+            return {
+              color,
+              weight: 1,
+              opacity: status === "ACTIVE" ? .2 : .12,
+              fillColor: color,
+              fillOpacity: .025
+            };
+          },
+          pointToLayer: (feature, latlng) => {
+            const properties = feature.properties || {};
+            const status = getEventStatus(properties, now);
+            const color = pointColor(properties, now);
+            const marker = L.marker(latlng, {
+              icon: L.divIcon({
+                className: "street-marker-icon",
+                html: markerSvg(status, color),
+                iconSize: [24, 24],
+                iconAnchor: [12, 12]
+              }),
+              keyboard: true
+            });
+            marker.bindTooltip(() => buildStreetTooltip(feature.properties), {
+              permanent: false,
+              direction: "top",
+              className: `street-tooltip-shell ${statusClass(status)}`,
+              offset: [0, -10]
+            });
+            return marker;
+          },
+          onEachFeature: (feature, layer) => layer.bindPopup(makePopup(feature.properties || {}))
+        }).addTo(map);
+        if (!hasInitialBounds && allPoints.length) {
+          const firstPoint = allPoints.find((feature) => feature.properties.status === "ACTIVE") || allPoints[0];
+          const [longitude, latitude] = firstPoint.geometry.coordinates;
+          map.setView([latitude, longitude], 14);
+          hasInitialBounds = true;
         }
-        updateStatusCounts(mapEvents, streetPointCount(mapEvents));
+        if (!mapEvents.length) {
+          emptyState.textContent = "Belum ada jadwal pemadaman untuk hari ini.";
+          emptyState.hidden = false;
+        } else if (!allPoints.length) {
+          emptyState.textContent = "Jadwal hari ini sudah tersimpan, tetapi belum ada titik lokasi yang berhasil dicari.";
+          emptyState.hidden = false;
+        } else if (!visiblePoints.length) {
+          emptyState.textContent = `Tidak ada titik ${filterLabel(pointFilter)} saat ini. Pilih "Semua" untuk melihat seluruh titik.`;
+          emptyState.hidden = false;
+        } else {
+          emptyState.hidden = true;
+        }
+        updateStatusCounts(mapEvents);
+      }
+
+      function refreshDynamic() {
+        const now = Date.now();
+        let statusChanged = false;
+        for (const event of mapEvents) {
+          const next = getEventStatus(event, now);
+          if (next !== event.status) {
+            event.status = next;
+            statusChanged = true;
+          }
+        }
+        if (statusChanged) {
+          renderMapLayers();
+          return;
+        }
+        updateStatusCounts(mapEvents);
       }
 
       async function fetchMapLayers() {
@@ -1006,86 +1165,7 @@ Ketentuan:
             status: getEventStatus(event, now),
             affectedAreas: event.affectedAreas || []
           }));
-          const streetPoints = mapEvents.flatMap((event) =>
-            event.affectedAreas.flatMap((area) =>
-              (area.points || []).map((point) => ({
-                type: "Feature",
-                geometry: { type: "Point", coordinates: [point.longitude, point.latitude] },
-                properties: {
-                  eventId: event.eventId,
-                  title: event.title,
-                  location: point.location,
-                  ulpName: area.ulpName,
-                  displayName: point.displayName,
-                  startTime: event.startTime,
-                  endTime: event.endTime,
-                  status: event.status,
-                  isStreetPoint: true
-                }
-              }))
-            )
-          );
-          const shapes = buildAreaShapes(streetPoints);
-          const mapFeatures = [...shapes, ...streetPoints];
-          if (geoJsonLayer) map.removeLayer(geoJsonLayer);
-          geoJsonLayer = L.geoJSON({ type: "FeatureCollection", features: mapFeatures }, {
-            style: (feature) => {
-              const properties = feature?.properties || {};
-              const status = getEventStatus(properties);
-              const color = pointColor(properties);
-              if (properties.isAreaShape) {
-                return areaStyle(properties, feature.geometry.type, color, status);
-              }
-              return {
-                color,
-                weight: 1,
-                opacity: status === "ACTIVE" ? .2 : .12,
-                fillColor: color,
-                fillOpacity: .025
-              };
-            },
-            pointToLayer: (feature, latlng) => {
-              const properties = feature.properties || {};
-              const status = getEventStatus(properties);
-              const color = pointColor(properties);
-              const glow = withAlpha(color, glowAlphaFor(status));
-              const marker = L.marker(latlng, {
-                icon: L.divIcon({
-                  className: "street-marker-icon",
-                  html: `<span class="street-marker ${statusClass(status)}" style="--marker-color: ${color}; --marker-glow: ${glow};"></span>`,
-                  iconSize: [28, 28],
-                  iconAnchor: [14, 14]
-                }),
-                keyboard: true
-              });
-              marker.bindTooltip(() => buildStreetTooltip(feature.properties), {
-                permanent: false,
-                direction: "top",
-                className: `street-tooltip-shell ${statusClass(status)}`,
-                offset: [0, -10]
-              });
-              return marker;
-            },
-            onEachFeature: (feature, layer) => layer.bindPopup(makePopup(feature.properties || {}))
-          }).addTo(map);
-          if (!hasInitialBounds && mapFeatures.length) {
-            const firstPoint = streetPoints.find((feature) => feature.properties.status === "ACTIVE") || streetPoints[0];
-            if (firstPoint) {
-              const [longitude, latitude] = firstPoint.geometry.coordinates;
-              map.setView([latitude, longitude], 14);
-            } else {
-              const bounds = geoJsonLayer.getBounds();
-              if (bounds.isValid()) map.fitBounds(bounds, { padding: [24, 24], maxZoom: 9 });
-            }
-            hasInitialBounds = true;
-          }
-          emptyState.hidden = mapEvents.length > 0 && streetPoints.length > 0;
-          if (mapEvents.length && !streetPoints.length) {
-            emptyState.textContent = "Jadwal hari ini sudah tersimpan, tetapi belum ada titik lokasi yang berhasil dicari.";
-          } else if (!mapEvents.length) {
-            emptyState.textContent = "Belum ada jadwal pemadaman untuk hari ini.";
-          }
-          updateStatusCounts(mapEvents, streetPoints.length);
+          renderMapLayers();
         } catch (error) {
           badge.textContent = error.message || "Gagal memuat jadwal.";
         }
