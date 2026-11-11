@@ -365,6 +365,9 @@
         transform-origin: center;
       }
       .street-marker.active { animation: active-glow 1.6s ease-out infinite; }
+      .leaflet-marker-pane .street-marker.passed { opacity: .4; }
+      .leaflet-marker-pane .street-marker-icon:hover .street-marker.passed,
+      .leaflet-marker-pane .street-marker-icon:focus .street-marker.passed { opacity: .9; }
       @keyframes active-glow {
         0%, 100% {
           transform: scale(1);
