@@ -1,38 +1,53 @@
-# Peta Jadwal Pemadaman Sulawesi Tengah — versi GitHub Pages
+# Peta Jadwal Pemadaman Palu
 
-Situs statis (HTML + Leaflet) untuk peta jadwal pemadaman listrik PLN Sulawesi Tengah. Seluruh antarmuka — impor JSON hasil AI, validasi, geocoding, dan peta — berjalan di browser.
+Aplikasi peta jadwal pemadaman Sulawesi Tengah. Jadwal diimpor di browser tanpa token, disimpan ke GitHub melalui Worker, lalu tampil untuk semua pengunjung. Worker menyimpan kredensial GitHub di sisi server, menyajikan aset, menjadi proxy geocoding terbatas, dan membangun indeks nama OpenStreetMap.
 
-**Repo ini sekaligus menjadi database bersama.** Jadwal yang diimpor tersimpan sebagai file `data/YYYY-MM-DD.json` (tanggal jadwal, zona WITA), sehingga satu kali impor per hari tampil untuk semua pengunjung. Keesokan harinya peta otomatis reset: file tanggal baru belum ada berarti peta kosong, dan arsip yang lebih tua dari kemarin dihapus otomatis saat impor berikutnya. Pemadaman yang berlanjut lewat tengah malam tetap tampil karena file kemarin hanya dimuat untuk event yang belum selesai.
+## Alur penggunaan
 
-## Alur data
+1. Tekan **Impor hasil AI** dan salin prompt.
+2. Unggah flyer ke Gemini atau AI pilihan, lalu tempel JSON hasilnya ke halaman peta.
+3. Jadwal divalidasi di browser, lalu dikirim ke Worker untuk disimpan sebagai `data/YYYY-MM-DD.json` di repo GitHub. Tanggal memakai hari WITA dari event paling awal.
+4. File hari ini langsung tampil untuk semua pengunjung. File kemarin hanya dipakai untuk event yang belum selesai; file lebih lama dari kemarin dihapus otomatis saat penyimpanan berikutnya. Jika file hari ini belum ada, peta kosong.
+5. Status dan warna titik dihitung ulang menurut waktu WITA: warna bergradasi kuning → merah mendekati waktu padam, lalu merah → hijau mendekati waktu menyala kembali. Tooltip saat titik disentuh dan popup saat diklik menampilkan hitung mundur menuju padam/menyala. Tekan **Kosongkan peta** untuk menghapus semua file jadwal dari GitHub.
 
-1. Siapa pun membuka situs, menekan **Impor hasil AI**, dan menempel JSON hasil verifikasi AI — **tanpa akun atau token**.
-2. Browser mengirim jadwal tervalidasi ke Worker Cloudflare (`outage-map-app`) di `https://outage-map-app.vaultman.workers.dev/api/schedule`. Worker memegang token GitHub sebagai *secret* dan menulis `data/{tanggal}.json` ke repo ini → workflow menerbitkan ulang situs (± 1 menit).
-3. Titik lokasi dicari satu per satu lewat Nominatim (jeda 1,2 detik, hasil di-cache); setiap titik yang ditemukan langsung tampil dan dikirim ulang ke Worker setelah selesai. Nama yang dicari bisa berupa jalan, desa/kelurahan, pasar, toko, gedung, kantor, atau landmark lain yang tercantum di flyer.
-4. Semua pengunjung memuat `data/{hari ini}.json` dari situs tanpa token dan memeriksanya ulang tiap 30 detik.
+Titik merupakan lokasi representatif hasil geocoder, bukan ruas listrik yang terkonfirmasi padam. Garis/area yang menghubungkan titik adalah perkiraan, bukan batas resmi PLN. Jalan yang tidak cocok dengan hasil OpenStreetMap tidak diberi koordinat rekaan.
 
-Token GitHub **tidak pernah** ada di browser. Yang melindungi penyimpanan adalah validasi di sisi Worker: tanggal harus format `YYYY-MM-DD` dalam rentang kemarin s.d. 14 hari ke depan, 1–10 event, ukuran ≤ 512 KB, dan pembatasan 6 penulisan per 10 menit per alamat IP.
+## Development
 
-## Fitur
+Situs statis tidak butuh build: ubah `index.html`, lalu push. Untuk mengerjakan Worker, gunakan proyek `outage-map-app`:
 
-- Impor JSON hasil AI dari flyer pemadaman (prompt verifikasi tersedia di dalam aplikasi), terbuka untuk semua pengunjung.
-- Titik lokasi berwarna gradasi: kuning → merah mendekati waktu padam, merah → hijau mendekati waktu menyala kembali, hijau pudar setelah selesai.
-- Tooltip saat titik disentuh dan popup saat diklik menampilkan hitung mundur menuju padam/menyala, diperbarui tiap detik.
-- Tombol **Kosongkan peta** menghapus semua file jadwal lewat Worker sehingga peta kosong untuk semua pengunjung.
+```powershell
+npm install
+npm run typecheck
+npm run dev
+```
 
-## Pengembangan lokal
+Leaflet dibundel di `vendor/leaflet`. Worker menyediakan:
 
-Jalankan server statis lokal dari folder ini, misalnya `npx serve`, lalu buka alamat yang muncul. Pembacaan data dan impor tetap berjalan karena keduanya memakai Worker yang sudah online; tidak perlu konfigurasi tambahan.
+- `POST /api/schedule` dan `DELETE /api/schedule` — simpan/hapus jadwal harian (token GitHub hanya di server).
+- `GET /api/osm-index?region=palu|tawaeli` — indeks nama OpenStreetMap untuk pencocokan lokal. Indeks dibuat dari Overpass API, disimpan di cache Worker selama 12 jam, dan di-cache browser selama 12 jam.
+- `GET /api/geocode` — proxy Nominatim (dipakai bila tersedia).
 
-## Perawatan sisi server
+## Impor dan geocoding
 
-Worker berada di repo terpisah (`D:\outage-map-app`, `src/index.ts`) dan memakai binding `ASSETS` serta secret `GITHUB_TOKEN`.
+Format impor memakai `schema_version: 1` dan array `events`. Setiap event memuat `title`, `start_time`/`end_time` ISO 8601 dengan zona WITA `+08:00`, `locations` kabupaten/kota, dan `areas` berisi `ulp_name` serta daftar nama jalan/lokasi. Kelompok ULP tanpa nama lokasi valid dan jadwal tanpa kelompok lokasi dilewati; jadwal valid lain tetap diproses. Maksimal 10 event, 50 kelompok ULP, 500 nama lokasi per event, dan ukuran JSON 512 KB.
 
-- **Rotasi token**: buat fine-grained PAT baru (akses hanya ke `andiarman/Pemadamanlistrikkotapalu`, izin **Contents: Read and write**), lalu dari folder `outage-map-app` jalankan `npm.cmd exec wrangler secret put GITHUB_TOKEN` dan tempel token baru. Deploy ulang dengan `npm.cmd run deploy` bila kode Worker berubah.
-- **Mengubah repo tujuan**: konstanta `githubRepo` / `githubDataDir` ada di `src/index.ts` (Worker) — versi browser tidak lagi menyimpan alamat repo.
+Setelah validasi berhasil, dialog impor menutup dan pencarian berjalan di halaman peta dengan progress bar. Setiap titik yang cocok langsung muncul; nama lokasi tampil saat marker disentuh/di-hover agar label tidak menumpuk.
 
-## Catatan
+Pencocokan berjalan dua tahap:
 
-- Alamat Worker tertanam di `index.html` sebagai `scheduleApiBase`; ubah bila Worker dipindahkan.
-- Pencarian lokasi memanggil Nominatim (OpenStreetMap) langsung dari browser — satu per satu dengan jeda minimal 1,2 detik dan hasil di-cache — sesuai [kebijakan penggunaan Nominatim](https://operations.osmfoundation.org/policies/nominatim/). Hanya hasil dengan kelas tempat yang wajar (jalan, permukiman/wilayah administratif, fasilitas, toko, gedung, bangunan bersejarah) yang dipakai, dan koordinatnya harus berada di Sulawesi Tengah.
-- Titik merupakan lokasi representatif hasil geocoder, bukan ruas listrik yang terkonfirmasi padam. Garis/area yang menghubungkan titik adalah perkiraan, bukan batas resmi PLN. Nama yang tidak cocok dengan hasil OpenStreetMap tidak diberi koordinat rekaan.
+1. **Indeks OpenStreetMap (lokal).** Nama dinormalisasi lebih dulu: awalan `Jl./Jalan`, gelar (`Dr.`, `H.`, `Sultan`), angka Romawi, singkatan (`Tg.` → Tanjung, `Tlk` → Teluk, `GN` → Gunung, `S` → Sungai, `M` → Muhammad), ejaan gabung/pecah (`Ki Maja` ↔ `Kimaja`), dan salah ejaan ringan. Hasilnya dicocokkan tanpa jaringan.
+2. **Nominatim (sisa nama).** Nama yang belum cocok dicari satu per satu dengan jeda minimal 1,2 detik, dibatasi ke Sulawesi Tengah. Kandidat harus mirip minimal 0,86 terhadap nama asli agar tidak salah jalan.
+
+Impor pertama memerlukan 40–80 detik untuk membangun indeks (di-cache pada impor berikutnya), lalu sisa nama biasanya selesai dalam hitungan detik sampai satu menit. Biarkan halaman terbuka sampai progress selesai. Penggunaan Nominatim harus mengikuti [kebijakannya](https://operations.osmfoundation.org/policies/nominatim/).
+
+## Deploy
+
+Worker (proyek `outage-map-app`):
+
+```powershell
+npx wrangler secret put GITHUB_TOKEN
+npm run deploy
+```
+
+Halaman statis dideploy otomatis oleh GitHub Actions setiap ada push ke repo ini. `schema.sql` dan resource D1/KV lama dipertahankan, tetapi tidak dipakai oleh aplikasi.
