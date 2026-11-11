@@ -1025,6 +1025,242 @@ Ketentuan:
         "tourism", "historic", "leisure", "office", "man_made"
       ]);
 
+      const localStreetIndexKey = "outage-map-osm-index-v2";
+      const streetIndexTtlMs = 12 * 60 * 60 * 1000;
+      const streetAliases = {
+        tg: "tanjung", tj: "tanjung", tlk: "teluk", gn: "gunung", g: "gunung",
+        s: "sungai", l: "lorong", gg: "gang", mesjid: "masjid", jendral: "jenderal",
+        ar: "abdul rahman",
+        moh: "muhammad", muh: "muhammad", mohamad: "muhammad", m: "muhammad",
+        a: "ahmad", dr: "dokter", prof: "profesor",
+        i: "1", ii: "2", iii: "3", iv: "4", v: "5", vi: "6"
+      };
+      const streetHonorifics = new Set([
+        "dr", "dokter", "prof", "profesor", "hj", "haji", "h", "ir", "drs",
+        "jendral", "jenderal", "sultan"
+      ]);
+      const streetIgnoredTokens = new Set([
+        "jalan", "raya", "atas", "bawah", "sebagian", "baru", "lama", "dalam",
+        "gang", "lorong", "dokter", "profesor", "haji", "jenderal", "sultan",
+        "dr", "prof", "hj", "h", "ir", "drs"
+      ]);
+      const streetQueryNoise = new Set(["atas", "bawah", "sebagian", "baru", "lama", "dalam"]);
+
+      function isStreetLeadingNoise(token) {
+        return streetHonorifics.has(token) || /^[a-z]$/.test(token);
+      }
+
+      function streetNameForms(value) {
+        const raw = normalizeStreetName(value).split(" ").filter(Boolean);
+        const forms = [raw];
+        let trimmed = [...raw];
+        while (trimmed.length > 1 && isStreetLeadingNoise(trimmed[0])) trimmed = trimmed.slice(1);
+        if (trimmed.length !== raw.length) forms.push(trimmed);
+        return forms;
+      }
+
+      function streetNameVariants(value) {
+        const variants = new Set();
+        const add = (list) => {
+          if (!list.length) return;
+          variants.add(list.join(" "));
+          variants.add(list.join(""));
+        };
+        for (const form of streetNameForms(value)) {
+          const expanded = form.map((token) => streetAliases[token] || token)
+            .flatMap((token) => token.split(" "))
+            .filter(Boolean);
+          const bases = [expanded, form];
+          for (const base of bases) {
+            const lists = [base];
+            const withoutNoise = base.filter((token) => !streetIgnoredTokens.has(token));
+            if (withoutNoise.length && withoutNoise.length !== base.length) lists.push(withoutNoise);
+            const withoutInitials = base.filter((token) => !/^[a-z]$/.test(token));
+            if (withoutInitials.length && withoutInitials.length !== base.length) lists.push(withoutInitials);
+            for (const list of [...lists]) {
+              if (list.length > 1 && /^\d$/.test(list[list.length - 1])) lists.push(list.slice(0, -1));
+            }
+            for (const list of lists) add(list);
+          }
+        }
+        return [...variants];
+      }
+
+      function streetSearchQuery(locationName) {
+        const forms = streetNameForms(locationName);
+        const form = forms[forms.length - 1] || [];
+        const expanded = form.map((token) => streetAliases[token] || token)
+          .flatMap((token) => token.split(" "))
+          .filter(Boolean);
+        const chosen = expanded.filter((token) =>
+          !streetHonorifics.has(token) && !streetQueryNoise.has(token));
+        return (chosen.length ? chosen : expanded).join(" ");
+      }
+
+      function streetDistance(left, right) {
+        if (left === right) return 0;
+        if (!left.length) return right.length;
+        if (!right.length) return left.length;
+        let previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+        for (let row = 1; row <= left.length; row++) {
+          const current = [row];
+          for (let column = 1; column <= right.length; column++) {
+            current[column] = Math.min(
+              previous[column] + 1,
+              current[column - 1] + 1,
+              previous[column - 1] + (left[row - 1] === right[column - 1] ? 0 : 1)
+            );
+          }
+          previous = current;
+        }
+        return previous[right.length];
+      }
+
+      function streetIndexRegion(ulpName) {
+        const value = (ulpName || "").toLocaleLowerCase("id-ID");
+        if (value.includes("taweli") || value.includes("tamb")) return "tawaeli";
+        if (value.includes("palu") || value.includes("kamonji")) return "palu";
+        return "";
+      }
+
+      function readStreetIndexStore() {
+        try {
+          const parsed = JSON.parse(localStorage.getItem(localStreetIndexKey) || "{}");
+          return parsed && typeof parsed === "object" ? parsed : {};
+        } catch {
+          return {};
+        }
+      }
+
+      function saveStreetIndexStore(store) {
+        try {
+          localStorage.setItem(localStreetIndexKey, JSON.stringify(store));
+        } catch {
+          // Indeks hanya percepatan; cache penuh tidak boleh menghalangi impor.
+        }
+      }
+
+      function buildStreetIndex(entries) {
+        const points = new Map();
+        const squashed = new Map();
+        const keep = (map, key, point) => {
+          const current = map.get(key);
+          if (!current || point.kind < current.kind) map.set(key, point);
+        };
+        for (const entry of entries) {
+          if (!Array.isArray(entry)) continue;
+          const [name, latitude, longitude, kind] = entry;
+          if (typeof name !== "string" || typeof latitude !== "number" || typeof longitude !== "number") continue;
+          const point = { name, latitude, longitude, kind: typeof kind === "number" ? kind : 2 };
+          for (const variant of streetNameVariants(name)) {
+            if (!variant) continue;
+            if (variant.includes(" ")) keep(points, variant, point);
+            else keep(squashed, variant, point);
+          }
+        }
+        return {
+          points,
+          spacedKeys: [...points.keys()],
+          squashed,
+          squashedKeys: [...squashed.keys()]
+        };
+      }
+
+      function findIndexedStreet(index, locationName) {
+        if (!index) return null;
+        const variants = streetNameVariants(locationName);
+        for (const variant of variants) {
+          const point = variant.includes(" ") ? index.points.get(variant) : index.squashed.get(variant);
+          if (point) return point;
+        }
+        for (const variant of variants) {
+          if (variant.includes(" ") || variant.length < 6) continue;
+          let best = null;
+          for (const key of index.squashedKeys) {
+            if (key.length <= variant.length || key.length - variant.length > 12) continue;
+            if (!key.startsWith(variant)) continue;
+            const point = index.squashed.get(key);
+            if (!best || point.kind < best.kind) best = point;
+          }
+          if (best) return best;
+        }
+        let best = null;
+        let bestScore = 0;
+        const consider = (key, target, point) => {
+          if (Math.abs(key.length - target.length) > 4) return;
+          const score = 1 - streetDistance(key, target) / Math.max(key.length, target.length);
+          if (score > bestScore) {
+            bestScore = score;
+            best = point;
+          }
+        };
+        for (const variant of variants) {
+          if (variant.includes(" ") || variant.length < 6) continue;
+          for (const key of index.squashedKeys) consider(key, variant, index.squashed.get(key));
+        }
+        for (const variant of variants) {
+          if (!variant.includes(" ") || variant.replace(/ /g, "").length < 6) continue;
+          for (const key of index.spacedKeys) consider(key, variant, index.points.get(key));
+        }
+        return bestScore >= 0.86 ? best : null;
+      }
+
+      function streetSimilarity(requested, candidate) {
+        const requestedVariants = new Set(streetNameVariants(requested));
+        const candidateVariants = streetNameVariants(candidate);
+        for (const variant of candidateVariants) {
+          if (requestedVariants.has(variant)) return 1;
+        }
+        const requestedSquashed = [...requestedVariants].filter((variant) => !variant.includes(" "));
+        let best = 0;
+        for (const variant of candidateVariants) {
+          if (variant.includes(" ")) continue;
+          for (const target of requestedSquashed) {
+            if (target.length < 6 || variant.length < 6) continue;
+            best = Math.max(best, 1 - streetDistance(variant, target) / Math.max(variant.length, target.length));
+          }
+        }
+        return best;
+      }
+
+      async function fetchStreetIndexRegion(region) {
+        try {
+          const response = await fetch(`${scheduleApiBase}/api/osm-index?region=${encodeURIComponent(region)}`);
+          if (!response.ok) return null;
+          const payload = await response.json().catch(() => null);
+          if (!payload || !Array.isArray(payload.entries) || !payload.entries.length) return null;
+          return payload;
+        } catch {
+          return null;
+        }
+      }
+
+      async function loadStreetIndexes(ulpNames) {
+        const regions = [...new Set(ulpNames.map(streetIndexRegion).filter(Boolean))];
+        if (!regions.length) return new Map();
+        const store = readStreetIndexStore();
+        const loaded = new Map();
+        let changed = false;
+        for (const region of regions) {
+          let entry = store[region];
+          const fresh = entry && Array.isArray(entry.entries) &&
+            Date.now() - (Number(entry.generatedAt) || 0) < streetIndexTtlMs;
+          if (!fresh) {
+            const payload = await fetchStreetIndexRegion(region);
+            if (payload) {
+              store[region] = payload;
+              entry = payload;
+              changed = true;
+            }
+          }
+          if (entry && Array.isArray(entry.entries) && entry.entries.length) {
+            loaded.set(region, buildStreetIndex(entry.entries));
+          }
+        }
+        if (changed) saveStreetIndexStore(store);
+        return loaded;
+      }
+
       function streetSearchContext(ulpName) {
         const value = ulpName.toLocaleLowerCase("id-ID");
         if (value.includes("palu") || value.includes("kamonji")) return "Palu";
@@ -1068,9 +1304,12 @@ Ketentuan:
           directGeocoding = true;
         }
         const osmUrl = new URL("https://nominatim.openstreetmap.org/search");
-        osmUrl.searchParams.set("q", `${street}, ${streetSearchContext(ulpName)}, Sulawesi Tengah, Indonesia`);
+        osmUrl.searchParams.set(
+          "q",
+          `${streetSearchQuery(street)}, ${streetSearchContext(ulpName)}, Sulawesi Tengah, Indonesia`
+        );
         osmUrl.searchParams.set("format", "geojson");
-        osmUrl.searchParams.set("limit", "5");
+        osmUrl.searchParams.set("limit", "10");
         osmUrl.searchParams.set("viewbox", "117,2,125.5,-4.5");
         osmUrl.searchParams.set("bounded", "1");
         const response = await fetch(osmUrl, { headers: { "Accept-Language": "id" } });
@@ -1087,18 +1326,22 @@ Ketentuan:
         if (cached && cached.expiresAt > Date.now()) return cached.result;
 
         const result = await fetchGeocodeResult(locationName, ulpName);
-        const requestedTokens = locationTokens(locationName);
-        const match = requestedTokens.length ? result.features?.find((feature) => {
+        const features = Array.isArray(result.features) ? result.features : [];
+        let match = null;
+        let bestScore = 0;
+        for (const feature of features) {
           const properties = feature.properties || {};
-          const coordinates = geometryPoint(feature.geometry);
           const candidateName = typeof properties.name === "string" ? properties.name : "";
           const category = properties.class || properties.category || "";
-          const candidateTokens = locationTokens(candidateName);
-          return coordinates !== null &&
-            geocodablePlaceClasses.has(category) && candidateTokens.length > 0 &&
-            requestedTokens.every((token) => candidateTokens.includes(token)) &&
-            candidateTokens.length - requestedTokens.length <= 2;
-        }) : null;
+          if (!candidateName || !geocodablePlaceClasses.has(category)) continue;
+          if (geometryPoint(feature.geometry) === null) continue;
+          const score = streetSimilarity(locationName, candidateName);
+          if (score > bestScore) {
+            bestScore = score;
+            match = feature;
+          }
+        }
+        if (bestScore < 0.86) match = null;
         const coordinates = match ? geometryPoint(match.geometry) : null;
         const longitude = coordinates?.[0];
         const latitude = coordinates?.[1];
@@ -1158,29 +1401,79 @@ Ketentuan:
         let found = 0;
         let failed = 0;
         let done = 0;
-        updateMapProgress(0, jobs.length, 0, 0, "working", "Titik terverifikasi langsung tampil. Biarkan halaman ini tetap terbuka.");
-        for (let index = 0; index < jobs.length; index++) {
-          const waitMs = 1200 - (Date.now() - lastStreetLookupAt);
-          if (lastStreetLookupAt && waitMs > 0) {
-            await new Promise((resolve) => setTimeout(resolve, waitMs));
+        let fromIndex = 0;
+        let renderTimer = 0;
+        const flushRender = async () => {
+          if (renderTimer) {
+            clearTimeout(renderTimer);
+            renderTimer = 0;
           }
+          saveLocalStore(currentSchedule);
+          await fetchMapLayers();
+        };
+        const scheduleRender = () => {
+          if (renderTimer) return;
+          renderTimer = setTimeout(() => {
+            renderTimer = 0;
+            saveLocalStore(currentSchedule);
+            fetchMapLayers();
+          }, 500);
+        };
+        updateMapProgress(0, jobs.length, 0, 0, "working", "Menyiapkan indeks OpenStreetMap…");
+        let streetIndexes = new Map();
+        try {
+          streetIndexes = await loadStreetIndexes(jobs.map((job) => job.ulpName));
+        } catch {
+          streetIndexes = new Map();
+        }
+        updateMapProgress(
+          0,
+          jobs.length,
+          0,
+          0,
+          "working",
+          streetIndexes.size
+            ? "Mencocokkan nama dengan indeks OpenStreetMap; sisa nama dicari satu per satu."
+            : "Indeks OpenStreetMap tidak tersedia; nama dicari satu per satu ke Nominatim."
+        );
+        for (let index = 0; index < jobs.length; index++) {
+          const job = jobs[index];
+          let point = null;
           try {
-            const point = await geocodeStreet(jobs[index].ulpName, jobs[index].location);
-            lastStreetLookupAt = Date.now();
-            if (point) {
-              const event = (currentSchedule?.events || []).find((item) => item.eventId === jobs[index].eventId);
-              const area = event?.affectedAreas.find((item) => item.ulpName === jobs[index].ulpName);
-              if (area) {
-                area.points = [...(area.points || []), { location: jobs[index].location, ...point }];
-                saveLocalStore(currentSchedule);
-                await fetchMapLayers();
-              }
-              found++;
-            } else {
-              failed++;
+            const indexed = findIndexedStreet(streetIndexes.get(streetIndexRegion(job.ulpName)), job.location);
+            if (indexed) {
+              point = {
+                longitude: indexed.longitude,
+                latitude: indexed.latitude,
+                displayName: indexed.name
+              };
+              fromIndex++;
             }
           } catch {
-            lastStreetLookupAt = Date.now();
+            point = null;
+          }
+          if (!point) {
+            const waitMs = 1200 - (Date.now() - lastStreetLookupAt);
+            if (lastStreetLookupAt && waitMs > 0) {
+              await new Promise((resolve) => setTimeout(resolve, waitMs));
+            }
+            try {
+              point = await geocodeStreet(job.ulpName, job.location);
+              lastStreetLookupAt = Date.now();
+            } catch {
+              lastStreetLookupAt = Date.now();
+              point = null;
+            }
+          }
+          if (point) {
+            const event = (currentSchedule?.events || []).find((item) => item.eventId === job.eventId);
+            const area = event?.affectedAreas.find((item) => item.ulpName === job.ulpName);
+            if (area) {
+              area.points = [...(area.points || []), { location: job.location, ...point }];
+              scheduleRender();
+            }
+            found++;
+          } else {
             failed++;
           }
           done++;
@@ -1190,9 +1483,12 @@ Ketentuan:
             found,
             failed,
             "working",
-            "Titik yang berhasil ditemukan langsung ditampilkan di peta."
+            fromIndex
+              ? `${fromIndex} titik langsung dari indeks OSM; sisanya dicari ke Nominatim.`
+              : "Titik yang berhasil ditemukan langsung ditampilkan di peta."
           );
         }
+        await flushRender();
         let pushError = null;
         if (found && currentSchedule) {
           try {
