@@ -54,7 +54,10 @@
       #wita-clock { display: block; margin-top: .16rem; color: #94a3b8; font-size: .66rem; font-variant-numeric: tabular-nums; }
       .header-actions { display: flex; align-items: center; justify-content: flex-end; gap: .8rem; min-width: 0; }
       #status-counts { color: #bdc7d4; font-size: .68rem; white-space: nowrap; }
-      #open-import {
+      #open-activity-log { color: #9fb0c6; font-weight: 600; }
+      #open-activity-log.has-activity { color: #6ee7b7; border-color: rgba(52, 211, 153, .38); }
+      #open-import,
+      #open-activity-log {
         min-height: 34px;
         display: inline-flex;
         align-items: center;
@@ -71,7 +74,8 @@
         transition: background .16s ease, border-color .16s ease;
       }
       #open-import svg { width: 14px; height: 14px; }
-      #open-import:hover { border-color: rgba(226, 232, 240, .5); background: rgba(255, 255, 255, .1); }
+      #open-import:hover,
+      #open-activity-log:hover { border-color: rgba(226, 232, 240, .5); background: rgba(255, 255, 255, .1); }
       #map { position: relative; flex: 1; min-height: 0; background: #091525; }
       .map-legend {
         position: absolute;
@@ -188,6 +192,44 @@
       #map-progress-panel.is-error #progress-bar { background: #fb7185; }
       .progress-footer { display: flex; justify-content: space-between; gap: .7rem; margin-top: .42rem; color: #9fb0c6; font-size: .64rem; font-variant-numeric: tabular-nums; }
       #progress-percent { color: #d1fae5; font-weight: 800; }
+      #activity-log-wrap {
+        margin-top: .6rem;
+        padding-top: .5rem;
+        border-top: 1px solid rgba(148, 163, 184, .18);
+      }
+      #activity-log-wrap > summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+        color: #9fb0c6;
+        font-size: .64rem;
+        font-weight: 700;
+        cursor: pointer;
+        list-style: none;
+      }
+      #activity-log-wrap > summary::-webkit-details-marker { display: none; }
+      #activity-log-wrap > summary::before { content: "▸"; margin-right: .3rem; color: #64748b; }
+      #activity-log-wrap[open] > summary::before { content: "▾"; }
+      #activity-status { color: #64748b; font-weight: 600; font-variant-numeric: tabular-nums; }
+      #activity-log {
+        max-height: 168px;
+        margin: .4rem 0 0;
+        padding: 0;
+        overflow-y: auto;
+        list-style: none;
+        font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+        font-size: .6rem;
+        line-height: 1.45;
+        scrollbar-width: thin;
+        overscroll-behavior: contain;
+      }
+      #activity-log li { display: grid; grid-template-columns: 2.9rem minmax(0, 1fr); gap: .4rem; padding: .1rem 0; }
+      #activity-log .log-time { color: #64748b; font-variant-numeric: tabular-nums; }
+      #activity-log .log-text { color: #cbd5e1; overflow-wrap: anywhere; }
+      #activity-log li.log-success .log-text { color: #6ee7b7; }
+      #activity-log li.log-warn .log-text { color: #fcd34d; }
+      #activity-log li.log-error .log-text { color: #fda4af; }
       @keyframes progress-pulse { 50% { opacity: .45; transform: scale(.8); } }
       @keyframes progress-shimmer { to { background-position: -200% 0; } }
       #import-dialog {
@@ -307,7 +349,8 @@
         #wita-clock { font-size: .63rem; }
         .header-actions { gap: .4rem; flex-direction: column-reverse; align-items: flex-end; }
         #status-counts { max-width: 50vw; overflow: hidden; font-size: .58rem; text-overflow: ellipsis; }
-        #open-import { min-height: 32px; padding: .35rem .55rem; border-radius: 8px; font-size: .68rem; }
+        #open-import,
+        #open-activity-log { min-height: 32px; padding: .35rem .55rem; border-radius: 8px; font-size: .68rem; }
         .map-legend { left: 7px; right: 7px; bottom: 8px; justify-content: space-around; gap: .25rem; max-width: none; padding: .45rem .4rem; border-radius: 10px; }
         .legend-item { gap: .22rem; font-size: .62rem; }
         .legend-dot { width: 20px; height: 6px; }
@@ -315,6 +358,7 @@
         #map-progress-panel { top: 9px; right: 8px; width: min(340px, calc(100vw - 16px)); padding: .7rem .75rem; }
         #progress-title { font-size: .72rem; }
         #progress-detail { font-size: .62rem; }
+        #activity-log { max-height: 126px; }
         #import-dialog { padding: .75rem; border-radius: 13px; }
         .dialog-layout { gap: .5rem; }
         #ai-json-input { height: 34dvh; min-height: 130px; max-height: 34dvh; font-size: .68rem; }
@@ -334,6 +378,7 @@
       </div>
       <div class="header-actions">
         <span id="status-counts" role="status" aria-live="polite">Memuat jadwal…</span>
+        <button id="open-activity-log" type="button">Log aktivitas</button>
         <button id="open-import" type="button">＋ Impor hasil AI</button>
       </div>
     </header>
@@ -356,6 +401,10 @@
           <span id="progress-count">0 dari 0 jalan</span>
           <strong id="progress-percent">0%</strong>
         </div>
+        <details id="activity-log-wrap" open>
+          <summary>Log aktivitas <span id="activity-status">siap</span></summary>
+          <ol id="activity-log" aria-live="polite"></ol>
+        </details>
       </section>
       <div class="map-legend" aria-label="Warna status jadwal">
         <span class="legend-item"><i class="legend-dot active"></i><span id="active-count">Aktif 0</span></span>
@@ -439,12 +488,20 @@ Ketentuan:
       const progressPanel = document.getElementById("map-progress-panel");
       const progressTrack = progressPanel.querySelector(".progress-track");
       const progressBar = document.getElementById("progress-bar");
+      const activityLog = document.getElementById("activity-log");
+      const activityLogWrap = document.getElementById("activity-log-wrap");
+      const activityStatus = document.getElementById("activity-status");
+      const activityLogButton = document.getElementById("open-activity-log");
       const emptyState = document.getElementById("empty-state");
       let geoJsonLayer;
       let renderedEventsSnapshot = "";
       let lastStreetLookupAt = 0;
       let streetMappingQueue = Promise.resolve();
       let progressDismissed = false;
+      let activityLogStartedAt = 0;
+      let lastActivityAt = 0;
+      let activityTimer = 0;
+      const maxActivityLines = 250;
       let hasInitialBounds = false;
       let mapEvents = [];
       let currentSchedule = null;
@@ -723,6 +780,68 @@ Ketentuan:
         progressDismissed = true;
         progressPanel.hidden = true;
       });
+
+      document.getElementById("open-activity-log").addEventListener("click", () => {
+        progressDismissed = false;
+        progressPanel.hidden = false;
+        activityLogWrap.open = true;
+      });
+
+      function logActivity(message, level = "info") {
+        if (!activityLogStartedAt) {
+          activityLogStartedAt = Date.now();
+          lastActivityAt = activityLogStartedAt;
+        }
+        const now = Date.now();
+        lastActivityAt = now;
+        const elapsed = Math.max(0, now - activityLogStartedAt);
+        const minutes = String(Math.floor(elapsed / 60000)).padStart(2, "0");
+        const seconds = String(Math.floor(elapsed / 1000) % 60).padStart(2, "0");
+        const item = document.createElement("li");
+        item.className = `log-${level}`;
+        const time = document.createElement("span");
+        time.className = "log-time";
+        time.textContent = `${minutes}:${seconds}`;
+        const text = document.createElement("span");
+        text.className = "log-text";
+        text.textContent = message;
+        item.append(time, text);
+        activityLog.append(item);
+        while (activityLog.children.length > maxActivityLines) {
+          activityLog.firstElementChild.remove();
+        }
+        activityLog.scrollTop = activityLog.scrollHeight;
+        activityLogButton.classList.add("has-activity");
+      }
+
+      function resetActivityLog() {
+        activityLog.textContent = "";
+        activityLogStartedAt = Date.now();
+        lastActivityAt = activityLogStartedAt;
+        activityStatus.textContent = "berjalan…";
+        activityStatus.style.color = "";
+        activityLogButton.classList.add("has-activity");
+        progressDismissed = false;
+        progressPanel.hidden = false;
+        activityLogWrap.open = true;
+        if (activityTimer) clearInterval(activityTimer);
+        activityTimer = setInterval(() => {
+          if (!lastActivityAt) return;
+          const idle = Math.floor((Date.now() - lastActivityAt) / 1000);
+          activityStatus.textContent = idle < 2 ? "berjalan…" : `berjalan · ${idle} dtk tanpa langkah baru`;
+        }, 1000);
+      }
+
+      function finishActivity(phase = "success") {
+        if (activityTimer) {
+          clearInterval(activityTimer);
+          activityTimer = 0;
+        }
+        activityStatus.textContent =
+          phase === "error" ? "terhenti" : phase === "warn" ? "selesai dengan catatan" : "selesai";
+        activityStatus.style.color =
+          phase === "error" ? "#fda4af" : phase === "warn" ? "#fcd34d" : "#6ee7b7";
+      }
 
       function updateMapProgress(done, total, found, failed, phase, detail) {
         if (progressDismissed) return;
@@ -1223,21 +1342,52 @@ Ketentuan:
         return best;
       }
 
+      function regionLabel(region) {
+        if (region === "palu") return "Palu";
+        if (region === "tawaeli") return "Tawaeli";
+        return region;
+      }
+
       async function fetchStreetIndexRegion(region) {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 110000);
+        logActivity(`Mengunduh indeks ${regionLabel(region)} dari Worker…`);
         try {
-          const response = await fetch(`${scheduleApiBase}/api/osm-index?region=${encodeURIComponent(region)}`);
-          if (!response.ok) return null;
+          const response = await fetch(
+            `${scheduleApiBase}/api/osm-index?region=${encodeURIComponent(region)}`,
+            { signal: controller.signal }
+          );
+          if (!response.ok) {
+            logActivity(`Worker menjawab HTTP ${response.status} untuk indeks ${regionLabel(region)}.`, "warn");
+            return null;
+          }
           const payload = await response.json().catch(() => null);
-          if (!payload || !Array.isArray(payload.entries) || !payload.entries.length) return null;
+          if (!payload || !Array.isArray(payload.entries) || !payload.entries.length) {
+            logActivity(`Indeks ${regionLabel(region)} kosong atau rusak.`, "warn");
+            return null;
+          }
+          logActivity(`Indeks ${regionLabel(region)} diterima: ${payload.entries.length} nama.`, "success");
           return payload;
-        } catch {
+        } catch (error) {
+          logActivity(
+            error.name === "AbortError"
+              ? `Indeks ${regionLabel(region)} melewati batas 110 detik; memakai cache lama atau cara sebelumnya.`
+              : `Indeks ${regionLabel(region)} tidak bisa dihubungi (${error.message || "gangguan jaringan"}); memakai cache lama atau cara sebelumnya.`,
+            "warn"
+          );
           return null;
+        } finally {
+          clearTimeout(timer);
         }
       }
 
       async function loadStreetIndexes(ulpNames) {
         const regions = [...new Set(ulpNames.map(streetIndexRegion).filter(Boolean))];
-        if (!regions.length) return new Map();
+        if (!regions.length) {
+          logActivity("Tidak ada wilayah berindeks; semua nama dicari langsung ke Nominatim seperti cara sebelumnya.", "warn");
+          return new Map();
+        }
+        logActivity(`Wilayah yang dibutuhkan: ${regions.map(regionLabel).join(", ")}.`);
         const store = readStreetIndexStore();
         const loaded = new Map();
         let changed = false;
@@ -1245,16 +1395,24 @@ Ketentuan:
           let entry = store[region];
           const fresh = entry && Array.isArray(entry.entries) &&
             Date.now() - (Number(entry.generatedAt) || 0) < streetIndexTtlMs;
-          if (!fresh) {
+          if (fresh) {
+            logActivity(`Indeks ${regionLabel(region)} dipakai dari cache browser (${entry.entries.length} nama).`, "success");
+          } else {
+            if (entry) logActivity(`Indeks ${regionLabel(region)} di cache browser sudah kedaluwarsa.`);
             const payload = await fetchStreetIndexRegion(region);
             if (payload) {
               store[region] = payload;
               entry = payload;
               changed = true;
+            } else if (entry && Array.isArray(entry.entries) && entry.entries.length) {
+              logActivity(`Memakai indeks ${regionLabel(region)} lama dari cache browser.`, "warn");
             }
           }
           if (entry && Array.isArray(entry.entries) && entry.entries.length) {
             loaded.set(region, buildStreetIndex(entry.entries));
+            logActivity(`Indeks ${regionLabel(region)} siap untuk pencocokan lokal.`, "success");
+          } else {
+            logActivity(`Indeks ${regionLabel(region)} tidak tersedia; nama wilayah ini dicari satu per satu.`, "warn");
           }
         }
         if (changed) saveStreetIndexStore(store);
@@ -1288,8 +1446,10 @@ Ketentuan:
           const url = new URL("/api/geocode", window.location.origin);
           url.searchParams.set("street", street);
           url.searchParams.set("ulp", ulpName);
+          const probeController = new AbortController();
+          const probeTimer = setTimeout(() => probeController.abort(), 8000);
           try {
-            const response = await fetch(url);
+            const response = await fetch(url, { signal: probeController.signal });
             if (response.ok) {
               directGeocoding = false;
               return await response.json();
@@ -1299,7 +1459,9 @@ Ketentuan:
               throw new Error(result.error || "Layanan pencarian OpenStreetMap sedang tidak tersedia.");
             }
           } catch (error) {
-            if (!(error instanceof TypeError)) throw error;
+            if (!(error instanceof TypeError) && error.name !== "AbortError") throw error;
+          } finally {
+            clearTimeout(probeTimer);
           }
           directGeocoding = true;
         }
@@ -1312,7 +1474,23 @@ Ketentuan:
         osmUrl.searchParams.set("limit", "10");
         osmUrl.searchParams.set("viewbox", "117,2,125.5,-4.5");
         osmUrl.searchParams.set("bounded", "1");
-        const response = await fetch(osmUrl, { headers: { "Accept-Language": "id" } });
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 30000);
+        let response;
+        try {
+          response = await fetch(osmUrl, {
+            headers: { "Accept-Language": "id" },
+            signal: controller.signal
+          });
+        } catch (error) {
+          throw new Error(
+            error.name === "AbortError"
+              ? "Nominatim tidak menjawab dalam 30 detik."
+              : "Gagal menghubungi Nominatim."
+          );
+        } finally {
+          clearTimeout(timer);
+        }
         if (!response.ok) {
           throw new Error("Layanan pencarian OpenStreetMap sedang tidak tersedia.");
         }
@@ -1387,6 +1565,8 @@ Ketentuan:
           }
         }
         if (!jobs.length) {
+          logActivity("Tidak ada nama baru yang perlu dipetakan.", "success");
+          finishActivity("success");
           updateMapProgress(
             importedStreetCount,
             importedStreetCount,
@@ -1419,12 +1599,20 @@ Ketentuan:
             fetchMapLayers();
           }, 500);
         };
+        logActivity(`Nama yang perlu dipetakan: ${jobs.length} (${alreadyMapped} sudah punya titik).`);
         updateMapProgress(0, jobs.length, 0, 0, "working", "Menyiapkan indeks OpenStreetMap…");
+        logActivity("Menyiapkan indeks OpenStreetMap…");
         let streetIndexes = new Map();
         try {
           streetIndexes = await loadStreetIndexes(jobs.map((job) => job.ulpName));
-        } catch {
+        } catch (error) {
           streetIndexes = new Map();
+          logActivity(`Indeks gagal disiapkan (${error.message || "kesalahan tak terduga"}); memakai cara sebelumnya.`, "warn");
+        }
+        if (streetIndexes.size) {
+          logActivity("Pencocokan lokal aktif; sisa nama akan dicari ke Nominatim.", "success");
+        } else {
+          logActivity("Indeks tidak tersedia; semua nama dicari ke Nominatim seperti cara sebelumnya.", "warn");
         }
         updateMapProgress(
           0,
@@ -1448,6 +1636,9 @@ Ketentuan:
                 displayName: indexed.name
               };
               fromIndex++;
+              if (fromIndex % 10 === 0) {
+                logActivity(`Indeks OSM: ${fromIndex} nama sudah cocok tanpa jaringan.`);
+              }
             }
           } catch {
             point = null;
@@ -1457,12 +1648,21 @@ Ketentuan:
             if (lastStreetLookupAt && waitMs > 0) {
               await new Promise((resolve) => setTimeout(resolve, waitMs));
             }
+            const lookupStarted = Date.now();
             try {
               point = await geocodeStreet(job.ulpName, job.location);
               lastStreetLookupAt = Date.now();
-            } catch {
+              const seconds = ((Date.now() - lookupStarted) / 1000).toFixed(1);
+              if (point) {
+                const label = String(point.displayName || "").split(",")[0] || "lokasi";
+                logActivity(`Nominatim: "${job.location}" cocok dengan ${label} (${seconds} dtk).`, "success");
+              } else {
+                logActivity(`Nominatim: "${job.location}" tidak cocok (${seconds} dtk).`, "warn");
+              }
+            } catch (error) {
               lastStreetLookupAt = Date.now();
               point = null;
+              logActivity(`Nominatim: "${job.location}" gagal (${error.message || "gangguan jaringan"}).`, "error");
             }
           }
           if (point) {
@@ -1489,12 +1689,16 @@ Ketentuan:
           );
         }
         await flushRender();
+        logActivity(`Peta diperbarui: ${found} titik tampil, ${failed} belum cocok.`, found ? "success" : "warn");
         let pushError = null;
         if (found && currentSchedule) {
+          logActivity("Menyimpan titik ke GitHub…");
           try {
             await postScheduleToWorker(currentSchedule.events);
+            logActivity("Titik tersimpan di GitHub dan tampil untuk semua pengunjung.", "success");
           } catch (error) {
             pushError = error.message || "Gagal mengirim ke GitHub.";
+            logActivity(`Gagal menyimpan titik ke GitHub: ${pushError}`, "error");
           }
         }
         updateMapProgress(
@@ -1509,6 +1713,15 @@ Ketentuan:
               ? "Proses selesai. Jalan yang tidak cocok tetap tersimpan tanpa koordinat rekaan."
               : "Semua jalan yang ditemukan sudah tampil di peta dan tersimpan ke GitHub."
         );
+        logActivity(
+          pushError
+            ? "Proses selesai, tetapi titik gagal dibagikan ke pengunjung lain."
+            : failed
+              ? `Proses selesai: ${found} titik tampil, ${failed} nama tidak ada di OpenStreetMap.`
+              : "Proses selesai dan tersimpan sepenuhnya.",
+          pushError ? "error" : failed ? "warn" : "success"
+        );
+        finishActivity(pushError ? "error" : failed ? "warn" : "success");
       }
 
       function enqueueStreetMapping(importedEvents) {
@@ -1516,6 +1729,8 @@ Ketentuan:
         streetMappingQueue = streetMappingQueue
           .then(() => mapImportedStreets(importedEvents))
           .catch((error) => {
+            logActivity(`Pemetaan berhenti: ${error.message || "kesalahan tak terduga"}.`, "error");
+            finishActivity("error");
             updateMapProgress(0, 0, 0, 0, "error", error.message || "Silakan coba lagi.");
           })
           .finally(() => {
@@ -1682,9 +1897,13 @@ Ketentuan:
           return;
         }
         if (!window.confirm(`Hapus semua jadwal dari GitHub? Peta akan kosong untuk semua pengunjung.`)) return;
+        resetActivityLog();
+        logActivity("Menghapus jadwal dari GitHub…");
         try {
           await clearScheduleOnWorker();
         } catch (error) {
+          logActivity(error.message || "Gagal menghapus jadwal dari GitHub.", "error");
+          finishActivity("error");
           importStatus.textContent = error.message || "Gagal menghapus jadwal dari GitHub.";
           return;
         }
@@ -1694,6 +1913,8 @@ Ketentuan:
         hasInitialBounds = false;
         map.setView([-0.8917, 119.8707], 12);
         await fetchMapLayers();
+        logActivity("Jadwal dihapus dari GitHub; peta dikosongkan untuk semua pengunjung.", "success");
+        finishActivity("success");
         importStatus.textContent = "Jadwal sudah dihapus dari GitHub; peta dikosongkan untuk semua pengunjung.";
         progressPanel.hidden = true;
       });
@@ -1704,22 +1925,36 @@ Ketentuan:
           importStatus.textContent = "Tempel hasil JSON AI terlebih dahulu.";
           return;
         }
-        if (new TextEncoder().encode(jsonText).length > 512 * 1024) {
+        const sizeBytes = new TextEncoder().encode(jsonText).length;
+        if (sizeBytes > 512 * 1024) {
           importStatus.textContent = "Hasil terlalu besar; batas impor 512 KB.";
           return;
         }
         submitImportButton.disabled = true;
         importSessions++;
+        resetActivityLog();
+        logActivity(`Hasil AI diterima (${(sizeBytes / 1024).toFixed(1)} KB).`);
         importStatus.textContent = "Memvalidasi hasil AI…";
+        logActivity("Memeriksa format JSON…");
         let enqueued = false;
         try {
           const parsed = parseClientImport(jsonText);
           const imported = parsed.events;
           if (!imported.length) {
+            logActivity(
+              `Tidak ada jadwal valid; ${parsed.skippedEvents} jadwal dan ${parsed.skippedGroups} kelompok dilewati.`,
+              "warn"
+            );
+            finishActivity("warn");
             importStatus.textContent =
               `Tidak ada jadwal dengan jalan yang bisa dipetakan; ${parsed.skippedEvents} jadwal dan ${parsed.skippedGroups} kelompok kosong dilewati.`;
             return;
           }
+          const locationCount = imported.reduce(
+            (total, event) => total + event.affectedAreas.reduce((sum, area) => sum + area.locations.length, 0),
+            0
+          );
+          logActivity(`Valid: ${imported.length} jadwal, ${locationCount} nama lokasi.`, "success");
           const importedDateKey = scheduleDateKey(imported);
           const baseEvents = currentSchedule && currentSchedule.date === importedDateKey
             ? currentSchedule.events
@@ -1730,7 +1965,9 @@ Ketentuan:
           await fetchMapLayers();
           document.getElementById("ai-json-input").value = "";
           importStatus.textContent = "Jadwal tervalidasi. Menyimpan ke GitHub…";
+          logActivity("Menyimpan jadwal ke GitHub melalui Worker…");
           await postScheduleToWorker(events);
+          logActivity("Jadwal tersimpan di GitHub dan tampil untuk semua pengunjung.", "success");
           importStatus.textContent =
             `${imported.length} jadwal tersimpan ke GitHub dan tampil untuk semua pengunjung; ` +
             `${parsed.skippedEvents} jadwal dan ${parsed.skippedGroups} kelompok kosong dilewati.`;
@@ -1738,6 +1975,8 @@ Ketentuan:
           enqueued = true;
           enqueueStreetMapping(imported);
         } catch (error) {
+          logActivity(error.message || "Impor hasil AI gagal.", "error");
+          finishActivity("error");
           importStatus.textContent = error.message || "Impor hasil AI gagal.";
         } finally {
           submitImportButton.disabled = false;

@@ -34,6 +34,8 @@ Format impor memakai `schema_version: 1` dan array `events`. Setiap event memuat
 
 Setelah validasi berhasil, dialog impor menutup dan pencarian berjalan di halaman peta dengan progress bar. Setiap titik yang cocok langsung muncul; nama lokasi tampil saat marker disentuh/di-hover agar label tidak menumpuk.
 
+Selama impor, panel **Log aktivitas** menampilkan langkah yang sedang berjalan beserta stempel waktu: ukuran JSON, validasi, unduhan indeks per wilayah, jumlah nama yang cocok dari indeks, setiap pencarian Nominatim, penyimpanan ke GitHub, dan kesalahan jaringan. Tombol **Log aktivitas** di header membuka kembali panel tersebut kapan saja. Jika indeks gagal atau melewati batas 110 detik, log menyatakannya dan pencarian otomatis memakai Nominatim seperti cara sebelumnya; pencarian Nominatim dibatasi 30 detik per nama agar tidak menggantung.
+
 Pencocokan berjalan dua tahap:
 
 1. **Indeks OpenStreetMap (lokal).** Nama dinormalisasi lebih dulu: awalan `Jl./Jalan`, gelar (`Dr.`, `H.`, `Sultan`), angka Romawi, singkatan (`Tg.` → Tanjung, `Tlk` → Teluk, `GN` → Gunung, `S` → Sungai, `M` → Muhammad), ejaan gabung/pecah (`Ki Maja` ↔ `Kimaja`), dan salah ejaan ringan. Hasilnya dicocokkan tanpa jaringan.
