@@ -1,0 +1,1 @@
+{"schema_version":1,"events":[{"eventId":"uji-pat","startTime":"2026-11-25T09:00:00+08:00","affectedAreas":[{"points":[],"ulpName":"ULP Palu Kota","locations":["Jalan Gajah Mada"]}],"endTime":"2026-11-25T13:00:00+08:00","title":"Uji pulih","locations":["Kota Palu"]}],"generated_at":"2026-11-11T07:50:00.000Z","date":"2026-11-25"}
