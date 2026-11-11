@@ -350,6 +350,12 @@
       .popup-countdown { margin-top: .32rem; color: #0f172a; font-weight: 750; }
       .popup-note { display: block; margin-top: .4rem; color: #9a3412; font-size: .68rem; }
       .street-marker-icon { border: 0; background: transparent; }
+      #map[data-point-filter="active"] .street-marker-icon:not(.status-active),
+      #map[data-point-filter="active"] .area-shape:not(.status-active),
+      #map[data-point-filter="upcoming"] .street-marker-icon:not(.status-upcoming),
+      #map[data-point-filter="upcoming"] .area-shape:not(.status-upcoming),
+      #map[data-point-filter="passed"] .street-marker-icon:not(.status-passed),
+      #map[data-point-filter="passed"] .area-shape:not(.status-passed) { display: none; }
       .street-marker {
         display: block;
         width: 24px;
@@ -401,6 +407,18 @@
         .dialog-layout { gap: .5rem; }
         #ai-json-input { height: 34dvh; min-height: 130px; max-height: 34dvh; font-size: .68rem; }
         .dialog-heading h2 { font-size: .9rem; }
+      }
+      @media (max-width: 620px), (pointer: coarse) and (max-width: 1024px) {
+        .street-marker { filter: none; }
+        .street-marker.active { animation: none; }
+        .street-marker-icon::before {
+          content: "";
+          position: absolute;
+          inset: -8px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, .001);
+          pointer-events: auto;
+        }
       }
     </style>
     <script src="vendor/leaflet/leaflet.js"></script>
@@ -635,6 +653,7 @@ Ketentuan:
 
       function areaStyle(properties, geometryType, color, status) {
         return {
+          className: `area-shape status-${statusClass(status)}`,
           color,
           weight: status === "ACTIVE" ? 3 : 2,
           opacity: status === "PASSED" ? .55 : .86,
@@ -879,7 +898,12 @@ Ketentuan:
         for (const button of filterButtons) {
           button.setAttribute("aria-pressed", String(button.dataset.filter === next));
         }
-        renderMapLayers();
+        map.getContainer().dataset.pointFilter = next;
+        const now = Date.now();
+        const allPoints = buildStreetPointFeatures(now);
+        updateEmptyState(allPoints, allPoints.filter((feature) => featureMatchesFilter(feature, now)));
+        map.closePopup();
+        if (!geoJsonLayer && mapEvents.length) renderMapLayers();
       }
 
       for (const button of filterButtons) {
@@ -1102,14 +1126,29 @@ Ketentuan:
           statusClass(getEventStatus(feature.properties, now)) === pointFilter;
       }
 
+      function updateEmptyState(allPoints, visiblePoints) {
+        if (!mapEvents.length) {
+          emptyState.textContent = "Belum ada jadwal pemadaman untuk hari ini.";
+          emptyState.hidden = false;
+        } else if (!allPoints.length) {
+          emptyState.textContent = "Jadwal hari ini sudah tersimpan, tetapi belum ada titik lokasi yang berhasil dicari.";
+          emptyState.hidden = false;
+        } else if (!visiblePoints.length) {
+          emptyState.textContent = `Tidak ada titik ${filterLabel(pointFilter)} saat ini. Pilih "Semua" untuk melihat seluruh titik.`;
+          emptyState.hidden = false;
+        } else {
+          emptyState.hidden = true;
+        }
+      }
+
       function renderMapLayers() {
         const now = Date.now();
         for (const event of mapEvents) event.status = getEventStatus(event, now);
         const allPoints = buildStreetPointFeatures(now);
         const shapes = buildAreaShapes(allPoints);
         const visiblePoints = allPoints.filter((feature) => featureMatchesFilter(feature, now));
-        const visibleShapes = shapes.filter((feature) => featureMatchesFilter(feature, now));
-        const mapFeatures = [...visibleShapes, ...visiblePoints];
+        const mapFeatures = [...shapes, ...allPoints];
+        map.getContainer().dataset.pointFilter = pointFilter;
         if (geoJsonLayer) map.removeLayer(geoJsonLayer);
         geoJsonLayer = L.geoJSON({ type: "FeatureCollection", features: mapFeatures }, {
           style: (feature) => {
@@ -1133,7 +1172,7 @@ Ketentuan:
             const color = pointColor(properties, now);
             const marker = L.marker(latlng, {
               icon: L.divIcon({
-                className: "street-marker-icon",
+                className: `street-marker-icon status-${statusClass(status)}`,
                 html: markerSvg(status, color),
                 iconSize: [24, 24],
                 iconAnchor: [12, 12]
@@ -1156,18 +1195,7 @@ Ketentuan:
           map.setView([latitude, longitude], 14);
           hasInitialBounds = true;
         }
-        if (!mapEvents.length) {
-          emptyState.textContent = "Belum ada jadwal pemadaman untuk hari ini.";
-          emptyState.hidden = false;
-        } else if (!allPoints.length) {
-          emptyState.textContent = "Jadwal hari ini sudah tersimpan, tetapi belum ada titik lokasi yang berhasil dicari.";
-          emptyState.hidden = false;
-        } else if (!visiblePoints.length) {
-          emptyState.textContent = `Tidak ada titik ${filterLabel(pointFilter)} saat ini. Pilih "Semua" untuk melihat seluruh titik.`;
-          emptyState.hidden = false;
-        } else {
-          emptyState.hidden = true;
-        }
+        updateEmptyState(allPoints, visiblePoints);
         updateStatusCounts(mapEvents);
       }
 
