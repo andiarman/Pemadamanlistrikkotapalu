@@ -249,22 +249,6 @@
       }
       #ai-json-input:focus { border-color: #34d399; box-shadow: 0 0 0 2px rgba(52, 211, 153, .12); }
       #import-status { min-height: 1rem; color: #b9c6d8; font-size: .7rem; line-height: 1.4; white-space: pre-line; }
-      .token-field { display: grid; gap: .3rem; }
-      .token-field span { color: #91a1b7; font-size: .7rem; font-weight: 700; }
-      #github-token-input {
-        width: 100%;
-        min-height: 38px;
-        padding: .55rem .7rem;
-        border: 1px solid #34445c;
-        border-radius: 10px;
-        outline: none;
-        background: #070f1c;
-        color: #e6edf7;
-        font: .72rem/1.45 ui-monospace, SFMono-Regular, Consolas, monospace;
-      }
-      #github-token-input:focus { border-color: #34d399; box-shadow: 0 0 0 2px rgba(52, 211, 153, .12); }
-      .token-help { margin: 0; color: #91a1b7; font-size: .66rem; line-height: 1.5; }
-      .token-help a { color: #7dd3fc; }
       #map-progress { min-height: 1rem; color: #ffd28b; font-size: .7rem; line-height: 1.4; }
       .leaflet-container { background: #d8dce1; }
       .leaflet-control-zoom { display: flex; flex-direction: column; gap: 6px; border: 0 !important; }
@@ -386,7 +370,7 @@
         <div class="dialog-heading">
           <div>
             <h2 id="dialog-title">Impor hasil AI</h2>
-            <p class="dialog-help">Salin prompt, unggah flyer ke AI, lalu tempel hanya JSON hasilnya. Jadwal tersimpan ke repo GitHub ini dan tampil untuk semua pengunjung; peta ter-reset otomatis setiap hari.</p>
+            <p class="dialog-help">Salin prompt, unggah flyer ke AI, lalu tempel hanya JSON hasilnya. Siapa pun bisa mengimpor tanpa perlu akun; jadwal tampil untuk semua pengunjung dan peta ter-reset otomatis setiap hari.</p>
           </div>
           <button id="close-import" type="button" aria-label="Tutup">×</button>
         </div>
@@ -395,11 +379,6 @@
           <button id="clear-local-data" type="button">Kosongkan peta</button>
         </div>
         <textarea id="ai-json-input" aria-label="Tempel hasil AI" placeholder="Tempel hanya objek JSON hasil AI di sini…"></textarea>
-        <label class="token-field" for="github-token-input">
-          <span>Token akses GitHub</span>
-          <input id="github-token-input" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…" />
-        </label>
-        <p class="token-help">Dibutuhkan untuk menyimpan jadwal ke repo <a href="https://github.com/andiarman/Pemadamanlistrikkotapalu" target="_blank" rel="noreferrer">andiarman/Pemadamanlistrikkotapalu</a>. Buat <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noreferrer">token fine-grained</a> dengan akses hanya ke repo tersebut dan izin <strong>Contents: Read and write</strong>. Token hanya tersimpan di browser ini dan hanya dikirim ke api.github.com.</p>
         <div id="import-status" role="status" aria-live="polite"></div>
         <button id="submit-import" type="button">Validasi dan tampilkan di peta</button>
       </div>
@@ -761,8 +740,7 @@ Ketentuan:
       }
 
       const localEventsKey = "outage-map-client-events-v2";
-      const githubTokenKey = "outage-map-github-token-v1";
-      const githubRepo = { owner: "andiarman", name: "Pemadamanlistrikkotapalu" };
+      const scheduleApiBase = "https://outage-map-app.vaultman.workers.dev";
       const githubDataDir = "data";
       const localGeocodeCacheKey = "outage-map-geocode-cache-v1";
       const canonicalLocations = new Map([
@@ -805,93 +783,6 @@ Ketentuan:
         }
       }
 
-      function readGithubToken() {
-        return (localStorage.getItem(githubTokenKey) || "").trim();
-      }
-
-      function base64EncodeUtf8(text) {
-        const bytes = new TextEncoder().encode(text);
-        let binary = "";
-        for (let index = 0; index < bytes.length; index += 0x8000) {
-          binary += String.fromCharCode(...bytes.subarray(index, index + 0x8000));
-        }
-        return btoa(binary);
-      }
-
-      function githubApiError(response) {
-        if (response.status === 401) return "Token GitHub ditolak (401); periksa kembali token akses.";
-        if (response.status === 403) return "GitHub menolak permintaan (403); token mungkin kurang izin Contents atau sedang dibatasi.";
-        if (response.status === 404) return "Repositori tidak dapat diakses dengan token ini (404).";
-        if (response.status === 409) return "File jadwal di GitHub berubah sejak terakhir dibaca; ulangi penyimpanan.";
-        return `Permintaan GitHub gagal (HTTP ${response.status}).`;
-      }
-
-      async function githubApiFetch(path, options = {}) {
-        const token = readGithubToken();
-        if (!token) throw new Error("Token akses GitHub belum diatur.");
-        return fetch(`https://api.github.com${path}`, {
-          ...options,
-          headers: {
-            Authorization: `Bearer ${token}`,
-            Accept: "application/vnd.github+json",
-            "X-GitHub-Api-Version": "2022-11-28",
-            ...(options.headers || {})
-          }
-        });
-      }
-
-      async function readGithubFile(path) {
-        const response = await githubApiFetch(path);
-        if (response.status === 404) return null;
-        if (!response.ok) throw new Error(githubApiError(response));
-        return response.json();
-      }
-
-      async function writeGithubFile(path, message, text, retry = true) {
-        const existing = await readGithubFile(path);
-        const body = { message, content: base64EncodeUtf8(text) };
-        if (existing?.sha) body.sha = existing.sha;
-        const response = await githubApiFetch(path, {
-          method: "PUT",
-          body: JSON.stringify(body)
-        });
-        if (response.status === 409 && retry) return writeGithubFile(path, message, text, false);
-        if (!response.ok) throw new Error(githubApiError(response));
-        return response.json();
-      }
-
-      async function deleteGithubFile(path, sha, message) {
-        const response = await githubApiFetch(path, {
-          method: "DELETE",
-          body: JSON.stringify({ message, sha })
-        });
-        if (!response.ok) throw new Error(githubApiError(response));
-      }
-
-      async function listGithubDataFiles() {
-        const response = await githubApiFetch(`/repos/${githubRepo.owner}/${githubRepo.name}/contents/${githubDataDir}`);
-        if (response.status === 404) return [];
-        if (!response.ok) throw new Error(githubApiError(response));
-        const entries = await response.json();
-        return Array.isArray(entries)
-          ? entries.filter((entry) => entry?.type === "file" && /^\d{4}-\d{2}-\d{2}\.json$/.test(entry.name))
-          : [];
-      }
-
-      async function cleanupGithubDataFiles(keepDateKey) {
-        const yesterdayKey = witaDateKey(new Date(Date.now() - 24 * 60 * 60 * 1000));
-        const files = await listGithubDataFiles();
-        for (const file of files) {
-          const fileDate = file.name.replace(/\.json$/, "");
-          if (fileDate === keepDateKey || fileDate >= yesterdayKey) continue;
-          try {
-            await deleteGithubFile(`${githubDataDir}/${file.name}`, file.sha, `Hapus arsip jadwal lama ${file.name}`);
-          } catch {
-            // Arsip lama yang gagal dihapus tidak boleh menggagalkan penyimpanan hari ini.
-          }
-        }
-      }
-
       function buildScheduleText(events, dateKey) {
         return JSON.stringify({
           schema_version: 1,
@@ -901,12 +792,27 @@ Ketentuan:
         });
       }
 
-      async function pushScheduleToGithub(events) {
+      async function postScheduleToWorker(events) {
         const dateKey = scheduleDateKey(events);
-        const path = `/repos/${githubRepo.owner}/${githubRepo.name}/contents/${githubDataDir}/${dateKey}.json`;
-        const commit = await writeGithubFile(path, `Jadwal pemadaman ${dateKey}`, buildScheduleText(events, dateKey));
-        await cleanupGithubDataFiles(dateKey);
-        return { dateKey, commitUrl: commit?.commit?.html_url || "" };
+        const response = await fetch(`${scheduleApiBase}/api/schedule`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: buildScheduleText(events, dateKey)
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          throw new Error(result.error || "Gagal menyimpan jadwal; coba lagi sebentar.");
+        }
+        return { dateKey, commitUrl: result.commitUrl || "" };
+      }
+
+      async function clearScheduleOnWorker() {
+        const response = await fetch(`${scheduleApiBase}/api/schedule`, { method: "DELETE" });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          throw new Error(result.error || "Gagal menghapus jadwal; coba lagi sebentar.");
+        }
+        return result.deleted || 0;
       }
 
       async function fetchRemoteSchedule() {
@@ -1055,9 +961,7 @@ Ketentuan:
           if (mapEvents.length && !streetPoints.length) {
             emptyState.textContent = "Jadwal hari ini sudah tersimpan, tetapi belum ada titik jalan yang berhasil dicari.";
           } else if (!mapEvents.length) {
-            emptyState.textContent = readGithubToken()
-              ? "Belum ada jadwal untuk hari ini. Tekan Impor hasil AI untuk menerbitkan jadwal hari ini bagi semua pengunjung."
-              : "Belum ada jadwal pemadaman untuk hari ini.";
+            emptyState.textContent = "Belum ada jadwal pemadaman untuk hari ini.";
           }
           updateStatusCounts(mapEvents, streetPoints.length);
         } catch (error) {
@@ -1246,7 +1150,7 @@ Ketentuan:
         let pushError = null;
         if (found && currentSchedule) {
           try {
-            await pushScheduleToGithub(currentSchedule.events);
+            await postScheduleToWorker(currentSchedule.events);
           } catch (error) {
             pushError = error.message || "Gagal mengirim ke GitHub.";
           }
@@ -1409,12 +1313,6 @@ Ketentuan:
       }
 
       document.getElementById("open-import").addEventListener("click", () => {
-        const tokenInput = document.getElementById("github-token-input");
-        tokenInput.value = "";
-        tokenInput.placeholder = readGithubToken()
-          ? "Token tersimpan — biarkan kosong untuk memakainya"
-          : "github_pat_…";
-        document.getElementById("clear-local-data").hidden = !readGithubToken();
         importDialog.showModal();
       });
       document.getElementById("close-import").addEventListener("click", () => importDialog.close());
@@ -1440,14 +1338,7 @@ Ketentuan:
         }
         if (!window.confirm(`Hapus semua jadwal dari GitHub? Peta akan kosong untuk semua pengunjung.`)) return;
         try {
-          const files = await listGithubDataFiles();
-          for (const file of files) {
-            try {
-              await deleteGithubFile(`${githubDataDir}/${file.name}`, file.sha, `Hapus jadwal ${file.name}`);
-            } catch {
-              // Lanjutkan menghapus file lain.
-            }
-          }
+          await clearScheduleOnWorker();
         } catch (error) {
           importStatus.textContent = error.message || "Gagal menghapus jadwal dari GitHub.";
           return;
@@ -1472,19 +1363,6 @@ Ketentuan:
           importStatus.textContent = "Hasil terlalu besar; batas impor 512 KB.";
           return;
         }
-        const typedToken = document.getElementById("github-token-input").value.trim();
-        if (typedToken) {
-          try {
-            localStorage.setItem(githubTokenKey, typedToken);
-          } catch {
-            importStatus.textContent = "Token tidak dapat disimpan di browser ini.";
-            return;
-          }
-        }
-        if (!readGithubToken()) {
-          importStatus.textContent = "Isi token akses GitHub terlebih dahulu (lihat petunjuk di bawah).";
-          return;
-        }
         submitImportButton.disabled = true;
         importSessions++;
         importStatus.textContent = "Memvalidasi hasil AI…";
@@ -1506,9 +1384,8 @@ Ketentuan:
           saveLocalStore(currentSchedule);
           await fetchMapLayers();
           document.getElementById("ai-json-input").value = "";
-          document.getElementById("github-token-input").value = "";
           importStatus.textContent = "Jadwal tervalidasi. Menyimpan ke GitHub…";
-          await pushScheduleToGithub(events);
+          await postScheduleToWorker(events);
           importStatus.textContent =
             `${imported.length} jadwal tersimpan ke GitHub dan tampil untuk semua pengunjung; ` +
             `${parsed.skippedEvents} jadwal dan ${parsed.skippedGroups} kelompok kosong dilewati.`;
