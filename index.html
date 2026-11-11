@@ -386,23 +386,149 @@
       .tooltip-street-name { display: block; }
       .tooltip-countdown { display: block; margin-top: .14rem; color: #cbd5e1; font-size: .62rem; font-weight: 650; }
       @media (max-width: 620px) {
-        header { min-height: 62px; gap: .45rem; padding: .45rem .6rem; }
-        .brand { gap: .45rem; }
-        .brand-icon { width: 32px; height: 32px; flex-basis: 32px; border-radius: 10px; font-size: 1rem; }
-        h1 { font-size: .78rem; }
-        #wita-clock { font-size: .63rem; }
-        .header-actions { gap: .4rem; flex-direction: column-reverse; align-items: flex-end; }
-        #status-counts { max-width: 50vw; overflow: hidden; font-size: .58rem; text-overflow: ellipsis; }
-        #open-import,
-        #open-activity-log { min-height: 32px; padding: .35rem .55rem; border-radius: 8px; font-size: .68rem; }
-        .map-legend { left: 7px; right: 7px; bottom: 8px; justify-content: space-around; gap: .25rem; max-width: none; padding: .45rem .4rem; border-radius: 10px; }
-        .leaflet-bottom.leaflet-right { bottom: 150px; }
-        .legend-item { gap: .22rem; padding: .26rem .4rem; font-size: .62rem; }
-        .legend-icon, .legend-icon svg { width: 16px; height: 16px; flex-basis: 16px; }
-        .legend-note { font-size: .56rem; text-align: center; }
-        .threads-link { min-height: 26px; padding: .24rem .5rem; font-size: .6rem; }
-        .threads-link svg { width: 13px; height: 13px; flex-basis: 13px; }
-        #map-progress-panel { top: 9px; right: 8px; width: min(340px, calc(100vw - 16px)); padding: .7rem .75rem; }
+        header {
+          position: absolute;
+          top: calc(env(safe-area-inset-top, 0px) + 10px);
+          left: 10px;
+          right: 10px;
+          z-index: 1200;
+          min-height: 0;
+          gap: .5rem;
+          padding: .6rem .7rem;
+          border: 1px solid rgba(148, 163, 184, .16);
+          border-radius: 18px;
+          background:
+            radial-gradient(120% 180% at 0% 0%, rgba(239, 68, 68, .17), transparent 55%),
+            radial-gradient(120% 180% at 100% 0%, rgba(34, 197, 94, .13), transparent 55%),
+            linear-gradient(155deg, rgba(15, 27, 45, .96), rgba(7, 14, 26, .93));
+          box-shadow: 0 14px 34px rgba(0, 0, 0, .42), inset 0 1px 0 rgba(255, 255, 255, .05);
+          backdrop-filter: blur(16px);
+        }
+        .brand { gap: .6rem; }
+        .brand-icon {
+          width: 40px;
+          height: 40px;
+          flex-basis: 40px;
+          border: 0;
+          border-radius: 13px;
+          background: linear-gradient(140deg, #fbbf24, #f97316 55%, #ef4444);
+          color: #ffffff;
+          box-shadow: 0 6px 16px rgba(239, 68, 68, .35);
+        }
+        .brand-icon svg { width: 21px; height: 21px; }
+        h1 {
+          color: #ffffff;
+          font-size: .86rem;
+          font-weight: 720;
+          letter-spacing: -.02em;
+          line-height: 1.2;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        #wita-clock {
+          display: inline-flex;
+          align-items: center;
+          gap: .34rem;
+          width: fit-content;
+          margin-top: .28rem;
+          padding: .12rem .45rem;
+          border: 1px solid rgba(148, 163, 184, .16);
+          border-radius: 999px;
+          background: rgba(148, 163, 184, .09);
+          color: #b9c6d8;
+          font-size: .6rem;
+          font-weight: 600;
+          letter-spacing: .01em;
+        }
+        #wita-clock::before {
+          content: "";
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: #34d399;
+          box-shadow: 0 0 7px rgba(52, 211, 153, .9);
+        }
+        .header-actions { display: none; }
+        .map-legend {
+          left: 10px;
+          right: 10px;
+          bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
+          z-index: 1100;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: .42rem;
+          max-width: none;
+          padding: .55rem;
+          border: 1px solid rgba(148, 163, 184, .16);
+          border-radius: 18px;
+          background:
+            radial-gradient(130% 170% at 0% 0%, rgba(239, 68, 68, .12), transparent 58%),
+            radial-gradient(130% 170% at 100% 100%, rgba(34, 197, 94, .1), transparent 58%),
+            linear-gradient(155deg, rgba(14, 25, 42, .95), rgba(7, 14, 26, .94));
+          box-shadow: 0 16px 36px rgba(0, 0, 0, .45), inset 0 1px 0 rgba(255, 255, 255, .045);
+          backdrop-filter: blur(16px);
+        }
+        .legend-head { grid-column: 1 / -1; padding: 0 .1rem .05rem; }
+        .legend-label { color: #93a3b8; font-size: .56rem; letter-spacing: .12em; }
+        .legend-note { display: none; }
+        .legend-item {
+          justify-content: flex-start;
+          min-height: 44px;
+          gap: .45rem;
+          padding: .45rem .55rem;
+          border-radius: 12px;
+          background: rgba(148, 163, 184, .07);
+          font-size: .7rem;
+          font-weight: 650;
+        }
+        .legend-item > span { display: flex; flex: 1; align-items: center; gap: .32rem; min-width: 0; }
+        .legend-item b {
+          margin-left: auto;
+          padding: .02rem .34rem;
+          border-radius: 999px;
+          background: rgba(255, 255, 255, .09);
+          color: #eef2f8;
+          font-size: .62rem;
+          font-variant-numeric: tabular-nums;
+        }
+        .legend-icon, .legend-icon svg { width: 17px; height: 17px; flex-basis: 17px; }
+        .legend-item[aria-pressed="true"] { border-color: rgba(226, 232, 240, .45); background: rgba(255, 255, 255, .13); }
+        .legend-item[aria-pressed="true"][data-filter="active"] { border-color: rgba(248, 113, 113, .6); background: rgba(239, 68, 68, .16); color: #ffe4e6; }
+        .legend-item[aria-pressed="true"][data-filter="active"] b { background: rgba(239, 68, 68, .3); }
+        .legend-item[aria-pressed="true"][data-filter="upcoming"] { border-color: rgba(250, 204, 21, .58); background: rgba(250, 204, 21, .14); color: #fef3c7; }
+        .legend-item[aria-pressed="true"][data-filter="upcoming"] b { background: rgba(250, 204, 21, .26); color: #fffbeb; }
+        .legend-item[aria-pressed="true"][data-filter="passed"] { border-color: rgba(74, 222, 128, .55); background: rgba(34, 197, 94, .15); color: #dcfce7; }
+        .legend-item[aria-pressed="true"][data-filter="passed"] b { background: rgba(34, 197, 94, .28); }
+        .threads-link {
+          width: 32px;
+          height: 32px;
+          min-height: 32px;
+          flex: 0 0 32px;
+          justify-content: center;
+          padding: 0;
+          border-radius: 10px;
+          background: rgba(148, 163, 184, .09);
+        }
+        .threads-link span { display: none; }
+        .threads-link svg { width: 15px; height: 15px; flex-basis: 15px; }
+        .leaflet-bottom.leaflet-right { bottom: calc(env(safe-area-inset-bottom, 0px) + 190px); }
+        .leaflet-control-attribution {
+          position: fixed;
+          right: 8px;
+          bottom: calc(env(safe-area-inset-bottom, 0px) + 5px);
+          z-index: 1050;
+          margin: 0 !important;
+          padding: 1px 6px !important;
+          border-radius: 6px !important;
+          background: rgba(7, 14, 26, .55) !important;
+          color: rgba(203, 213, 225, .62) !important;
+          font-size: 8px !important;
+          line-height: 1.4 !important;
+          white-space: nowrap !important;
+        }
+        .leaflet-control-attribution a { color: rgba(203, 213, 225, .78) !important; }
+        #map-progress-panel { top: 84px; right: 8px; left: 58px; width: auto; padding: .65rem .7rem; border-radius: 14px; }
         #progress-title { font-size: .72rem; }
         #progress-detail { font-size: .62rem; }
         #activity-log { max-height: 126px; }
@@ -429,7 +555,9 @@
   <body>
     <header>
       <div class="brand">
-        <span class="brand-icon" aria-hidden="true">⚡</span>
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" focusable="false"><path d="M13.2 2 4.6 13.3h6.1L9.6 22l8.8-11.6h-6.1z"/></svg>
+        </span>
         <div>
           <h1>Peta Pemadaman Sulawesi Tengah</h1>
           <time id="wita-clock" aria-live="off">Memuat waktu WITA…</time>
