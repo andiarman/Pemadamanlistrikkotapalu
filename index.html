@@ -1,0 +1,1338 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Peta jadwal pemadaman listrik di Sulawesi Tengah." />
+    <title>Peta Padam | Sulawesi Tengah</title>
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #07111f;
+        color: #e6edf7;
+        --panel: rgba(10, 20, 36, .94);
+        --border: rgba(148, 163, 184, .2);
+        --active: #ff4268;
+        --upcoming: #ffb547;
+        --passed: #20b58a;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+      body { height: 100dvh; display: flex; flex-direction: column; }
+      button, textarea { font: inherit; }
+      button { color: inherit; }
+      .leaflet-tile { filter: grayscale(1) saturate(0) contrast(1.04) brightness(.98); }
+      header {
+        position: relative;
+        z-index: 500;
+        min-height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: .45rem 1.15rem;
+        border-bottom: 1px solid var(--border);
+        background: rgba(8, 15, 25, .97);
+      }
+      .brand { display: flex; align-items: center; gap: .7rem; min-width: 0; }
+      .brand-icon {
+        width: 32px;
+        height: 32px;
+        display: grid;
+        place-items: center;
+        flex: 0 0 32px;
+        border: 1px solid rgba(203, 213, 225, .2);
+        border-radius: 9px;
+        background: rgba(255, 255, 255, .035);
+        color: #e2e8f0;
+      }
+      .brand-icon svg { width: 17px; height: 17px; }
+      h1 { margin: 0; color: #f1f5f9; font-size: .9rem; font-weight: 680; letter-spacing: -.015em; }
+      #wita-clock { display: block; margin-top: .16rem; color: #94a3b8; font-size: .66rem; font-variant-numeric: tabular-nums; }
+      .header-actions { display: flex; align-items: center; justify-content: flex-end; gap: .8rem; min-width: 0; }
+      #status-counts { color: #bdc7d4; font-size: .68rem; white-space: nowrap; }
+      #open-import {
+        min-height: 34px;
+        display: inline-flex;
+        align-items: center;
+        gap: .45rem;
+        padding: .4rem .72rem;
+        border: 1px solid rgba(203, 213, 225, .24);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, .045);
+        color: #e2e8f0;
+        font-size: .7rem;
+        font-weight: 650;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: background .16s ease, border-color .16s ease;
+      }
+      #open-import svg { width: 14px; height: 14px; }
+      #open-import:hover { border-color: rgba(226, 232, 240, .5); background: rgba(255, 255, 255, .1); }
+      #map { position: relative; flex: 1; min-height: 0; background: #091525; }
+      .map-legend {
+        position: absolute;
+        z-index: 450;
+        left: 14px;
+        bottom: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: .38rem;
+        max-width: min(700px, calc(100vw - 80px));
+        padding: .48rem .55rem;
+        border: 1px solid rgba(203, 213, 225, .17);
+        border-radius: 10px;
+        background: rgba(8, 15, 25, .9);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .23);
+        backdrop-filter: blur(10px);
+        pointer-events: none;
+      }
+      .legend-label { padding: 0 .25rem; color: #8290a2; font-size: .57rem; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
+      .legend-item {
+        display: inline-flex;
+        align-items: center;
+        gap: .36rem;
+        padding: .28rem .48rem;
+        border: 1px solid rgba(203, 213, 225, .1);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, .035);
+        color: #d7dee8;
+        font-size: .64rem;
+        white-space: nowrap;
+      }
+      .legend-dot { width: 26px; height: 7px; border-radius: 999px; }
+      .legend-dot.active { background: linear-gradient(90deg, #ff4268, #ffb547, #48d6a0); box-shadow: 0 0 8px rgba(255, 66, 104, .45); }
+      .legend-dot.upcoming { background: linear-gradient(90deg, #ffb547, #ff4268); box-shadow: 0 0 8px rgba(255, 181, 71, .5); }
+      .legend-dot.passed { background: linear-gradient(90deg, #48d6a0, #357a63); }
+      .legend-note { width: 100%; padding: .05rem .25rem 0; color: #8694a7; font-size: .58rem; }
+      #empty-state {
+        position: absolute;
+        z-index: 400;
+        top: 50%;
+        left: 50%;
+        width: min(320px, calc(100vw - 40px));
+        padding: 1rem;
+        transform: translate(-50%, -50%);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: var(--panel);
+        color: #cbd5e1;
+        text-align: center;
+        line-height: 1.5;
+        pointer-events: none;
+      }
+      #empty-state[hidden] { display: none; }
+      #map-progress-panel {
+        position: absolute;
+        z-index: 620;
+        top: 14px;
+        right: 14px;
+        width: min(360px, calc(100vw - 28px));
+        padding: .8rem .9rem;
+        border: 1px solid rgba(52, 211, 153, .3);
+        border-radius: 14px;
+        background: rgba(8, 18, 32, .94);
+        box-shadow: 0 14px 36px rgba(0, 0, 0, .34);
+        backdrop-filter: blur(14px);
+      }
+      #map-progress-panel[hidden] { display: none; }
+      .progress-heading { display: flex; align-items: flex-start; gap: .65rem; }
+      .progress-indicator {
+        width: 10px;
+        height: 10px;
+        flex: 0 0 10px;
+        margin-top: .27rem;
+        border-radius: 50%;
+        background: #34d399;
+        box-shadow: 0 0 12px rgba(52, 211, 153, .7);
+      }
+      #map-progress-panel.is-working .progress-indicator { background: #fbbf24; box-shadow: 0 0 12px rgba(251, 191, 36, .65); animation: progress-pulse 1.1s ease-in-out infinite; }
+      #map-progress-panel.is-error .progress-indicator { background: #fb7185; box-shadow: 0 0 12px rgba(251, 113, 133, .65); }
+      .progress-copy { min-width: 0; flex: 1; }
+      #progress-title { display: block; color: #e6fff6; font-size: .78rem; font-weight: 800; }
+      #progress-detail { display: block; margin-top: .18rem; color: #9fb0c6; font-size: .66rem; line-height: 1.4; }
+      #close-map-progress {
+        width: 26px;
+        height: 26px;
+        flex: 0 0 26px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: #142137;
+        color: #cbd5e1;
+        font-size: .95rem;
+        cursor: pointer;
+      }
+      .progress-track {
+        height: 7px;
+        margin-top: .75rem;
+        overflow: hidden;
+        border-radius: 999px;
+        background: #1b2b40;
+      }
+      #progress-bar {
+        width: 0;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, #10b981, #6ee7b7);
+        transition: width .28s ease;
+      }
+      #map-progress-panel.is-working #progress-bar {
+        background: linear-gradient(90deg, #f59e0b, #fcd34d, #f59e0b);
+        background-size: 200% 100%;
+        animation: progress-shimmer 1.4s linear infinite;
+      }
+      #map-progress-panel.is-error #progress-bar { background: #fb7185; }
+      .progress-footer { display: flex; justify-content: space-between; gap: .7rem; margin-top: .42rem; color: #9fb0c6; font-size: .64rem; font-variant-numeric: tabular-nums; }
+      #progress-percent { color: #d1fae5; font-weight: 800; }
+      @keyframes progress-pulse { 50% { opacity: .45; transform: scale(.8); } }
+      @keyframes progress-shimmer { to { background-position: -200% 0; } }
+      #import-dialog {
+        width: min(540px, calc(100vw - 24px));
+        max-width: 540px;
+        max-height: calc(100dvh - 24px);
+        margin: auto;
+        padding: 1rem;
+        overflow: hidden;
+        border: 1px solid rgba(52, 211, 153, .32);
+        border-radius: 16px;
+        background: #0c1728;
+        color: #e6edf7;
+        box-shadow: 0 22px 80px rgba(0, 0, 0, .6);
+      }
+      #import-dialog::backdrop { background: rgba(1, 7, 16, .76); backdrop-filter: blur(4px); }
+      .dialog-layout { display: grid; gap: .65rem; }
+      .dialog-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: .7rem; }
+      .dialog-heading h2 { margin: 0; color: #b6f5dd; font-size: 1rem; }
+      .dialog-help { margin: .25rem 0 0; color: #91a1b7; font-size: .72rem; line-height: 1.45; }
+      #close-import {
+        width: 34px;
+        height: 34px;
+        flex: 0 0 34px;
+        border: 1px solid var(--border);
+        border-radius: 9px;
+        background: #172338;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+      .dialog-actions { display: flex; gap: .5rem; }
+      .dialog-actions button, #submit-import {
+        min-height: 38px;
+        padding: .5rem .7rem;
+        border: 1px solid rgba(52, 211, 153, .35);
+        border-radius: 9px;
+        background: #123b34;
+        color: #d1fae5;
+        font-size: .74rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      #submit-import { background: #087653; }
+      .dialog-actions button:hover, #submit-import:hover { filter: brightness(1.15); }
+      #submit-import:disabled { opacity: .6; cursor: wait; }
+      #ai-json-input {
+        width: 100%;
+        height: min(38dvh, 300px);
+        min-height: 150px;
+        max-height: 38dvh;
+        padding: .7rem;
+        resize: none;
+        border: 1px solid #34445c;
+        border-radius: 10px;
+        outline: none;
+        background: #070f1c;
+        color: #e6edf7;
+        font: .72rem/1.45 ui-monospace, SFMono-Regular, Consolas, monospace;
+      }
+      #ai-json-input:focus { border-color: #34d399; box-shadow: 0 0 0 2px rgba(52, 211, 153, .12); }
+      #import-status { min-height: 1rem; color: #b9c6d8; font-size: .7rem; line-height: 1.4; white-space: pre-line; }
+      #map-progress { min-height: 1rem; color: #ffd28b; font-size: .7rem; line-height: 1.4; }
+      .leaflet-container { background: #d8dce1; }
+      .leaflet-control-zoom { display: flex; flex-direction: column; gap: 6px; border: 0 !important; }
+      .leaflet-control-zoom a,
+      .leaflet-control-zoom a:hover {
+        width: 36px !important;
+        height: 36px !important;
+        line-height: 34px !important;
+        border: 1px solid rgba(71, 85, 105, .35) !important;
+        border-radius: 10px !important;
+        background: rgba(12, 19, 30, .92) !important;
+        color: #f1f5f9 !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+        transition: background .15s ease, transform .15s ease;
+      }
+      .leaflet-control-zoom a:hover { background: #263345 !important; transform: translateY(-1px); }
+      .leaflet-control-zoom a:last-child { border-top: 1px solid rgba(71, 85, 105, .35) !important; }
+      .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: #f8fafc; color: #0f172a; }
+      .popup-title { display: block; margin-bottom: .3rem; font-weight: 800; }
+      .popup-meta { display: block; margin-top: .22rem; color: #475569; font-size: .75rem; }
+      .popup-countdown { margin-top: .32rem; color: #0f172a; font-weight: 750; }
+      .popup-note { display: block; margin-top: .4rem; color: #9a3412; font-size: .68rem; }
+      .street-marker-icon { border: 0; background: transparent; }
+      .street-marker {
+        position: relative;
+        display: block;
+        width: 18px;
+        height: 18px;
+        border: 2px solid rgba(255, 255, 255, .96);
+        border-radius: 50% 50% 50% 5px;
+        background: var(--marker-color, #ff4268);
+        box-shadow: 0 0 0 4px var(--marker-glow, rgba(255, 66, 104, .35)), 0 0 15px var(--marker-glow, rgba(255, 66, 104, .35));
+        transform: rotate(-45deg);
+      }
+      .street-marker::after {
+        position: absolute;
+        inset: 4px;
+        border-radius: 50%;
+        background: white;
+        content: "";
+      }
+      .street-marker.active { animation: active-glow 1.8s ease-out infinite; }
+      @keyframes active-glow {
+        0%, 100% { transform: rotate(-45deg) scale(1); }
+        50% { transform: rotate(-45deg) scale(1.12); }
+      }
+      .street-tooltip-shell { border: 1px solid #334155 !important; border-radius: 6px !important; background: rgba(8, 17, 30, .94) !important; color: #f8fafc !important; box-shadow: 0 2px 8px rgba(0,0,0,.35) !important; }
+      .street-tooltip-shell::before { border-top-color: #334155 !important; }
+      .tooltip-street-name { display: block; }
+      .tooltip-countdown { display: block; margin-top: .14rem; color: #cbd5e1; font-size: .62rem; font-weight: 650; }
+      @media (max-width: 620px) {
+        header { min-height: 62px; gap: .45rem; padding: .45rem .6rem; }
+        .brand { gap: .45rem; }
+        .brand-icon { width: 32px; height: 32px; flex-basis: 32px; border-radius: 10px; font-size: 1rem; }
+        h1 { font-size: .78rem; }
+        #wita-clock { font-size: .63rem; }
+        .header-actions { gap: .4rem; flex-direction: column-reverse; align-items: flex-end; }
+        #status-counts { max-width: 50vw; overflow: hidden; font-size: .58rem; text-overflow: ellipsis; }
+        #open-import { min-height: 32px; padding: .35rem .55rem; border-radius: 8px; font-size: .68rem; }
+        .map-legend { left: 7px; right: 7px; bottom: 8px; justify-content: space-around; gap: .25rem; max-width: none; padding: .45rem .4rem; border-radius: 10px; }
+        .legend-item { gap: .22rem; font-size: .62rem; }
+        .legend-dot { width: 20px; height: 6px; }
+        .legend-note { font-size: .56rem; text-align: center; }
+        #map-progress-panel { top: 9px; right: 8px; width: min(340px, calc(100vw - 16px)); padding: .7rem .75rem; }
+        #progress-title { font-size: .72rem; }
+        #progress-detail { font-size: .62rem; }
+        #import-dialog { padding: .75rem; border-radius: 13px; }
+        .dialog-layout { gap: .5rem; }
+        #ai-json-input { height: 34dvh; min-height: 130px; max-height: 34dvh; font-size: .68rem; }
+        .dialog-heading h2 { font-size: .9rem; }
+      }
+    </style>
+    <script src="vendor/leaflet/leaflet.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">⚡</span>
+        <div>
+          <h1>Peta Pemadaman Sulawesi Tengah</h1>
+          <time id="wita-clock" aria-live="off">Memuat waktu WITA…</time>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span id="status-counts" role="status" aria-live="polite">Data browser</span>
+        <button id="open-import" type="button">＋ Impor hasil AI</button>
+      </div>
+    </header>
+
+    <main id="map" aria-label="Peta realtime jadwal pemadaman listrik">
+      <div id="empty-state" hidden>Belum ada jadwal di browser ini. Tekan <strong>Impor hasil AI</strong>, tempel hasil verifikasi AI, lalu impor.</div>
+      <section id="map-progress-panel" hidden aria-live="polite">
+        <div class="progress-heading">
+          <span class="progress-indicator" aria-hidden="true"></span>
+          <div class="progress-copy">
+            <strong id="progress-title">Menyiapkan pencarian</strong>
+            <span id="progress-detail">Titik jalan akan muncul di peta saat ditemukan.</span>
+          </div>
+          <button id="close-map-progress" type="button" aria-label="Sembunyikan progres">×</button>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Progres pencarian titik jalan" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div id="progress-bar"></div>
+        </div>
+        <div class="progress-footer">
+          <span id="progress-count">0 dari 0 jalan</span>
+          <strong id="progress-percent">0%</strong>
+        </div>
+      </section>
+      <div class="map-legend" aria-label="Warna status jadwal">
+        <span class="legend-item"><i class="legend-dot active"></i><span id="active-count">Aktif 0</span></span>
+        <span class="legend-item"><i class="legend-dot upcoming"></i><span id="upcoming-count">Akan datang 0</span></span>
+        <span class="legend-item"><i class="legend-dot passed"></i><span id="passed-count">Selesai 0</span></span>
+        <span class="legend-note">Warna titik berubah mengikuti waktu: kuning → merah saat mendekati padam, merah → hijau saat mendekati menyala. Garis area hanya perkiraan, bukan batas resmi PLN.</span>
+      </div>
+    </main>
+
+    <dialog id="import-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-layout">
+        <div class="dialog-heading">
+          <div>
+            <h2 id="dialog-title">Impor hasil AI</h2>
+            <p class="dialog-help">Salin prompt, unggah flyer ke AI, lalu tempel hanya JSON hasilnya. Jadwal disimpan di browser ini saja; tidak dikirim ke database aplikasi.</p>
+          </div>
+          <button id="close-import" type="button" aria-label="Tutup">×</button>
+        </div>
+        <div class="dialog-actions">
+          <button id="copy-ai-prompt" type="button">Salin prompt verifikasi</button>
+          <button id="clear-local-data" type="button">Kosongkan peta</button>
+        </div>
+        <textarea id="ai-json-input" aria-label="Tempel hasil AI" placeholder="Tempel hanya objek JSON hasil AI di sini…"></textarea>
+        <div id="import-status" role="status" aria-live="polite"></div>
+        <button id="submit-import" type="button">Validasi dan tampilkan di peta</button>
+      </div>
+    </dialog>
+
+    <script type="text/plain" id="ai-import-prompt">
+Anda membaca gambar flyer resmi jadwal pemadaman listrik PLN di Sulawesi Tengah. Analisis semua gambar yang saya lampirkan. Jawaban akhir HARUS hanya satu objek JSON valid sesuai format di bawah ini: tanpa markdown, tanpa code fence, tanpa penjelasan, tanpa catatan, tanpa salam, dan tanpa teks lain.
+
+{
+  "schema_version": 1,
+  "events": [
+    {
+      "title": "Judul kegiatan sesuai flyer",
+      "start_time": "2026-11-11T09:00:00+08:00",
+      "end_time": "2026-11-11T13:00:00+08:00",
+      "locations": ["Kota Palu"],
+      "areas": [
+        {
+          "ulp_name": "ULP Palu Kota",
+          "locations": ["Jalan Gajah Mada", "Jalan Diponegoro"]
+        }
+      ]
+    }
+  ]
+}
+
+Ketentuan:
+- Buat satu event untuk setiap jadwal/rentang waktu pemadaman yang berbeda; gabungkan jadwal dari semua gambar dalam array events.
+- Salin judul kegiatan dari flyer. Jika judul tidak terbaca, gunakan tepat "Jadwal pemadaman listrik"; jangan menambah keterangan lain.
+- start_time dan end_time harus ISO 8601 lengkap dengan zona WITA +08:00, misalnya 2026-11-11T09:00:00+08:00. Pakai tanggal yang tercetak. Bila jam selesai melewati tengah malam, gunakan tanggal berikutnya.
+- locations hanya berisi kabupaten/kota administratif terdampak yang tercetak, masing-masing sekali, dengan ejaan kanonis: Kota Palu, Sigi, Donggala, Parigi Moutong, Poso, Morowali, Morowali Utara.
+- areas harus mengelompokkan jalan berdasarkan nama ULP yang tercetak. Salin nama ULP dengan tepat.
+- areas.locations hanya boleh berisi nama jalan yang benar-benar tercantum di flyer. Tulis awalan "Jalan " untuk setiap nama, termasuk bila flyer menyingkatnya sebagai "Jl.". Jangan masukkan desa, kelurahan, toko, gedung, landmark, atau keterangan lain.
+- Jika satu kelompok ULP tidak memiliki nama jalan yang dapat diverifikasi, lewati kelompok tersebut; jangan keluarkan "locations": [].
+- Jika data kabupaten/kota tidak terbaca, gunakan "locations": []. Jangan mengarang wilayah.
+- LAKUKAN PEMERIKSAAN ULANG: setelah menyalin seluruh nama jalan, cocokkan satu per satu kembali dengan gambar asli. Pastikan ejaan dan nama jalan benar-benar terlihat pada gambar, tidak tertukar antar-ULP, tidak terduplikasi, dan tidak berasal dari ingatan atau tebakan. Jika satu nama tidak terbaca dengan yakin, jangan masukkan nama itu.
+- Jangan menebak tanggal, jam, wilayah, ULP, atau jalan. Jika tanggal atau jam suatu jadwal tidak terbaca dengan yakin, jangan masukkan event tersebut. Jangan mengarang jalan untuk melengkapi daftar.
+- Jika setelah pemeriksaan tidak ada kelompok ULP dengan jalan terverifikasi, lewati seluruh event tersebut.
+- Jangan mengeluarkan skor keyakinan, sumber, warnings, atau properti tambahan. Gunakan hanya properti pada format contoh.
+- Jika tidak ada jadwal lengkap dengan setidaknya satu nama jalan yang terverifikasi, keluarkan persis {"schema_version":1,"events":[]} tanpa teks tambahan.
+    </script>
+
+    <script>
+      const map = L.map("map", { zoomControl: false }).setView([-0.8917, 119.8707], 12);
+      L.control.zoom({ position: "bottomright" }).addTo(map);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "&copy; OpenStreetMap contributors"
+      }).addTo(map);
+
+      const badge = document.getElementById("status-counts");
+      const importDialog = document.getElementById("import-dialog");
+      const submitImportButton = document.getElementById("submit-import");
+      const importStatus = document.getElementById("import-status");
+      const progressPanel = document.getElementById("map-progress-panel");
+      const progressTrack = progressPanel.querySelector(".progress-track");
+      const progressBar = document.getElementById("progress-bar");
+      const emptyState = document.getElementById("empty-state");
+      let geoJsonLayer;
+      let renderedEventsSnapshot = "";
+      let lastStreetLookupAt = 0;
+      let streetMappingQueue = Promise.resolve();
+      let progressDismissed = false;
+      let hasInitialBounds = false;
+      let mapEvents = [];
+
+      const gradientWindowMs = 24 * 60 * 60 * 1000;
+      const markerColors = {
+        upcoming: "#ffb547",
+        active: "#ff4268",
+        passed: "#48d6a0",
+        passedFaded: "#357a63"
+      };
+
+      function hexToRgb(hex) {
+        const value = hex.replace("#", "");
+        return [
+          parseInt(value.slice(0, 2), 16),
+          parseInt(value.slice(2, 4), 16),
+          parseInt(value.slice(4, 6), 16)
+        ];
+      }
+
+      function lerpColor(from, to, ratio) {
+        const start = hexToRgb(from);
+        const end = hexToRgb(to);
+        const clamped = Math.min(1, Math.max(0, ratio));
+        const mixed = start.map((channel, index) =>
+          Math.round(channel + (end[index] - channel) * clamped)
+        );
+        return `#${mixed.map((channel) => channel.toString(16).padStart(2, "0")).join("")}`;
+      }
+
+      function withAlpha(hex, alpha) {
+        const [red, green, blue] = hexToRgb(hex);
+        return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+      }
+
+      function glowAlphaFor(status) {
+        if (status === "ACTIVE") return .35;
+        if (status === "UPCOMING") return .28;
+        return .22;
+      }
+
+      function pointColor(properties, now = Date.now()) {
+        const start = Date.parse(properties.startTime);
+        const end = Date.parse(properties.endTime);
+        const status = getEventStatus(properties, now);
+        if (status === "UPCOMING") {
+          return lerpColor(markerColors.upcoming, markerColors.active, 1 - (start - now) / gradientWindowMs);
+        }
+        if (status === "ACTIVE") {
+          const progress = (now - start) / Math.max(end - start, 1);
+          return progress < .5
+            ? lerpColor(markerColors.active, markerColors.upcoming, progress * 2)
+            : lerpColor(markerColors.upcoming, markerColors.passed, (progress - .5) * 2);
+        }
+        return lerpColor(markerColors.passed, markerColors.passedFaded, (now - end) / gradientWindowMs);
+      }
+
+      function areaStyle(properties, geometryType, color, status) {
+        return {
+          color,
+          weight: status === "ACTIVE" ? 3 : 2,
+          opacity: status === "PASSED" ? .55 : .86,
+          dashArray: "7 7",
+          lineCap: "round",
+          fillColor: color,
+          fillOpacity: geometryType === "Polygon" ? (status === "ACTIVE" ? .12 : .07) : 0
+        };
+      }
+
+      function formatDuration(durationMs) {
+        const totalMinutes = Math.floor(durationMs / 60000);
+        if (totalMinutes < 1) return "<1m";
+        const days = Math.floor(totalMinutes / 1440);
+        const hours = Math.floor((totalMinutes % 1440) / 60);
+        const minutes = totalMinutes % 60;
+        const parts = [];
+        if (days) parts.push(`${days} hari`);
+        if (hours) parts.push(`${hours}j`);
+        if (minutes) parts.push(`${minutes}m`);
+        return parts.join(" ");
+      }
+
+      function countdownSummary(properties, now = Date.now()) {
+        const start = Date.parse(properties.startTime);
+        const end = Date.parse(properties.endTime);
+        const status = getEventStatus(properties, now);
+        if (status === "UPCOMING") return `Padam dalam ${formatDuration(start - now)}`;
+        if (status === "ACTIVE") return `Menyala dalam ${formatDuration(end - now)}`;
+        return "Sudah menyala kembali";
+      }
+
+      function applyCountdownText(element) {
+        const start = Date.parse(element.dataset.startTime);
+        const end = Date.parse(element.dataset.endTime);
+        const now = Date.now();
+        if (now < start) {
+          element.textContent = `⚡ Padam dalam ${formatDuration(start - now)}`;
+        } else if (now <= end) {
+          element.textContent = `💡 Menyala dalam ${formatDuration(end - now)} · sudah padam ${formatDuration(now - start)}`;
+        } else {
+          element.textContent = `💡 Lampu menyala kembali sejak ${formatWita(end, false)} WITA`;
+        }
+      }
+
+      function buildStreetTooltip(properties) {
+        const container = document.createElement("span");
+        const name = document.createElement("span");
+        name.className = "tooltip-street-name";
+        name.textContent = properties.location || "Jalan terdampak";
+        const countdown = document.createElement("span");
+        countdown.className = "tooltip-countdown";
+        countdown.textContent = countdownSummary(properties);
+        container.append(name, countdown);
+        return container;
+      }
+
+      function statusClass(status) {
+        if (status === "ACTIVE") return "active";
+        if (status === "UPCOMING") return "upcoming";
+        return "passed";
+      }
+
+      function statusLabel(status) {
+        return { ACTIVE: "SEDANG BERLANGSUNG", UPCOMING: "AKAN DATANG", PASSED: "SELESAI" }[status] || status;
+      }
+
+      function formatWita(value, includeDate) {
+        return new Intl.DateTimeFormat("id-ID", {
+          timeZone: "Asia/Makassar",
+          ...(includeDate ? { dateStyle: "medium" } : {}),
+          timeStyle: "short"
+        }).format(new Date(value));
+      }
+
+      function updateClock() {
+        document.getElementById("wita-clock").textContent =
+          `WITA · ${formatWita(new Date(), true)}`;
+      }
+
+      function makeTextElement(tag, className, text) {
+        const element = document.createElement(tag);
+        element.className = className;
+        element.textContent = text;
+        return element;
+      }
+
+      function makePopup(properties) {
+        const content = document.createElement("div");
+        content.append(makeTextElement("strong", "popup-title", properties.isAreaShape
+          ? `Area perkiraan · ${properties.ulpName || "ULP"}`
+          : properties.title || "Jadwal pemadaman"));
+        if (!properties.isAreaShape) {
+          content.append(makeTextElement("span", "popup-meta", `📍 ${properties.location || "Lokasi tidak diketahui"}`));
+          if (properties.displayName) {
+            content.append(makeTextElement("span", "popup-meta", properties.displayName));
+          }
+        }
+        content.append(makeTextElement("span", "popup-meta", `${formatWita(properties.startTime, true)} – ${formatWita(properties.endTime, false)} WITA`));
+        const countdown = document.createElement("span");
+        countdown.className = "popup-meta popup-countdown";
+        countdown.dataset.startTime = properties.startTime;
+        countdown.dataset.endTime = properties.endTime;
+        applyCountdownText(countdown);
+        content.append(countdown);
+        const statusLine = makeTextElement("span", "popup-meta popup-status-line", statusLabel(properties.status));
+        statusLine.dataset.startTime = properties.startTime;
+        statusLine.dataset.endTime = properties.endTime;
+        content.append(statusLine);
+        if (properties.isAreaShape) {
+          content.append(makeTextElement("span", "popup-note", "Bentuk garis menghubungkan titik jalan terdekat; bukan batas pemadaman resmi."));
+        }
+        return content;
+      }
+
+      function distanceKm(left, right) {
+        const meanLatitude = ((left[1] + right[1]) / 2) * Math.PI / 180;
+        const x = (left[0] - right[0]) * 111.32 * Math.cos(meanLatitude);
+        const y = (left[1] - right[1]) * 111.32;
+        return Math.hypot(x, y);
+      }
+
+      function clusterNearbyPoints(points) {
+        const remaining = new Set(points.map((_, index) => index));
+        const clusters = [];
+        while (remaining.size) {
+          const first = remaining.values().next().value;
+          remaining.delete(first);
+          const cluster = [points[first]];
+          const queue = [points[first]];
+          while (queue.length) {
+            const point = queue.pop();
+            const nearby = [...remaining].filter((index) =>
+              distanceKm(point.geometry.coordinates, points[index].geometry.coordinates) <= 1.5
+            );
+            for (const index of nearby) {
+              remaining.delete(index);
+              cluster.push(points[index]);
+              queue.push(points[index]);
+            }
+          }
+          clusters.push(cluster);
+        }
+        return clusters;
+      }
+
+      function convexHull(points) {
+        const coordinates = [...new Map(
+          points.map((feature) => {
+            const coordinate = feature.geometry.coordinates;
+            return [`${coordinate[0]},${coordinate[1]}`, coordinate];
+          })
+        ).values()].sort((left, right) => left[0] - right[0] || left[1] - right[1]);
+        if (coordinates.length <= 2) return coordinates;
+        const cross = (origin, left, right) =>
+          (left[0] - origin[0]) * (right[1] - origin[1]) -
+          (left[1] - origin[1]) * (right[0] - origin[0]);
+        const lower = [];
+        for (const point of coordinates) {
+          while (lower.length >= 2 && cross(lower[lower.length - 2], lower[lower.length - 1], point) <= 0) lower.pop();
+          lower.push(point);
+        }
+        const upper = [];
+        for (const point of [...coordinates].reverse()) {
+          while (upper.length >= 2 && cross(upper[upper.length - 2], upper[upper.length - 1], point) <= 0) upper.pop();
+          upper.push(point);
+        }
+        lower.pop();
+        upper.pop();
+        return lower.concat(upper);
+      }
+
+      function buildAreaShapes(streetPoints) {
+        const groups = new Map();
+        for (const feature of streetPoints) {
+          const key = `${feature.properties.eventId}\u0000${feature.properties.ulpName}`;
+          const group = groups.get(key) || [];
+          group.push(feature);
+          groups.set(key, group);
+        }
+
+        const shapes = [];
+        for (const points of groups.values()) {
+          for (const cluster of clusterNearbyPoints(points)) {
+            if (cluster.length < 2) continue;
+            const hull = convexHull(cluster);
+            let geometry;
+            if (hull.length >= 3) {
+              geometry = { type: "Polygon", coordinates: [[...hull, hull[0]]] };
+            } else {
+              geometry = { type: "LineString", coordinates: hull };
+            }
+            const properties = {
+              ...cluster[0].properties,
+              location: `Sebaran perkiraan · ${cluster[0].properties.ulpName || "ULP"}`,
+              isStreetPoint: false,
+              isAreaShape: true
+            };
+            shapes.push({ type: "Feature", geometry, properties });
+          }
+        }
+        return shapes;
+      }
+
+      function updateStatusCounts(events, pointCount) {
+        const counts = { ACTIVE: 0, UPCOMING: 0, PASSED: 0 };
+        for (const event of events) counts[event.status] = (counts[event.status] || 0) + 1;
+        document.getElementById("active-count").textContent = `Aktif ${counts.ACTIVE}`;
+        document.getElementById("upcoming-count").textContent = `Akan datang ${counts.UPCOMING}`;
+        document.getElementById("passed-count").textContent = `Selesai ${counts.PASSED}`;
+        badge.textContent = `${events.length} jadwal · ${pointCount} titik`;
+      }
+
+      document.getElementById("close-map-progress").addEventListener("click", () => {
+        progressDismissed = true;
+        progressPanel.hidden = true;
+      });
+
+      function updateMapProgress(done, total, found, failed, phase, detail) {
+        if (progressDismissed) return;
+        const completed = phase === "done";
+        const percentage = completed ? 100 : total ? Math.floor(done / total * 100) : 0;
+        progressPanel.hidden = false;
+        progressPanel.classList.toggle("is-working", phase === "working");
+        progressPanel.classList.toggle("is-error", phase === "error");
+        document.getElementById("progress-title").textContent =
+          phase === "done" ? "Pencarian titik selesai" :
+          phase === "error" ? "Pencarian terhenti" : "Memetakan jalan";
+        document.getElementById("progress-detail").textContent = detail;
+        document.getElementById("progress-count").textContent =
+          `${done} dari ${total} jalan · ${found} titik${failed ? ` · ${failed} belum cocok` : ""}`;
+        document.getElementById("progress-percent").textContent = `${percentage}%`;
+        progressBar.style.width = `${percentage}%`;
+        progressTrack.setAttribute("aria-valuenow", String(percentage));
+      }
+
+      const localEventsKey = "outage-map-client-events-v1";
+      const localGeocodeCacheKey = "outage-map-geocode-cache-v1";
+      const canonicalLocations = new Map([
+        ["kota palu", "Kota Palu"],
+        ["sigi", "Sigi"],
+        ["donggala", "Donggala"],
+        ["parigi moutong", "Parigi Moutong"],
+        ["poso", "Poso"],
+        ["morowali", "Morowali"],
+        ["morowali utara", "Morowali Utara"]
+      ]);
+      const allowedLocations = new Set(canonicalLocations.keys());
+
+      function readLocalEvents() {
+        const value = localStorage.getItem(localEventsKey);
+        if (!value) return [];
+        const events = JSON.parse(value);
+        if (!Array.isArray(events)) throw new Error("Data jadwal lokal tidak valid.");
+        return events;
+      }
+
+      function saveLocalEvents(events) {
+        try {
+          localStorage.setItem(localEventsKey, JSON.stringify(events));
+        } catch {
+          throw new Error("Penyimpanan browser penuh atau tidak tersedia; jadwal belum tersimpan.");
+        }
+      }
+
+      function getEventStatus(event, now = Date.now()) {
+        const start = Date.parse(event.startTime);
+        const end = Date.parse(event.endTime);
+        return now < start ? "UPCOMING" : now <= end ? "ACTIVE" : "PASSED";
+      }
+
+      function streetPointCount(events) {
+        return events.reduce((total, event) =>
+          total + (event.affectedAreas || []).reduce((sum, area) => sum + (area.points || []).length, 0), 0);
+      }
+
+      function refreshDynamic() {
+        const now = Date.now();
+        for (const event of mapEvents) event.status = getEventStatus(event, now);
+        if (geoJsonLayer) {
+          geoJsonLayer.eachLayer((layer) => {
+            const properties = layer.feature?.properties;
+            if (!properties?.startTime || !properties.endTime) return;
+            const status = getEventStatus(properties, now);
+            properties.status = status;
+            const color = pointColor(properties, now);
+            if (properties.isAreaShape) {
+              layer.setStyle(areaStyle(properties, layer.feature.geometry.type, color, status));
+            } else {
+              const element = layer.getElement()?.querySelector(".street-marker");
+              if (element) {
+                element.style.setProperty("--marker-color", color);
+                element.style.setProperty("--marker-glow", withAlpha(color, glowAlphaFor(status)));
+                element.classList.remove("active", "upcoming", "passed");
+                element.classList.add(statusClass(status));
+              }
+            }
+          });
+        }
+        updateStatusCounts(mapEvents, streetPointCount(mapEvents));
+      }
+
+      async function fetchMapLayers() {
+        try {
+          const rawEvents = readLocalEvents();
+          const snapshot = JSON.stringify(rawEvents);
+          if (snapshot === renderedEventsSnapshot) {
+            refreshDynamic();
+            return;
+          }
+          renderedEventsSnapshot = snapshot;
+          const now = Date.now();
+          mapEvents = rawEvents.map((event) => ({
+            ...event,
+            status: getEventStatus(event, now),
+            affectedAreas: event.affectedAreas || []
+          }));
+          const streetPoints = mapEvents.flatMap((event) =>
+            event.affectedAreas.flatMap((area) =>
+              (area.points || []).map((point) => ({
+                type: "Feature",
+                geometry: { type: "Point", coordinates: [point.longitude, point.latitude] },
+                properties: {
+                  eventId: event.eventId,
+                  title: event.title,
+                  location: point.location,
+                  ulpName: area.ulpName,
+                  displayName: point.displayName,
+                  startTime: event.startTime,
+                  endTime: event.endTime,
+                  status: event.status,
+                  isStreetPoint: true
+                }
+              }))
+            )
+          );
+          const shapes = buildAreaShapes(streetPoints);
+          const mapFeatures = [...shapes, ...streetPoints];
+          if (geoJsonLayer) map.removeLayer(geoJsonLayer);
+          geoJsonLayer = L.geoJSON({ type: "FeatureCollection", features: mapFeatures }, {
+            style: (feature) => {
+              const properties = feature?.properties || {};
+              const status = getEventStatus(properties);
+              const color = pointColor(properties);
+              if (properties.isAreaShape) {
+                return areaStyle(properties, feature.geometry.type, color, status);
+              }
+              return {
+                color,
+                weight: 1,
+                opacity: status === "ACTIVE" ? .2 : .12,
+                fillColor: color,
+                fillOpacity: .025
+              };
+            },
+            pointToLayer: (feature, latlng) => {
+              const properties = feature.properties || {};
+              const status = getEventStatus(properties);
+              const color = pointColor(properties);
+              const glow = withAlpha(color, glowAlphaFor(status));
+              const marker = L.marker(latlng, {
+                icon: L.divIcon({
+                  className: "street-marker-icon",
+                  html: `<span class="street-marker ${statusClass(status)}" style="--marker-color: ${color}; --marker-glow: ${glow};"></span>`,
+                  iconSize: [28, 28],
+                  iconAnchor: [14, 14]
+                }),
+                keyboard: true
+              });
+              marker.bindTooltip(() => buildStreetTooltip(feature.properties), {
+                permanent: false,
+                direction: "top",
+                className: `street-tooltip-shell ${statusClass(status)}`,
+                offset: [0, -10]
+              });
+              return marker;
+            },
+            onEachFeature: (feature, layer) => layer.bindPopup(makePopup(feature.properties || {}))
+          }).addTo(map);
+          if (!hasInitialBounds && mapFeatures.length) {
+            const firstPoint = streetPoints.find((feature) => feature.properties.status === "ACTIVE") || streetPoints[0];
+            if (firstPoint) {
+              const [longitude, latitude] = firstPoint.geometry.coordinates;
+              map.setView([latitude, longitude], 14);
+            } else {
+              const bounds = geoJsonLayer.getBounds();
+              if (bounds.isValid()) map.fitBounds(bounds, { padding: [24, 24], maxZoom: 9 });
+            }
+            hasInitialBounds = true;
+          }
+          emptyState.hidden = mapEvents.length > 0 && streetPoints.length > 0;
+          if (mapEvents.length && !streetPoints.length) {
+            emptyState.textContent = "Jadwal tersimpan di browser, tetapi belum ada titik jalan yang berhasil dicari.";
+          } else if (!mapEvents.length) {
+            emptyState.innerHTML = 'Belum ada jadwal di browser ini. Tekan <strong>Impor hasil AI</strong>, tempel hasil verifikasi AI, lalu impor.';
+          }
+          updateStatusCounts(mapEvents, streetPoints.length);
+        } catch (error) {
+          badge.textContent = error.message || "Gagal membaca data browser";
+        }
+      }
+
+      function normalizeStreetName(value) {
+        return value.normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .replace(/^(?:jl\.?|jalan)\s*/, "")
+          .replace(/[^a-z0-9]+/g, " ")
+          .trim();
+      }
+
+      function streetSearchContext(ulpName) {
+        const value = ulpName.toLocaleLowerCase("id-ID");
+        if (value.includes("palu") || value.includes("kamonji")) return "Palu";
+        if (value.includes("taweli") || value.includes("tamb")) return "Tawaeli";
+        if (value.includes("donggala")) return "Donggala";
+        if (value.includes("parigi")) return "Parigi Moutong";
+        if (value.includes("poso") || value.includes("tentena")) return "Poso";
+        if (value.includes("kolonedale")) return "Kolonedale";
+        if (value.includes("bungku")) return "Bungku";
+        return "Sulawesi Tengah";
+      }
+
+      function readGeocodeCache() {
+        try {
+          return JSON.parse(localStorage.getItem(localGeocodeCacheKey) || "{}");
+        } catch {
+          return {};
+        }
+      }
+
+      let directGeocoding = null;
+
+      async function fetchGeocodeResult(street, ulpName) {
+        if (directGeocoding !== true) {
+          const url = new URL("/api/geocode", window.location.origin);
+          url.searchParams.set("street", street);
+          url.searchParams.set("ulp", ulpName);
+          try {
+            const response = await fetch(url);
+            if (response.ok) {
+              directGeocoding = false;
+              return await response.json();
+            }
+            if (response.status !== 404) {
+              const result = await response.json().catch(() => ({}));
+              throw new Error(result.error || "Layanan pencarian OpenStreetMap sedang tidak tersedia.");
+            }
+          } catch (error) {
+            if (!(error instanceof TypeError)) throw error;
+          }
+          directGeocoding = true;
+        }
+        const osmUrl = new URL("https://nominatim.openstreetmap.org/search");
+        osmUrl.searchParams.set("q", `${street}, ${streetSearchContext(ulpName)}, Sulawesi Tengah, Indonesia`);
+        osmUrl.searchParams.set("format", "geojson");
+        osmUrl.searchParams.set("limit", "5");
+        osmUrl.searchParams.set("viewbox", "117,2,125.5,-4.5");
+        osmUrl.searchParams.set("bounded", "1");
+        const response = await fetch(osmUrl, { headers: { "Accept-Language": "id" } });
+        if (!response.ok) {
+          throw new Error("Layanan pencarian OpenStreetMap sedang tidak tersedia.");
+        }
+        return await response.json();
+      }
+
+      async function geocodeStreet(ulpName, locationName) {
+        const cache = readGeocodeCache();
+        const cacheKey = `${ulpName.toLocaleLowerCase("id-ID")}:${normalizeStreetName(locationName)}`;
+        const cached = cache[cacheKey];
+        if (cached && cached.expiresAt > Date.now()) return cached.result;
+
+        const result = await fetchGeocodeResult(locationName, ulpName);
+        const requestedTokens = normalizeStreetName(locationName).split(" ").filter(Boolean);
+        const match = result.features?.find((feature) => {
+          const properties = feature.properties || {};
+          const coordinates = feature.geometry?.coordinates;
+          const candidateName = typeof properties.name === "string" ? properties.name : "";
+          const category = properties.class || properties.category || "";
+          const candidateTokens = normalizeStreetName(candidateName).split(" ").filter(Boolean);
+          return feature.geometry?.type === "Point" &&
+            Array.isArray(coordinates) && coordinates.length === 2 &&
+            category === "highway" && requestedTokens.length > 0 &&
+            requestedTokens.every((token) => candidateTokens.includes(token)) &&
+            candidateTokens.length - requestedTokens.length <= 2;
+        });
+        const coordinates = match?.geometry?.coordinates;
+        const longitude = coordinates?.[0];
+        const latitude = coordinates?.[1];
+        const displayName = match?.properties?.display_name || "";
+        const mapped = typeof longitude === "number" && typeof latitude === "number" &&
+          longitude >= 117 && longitude <= 125.5 && latitude >= -4.5 && latitude <= 2 &&
+          typeof displayName === "string" && displayName;
+        const point = mapped ? { longitude, latitude, displayName } : null;
+        cache[cacheKey] = {
+          result: point,
+          expiresAt: Date.now() + (point ? 30 : 1) * 24 * 60 * 60 * 1000
+        };
+        try {
+          localStorage.setItem(localGeocodeCacheKey, JSON.stringify(cache));
+        } catch {
+          // A full cache must not prevent the schedule from being saved.
+        }
+        return point;
+      }
+
+      async function mapImportedStreets(importedEvents) {
+        const savedEvents = readLocalEvents();
+        const jobs = [];
+        let alreadyMapped = 0;
+        let importedStreetCount = 0;
+        for (const imported of importedEvents) {
+          const event = savedEvents.find((item) => scheduleKey(item) === scheduleKey(imported));
+          if (!event) continue;
+          for (const importedArea of imported.affectedAreas) {
+            const area = event.affectedAreas.find((item) =>
+              item.ulpName.toLocaleLowerCase("id-ID") === importedArea.ulpName.toLocaleLowerCase("id-ID")
+            );
+            if (!area) continue;
+            const mapped = new Set((area.points || []).map((point) => point.location));
+            for (const location of importedArea.locations) {
+              importedStreetCount++;
+              if (mapped.has(location)) {
+                alreadyMapped++;
+              } else {
+                jobs.push({ eventId: event.eventId, ulpName: area.ulpName, location });
+              }
+            }
+          }
+        }
+        if (!jobs.length) {
+          updateMapProgress(
+            importedStreetCount,
+            importedStreetCount,
+            alreadyMapped,
+            0,
+            "done",
+            "Semua jalan sudah dipetakan atau tidak ada jalan baru yang perlu dicari."
+          );
+          return;
+        }
+
+        let found = 0;
+        let failed = 0;
+        let done = 0;
+        updateMapProgress(0, jobs.length, 0, 0, "working", "Titik terverifikasi langsung tampil. Biarkan halaman ini tetap terbuka.");
+        for (let index = 0; index < jobs.length; index++) {
+          const waitMs = 1200 - (Date.now() - lastStreetLookupAt);
+          if (lastStreetLookupAt && waitMs > 0) {
+            await new Promise((resolve) => setTimeout(resolve, waitMs));
+          }
+          try {
+            const point = await geocodeStreet(jobs[index].ulpName, jobs[index].location);
+            lastStreetLookupAt = Date.now();
+            if (point) {
+              const events = readLocalEvents();
+              const event = events.find((item) => item.eventId === jobs[index].eventId);
+              const area = event?.affectedAreas.find((item) => item.ulpName === jobs[index].ulpName);
+              if (area) {
+                area.points = [...(area.points || []), { location: jobs[index].location, ...point }];
+                saveLocalEvents(events);
+                await fetchMapLayers();
+              }
+              found++;
+            } else {
+              failed++;
+            }
+          } catch {
+            lastStreetLookupAt = Date.now();
+            failed++;
+          }
+          done++;
+          updateMapProgress(
+            done,
+            jobs.length,
+            found,
+            failed,
+            "working",
+            "Titik yang berhasil ditemukan langsung ditampilkan di peta."
+          );
+        }
+        updateMapProgress(
+          jobs.length,
+          jobs.length,
+          found,
+          failed,
+          "done",
+          failed
+            ? "Proses selesai. Jalan yang tidak cocok tetap tersimpan tanpa koordinat rekaan."
+            : "Semua jalan yang ditemukan sudah tampil di peta."
+        );
+      }
+
+      function enqueueStreetMapping(importedEvents) {
+        progressDismissed = false;
+        streetMappingQueue = streetMappingQueue
+          .then(() => mapImportedStreets(importedEvents))
+          .catch((error) => {
+            updateMapProgress(0, 0, 0, 0, "error", error.message || "Silakan coba lagi.");
+          });
+      }
+
+      function parseClientImport(jsonText) {
+        let document;
+        try {
+          document = JSON.parse(jsonText);
+        } catch {
+          throw new Error("Hasil AI bukan JSON yang valid.");
+        }
+        if (!document || document.schema_version !== 1 || !Array.isArray(document.events)) {
+          throw new Error("Format harus memiliki schema_version: 1 dan array events.");
+        }
+        if (document.events.length > 10) throw new Error("Maksimal 10 jadwal per impor.");
+        const events = [];
+        let skippedEvents = 0;
+        let skippedGroups = 0;
+        for (const [eventIndex, candidate] of document.events.entries()) {
+          if (!candidate || typeof candidate !== "object" || Array.isArray(candidate)) {
+            skippedEvents++;
+            continue;
+          }
+          const titleValue = typeof candidate.title === "string" ? candidate.title.trim() : "";
+          const startTime = typeof candidate.start_time === "string" ? candidate.start_time.trim() : "";
+          const endTime = typeof candidate.end_time === "string" ? candidate.end_time.trim() : "";
+          if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?\+08:00$/.test(startTime) ||
+              !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?\+08:00$/.test(endTime) ||
+              !Number.isFinite(Date.parse(startTime)) || !Number.isFinite(Date.parse(endTime)) ||
+              Date.parse(endTime) <= Date.parse(startTime)) {
+            skippedEvents++;
+            continue;
+          }
+          if (Array.isArray(candidate.locations) && candidate.locations.length > 12) {
+            skippedEvents++;
+            continue;
+          }
+          if (Array.isArray(candidate.areas) && candidate.areas.length > 50) {
+            skippedEvents++;
+            continue;
+          }
+          const locations = [...new Set((Array.isArray(candidate.locations) ? candidate.locations : [])
+            .filter((location) => typeof location === "string")
+            .map((location) => location.trim().toLocaleLowerCase("id-ID"))
+            .filter((location) => allowedLocations.has(location)))];
+          const areasByName = new Map();
+          let totalLocations = 0;
+          for (const area of Array.isArray(candidate.areas) ? candidate.areas : []) {
+            if (!area || typeof area !== "object" || Array.isArray(area)) {
+              skippedGroups++;
+              continue;
+            }
+            const ulpName = typeof area.ulp_name === "string" ? area.ulp_name.trim() : "";
+            const ulpKey = ulpName.toLocaleLowerCase("id-ID");
+            if (!ulpName || ulpName.length > 100 || !Array.isArray(area.locations)) {
+              skippedGroups++;
+              continue;
+            }
+            if (area.locations.length > 300) {
+              skippedGroups++;
+              continue;
+            }
+            const seenStreets = new Set();
+            const streets = area.locations.filter((street) => typeof street === "string").map((street) => {
+              const value = street.trim().replace(/\s+/g, " ");
+              if (!/^(?:jalan|jl\.?)\s/i.test(value) || value.length > 150) return "";
+              const key = value.toLocaleLowerCase("id-ID");
+              if (seenStreets.has(key)) return "";
+              seenStreets.add(key);
+              return value;
+            }).filter(Boolean);
+            if (!streets.length) {
+              skippedGroups++;
+              continue;
+            }
+            const existing = areasByName.get(ulpKey);
+            if (existing) {
+              const known = new Set(existing.locations.map((location) => location.toLocaleLowerCase("id-ID")));
+              for (const street of streets) {
+                if (!known.has(street.toLocaleLowerCase("id-ID"))) existing.locations.push(street);
+              }
+            } else {
+              areasByName.set(ulpKey, { ulpName, locations: streets, points: [] });
+            }
+            totalLocations += streets.length;
+          }
+          const areas = [...areasByName.values()];
+          if (!areas.length || totalLocations > 500) {
+            skippedEvents++;
+            continue;
+          }
+          events.push({
+            eventId: crypto.randomUUID(),
+            title: titleValue && titleValue.length <= 200 ? titleValue : "Jadwal pemadaman listrik",
+            startTime,
+            endTime,
+            locations: locations.map((location) => canonicalLocations.get(location)),
+            affectedAreas: areas
+          });
+        }
+        return { events, skippedEvents, skippedGroups };
+      }
+
+      function scheduleKey(event) {
+        return `${event.startTime}|${event.endTime}|${[...event.locations].sort().join(",")}`;
+      }
+
+      function mergeClientEvents(existingEvents, importedEvents) {
+        const events = existingEvents;
+        for (const imported of importedEvents) {
+          const existing = events.find((event) => scheduleKey(event) === scheduleKey(imported));
+          if (!existing) {
+            events.push(imported);
+            continue;
+          }
+          const areasByName = new Map(existing.affectedAreas.map((area) => [
+            area.ulpName.toLocaleLowerCase("id-ID"), area
+          ]));
+          for (const importedArea of imported.affectedAreas) {
+            const key = importedArea.ulpName.toLocaleLowerCase("id-ID");
+            const area = areasByName.get(key);
+            if (!area) {
+              existing.affectedAreas.push(importedArea);
+              areasByName.set(key, importedArea);
+              continue;
+            }
+            const seen = new Set(area.locations.map((location) => location.toLocaleLowerCase("id-ID")));
+            for (const location of importedArea.locations) {
+              if (!seen.has(location.toLocaleLowerCase("id-ID"))) area.locations.push(location);
+            }
+          }
+        }
+        return events;
+      }
+
+      document.getElementById("open-import").addEventListener("click", () => {
+        importDialog.showModal();
+      });
+      document.getElementById("close-import").addEventListener("click", () => importDialog.close());
+      importDialog.addEventListener("click", (event) => {
+        if (event.target === importDialog) importDialog.close();
+      });
+
+      document.getElementById("copy-ai-prompt").addEventListener("click", async () => {
+        const prompt = document.getElementById("ai-import-prompt").textContent.trim();
+        try {
+          await navigator.clipboard.writeText(prompt);
+          importStatus.textContent = "Prompt tersalin. Tempelkan ke AI bersama gambar flyer.";
+        } catch {
+          window.prompt("Salin prompt berikut untuk dipakai bersama gambar flyer:", prompt);
+          importStatus.textContent = "Salin prompt dari kotak dialog, lalu kirim bersama flyer.";
+        }
+      });
+
+      document.getElementById("clear-local-data").addEventListener("click", async () => {
+        if (!window.confirm("Hapus semua jadwal yang tersimpan di browser ini? Data Cloudflare tidak berubah.")) return;
+        localStorage.removeItem(localEventsKey);
+        hasInitialBounds = false;
+        map.setView([-0.8917, 119.8707], 12);
+        await fetchMapLayers();
+        importStatus.textContent = "Jadwal lokal di browser ini sudah dikosongkan.";
+        progressPanel.hidden = true;
+      });
+
+      submitImportButton.addEventListener("click", async () => {
+        const jsonText = document.getElementById("ai-json-input").value.trim();
+        if (!jsonText) {
+          importStatus.textContent = "Tempel hasil JSON AI terlebih dahulu.";
+          return;
+        }
+        if (new TextEncoder().encode(jsonText).length > 512 * 1024) {
+          importStatus.textContent = "Hasil terlalu besar; batas impor 512 KB.";
+          return;
+        }
+        submitImportButton.disabled = true;
+        importStatus.textContent = "Memvalidasi dan menyimpan ke browser ini…";
+        try {
+          const parsed = parseClientImport(jsonText);
+          const imported = parsed.events;
+          if (!imported.length) {
+            importStatus.textContent =
+              `Tidak ada jadwal dengan jalan yang bisa dipetakan; ${parsed.skippedEvents} jadwal dan ${parsed.skippedGroups} kelompok kosong dilewati.`;
+            return;
+          }
+          const events = mergeClientEvents(readLocalEvents(), imported);
+          saveLocalEvents(events);
+          await fetchMapLayers();
+          document.getElementById("ai-json-input").value = "";
+          importStatus.textContent =
+            `${imported.length} jadwal tersimpan di browser ini; ` +
+            `${parsed.skippedEvents} jadwal dan ${parsed.skippedGroups} kelompok kosong dilewati.`;
+          importDialog.close();
+          enqueueStreetMapping(imported);
+        } catch (error) {
+          importStatus.textContent = error.message || "Impor hasil AI gagal.";
+        } finally {
+          submitImportButton.disabled = false;
+        }
+      });
+
+      let openPopupElement = null;
+      map.on("popupopen", (event) => {
+        openPopupElement = event.popup.getElement() || null;
+        refreshOpenPopup();
+      });
+      map.on("popupclose", () => {
+        openPopupElement = null;
+      });
+
+      function refreshOpenPopup() {
+        if (!openPopupElement) return;
+        const countdown = openPopupElement.querySelector(".popup-countdown");
+        if (countdown?.dataset.startTime) applyCountdownText(countdown);
+        const statusLine = openPopupElement.querySelector(".popup-status-line");
+        if (statusLine?.dataset.startTime) {
+          statusLine.textContent = statusLabel(getEventStatus(statusLine.dataset));
+        }
+      }
+
+      updateClock();
+      fetchMapLayers();
+      setInterval(() => {
+        updateClock();
+        refreshOpenPopup();
+      }, 1000);
+      setInterval(() => {
+        if (document.visibilityState === "visible") refreshDynamic();
+      }, 10000);
+      setInterval(() => {
+        if (document.visibilityState === "visible") fetchMapLayers();
+      }, 30000);
+      window.addEventListener("storage", (event) => {
+        if (event.key === localEventsKey) fetchMapLayers();
+      });
+    </script>
+  </body>
+</html>
