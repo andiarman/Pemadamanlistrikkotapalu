@@ -705,24 +705,32 @@
         .legend-head { grid-column: 1 / -1; padding: 0 .1rem .05rem; }
         .legend-label { color: #93a3b8; font-size: .56rem; letter-spacing: .12em; }
         .legend-note { display: none; }
-        .session-filter { gap: .4rem; }
+        .session-filter { gap: .35rem; padding: .04rem .08rem; }
+        .session-filter > .legend-label { font-size: .52rem; letter-spacing: .08em; flex: 0 0 auto; }
         .session-list {
           flex-wrap: nowrap;
           overflow-x: auto;
+          gap: .25rem;
           padding-bottom: 2px;
-          padding-right: 8px;
+          padding-right: 6px;
           scrollbar-width: none;
           -webkit-overflow-scrolling: touch;
         }
         .session-list::-webkit-scrollbar { display: none; }
-        .session-item { min-height: 38px; padding: .32rem .65rem; border-radius: 999px; font-size: .68rem; }
+        .session-item {
+          min-height: 29px;
+          padding: .18rem .55rem;
+          border-radius: 999px;
+          font-size: .66rem;
+        }
+        .session-item b { font-size: .68rem; }
+        .session-item .session-time { display: none; }
         .session-item[aria-pressed="true"] {
-          border-color: rgba(250, 204, 21, .75);
+          border-color: rgba(250, 204, 21, .78);
           background: rgba(250, 204, 21, .16);
           color: #fffbeb;
         }
         .session-item[aria-pressed="true"] b { color: #fde047; }
-        .session-item[aria-pressed="true"] .session-time { color: #fef08a; }
         .legend-item {
           justify-content: flex-start;
           min-height: 44px;
@@ -1335,6 +1343,7 @@ Ketentuan:
           button.type = "button";
           button.className = "session-item";
           button.dataset.session = value;
+          button.title = accessibleLabel;
           button.setAttribute("aria-pressed", String(sessionFilter === value));
           button.setAttribute("aria-label", accessibleLabel);
           const strong = document.createElement("b");
@@ -1345,7 +1354,7 @@ Ketentuan:
           list.append(button);
           sessionFilterButtons.push(button);
         };
-        addChip("all", "Semua sesi", "", "Tampilkan seluruh sesi jadwal");
+        addChip("all", "Semua", "", "Tampilkan seluruh sesi jadwal");
         for (const event of sessions) {
           const label = sessionLabelForNumber(event.sessionNumber);
           const time = formatWita(event.startTime, false);
