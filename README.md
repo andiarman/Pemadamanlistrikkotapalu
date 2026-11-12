@@ -1,6 +1,9 @@
 # ⚡ Peta Jadwal Pemadaman Listrik Palu
 
 <p align="center">
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/Lisensi-MIT-blue.svg?style=for-the-badge" alt="Lisensi MIT" />
+  </a>
   <a href="https://andiarman.github.io/Pemadamanlistrikkotapalu/">
     <img src="https://img.shields.io/badge/🌐_BUKA_PETA_PEMADAMAN-KLIK_DI_SINI-e11d48?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Buka Website Peta" />
   </a>
@@ -127,5 +130,5 @@ Setiap `git push` ke cabang `main` akan memicu workflow [.github/workflows/deplo
   </a>
 </p>
 <p align="center">
-  Dikelola oleh <a href="https://github.com/andiarman"><b>@andiarman</b></a> · Menggunakan data terbuka <a href="https://www.openstreetmap.org">OpenStreetMap</a>
+  Dikelola oleh <a href="https://github.com/andiarman"><b>@andiarman</b></a> · Lisensi <a href="LICENSE">MIT</a> · Menggunakan data terbuka <a href="https://www.openstreetmap.org">OpenStreetMap</a>
 </p>
