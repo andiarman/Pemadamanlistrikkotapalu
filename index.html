@@ -224,6 +224,52 @@
       }
       .legend-note { grid-column: 1 / -1; width: auto; padding: .05rem .2rem 0; color: #8694a7; font-size: .6rem; line-height: 1.5; }
       .legend-head { grid-column: 1 / -1; width: auto; display: flex; align-items: center; justify-content: space-between; gap: .5rem; padding: 0 .1rem .08rem; }
+      .session-filter {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        min-width: 0;
+        padding: .08rem .12rem;
+      }
+      .session-filter[hidden] { display: none; }
+      .session-filter > .legend-label { flex: 0 0 auto; }
+      .session-list {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: .35rem;
+        min-width: 0;
+      }
+      .session-item {
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        gap: .34rem;
+        min-height: 32px;
+        padding: .28rem .55rem;
+        border: 1px solid rgba(148, 163, 184, .16);
+        border-radius: 999px;
+        background: rgba(148, 163, 184, .07);
+        color: #cfd9e6;
+        font-family: inherit;
+        font-size: .66rem;
+        font-weight: 650;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: background .15s ease, border-color .15s ease, color .15s ease;
+      }
+      .session-item b { font-size: .68rem; font-weight: 800; letter-spacing: .02em; }
+      .session-item .session-time { color: #9fb0c6; font-variant-numeric: tabular-nums; }
+      .session-item:hover { border-color: rgba(203, 213, 225, .32); background: rgba(255, 255, 255, .1); }
+      .session-item[aria-pressed="true"] {
+        border-color: rgba(226, 232, 240, .5);
+        background: rgba(255, 255, 255, .14);
+        color: #ffffff;
+      }
+      .session-item[aria-pressed="true"] .session-time { color: #e2e8f0; }
+      .session-item:focus-visible { outline: 2px solid #93c5fd; outline-offset: 1px; }
       .threads-link {
         display: inline-flex;
         align-items: center;
@@ -475,6 +521,33 @@
         filter: drop-shadow(0 0 1px rgba(15, 23, 42, .9)) drop-shadow(0 1px 2px rgba(0, 0, 0, .6));
         transform-origin: center;
       }
+      .marker-with-session { position: relative; display: block; width: 24px; height: 24px; }
+      .session-tag {
+        position: absolute;
+        left: 16px;
+        top: 4px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 16px;
+        height: 16px;
+        padding: 0 3px;
+        border: 1px solid rgba(250, 204, 21, .95);
+        border-radius: 5px;
+        background: #0b1322;
+        color: #fffbeb;
+        box-shadow: 0 0 0 1.5px rgba(7, 14, 26, .9), 0 3px 7px rgba(0, 0, 0, .55);
+        font-family: inherit;
+        font-size: 8px;
+        font-weight: 800;
+        font-variant-numeric: tabular-nums;
+        line-height: 1;
+        letter-spacing: .1px;
+        white-space: nowrap;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
+        cursor: pointer;
+      }
+      .leaflet-marker-pane .street-marker-icon.has-session { z-index: 650 !important; }
       .street-marker.active { animation: active-glow 1.6s ease-out infinite; }
       .leaflet-marker-pane .street-marker.passed { opacity: .4; }
       .leaflet-marker-pane .street-marker-icon:hover .street-marker.passed,
@@ -602,6 +675,16 @@
         .legend-head { grid-column: 1 / -1; padding: 0 .1rem .05rem; }
         .legend-label { color: #93a3b8; font-size: .56rem; letter-spacing: .12em; }
         .legend-note { display: none; }
+        .session-filter { gap: .4rem; }
+        .session-list {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          padding-bottom: 2px;
+          scrollbar-width: none;
+          -webkit-overflow-scrolling: touch;
+        }
+        .session-list::-webkit-scrollbar { display: none; }
+        .session-item { min-height: 40px; padding: .34rem .6rem; border-radius: 11px; font-size: .68rem; }
         .legend-item {
           justify-content: flex-start;
           min-height: 44px;
@@ -642,7 +725,7 @@
         }
         .threads-link span { display: none; }
         .threads-link svg { width: 15px; height: 15px; flex-basis: 15px; }
-        .leaflet-bottom.leaflet-right { bottom: calc(env(safe-area-inset-bottom, 0px) + 190px); }
+        .leaflet-bottom.leaflet-right { bottom: calc(env(safe-area-inset-bottom, 0px) + 36px + var(--legend-height, 154px)); }
         .leaflet-control-attribution {
           position: fixed;
           right: 8px;
@@ -756,7 +839,11 @@
           <i class="legend-icon" aria-hidden="true"></i>
           <span>Menyala <b id="passed-count">0</b></span>
         </button>
-        <span class="legend-note">Bentuk dan warna berbeda: oktagon merah ✕ = sedang padam, segitiga kuning (jam) = akan padam, lingkaran hijau ✓ = sudah menyala. Klik legenda untuk menyaring titik. Garis area hanya perkiraan, bukan batas resmi PLN.</span>
+        <div class="session-filter" id="session-filter" hidden>
+          <span class="legend-label">Sesi</span>
+          <div class="session-list" id="session-list" role="group" aria-label="Saring menurut sesi jadwal"></div>
+        </div>
+        <span class="legend-note">Bentuk dan warna berbeda: oktagon merah ✕ = sedang padam, segitiga kuning (jam) = akan padam, lingkaran hijau ✓ = sudah menyala. Angka Romawi di kanan segitiga kuning menunjukkan urutan jadwal. Filter sesi menyaring satu jadwal; bisa digabung dengan filter status. Klik legenda untuk menyaring titik. Garis area hanya perkiraan, bukan batas resmi PLN.</span>
       </div>
     </main>
 
@@ -854,6 +941,8 @@ Ketentuan:
       let importSessions = 0;
 
       let pointFilter = "all";
+      let sessionFilter = "all";
+      let sessionFilterButtons = [];
 
       const markerColors = {
         active: "#ef4444",
@@ -895,7 +984,15 @@ Ketentuan:
         return markerColors[statusClass(getEventStatus(properties, now))];
       }
 
-      function markerSvg(status, color) {
+      const ROMAN_SESSION_NUMBERS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+
+      function sessionLabelForNumber(value) {
+        const index = Number(value);
+        if (!Number.isInteger(index) || index < 1) return "";
+        return ROMAN_SESSION_NUMBERS[index - 1] || String(index);
+      }
+
+      function markerSvg(status, color, sessionLabel = "") {
         const shape = status === "ACTIVE"
           ? `<polygon points="7.2,1.6 16.8,1.6 22.4,7.2 22.4,16.8 16.8,22.4 7.2,22.4 1.6,16.8 1.6,7.2"/>`
           : status === "UPCOMING"
@@ -908,13 +1005,18 @@ Ketentuan:
               `<path d="M12 11.7 V14.2 l1.9 1.3" fill="none" stroke="#3f2d05" stroke-width="1.7" stroke-linecap="round"/>`
             : `<path d="M8.3 12.3 l2.6 2.7 l4.9 -5.3" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>`;
         const glow = withAlpha(color, glowAlphaFor(status));
-        return `<svg class="street-marker ${statusClass(status)}" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" style="--marker-color:${color}; --marker-glow:${glow}">` +
+        const svg = `<svg class="street-marker ${statusClass(status)}" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" style="--marker-color:${color}; --marker-glow:${glow}">` +
           `<g fill="${color}" stroke="#ffffff" stroke-width="1.6" stroke-linejoin="round">${shape}</g>${glyph}</svg>`;
+        if (!sessionLabel) return svg;
+        return `<span class="marker-with-session">${svg}<span class="session-tag" data-session="${sessionLabel}" aria-hidden="true">${sessionLabel}</span></span>`;
       }
 
       function areaStyle(properties, geometryType, color, status) {
+        const sessionClass = Number.isInteger(properties.sessionNumber)
+          ? ` session-${properties.sessionNumber}`
+          : "";
         return {
-          className: `area-shape status-${statusClass(status)}`,
+          className: `area-shape status-${statusClass(status)}${sessionClass}`,
           color,
           weight: status === "ACTIVE" ? 3 : 2,
           opacity: status === "PASSED" ? .55 : .86,
@@ -1145,6 +1247,86 @@ Ketentuan:
         badge.textContent = `${events.length} jadwal · ${total} titik`;
       }
 
+      function sessionPointCount(event) {
+        return (event.affectedAreas || []).reduce(
+          (sum, area) => sum + (area.points || []).length,
+          0
+        );
+      }
+
+      function ensureSessionFilterStyle(maxSession) {
+        let style = document.getElementById("session-filter-style");
+        if (!style) {
+          style = document.createElement("style");
+          style.id = "session-filter-style";
+          document.head.append(style);
+        }
+        const rules = [];
+        for (let index = 1; index <= maxSession; index++) {
+          rules.push(
+            `#map[data-session-filter="${index}"] .street-marker-icon:not(.session-${index}),` +
+            `#map[data-session-filter="${index}"] .area-shape:not(.session-${index}) { display: none; }`
+          );
+        }
+        style.textContent = rules.join("\n");
+      }
+
+      function updateSessionFilter(events) {
+        const wrap = document.getElementById("session-filter");
+        const list = document.getElementById("session-list");
+        const sessions = events
+          .filter((event) => Number.isInteger(event.sessionNumber) && event.sessionNumber > 0)
+          .sort((left, right) => left.sessionNumber - right.sessionNumber);
+        ensureSessionFilterStyle(sessions.reduce((max, event) => Math.max(max, event.sessionNumber), 0));
+        if (!sessions.some((event) => String(event.sessionNumber) === sessionFilter)) {
+          sessionFilter = "all";
+        }
+        wrap.hidden = sessions.length < 2;
+        map.getContainer().dataset.sessionFilter = sessionFilter;
+        list.textContent = "";
+        sessionFilterButtons = [];
+        const addChip = (value, label, timeLabel, accessibleLabel) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "session-item";
+          button.dataset.session = value;
+          button.setAttribute("aria-pressed", String(sessionFilter === value));
+          button.setAttribute("aria-label", accessibleLabel);
+          const strong = document.createElement("b");
+          strong.textContent = label;
+          button.append(strong);
+          if (timeLabel) button.append(makeTextElement("span", "session-time", timeLabel));
+          button.addEventListener("click", () => setSessionFilter(value));
+          list.append(button);
+          sessionFilterButtons.push(button);
+        };
+        addChip("all", "Semua sesi", "", "Tampilkan seluruh sesi jadwal");
+        for (const event of sessions) {
+          const label = sessionLabelForNumber(event.sessionNumber);
+          const time = formatWita(event.startTime, false);
+          addChip(
+            String(event.sessionNumber),
+            label,
+            time,
+            `Sesi ${label} mulai ${time} WITA, ${sessionPointCount(event)} titik`
+          );
+        }
+      }
+
+      function setSessionFilter(next) {
+        if (sessionFilter === next) return;
+        sessionFilter = next;
+        for (const button of sessionFilterButtons) {
+          button.setAttribute("aria-pressed", String(button.dataset.session === next));
+        }
+        map.getContainer().dataset.sessionFilter = next;
+        const now = Date.now();
+        const allPoints = buildStreetPointFeatures(now);
+        updateEmptyState(allPoints, allPoints.filter((feature) => featureMatchesFilter(feature, now)));
+        map.closePopup();
+        if (!geoJsonLayer && mapEvents.length) renderMapLayers();
+      }
+
       const filterButtons = [...document.querySelectorAll("[data-filter]")];
       const filterStatusByKey = { active: "ACTIVE", upcoming: "UPCOMING", passed: "PASSED" };
       for (const button of filterButtons) {
@@ -1170,6 +1352,16 @@ Ketentuan:
       for (const button of filterButtons) {
         button.addEventListener("click", () => setPointFilter(button.dataset.filter));
       }
+
+      const legendPanel = document.querySelector(".map-legend");
+      const syncLegendHeight = () => {
+        document.documentElement.style.setProperty(
+          "--legend-height",
+          `${Math.round(legendPanel.getBoundingClientRect().height)}px`
+        );
+      };
+      if ("ResizeObserver" in window) new ResizeObserver(syncLegendHeight).observe(legendPanel);
+      syncLegendHeight();
 
       document.getElementById("close-map-progress").addEventListener("click", () => {
         progressDismissed = true;
@@ -1368,6 +1560,7 @@ Ketentuan:
               geometry: { type: "Point", coordinates: [point.longitude, point.latitude] },
               properties: {
                 eventId: event.eventId,
+                sessionNumber: event.sessionNumber,
                 title: event.title,
                 location: point.location,
                 ulpName: area.ulpName,
@@ -1383,8 +1576,11 @@ Ketentuan:
       }
 
       function featureMatchesFilter(feature, now) {
-        return pointFilter === "all" ||
+        const statusMatches = pointFilter === "all" ||
           statusClass(getEventStatus(feature.properties, now)) === pointFilter;
+        const sessionMatches = sessionFilter === "all" ||
+          String(feature.properties.sessionNumber) === sessionFilter;
+        return statusMatches && sessionMatches;
       }
 
       function updateEmptyState(allPoints, visiblePoints) {
@@ -1395,7 +1591,15 @@ Ketentuan:
           emptyState.textContent = "Jadwal hari ini sudah tersimpan, tetapi belum ada titik lokasi yang berhasil dicari.";
           emptyState.hidden = false;
         } else if (!visiblePoints.length) {
-          emptyState.textContent = `Tidak ada titik ${filterLabel(pointFilter)} saat ini. Pilih "Semua" untuk melihat seluruh titik.`;
+          const statusText = filterLabel(pointFilter);
+          if (sessionFilter !== "all") {
+            const sessionText = sessionLabelForNumber(Number(sessionFilter)) || sessionFilter;
+            emptyState.textContent = statusText
+              ? `Tidak ada titik ${statusText} pada sesi ${sessionText}. Pilih "Semua sesi" atau "Semua".`
+              : `Tidak ada titik pada sesi ${sessionText}. Pilih "Semua sesi" untuk melihat seluruh sesi.`;
+          } else {
+            emptyState.textContent = `Tidak ada titik ${statusText} saat ini. Pilih "Semua" untuk melihat seluruh titik.`;
+          }
           emptyState.hidden = false;
         } else {
           emptyState.hidden = true;
@@ -1410,6 +1614,7 @@ Ketentuan:
         const visiblePoints = allPoints.filter((feature) => featureMatchesFilter(feature, now));
         const mapFeatures = [...shapes, ...allPoints];
         map.getContainer().dataset.pointFilter = pointFilter;
+        map.getContainer().dataset.sessionFilter = sessionFilter;
         if (geoJsonLayer) map.removeLayer(geoJsonLayer);
         geoJsonLayer = L.geoJSON({ type: "FeatureCollection", features: mapFeatures }, {
           style: (feature) => {
@@ -1431,10 +1636,14 @@ Ketentuan:
             const properties = feature.properties || {};
             const status = getEventStatus(properties, now);
             const color = pointColor(properties, now);
+            const sessionLabel = status === "UPCOMING" ? sessionLabelForNumber(properties.sessionNumber) : "";
+            const sessionClass = Number.isInteger(properties.sessionNumber)
+              ? ` session-${properties.sessionNumber}`
+              : "";
             const marker = L.marker(latlng, {
               icon: L.divIcon({
-                className: `street-marker-icon status-${statusClass(status)}`,
-                html: markerSvg(status, color),
+                className: `street-marker-icon status-${statusClass(status)}${sessionLabel ? " has-session" : ""}${sessionClass}`,
+                html: markerSvg(status, color, sessionLabel),
                 iconSize: [24, 24],
                 iconAnchor: [12, 12]
               }),
@@ -1458,6 +1667,7 @@ Ketentuan:
         }
         updateEmptyState(allPoints, visiblePoints);
         updateStatusCounts(mapEvents);
+        updateSessionFilter(mapEvents);
       }
 
       function refreshDynamic() {
@@ -1487,8 +1697,19 @@ Ketentuan:
           }
           renderedEventsSnapshot = snapshot;
           const now = Date.now();
+          const orderedEvents = rawEvents
+            .map((event, order) => ({ event, order }))
+            .sort((left, right) => {
+              const leftStart = Date.parse(left.event.startTime);
+              const rightStart = Date.parse(right.event.startTime);
+              const leftTime = Number.isNaN(leftStart) ? 0 : leftStart;
+              const rightTime = Number.isNaN(rightStart) ? 0 : rightStart;
+              return leftTime - rightTime || left.order - right.order;
+            });
+          const sessionNumbers = new Map(orderedEvents.map((item, index) => [item.event.eventId, index + 1]));
           mapEvents = rawEvents.map((event) => ({
             ...event,
+            sessionNumber: sessionNumbers.get(event.eventId),
             status: getEventStatus(event, now),
             affectedAreas: event.affectedAreas || []
           }));
