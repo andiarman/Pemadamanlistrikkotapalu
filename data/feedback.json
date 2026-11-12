@@ -1,34 +1,12 @@
 {
-  "totalRatings": 3,
+  "totalRatings": 0,
   "averageScore": 5,
   "breakdown": {
     "1": 0,
     "2": 0,
     "3": 0,
     "4": 0,
-    "5": 3
+    "5": 0
   },
-  "recentFeedback": [
-    {
-      "id": "a5ab46d7-a139-4a96-8146-83a3c342478d",
-      "name": "Siti Rahma",
-      "rating": 5,
-      "comment": "Informasi sangat akurat dan peta ringan diakses!",
-      "createdAt": "2026-11-12T06:31:37.527Z"
-    },
-    {
-      "id": "f1c12abb-6b6f-4dab-8c76-79c13038fe53",
-      "name": "Siti Rahma",
-      "rating": 5,
-      "comment": "Informasi sangat akurat dan peta ringan diakses!",
-      "createdAt": "2026-11-12T06:30:00.605Z"
-    },
-    {
-      "id": "86ee349f-768d-4429-b13a-0aeb3611ed6e",
-      "name": "Andi Arman (Testing)",
-      "rating": 5,
-      "comment": "Uji coba fitur live rating & feedback terhubung ke GitHub.",
-      "createdAt": "2026-11-12T06:21:31.137Z"
-    }
-  ]
+  "recentFeedback": []
 }
