@@ -1,0 +1,20 @@
+{
+  "totalRatings": 1,
+  "averageScore": 5,
+  "breakdown": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 1
+  },
+  "recentFeedback": [
+    {
+      "id": "86ee349f-768d-4429-b13a-0aeb3611ed6e",
+      "name": "Andi Arman (Testing)",
+      "rating": 5,
+      "comment": "Uji coba fitur live rating & feedback terhubung ke GitHub.",
+      "createdAt": "2026-11-12T06:21:31.137Z"
+    }
+  ]
+}
