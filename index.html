@@ -536,7 +536,15 @@
         text-transform: uppercase;
       }
       .popup-note { display: block; margin-top: .4rem; color: #fb923c; font-size: .65rem; line-height: 1.35; }
-      .street-marker-icon { border: 0; background: transparent; }
+      .leaflet-marker-pane,
+      .leaflet-overlay-pane {
+        will-change: transform;
+      }
+      .street-marker-icon {
+        border: 0;
+        background: transparent;
+        contain: layout style;
+      }
       #map[data-point-filter="active"] .street-marker-icon:not(.status-active),
       #map[data-point-filter="active"] .area-shape:not(.status-active),
       #map[data-point-filter="upcoming"] .street-marker-icon:not(.status-upcoming),
@@ -806,6 +814,14 @@
       @media (max-width: 620px), (pointer: coarse) and (max-width: 1024px) {
         .street-marker { filter: none; }
         .street-marker.active { animation: none; }
+        .session-tag {
+          box-shadow: 0 0 0 1.5px rgba(7, 14, 26, .95);
+          text-shadow: none;
+        }
+        header, .map-legend, .leaflet-control-attribution, .leaflet-popup-content-wrapper {
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+        }
         .street-marker-icon::before {
           content: "";
           position: absolute;
@@ -814,6 +830,17 @@
           background: rgba(255, 255, 255, .001);
           pointer-events: auto;
         }
+      }
+      .leaflet-zoom-anim .leaflet-zoom-animated {
+        will-change: transform;
+      }
+      .leaflet-zoom-anim .street-marker {
+        filter: none !important;
+        animation: none !important;
+      }
+      .leaflet-zoom-anim .session-tag {
+        box-shadow: none !important;
+        text-shadow: none !important;
       }
     </style>
     <script src="vendor/leaflet/leaflet.js"></script>
@@ -960,11 +987,19 @@ Ketentuan:
     </script>
 
     <script>
-      const map = L.map("map", { zoomControl: false }).setView([-0.8917, 119.8707], 12);
+      const map = L.map("map", {
+        zoomControl: false,
+        fadeAnimation: true,
+        markerZoomAnimation: false,
+        zoomAnimationThreshold: 8
+      }).setView([-0.8917, 119.8707], 12);
       L.control.zoom({ position: "bottomright" }).addTo(map);
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
-        attribution: "&copy; OpenStreetMap contributors"
+        attribution: "&copy; OpenStreetMap contributors",
+        updateWhenZooming: false,
+        updateWhenIdle: true,
+        keepBuffer: 3
       }).addTo(map);
 
       const badge = document.getElementById("status-counts");
