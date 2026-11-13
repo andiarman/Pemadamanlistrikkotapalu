@@ -1,12 +1,20 @@
 {
-  "totalRatings": 0,
-  "averageScore": 5,
+  "totalRatings": 1,
+  "averageScore": 1,
   "breakdown": {
-    "1": 0,
+    "1": 1,
     "2": 0,
     "3": 0,
     "4": 0,
     "5": 0
   },
-  "recentFeedback": []
+  "recentFeedback": [
+    {
+      "id": "6013d826-6fbd-41e5-9e6e-e1b9eab2c0d7",
+      "name": "-",
+      "rating": 1,
+      "comment": "-",
+      "createdAt": "2026-11-13T02:29:58.996Z"
+    }
+  ]
 }
