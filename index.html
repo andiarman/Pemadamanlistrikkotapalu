@@ -918,119 +918,6 @@
         box-shadow: 0 10px 25px rgba(0,0,0,.5);
       }
 
-      /* Time Scrubber / Simulator Slider */
-      .time-scrubber-box {
-        grid-column: 1 / -1;
-        display: flex;
-        flex-direction: column;
-        gap: .3rem;
-        padding: .42rem .55rem;
-        margin-bottom: .25rem;
-        border: 1px solid rgba(148, 163, 184, .14);
-        border-radius: 12px;
-        background: rgba(15, 23, 42, .55);
-      }
-      .scrubber-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: .5rem;
-      }
-      .scrubber-status-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: .35rem;
-      }
-      .scrubber-badge {
-        display: inline-flex;
-        align-items: center;
-        padding: .15rem .45rem;
-        border-radius: 9999px;
-        font-size: .65rem;
-        font-weight: 750;
-        font-variant-numeric: tabular-nums;
-        border: 1px solid rgba(148, 163, 184, .25);
-        background: rgba(255, 255, 255, .06);
-        color: #e2e8f0;
-      }
-      .scrubber-badge.live {
-        border-color: rgba(239, 68, 68, .5);
-        background: rgba(239, 68, 68, .18);
-        color: #fca5a5;
-        animation: pulse-live 2s infinite ease-in-out;
-      }
-      @keyframes pulse-live {
-        0%, 100% { opacity: 1; }
-        50% { opacity: .7; }
-      }
-      .scrubber-badge.simulated {
-        border-color: rgba(245, 158, 11, .55);
-        background: rgba(245, 158, 11, .2);
-        color: #fef08a;
-      }
-      .scrubber-reset {
-        padding: .15rem .45rem;
-        border: 1px solid rgba(148, 163, 184, .3);
-        border-radius: 9999px;
-        background: rgba(255, 255, 255, .1);
-        color: #cbd5e1;
-        font-family: inherit;
-        font-size: .62rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all .15s ease;
-      }
-      .scrubber-reset:hover {
-        background: rgba(255, 255, 255, .2);
-        color: #ffffff;
-      }
-      .scrubber-slider-container {
-        display: flex;
-        align-items: center;
-        gap: .5rem;
-      }
-      .scrubber-tick-start, .scrubber-tick-end {
-        font-size: .62rem;
-        font-weight: 750;
-        color: #94a3b8;
-        font-variant-numeric: tabular-nums;
-        flex: 0 0 auto;
-      }
-      #time-scrubber-range {
-        flex: 1;
-        height: 6px;
-        border-radius: 9999px;
-        background: linear-gradient(90deg, rgba(34, 197, 94, .45), rgba(245, 158, 11, .45), rgba(239, 68, 68, .55));
-        outline: none;
-        -webkit-appearance: none;
-        appearance: none;
-        cursor: pointer;
-      }
-      #time-scrubber-range::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 17px;
-        height: 17px;
-        border-radius: 50%;
-        background: #38bdf8;
-        border: 2px solid #ffffff;
-        box-shadow: 0 0 8px rgba(56, 189, 248, .85);
-        cursor: pointer;
-        transition: transform .1s ease;
-      }
-      #time-scrubber-range::-webkit-slider-thumb:hover {
-        transform: scale(1.25);
-      }
-      #time-scrubber-range::-moz-range-thumb {
-        width: 17px;
-        height: 17px;
-        border-radius: 50%;
-        background: #38bdf8;
-        border: 2px solid #ffffff;
-        box-shadow: 0 0 8px rgba(56, 189, 248, .85);
-        cursor: pointer;
-      }
-
       /* GPS User Marker & Pulse Animations */
       .user-gps-marker-wrap {
         position: relative;
@@ -1160,7 +1047,6 @@
         }
         .btn-my-location span { display: none; }
         .btn-my-location { padding: .35rem .5rem; }
-        .time-scrubber-box { padding: .35rem .45rem; gap: .2rem; }
         .map-legend {
           left: 10px;
           right: 10px;
@@ -1475,30 +1361,6 @@
           </div>
         </div>
 
-        <!-- Time Scrubber / Simulation -->
-        <div class="time-scrubber-box" id="time-scrubber-box">
-          <div class="scrubber-top">
-            <span class="legend-label">Simulasi Waktu (Geser Jam)</span>
-            <div class="scrubber-status-pill">
-              <span id="scrubber-time-badge" class="scrubber-badge live">🔴 LIVE · Sekarang</span>
-              <button id="scrubber-reset-btn" type="button" class="scrubber-reset" hidden>Kembali ke Realtime</button>
-            </div>
-          </div>
-          <div class="scrubber-slider-container">
-            <span class="scrubber-tick-start" id="scrubber-min-label">08:00</span>
-            <input
-              type="range"
-              id="time-scrubber-range"
-              min="480"
-              max="1380"
-              step="15"
-              value="480"
-              aria-label="Geser waktu untuk melihat status pemadaman"
-            />
-            <span class="scrubber-tick-end" id="scrubber-max-label">23:00</span>
-          </div>
-        </div>
-
         <button class="legend-item" type="button" data-filter="all" aria-pressed="true">
           <i class="legend-icon legend-icon-all" aria-hidden="true"></i>
           <span>Semua <b id="all-count">0</b></span>
@@ -1519,7 +1381,7 @@
           <span class="legend-label">Sesi Jadwal</span>
           <div class="session-list" id="session-list" role="group" aria-label="Saring menurut sesi jam jadwal"></div>
         </div>
-        <span class="legend-note">🔴 Oktagon merah = sedang padam. 🟡 Segitiga oranye + jam = waktu padam (contoh: 13.00). 🟢 Lingkaran hijau = sudah menyala. Geser bar simulasi waktu atau klik jam sesi untuk melihat wilayah terdampak.</span>
+        <span class="legend-note">🔴 Oktagon merah = sedang padam saat ini. 🟡 Segitiga oranye + jam = waktu mulai padam (contoh: 13.00). 🟢 Lingkaran hijau = sudah menyala kembali. Klik jam sesi untuk menyaring wilayah terdampak.</span>
       </div>
     </main>
 
@@ -1621,10 +1483,8 @@ Ketentuan:
       let geoJsonLayer;
       let markerClusterGroup;
       let allPointMarkers = [];
-      let simulatedTime = null;
-
       function getCurrentActiveTime() {
-        return simulatedTime !== null ? simulatedTime : Date.now();
+        return Date.now();
       }
 
       function escapeHtml(str) {
@@ -2369,8 +2229,8 @@ Ketentuan:
         }
       }
 
-      function renderMapLayers(customNow = null) {
-        const now = customNow !== null ? customNow : getCurrentActiveTime();
+      function renderMapLayers() {
+        const now = Date.now();
         for (const event of mapEvents) event.status = getEventStatus(event, now);
         const allPoints = buildStreetPointFeatures(now);
         const shapes = buildAreaShapes(allPoints);
@@ -2478,11 +2338,9 @@ Ketentuan:
         updateEmptyState(allPoints, visiblePoints);
         updateStatusCounts(mapEvents);
         updateSessionFilter(mapEvents);
-        setupTimeScrubber(mapEvents);
       }
 
       function refreshDynamic() {
-        if (simulatedTime !== null) return;
         const now = Date.now();
         let statusChanged = false;
         for (const event of mapEvents) {
@@ -2497,115 +2355,6 @@ Ketentuan:
           return;
         }
         updateStatusCounts(mapEvents);
-      }
-
-      function getCurrentWitaMinutes() {
-        const d = new Date();
-        const utcHours = d.getUTCHours();
-        const utcMin = d.getUTCMinutes();
-        return ((utcHours + 8) % 24) * 60 + utcMin;
-      }
-
-      function getScheduleTimeBounds(events) {
-        if (!events || !events.length) {
-          return { minMinutes: 480, maxMinutes: 1380, baseDateStr: new Date().toISOString().slice(0, 10) };
-        }
-        let minMs = Infinity;
-        let maxMs = -Infinity;
-        let sampleDate = null;
-        for (const ev of events) {
-          const s = Date.parse(ev.startTime);
-          const e = Date.parse(ev.endTime);
-          if (!isNaN(s) && s < minMs) { minMs = s; sampleDate = ev.startTime; }
-          if (!isNaN(e) && e > maxMs) maxMs = e;
-        }
-        if (!isFinite(minMs) || !isFinite(maxMs)) {
-          return { minMinutes: 480, maxMinutes: 1380, baseDateStr: new Date().toISOString().slice(0, 10) };
-        }
-        const getMinutesWita = (ms) => {
-          const d = new Date(ms);
-          const utcHours = d.getUTCHours();
-          const utcMin = d.getUTCMinutes();
-          return ((utcHours + 8) % 24) * 60 + utcMin;
-        };
-        const minMin = Math.max(0, Math.floor(getMinutesWita(minMs) / 60 - 1) * 60);
-        const maxMin = Math.min(1440, Math.ceil(getMinutesWita(maxMs) / 60 + 1) * 60);
-        const baseDateStr = sampleDate ? sampleDate.slice(0, 10) : new Date().toISOString().slice(0, 10);
-        return {
-          minMinutes: Math.min(minMin, 480),
-          maxMinutes: Math.max(maxMin, 1380),
-          baseDateStr
-        };
-      }
-
-      function minutesToTimestampWita(minutes, baseDateStr) {
-        const hours = Math.floor(minutes / 60);
-        const mins = minutes % 60;
-        const hStr = String(hours).padStart(2, "0");
-        const mStr = String(mins).padStart(2, "0");
-        return Date.parse(`${baseDateStr}T${hStr}:${mStr}:00+08:00`);
-      }
-
-      function formatMinutesDisplay(minutes) {
-        const h = String(Math.floor(minutes / 60) % 24).padStart(2, "0");
-        const m = String(minutes % 60).padStart(2, "0");
-        return `${h}.${m}`;
-      }
-
-      let scrubberInitialized = false;
-      function setupTimeScrubber(events) {
-        const slider = document.getElementById("time-scrubber-range");
-        const badge = document.getElementById("scrubber-time-badge");
-        const resetBtn = document.getElementById("scrubber-reset-btn");
-        const minLabel = document.getElementById("scrubber-min-label");
-        const maxLabel = document.getElementById("scrubber-max-label");
-
-        if (!slider) return;
-
-        const bounds = getScheduleTimeBounds(events);
-        slider.min = bounds.minMinutes;
-        slider.max = bounds.maxMinutes;
-        minLabel.textContent = formatMinutesDisplay(bounds.minMinutes);
-        maxLabel.textContent = formatMinutesDisplay(bounds.maxMinutes);
-
-        if (simulatedTime === null) {
-          const currentWitaMin = getCurrentWitaMinutes();
-          const clamped = Math.max(bounds.minMinutes, Math.min(bounds.maxMinutes, currentWitaMin));
-          slider.value = clamped;
-          badge.className = "scrubber-badge live";
-          badge.textContent = `🔴 LIVE · Sekarang (${formatMinutesDisplay(currentWitaMin)})`;
-          resetBtn.hidden = true;
-        }
-
-        if (!scrubberInitialized) {
-          scrubberInitialized = true;
-
-          slider.addEventListener("input", () => {
-            const currentBounds = getScheduleTimeBounds(mapEvents);
-            const minutes = Number(slider.value);
-            simulatedTime = minutesToTimestampWita(minutes, currentBounds.baseDateStr);
-
-            badge.className = "scrubber-badge simulated";
-            badge.textContent = `🕒 Jam ${formatMinutesDisplay(minutes)} WITA`;
-            resetBtn.hidden = false;
-
-            renderMapLayers();
-          });
-
-          resetBtn.addEventListener("click", () => {
-            simulatedTime = null;
-            const currentBounds = getScheduleTimeBounds(mapEvents);
-            const currentWitaMin = getCurrentWitaMinutes();
-            const clamped = Math.max(currentBounds.minMinutes, Math.min(currentBounds.maxMinutes, currentWitaMin));
-            slider.value = clamped;
-
-            badge.className = "scrubber-badge live";
-            badge.textContent = `🔴 LIVE · Sekarang (${formatMinutesDisplay(currentWitaMin)})`;
-            resetBtn.hidden = true;
-
-            renderMapLayers();
-          });
-        }
       }
 
       function pulseMarkerHighlight(marker) {
