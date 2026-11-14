@@ -543,6 +543,28 @@
         align-items: center;
         gap: .65rem;
       }
+      .banner-close-btn {
+        width: 26px;
+        height: 26px;
+        flex: 0 0 26px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, .18);
+        border-radius: 7px;
+        background: rgba(255, 255, 255, .08);
+        color: #94a3b8;
+        font-size: 1.1rem;
+        line-height: 1;
+        cursor: pointer;
+        padding: 0;
+        transition: all .15s ease;
+      }
+      .banner-close-btn:hover {
+        background: rgba(255, 255, 255, .22);
+        color: #ffffff;
+        border-color: rgba(255, 255, 255, .35);
+      }
       #server-status-banner .banner-pulse {
         width: 10px;
         height: 10px;
@@ -1911,6 +1933,7 @@
       <div class="banner-inner">
         <span class="banner-pulse" aria-hidden="true"></span>
         <span id="banner-text" class="banner-text">⚡ Server sedang memetakan jadwal pemadaman baru...</span>
+        <button id="close-server-banner" type="button" aria-label="Tutup banner" class="banner-close-btn">×</button>
       </div>
       <div class="banner-progress-wrap">
         <div id="banner-progress-bar" class="banner-progress-bar"></div>
@@ -2054,8 +2077,8 @@
         <textarea id="ai-json-input" aria-label="Tempel hasil AI" placeholder="Tempel hanya objek JSON hasil AI di sini…"></textarea>
         <div id="import-status" role="status" aria-live="polite"></div>
         <div class="dialog-submit-actions">
-          <button id="submit-import-server" type="button">⚡ Proses di Server (Gantikan Jadwal Aktif)</button>
-          <button id="submit-import" type="button">Proses di browser saja (manual)</button>
+          <button id="submit-import" type="button" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 800; min-height: 42px; border-radius: 10px; border: 1px solid rgba(52, 211, 153, .5); cursor: pointer; box-shadow: 0 4px 14px rgba(16, 185, 129, .35);">💻 Proses Langsung di Browser (Cepat & Instan)</button>
+          <button id="submit-import-server" type="button" style="background: #152238; color: #cbd5e1; border: 1px solid rgba(255, 255, 255, .2); font-weight: 600; min-height: 36px; border-radius: 9px; cursor: pointer;">⚡ Proses di Background Server (Antrian GitHub ~2 Menit)</button>
         </div>
       </div>
     </dialog>
@@ -4954,19 +4977,34 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       // ==========================================
       // SERVER-SIDE IMPORT & LIVE BANNER
       // ==========================================
+      let serverBannerDismissed = false;
+      const closeServerBannerBtn = document.getElementById("close-server-banner");
+      if (closeServerBannerBtn) {
+        closeServerBannerBtn.addEventListener("click", () => {
+          serverBannerDismissed = true;
+          if (serverStatusBanner) serverStatusBanner.hidden = true;
+        });
+      }
+
       async function checkServerImportStatus() {
-        if (!serverStatusBanner) return;
+        if (!serverStatusBanner || serverBannerDismissed) return;
         try {
           let statusData = null;
+
+          // 1. PRIORITAS UTAMA: data/import-status.json dari GitHub Pages (langsung & bebas blokir ISP)
           try {
-            const res = await fetch(`${scheduleApiBase}/api/import-status`, { cache: "no-store" });
-            if (res.ok) statusData = await res.json();
+            const resLocal = await fetch(`data/import-status.json?t=${Date.now()}`, { cache: "no-store" });
+            if (resLocal.ok) statusData = await resLocal.json();
           } catch {}
 
+          // 2. Fallback: jika status di GitHub Pages belum ada atau idle, periksa Cloudflare Worker dengan timeout pendek
           if (!statusData || !statusData.status || statusData.status === "idle") {
             try {
-              const res2 = await fetch(`data/import-status.json?t=${Date.now()}`, { cache: "no-store" });
-              if (res2.ok) statusData = await res2.json();
+              const resWorker = await fetch(`${scheduleApiBase}/api/import-status`, {
+                cache: "no-store",
+                signal: AbortSignal.timeout(3000)
+              });
+              if (resWorker.ok) statusData = await resWorker.json();
             } catch {}
           }
 
@@ -4977,40 +5015,44 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
 
           const now = Date.now();
           const updatedTime = statusData.updatedAt ? Date.parse(statusData.updatedAt) : now;
-          const isFresh = now - updatedTime < 20 * 60 * 1000;
+          const completedTime = statusData.completedAt ? Date.parse(statusData.completedAt) : updatedTime;
+          const isRecentProcessing = statusData.status === "processing" && (now - updatedTime < 10 * 60 * 1000);
 
-          if (statusData.status === "processing" && isFresh) {
+          if (isRecentProcessing) {
             serverStatusBanner.hidden = false;
             serverStatusBanner.classList.remove("is-done");
             const pct = Math.max(5, Math.min(95, statusData.progressPercent || 10));
             if (bannerProgressBar) bannerProgressBar.style.width = `${pct}%`;
             if (bannerText) {
-              bannerText.textContent = `⚡ Server sedang memetakan jadwal ${statusData.date || ""}: ${statusData.mappedStreets || 0} / ${statusData.totalStreets || 0} jalan (${pct}%)... Semua pengunjung dapat melihat progres ini secara realtime.`;
+              bannerText.textContent = `⚡ Server sedang memetakan jadwal ${statusData.date || ""}: ${statusData.mappedStreets || 0} / ${statusData.totalStreets || 0} jalan (${pct}%)...`;
             }
             lastImportStatusSeen = "processing";
-            scheduleNextPoll(3500);
-          } else if (statusData.status === "done" && (lastImportStatusSeen === "processing" || (now - (statusData.completedAt ? Date.parse(statusData.completedAt) : updatedTime) < 60 * 1000))) {
-            serverStatusBanner.hidden = false;
-            serverStatusBanner.classList.add("is-done");
-            if (bannerProgressBar) bannerProgressBar.style.width = "100%";
-            if (bannerText) {
-              bannerText.textContent = `✅ Pemetaan jadwal di server selesai! ${statusData.mappedStreets || 0} dari ${statusData.totalStreets || 0} jalan tampil di peta. Memperbarui tampilan...`;
-            }
-            lastImportStatusSeen = "done";
-            
-            await fetchMapLayers();
-            await refreshRemoteSchedule();
-
-            setTimeout(() => {
-              if (serverStatusBanner && lastImportStatusSeen === "done") {
-                serverStatusBanner.hidden = true;
+            scheduleNextPoll(4000);
+          } else if (statusData.status === "done") {
+            // Tampilkan hanya jika transisi dari processing atau baru selesai kurang dari 2 menit
+            const isFreshDone = now - completedTime < 120 * 1000;
+            if (lastImportStatusSeen === "processing" || isFreshDone) {
+              serverStatusBanner.hidden = false;
+              serverStatusBanner.classList.add("is-done");
+              if (bannerProgressBar) bannerProgressBar.style.width = "100%";
+              if (bannerText) {
+                bannerText.textContent = `✅ ${statusData.message || "Pemetaan selesai!"}`;
               }
-            }, 7000);
-            scheduleNextPoll(30000);
-          } else {
-            if (lastImportStatusSeen !== "done") {
+              lastImportStatusSeen = "done";
+              await fetchMapLayers();
+              await refreshRemoteSchedule();
+
+              setTimeout(() => {
+                if (serverStatusBanner && !serverBannerDismissed) {
+                  serverStatusBanner.hidden = true;
+                }
+              }, 5000);
+            } else {
               serverStatusBanner.hidden = true;
             }
+            scheduleNextPoll(30000);
+          } else {
+            serverStatusBanner.hidden = true;
             scheduleNextPoll(25000);
           }
         } catch {
