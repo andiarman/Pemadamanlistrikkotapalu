@@ -206,8 +206,8 @@ async function main() {
 
   const dateKey = pendingData.date;
   const events = pendingData.events || [];
-  if (!dateKey || !events.length) {
-    console.error('[Error] Pending import missing date or events.');
+  if (!dateKey || !/^\d{4}-\d{2}-\d{2}$/.test(dateKey) || !events.length) {
+    console.error('[Error] Pending import missing valid date (YYYY-MM-DD) or events.');
     process.exit(1);
   }
 

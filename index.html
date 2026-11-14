@@ -3743,7 +3743,7 @@ Ketentuan:
             lastName: name
           });
 
-          if (result.issueUrl && feedbackIssueLink) {
+          if (result.issueUrl && feedbackIssueLink && /^https:\/\/github\.com\/andiarman\/Pemadamanlistrikkotapalu\/issues\/\d+$/.test(result.issueUrl)) {
             feedbackIssueLink.href = result.issueUrl;
             feedbackIssueLink.hidden = false;
           }
