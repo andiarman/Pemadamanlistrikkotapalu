@@ -680,6 +680,176 @@
       #ai-json-input:focus { border-color: #34d399; box-shadow: 0 0 0 2px rgba(52, 211, 153, .12); }
       #import-status { min-height: 1rem; color: #b9c6d8; font-size: .7rem; line-height: 1.4; white-space: pre-line; }
       #map-progress { min-height: 1rem; color: #ffd28b; font-size: .7rem; line-height: 1.4; }
+      #open-unmatched-modal {
+        min-height: 36px;
+        display: none;
+        align-items: center;
+        gap: .45rem;
+        padding: .38rem .85rem;
+        border: 1px solid rgba(245, 158, 11, .45);
+        border-radius: 999px;
+        background: rgba(245, 158, 11, .15);
+        color: #fcd34d;
+        font-size: .72rem;
+        font-weight: 700;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: all .16s ease;
+      }
+      #open-unmatched-modal:hover {
+        background: rgba(245, 158, 11, .28);
+        color: #fef08a;
+        border-color: rgba(251, 191, 36, .7);
+        transform: translateY(-1px);
+      }
+      .btn-unmatched-quick {
+        width: 100%;
+        padding: .45rem .65rem;
+        border: 1px dashed rgba(245, 158, 11, .5);
+        border-radius: 8px;
+        background: rgba(245, 158, 11, .1);
+        color: #fcd34d;
+        font-size: .68rem;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        transition: background .15s ease;
+      }
+      .btn-unmatched-quick:hover {
+        background: rgba(245, 158, 11, .2);
+      }
+      #unmatched-modal {
+        width: min(780px, calc(100vw - 24px));
+        max-width: 780px;
+        max-height: calc(100dvh - 28px);
+        margin: auto;
+        padding: 1.1rem;
+        overflow: hidden;
+        border: 1px solid rgba(245, 158, 11, .35);
+        border-radius: 16px;
+        background: #0b1320;
+        color: #e6edf7;
+        box-shadow: 0 25px 80px rgba(0, 0, 0, .75);
+      }
+      #unmatched-modal::backdrop { background: rgba(2, 6, 14, .82); backdrop-filter: blur(5px); }
+      .unmatched-layout { display: flex; flex-direction: column; gap: .75rem; max-height: calc(100dvh - 60px); }
+      .unmatched-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: .7rem; }
+      .unmatched-heading h2 { margin: 0; color: #fbbf24; font-size: 1.05rem; font-weight: 800; display: flex; align-items: center; gap: .45rem; }
+      .unmatched-heading p { margin: .25rem 0 0; color: #94a3b8; font-size: .72rem; line-height: 1.45; }
+      #close-unmatched {
+        width: 34px;
+        height: 34px;
+        flex: 0 0 34px;
+        border: 1px solid var(--border);
+        border-radius: 9px;
+        background: #172338;
+        color: #e2e8f0;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+      .unmatched-diag-box {
+        padding: .65rem .85rem;
+        border: 1px solid rgba(245, 158, 11, .25);
+        border-radius: 10px;
+        background: rgba(245, 158, 11, .07);
+        font-size: .68rem;
+        line-height: 1.5;
+        color: #cbd5e1;
+      }
+      .unmatched-diag-box strong { color: #fde68a; }
+      .unmatched-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: .5rem;
+      }
+      #unmatched-search-input {
+        flex: 1 1 180px;
+        min-height: 32px;
+        padding: .35rem .65rem;
+        border: 1px solid rgba(255, 255, 255, .15);
+        border-radius: 8px;
+        background: #070f1c;
+        color: #f1f5f9;
+        font-size: .72rem;
+        outline: none;
+      }
+      #unmatched-search-input:focus { border-color: #fbbf24; }
+      #unmatched-ulp-filter {
+        min-height: 32px;
+        padding: .35rem .65rem;
+        border: 1px solid rgba(255, 255, 255, .15);
+        border-radius: 8px;
+        background: #152238;
+        color: #f1f5f9;
+        font-size: .72rem;
+        outline: none;
+        cursor: pointer;
+      }
+      #copy-all-unmatched-btn {
+        min-height: 32px;
+        padding: .35rem .85rem;
+        border: 1px solid rgba(52, 211, 153, .45);
+        border-radius: 8px;
+        background: #123b34;
+        color: #6ee7b7;
+        font-size: .72rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all .15s ease;
+      }
+      #copy-all-unmatched-btn:hover { background: #164e42; color: #a7f3d0; }
+      .unmatched-table-container {
+        flex: 1 1 auto;
+        max-height: 44dvh;
+        overflow-y: auto;
+        border: 1px solid rgba(255, 255, 255, .08);
+        border-radius: 10px;
+        background: #08101e;
+        scrollbar-width: thin;
+      }
+      .unmatched-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: .68rem;
+        text-align: left;
+      }
+      .unmatched-table th {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        padding: .5rem .65rem;
+        background: #121c2d;
+        color: #94a3b8;
+        font-weight: 700;
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+      }
+      .unmatched-table td {
+        padding: .45rem .65rem;
+        border-bottom: 1px solid rgba(255, 255, 255, .05);
+        color: #cbd5e1;
+        vertical-align: middle;
+      }
+      .unmatched-table tr:hover td { background: rgba(255, 255, 255, .03); }
+      .unmatched-loc-name { font-weight: 700; color: #f1f5f9; }
+      .unmatched-ulp-tag { display: inline-block; padding: .15rem .45rem; border-radius: 6px; background: rgba(56, 189, 248, .12); color: #7dd3fc; font-size: .62rem; }
+      .unmatched-reason-tag { color: #f59e0b; font-size: .62rem; line-height: 1.35; }
+      .unmatched-action-link {
+        display: inline-flex;
+        align-items: center;
+        gap: .25rem;
+        padding: .2rem .5rem;
+        border: 1px solid rgba(56, 189, 248, .3);
+        border-radius: 6px;
+        background: rgba(56, 189, 248, .08);
+        color: #38bdf8;
+        text-decoration: none;
+        font-size: .62rem;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .unmatched-action-link:hover { background: rgba(56, 189, 248, .2); color: #bae6fd; }
+
       .leaflet-container { background: #091525; }
       .leaflet-bottom.leaflet-right { bottom: 36px; }
       .leaflet-control-attribution {
@@ -1732,6 +1902,7 @@
       <div class="header-actions">
         <span id="status-counts" role="status" aria-live="polite">Memuat jadwal…</span>
         <button id="open-activity-log" type="button">Log aktivitas</button>
+        <button id="open-unmatched-modal" type="button" title="Lihat daftar jalan/desa yang belum terpetakan">⚠️ <span id="unmatched-badge">0</span> Belum cocok</button>
         <button id="open-import" type="button">＋ Impor hasil AI</button>
       </div>
     </header>
@@ -1763,6 +1934,11 @@
         <div class="progress-footer">
           <span id="progress-count">0 dari 0 jalan</span>
           <strong id="progress-percent">0%</strong>
+        </div>
+        <div id="unmatched-quick-banner" style="margin-top: 0.5rem; display: none;">
+          <button id="btn-show-unmatched-quick" type="button" class="btn-unmatched-quick">
+            ⚠️ <span id="unmatched-quick-text">0 lokasi belum cocok</span> — Klik untuk lihat daftar & alasan
+          </button>
         </div>
         <details id="activity-log-wrap" open>
           <summary>Log aktivitas <span id="activity-status">siap</span></summary>
@@ -1816,6 +1992,52 @@
         <span class="legend-note">🔴 Badge merah (s.d jam) = sedang padam · bar progres. 🟡 Badge oranye (jam) = akan padam · bar countdown. 🟢 Hijau = sudah menyala. Klik sesi untuk menyaring wilayah.</span>
       </div>
     </main>
+
+    <dialog id="unmatched-modal" aria-labelledby="unmatched-title">
+      <div class="unmatched-layout">
+        <div class="unmatched-heading">
+          <div>
+            <h2 id="unmatched-title">⚠️ Log Lokasi Belum Cocok (<span id="unmatched-total-title">0</span>)</h2>
+            <p id="unmatched-subtitle">Daftar nama lokasi/jalan yang belum memiliki titik koordinat otomatis di peta.</p>
+          </div>
+          <button id="close-unmatched" type="button" aria-label="Tutup">×</button>
+        </div>
+
+        <div class="unmatched-diag-box">
+          <strong>🔍 Mengapa ada lokasi yang belum cocok?</strong>
+          <ul style="margin: .3rem 0 0 1.2rem; padding: 0;">
+            <li><strong>Desa/Dusun Luar Palu</strong>: Wilayah Donggala (ULP Tambu), Poso, Parigi, Morowali sebagian besar belum memiliki node <code>place=village</code> di OpenStreetMap dunia.</li>
+            <li><strong>Nama Lorong/Jalan Lokal</strong>: Lorong perumahan kecil baru belum digambar oleh relawan peta OSM.</li>
+            <li><strong>Format Singkat Flyer</strong>: Format nama yang sangat lokal tanpa keterangan kecamatan/kabupaten.</li>
+          </ul>
+        </div>
+
+        <div class="unmatched-toolbar">
+          <input type="search" id="unmatched-search-input" placeholder="🔍 Saring nama lokasi..." />
+          <select id="unmatched-ulp-filter">
+            <option value="all">Semua ULP (0)</option>
+          </select>
+          <button id="copy-all-unmatched-btn" type="button">📋 Salin Daftar (<span id="unmatched-copy-count">0</span>)</button>
+        </div>
+
+        <div class="unmatched-table-container">
+          <table class="unmatched-table">
+            <thead>
+              <tr>
+                <th style="width: 32px;">No</th>
+                <th>Nama Lokasi</th>
+                <th>ULP / Wilayah</th>
+                <th>Diagnosa / Alasan</th>
+                <th style="text-align: right; width: 90px;">Cek Maps</th>
+              </tr>
+            </thead>
+            <tbody id="unmatched-table-body">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </dialog>
 
     <dialog id="import-dialog" aria-labelledby="dialog-title">
       <div class="dialog-layout">
@@ -3657,6 +3879,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             affectedAreas: event.affectedAreas || []
           }));
           renderMapLayers();
+          updateUnmatchedState();
         } catch (error) {
           badge.textContent = error.message || "Gagal memuat jadwal.";
         }
@@ -3993,12 +4216,12 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       function streetSearchContext(ulpName) {
         const value = ulpName.toLocaleLowerCase("id-ID");
         if (value.includes("palu") || value.includes("kamonji")) return "Palu";
-        if (value.includes("taweli") || value.includes("tamb")) return "Tawaeli";
-        if (value.includes("donggala")) return "Donggala";
+        if (value.includes("taweli")) return "Tawaeli";
+        if (value.includes("tamb") || value.includes("donggala")) return "Donggala";
         if (value.includes("parigi")) return "Parigi Moutong";
         if (value.includes("poso") || value.includes("tentena")) return "Poso";
-        if (value.includes("kolonedale")) return "Kolonedale";
-        if (value.includes("bungku")) return "Bungku";
+        if (value.includes("kolonedale")) return "Morowali Utara";
+        if (value.includes("bungku")) return "Morowali";
         return "Sulawesi Tengah";
       }
 
@@ -4036,36 +4259,48 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
           }
           directGeocoding = true;
         }
-        const osmUrl = new URL("https://nominatim.openstreetmap.org/search");
-        osmUrl.searchParams.set(
-          "q",
-          `${streetSearchQuery(street)}, ${streetSearchContext(ulpName)}, Sulawesi Tengah, Indonesia`
-        );
-        osmUrl.searchParams.set("format", "geojson");
-        osmUrl.searchParams.set("limit", "10");
-        osmUrl.searchParams.set("viewbox", "117,2,125.5,-4.5");
-        osmUrl.searchParams.set("bounded", "1");
-        const controller = new AbortController();
-        const timer = setTimeout(() => controller.abort(), 30000);
-        let response;
-        try {
-          response = await fetch(osmUrl, {
-            headers: { "Accept-Language": "id" },
-            signal: controller.signal
-          });
-        } catch (error) {
-          throw new Error(
-            error.name === "AbortError"
-              ? "Nominatim tidak menjawab dalam 30 detik."
-              : "Gagal menghubungi Nominatim."
-          );
-        } finally {
-          clearTimeout(timer);
+
+        async function queryNominatimGeoJson(queryText) {
+          const osmUrl = new URL("https://nominatim.openstreetmap.org/search");
+          osmUrl.searchParams.set("q", queryText);
+          osmUrl.searchParams.set("format", "geojson");
+          osmUrl.searchParams.set("limit", "10");
+          osmUrl.searchParams.set("viewbox", "117,2,125.5,-4.5");
+          osmUrl.searchParams.set("bounded", "1");
+          const controller = new AbortController();
+          const timer = setTimeout(() => controller.abort(), 12000);
+          try {
+            const resp = await fetch(osmUrl, {
+              headers: { "Accept-Language": "id" },
+              signal: controller.signal
+            });
+            if (resp.ok) return await resp.json();
+            return null;
+          } catch {
+            return null;
+          } finally {
+            clearTimeout(timer);
+          }
         }
-        if (!response.ok) {
-          throw new Error("Layanan pencarian OpenStreetMap sedang tidak tersedia.");
+
+        const baseQuery = streetSearchQuery(street);
+        const context = streetSearchContext(ulpName);
+
+        // 1. Coba pencarian dengan konteks wilayah ULP
+        let result = await queryNominatimGeoJson(`${baseQuery}, ${context}, Sulawesi Tengah, Indonesia`);
+        if (result && Array.isArray(result.features) && result.features.length) return result;
+
+        // 2. Jika bukan berawalan Jalan/Lorong, coba dengan awalan "Desa "
+        if (!baseQuery.startsWith("Jalan ") && !baseQuery.startsWith("Lorong ")) {
+          result = await queryNominatimGeoJson(`Desa ${baseQuery}, Sulawesi Tengah, Indonesia`);
+          if (result && Array.isArray(result.features) && result.features.length) return result;
         }
-        return await response.json();
+
+        // 3. Fallback umum seluruh Sulawesi Tengah tanpa batas wilayah kaku
+        result = await queryNominatimGeoJson(`${baseQuery}, Sulawesi Tengah, Indonesia`);
+        if (result && Array.isArray(result.features) && result.features.length) return result;
+
+        return { type: "FeatureCollection", features: [] };
       }
 
       async function geocodeStreet(ulpName, locationName) {
@@ -4287,6 +4522,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
           );
         }
         await flushRender();
+        updateUnmatchedState();
         logActivity(`Peta diperbarui: ${found} titik tampil, ${failed} belum cocok.`, found ? "success" : "warn");
         let pushError = null;
         if (found && currentSchedule) {
@@ -4488,6 +4724,212 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
           }
         }
         return events;
+      }
+
+      // ==========================================
+      // UNMATCHED LOCATIONS MODAL & DIAGNOSTICS
+      // ==========================================
+      const unmatchedModal = document.getElementById("unmatched-modal");
+      const openUnmatchedBtn = document.getElementById("open-unmatched-modal");
+      const closeUnmatchedBtn = document.getElementById("close-unmatched");
+      const unmatchedBadge = document.getElementById("unmatched-badge");
+      const unmatchedTotalTitle = document.getElementById("unmatched-total-title");
+      const unmatchedCopyCount = document.getElementById("unmatched-copy-count");
+      const unmatchedQuickBanner = document.getElementById("unmatched-quick-banner");
+      const unmatchedQuickText = document.getElementById("unmatched-quick-text");
+      const btnShowUnmatchedQuick = document.getElementById("btn-show-unmatched-quick");
+      const unmatchedSearchInput = document.getElementById("unmatched-search-input");
+      const unmatchedUlpFilter = document.getElementById("unmatched-ulp-filter");
+      const copyAllUnmatchedBtn = document.getElementById("copy-all-unmatched-btn");
+      const unmatchedTableBody = document.getElementById("unmatched-table-body");
+
+      let currentUnmatchedList = [];
+
+      function diagnoseUnmatchedReason(name, ulp) {
+        const u = (ulp || "").toLowerCase();
+        const n = (name || "").toLowerCase();
+        if (n.startsWith("jalan ") || n.startsWith("jl.") || n.startsWith("lrg") || n.startsWith("lorong")) {
+          return "Lorong/jalan lokal belum ada garis peta di OSM";
+        }
+        if (n.startsWith("btn") || n.startsWith("perum") || n.startsWith("kompleks")) {
+          return "Kompleks perumahan baru belum ada titik POI di OSM";
+        }
+        if (u.includes("tambu") || u.includes("donggala")) {
+          return "Desa/dusun pesisir Donggala belum terdaftar di OpenStreetMap";
+        }
+        if (u.includes("poso") || u.includes("tentena")) {
+          return "Desa/dusun di Kab. Poso belum terdaftar di OpenStreetMap";
+        }
+        if (u.includes("parigi")) {
+          return "Desa di Kab. Parigi Moutong belum terdaftar di OpenStreetMap";
+        }
+        if (u.includes("kolonedale") || u.includes("bungku")) {
+          return "Desa di Morowali / Morowali Utara belum terdaftar di OpenStreetMap";
+        }
+        return "Nama belum terdata di database OpenStreetMap & Nominatim";
+      }
+
+      function updateUnmatchedState() {
+        currentUnmatchedList = [];
+        if (!currentSchedule || !Array.isArray(currentSchedule.events)) {
+          if (openUnmatchedBtn) openUnmatchedBtn.style.display = "none";
+          if (unmatchedQuickBanner) unmatchedQuickBanner.style.display = "none";
+          return;
+        }
+
+        for (const ev of currentSchedule.events) {
+          const timeSlot = `${(ev.startTime || "").slice(11, 16)} - ${(ev.endTime || "").slice(11, 16)} WITA`;
+          for (const area of (ev.affectedAreas || [])) {
+            const mappedSet = new Set((area.points || []).map((p) => (p.location || "").toLowerCase().trim()));
+            for (const loc of (area.locations || [])) {
+              if (!mappedSet.has(loc.toLowerCase().trim())) {
+                currentUnmatchedList.push({
+                  location: loc,
+                  ulpName: area.ulpName,
+                  timeSlot: timeSlot,
+                  reason: diagnoseUnmatchedReason(loc, area.ulpName)
+                });
+              }
+            }
+          }
+        }
+
+        const count = currentUnmatchedList.length;
+        if (count > 0) {
+          if (unmatchedBadge) unmatchedBadge.textContent = count;
+          if (openUnmatchedBtn) openUnmatchedBtn.style.display = "inline-flex";
+          if (unmatchedQuickBanner) unmatchedQuickBanner.style.display = "block";
+          if (unmatchedQuickText) unmatchedQuickText.textContent = `${count} lokasi belum cocok`;
+          if (unmatchedTotalTitle) unmatchedTotalTitle.textContent = count;
+          if (unmatchedCopyCount) unmatchedCopyCount.textContent = count;
+
+          if (unmatchedUlpFilter) {
+            const ulpCounts = new Map();
+            for (const item of currentUnmatchedList) {
+              ulpCounts.set(item.ulpName, (ulpCounts.get(item.ulpName) || 0) + 1);
+            }
+            const prevSelected = unmatchedUlpFilter.value;
+            unmatchedUlpFilter.innerHTML = `<option value="all">Semua ULP (${count})</option>`;
+            for (const [ulp, ulpCount] of ulpCounts.entries()) {
+              const opt = document.createElement("option");
+              opt.value = ulp;
+              opt.textContent = `${ulp} (${ulpCount})`;
+              unmatchedUlpFilter.appendChild(opt);
+            }
+            if (ulpCounts.has(prevSelected)) unmatchedUlpFilter.value = prevSelected;
+          }
+
+          renderUnmatchedTable();
+        } else {
+          if (openUnmatchedBtn) openUnmatchedBtn.style.display = "none";
+          if (unmatchedQuickBanner) unmatchedQuickBanner.style.display = "none";
+        }
+      }
+
+      function renderUnmatchedTable() {
+        if (!unmatchedTableBody) return;
+        const searchTerm = (unmatchedSearchInput?.value || "").toLowerCase().trim();
+        const selectedUlp = unmatchedUlpFilter ? unmatchedUlpFilter.value : "all";
+
+        const filtered = currentUnmatchedList.filter((item) => {
+          if (selectedUlp !== "all" && item.ulpName !== selectedUlp) return false;
+          if (searchTerm && !item.location.toLowerCase().includes(searchTerm) && !item.ulpName.toLowerCase().includes(searchTerm)) {
+            return false;
+          }
+          return true;
+        });
+
+        if (unmatchedCopyCount) unmatchedCopyCount.textContent = filtered.length;
+
+        if (!filtered.length) {
+          unmatchedTableBody.innerHTML = `<tr><td colspan="5" style="text-align:center; padding: 1.5rem; color: #64748b;">Tidak ada lokasi yang cocok dengan saringan.</td></tr>`;
+          return;
+        }
+
+        unmatchedTableBody.innerHTML = filtered.map((item, index) => {
+          const gmapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location + ", Sulawesi Tengah")}`;
+          return `
+            <tr>
+              <td style="color: #64748b; font-variant-numeric: tabular-nums;">${index + 1}</td>
+              <td><span class="unmatched-loc-name">${escapeHtml(item.location)}</span></td>
+              <td>
+                <span class="unmatched-ulp-tag">${escapeHtml(item.ulpName)}</span>
+                <div style="font-size: .58rem; color: #64748b; margin-top: .15rem;">${escapeHtml(item.timeSlot)}</div>
+              </td>
+              <td><span class="unmatched-reason-tag">${escapeHtml(item.reason)}</span></td>
+              <td style="text-align: right;">
+                <a href="${gmapsUrl}" target="_blank" rel="noopener noreferrer" class="unmatched-action-link" title="Cari di Google Maps">
+                  Maps ↗
+                </a>
+              </td>
+            </tr>
+          `;
+        }).join("");
+      }
+
+      if (openUnmatchedBtn && unmatchedModal) {
+        openUnmatchedBtn.addEventListener("click", () => {
+          updateUnmatchedState();
+          unmatchedModal.showModal();
+        });
+      }
+      if (btnShowUnmatchedQuick && unmatchedModal) {
+        btnShowUnmatchedQuick.addEventListener("click", () => {
+          updateUnmatchedState();
+          unmatchedModal.showModal();
+        });
+      }
+      if (closeUnmatchedBtn && unmatchedModal) {
+        closeUnmatchedBtn.addEventListener("click", () => unmatchedModal.close());
+      }
+      if (unmatchedModal) {
+        unmatchedModal.addEventListener("click", (event) => {
+          if (event.target === unmatchedModal) unmatchedModal.close();
+        });
+      }
+      if (unmatchedSearchInput) {
+        unmatchedSearchInput.addEventListener("input", renderUnmatchedTable);
+      }
+      if (unmatchedUlpFilter) {
+        unmatchedUlpFilter.addEventListener("change", renderUnmatchedTable);
+      }
+
+      if (copyAllUnmatchedBtn) {
+        copyAllUnmatchedBtn.addEventListener("click", async () => {
+          const searchTerm = (unmatchedSearchInput?.value || "").toLowerCase().trim();
+          const selectedUlp = unmatchedUlpFilter ? unmatchedUlpFilter.value : "all";
+          const filtered = currentUnmatchedList.filter((item) => {
+            if (selectedUlp !== "all" && item.ulpName !== selectedUlp) return false;
+            if (searchTerm && !item.location.toLowerCase().includes(searchTerm)) return false;
+            return true;
+          });
+
+          if (!filtered.length) return;
+
+          const grouped = new Map();
+          for (const item of filtered) {
+            if (!grouped.has(item.ulpName)) grouped.set(item.ulpName, []);
+            grouped.get(item.ulpName).push(item);
+          }
+
+          let text = `Daftar Lokasi Belum Cocok (${filtered.length} Titik) - Jadwal ${currentSchedule?.date || "Aktif"}:\n\n`;
+          for (const [ulp, list] of grouped.entries()) {
+            text += `=== ${ulp} (${list.length} lokasi) ===\n`;
+            for (const item of list) {
+              text += `• ${item.location} [${item.timeSlot}] — ${item.reason}\n`;
+            }
+            text += `\n`;
+          }
+
+          try {
+            await navigator.clipboard.writeText(text);
+            const orig = copyAllUnmatchedBtn.textContent;
+            copyAllUnmatchedBtn.textContent = "✅ Tersalin!";
+            setTimeout(() => { copyAllUnmatchedBtn.textContent = orig; }, 2500);
+          } catch {
+            window.prompt("Salin daftar lokasi berikut:", text);
+          }
+        });
       }
 
       document.getElementById("open-import").addEventListener("click", () => {

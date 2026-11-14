@@ -339,6 +339,42 @@ async function main() {
   fs.writeFileSync(targetScheduleFile, JSON.stringify(scheduleData, null, 2));
   console.log(`[Saved] Wrote ${targetScheduleFile}`);
 
+  // Generate unmatched locations report automatically
+  try {
+    const unmatchedList = [];
+    for (const ev of events) {
+      const timeSlot = `${ev.startTime} s/d ${ev.endTime}`;
+      for (const area of (ev.affectedAreas || [])) {
+        const pointNames = new Set((area.points || []).map(p => (p.location || '').toLowerCase().trim()));
+        for (const loc of (area.locations || [])) {
+          if (!pointNames.has(loc.toLowerCase().trim())) {
+            unmatchedList.push({
+              location: loc,
+              ulpName: area.ulpName,
+              timeSlot: timeSlot,
+              reason: 'Belum terdata di OpenStreetMap / Nominatim'
+            });
+          }
+        }
+      }
+    }
+    const unmatchedFile = path.join(rootDir, 'data', 'unmatched-locations.json');
+    fs.writeFileSync(unmatchedFile, JSON.stringify({
+      date: dateKey,
+      generatedAt: new Date().toISOString(),
+      summary: {
+        totalLocations: totalStreets,
+        totalMatched: mappedCount,
+        totalUnmatched: unmatchedList.length,
+        matchRatePercent: Math.round((mappedCount / totalStreets) * 100)
+      },
+      unmatchedLocations: unmatchedList
+    }, null, 2));
+    console.log(`[Report] Saved data/unmatched-locations.json with ${unmatchedList.length} unmatched locations.`);
+  } catch (err) {
+    console.warn('[Warning] Could not write unmatched report:', err.message);
+  }
+
   // Hapus jadwal lama di folder data agar jadwal baru menggantikan jadwal sebelumnya secara bersih
   try {
     const dataDir = path.join(rootDir, 'data');
