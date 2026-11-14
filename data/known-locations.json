@@ -1,0 +1,2599 @@
+[
+  {
+    "location": "Lekatu",
+    "latitude": -0.917814,
+    "longitude": 119.859963,
+    "displayName": "Jalan Lekatu",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Kalora",
+    "latitude": -1.2360888,
+    "longitude": 120.464636,
+    "displayName": "Kalora, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Jalan Hasauddin Toto",
+    "latitude": -0.880776,
+    "longitude": 119.837223,
+    "displayName": "Jalan Hasanuddin Toto",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Punjidi",
+    "latitude": -0.889737,
+    "longitude": 119.826219,
+    "displayName": "Jalan Puenjidi",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Munif Rahman 2",
+    "latitude": -0.882586,
+    "longitude": 119.83617,
+    "displayName": "Jalan Munif Rahman II",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tande Rante",
+    "latitude": -0.888649,
+    "longitude": 119.839287,
+    "displayName": "Jalan Tanderante",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Gawalise",
+    "latitude": -0.899406,
+    "longitude": 119.838234,
+    "displayName": "Jalan Gawalise",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Buvu Kulu",
+    "latitude": -0.890637,
+    "longitude": 119.831219,
+    "displayName": "Jalan Buvu Kulu",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Kanuna",
+    "latitude": -0.897211,
+    "longitude": 119.82916,
+    "displayName": "Jalan Kanuna",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Sumur Yuga",
+    "latitude": -0.905563,
+    "longitude": 119.835436,
+    "displayName": "Jalan Sumur Yuga",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalur gaza",
+    "latitude": -0.885441,
+    "longitude": 119.834343,
+    "displayName": "Jalan Jalur Gaza",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Kantor Lurah Donggala Kodi",
+    "latitude": -0.898913,
+    "longitude": 119.8389189,
+    "displayName": "Kantor Lurah Donggala Kodi, Jalan Gawalise, Kecamatan Palu Barat, Palu, Sulawesi Tengah, 94226, Indonesia",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan PDAM",
+    "latitude": -0.91171,
+    "longitude": 119.841353,
+    "displayName": "Jalan PDAM",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Kesehatan",
+    "latitude": -0.920751,
+    "longitude": 119.846801,
+    "displayName": "Jalan Kesehatan",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Pandanjakaya",
+    "latitude": -0.9221,
+    "longitude": 119.847554,
+    "displayName": "Jalan Padanjakaya",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Malonda",
+    "latitude": -0.842718,
+    "longitude": 119.816927,
+    "displayName": "Jalan Malonda",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Terminal Tipo",
+    "latitude": -0.8618306,
+    "longitude": 119.8263829,
+    "displayName": "Terminal Tipe C Tipo, Jalan Salambara, Watudea, Kecamatan Palu Barat, Palu, Sulawesi Tengah, 94221, Indonesia",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Ulujadi",
+    "latitude": -0.896493,
+    "longitude": 119.8555879,
+    "displayName": "Kecamatan Ulujadi, Palu, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Diponegoro",
+    "latitude": -0.887272,
+    "longitude": 119.846626,
+    "displayName": "Jalan Diponegoro",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Lere",
+    "latitude": -0.892444,
+    "longitude": 119.817061,
+    "displayName": "Lere",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Samudra 2",
+    "latitude": -0.886472,
+    "longitude": 119.841414,
+    "displayName": "Jalan Samudra 2",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Selar",
+    "latitude": -0.888077,
+    "longitude": 119.855282,
+    "displayName": "Jalan Selar",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Rono",
+    "latitude": -0.886622,
+    "longitude": 119.85097,
+    "displayName": "Jalan Rono",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan WR Supratman",
+    "latitude": -0.897646,
+    "longitude": 119.852325,
+    "displayName": "Jalan W.R. Supratman",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Bantilan",
+    "latitude": -0.89117,
+    "longitude": 119.84856,
+    "displayName": "Jalan Bantilan",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Asam I",
+    "latitude": -0.894103,
+    "longitude": 119.849882,
+    "displayName": "Jalan Asam 1",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Asam II",
+    "latitude": -0.894009,
+    "longitude": 119.8444,
+    "displayName": "Jalan Asam 2",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Lasoso",
+    "latitude": -0.888529,
+    "longitude": 119.842667,
+    "displayName": "Jalan Lasoso",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Taman Lasoso",
+    "latitude": -0.8906975,
+    "longitude": 119.8469024,
+    "displayName": "Taman Lasoso, Palu, Kecamatan Ulujadi, Palu, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Masjid Raya",
+    "latitude": -0.900366,
+    "longitude": 119.874544,
+    "displayName": "Jalan Masjid Raya",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Langsat",
+    "latitude": -0.898514,
+    "longitude": 119.849239,
+    "displayName": "Jalan Langsat",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Nangka",
+    "latitude": -0.897544,
+    "longitude": 119.854528,
+    "displayName": "Jalan Nangka",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Durian",
+    "latitude": -0.89517,
+    "longitude": 119.853668,
+    "displayName": "Jalan Durian",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Jaelangkara",
+    "latitude": -0.894645,
+    "longitude": 119.853032,
+    "displayName": "Jalan Jaelangkara",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Tipo",
+    "latitude": -0.8565,
+    "longitude": 119.8257,
+    "displayName": "Tipo",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Buluri",
+    "latitude": -0.8517,
+    "longitude": 119.8238,
+    "displayName": "Buluri",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Watusampu",
+    "latitude": -0.819828,
+    "longitude": 119.810535,
+    "displayName": "Watusampu",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Loli oge",
+    "latitude": -0.7907463,
+    "longitude": 119.7971557,
+    "displayName": "Kamp Terpadu Loli Oge, Jalan Trans Palu-Donggala, Lolioge, Donggala, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Loli Saluran",
+    "latitude": -0.7826643,
+    "longitude": 119.7939425,
+    "displayName": "Deker 6 Loli Saluran, Lolisaluran, Donggala, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Masamba",
+    "latitude": -1.3579624,
+    "longitude": 120.6258168,
+    "displayName": "Masamba, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Saatu",
+    "latitude": -1.3603382,
+    "longitude": 120.6032285,
+    "displayName": "Saatu, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Masani",
+    "latitude": -1.3579602,
+    "longitude": 120.5238427,
+    "displayName": "Masani, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Pinedapa",
+    "latitude": -1.372365,
+    "longitude": 120.5195014,
+    "displayName": "Pinedapa, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Tokorondo",
+    "latitude": -1.340774,
+    "longitude": 120.5353553,
+    "displayName": "Tokorondo, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Kilo",
+    "latitude": -1.2921993,
+    "longitude": 120.4795139,
+    "displayName": "Kilo, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Trimulya",
+    "latitude": -1.2769753,
+    "longitude": 120.5384806,
+    "displayName": "Trimulya, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Kawende",
+    "latitude": -1.2377042,
+    "longitude": 120.5198694,
+    "displayName": "Kawende, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Tambarana",
+    "latitude": -1.2095687,
+    "longitude": 120.4552393,
+    "displayName": "Tambarana, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Tumora",
+    "latitude": -1.1625119,
+    "longitude": 120.4493145,
+    "displayName": "Tumora, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Bente",
+    "latitude": -2.4921,
+    "longitude": 121.9402,
+    "displayName": "Bente, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Ipi",
+    "latitude": -2.5056,
+    "longitude": 121.951,
+    "displayName": "Ipi, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Bahoruru",
+    "latitude": -2.5162,
+    "longitude": 121.9523,
+    "displayName": "Bahoruru, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Tofuti",
+    "latitude": -2.5565,
+    "longitude": 121.9763,
+    "displayName": "Tofuti, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Bahontobungku",
+    "latitude": -2.5683371,
+    "longitude": 121.979408,
+    "displayName": "Bahontobungku, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Tudua",
+    "latitude": -2.5904125,
+    "longitude": 121.9860185,
+    "displayName": "Tudua, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Puungkoilu",
+    "latitude": -2.5969697,
+    "longitude": 121.9881955,
+    "displayName": "Puungkoilu, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Lahuafu",
+    "latitude": -2.6143689,
+    "longitude": 121.9954733,
+    "displayName": "Lahuafu, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Unsongi",
+    "latitude": -2.6267923,
+    "longitude": 121.9999101,
+    "displayName": "Unsongi, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Nambo",
+    "latitude": -2.6437065,
+    "longitude": 122.0135053,
+    "displayName": "Nambo, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Laroue",
+    "latitude": -2.6558256,
+    "longitude": 122.0213684,
+    "displayName": "Laroue, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Geresa",
+    "latitude": -2.6708933,
+    "longitude": 122.0144988,
+    "displayName": "Geresa, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Kolono",
+    "latitude": -2.6779043,
+    "longitude": 122.004611,
+    "displayName": "Kolono, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Bahomoahi",
+    "latitude": -2.7036583,
+    "longitude": 121.9943865,
+    "displayName": "Bahomoahi, Bungku Timur, Morowali, Sulawesi Tengah, 94973, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Bahomotefe",
+    "latitude": -2.7167628,
+    "longitude": 122.0071267,
+    "displayName": "Bahomotefe, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Jalan Setia Budi",
+    "latitude": -0.890904,
+    "longitude": 119.878378,
+    "displayName": "Jalan Setiabudi",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Tombolututu",
+    "latitude": -0.882616,
+    "longitude": 119.876682,
+    "displayName": "Jalan Tombolotutu",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan S.Parman",
+    "latitude": -0.888593,
+    "longitude": 119.87844,
+    "displayName": "Jalan S. Parman",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Samrattulangi",
+    "latitude": -0.883973,
+    "longitude": 119.8718,
+    "displayName": "Jalan Sam Ratulangi",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Tadulako",
+    "latitude": -0.892865,
+    "longitude": 119.876259,
+    "displayName": "Jalan Tadulako",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Otista",
+    "latitude": -0.892317,
+    "longitude": 119.880945,
+    "displayName": "Jalan Otista",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Yojokodi",
+    "latitude": -0.890636,
+    "longitude": 119.877128,
+    "displayName": "Jalan Yojokoji",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Sutoyo",
+    "latitude": -0.889553,
+    "longitude": 119.873523,
+    "displayName": "Jalan Sutoyo",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Lagarutu",
+    "latitude": -0.889853,
+    "longitude": 119.894456,
+    "displayName": "Jalan Lagarutu",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Dayodara",
+    "latitude": -0.884725,
+    "longitude": 119.888737,
+    "displayName": "Jalan Dayo Dara",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Dewi Sartika",
+    "latitude": -0.930495,
+    "longitude": 119.897198,
+    "displayName": "Jalan Dewi Sartika",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Zebra",
+    "latitude": -0.923091,
+    "longitude": 119.884582,
+    "displayName": "Jalan Zebra",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Jendral Basuki Rahmat",
+    "latitude": -0.918919,
+    "longitude": 119.887417,
+    "displayName": "Jalan Basuki Rahmat",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Lorong Saleko",
+    "latitude": -0.920827,
+    "longitude": 119.887647,
+    "displayName": "Jalan Saleko II",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Cendana",
+    "latitude": -0.911276,
+    "longitude": 119.855122,
+    "displayName": "Jalan Cendana",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Batu Bata Indah",
+    "latitude": -0.915243,
+    "longitude": 119.8862,
+    "displayName": "Jalan Batu Bata Indah",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Lelemina",
+    "latitude": -0.93211,
+    "longitude": 119.870759,
+    "displayName": "Jalan Lele Mina",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Padatkarya",
+    "latitude": -0.834662,
+    "longitude": 119.885688,
+    "displayName": "Jalan Padat Karya",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Kalimbubu",
+    "latitude": -0.8038,
+    "longitude": 119.8774,
+    "displayName": "Kalimbubu",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Manunggal",
+    "latitude": -0.913964,
+    "longitude": 119.87738,
+    "displayName": "Jalan Manunggal Lorong",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Alkhairaat",
+    "latitude": -0.838401,
+    "longitude": 119.887696,
+    "displayName": "Jalan Al-Khairaat",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Tadulako",
+    "latitude": -0.892865,
+    "longitude": 119.876259,
+    "displayName": "Jalan Tadulako",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jabal Nur",
+    "latitude": -0.870967,
+    "longitude": 119.882286,
+    "displayName": "Jalan Jabal Nur",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Hangtuah",
+    "latitude": -0.869041,
+    "longitude": 119.877446,
+    "displayName": "Jalan Hang Tuah",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Kangguru",
+    "latitude": -0.876945,
+    "longitude": 119.875603,
+    "displayName": "Jalan Kangguru",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Tombolotutu Bawah",
+    "latitude": -0.882616,
+    "longitude": 119.876682,
+    "displayName": "Jalan Tombolotutu",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Samratulangi",
+    "latitude": -0.883973,
+    "longitude": 119.8718,
+    "displayName": "Jalan Sam Ratulangi",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan A Yani",
+    "latitude": -0.885162,
+    "longitude": 119.87301,
+    "displayName": "Jalan Ahmad Yani",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Raden Saleh",
+    "latitude": -0.885412,
+    "longitude": 119.868725,
+    "displayName": "Jalan Raden Saleh",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Panglima Polem",
+    "latitude": -0.88668,
+    "longitude": 119.868928,
+    "displayName": "Jalan Panglima Polim",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Dr Suharso",
+    "latitude": -0.890913,
+    "longitude": 119.866755,
+    "displayName": "Jalan Suharso",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Hayam Wuruk",
+    "latitude": -0.889476,
+    "longitude": 119.863731,
+    "displayName": "Jalan Hayam Wuruk",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Ar Hakim",
+    "latitude": -0.890368,
+    "longitude": 119.869435,
+    "displayName": "Jalan Abdul Rahman Hakim",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Haji hayun",
+    "latitude": -0.892312,
+    "longitude": 119.868333,
+    "displayName": "Jalan Haji Hayun",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Cik Ditiro",
+    "latitude": -0.892581,
+    "longitude": 119.872308,
+    "displayName": "Jalan Cik Di Tiro",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Tinombala",
+    "latitude": -0.883829,
+    "longitude": 119.873962,
+    "displayName": "Jalan Tinombala I",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan abadi",
+    "latitude": -0.879705,
+    "longitude": 119.874741,
+    "displayName": "Jalan Abadi",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Domba",
+    "latitude": -0.878646,
+    "longitude": 119.874882,
+    "displayName": "Jalan Domba",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Rajamoili",
+    "latitude": -0.886,
+    "longitude": 119.862051,
+    "displayName": "Jalan Raja Moili",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Ki Maja",
+    "latitude": -0.892135,
+    "longitude": 119.864469,
+    "displayName": "Jalan Kimaja",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Pramuka",
+    "latitude": -0.893657,
+    "longitude": 119.868132,
+    "displayName": "Jalan Pramuka",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Cut Mutia",
+    "latitude": -0.882738,
+    "longitude": 119.871103,
+    "displayName": "Jalan Cut Mautia",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Yos sudarso",
+    "latitude": -0.87335,
+    "longitude": 119.875438,
+    "displayName": "Jalan Yos Sudarso",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan R.e marthadinata",
+    "latitude": -0.82912,
+    "longitude": 119.880626,
+    "displayName": "Jalan R.E. Martadinata",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan AR Saleh",
+    "latitude": -0.919111,
+    "longitude": 119.900262,
+    "displayName": "Jalan Abdul Rahman Saleh",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Garuda",
+    "latitude": -0.902311,
+    "longitude": 119.897856,
+    "displayName": "Jalan Garuda",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Mataram",
+    "latitude": -0.916224,
+    "longitude": 119.902368,
+    "displayName": "Jalan Mataram",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Lion",
+    "latitude": -0.914361,
+    "longitude": 119.899776,
+    "displayName": "Jalan Lion",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Mandala",
+    "latitude": -0.912737,
+    "longitude": 119.897134,
+    "displayName": "Jalan Mandala",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Sempati 2",
+    "latitude": -0.911945,
+    "longitude": 119.900845,
+    "displayName": "Jalan Simpati 2",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Sriwijaya",
+    "latitude": -0.890672,
+    "longitude": 119.864247,
+    "displayName": "Jalan Sriwijaya",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Elang 2",
+    "latitude": -0.908527,
+    "longitude": 119.90006,
+    "displayName": "Jalan Elang 2",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Maleo",
+    "latitude": -0.904465,
+    "longitude": 119.898117,
+    "displayName": "Jalan Maleo",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Cendrawasih",
+    "latitude": -0.902853,
+    "longitude": 119.894094,
+    "displayName": "Jalan Cenderawasih",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Tanggul Selatan",
+    "latitude": -0.927055,
+    "longitude": 119.905433,
+    "displayName": "Jalan Tanggul Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Angkasa",
+    "latitude": -0.93178,
+    "longitude": 119.86695,
+    "displayName": "Jalan Angkasa Raya",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Mutiara",
+    "latitude": -0.922214,
+    "longitude": 119.89609,
+    "displayName": "Jalan Mutiara",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Soekarno Hatta",
+    "latitude": -0.879552,
+    "longitude": 119.886469,
+    "displayName": "Jalan Soekarno-Hatta",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Dupa Indah",
+    "latitude": -0.813,
+    "longitude": 119.8845,
+    "displayName": "Dupaindah",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Talise",
+    "latitude": -0.877448,
+    "longitude": 119.882641,
+    "displayName": "Talise",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Huntap Tondo",
+    "latitude": -0.833682,
+    "longitude": 119.902845,
+    "displayName": "Huntap Tondo",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Layana",
+    "latitude": -0.8206,
+    "longitude": 119.9182,
+    "displayName": "Layana",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Wahid Hasyim",
+    "latitude": -0.893104,
+    "longitude": 119.859975,
+    "displayName": "Jalan Wahid Hazyim",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Pumpilido",
+    "latitude": -0.892464,
+    "longitude": 119.857254,
+    "displayName": "Jalan Pimpilido",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Teuku Umar",
+    "latitude": -0.89537,
+    "longitude": 119.860628,
+    "displayName": "Jalan Teuku Umar",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Agus Salim",
+    "latitude": -0.892306,
+    "longitude": 119.857574,
+    "displayName": "Jalan Agus Salim",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan S. Bongka",
+    "latitude": -0.896568,
+    "longitude": 119.862959,
+    "displayName": "Jalan Sungai Bongka",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "imam bonjol",
+    "latitude": -0.895032,
+    "longitude": 119.857692,
+    "displayName": "Jalan Imam Bonjol",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Gajah mada",
+    "latitude": -0.897042,
+    "longitude": 119.860808,
+    "displayName": "Jalan Gajah Mada",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Danau Poso",
+    "latitude": -0.90019,
+    "longitude": 119.86184,
+    "displayName": "Jalan Danau Poso",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan sis al jufri",
+    "latitude": -0.899115,
+    "longitude": 119.859257,
+    "displayName": "Jalan Sis Aljufri",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan mangga",
+    "latitude": -0.899468,
+    "longitude": 119.853406,
+    "displayName": "Jalan Mangga",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Danau Talaga",
+    "latitude": -0.904776,
+    "longitude": 119.860571,
+    "displayName": "Jalan Danau Talaga",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Sungai Manonda",
+    "latitude": -0.909656,
+    "longitude": 119.849872,
+    "displayName": "Jalan Sungai Manonda",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Pue Bongo",
+    "latitude": -0.92598,
+    "longitude": 119.856247,
+    "displayName": "Jalan Kue Bongo",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Beringin",
+    "latitude": -0.908361,
+    "longitude": 119.859831,
+    "displayName": "Jalan Beringin",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Jamur",
+    "latitude": -0.906557,
+    "longitude": 119.851941,
+    "displayName": "Jalan Jamur",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Bambu",
+    "latitude": -0.907332,
+    "longitude": 119.85755,
+    "displayName": "Jalan Bambu",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Lekatu",
+    "latitude": -0.917814,
+    "longitude": 119.859963,
+    "displayName": "Jalan Lekatu",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Ganogo",
+    "latitude": -0.912694,
+    "longitude": 119.857938,
+    "displayName": "Jalan Ganogo",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Anggur",
+    "latitude": -0.91175,
+    "longitude": 119.85448,
+    "displayName": "Jalan Anggur",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Boya",
+    "latitude": -0.6707,
+    "longitude": 119.7399,
+    "displayName": "Boya, Donggala, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Tanjung Batu",
+    "latitude": -0.7056028,
+    "longitude": 119.7568043,
+    "displayName": "Tanjung Batu, Donggala, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Boneoge",
+    "latitude": -0.6706,
+    "longitude": 119.72,
+    "displayName": "Boneoge, Donggala, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Lolisaluran",
+    "latitude": -0.7795,
+    "longitude": 119.7931,
+    "displayName": "Lolisaluran, Donggala, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Lolitasiburi",
+    "latitude": -0.7617,
+    "longitude": 119.7897,
+    "displayName": "Lolitasiburi, Donggala, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Kabonga Besar",
+    "latitude": -0.7442179,
+    "longitude": 119.7576372,
+    "displayName": "Kabonga Besar, Donggala, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Kabonga Kecil",
+    "latitude": -0.7258982,
+    "longitude": 119.7644549,
+    "displayName": "Kabonga Kecil, Donggala, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Gunung Bale",
+    "latitude": -0.6779786,
+    "longitude": 119.7469066,
+    "displayName": "Gunung Bale, Donggala, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "ganti",
+    "latitude": -0.7011,
+    "longitude": 119.7316,
+    "displayName": "Ganti, Donggala, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "limboro",
+    "latitude": -0.7201,
+    "longitude": 119.7018,
+    "displayName": "Limboro, Donggala, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "kola-kola",
+    "latitude": -0.7415467,
+    "longitude": 119.7218272,
+    "displayName": "Kola-Kola, Donggala, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Binangga",
+    "latitude": -0.768,
+    "longitude": 119.8767,
+    "displayName": "Binangga, Kecamatan Palu Utara, Palu, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Pelawa",
+    "latitude": -0.7632324,
+    "longitude": 120.0971304,
+    "displayName": "Pelawa, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Pangi",
+    "latitude": -0.7451752,
+    "longitude": 120.0702233,
+    "displayName": "Pangi, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Toboli",
+    "latitude": -0.7180664,
+    "longitude": 120.0607578,
+    "displayName": "Toboli, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Marantale",
+    "latitude": -0.6935479,
+    "longitude": 120.0491968,
+    "displayName": "Marantale, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Tandaigi",
+    "latitude": -0.6082,
+    "longitude": 120.0591,
+    "displayName": "Tandaigi, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Silanga",
+    "latitude": -0.6707136,
+    "longitude": 120.0344555,
+    "displayName": "Silanga, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Toraranga",
+    "latitude": -0.8147029,
+    "longitude": 120.1767864,
+    "displayName": "Taman Toraranga, Parigi, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Toga",
+    "latitude": -0.5678358,
+    "longitude": 120.0139986,
+    "displayName": "Toga, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Paranggi",
+    "latitude": -0.5380416,
+    "longitude": 120.010901,
+    "displayName": "Paranggi, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "gebang rejo",
+    "latitude": -1.4249776,
+    "longitude": 120.7127907,
+    "displayName": "Gebang Rejo, Poso, Sulawesi Tengah, 94619, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "kawua",
+    "latitude": -1.4273181,
+    "longitude": 120.7382432,
+    "displayName": "Kawua, Poso, Sulawesi Tengah, 94619, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "kasintuwu",
+    "latitude": -1.3938986,
+    "longitude": 120.7393006,
+    "displayName": "Kasintuwu, Poso, Sulawesi Tengah, 94619, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "bukit bambu",
+    "latitude": -1.4164127,
+    "longitude": 120.7816953,
+    "displayName": "Bukit Bambu, Poso, Sulawesi Tengah, 94661, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "ranononcu",
+    "latitude": -1.4383295,
+    "longitude": 120.7425667,
+    "displayName": "Ranononcu, Poso, Sulawesi Tengah, 94619, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Maliwuko",
+    "latitude": -1.4615465,
+    "longitude": 120.7087962,
+    "displayName": "Maliwuko, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "tagolu",
+    "latitude": -1.4715618,
+    "longitude": 120.7172209,
+    "displayName": "Tagolu, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "tambaro",
+    "latitude": -1.492287,
+    "longitude": 120.7305709,
+    "displayName": "Tambaro, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "watuawu",
+    "latitude": -1.5086597,
+    "longitude": 120.7240382,
+    "displayName": "Watuawu, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "pandiri",
+    "latitude": -1.5275721,
+    "longitude": 120.719191,
+    "displayName": "Pandiri, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Tampemadoro",
+    "latitude": -1.5464001,
+    "longitude": 120.7159079,
+    "displayName": "Tampemadoro, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Jalan Ki Maja",
+    "latitude": -0.892135,
+    "longitude": 119.864469,
+    "displayName": "Jalan Kimaja",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Rajamoili",
+    "latitude": -0.886,
+    "longitude": 119.862051,
+    "displayName": "Jalan Raja Moili",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Cut mutia",
+    "latitude": -0.882738,
+    "longitude": 119.871103,
+    "displayName": "Jalan Cut Mautia",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "kampung nelayan",
+    "latitude": -0.867508,
+    "longitude": 119.876538,
+    "displayName": "Jalan Kampung Nelayan",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Kaluku Poa",
+    "latitude": -0.832559,
+    "longitude": 119.882098,
+    "displayName": "Jalan Kaluku Poa",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Uwe Buro",
+    "latitude": -0.836036,
+    "longitude": 119.88228,
+    "displayName": "Jalan Uwe Buro",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Uwe Salura",
+    "latitude": -0.838011,
+    "longitude": 119.881992,
+    "displayName": "Jalan Uwe Salura",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Uwe Lambori",
+    "latitude": -0.839016,
+    "longitude": 119.882863,
+    "displayName": "Jalan Uwe Lambori",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Untad 1",
+    "latitude": -0.843776,
+    "longitude": 119.904079,
+    "displayName": "Jalan Untad I",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Trans Sulawesi",
+    "latitude": -0.7357177,
+    "longitude": 119.8631215,
+    "displayName": "Jalan Trans Sulawesi, Tavaili, Kecamatan Tawaeli, Palu, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Uwe Goda",
+    "latitude": -0.844474,
+    "longitude": 119.881662,
+    "displayName": "Jalan Uwe Goda I",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Cakalang",
+    "latitude": -0.85041,
+    "longitude": 119.881954,
+    "displayName": "Jalan Cakalang",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Tlk Raya",
+    "latitude": -0.856514,
+    "longitude": 119.880921,
+    "displayName": "Jalan Teluk Raya II",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Kelor",
+    "latitude": -0.903646,
+    "longitude": 119.847286,
+    "displayName": "Jalan Kelor",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan S.Manonda",
+    "latitude": -0.909656,
+    "longitude": 119.849872,
+    "displayName": "Jalan Sungai Manonda",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Duyu",
+    "latitude": -0.915648,
+    "longitude": 119.845687,
+    "displayName": "Jalan Duyu",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tagari Lonjo",
+    "latitude": -0.91459,
+    "longitude": 119.847566,
+    "displayName": "Jalan Tagari Lonjo",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Padanjakaya",
+    "latitude": -0.9221,
+    "longitude": 119.847554,
+    "displayName": "Jalan Padanjakaya",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Malontara",
+    "latitude": -0.931595,
+    "longitude": 119.841372,
+    "displayName": "Jalan Malontara",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tavanjuka",
+    "latitude": -0.923969,
+    "longitude": 119.863242,
+    "displayName": "Jalan Tavanjuka Raya",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "BTN Palupi",
+    "latitude": -0.929879,
+    "longitude": 119.867873,
+    "displayName": "Jalan BTN Palupi",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tavanjuka Mas",
+    "latitude": -0.925172,
+    "longitude": 119.863784,
+    "displayName": "Jalan Tavanjuka Mas",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Kamboja",
+    "latitude": -0.907378,
+    "longitude": 119.845546,
+    "displayName": "Jalan Kamboja Lorong I",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Labu",
+    "latitude": -0.907674,
+    "longitude": 119.84835,
+    "displayName": "Jalan Labu",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Keramik",
+    "latitude": -0.927378,
+    "longitude": 119.840923,
+    "displayName": "Jalan Keramik",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Pangeran hidayat",
+    "latitude": -0.887619,
+    "longitude": 119.856969,
+    "displayName": "Jalan Pangeran Hidayat",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Lamotu",
+    "latitude": -0.889328,
+    "longitude": 119.853973,
+    "displayName": "Jalan Lamotu",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Wahidin",
+    "latitude": -0.897362,
+    "longitude": 119.866923,
+    "displayName": "Jalan Dokter Wahidin",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Muh Hatta",
+    "latitude": -0.896864,
+    "longitude": 119.875784,
+    "displayName": "Jalan Mohammad Hatta",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Gatot Subroto",
+    "latitude": -0.894569,
+    "longitude": 119.874186,
+    "displayName": "Jalan Gatot Subroto",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan M. Thamrin atas",
+    "latitude": -0.89556,
+    "longitude": 119.882385,
+    "displayName": "Jalan Thamrin",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Mangunsarkoro",
+    "latitude": -0.896912,
+    "longitude": 119.883567,
+    "displayName": "Jalan Mangunsarkoro",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Dr. Sutomo",
+    "latitude": -0.895051,
+    "longitude": 119.876203,
+    "displayName": "Jalan Sutomo",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Dr.Wahidin",
+    "latitude": -0.897362,
+    "longitude": 119.866923,
+    "displayName": "Jalan Dokter Wahidin",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Sulawesi",
+    "latitude": -0.900006,
+    "longitude": 119.870836,
+    "displayName": "Jalan Sulawesi",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Karanja Lemba",
+    "latitude": -0.937389,
+    "longitude": 119.89317,
+    "displayName": "Jalan Karanja Lemba",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Kelapa Gading",
+    "latitude": -0.890212,
+    "longitude": 119.842533,
+    "displayName": "Jalan Kelapa Gading 2",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Tangkasi",
+    "latitude": -0.929015,
+    "longitude": 119.892479,
+    "displayName": "Jalan Tangkasi",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Lembu",
+    "latitude": -0.923587,
+    "longitude": 119.878277,
+    "displayName": "Jalan Lembu",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Lorong Sintuvu",
+    "latitude": -0.928255,
+    "longitude": 119.880149,
+    "displayName": "Jalan Lorong Sintuvu II",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Merdeka",
+    "latitude": -0.932765,
+    "longitude": 119.903321,
+    "displayName": "Jalan Merdeka",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Lembaga",
+    "latitude": -0.933359,
+    "longitude": 119.900003,
+    "displayName": "Jalan Lembaga",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Adam Malik",
+    "latitude": -0.932025,
+    "longitude": 119.904529,
+    "displayName": "Jalan Adam Malik",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Banteng",
+    "latitude": -0.930299,
+    "longitude": 119.895023,
+    "displayName": "Jalan Banteng",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Kijang",
+    "latitude": -0.92731,
+    "longitude": 119.89056,
+    "displayName": "Jalan Kijang",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tangkasi Atas",
+    "latitude": -0.929015,
+    "longitude": 119.892479,
+    "displayName": "Jalan Tangkasi",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Birobuli Utara",
+    "latitude": -0.919678,
+    "longitude": 119.891996,
+    "displayName": "Birobuli Utara",
+    "ulpName": "ULP Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Pantoloan",
+    "latitude": -0.694517,
+    "longitude": 119.924588,
+    "displayName": "Pantoloan",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Jalan Buteta",
+    "latitude": -0.677838,
+    "longitude": 119.841527,
+    "displayName": "Jalan Buteta",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Labuan",
+    "latitude": -0.698487,
+    "longitude": 119.84993,
+    "displayName": "Labuan",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Labuan Kungguma",
+    "latitude": -0.687913,
+    "longitude": 119.901302,
+    "displayName": "Labuan Kungguma",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Labuan Lelea",
+    "latitude": -0.708893,
+    "longitude": 119.868415,
+    "displayName": "Labuan Lelea",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Wombo Mpanau",
+    "latitude": -0.698738,
+    "longitude": 119.950068,
+    "displayName": "Wombo Panau",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Kayumaboko",
+    "latitude": -0.6899,
+    "longitude": 119.8575,
+    "displayName": "Kayumaboko",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Wani I",
+    "latitude": -0.728183,
+    "longitude": 119.872214,
+    "displayName": "Wani I",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Wani II",
+    "latitude": -0.723943,
+    "longitude": 119.865481,
+    "displayName": "Wani Ii",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Lero",
+    "latitude": -0.648669,
+    "longitude": 119.920058,
+    "displayName": "Lero",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Dalaka",
+    "latitude": -0.665002,
+    "longitude": 119.839297,
+    "displayName": "Dalaka",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Labuan Panimba",
+    "latitude": -0.694493,
+    "longitude": 119.86499,
+    "displayName": "Labuan Panimba",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Labuan Toposo",
+    "latitude": -0.638973,
+    "longitude": 119.847599,
+    "displayName": "Labuan Toposo",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Petapa",
+    "latitude": -0.7761139,
+    "longitude": 120.1310685,
+    "displayName": "Petapa, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Lebo",
+    "latitude": -0.7791937,
+    "longitude": 120.146255,
+    "displayName": "Lebo, Parigi Moutong, Sulawesi Tengah, 94471, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "masigi",
+    "latitude": -0.8193112,
+    "longitude": 120.1491278,
+    "displayName": "Masigi, Parigi Moutong, Sulawesi Tengah, 94471, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Bambalemo",
+    "latitude": -0.7857865,
+    "longitude": 120.1520074,
+    "displayName": "Bambalemo, Parigi Moutong, Sulawesi Tengah, 94471, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Maesa",
+    "latitude": -0.8505717,
+    "longitude": 120.1701437,
+    "displayName": "Maesa, Parigi Moutong, Sulawesi Tengah, 94471, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Bantaya",
+    "latitude": -0.8086429,
+    "longitude": 120.175005,
+    "displayName": "Bantaya, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Kampal",
+    "latitude": -0.8008763,
+    "longitude": 120.1508446,
+    "displayName": "Kampal, Parigi Moutong, Sulawesi Tengah, 94471, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Parigimpu'u",
+    "latitude": -0.8504372,
+    "longitude": 120.0828518,
+    "displayName": "Parigimpu, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Kasimbar",
+    "latitude": -0.2054281,
+    "longitude": 119.9718371,
+    "displayName": "Kasimbar, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Posona",
+    "latitude": -0.1232733,
+    "longitude": 119.9963471,
+    "displayName": "Posona, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Maninili",
+    "latitude": 0.0257893,
+    "longitude": 120.0404445,
+    "displayName": "Maninili, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Sigenti",
+    "latitude": 0.0658599,
+    "longitude": 120.0453361,
+    "displayName": "Sigenti, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Sipayo",
+    "latitude": 0.1446514,
+    "longitude": 120.0595352,
+    "displayName": "Sipayo, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "moengko",
+    "latitude": -1.4265273,
+    "longitude": 120.6588934,
+    "displayName": "Moengko, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "moengko Baru",
+    "latitude": -1.4265273,
+    "longitude": 120.6588934,
+    "displayName": "Moengko, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Toini",
+    "latitude": -1.4121227,
+    "longitude": 120.6382044,
+    "displayName": "Toini, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Mapane",
+    "latitude": -1.3829104,
+    "longitude": 120.6296861,
+    "displayName": "Mapane, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Betania",
+    "latitude": -1.412273,
+    "longitude": 120.6106342,
+    "displayName": "Betania, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Malitu",
+    "latitude": -1.469688,
+    "longitude": 120.6212516,
+    "displayName": "Malitu, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Bega",
+    "latitude": -1.3838837,
+    "longitude": 120.6072673,
+    "displayName": "Bega, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Kasiguncu",
+    "latitude": -1.4078608,
+    "longitude": 120.5727796,
+    "displayName": "Kasiguncu, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Patiwunga",
+    "latitude": -1.442883,
+    "longitude": 120.569945,
+    "displayName": "Patiwunga, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Tangkura",
+    "latitude": -1.479654,
+    "longitude": 120.5126742,
+    "displayName": "Tangkura, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Dewua",
+    "latitude": -1.5461235,
+    "longitude": 120.594547,
+    "displayName": "Dewua, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Sangginora",
+    "latitude": -1.5578525,
+    "longitude": 120.5049804,
+    "displayName": "Sangginora, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Padalembara",
+    "latitude": -1.4459464,
+    "longitude": 120.48372,
+    "displayName": "Padalembara, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Sawidago",
+    "latitude": -1.721355,
+    "longitude": 120.6736514,
+    "displayName": "Sawidago, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Tentena"
+  },
+  {
+    "location": "Kelei",
+    "latitude": -1.7963431,
+    "longitude": 120.68356,
+    "displayName": "Kelei, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Tentena"
+  },
+  {
+    "location": "Didiri",
+    "latitude": -1.8075691,
+    "longitude": 120.7270028,
+    "displayName": "Ompo Didiri, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Tentena"
+  },
+  {
+    "location": "Jalan Kebun sari",
+    "latitude": -0.907523,
+    "longitude": 119.923932,
+    "displayName": "Jalan Kebun Sari",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Mamara",
+    "latitude": -0.923284,
+    "longitude": 119.919786,
+    "displayName": "Jalan Mamara",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Mutiara",
+    "latitude": -0.922214,
+    "longitude": 119.89609,
+    "displayName": "Jalan Mutiara",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Bulu Masomba",
+    "latitude": -0.901856,
+    "longitude": 119.911049,
+    "displayName": "Jalan Bulu Masomba",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Tekukur",
+    "latitude": -0.906641,
+    "longitude": 119.909501,
+    "displayName": "Jalan Tekukur",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Maleo atas",
+    "latitude": -0.904465,
+    "longitude": 119.898117,
+    "displayName": "Jalan Maleo",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Veteran atas",
+    "latitude": -0.900625,
+    "longitude": 119.898736,
+    "displayName": "Jalan Veteran I",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Dayodara 2",
+    "latitude": -0.884725,
+    "longitude": 119.888737,
+    "displayName": "Jalan Dayo Dara",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Mantikulore",
+    "latitude": -0.893515,
+    "longitude": 119.906188,
+    "displayName": "Jalan Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Nunumbuku",
+    "latitude": -0.887574,
+    "longitude": 119.928647,
+    "displayName": "Jalan Nunumbuku",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Bora",
+    "latitude": -1.0486396,
+    "longitude": 119.9413452,
+    "displayName": "Kantor Desa Bora, Jalan Poros Palu-Palolo, Watunonju, Sigi, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Sidera",
+    "latitude": -1.0078816,
+    "longitude": 119.9276614,
+    "displayName": "SD Inpres Sidera, Jalan Poros Palu-Palolo, Dusun I, Sidera, Sigi, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Tekukur",
+    "latitude": -0.906641,
+    "longitude": 119.909501,
+    "displayName": "Jalan Tekukur",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Bahasa",
+    "latitude": -0.845003,
+    "longitude": 119.899829,
+    "displayName": "Jalan Bahasa",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Labuan Salumbone",
+    "latitude": -0.682509,
+    "longitude": 119.837771,
+    "displayName": "Labuan Salumbone",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Lero Tatari",
+    "latitude": -0.660803,
+    "longitude": 119.883039,
+    "displayName": "Lero Tatari",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Wani",
+    "latitude": -0.723943,
+    "longitude": 119.865481,
+    "displayName": "Wani Ii",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Guntarano",
+    "latitude": -0.788627,
+    "longitude": 119.94796,
+    "displayName": "Guntarano",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Kayumalue Ngapa",
+    "latitude": -0.771633,
+    "longitude": 119.954958,
+    "displayName": "Kayumalue Ngapa",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Kayumalue Pajeko",
+    "latitude": -0.784127,
+    "longitude": 119.896396,
+    "displayName": "Kayumalue Pajeko",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Lambara",
+    "latitude": -0.736536,
+    "longitude": 119.946778,
+    "displayName": "Lambara",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Mamboro",
+    "latitude": -0.7912,
+    "longitude": 119.8733,
+    "displayName": "Mamboro",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Panau",
+    "latitude": -0.767904,
+    "longitude": 119.886556,
+    "displayName": "Panau",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Taipa",
+    "latitude": -0.7736,
+    "longitude": 119.8695,
+    "displayName": "Taipa",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Rano",
+    "latitude": -0.7734,
+    "longitude": 119.9062,
+    "displayName": "Rano",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Kamonji",
+    "latitude": -0.6526,
+    "longitude": 119.8129,
+    "displayName": "Kamonji",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Toaya Vunta",
+    "latitude": -0.650791,
+    "longitude": 119.879249,
+    "displayName": "Toaya Vunta",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Toaya",
+    "latitude": -0.612294,
+    "longitude": 119.863573,
+    "displayName": "Toaya",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Masaingi",
+    "latitude": -0.604853,
+    "longitude": 119.838921,
+    "displayName": "Masaingi",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Enu",
+    "latitude": -0.563208,
+    "longitude": 119.823885,
+    "displayName": "Enu",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Tibo",
+    "latitude": -0.527424,
+    "longitude": 119.802752,
+    "displayName": "Tibo",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Sikara",
+    "latitude": -0.653773,
+    "longitude": 119.828204,
+    "displayName": "Sikara Tobata",
+    "ulpName": "ULP Taweli dan ULP Tambu"
+  },
+  {
+    "location": "Balinggi",
+    "latitude": -1.0809031,
+    "longitude": 120.3081241,
+    "displayName": "Balinggi, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Sausu Trans",
+    "latitude": -1.0822455,
+    "longitude": 120.4231037,
+    "displayName": "Sausu Trans, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Torono",
+    "latitude": -1.0392811,
+    "longitude": 120.470598,
+    "displayName": "Sausu Torono, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Pakareme",
+    "latitude": -1.1135651,
+    "longitude": 120.4376479,
+    "displayName": "Sausu Pakareme, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Malakosa",
+    "latitude": -0.9652266,
+    "longitude": 120.4004426,
+    "displayName": "Malakosa, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Malino",
+    "latitude": 0.528614,
+    "longitude": 120.6902581,
+    "displayName": "Malino, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Jalan Hasanuddin II",
+    "latitude": -0.897978,
+    "longitude": 119.865694,
+    "displayName": "Jalan Sultan Hasanuddin",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan M Yamin",
+    "latitude": -0.903093,
+    "longitude": 119.888289,
+    "displayName": "Jalan Profesor Mohamad Yamin",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Kakatua",
+    "latitude": -0.903273,
+    "longitude": 119.890554,
+    "displayName": "Jalan Kakatua",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tanjung Api",
+    "latitude": -0.903674,
+    "longitude": 119.887227,
+    "displayName": "Jalan Tanjung Api",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan R.A.Kartini",
+    "latitude": -0.901968,
+    "longitude": 119.881226,
+    "displayName": "Jalan Kartini",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tg. Seng",
+    "latitude": -0.902905,
+    "longitude": 119.878199,
+    "displayName": "Jalan Tanjung Seng",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tg.Santigi",
+    "latitude": -0.904547,
+    "longitude": 119.876022,
+    "displayName": "Jalan Tanjung Santigi",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tg.Dako",
+    "latitude": -0.904804,
+    "longitude": 119.879438,
+    "displayName": "Jalan Tanjung Dako",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tg.Satu",
+    "latitude": -0.906077,
+    "longitude": 119.884313,
+    "displayName": "Jalan Tanjung Satu",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tg.Karang",
+    "latitude": -0.90676,
+    "longitude": 119.87745,
+    "displayName": "Jalan Tanjung Karang",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tg.Manimbaya",
+    "latitude": -0.911302,
+    "longitude": 119.881949,
+    "displayName": "Jalan Tanjung Manimbaya I",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tg.Tururuka",
+    "latitude": -0.904786,
+    "longitude": 119.884024,
+    "displayName": "Jalan Tanjung Tururuka",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tg. Api",
+    "latitude": -0.903674,
+    "longitude": 119.887227,
+    "displayName": "Jalan Tanjung Api",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tg. Angin",
+    "latitude": -0.909104,
+    "longitude": 119.888571,
+    "displayName": "Jalan Tanjung Angin",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Tg. Malakosa",
+    "latitude": -0.902677,
+    "longitude": 119.884528,
+    "displayName": "Jalan Tanjung Malakosa",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Gunung Sidole",
+    "latitude": -0.899247,
+    "longitude": 119.883652,
+    "displayName": "Jalan Gunung Sidole",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Gunung Loli",
+    "latitude": -0.899099,
+    "longitude": 119.881562,
+    "displayName": "Jalan Gunung Loli",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Teluk Tomini",
+    "latitude": -0.899262,
+    "longitude": 119.885175,
+    "displayName": "Jalan Teluk Tomini",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Anoa",
+    "latitude": -0.912393,
+    "longitude": 119.883467,
+    "displayName": "Jalan Anoa 1",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Jati Baru",
+    "latitude": -0.920278,
+    "longitude": 119.863474,
+    "displayName": "Jalan Jati Baru",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Jati",
+    "latitude": -0.91089,
+    "longitude": 119.863233,
+    "displayName": "Jalan Jati",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Agatis",
+    "latitude": -0.913717,
+    "longitude": 119.861071,
+    "displayName": "Jalan Agatis",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Kalora",
+    "latitude": -0.90867,
+    "longitude": 119.86524,
+    "displayName": "Jalan Kalora",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Sungai Lariang",
+    "latitude": -0.903602,
+    "longitude": 119.863596,
+    "displayName": "Jalan Sungai Lariang",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Sungai Ogotion",
+    "latitude": -0.906042,
+    "longitude": 119.862643,
+    "displayName": "Jalan Sungai Ogotion",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Sungai Sausu",
+    "latitude": -0.902568,
+    "longitude": 119.861053,
+    "displayName": "Jalan Sungai Sausu",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Sungai Balantak",
+    "latitude": -0.904732,
+    "longitude": 119.86489,
+    "displayName": "Jalan Sungai Belanta",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Lalove",
+    "latitude": -0.91208,
+    "longitude": 119.868696,
+    "displayName": "LaLove",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Baligau",
+    "latitude": -0.921452,
+    "longitude": 119.870174,
+    "displayName": "Jalan Baligau",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan I Gusti Ngurah Rai",
+    "latitude": -0.922617,
+    "longitude": 119.862198,
+    "displayName": "Jalan I Gusti Ngurah Rai",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Kedondong",
+    "latitude": -0.897632,
+    "longitude": 119.843853,
+    "displayName": "Jalan Kendondong",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Pipa Air",
+    "latitude": -0.89878,
+    "longitude": 119.843388,
+    "displayName": "Jalan Pipa Air",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Hassanudin Toto",
+    "latitude": -0.880776,
+    "longitude": 119.837223,
+    "displayName": "Jalan Hasanuddin Toto",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Munif Rahman 1",
+    "latitude": -0.892567,
+    "longitude": 119.835775,
+    "displayName": "Jalan Munif Rahman Lorong I",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Manggis 2",
+    "latitude": -0.902834,
+    "longitude": 119.841582,
+    "displayName": "Jalan Manggis",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Munif Rahman",
+    "latitude": -0.882586,
+    "longitude": 119.83617,
+    "displayName": "Jalan Munif Rahman II",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Cemara",
+    "latitude": -0.900229,
+    "longitude": 119.843454,
+    "displayName": "Jalan Cemara",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Kedondong 2",
+    "latitude": -0.89698,
+    "longitude": 119.840288,
+    "displayName": "Jalan Kendondong 2",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Kunduri",
+    "latitude": -0.902129,
+    "longitude": 119.85038,
+    "displayName": "Jalan Kunduri",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Kemiri",
+    "latitude": -0.903426,
+    "longitude": 119.855899,
+    "displayName": "Jalan Kemiri",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Manggis",
+    "latitude": -0.902834,
+    "longitude": 119.841582,
+    "displayName": "Jalan Manggis",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Lombok",
+    "latitude": -0.902032,
+    "longitude": 119.855195,
+    "displayName": "Jalan Lombok lorong 2",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Belimbing",
+    "latitude": -0.901173,
+    "longitude": 119.852486,
+    "displayName": "Jalan Belimbing",
+    "ulpName": "ULP Palu Kota dan ULP Kamonji"
+  },
+  {
+    "location": "Jalan Bunga Raya",
+    "latitude": -0.732387,
+    "longitude": 119.87141,
+    "displayName": "Jalan Bunga Raya",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Jalan Ramba",
+    "latitude": -0.7783,
+    "longitude": 119.86,
+    "displayName": "Ramba",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Baiya",
+    "latitude": -0.736209,
+    "longitude": 119.909266,
+    "displayName": "Baiya",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Jalan S. Lamangkona",
+    "latitude": -0.738326,
+    "longitude": 119.858922,
+    "displayName": "Jalan Sungai Lamangkona",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Jalan Yodo",
+    "latitude": -0.732009,
+    "longitude": 119.859889,
+    "displayName": "Jalan Yodo",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Liku",
+    "latitude": -0.7275,
+    "longitude": 119.8922,
+    "displayName": "Liku",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Nupabomba",
+    "latitude": -0.736149,
+    "longitude": 119.998448,
+    "displayName": "Nupa Bomba",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Buranga",
+    "latitude": -0.4401181,
+    "longitude": 119.9977657,
+    "displayName": "Buranga, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Toribulu",
+    "latitude": -0.3594977,
+    "longitude": 119.9868671,
+    "displayName": "Toribulu, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Sienjo",
+    "latitude": -0.3262317,
+    "longitude": 119.9891284,
+    "displayName": "Sienjo, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "pinotu",
+    "latitude": -0.2987962,
+    "longitude": 119.9744976,
+    "displayName": "Pinotu, Parigi Moutong, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Peonea",
+    "latitude": -1.9398724,
+    "longitude": 120.8670816,
+    "displayName": "Peonea, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Tentena"
+  },
+  {
+    "location": "Kolaka",
+    "latitude": -1.8092036,
+    "longitude": 120.855978,
+    "displayName": "Kolaka, Poso, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Tentena"
+  },
+  {
+    "location": "Bahomoleo",
+    "latitude": -2.5352911,
+    "longitude": 121.8077545,
+    "displayName": "Bahomoleo, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Bahomante",
+    "latitude": -2.437,
+    "longitude": 121.9014,
+    "displayName": "Bahomante, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Lanona",
+    "latitude": -2.4244,
+    "longitude": 121.8936,
+    "displayName": "Lanona, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Bahoea",
+    "latitude": -2.4059,
+    "longitude": 121.8733,
+    "displayName": "Bahoea Reko-Reko, Bungku Barat, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Wosu",
+    "latitude": -2.3522019,
+    "longitude": 121.8469657,
+    "displayName": "Wosu, Bungku Barat, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Larobenu",
+    "latitude": -2.3789679,
+    "longitude": 121.7473285,
+    "displayName": "Larobenu, Bungku Barat, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Topogaro",
+    "latitude": -2.27447,
+    "longitude": 121.77881,
+    "displayName": "Topogaro, Bungku Barat, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Tondo",
+    "latitude": -2.2939201,
+    "longitude": 121.7466168,
+    "displayName": "Tondo, Bungku Barat, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Ambunu",
+    "latitude": -2.3262084,
+    "longitude": 121.7163718,
+    "displayName": "Ambunu, Bungku Barat, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Uedago",
+    "latitude": -2.268262,
+    "longitude": 121.7166286,
+    "displayName": "Uedago, Bungku Barat, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Wata",
+    "latitude": -2.2408803,
+    "longitude": 121.7259036,
+    "displayName": "Wata, Bungku Barat, Morowali, Sulawesi Tengah, Indonesia",
+    "ulpName": "ULP Bungku"
+  }
+]
