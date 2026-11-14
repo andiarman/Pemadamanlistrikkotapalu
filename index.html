@@ -176,6 +176,9 @@
         box-shadow: 0 18px 38px rgba(0, 0, 0, .42), inset 0 1px 0 rgba(255, 255, 255, .045);
         backdrop-filter: blur(16px);
         pointer-events: auto;
+        user-select: none;
+        touch-action: pan-y;
+        overscroll-behavior: contain;
       }
       .legend-label { padding: 0 .15rem; color: #93a3b8; font-size: .56rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
       .legend-item {
@@ -239,10 +242,25 @@
       .session-list {
         display: flex;
         flex: 1;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
         align-items: center;
         gap: .35rem;
         min-width: 0;
+        padding: 2px 18px 4px 2px;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(148, 163, 184, .3) transparent;
+      }
+      .session-list::-webkit-scrollbar {
+        height: 4px;
+      }
+      .session-list::-webkit-scrollbar-thumb {
+        background: rgba(148, 163, 184, .3);
+        border-radius: 999px;
       }
       .session-item {
         flex: 0 0 auto;
@@ -250,13 +268,13 @@
         align-items: center;
         gap: .34rem;
         min-height: 32px;
-        padding: .28rem .55rem;
+        padding: .28rem .65rem;
         border: 1px solid rgba(148, 163, 184, .16);
         border-radius: 999px;
         background: rgba(148, 163, 184, .07);
         color: #cfd9e6;
         font-family: inherit;
-        font-size: .66rem;
+        font-size: .68rem;
         font-weight: 650;
         white-space: nowrap;
         cursor: pointer;
@@ -918,6 +936,161 @@
         box-shadow: 0 10px 25px rgba(0,0,0,.5);
       }
 
+      /* Kartu Status Cek Rumah / Jalan */
+      .street-status-card {
+        margin-top: 8px;
+        padding: .75rem .85rem;
+        border: 1px solid rgba(148, 163, 184, .25);
+        border-radius: 16px;
+        background: linear-gradient(155deg, rgba(14, 25, 42, .98), rgba(7, 14, 26, .97));
+        box-shadow: 0 16px 36px rgba(0, 0, 0, .55), inset 0 1px 0 rgba(255, 255, 255, .08);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        animation: card-appear .2s ease-out;
+      }
+      .street-status-card[hidden] { display: none; }
+      @keyframes card-appear {
+        from { opacity: 0; transform: translateY(-6px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .card-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+        margin-bottom: .45rem;
+      }
+      .card-badge-row {
+        display: flex;
+        align-items: center;
+        gap: .4rem;
+        flex-wrap: wrap;
+      }
+      .card-type-tag {
+        color: #94a3b8;
+        font-size: .64rem;
+        font-weight: 750;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+      }
+      .card-status-pill {
+        padding: 2px 8px;
+        border-radius: 9999px;
+        font-size: .64rem;
+        font-weight: 800;
+        letter-spacing: .02em;
+      }
+      .card-status-pill.active {
+        background: rgba(239, 68, 68, .22);
+        color: #fca5a5;
+        border: 1px solid rgba(239, 68, 68, .5);
+      }
+      .card-status-pill.upcoming {
+        background: rgba(245, 158, 11, .22);
+        color: #fef08a;
+        border: 1px solid rgba(245, 158, 11, .5);
+      }
+      .card-status-pill.passed {
+        background: rgba(34, 197, 94, .22);
+        color: #86efac;
+        border: 1px solid rgba(34, 197, 94, .5);
+      }
+      .card-status-pill.safe {
+        background: rgba(56, 189, 248, .22);
+        color: #7dd3fc;
+        border: 1px solid rgba(56, 189, 248, .5);
+      }
+      .card-close-btn {
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(148, 163, 184, .18);
+        color: #cbd5e1;
+        font-size: .7rem;
+        cursor: pointer;
+        transition: all .15s ease;
+        flex: 0 0 auto;
+      }
+      .card-close-btn:hover {
+        background: rgba(148, 163, 184, .35);
+        color: #ffffff;
+      }
+      .card-location-title {
+        color: #ffffff;
+        font-size: .95rem;
+        font-weight: 800;
+        line-height: 1.25;
+        margin: 0;
+      }
+      .card-location-sub {
+        color: #94a3b8;
+        font-size: .72rem;
+        margin-top: 2px;
+      }
+      .card-time-row {
+        display: flex;
+        align-items: center;
+        gap: .35rem;
+        margin-top: .45rem;
+        font-size: .74rem;
+      }
+      .card-time-row[hidden] { display: none; }
+      .card-time-label { color: #94a3b8; }
+      .card-time-val { color: #f1f5f9; font-weight: 750; }
+      .card-countdown-box {
+        margin-top: .4rem;
+        padding: .35rem .55rem;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, .05);
+        border: 1px solid rgba(148, 163, 184, .12);
+        color: #e2e8f0;
+        font-size: .72rem;
+        line-height: 1.4;
+      }
+      .card-countdown-box[hidden] { display: none; }
+      .card-actions {
+        display: flex;
+        align-items: center;
+        gap: .45rem;
+        margin-top: .6rem;
+      }
+      .card-btn {
+        flex: 1;
+        padding: .38rem .7rem;
+        border-radius: 10px;
+        font-family: inherit;
+        font-size: .72rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all .15s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: .3rem;
+      }
+      .card-btn.primary {
+        border: 1px solid rgba(56, 189, 248, .5);
+        background: linear-gradient(135deg, rgba(14, 165, 233, .3), rgba(2, 132, 199, .15));
+        color: #7dd3fc;
+      }
+      .card-btn.primary:hover {
+        background: linear-gradient(135deg, rgba(14, 165, 233, .45), rgba(2, 132, 199, .25));
+        color: #ffffff;
+      }
+      .card-btn.secondary {
+        border: 1px solid rgba(148, 163, 184, .2);
+        background: rgba(148, 163, 184, .1);
+        color: #cbd5e1;
+      }
+      .card-btn.secondary:hover {
+        background: rgba(148, 163, 184, .2);
+        color: #ffffff;
+      }
+
       /* GPS User Marker & Pulse Animations */
       .user-gps-marker-wrap {
         position: relative;
@@ -1045,8 +1218,8 @@
           width: auto;
           max-width: none;
         }
-        .btn-my-location span { display: none; }
-        .btn-my-location { padding: .35rem .5rem; }
+        .btn-my-location span { display: inline; font-size: .66rem; font-weight: 750; }
+        .btn-my-location { padding: .32rem .55rem; }
         .map-legend {
           left: 10px;
           right: 10px;
@@ -1075,27 +1248,40 @@
         .session-list {
           flex-wrap: nowrap;
           overflow-x: auto;
-          gap: .25rem;
-          padding-bottom: 2px;
-          padding-right: 6px;
-          scrollbar-width: none;
+          overflow-y: hidden;
+          gap: .3rem;
+          padding: 2px 24px 6px 2px;
           -webkit-overflow-scrolling: touch;
+          touch-action: pan-x;
+          overscroll-behavior: contain;
+          scrollbar-width: thin;
         }
-        .session-list::-webkit-scrollbar { display: none; }
-        .session-item {
-          min-height: 29px;
-          padding: .18rem .55rem;
+        .session-list::-webkit-scrollbar { height: 3px; }
+        .session-list::-webkit-scrollbar-thumb {
+          background: rgba(148, 163, 184, .3);
           border-radius: 999px;
-          font-size: .66rem;
         }
-        .session-item b { font-size: .68rem; }
-        .session-item .session-time { display: none; }
+        .session-item {
+          min-height: 30px;
+          padding: .2rem .62rem;
+          border-radius: 999px;
+          font-size: .68rem;
+          flex-shrink: 0;
+        }
+        .session-item b { font-size: .72rem; }
+        .session-item .session-time {
+          display: inline;
+          font-size: .62rem;
+          color: #94a3b8;
+          margin-left: 2px;
+        }
         .session-item[aria-pressed="true"] {
           border-color: rgba(250, 204, 21, .78);
           background: rgba(250, 204, 21, .16);
           color: #fffbeb;
         }
         .session-item[aria-pressed="true"] b { color: #fde047; }
+        .session-item[aria-pressed="true"] .session-time { color: #fef9c3; }
         .legend-item {
           justify-content: flex-start;
           min-height: 44px;
@@ -1290,7 +1476,7 @@
     </aside>
 
     <main id="map" aria-label="Peta realtime jadwal pemadaman listrik">
-      <!-- Search & GPS Locator -->
+      <!-- Fitur 2: Cari Jalan / Cek Rumah Saya -->
       <div class="map-search-bar" id="map-search-bar">
         <div class="search-input-shell">
           <span class="search-icon" aria-hidden="true">
@@ -1302,21 +1488,48 @@
           <input
             type="search"
             id="street-search-input"
-            placeholder="Cari jalan / lokasi padam..."
+            placeholder="Cari jalan / cek rumah saya (misal: Diponegoro)..."
             autocomplete="off"
             spellcheck="false"
-            aria-label="Cari jalan atau lokasi pemadaman"
+            aria-label="Cari jalan atau cek rumah saya"
           />
           <button type="button" id="search-clear-btn" class="search-clear-btn" hidden title="Hapus pencarian">✕</button>
-          <button type="button" id="btn-my-location" class="btn-my-location" title="Deteksi lokasi saya saat ini (GPS)">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+          <button type="button" id="btn-my-location" class="btn-my-location" title="Cek status pemadaman rumah / posisi saya saat ini (GPS)">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9.5L12 3l9 6.5V20a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20V9.5z"/>
+              <path d="M9 21.5V12h6v9.5"/>
             </svg>
-            <span>Lokasi Saya</span>
+            <span class="btn-loc-text">Cek Rumah Saya</span>
           </button>
         </div>
         <div id="search-results-list" class="search-results-list" hidden role="listbox"></div>
         <div id="gps-status-toast" class="gps-status-toast" hidden role="status" aria-live="polite"></div>
+
+        <!-- Kartu Status Langsung (Cari Jalan / Cek Rumah Saya) -->
+        <div id="street-status-card" class="street-status-card" hidden>
+          <div class="card-head">
+            <div class="card-badge-row">
+              <span class="card-type-tag" id="card-type-tag">🏠 Status Rumah / Jalan</span>
+              <span class="card-status-pill" id="card-status-pill">SEDANG PADAM</span>
+            </div>
+            <button type="button" id="card-close-btn" class="card-close-btn" aria-label="Tutup kartu">✕</button>
+          </div>
+          <div class="card-content">
+            <h4 id="card-title" class="card-location-title">Jalan Diponegoro</h4>
+            <div id="card-sub" class="card-location-sub">ULP Palu Kota · Palu Barat</div>
+            <div class="card-time-row" id="card-time-row">
+              <span class="card-time-label">⏰ Jadwal:</span>
+              <strong id="card-time-val" class="card-time-val">13.00 – 16.00 WITA</strong>
+            </div>
+            <div id="card-countdown-box" class="card-countdown-box">
+              <span id="card-countdown-val">💡 Menyala dalam 42 menit lagi</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button type="button" id="card-btn-focus" class="card-btn primary">📍 Lihat Titik di Peta</button>
+            <button type="button" id="card-btn-dismiss" class="card-btn secondary">Tutup</button>
+          </div>
+        </div>
       </div>
 
       <div id="empty-state" hidden>Belum ada jadwal pemadaman untuk hari ini.</div>
@@ -1947,14 +2160,6 @@ Ketentuan:
         map.closePopup();
         if (typeof applyClusterFilter === "function") applyClusterFilter();
         if (!geoJsonLayer && mapEvents.length) renderMapLayers();
-
-        if (next !== "all") {
-          const sessionMarkers = allPointMarkers.filter((m) => String(m.feature?.properties?.sessionNumber) === next);
-          if (sessionMarkers.length) {
-            const group = L.featureGroup(sessionMarkers);
-            map.fitBounds(group.getBounds().pad(0.12), { maxZoom: 15, animate: true });
-          }
-        }
       }
 
       const filterButtons = [...document.querySelectorAll("[data-filter]")];
@@ -1993,6 +2198,39 @@ Ketentuan:
       };
       if ("ResizeObserver" in window) new ResizeObserver(syncLegendHeight).observe(legendPanel);
       syncLegendHeight();
+
+      function stopMapEventInterference(element) {
+        if (!element) return;
+        if (typeof L !== "undefined" && L.DomEvent) {
+          L.DomEvent.disableClickPropagation(element);
+          L.DomEvent.disableScrollPropagation(element);
+        }
+        const eventTypes = [
+          "mousedown", "mouseup",
+          "touchstart", "touchmove", "touchend", "touchcancel",
+          "pointerdown", "pointerup", "pointermove", "pointercancel",
+          "click", "dblclick", "contextmenu"
+        ];
+        for (const type of eventTypes) {
+          element.addEventListener(type, (e) => {
+            e.stopPropagation();
+          }, { passive: type === "touchmove" });
+        }
+      }
+
+      stopMapEventInterference(legendPanel);
+      const mapSearchBarEl = document.getElementById("map-search-bar");
+      if (mapSearchBarEl) stopMapEventInterference(mapSearchBarEl);
+
+      const sessionListEl = document.getElementById("session-list");
+      if (sessionListEl) {
+        sessionListEl.addEventListener("wheel", (e) => {
+          if (e.deltaY !== 0) {
+            e.preventDefault();
+            sessionListEl.scrollLeft += e.deltaY;
+          }
+        }, { passive: false });
+      }
 
       document.getElementById("close-map-progress").addEventListener("click", () => {
         progressDismissed = true;
@@ -2364,10 +2602,97 @@ Ketentuan:
         setTimeout(() => el.classList.remove("marker-highlight-pulse"), 3000);
       }
 
+      function formatRemainingTime(targetMs) {
+        const diffMs = targetMs - Date.now();
+        if (diffMs <= 0) return "beberapa saat";
+        const totalMin = Math.round(diffMs / 60000);
+        const hours = Math.floor(totalMin / 60);
+        const mins = totalMin % 60;
+        if (hours > 0 && mins > 0) return `${hours} jam ${mins} menit`;
+        if (hours > 0) return `${hours} jam`;
+        return `${mins} menit`;
+      }
+
+      function hideStatusCard() {
+        const card = document.getElementById("street-status-card");
+        if (card) card.hidden = true;
+      }
+
+      function showStatusCard({ typeTag, title, sub, status, timeRange, countdownText, onFocus }) {
+        const card = document.getElementById("street-status-card");
+        if (!card) return;
+
+        const typeEl = document.getElementById("card-type-tag");
+        const statusEl = document.getElementById("card-status-pill");
+        const titleEl = document.getElementById("card-title");
+        const subEl = document.getElementById("card-sub");
+        const timeRow = document.getElementById("card-time-row");
+        const timeVal = document.getElementById("card-time-val");
+        const countdownBox = document.getElementById("card-countdown-box");
+        const countdownVal = document.getElementById("card-countdown-val");
+        const btnFocus = document.getElementById("card-btn-focus");
+
+        if (typeEl) typeEl.textContent = typeTag || "Status Lokasi";
+
+        if (statusEl) {
+          statusEl.className = "card-status-pill";
+          if (status === "ACTIVE") {
+            statusEl.classList.add("active");
+            statusEl.textContent = "SEDANG PADAM";
+          } else if (status === "UPCOMING") {
+            statusEl.classList.add("upcoming");
+            statusEl.textContent = "AKAN PADAM";
+          } else if (status === "PASSED") {
+            statusEl.classList.add("passed");
+            statusEl.textContent = "SUDAH MENYALA";
+          } else {
+            statusEl.classList.add("safe");
+            statusEl.textContent = "AMAN / NORMAL";
+          }
+        }
+
+        if (titleEl) titleEl.textContent = title || "Lokasi";
+        if (subEl) subEl.textContent = sub || "";
+
+        if (timeRow) {
+          if (timeRange) {
+            timeRow.hidden = false;
+            if (timeVal) timeVal.textContent = timeRange;
+          } else {
+            timeRow.hidden = true;
+          }
+        }
+
+        if (countdownBox) {
+          if (countdownText) {
+            countdownBox.hidden = false;
+            if (countdownVal) countdownVal.innerHTML = countdownText;
+          } else {
+            countdownBox.hidden = true;
+          }
+        }
+
+        if (btnFocus) {
+          if (typeof onFocus === "function") {
+            btnFocus.hidden = false;
+            btnFocus.onclick = () => onFocus();
+          } else {
+            btnFocus.hidden = true;
+          }
+        }
+
+        card.hidden = false;
+      }
+
       function setupSearchBar() {
         const input = document.getElementById("street-search-input");
         const clearBtn = document.getElementById("search-clear-btn");
         const resultsContainer = document.getElementById("search-results-list");
+        const cardCloseBtn = document.getElementById("card-close-btn");
+        const cardDismissBtn = document.getElementById("card-btn-dismiss");
+
+        if (cardCloseBtn) cardCloseBtn.addEventListener("click", hideStatusCard);
+        if (cardDismissBtn) cardDismissBtn.addEventListener("click", hideStatusCard);
 
         if (!input || !resultsContainer) return;
 
@@ -2444,18 +2769,43 @@ Ketentuan:
               if (sessionFilter !== "all") setSessionFilter("all");
 
               const [lon, lat] = marker.feature.geometry.coordinates;
-              if (markerClusterGroup && typeof markerClusterGroup.zoomToShowLayer === "function") {
-                markerClusterGroup.zoomToShowLayer(marker, () => {
-                  marker.openPopup();
-                  pulseMarkerHighlight(marker);
-                });
+              const focusAction = () => {
+                if (markerClusterGroup && typeof markerClusterGroup.zoomToShowLayer === "function") {
+                  markerClusterGroup.zoomToShowLayer(marker, () => {
+                    marker.openPopup();
+                    pulseMarkerHighlight(marker);
+                  });
+                } else {
+                  map.flyTo([lat, lon], 16, { duration: 1.1 });
+                  setTimeout(() => {
+                    marker.openPopup();
+                    pulseMarkerHighlight(marker);
+                  }, 1200);
+                }
+              };
+
+              let countdownHtml = "";
+              const startMs = Date.parse(props.startTime);
+              const endMs = Date.parse(props.endTime);
+              if (currentStatus === "ACTIVE") {
+                countdownHtml = `💡 Estimasi listrik menyala dalam <b>${formatRemainingTime(endMs)}</b> lagi (pukul ${endStr} WITA)`;
+              } else if (currentStatus === "UPCOMING") {
+                countdownHtml = `⏳ Listrik akan padam dalam <b>${formatRemainingTime(startMs)}</b> lagi (pukul ${startStr} WITA)`;
               } else {
-                map.flyTo([lat, lon], 16, { duration: 1.1 });
-                setTimeout(() => {
-                  marker.openPopup();
-                  pulseMarkerHighlight(marker);
-                }, 1200);
+                countdownHtml = `✅ Jadwal pemadaman telah selesai sejak pukul <b>${endStr} WITA</b>`;
               }
+
+              showStatusCard({
+                typeTag: "🔍 HASIL PENCARIAN JALAN",
+                title: props.location || "Lokasi Jalan",
+                sub: `ULP ${props.ulpName || "PLN"}${props.displayName ? ` · ${props.displayName}` : ""}`,
+                status: currentStatus,
+                timeRange: `${startStr} – ${endStr} WITA`,
+                countdownText: countdownHtml,
+                onFocus: focusAction
+              });
+
+              focusAction();
             };
 
             item.addEventListener("click", selectItem);
@@ -2480,6 +2830,7 @@ Ketentuan:
           clearBtn.hidden = true;
           resultsContainer.hidden = true;
           resultsContainer.innerHTML = "";
+          hideStatusCard();
           input.focus();
         });
 
@@ -2515,14 +2866,14 @@ Ketentuan:
           }
 
           btn.classList.add("loading");
-          const span = btn.querySelector("span");
+          const span = btn.querySelector(".btn-loc-text") || btn.querySelector("span");
           if (span) span.textContent = "Mencari...";
-          showGpsToast("📡 Sedang mendeteksi koordinat GPS Anda...", 3000);
+          showGpsToast("📡 Sedang mendeteksi koordinat GPS rumah Anda...", 3000);
 
           navigator.geolocation.getCurrentPosition(
             (pos) => {
               btn.classList.remove("loading");
-              if (span) span.textContent = "Lokasi Saya";
+              if (span) span.textContent = "Cek Rumah Saya";
 
               const userLat = pos.coords.latitude;
               const userLon = pos.coords.longitude;
@@ -2541,7 +2892,7 @@ Ketentuan:
               userGpsMarker = L.marker([userLat, userLon], { icon: userGpsIcon, zIndexOffset: 1200 }).addTo(map);
               userGpsMarker.bindPopup(`
                 <div style="font-family: inherit; font-size: 13px; line-height: 1.4;">
-                  <strong style="color: #38bdf8; display: block; margin-bottom: 4px;">📍 Lokasi Anda Saat Ini</strong>
+                  <strong style="color: #38bdf8; display: block; margin-bottom: 4px;">📍 Lokasi Rumah / Posisi Anda</strong>
                   <span style="color: #94a3b8; font-size: 11px;">Akurasi GPS: ±${Math.round(accuracy)} meter</span>
                 </div>
               `);
@@ -2573,27 +2924,74 @@ Ketentuan:
                 const currentStatus = getEventStatus(props, now);
                 const locName = props.location || "titik terdekat";
                 const distStr = minDistance < 1000 ? `${Math.round(minDistance)} meter` : `${(minDistance / 1000).toFixed(1)} km`;
+                const startStr = formatWita(props.startTime, false);
+                const endStr = formatWita(props.endTime, false);
+                const startMs = Date.parse(props.startTime);
+                const endMs = Date.parse(props.endTime);
 
-                if (minDistance <= 500) {
-                  if (currentStatus === "ACTIVE") {
-                    showGpsToast(`⚠️ <b>Perhatian:</b> Lokasi Anda berada di dekat <b>${escapeHtml(locName)}</b> (~${distStr}) yang <b>SEDANG PADAM</b> hingga ${formatWita(props.endTime, false)} WITA!`, 9000);
-                  } else if (currentStatus === "UPCOMING") {
-                    showGpsToast(`⏳ <b>Pemberitahuan:</b> Lokasi Anda berada di dekat <b>${escapeHtml(locName)}</b> (~${distStr}) yang <b>AKAN PADAM</b> pukul ${formatWita(props.startTime, false)} - ${formatWita(props.endTime, false)} WITA.`, 9000);
+                const focusNearest = () => {
+                  const [lon, lat] = nearestMarker.feature.geometry.coordinates;
+                  if (markerClusterGroup && typeof markerClusterGroup.zoomToShowLayer === "function") {
+                    markerClusterGroup.zoomToShowLayer(nearestMarker, () => {
+                      nearestMarker.openPopup();
+                      pulseMarkerHighlight(nearestMarker);
+                    });
                   } else {
-                    showGpsToast(`✅ <b>Info:</b> Area terdekat Anda di <b>${escapeHtml(locName)}</b> (~${distStr}) sudah <b>MENYALA</b> kembali.`, 7000);
+                    map.flyTo([lat, lon], 16, { duration: 1.1 });
+                    setTimeout(() => {
+                      nearestMarker.openPopup();
+                      pulseMarkerHighlight(nearestMarker);
+                    }, 1200);
                   }
+                };
+
+                if (minDistance <= 600) {
+                  let countdownHtml = "";
+                  if (currentStatus === "ACTIVE") {
+                    countdownHtml = `🚨 <b>PERHATIAN:</b> Rumah/lokasi Anda berada di dekat area padam (~${distStr})! Estimasi menyala dalam <b>${formatRemainingTime(endMs)}</b> lagi (pukul ${endStr} WITA)`;
+                  } else if (currentStatus === "UPCOMING") {
+                    countdownHtml = `⏳ <b>SIAP-SIAP:</b> Pemadaman di sekitar rumah Anda dimulai dalam <b>${formatRemainingTime(startMs)}</b> lagi (pukul ${startStr} - ${endStr} WITA)`;
+                  } else {
+                    countdownHtml = `✅ Jadwal pemadaman di area sekitar rumah Anda telah selesai sejak pukul <b>${endStr} WITA</b>`;
+                  }
+
+                  showStatusCard({
+                    typeTag: "🏠 STATUS RUMAH SAYA (GPS)",
+                    title: `Dekat ${locName}`,
+                    sub: `Posisi Anda ~${distStr} dari titik padam ini · ULP ${props.ulpName || "PLN"}`,
+                    status: currentStatus,
+                    timeRange: `${startStr} – ${endStr} WITA`,
+                    countdownText: countdownHtml,
+                    onFocus: focusNearest
+                  });
                 } else {
-                  showGpsToast(`✅ <b>Lokasi terdeteksi:</b> Titik pemadaman terdekat berjarak ~${distStr} (<b>${escapeHtml(locName)}</b>).`, 7000);
+                  showStatusCard({
+                    typeTag: "🏠 STATUS RUMAH SAYA (GPS)",
+                    title: "Rumah Anda Aman / Bebas Padam",
+                    sub: `Titik pemadaman terdekat berjarak cukup jauh: ~${distStr} (${locName})`,
+                    status: "SAFE",
+                    timeRange: "Tidak ada jadwal pemadaman langsung di titik Anda hari ini",
+                    countdownText: "🟢 Aliran listrik di wilayah rumah Anda terpantau aman dan tidak terdampak jadwal saat ini.",
+                    onFocus: focusNearest
+                  });
                 }
               } else {
-                showGpsToast("✅ Lokasi Anda terdeteksi. Belum ada titik pemadaman terdekat.", 5000);
+                showStatusCard({
+                  typeTag: "🏠 STATUS RUMAH SAYA (GPS)",
+                  title: "Rumah Anda Aman / Bebas Padam",
+                  sub: "Tidak ditemukan titik pemadaman di sekitar koordinat Anda.",
+                  status: "SAFE",
+                  timeRange: "Tidak ada jadwal pemadaman aktif",
+                  countdownText: "🟢 Aliran listrik di wilayah Anda aman.",
+                  onFocus: null
+                });
               }
 
               map.flyTo([userLat, userLon], 15, { duration: 1.2 });
             },
             (err) => {
               btn.classList.remove("loading");
-              if (span) span.textContent = "Lokasi Saya";
+              if (span) span.textContent = "Cek Rumah Saya";
               let msg = "Gagal mengakses GPS.";
               if (err.code === 1) msg = "Izin lokasi tidak diberikan. Izinkan akses GPS pada peramban Anda.";
               else if (err.code === 2) msg = "Posisi GPS tidak dapat ditentukan.";
@@ -2905,7 +3303,7 @@ Ketentuan:
 
       async function fetchStreetIndexRegion(region) {
         const controller = new AbortController();
-        const timer = setTimeout(() => controller.abort(), 110000);
+        const timer = setTimeout(() => controller.abort(), 12000);
         logActivity(`Mengunduh indeks ${regionLabel(region)} dari Worker…`);
         try {
           const response = await fetch(
@@ -2926,7 +3324,7 @@ Ketentuan:
         } catch (error) {
           logActivity(
             error.name === "AbortError"
-              ? `Indeks ${regionLabel(region)} melewati batas 110 detik; memakai cache lama atau cara sebelumnya.`
+              ? `Unduh indeks ${regionLabel(region)} melewati batas waktu 12 detik; memakai cache atau pencarian langsung.`
               : `Indeks ${regionLabel(region)} tidak bisa dihubungi (${error.message || "gangguan jaringan"}); memakai cache lama atau cara sebelumnya.`,
             "warn"
           );

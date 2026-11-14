@@ -42,7 +42,7 @@ Status setiap titik lokasi dihitung otomatis menurut waktu lokal **WITA** dan di
 | Simbol | Kategori Status | Arti & Ciri Khas Visual |
 | :---: | :--- | :--- |
 | 🛑 | **Sedang Padam** | **Oktagon merah** dengan tanda **✕** (disertai efek denyut cahaya pada desktop). |
-| ⚠️ | **Akan Padam** | **Segitiga kuning** dengan ikon **jam 🕒** + **Badge Romawi (I – X)** di sisi kanan sesuai sesi urutan waktu mulai jadwal. |
+| ⚠️ | **Akan Padam** | **Segitiga kuning** dengan ikon **jam 🕒** + **Badge Jam Mulai (misal: 13.00)** di sisi kanan sesuai waktu jadwal pemadaman. |
 | ✅ | **Sudah Menyala** | **Lingkaran hijau** dengan tanda **✓** (tampil semi-transparan agar titik yang masih padam lebih menonjol). |
 
 > [!NOTE]
