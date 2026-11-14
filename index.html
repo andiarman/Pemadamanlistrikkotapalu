@@ -520,232 +520,6 @@
         box-shadow: 0 22px 80px rgba(0, 0, 0, .6);
       }
       #import-dialog::backdrop { background: rgba(1, 7, 16, .76); backdrop-filter: blur(4px); }
-      #feedback-dialog {
-        width: min(440px, calc(100vw - 24px));
-        max-width: 440px;
-        max-height: calc(100dvh - 24px);
-        margin: auto;
-        padding: 1.15rem;
-        box-sizing: border-box;
-        border: 1px solid rgba(148, 163, 184, .25);
-        border-radius: 18px;
-        background: #0b1322;
-        color: #e2e8f0;
-        box-shadow: 0 24px 80px rgba(0, 0, 0, .75);
-      }
-      #feedback-dialog::backdrop {
-        background: rgba(3, 7, 18, .75);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-      }
-      .feedback-dialog-content { display: flex; flex-direction: column; gap: .9rem; }
-      .feedback-dialog-header {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: .5rem;
-      }
-      .feedback-dialog-heading {
-        margin: 0;
-        font-size: 1.05rem;
-        font-weight: 800;
-        color: #f8fafc;
-      }
-      .feedback-dialog-sub {
-        margin: .25rem 0 0;
-        font-size: .72rem;
-        color: #94a3b8;
-        line-height: 1.4;
-      }
-      .dialog-close-btn {
-        width: 32px;
-        height: 32px;
-        border: 1px solid rgba(148, 163, 184, .2);
-        border-radius: 9999px;
-        background: rgba(255, 255, 255, .05);
-        color: #94a3b8;
-        font-size: 1.25rem;
-        line-height: 1;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background .15s, color .15s;
-      }
-      .dialog-close-btn:hover { background: rgba(255, 255, 255, .15); color: #fff; }
-
-      .feedback-summary-card {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: .65rem .85rem;
-        border-radius: 12px;
-        background: rgba(30, 41, 59, .6);
-        border: 1px solid rgba(250, 204, 21, .2);
-      }
-      .score-large {
-        display: flex;
-        align-items: baseline;
-        gap: .3rem;
-      }
-      .score-stars { font-size: 1.15rem; }
-      .score-large strong {
-        font-size: 1.35rem;
-        font-weight: 900;
-        color: #fef08a;
-      }
-      .score-scale { font-size: .75rem; color: #94a3b8; }
-      .score-meta {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: .15rem;
-        text-align: right;
-      }
-      .score-meta span { font-size: .68rem; color: #cbd5e1; }
-      .github-feedback-link {
-        font-size: .66rem;
-        color: #38bdf8;
-        text-decoration: none;
-      }
-      .github-feedback-link:hover { text-decoration: underline; }
-
-      .feedback-form { display: flex; flex-direction: column; gap: .75rem; }
-      .rating-picker-wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: .35rem;
-        padding: .5rem 0;
-      }
-      .star-picker {
-        display: inline-flex;
-        gap: .35rem;
-      }
-      .star-btn {
-        background: transparent;
-        border: 0;
-        font-size: 2rem;
-        line-height: 1;
-        color: #475569;
-        cursor: pointer;
-        padding: .2rem;
-        transition: transform .15s ease, color .15s ease;
-        user-select: none;
-      }
-      .star-btn.active, .star-btn.hovered {
-        color: #facc15;
-        text-shadow: 0 0 12px rgba(250, 204, 21, .55);
-      }
-      .star-btn:hover { transform: scale(1.22); }
-      .star-hint {
-        font-size: .74rem;
-        font-weight: 700;
-        color: #fef08a;
-      }
-
-      .form-group { display: flex; flex-direction: column; gap: .3rem; }
-      .form-label { font-size: .72rem; font-weight: 650; color: #cbd5e1; }
-      .form-label-row { display: flex; justify-content: space-between; align-items: baseline; }
-      .char-count { font-size: .65rem; color: #64748b; }
-
-      .feedback-input, .feedback-textarea {
-        width: 100%;
-        box-sizing: border-box;
-        border: 1px solid rgba(148, 163, 184, .25);
-        border-radius: 10px;
-        background: rgba(15, 23, 42, .85);
-        color: #f8fafc;
-        padding: .55rem .75rem;
-        font-family: inherit;
-        font-size: .8rem;
-        transition: border-color .15s ease, box-shadow .15s ease;
-      }
-      .feedback-input:focus, .feedback-textarea:focus {
-        outline: none;
-        border-color: #facc15;
-        box-shadow: 0 0 0 3px rgba(250, 204, 21, .15);
-      }
-      .feedback-textarea { resize: vertical; min-height: 64px; }
-
-      .feedback-status-msg {
-        font-size: .72rem;
-        padding: .45rem .65rem;
-        border-radius: 8px;
-        text-align: center;
-      }
-      .feedback-status-msg.info { background: rgba(56, 189, 248, .12); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, .3); }
-      .feedback-status-msg.error { background: rgba(239, 68, 68, .12); color: #fca5a5; border: 1px solid rgba(239, 68, 68, .3); }
-
-      .feedback-btn-row {
-        display: flex;
-        align-items: center;
-        gap: .55rem;
-        margin-top: .2rem;
-      }
-      .feedback-submit-btn {
-        flex: 1;
-        min-height: 38px;
-        border: 1px solid rgba(250, 204, 21, .4);
-        border-radius: 10px;
-        background: linear-gradient(135deg, #eab308, #ca8a04);
-        color: #0b1322;
-        font-family: inherit;
-        font-weight: 800;
-        font-size: .82rem;
-        cursor: pointer;
-        transition: transform .15s ease, filter .15s ease;
-      }
-      .feedback-submit-btn:hover {
-        filter: brightness(1.1);
-        transform: translateY(-1px);
-      }
-      .feedback-submit-btn:disabled {
-        opacity: .6;
-        cursor: not-allowed;
-        transform: none;
-      }
-      .feedback-dismiss-btn {
-        min-height: 38px;
-        padding: 0 .9rem;
-        border: 1px solid rgba(148, 163, 184, .2);
-        border-radius: 10px;
-        background: rgba(255, 255, 255, .04);
-        color: #94a3b8;
-        font-family: inherit;
-        font-size: .78rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background .15s, color .15s;
-      }
-      .feedback-dismiss-btn:hover { background: rgba(255, 255, 255, .1); color: #e2e8f0; }
-
-      #feedback-form[hidden], #feedback-success-card[hidden], #feedback-status-msg[hidden] { display: none !important; }
-      .feedback-success-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: .65rem;
-        padding: 1rem 0;
-      }
-      .success-icon { font-size: 2.5rem; line-height: 1; }
-      .feedback-success-card h3 { margin: 0; font-size: 1.15rem; color: #f8fafc; font-weight: 800; }
-      .feedback-success-card p { margin: 0; font-size: .78rem; color: #94a3b8; max-width: 320px; line-height: 1.45; }
-      .feedback-success-actions {
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-        width: 100%;
-        margin-top: .4rem;
-      }
-      .view-issue-link {
-        font-size: .74rem;
-        color: #38bdf8;
-        text-decoration: none;
-        padding: .4rem;
-      }
-      .view-issue-link:hover { text-decoration: underline; }
       .dialog-layout { display: grid; gap: .65rem; }
       .dialog-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: .7rem; }
       .dialog-heading h2 { margin: 0; color: #b6f5dd; font-size: 1rem; }
@@ -1138,17 +912,6 @@
         }
         .threads-link span { display: none; }
         .threads-link svg { width: 15px; height: 15px; flex-basis: 15px; }
-        #feedback-dialog {
-          padding: .9rem;
-          border-radius: 16px;
-        }
-        .feedback-dialog-heading { font-size: .95rem; }
-        .star-btn { font-size: 1.85rem; padding: .15rem; }
-        .rating-badge-btn {
-          min-height: 28px;
-          padding: .2rem .45rem;
-          font-size: .7rem;
-        }
         .leaflet-bottom.leaflet-right { bottom: calc(env(safe-area-inset-bottom, 0px) + 38px + var(--legend-height, 154px)); right: 10px; }
         .leaflet-control-zoom a, .leaflet-control-zoom a:hover {
           width: 38px !important;
@@ -1329,11 +1092,6 @@
         <div class="legend-head">
           <span class="legend-label">Filter titik</span>
           <div class="legend-head-actions">
-            <button id="open-feedback" type="button" class="rating-badge-btn" title="Beri masukan & rating aplikasi">
-              <span class="rating-star">⭐</span>
-              <strong id="live-rating-score">5.0</strong>
-              <span id="live-rating-count" class="rating-count">(1)</span>
-            </button>
             <a
               class="threads-link"
               href="https://www.threads.com/@andiarman___"
@@ -1384,99 +1142,12 @@
         </div>
         <div class="dialog-actions">
           <button id="copy-ai-prompt" type="button">Salin prompt verifikasi</button>
-          <button id="clear-local-data" type="button">Kosongkan peta</button>
         </div>
         <textarea id="ai-json-input" aria-label="Tempel hasil AI" placeholder="Tempel hanya objek JSON hasil AI di sini…"></textarea>
         <div id="import-status" role="status" aria-live="polite"></div>
         <div class="dialog-submit-actions">
-          <button id="submit-import-server" type="button">⚡ Proses di Server (Bisa Tutup Browser)</button>
+          <button id="submit-import-server" type="button">⚡ Proses di Server (Gantikan Jadwal Aktif)</button>
           <button id="submit-import" type="button">Proses di browser saja (manual)</button>
-        </div>
-      </div>
-    </dialog>
-
-    <dialog id="feedback-dialog" aria-labelledby="feedback-title">
-      <div class="feedback-dialog-content">
-        <div class="feedback-dialog-header">
-          <div>
-            <h2 id="feedback-title" class="feedback-dialog-heading">Beri Masukan & Rating</h2>
-            <p class="feedback-dialog-sub">Ulasan terhubung langsung ke GitHub untuk membantu evaluasi peta.</p>
-          </div>
-          <button id="close-feedback" type="button" class="dialog-close-btn" aria-label="Tutup dialog feedback">&times;</button>
-        </div>
-
-        <div id="feedback-summary-card" class="feedback-summary-card">
-          <div class="score-large">
-            <span class="score-stars">⭐</span>
-            <strong id="modal-rating-score">5.0</strong>
-            <span class="score-scale">/ 5.0</span>
-          </div>
-          <div class="score-meta">
-            <span id="modal-rating-text">Berdasarkan ulasan warga Palu</span>
-            <a href="https://github.com/andiarman/Pemadamanlistrikkotapalu/issues" target="_blank" rel="noopener noreferrer" class="github-feedback-link">Lihat di GitHub Issues ↗</a>
-          </div>
-        </div>
-
-        <form id="feedback-form" class="feedback-form">
-          <div class="rating-picker-wrap">
-            <label class="form-label">Beri Bintang:</label>
-            <div id="star-picker" class="star-picker" role="radiogroup" aria-label="Pilih rating 1 sampai 5 bintang">
-              <button type="button" class="star-btn active" data-rating="1" aria-label="1 bintang">★</button>
-              <button type="button" class="star-btn active" data-rating="2" aria-label="2 bintang">★</button>
-              <button type="button" class="star-btn active" data-rating="3" aria-label="3 bintang">★</button>
-              <button type="button" class="star-btn active" data-rating="4" aria-label="4 bintang">★</button>
-              <button type="button" class="star-btn active" data-rating="5" aria-label="5 bintang">★</button>
-            </div>
-            <span id="star-hint" class="star-hint">Sangat Membantu! (5/5) 🤩</span>
-          </div>
-
-          <div class="form-group">
-            <label for="feedback-name" class="form-label">Nama Anda (tanpa login):</label>
-            <input
-              id="feedback-name"
-              type="text"
-              maxlength="50"
-              placeholder="Contoh: Budi / Warga Palu (opsional)"
-              class="feedback-input"
-            />
-          </div>
-
-          <div class="form-group">
-            <div class="form-label-row">
-              <label for="feedback-comment" class="form-label">Masukan / Kendala / Saran:</label>
-              <span id="feedback-char-count" class="char-count">0/1000</span>
-            </div>
-            <textarea
-              id="feedback-comment"
-              maxlength="1000"
-              rows="3"
-              placeholder="Tulis pendapat Anda tentang peta ini, akurasi jadwal, atau saran perbaikan..."
-              class="feedback-textarea"
-            ></textarea>
-          </div>
-
-          <div id="feedback-status-msg" class="feedback-status-msg" hidden aria-live="polite"></div>
-
-          <div class="feedback-btn-row">
-            <button id="feedback-submit-btn" type="submit" class="feedback-submit-btn">
-              Kirim Feedback
-            </button>
-            <button id="feedback-dismiss-btn" type="button" class="feedback-dismiss-btn">
-              Nanti Saja
-            </button>
-          </div>
-        </form>
-
-        <div id="feedback-success-card" class="feedback-success-card" hidden>
-          <div class="success-icon">🎉</div>
-          <h3>Terima Kasih!</h3>
-          <p id="feedback-success-text">Ulasan Anda telah berhasil disimpan dan tercatat di GitHub.</p>
-          <div class="feedback-success-actions">
-            <a id="feedback-issue-link" href="https://github.com/andiarman/Pemadamanlistrikkotapalu/issues" target="_blank" rel="noopener noreferrer" class="view-issue-link">
-              Lihat di GitHub Issues ↗
-            </a>
-            <button id="feedback-done-btn" type="button" class="feedback-submit-btn">Selesai</button>
-          </div>
         </div>
       </div>
     </dialog>
@@ -2186,15 +1857,6 @@ Ketentuan:
           throw new Error(result.error || "Gagal menyimpan jadwal; coba lagi sebentar.");
         }
         return { dateKey, commitUrl: result.commitUrl || "" };
-      }
-
-      async function clearScheduleOnWorker() {
-        const response = await fetch(`${scheduleApiBase}/api/schedule`, { method: "DELETE" });
-        const result = await response.json().catch(() => ({}));
-        if (!response.ok) {
-          throw new Error(result.error || "Gagal menghapus jadwal; coba lagi sebentar.");
-        }
-        return result.deleted || 0;
       }
 
       async function fetchRemoteSchedule() {
@@ -3239,34 +2901,6 @@ Ketentuan:
         }
       });
 
-      document.getElementById("clear-local-data").addEventListener("click", async () => {
-        if (!currentSchedule) {
-          importStatus.textContent = "Tidak ada jadwal yang perlu dihapus.";
-          return;
-        }
-        if (!window.confirm(`Hapus semua jadwal dari GitHub? Peta akan kosong untuk semua pengunjung.`)) return;
-        resetActivityLog();
-        logActivity("Menghapus jadwal dari GitHub…");
-        try {
-          await clearScheduleOnWorker();
-        } catch (error) {
-          logActivity(error.message || "Gagal menghapus jadwal dari GitHub.", "error");
-          finishActivity("error");
-          importStatus.textContent = error.message || "Gagal menghapus jadwal dari GitHub.";
-          return;
-        }
-        localStorage.removeItem(localEventsKey);
-        currentSchedule = null;
-        renderedEventsSnapshot = "";
-        hasInitialBounds = false;
-        map.setView([-0.8917, 119.8707], 12);
-        await fetchMapLayers();
-        logActivity("Jadwal dihapus dari GitHub; peta dikosongkan untuk semua pengunjung.", "success");
-        finishActivity("success");
-        importStatus.textContent = "Jadwal sudah dihapus dari GitHub; peta dikosongkan untuk semua pengunjung.";
-        progressPanel.hidden = true;
-      });
-
       // ==========================================
       // SERVER-SIDE IMPORT & LIVE BANNER
       // ==========================================
@@ -3444,10 +3078,8 @@ Ketentuan:
           );
           logActivity(`Valid: ${imported.length} jadwal, ${locationCount} nama lokasi.`, "success");
           const importedDateKey = scheduleDateKey(imported);
-          const baseEvents = currentSchedule && currentSchedule.date === importedDateKey
-            ? currentSchedule.events
-            : [];
-          const events = mergeClientEvents([...baseEvents], imported);
+          // Gantikan jadwal lama dengan jadwal baru dari hasil prompt
+          const events = imported;
           currentSchedule = { date: scheduleDateKey(events), events };
           saveLocalStore(currentSchedule);
           await fetchMapLayers();
@@ -3455,9 +3087,9 @@ Ketentuan:
           importStatus.textContent = "Jadwal tervalidasi. Menyimpan ke GitHub…";
           logActivity("Menyimpan jadwal ke GitHub melalui Worker…");
           await postScheduleToWorker(events);
-          logActivity("Jadwal tersimpan di GitHub dan tampil untuk semua pengunjung.", "success");
+          logActivity("Jadwal tersimpan di GitHub dan menggantikan jadwal sebelumnya.", "success");
           importStatus.textContent =
-            `${imported.length} jadwal tersimpan ke GitHub dan tampil untuk semua pengunjung; ` +
+            `${imported.length} jadwal tersimpan ke GitHub dan menggantikan jadwal sebelumnya; ` +
             `${parsed.skippedEvents} jadwal dan ${parsed.skippedGroups} kelompok kosong dilewati.`;
           importDialog.close();
           enqueued = true;
@@ -3545,247 +3177,6 @@ Ketentuan:
       setInterval(() => {
         if (document.visibilityState === "visible") refreshRemoteSchedule();
       }, 30000);
-
-      // ==========================================
-      // FEEDBACK & RATING SYSTEM WITH GITHUB
-      // ==========================================
-      const FEEDBACK_STORAGE_KEY = "outage-map-feedback-user-v1";
-      const FEEDBACK_API_URL = `${scheduleApiBase}/api/feedback`;
-      const ONE_DAY_MS = 24 * 60 * 60 * 1000;
-      const SEVEN_DAYS_MS = 7 * ONE_DAY_MS;
-
-      const feedbackDialog = document.getElementById("feedback-dialog");
-      const openFeedbackBtn = document.getElementById("open-feedback");
-      const closeFeedbackBtn = document.getElementById("close-feedback");
-      const dismissFeedbackBtn = document.getElementById("feedback-dismiss-btn");
-      const doneFeedbackBtn = document.getElementById("feedback-done-btn");
-      const feedbackForm = document.getElementById("feedback-form");
-      const feedbackSuccessCard = document.getElementById("feedback-success-card");
-      const feedbackStatusMsg = document.getElementById("feedback-status-msg");
-      const feedbackComment = document.getElementById("feedback-comment");
-      const feedbackCharCount = document.getElementById("feedback-char-count");
-      const starButtons = [...document.querySelectorAll(".star-btn")];
-      const starHint = document.getElementById("star-hint");
-      const feedbackIssueLink = document.getElementById("feedback-issue-link");
-
-      const starHints = {
-        1: "Sangat Buruk 😞 (1/5)",
-        2: "Kurang Memuaskan 🙁 (2/5)",
-        3: "Cukup Baik 😐 (3/5)",
-        4: "Bagus & Bermanfaat 😊 (4/5)",
-        5: "Sangat Membantu! 🤩 (5/5)"
-      };
-
-      let selectedRating = 5;
-
-      function getStoredFeedbackState() {
-        try {
-          return JSON.parse(localStorage.getItem(FEEDBACK_STORAGE_KEY)) || {};
-        } catch {
-          return {};
-        }
-      }
-
-      function saveStoredFeedbackState(patch) {
-        try {
-          const current = getStoredFeedbackState();
-          const next = { ...current, ...patch };
-          localStorage.setItem(FEEDBACK_STORAGE_KEY, JSON.stringify(next));
-        } catch {}
-      }
-
-      function updateLiveScoreDisplay(score, count) {
-        const scoreFormatted = Number(score || 5).toFixed(1);
-        const countInt = Number(count) || 0;
-        const liveScore = document.getElementById("live-rating-score");
-        const liveCount = document.getElementById("live-rating-count");
-        const modalScore = document.getElementById("modal-rating-score");
-        const modalText = document.getElementById("modal-rating-text");
-
-        if (liveScore) liveScore.textContent = scoreFormatted;
-        if (liveCount) liveCount.textContent = `(${countInt})`;
-        if (modalScore) modalScore.textContent = scoreFormatted;
-        if (modalText) {
-          modalText.textContent = countInt > 0
-            ? `Berdasarkan ${countInt} ulasan warga Palu`
-            : "Belum ada ulasan warga";
-        }
-      }
-
-      async function fetchLiveFeedback() {
-        try {
-          const response = await fetch(FEEDBACK_API_URL, { headers: { Accept: "application/json" } });
-          if (response.ok) {
-            const data = await response.json();
-            if (data.ok) {
-              updateLiveScoreDisplay(data.averageScore, data.totalRatings);
-              return;
-            }
-          }
-        } catch {}
-        try {
-          const fallbackRes = await fetch("data/feedback.json");
-          if (fallbackRes.ok) {
-            const fb = await fallbackRes.json();
-            updateLiveScoreDisplay(fb.averageScore, fb.totalRatings);
-          }
-        } catch {}
-      }
-
-      function updateStarSelection(rating) {
-        selectedRating = rating;
-        starButtons.forEach((btn) => {
-          const val = Number(btn.dataset.rating);
-          btn.classList.toggle("active", val <= rating);
-        });
-        if (starHint) starHint.textContent = starHints[rating] || "";
-      }
-
-      starButtons.forEach((btn) => {
-        btn.addEventListener("click", () => updateStarSelection(Number(btn.dataset.rating)));
-        btn.addEventListener("mouseenter", () => {
-          const hoverVal = Number(btn.dataset.rating);
-          starButtons.forEach((b) => b.classList.toggle("hovered", Number(b.dataset.rating) <= hoverVal));
-        });
-      });
-      document.getElementById("star-picker")?.addEventListener("mouseleave", () => {
-        starButtons.forEach((b) => b.classList.remove("hovered"));
-      });
-
-      if (feedbackComment) {
-        feedbackComment.addEventListener("input", () => {
-          if (feedbackCharCount) {
-            feedbackCharCount.textContent = `${feedbackComment.value.length}/1000`;
-          }
-        });
-      }
-
-      function openFeedbackModal(isAutoPrompt = false) {
-        if (!feedbackDialog) return;
-        feedbackForm.hidden = false;
-        feedbackSuccessCard.hidden = true;
-        feedbackStatusMsg.hidden = true;
-        feedbackStatusMsg.textContent = "";
-
-        const state = getStoredFeedbackState();
-        if (state.lastRating) updateStarSelection(state.lastRating);
-        else updateStarSelection(5);
-
-        const nameInput = document.getElementById("feedback-name");
-        if (nameInput && state.lastName) nameInput.value = state.lastName;
-
-        if (isAutoPrompt) {
-          saveStoredFeedbackState({ lastPromptedAt: Date.now() });
-        }
-
-        feedbackDialog.showModal();
-      }
-
-      function closeFeedbackModal() {
-        if (!feedbackDialog) return;
-        feedbackDialog.close();
-      }
-
-      if (openFeedbackBtn) {
-        openFeedbackBtn.addEventListener("click", () => openFeedbackModal(false));
-      }
-      if (closeFeedbackBtn) {
-        closeFeedbackBtn.addEventListener("click", () => {
-          saveStoredFeedbackState({ lastPromptedAt: Date.now() });
-          closeFeedbackModal();
-        });
-      }
-      if (dismissFeedbackBtn) {
-        dismissFeedbackBtn.addEventListener("click", () => {
-          saveStoredFeedbackState({ lastPromptedAt: Date.now() });
-          closeFeedbackModal();
-        });
-      }
-      if (doneFeedbackBtn) {
-        doneFeedbackBtn.addEventListener("click", closeFeedbackModal);
-      }
-      feedbackDialog?.addEventListener("click", (e) => {
-        if (e.target === feedbackDialog) {
-          saveStoredFeedbackState({ lastPromptedAt: Date.now() });
-          closeFeedbackModal();
-        }
-      });
-
-      feedbackForm?.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const submitBtn = document.getElementById("feedback-submit-btn");
-        const nameInput = document.getElementById("feedback-name");
-        const name = (nameInput?.value || "").trim() || "Warga Palu";
-        const comment = (feedbackComment?.value || "").trim();
-        const rating = selectedRating;
-
-        submitBtn.disabled = true;
-        feedbackStatusMsg.className = "feedback-status-msg info";
-        feedbackStatusMsg.textContent = "Menghubungkan ke GitHub...";
-        feedbackStatusMsg.hidden = false;
-
-        try {
-          const response = await fetch(FEEDBACK_API_URL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name, rating, comment })
-          });
-          const result = await response.json();
-          if (!response.ok || !result.ok) {
-            throw new Error(result.error || "Gagal menyimpan ulasan ke GitHub.");
-          }
-
-          updateLiveScoreDisplay(result.averageScore, result.totalRatings);
-          saveStoredFeedbackState({
-            lastRatedAt: Date.now(),
-            lastPromptedAt: Date.now(),
-            lastRating: rating,
-            lastName: name
-          });
-
-          if (result.issueUrl && feedbackIssueLink && /^https:\/\/github\.com\/andiarman\/Pemadamanlistrikkotapalu\/issues\/\d+$/.test(result.issueUrl)) {
-            feedbackIssueLink.href = result.issueUrl;
-            feedbackIssueLink.hidden = false;
-          }
-
-          const successText = document.getElementById("feedback-success-text");
-          if (successText) {
-            successText.textContent = `Ulasan Anda dengan rating ${rating}★ atas nama "${name}" berhasil tercatat di GitHub. Skor rating terbaru: ⭐ ${Number(result.averageScore).toFixed(1)}.`;
-          }
-
-          feedbackForm.hidden = true;
-          feedbackSuccessCard.hidden = false;
-          feedbackStatusMsg.hidden = true;
-        } catch (err) {
-          feedbackStatusMsg.className = "feedback-status-msg error";
-          feedbackStatusMsg.textContent = err.message || "Terjadi kesalahan saat mengirim ulasan.";
-        } finally {
-          submitBtn.disabled = false;
-        }
-      });
-
-      function checkAndScheduleAutoPrompt() {
-        const state = getStoredFeedbackState();
-        const now = Date.now();
-
-        if (state.lastRatedAt && now - state.lastRatedAt < SEVEN_DAYS_MS) {
-          return;
-        }
-        if (state.lastPromptedAt && now - state.lastPromptedAt < ONE_DAY_MS) {
-          return;
-        }
-
-        setTimeout(() => {
-          const currentState = getStoredFeedbackState();
-          const currentNow = Date.now();
-          if (currentState.lastRatedAt && currentNow - currentState.lastRatedAt < SEVEN_DAYS_MS) return;
-          if (currentState.lastPromptedAt && currentNow - currentState.lastPromptedAt < ONE_DAY_MS) return;
-          openFeedbackModal(true);
-        }, 120_000);
-      }
-
-      fetchLiveFeedback();
-      checkAndScheduleAutoPrompt();
     </script>
   </body>
 </html>

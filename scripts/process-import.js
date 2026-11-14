@@ -324,6 +324,19 @@ async function main() {
   fs.writeFileSync(targetScheduleFile, JSON.stringify(scheduleData, null, 2));
   console.log(`[Saved] Wrote ${targetScheduleFile}`);
 
+  // Hapus jadwal lama di folder data agar jadwal baru menggantikan jadwal sebelumnya secara bersih
+  try {
+    const dataDir = path.join(rootDir, 'data');
+    for (const fileName of fs.readdirSync(dataDir)) {
+      if (/^\d{4}-\d{2}-\d{2}\.json$/.test(fileName) && fileName !== `${dateKey}.json`) {
+        fs.unlinkSync(path.join(dataDir, fileName));
+        console.log(`[Replaced] Menghapus jadwal lama: ${fileName}`);
+      }
+    }
+  } catch (cleanErr) {
+    console.warn('[Warning] Gagal membersihkan arsip lama:', cleanErr.message);
+  }
+
   // Final status: done
   const finalStatus = {
     status: "done",
