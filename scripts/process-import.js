@@ -16,7 +16,7 @@ const streetHonorifics = new Set([
 ]);
 
 const streetIgnoredTokens = new Set([
-  "jalan", "raya", "atas", "bawah", "sebagian", "baru", "lama", "dalam",
+  "jalan", "raya", "sebagian", "dalam",
   "gang", "lorong", "dokter", "profesor", "haji", "jenderal", "sultan",
   "dr", "prof", "hj", "h", "ir", "drs"
 ]);
