@@ -3909,10 +3909,12 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       }
 
       function normalizeStreetName(value) {
-        return value.normalize("NFD")
+        return (value || "")
+          .normalize("NFD")
           .replace(/[\u0300-\u036f]/g, "")
           .toLowerCase()
-          .replace(/^(?:jl\.?|jalan)\s*/, "")
+          .replace(/^(?:desa\s*\/\s*kelurahan|kelurahan\s*\/\s*desa)\s*/i, "")
+          .replace(/^(?:jl\.?|jalan|lorong|gang)\s*/i, "")
           .replace(/[^a-z0-9]+/g, " ")
           .trim();
       }
@@ -3969,16 +3971,19 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         ar: "abdul rahman",
         moh: "muhammad", muh: "muhammad", mohamad: "muhammad", m: "muhammad",
         a: "ahmad", dr: "dokter", prof: "profesor",
+        ir: "insinyur", kh: "kiyai haji",
         i: "1", ii: "2", iii: "3", iv: "4", v: "5", vi: "6"
       };
       const streetHonorifics = new Set([
-        "dr", "dokter", "prof", "profesor", "hj", "haji", "h", "ir", "drs",
-        "jendral", "jenderal", "sultan"
+        "dr", "dokter", "prof", "profesor", "hj", "haji", "h", "ir", "insinyur", "drs",
+        "jendral", "jenderal", "sultan", "kh", "kyai", "kiyai", "andi", "dae",
+        "st", "sh", "se", "sos", "skm", "pt", "cv", "ud"
       ]);
       const streetIgnoredTokens = new Set([
-        "jalan", "raya", "sebagian", "dalam",
+        "jalan", "raya", "sebagian", "dalam", "wilayah", "kompleks", "komp",
         "gang", "lorong", "dokter", "profesor", "haji", "jenderal", "sultan",
-        "dr", "prof", "hj", "h", "ir", "drs"
+        "dr", "prof", "hj", "h", "ir", "insinyur", "drs", "kh", "kyai", "kiyai",
+        "desa", "kelurahan", "kecamatan", "dusun", "kampung", "btn", "perumahan", "perum", "perumnas", "pulau"
       ]);
       const streetQueryNoise = new Set(["sebagian", "dalam"]);
 
@@ -3992,6 +3997,9 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         let trimmed = [...raw];
         while (trimmed.length > 1 && isStreetLeadingNoise(trimmed[0])) trimmed = trimmed.slice(1);
         if (trimmed.length !== raw.length) forms.push(trimmed);
+        if (raw.length === 2 && raw[0] === raw[1]) {
+          forms.push([raw[0]]);
+        }
         return forms;
       }
 
