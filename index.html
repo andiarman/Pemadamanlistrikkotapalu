@@ -695,29 +695,41 @@
       .marker-with-session { position: relative; display: block; width: 24px; height: 24px; }
       .session-tag {
         position: absolute;
-        left: 16px;
-        top: 4px;
+        left: 17px;
+        top: 3px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-width: 16px;
+        min-width: 28px;
         height: 16px;
-        padding: 0 3px;
+        padding: 0 4px;
         border: 1px solid rgba(250, 204, 21, .95);
         border-radius: 5px;
         background: #0b1322;
-        color: #fffbeb;
-        box-shadow: 0 0 0 1.5px rgba(7, 14, 26, .9), 0 3px 7px rgba(0, 0, 0, .55);
+        color: #fef08a;
+        box-shadow: 0 0 0 1.5px rgba(7, 14, 26, .9), 0 3px 8px rgba(0, 0, 0, .6);
         font-family: inherit;
-        font-size: 8px;
+        font-size: 8.5px;
         font-weight: 800;
         font-variant-numeric: tabular-nums;
         line-height: 1;
-        letter-spacing: .1px;
+        letter-spacing: .2px;
         white-space: nowrap;
         text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
         cursor: pointer;
+        z-index: 5;
+        transition: transform .12s ease, border-color .12s ease;
       }
+      .street-marker-icon:hover .session-tag,
+      .street-marker-icon:focus .session-tag {
+        transform: scale(1.12);
+        border-color: #ffffff;
+        box-shadow: 0 0 0 2px #000, 0 0 8px rgba(250, 204, 21, .85);
+        z-index: 20;
+      }
+      #map.zoom-overview .session-tag { display: none; }
+      #map.zoom-overview .street-marker-icon:hover .session-tag,
+      #map.zoom-overview .street-marker-icon:focus .session-tag { display: inline-flex; }
       .leaflet-marker-pane .street-marker-icon.has-session { z-index: 650 !important; }
       .street-marker.active { animation: active-glow 1.6s ease-out infinite; }
       .leaflet-marker-pane .street-marker.passed { opacity: .4; }
@@ -738,8 +750,324 @@
       }
       .street-tooltip-shell { border: 1px solid #334155 !important; border-radius: 6px !important; background: rgba(8, 17, 30, .94) !important; color: #f8fafc !important; box-shadow: 0 2px 8px rgba(0,0,0,.35) !important; }
       .street-tooltip-shell::before { border-top-color: #334155 !important; }
-      .tooltip-street-name { display: block; }
-      .tooltip-countdown { display: block; margin-top: .14rem; color: #cbd5e1; font-size: .62rem; font-weight: 650; }
+      .tooltip-street-name { display: block; font-weight: 700; font-size: .78rem; }
+      .tooltip-countdown { display: block; margin-top: .14rem; color: #cbd5e1; font-size: .66rem; font-weight: 650; }
+
+      /* Floating Map Search Bar */
+      .map-search-bar {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        z-index: 1050;
+        width: 380px;
+        max-width: calc(100vw - 32px);
+        pointer-events: auto;
+      }
+      .search-input-shell {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        padding: .4rem .6rem .4rem .75rem;
+        border: 1px solid rgba(148, 163, 184, .24);
+        border-radius: 14px;
+        background: linear-gradient(155deg, rgba(14, 25, 42, .96), rgba(7, 14, 26, .95));
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .45), inset 0 1px 0 rgba(255, 255, 255, .06);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+      .search-icon {
+        display: inline-flex;
+        align-items: center;
+        color: #94a3b8;
+        flex: 0 0 auto;
+      }
+      #street-search-input {
+        flex: 1;
+        min-width: 0;
+        border: 0;
+        background: transparent;
+        color: #f8fafc;
+        font-family: inherit;
+        font-size: .8rem;
+        outline: none;
+      }
+      #street-search-input::placeholder {
+        color: #64748b;
+        font-size: .76rem;
+      }
+      .search-clear-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(148, 163, 184, .2);
+        color: #cbd5e1;
+        font-size: .65rem;
+        cursor: pointer;
+        flex: 0 0 auto;
+      }
+      .search-clear-btn:hover {
+        background: rgba(148, 163, 184, .35);
+        color: #ffffff;
+      }
+      .btn-my-location {
+        display: inline-flex;
+        align-items: center;
+        gap: .3rem;
+        padding: .3rem .55rem;
+        border: 1px solid rgba(56, 189, 248, .35);
+        border-radius: 9999px;
+        background: linear-gradient(135deg, rgba(14, 165, 233, .22), rgba(2, 132, 199, .1));
+        color: #7dd3fc;
+        font-family: inherit;
+        font-size: .68rem;
+        font-weight: 700;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: all .15s ease;
+        flex: 0 0 auto;
+      }
+      .btn-my-location:hover {
+        border-color: rgba(56, 189, 248, .65);
+        background: linear-gradient(135deg, rgba(14, 165, 233, .35), rgba(2, 132, 199, .22));
+        color: #bae6fd;
+        transform: translateY(-1px);
+      }
+      .btn-my-location.loading {
+        opacity: .7;
+        pointer-events: none;
+      }
+      .search-results-list {
+        margin-top: 6px;
+        max-height: 280px;
+        overflow-y: auto;
+        border: 1px solid rgba(148, 163, 184, .22);
+        border-radius: 14px;
+        background: linear-gradient(155deg, rgba(14, 25, 42, .98), rgba(7, 14, 26, .97));
+        box-shadow: 0 16px 36px rgba(0, 0, 0, .55);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        padding: .35rem;
+      }
+      .search-result-item {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        padding: .48rem .6rem;
+        border-radius: 9px;
+        cursor: pointer;
+        transition: background .12s ease;
+      }
+      .search-result-item:hover, .search-result-item:focus {
+        background: rgba(255, 255, 255, .08);
+        outline: none;
+      }
+      .search-result-name {
+        color: #f1f5f9;
+        font-size: .78rem;
+        font-weight: 700;
+      }
+      .search-result-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+        font-size: .68rem;
+      }
+      .search-result-area { color: #94a3b8; }
+      .search-result-badge {
+        font-size: .64rem;
+        font-weight: 750;
+        padding: 2px 7px;
+        border-radius: 9999px;
+      }
+      .search-result-badge.active {
+        background: rgba(239, 68, 68, .22);
+        color: #fca5a5;
+        border: 1px solid rgba(239, 68, 68, .45);
+      }
+      .search-result-badge.upcoming {
+        background: rgba(245, 158, 11, .22);
+        color: #fde68a;
+        border: 1px solid rgba(245, 158, 11, .45);
+      }
+      .search-result-badge.passed {
+        background: rgba(34, 197, 94, .22);
+        color: #86efac;
+        border: 1px solid rgba(34, 197, 94, .45);
+      }
+      .search-no-results {
+        padding: .7rem .8rem;
+        color: #94a3b8;
+        font-size: .74rem;
+        text-align: center;
+      }
+      .gps-status-toast {
+        margin-top: 6px;
+        padding: .5rem .75rem;
+        border-radius: 12px;
+        border: 1px solid rgba(56, 189, 248, .35);
+        background: rgba(8, 17, 30, .96);
+        color: #e0f2fe;
+        font-size: .72rem;
+        line-height: 1.45;
+        box-shadow: 0 10px 25px rgba(0,0,0,.5);
+      }
+
+      /* Time Scrubber / Simulator Slider */
+      .time-scrubber-box {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+        padding: .42rem .55rem;
+        margin-bottom: .25rem;
+        border: 1px solid rgba(148, 163, 184, .14);
+        border-radius: 12px;
+        background: rgba(15, 23, 42, .55);
+      }
+      .scrubber-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+      }
+      .scrubber-status-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: .35rem;
+      }
+      .scrubber-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: .15rem .45rem;
+        border-radius: 9999px;
+        font-size: .65rem;
+        font-weight: 750;
+        font-variant-numeric: tabular-nums;
+        border: 1px solid rgba(148, 163, 184, .25);
+        background: rgba(255, 255, 255, .06);
+        color: #e2e8f0;
+      }
+      .scrubber-badge.live {
+        border-color: rgba(239, 68, 68, .5);
+        background: rgba(239, 68, 68, .18);
+        color: #fca5a5;
+        animation: pulse-live 2s infinite ease-in-out;
+      }
+      @keyframes pulse-live {
+        0%, 100% { opacity: 1; }
+        50% { opacity: .7; }
+      }
+      .scrubber-badge.simulated {
+        border-color: rgba(245, 158, 11, .55);
+        background: rgba(245, 158, 11, .2);
+        color: #fef08a;
+      }
+      .scrubber-reset {
+        padding: .15rem .45rem;
+        border: 1px solid rgba(148, 163, 184, .3);
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, .1);
+        color: #cbd5e1;
+        font-family: inherit;
+        font-size: .62rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all .15s ease;
+      }
+      .scrubber-reset:hover {
+        background: rgba(255, 255, 255, .2);
+        color: #ffffff;
+      }
+      .scrubber-slider-container {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+      }
+      .scrubber-tick-start, .scrubber-tick-end {
+        font-size: .62rem;
+        font-weight: 750;
+        color: #94a3b8;
+        font-variant-numeric: tabular-nums;
+        flex: 0 0 auto;
+      }
+      #time-scrubber-range {
+        flex: 1;
+        height: 6px;
+        border-radius: 9999px;
+        background: linear-gradient(90deg, rgba(34, 197, 94, .45), rgba(245, 158, 11, .45), rgba(239, 68, 68, .55));
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+      }
+      #time-scrubber-range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background: #38bdf8;
+        border: 2px solid #ffffff;
+        box-shadow: 0 0 8px rgba(56, 189, 248, .85);
+        cursor: pointer;
+        transition: transform .1s ease;
+      }
+      #time-scrubber-range::-webkit-slider-thumb:hover {
+        transform: scale(1.25);
+      }
+      #time-scrubber-range::-moz-range-thumb {
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background: #38bdf8;
+        border: 2px solid #ffffff;
+        box-shadow: 0 0 8px rgba(56, 189, 248, .85);
+        cursor: pointer;
+      }
+
+      /* GPS User Marker & Pulse Animations */
+      .user-gps-marker-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .gps-pulse-ring {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: rgba(56, 189, 248, .45);
+        animation: gps-ring-pulse 2s infinite ease-out;
+      }
+      .gps-center-core {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #0284c7;
+        border: 2px solid #ffffff;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .6);
+      }
+      @keyframes gps-ring-pulse {
+        0% { transform: scale(.6); opacity: 1; }
+        100% { transform: scale(2.4); opacity: 0; }
+      }
+      @keyframes marker-pulse-target {
+        0% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(56, 189, 248, 0)); }
+        50% { transform: scale(1.6); filter: drop-shadow(0 0 16px rgba(56, 189, 248, 1)); }
+        100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(56, 189, 248, 0)); }
+      }
+      .marker-highlight-pulse {
+        animation: marker-pulse-target .9s ease-in-out 3 !important;
+        z-index: 1000 !important;
+      }
       @media (min-width: 621px) {
         .leaflet-tile { filter: grayscale(1) saturate(0) contrast(1.03) brightness(.9); }
         #map::after {
@@ -823,6 +1151,16 @@
           box-shadow: 0 0 7px rgba(52, 211, 153, .9);
         }
         .header-actions { display: none; }
+        .map-search-bar {
+          top: calc(env(safe-area-inset-top, 0px) + 70px);
+          left: 10px;
+          right: 10px;
+          width: auto;
+          max-width: none;
+        }
+        .btn-my-location span { display: none; }
+        .btn-my-location { padding: .35rem .5rem; }
+        .time-scrubber-box { padding: .35rem .45rem; gap: .2rem; }
         .map-legend {
           left: 10px;
           right: 10px;
@@ -1066,6 +1404,35 @@
     </aside>
 
     <main id="map" aria-label="Peta realtime jadwal pemadaman listrik">
+      <!-- Search & GPS Locator -->
+      <div class="map-search-bar" id="map-search-bar">
+        <div class="search-input-shell">
+          <span class="search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+          <input
+            type="search"
+            id="street-search-input"
+            placeholder="Cari jalan / lokasi padam..."
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Cari jalan atau lokasi pemadaman"
+          />
+          <button type="button" id="search-clear-btn" class="search-clear-btn" hidden title="Hapus pencarian">✕</button>
+          <button type="button" id="btn-my-location" class="btn-my-location" title="Deteksi lokasi saya saat ini (GPS)">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+            </svg>
+            <span>Lokasi Saya</span>
+          </button>
+        </div>
+        <div id="search-results-list" class="search-results-list" hidden role="listbox"></div>
+        <div id="gps-status-toast" class="gps-status-toast" hidden role="status" aria-live="polite"></div>
+      </div>
+
       <div id="empty-state" hidden>Belum ada jadwal pemadaman untuk hari ini.</div>
       <section id="map-progress-panel" hidden aria-live="polite">
         <div class="progress-heading">
@@ -1107,6 +1474,31 @@
             </a>
           </div>
         </div>
+
+        <!-- Time Scrubber / Simulation -->
+        <div class="time-scrubber-box" id="time-scrubber-box">
+          <div class="scrubber-top">
+            <span class="legend-label">Simulasi Waktu (Geser Jam)</span>
+            <div class="scrubber-status-pill">
+              <span id="scrubber-time-badge" class="scrubber-badge live">🔴 LIVE · Sekarang</span>
+              <button id="scrubber-reset-btn" type="button" class="scrubber-reset" hidden>Kembali ke Realtime</button>
+            </div>
+          </div>
+          <div class="scrubber-slider-container">
+            <span class="scrubber-tick-start" id="scrubber-min-label">08:00</span>
+            <input
+              type="range"
+              id="time-scrubber-range"
+              min="480"
+              max="1380"
+              step="15"
+              value="480"
+              aria-label="Geser waktu untuk melihat status pemadaman"
+            />
+            <span class="scrubber-tick-end" id="scrubber-max-label">23:00</span>
+          </div>
+        </div>
+
         <button class="legend-item" type="button" data-filter="all" aria-pressed="true">
           <i class="legend-icon legend-icon-all" aria-hidden="true"></i>
           <span>Semua <b id="all-count">0</b></span>
@@ -1124,10 +1516,10 @@
           <span>Menyala <b id="passed-count">0</b></span>
         </button>
         <div class="session-filter" id="session-filter" hidden>
-          <span class="legend-label">Sesi</span>
-          <div class="session-list" id="session-list" role="group" aria-label="Saring menurut sesi jadwal"></div>
+          <span class="legend-label">Sesi Jadwal</span>
+          <div class="session-list" id="session-list" role="group" aria-label="Saring menurut sesi jam jadwal"></div>
         </div>
-        <span class="legend-note">Bentuk dan warna berbeda: oktagon merah ✕ = sedang padam, segitiga kuning (jam) = akan padam, lingkaran hijau ✓ = sudah menyala. Angka Romawi di kanan segitiga kuning menunjukkan urutan jadwal. Filter sesi menyaring satu jadwal; bisa digabung dengan filter status. Klik legenda untuk menyaring titik. Garis area hanya perkiraan, bukan batas resmi PLN.</span>
+        <span class="legend-note">🔴 Oktagon merah = sedang padam. 🟡 Segitiga oranye + jam = waktu padam (contoh: 13.00). 🟢 Lingkaran hijau = sudah menyala. Geser bar simulasi waktu atau klik jam sesi untuk melihat wilayah terdampak.</span>
       </div>
     </main>
 
@@ -1229,6 +1621,35 @@ Ketentuan:
       let geoJsonLayer;
       let markerClusterGroup;
       let allPointMarkers = [];
+      let simulatedTime = null;
+
+      function getCurrentActiveTime() {
+        return simulatedTime !== null ? simulatedTime : Date.now();
+      }
+
+      function escapeHtml(str) {
+        if (typeof str !== "string") return "";
+        return str.replace(/[&<>"']/g, (m) => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;"
+        })[m]);
+      }
+
+      function haversineDistance(lat1, lon1, lat2, lon2) {
+        const R = 6371e3;
+        const toRad = (x) => (x * Math.PI) / 180;
+        const dLat = toRad(lat2 - lat1);
+        const dLon = toRad(lon2 - lon1);
+        const a =
+          Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+          Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+          Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return R * c;
+      }
 
       function createClusterGroup() {
         if (typeof L.markerClusterGroup !== "function") return null;
@@ -1263,7 +1684,7 @@ Ketentuan:
 
       function applyClusterFilter() {
         if (!markerClusterGroup) return;
-        const now = Date.now();
+        const now = getCurrentActiveTime();
         markerClusterGroup.clearLayers();
         const visibleMarkers = allPointMarkers.filter((m) => featureMatchesFilter(m.feature, now));
         markerClusterGroup.addLayers(visibleMarkers);
@@ -1321,16 +1742,14 @@ Ketentuan:
         return .2;
       }
 
-      function pointColor(properties, now = Date.now()) {
+      function pointColor(properties, now = getCurrentActiveTime()) {
         return markerColors[statusClass(getEventStatus(properties, now))];
       }
 
-      const ROMAN_SESSION_NUMBERS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
-
-      function sessionLabelForNumber(value) {
-        const index = Number(value);
-        if (!Number.isInteger(index) || index < 1) return "";
-        return ROMAN_SESSION_NUMBERS[index - 1] || String(index);
+      function sessionLabelForNumber(value, fallback = "") {
+        const ev = mapEvents.find((e) => Number(e.sessionNumber) === Number(value));
+        if (ev?.startTime) return formatWita(ev.startTime, false);
+        return String(fallback || value || "");
       }
 
       function markerSvg(status, color, sessionLabel = "") {
@@ -1381,7 +1800,7 @@ Ketentuan:
         return parts.join(" ");
       }
 
-      function countdownSummary(properties, now = Date.now()) {
+      function countdownSummary(properties, now = getCurrentActiveTime()) {
         const start = Date.parse(properties.startTime);
         const end = Date.parse(properties.endTime);
         const status = getEventStatus(properties, now);
@@ -1390,10 +1809,9 @@ Ketentuan:
         return "Sudah menyala kembali";
       }
 
-      function applyCountdownText(element) {
+      function applyCountdownText(element, now = getCurrentActiveTime()) {
         const start = Date.parse(element.dataset.startTime);
         const end = Date.parse(element.dataset.endTime);
-        const now = Date.now();
         if (now < start) {
           element.textContent = `⚡ Padam dalam ${formatDuration(start - now)}`;
         } else if (now <= end) {
@@ -1404,13 +1822,14 @@ Ketentuan:
       }
 
       function buildStreetTooltip(properties) {
+        const now = getCurrentActiveTime();
         const container = document.createElement("span");
         const name = document.createElement("span");
         name.className = "tooltip-street-name";
         name.textContent = properties.location || "Jalan terdampak";
         const countdown = document.createElement("span");
         countdown.className = "tooltip-countdown";
-        countdown.textContent = countdownSummary(properties);
+        countdown.textContent = countdownSummary(properties, now);
         container.append(name, countdown);
         return container;
       }
@@ -1644,13 +2063,13 @@ Ketentuan:
         };
         addChip("all", "Semua", "", "Tampilkan seluruh sesi jadwal");
         for (const event of sessions) {
-          const label = sessionLabelForNumber(event.sessionNumber);
-          const time = formatWita(event.startTime, false);
+          const startStr = formatWita(event.startTime, false);
+          const endStr = formatWita(event.endTime, false);
           addChip(
             String(event.sessionNumber),
-            label,
-            time,
-            `Sesi ${label} mulai ${time} WITA, ${sessionPointCount(event)} titik`
+            startStr,
+            `- ${endStr}`,
+            `Sesi pukul ${startStr} - ${endStr} WITA, ${sessionPointCount(event)} titik`
           );
         }
       }
@@ -1662,12 +2081,20 @@ Ketentuan:
           button.setAttribute("aria-pressed", String(button.dataset.session === next));
         }
         map.getContainer().dataset.sessionFilter = next;
-        const now = Date.now();
+        const now = getCurrentActiveTime();
         const allPoints = buildStreetPointFeatures(now);
         updateEmptyState(allPoints, allPoints.filter((feature) => featureMatchesFilter(feature, now)));
         map.closePopup();
         if (typeof applyClusterFilter === "function") applyClusterFilter();
         if (!geoJsonLayer && mapEvents.length) renderMapLayers();
+
+        if (next !== "all") {
+          const sessionMarkers = allPointMarkers.filter((m) => String(m.feature?.properties?.sessionNumber) === next);
+          if (sessionMarkers.length) {
+            const group = L.featureGroup(sessionMarkers);
+            map.fitBounds(group.getBounds().pad(0.12), { maxZoom: 15, animate: true });
+          }
+        }
       }
 
       const filterButtons = [...document.querySelectorAll("[data-filter]")];
@@ -1685,7 +2112,7 @@ Ketentuan:
           button.setAttribute("aria-pressed", String(button.dataset.filter === next));
         }
         map.getContainer().dataset.pointFilter = next;
-        const now = Date.now();
+        const now = getCurrentActiveTime();
         const allPoints = buildStreetPointFeatures(now);
         updateEmptyState(allPoints, allPoints.filter((feature) => featureMatchesFilter(feature, now)));
         map.closePopup();
@@ -1928,10 +2355,11 @@ Ketentuan:
         } else if (!visiblePoints.length) {
           const statusText = filterLabel(pointFilter);
           if (sessionFilter !== "all") {
-            const sessionText = sessionLabelForNumber(Number(sessionFilter)) || sessionFilter;
+            const ev = mapEvents.find((e) => String(e.sessionNumber) === sessionFilter);
+            const sessionText = ev ? `${formatWita(ev.startTime, false)} - ${formatWita(ev.endTime, false)}` : `Sesi ${sessionFilter}`;
             emptyState.textContent = statusText
-              ? `Tidak ada titik ${statusText} pada sesi ${sessionText}. Pilih "Semua sesi" atau "Semua".`
-              : `Tidak ada titik pada sesi ${sessionText}. Pilih "Semua sesi" untuk melihat seluruh sesi.`;
+              ? `Tidak ada titik ${statusText} pada jadwal ${sessionText}. Pilih "Semua" untuk melihat jadwal lainnya.`
+              : `Tidak ada titik pada jadwal ${sessionText}.`;
           } else {
             emptyState.textContent = `Tidak ada titik ${statusText} saat ini. Pilih "Semua" untuk melihat seluruh titik.`;
           }
@@ -1941,8 +2369,8 @@ Ketentuan:
         }
       }
 
-      function renderMapLayers() {
-        const now = Date.now();
+      function renderMapLayers(customNow = null) {
+        const now = customNow !== null ? customNow : getCurrentActiveTime();
         for (const event of mapEvents) event.status = getEventStatus(event, now);
         const allPoints = buildStreetPointFeatures(now);
         const shapes = buildAreaShapes(allPoints);
@@ -1979,7 +2407,7 @@ Ketentuan:
             const properties = feature.properties || {};
             const status = getEventStatus(properties, now);
             const color = pointColor(properties, now);
-            const sessionLabel = status === "UPCOMING" ? sessionLabelForNumber(properties.sessionNumber) : "";
+            const sessionLabel = status === "UPCOMING" && properties.startTime ? formatWita(properties.startTime, false) : "";
             const sessionClass = Number.isInteger(properties.sessionNumber)
               ? ` session-${properties.sessionNumber}`
               : "";
@@ -2007,7 +2435,7 @@ Ketentuan:
           const properties = feature.properties || {};
           const status = getEventStatus(properties, now);
           const color = pointColor(properties, now);
-          const sessionLabel = status === "UPCOMING" ? sessionLabelForNumber(properties.sessionNumber) : "";
+          const sessionLabel = status === "UPCOMING" && properties.startTime ? formatWita(properties.startTime, false) : "";
           const sessionClass = Number.isInteger(properties.sessionNumber)
             ? ` session-${properties.sessionNumber}`
             : "";
@@ -2050,9 +2478,11 @@ Ketentuan:
         updateEmptyState(allPoints, visiblePoints);
         updateStatusCounts(mapEvents);
         updateSessionFilter(mapEvents);
+        setupTimeScrubber(mapEvents);
       }
 
       function refreshDynamic() {
+        if (simulatedTime !== null) return;
         const now = Date.now();
         let statusChanged = false;
         for (const event of mapEvents) {
@@ -2068,6 +2498,372 @@ Ketentuan:
         }
         updateStatusCounts(mapEvents);
       }
+
+      function getCurrentWitaMinutes() {
+        const d = new Date();
+        const utcHours = d.getUTCHours();
+        const utcMin = d.getUTCMinutes();
+        return ((utcHours + 8) % 24) * 60 + utcMin;
+      }
+
+      function getScheduleTimeBounds(events) {
+        if (!events || !events.length) {
+          return { minMinutes: 480, maxMinutes: 1380, baseDateStr: new Date().toISOString().slice(0, 10) };
+        }
+        let minMs = Infinity;
+        let maxMs = -Infinity;
+        let sampleDate = null;
+        for (const ev of events) {
+          const s = Date.parse(ev.startTime);
+          const e = Date.parse(ev.endTime);
+          if (!isNaN(s) && s < minMs) { minMs = s; sampleDate = ev.startTime; }
+          if (!isNaN(e) && e > maxMs) maxMs = e;
+        }
+        if (!isFinite(minMs) || !isFinite(maxMs)) {
+          return { minMinutes: 480, maxMinutes: 1380, baseDateStr: new Date().toISOString().slice(0, 10) };
+        }
+        const getMinutesWita = (ms) => {
+          const d = new Date(ms);
+          const utcHours = d.getUTCHours();
+          const utcMin = d.getUTCMinutes();
+          return ((utcHours + 8) % 24) * 60 + utcMin;
+        };
+        const minMin = Math.max(0, Math.floor(getMinutesWita(minMs) / 60 - 1) * 60);
+        const maxMin = Math.min(1440, Math.ceil(getMinutesWita(maxMs) / 60 + 1) * 60);
+        const baseDateStr = sampleDate ? sampleDate.slice(0, 10) : new Date().toISOString().slice(0, 10);
+        return {
+          minMinutes: Math.min(minMin, 480),
+          maxMinutes: Math.max(maxMin, 1380),
+          baseDateStr
+        };
+      }
+
+      function minutesToTimestampWita(minutes, baseDateStr) {
+        const hours = Math.floor(minutes / 60);
+        const mins = minutes % 60;
+        const hStr = String(hours).padStart(2, "0");
+        const mStr = String(mins).padStart(2, "0");
+        return Date.parse(`${baseDateStr}T${hStr}:${mStr}:00+08:00`);
+      }
+
+      function formatMinutesDisplay(minutes) {
+        const h = String(Math.floor(minutes / 60) % 24).padStart(2, "0");
+        const m = String(minutes % 60).padStart(2, "0");
+        return `${h}.${m}`;
+      }
+
+      let scrubberInitialized = false;
+      function setupTimeScrubber(events) {
+        const slider = document.getElementById("time-scrubber-range");
+        const badge = document.getElementById("scrubber-time-badge");
+        const resetBtn = document.getElementById("scrubber-reset-btn");
+        const minLabel = document.getElementById("scrubber-min-label");
+        const maxLabel = document.getElementById("scrubber-max-label");
+
+        if (!slider) return;
+
+        const bounds = getScheduleTimeBounds(events);
+        slider.min = bounds.minMinutes;
+        slider.max = bounds.maxMinutes;
+        minLabel.textContent = formatMinutesDisplay(bounds.minMinutes);
+        maxLabel.textContent = formatMinutesDisplay(bounds.maxMinutes);
+
+        if (simulatedTime === null) {
+          const currentWitaMin = getCurrentWitaMinutes();
+          const clamped = Math.max(bounds.minMinutes, Math.min(bounds.maxMinutes, currentWitaMin));
+          slider.value = clamped;
+          badge.className = "scrubber-badge live";
+          badge.textContent = `🔴 LIVE · Sekarang (${formatMinutesDisplay(currentWitaMin)})`;
+          resetBtn.hidden = true;
+        }
+
+        if (!scrubberInitialized) {
+          scrubberInitialized = true;
+
+          slider.addEventListener("input", () => {
+            const currentBounds = getScheduleTimeBounds(mapEvents);
+            const minutes = Number(slider.value);
+            simulatedTime = minutesToTimestampWita(minutes, currentBounds.baseDateStr);
+
+            badge.className = "scrubber-badge simulated";
+            badge.textContent = `🕒 Jam ${formatMinutesDisplay(minutes)} WITA`;
+            resetBtn.hidden = false;
+
+            renderMapLayers();
+          });
+
+          resetBtn.addEventListener("click", () => {
+            simulatedTime = null;
+            const currentBounds = getScheduleTimeBounds(mapEvents);
+            const currentWitaMin = getCurrentWitaMinutes();
+            const clamped = Math.max(currentBounds.minMinutes, Math.min(currentBounds.maxMinutes, currentWitaMin));
+            slider.value = clamped;
+
+            badge.className = "scrubber-badge live";
+            badge.textContent = `🔴 LIVE · Sekarang (${formatMinutesDisplay(currentWitaMin)})`;
+            resetBtn.hidden = true;
+
+            renderMapLayers();
+          });
+        }
+      }
+
+      function pulseMarkerHighlight(marker) {
+        const el = marker.getElement();
+        if (!el) return;
+        el.classList.add("marker-highlight-pulse");
+        setTimeout(() => el.classList.remove("marker-highlight-pulse"), 3000);
+      }
+
+      function setupSearchBar() {
+        const input = document.getElementById("street-search-input");
+        const clearBtn = document.getElementById("search-clear-btn");
+        const resultsContainer = document.getElementById("search-results-list");
+
+        if (!input || !resultsContainer) return;
+
+        let debounceTimer = 0;
+
+        const doSearch = (query) => {
+          const term = query.trim().toLowerCase();
+          clearBtn.hidden = !term;
+
+          if (!term || term.length < 2) {
+            resultsContainer.hidden = true;
+            resultsContainer.innerHTML = "";
+            return;
+          }
+
+          const now = getCurrentActiveTime();
+          const matches = [];
+          const seen = new Set();
+
+          for (const marker of allPointMarkers) {
+            const props = marker.feature?.properties || {};
+            const loc = (props.location || "").toLowerCase();
+            const disp = (props.displayName || "").toLowerCase();
+            const ulp = (props.ulpName || "").toLowerCase();
+
+            if (loc.includes(term) || disp.includes(term) || ulp.includes(term)) {
+              const key = `${props.location}::${props.ulpName}`;
+              if (!seen.has(key)) {
+                seen.add(key);
+                matches.push(marker);
+                if (matches.length >= 8) break;
+              }
+            }
+          }
+
+          if (!matches.length) {
+            resultsContainer.innerHTML = `<div class="search-no-results">Tidak ada lokasi yang cocok dengan "<b>${escapeHtml(query)}</b>"</div>`;
+            resultsContainer.hidden = false;
+            return;
+          }
+
+          resultsContainer.innerHTML = "";
+          for (const marker of matches) {
+            const props = marker.feature.properties;
+            const currentStatus = getEventStatus(props, now);
+            const startStr = formatWita(props.startTime, false);
+            const endStr = formatWita(props.endTime, false);
+
+            let statusText = "";
+            const bClass = statusClass(currentStatus);
+            if (currentStatus === "ACTIVE") {
+              statusText = `🔴 Padam (s.d ${endStr})`;
+            } else if (currentStatus === "UPCOMING") {
+              statusText = `🟡 Padam ${startStr} - ${endStr}`;
+            } else {
+              statusText = `🟢 Menyala (${endStr})`;
+            }
+
+            const item = document.createElement("div");
+            item.className = "search-result-item";
+            item.tabIndex = 0;
+            item.setAttribute("role", "option");
+            item.innerHTML = `
+              <div class="search-result-name">${escapeHtml(props.location || "Lokasi")}</div>
+              <div class="search-result-meta">
+                <span class="search-result-area">${escapeHtml(props.ulpName || "PLN")}</span>
+                <span class="search-result-badge ${bClass}">${statusText}</span>
+              </div>
+            `;
+
+            const selectItem = () => {
+              resultsContainer.hidden = true;
+              if (pointFilter !== "all") setPointFilter("all");
+              if (sessionFilter !== "all") setSessionFilter("all");
+
+              const [lon, lat] = marker.feature.geometry.coordinates;
+              if (markerClusterGroup && typeof markerClusterGroup.zoomToShowLayer === "function") {
+                markerClusterGroup.zoomToShowLayer(marker, () => {
+                  marker.openPopup();
+                  pulseMarkerHighlight(marker);
+                });
+              } else {
+                map.flyTo([lat, lon], 16, { duration: 1.1 });
+                setTimeout(() => {
+                  marker.openPopup();
+                  pulseMarkerHighlight(marker);
+                }, 1200);
+              }
+            };
+
+            item.addEventListener("click", selectItem);
+            item.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                selectItem();
+              }
+            });
+            resultsContainer.appendChild(item);
+          }
+          resultsContainer.hidden = false;
+        };
+
+        input.addEventListener("input", () => {
+          clearTimeout(debounceTimer);
+          debounceTimer = setTimeout(() => doSearch(input.value), 180);
+        });
+
+        clearBtn.addEventListener("click", () => {
+          input.value = "";
+          clearBtn.hidden = true;
+          resultsContainer.hidden = true;
+          resultsContainer.innerHTML = "";
+          input.focus();
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("#map-search-bar")) {
+            resultsContainer.hidden = true;
+          }
+        });
+      }
+
+      let userGpsMarker = null;
+      let userGpsCircle = null;
+
+      function showGpsToast(html, duration = 6000) {
+        const toast = document.getElementById("gps-status-toast");
+        if (!toast) return;
+        toast.innerHTML = html;
+        toast.hidden = false;
+        if (toast._timer) clearTimeout(toast._timer);
+        toast._timer = setTimeout(() => {
+          toast.hidden = true;
+        }, duration);
+      }
+
+      function setupMyLocation() {
+        const btn = document.getElementById("btn-my-location");
+        if (!btn) return;
+
+        btn.addEventListener("click", () => {
+          if (!navigator.geolocation) {
+            showGpsToast("⚠️ Browser Anda tidak mendukung fitur lokasi (Geolocation).", 5000);
+            return;
+          }
+
+          btn.classList.add("loading");
+          const span = btn.querySelector("span");
+          if (span) span.textContent = "Mencari...";
+          showGpsToast("📡 Sedang mendeteksi koordinat GPS Anda...", 3000);
+
+          navigator.geolocation.getCurrentPosition(
+            (pos) => {
+              btn.classList.remove("loading");
+              if (span) span.textContent = "Lokasi Saya";
+
+              const userLat = pos.coords.latitude;
+              const userLon = pos.coords.longitude;
+              const accuracy = pos.coords.accuracy || 40;
+
+              if (userGpsMarker) map.removeLayer(userGpsMarker);
+              if (userGpsCircle) map.removeLayer(userGpsCircle);
+
+              const userGpsIcon = L.divIcon({
+                className: "user-gps-marker-wrap",
+                html: `<div class="gps-pulse-ring"></div><div class="gps-center-core"></div>`,
+                iconSize: [28, 28],
+                iconAnchor: [14, 14]
+              });
+
+              userGpsMarker = L.marker([userLat, userLon], { icon: userGpsIcon, zIndexOffset: 1200 }).addTo(map);
+              userGpsMarker.bindPopup(`
+                <div style="font-family: inherit; font-size: 13px; line-height: 1.4;">
+                  <strong style="color: #38bdf8; display: block; margin-bottom: 4px;">📍 Lokasi Anda Saat Ini</strong>
+                  <span style="color: #94a3b8; font-size: 11px;">Akurasi GPS: ±${Math.round(accuracy)} meter</span>
+                </div>
+              `);
+
+              userGpsCircle = L.circle([userLat, userLon], {
+                radius: Math.max(accuracy, 40),
+                color: "#38bdf8",
+                weight: 1.5,
+                opacity: 0.7,
+                fillColor: "#38bdf8",
+                fillOpacity: 0.12
+              }).addTo(map);
+
+              let nearestMarker = null;
+              let minDistance = Infinity;
+
+              for (const m of allPointMarkers) {
+                const [lon, lat] = m.feature.geometry.coordinates;
+                const dist = haversineDistance(userLat, userLon, lat, lon);
+                if (dist < minDistance) {
+                  minDistance = dist;
+                  nearestMarker = m;
+                }
+              }
+
+              const now = getCurrentActiveTime();
+              if (nearestMarker) {
+                const props = nearestMarker.feature.properties;
+                const currentStatus = getEventStatus(props, now);
+                const locName = props.location || "titik terdekat";
+                const distStr = minDistance < 1000 ? `${Math.round(minDistance)} meter` : `${(minDistance / 1000).toFixed(1)} km`;
+
+                if (minDistance <= 500) {
+                  if (currentStatus === "ACTIVE") {
+                    showGpsToast(`⚠️ <b>Perhatian:</b> Lokasi Anda berada di dekat <b>${escapeHtml(locName)}</b> (~${distStr}) yang <b>SEDANG PADAM</b> hingga ${formatWita(props.endTime, false)} WITA!`, 9000);
+                  } else if (currentStatus === "UPCOMING") {
+                    showGpsToast(`⏳ <b>Pemberitahuan:</b> Lokasi Anda berada di dekat <b>${escapeHtml(locName)}</b> (~${distStr}) yang <b>AKAN PADAM</b> pukul ${formatWita(props.startTime, false)} - ${formatWita(props.endTime, false)} WITA.`, 9000);
+                  } else {
+                    showGpsToast(`✅ <b>Info:</b> Area terdekat Anda di <b>${escapeHtml(locName)}</b> (~${distStr}) sudah <b>MENYALA</b> kembali.`, 7000);
+                  }
+                } else {
+                  showGpsToast(`✅ <b>Lokasi terdeteksi:</b> Titik pemadaman terdekat berjarak ~${distStr} (<b>${escapeHtml(locName)}</b>).`, 7000);
+                }
+              } else {
+                showGpsToast("✅ Lokasi Anda terdeteksi. Belum ada titik pemadaman terdekat.", 5000);
+              }
+
+              map.flyTo([userLat, userLon], 15, { duration: 1.2 });
+            },
+            (err) => {
+              btn.classList.remove("loading");
+              if (span) span.textContent = "Lokasi Saya";
+              let msg = "Gagal mengakses GPS.";
+              if (err.code === 1) msg = "Izin lokasi tidak diberikan. Izinkan akses GPS pada peramban Anda.";
+              else if (err.code === 2) msg = "Posisi GPS tidak dapat ditentukan.";
+              else if (err.code === 3) msg = "Waktu pencarian GPS habis.";
+              showGpsToast(`⚠️ ${msg}`, 6000);
+            },
+            { enableHighAccuracy: true, timeout: 10000, maximumAge: 30000 }
+          );
+        });
+      }
+
+      function syncMapZoomClasses() {
+        const z = map.getZoom();
+        const container = map.getContainer();
+        container.classList.toggle("zoom-overview", z < 14);
+        container.classList.toggle("zoom-detail", z >= 14);
+      }
+      map.on("zoomend", syncMapZoomClasses);
+      syncMapZoomClasses();
 
       async function fetchMapLayers() {
         try {
@@ -3164,6 +3960,8 @@ Ketentuan:
         await fetchMapLayers();
       }
 
+      setupSearchBar();
+      setupMyLocation();
       updateClock();
       initialLoadSchedule();
       startServerStatusPolling(true);
