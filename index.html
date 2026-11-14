@@ -782,6 +782,17 @@
       #map[data-point-filter="upcoming"] .area-shape:not(.status-upcoming),
       #map[data-point-filter="passed"] .street-marker-icon:not(.status-passed),
       #map[data-point-filter="passed"] .area-shape:not(.status-passed) { display: none; }
+      .area-shape {
+        transition: stroke-width .2s ease, stroke-opacity .2s ease, fill-opacity .2s ease;
+        cursor: pointer;
+        pointer-events: auto;
+      }
+      .area-shape:hover, .area-shape:focus {
+        stroke-width: 2.8px !important;
+        stroke-opacity: 1 !important;
+        fill-opacity: .28 !important;
+        outline: none;
+      }
       .street-marker {
         display: block;
         width: 24px;
@@ -2085,12 +2096,13 @@ Ketentuan:
         return {
           className: `area-shape status-${statusClass(status)}${sessionClass}`,
           color,
-          weight: status === "ACTIVE" ? 3 : 2,
-          opacity: status === "PASSED" ? .55 : .86,
-          dashArray: "7 7",
+          weight: status === "ACTIVE" ? 1.8 : 1.5,
+          opacity: status === "PASSED" ? .4 : .8,
+          dashArray: "4 5",
           lineCap: "round",
+          lineJoin: "round",
           fillColor: color,
-          fillOpacity: geometryType === "Polygon" ? (status === "ACTIVE" ? .12 : .07) : 0
+          fillOpacity: status === "ACTIVE" ? .16 : (status === "UPCOMING" ? .12 : .06)
         };
       }
 
@@ -2198,7 +2210,7 @@ Ketentuan:
         statusLine.dataset.endTime = properties.endTime;
         content.append(statusLine);
         if (properties.isAreaShape) {
-          content.append(makeTextElement("span", "popup-note", "Bentuk garis menghubungkan titik lokasi terdekat; bukan batas pemadaman resmi."));
+          content.append(makeTextElement("span", "popup-note", "Perkiraan zona dampak pemadaman (~280m melingkupi jalan & pemukiman terdaftar). Bukan batas resmi PLN."));
         }
         return content;
       }
@@ -2221,7 +2233,7 @@ Ketentuan:
           while (queue.length) {
             const point = queue.pop();
             const nearby = [...remaining].filter((index) =>
-              distanceKm(point.geometry.coordinates, points[index].geometry.coordinates) <= 1.5
+              distanceKm(point.geometry.coordinates, points[index].geometry.coordinates) <= 0.75
             );
             for (const index of nearby) {
               remaining.delete(index);
@@ -2260,6 +2272,99 @@ Ketentuan:
         return lower.concat(upper);
       }
 
+      function buildBufferedPolygon(points, bufferMeters = 280) {
+        if (!points || points.length === 0) return null;
+        const lat0 = points[0][1];
+        const lng0 = points[0][0];
+        const cosLat = Math.cos((lat0 * Math.PI) / 180);
+        const mPerDegLat = 111320;
+        const mPerDegLng = 111320 * cosLat;
+
+        function toMeters(p) {
+          return [(p[0] - lng0) * mPerDegLng, (p[1] - lat0) * mPerDegLat];
+        }
+        function toCoords(m) {
+          return [lng0 + m[0] / mPerDegLng, lat0 + m[1] / mPerDegLat];
+        }
+
+        const cleanPts = [];
+        for (const p of points) {
+          if (!cleanPts.length || Math.hypot(p[0] - cleanPts[cleanPts.length - 1][0], p[1] - cleanPts[cleanPts.length - 1][1]) > 0.00005) {
+            cleanPts.push(p);
+          }
+        }
+
+        if (cleanPts.length <= 1) {
+          const center = toMeters(cleanPts[0] || points[0]);
+          const ring = [];
+          const steps = 24;
+          for (let i = 0; i <= steps; i++) {
+            const a = (i * 2 * Math.PI) / steps;
+            ring.push(toCoords([center[0] + bufferMeters * Math.cos(a), center[1] + bufferMeters * Math.sin(a)]));
+          }
+          return [ring];
+        }
+
+        if (cleanPts.length === 2) {
+          const p0 = toMeters(cleanPts[0]);
+          const p1 = toMeters(cleanPts[1]);
+          const dx = p1[0] - p0[0];
+          const dy = p1[1] - p0[1];
+          const len = Math.hypot(dx, dy);
+          if (len < 1) return buildBufferedPolygon([cleanPts[0]], bufferMeters);
+          const nx = dy / len;
+          const ny = -dx / len;
+          const aNorm = Math.atan2(ny, nx);
+          const ring = [];
+          const steps = 14;
+          for (let i = 0; i <= steps; i++) {
+            const a = aNorm + (i * Math.PI) / steps;
+            ring.push(toCoords([p1[0] + bufferMeters * Math.cos(a), p1[1] + bufferMeters * Math.sin(a)]));
+          }
+          for (let i = 0; i <= steps; i++) {
+            const a = aNorm + Math.PI + (i * Math.PI) / steps;
+            ring.push(toCoords([p0[0] + bufferMeters * Math.cos(a), p0[1] + bufferMeters * Math.sin(a)]));
+          }
+          ring.push(ring[0]);
+          return [ring];
+        }
+
+        const pts = cleanPts.map(toMeters);
+        const n = pts.length;
+        let area = 0;
+        for (let i = 0; i < n; i++) {
+          const j = (i + 1) % n;
+          area += pts[i][0] * pts[j][1] - pts[j][0] * pts[i][1];
+        }
+        if (area < 0) pts.reverse();
+
+        const normals = [];
+        for (let i = 0; i < n; i++) {
+          const j = (i + 1) % n;
+          const dx = pts[j][0] - pts[i][0];
+          const dy = pts[j][1] - pts[i][1];
+          const len = Math.max(0.1, Math.hypot(dx, dy));
+          normals.push([dy / len, -dx / len]);
+        }
+
+        const ring = [];
+        for (let i = 0; i < n; i++) {
+          const prevNorm = normals[(i - 1 + n) % n];
+          const nextNorm = normals[i];
+          let a1 = Math.atan2(prevNorm[1], prevNorm[0]);
+          let a2 = Math.atan2(nextNorm[1], nextNorm[0]);
+          while (a2 < a1) a2 += 2 * Math.PI;
+          const arcSpan = a2 - a1;
+          const steps = Math.max(2, Math.ceil(arcSpan / (Math.PI / 6)));
+          for (let s = 0; s <= steps; s++) {
+            const a = a1 + (s * arcSpan) / steps;
+            ring.push(toCoords([pts[i][0] + bufferMeters * Math.cos(a), pts[i][1] + bufferMeters * Math.sin(a)]));
+          }
+        }
+        ring.push(ring[0]);
+        return [ring];
+      }
+
       function buildAreaShapes(streetPoints) {
         const groups = new Map();
         for (const feature of streetPoints) {
@@ -2272,17 +2377,13 @@ Ketentuan:
         const shapes = [];
         for (const points of groups.values()) {
           for (const cluster of clusterNearbyPoints(points)) {
-            if (cluster.length < 2) continue;
             const hull = convexHull(cluster);
-            let geometry;
-            if (hull.length >= 3) {
-              geometry = { type: "Polygon", coordinates: [[...hull, hull[0]]] };
-            } else {
-              geometry = { type: "LineString", coordinates: hull };
-            }
+            const coordinates = buildBufferedPolygon(hull, 280);
+            if (!coordinates) continue;
+            const geometry = { type: "Polygon", coordinates };
             const properties = {
               ...cluster[0].properties,
-              location: `Sebaran perkiraan · ${cluster[0].properties.ulpName || "ULP"}`,
+              location: `Zona perkiraan terdampak (~280m) · ${cluster[0].properties.ulpName || "ULP"}`,
               isStreetPoint: false,
               isAreaShape: true
             };
