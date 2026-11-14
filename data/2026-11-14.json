@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "date": "2026-11-14",
-  "generated_at": "2026-11-14T06:28:42.217Z",
+  "generated_at": "2026-11-14T06:38:48.850Z",
   "events": [
     {
-      "eventId": "eb4c9ccc-c4d5-4e44-ad04-aa0cac4700e5",
+      "eventId": "3043ff0e-cf00-49fa-8e2a-c5ec332aca14",
       "title": "Info Peningkatan Keandalan Kelistrikan",
       "startTime": "2026-11-14T09:00:00+08:00",
       "endTime": "2026-11-14T13:30:00+08:00",
@@ -55,94 +55,82 @@
           ],
           "points": [
             {
-              "location": "Pantoloan",
-              "longitude": 119.924588,
-              "latitude": -0.694517,
-              "displayName": "Pantoloan"
-            },
-            {
-              "location": "Jalan Buteta",
-              "longitude": 119.841527,
-              "latitude": -0.677838,
-              "displayName": "Jalan Buteta"
-            },
-            {
-              "location": "Labuan",
-              "longitude": 119.84993,
-              "latitude": -0.698487,
-              "displayName": "Labuan"
-            },
-            {
-              "location": "Labuan Kungguma",
-              "longitude": 119.901302,
-              "latitude": -0.687913,
-              "displayName": "Labuan Kungguma"
-            },
-            {
-              "location": "Labuan Lelea",
-              "longitude": 119.868415,
-              "latitude": -0.708893,
-              "displayName": "Labuan Lelea"
-            },
-            {
-              "location": "Wombo Mpanau",
-              "longitude": 119.950068,
-              "latitude": -0.698738,
-              "displayName": "Wombo Panau"
-            },
-            {
-              "location": "Kayumaboko",
-              "longitude": 119.8575,
-              "latitude": -0.6899,
-              "displayName": "Kayumaboko"
-            },
-            {
-              "location": "Wani I",
-              "longitude": 119.872214,
-              "latitude": -0.728183,
-              "displayName": "Wani I"
-            },
-            {
-              "location": "Wani II",
-              "longitude": 119.865481,
-              "latitude": -0.723943,
-              "displayName": "Wani Ii"
-            },
-            {
-              "location": "Lero",
-              "longitude": 119.920058,
-              "latitude": -0.648669,
-              "displayName": "Lero"
-            },
-            {
-              "location": "Dalaka",
-              "longitude": 119.839297,
-              "latitude": -0.665002,
-              "displayName": "Dalaka"
-            },
-            {
-              "location": "Labuan Panimba",
-              "longitude": 119.86499,
-              "latitude": -0.694493,
-              "displayName": "Labuan Panimba"
-            },
-            {
-              "location": "Labuan Toposo",
-              "longitude": 119.847599,
-              "latitude": -0.638973,
-              "displayName": "Labuan Toposo"
-            },
-            {
               "location": "Jalan Sultan Alaudin",
               "latitude": -0.921367,
               "longitude": 119.866158,
               "displayName": "Jalan Alauddin Lorong 1"
             },
             {
+              "location": "Pantoloan",
+              "latitude": -0.694517,
+              "longitude": 119.924588,
+              "displayName": "Pantoloan"
+            },
+            {
               "location": "PT Pelabuhan Indonesia Pantoloan",
               "latitude": -0.7061,
               "longitude": 119.8556,
               "displayName": "PT Pelabuhan Indonesia Pantoloan"
+            },
+            {
+              "location": "Jalan Buteta",
+              "latitude": -0.677838,
+              "longitude": 119.841527,
+              "displayName": "Jalan Buteta"
+            },
+            {
+              "location": "Labuan",
+              "latitude": -0.698487,
+              "longitude": 119.84993,
+              "displayName": "Labuan"
+            },
+            {
+              "location": "Labuan Kungguma",
+              "latitude": -0.687913,
+              "longitude": 119.901302,
+              "displayName": "Labuan Kungguma"
+            },
+            {
+              "location": "Labuan Lelea",
+              "latitude": -0.708893,
+              "longitude": 119.868415,
+              "displayName": "Labuan Lelea"
+            },
+            {
+              "location": "Wombo Mpanau",
+              "latitude": -0.698738,
+              "longitude": 119.950068,
+              "displayName": "Wombo Mpanau"
+            },
+            {
+              "location": "Kayumaboko",
+              "latitude": -0.6899,
+              "longitude": 119.8575,
+              "displayName": "Kayumaboko"
+            },
+            {
+              "location": "Wani I",
+              "latitude": -0.728183,
+              "longitude": 119.872214,
+              "displayName": "Wani I"
+            },
+            {
+              "location": "Wani II",
+              "latitude": -0.723943,
+              "longitude": 119.865481,
+              "displayName": "Wani II"
+            },
+            {
+              "location": "Lero",
+              "latitude": -0.648669,
+              "longitude": 119.920058,
+              "displayName": "Lero"
+            },
+            {
+              "location": "Dalaka",
+              "latitude": -0.665002,
+              "longitude": 119.839297,
+              "displayName": "Dalaka"
             },
             {
               "location": "PT Semen Tonasa",
@@ -155,6 +143,18 @@
               "latitude": -0.6628,
               "longitude": 119.8698,
               "displayName": "SPN Labuan"
+            },
+            {
+              "location": "Labuan Panimba",
+              "latitude": -0.694493,
+              "longitude": 119.86499,
+              "displayName": "Labuan Panimba"
+            },
+            {
+              "location": "Labuan Toposo",
+              "latitude": -0.638973,
+              "longitude": 119.847599,
+              "displayName": "Labuan Toposo"
             }
           ]
         },
@@ -196,22 +196,22 @@
           ],
           "points": [
             {
-              "location": "Rano",
-              "longitude": 119.9062,
-              "latitude": -0.7734,
-              "displayName": "Rano"
-            },
-            {
-              "location": "Kamonji",
-              "longitude": 119.8129,
-              "latitude": -0.6526,
-              "displayName": "Kamonji"
-            },
-            {
               "location": "Malino",
               "latitude": 0.528614,
               "longitude": 120.6902581,
               "displayName": "Malino"
+            },
+            {
+              "location": "Rano",
+              "latitude": -0.7734,
+              "longitude": 119.9062,
+              "displayName": "Rano"
+            },
+            {
+              "location": "Kamonji",
+              "latitude": -0.6526,
+              "longitude": 119.8129,
+              "displayName": "Kamonji"
             }
           ]
         },
@@ -264,153 +264,135 @@
           "points": [
             {
               "location": "Toini",
-              "longitude": 120.6382044,
               "latitude": -1.4121227,
-              "displayName": "Toini, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.6382044,
+              "displayName": "Toini"
             },
             {
               "location": "Mapane",
-              "longitude": 120.6296861,
               "latitude": -1.3829104,
-              "displayName": "Mapane, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.6296861,
+              "displayName": "Mapane"
             },
             {
               "location": "Betania",
-              "longitude": 120.6106342,
               "latitude": -1.412273,
-              "displayName": "Betania, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.6106342,
+              "displayName": "Betania"
             },
             {
               "location": "Malitu",
-              "longitude": 120.6212516,
               "latitude": -1.469688,
-              "displayName": "Malitu, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.6212516,
+              "displayName": "Malitu"
             },
             {
               "location": "Bega",
-              "longitude": 120.6072673,
               "latitude": -1.3838837,
-              "displayName": "Bega, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.6072673,
+              "displayName": "Bega"
             },
             {
               "location": "Kasiguncu",
-              "longitude": 120.5727796,
               "latitude": -1.4078608,
-              "displayName": "Kasiguncu, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.5727796,
+              "displayName": "Kasiguncu"
             },
             {
               "location": "Patiwunga",
-              "longitude": 120.569945,
               "latitude": -1.442883,
-              "displayName": "Patiwunga, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.569945,
+              "displayName": "Patiwunga"
             },
             {
               "location": "Tangkura",
-              "longitude": 120.5126742,
               "latitude": -1.479654,
-              "displayName": "Tangkura, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.5126742,
+              "displayName": "Tangkura"
             },
             {
               "location": "Dewua",
-              "longitude": 120.594547,
               "latitude": -1.5461235,
-              "displayName": "Dewua, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.594547,
+              "displayName": "Dewua"
             },
             {
               "location": "Sangginora",
-              "longitude": 120.5049804,
               "latitude": -1.5578525,
-              "displayName": "Sangginora, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.5049804,
+              "displayName": "Sangginora"
             },
             {
               "location": "Padalembara",
-              "longitude": 120.48372,
               "latitude": -1.4459464,
-              "displayName": "Padalembara, Poso, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Bonesompe",
-              "longitude": 120.7085124,
-              "latitude": -1.4123405,
-              "displayName": "Bonesompe, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.48372,
+              "displayName": "Padalembara"
             },
             {
               "location": "Kasintuwu",
-              "longitude": 120.7393006,
               "latitude": -1.3938986,
-              "displayName": "Kasintuwu, Poso, Sulawesi Tengah, 94619, Indonesia"
-            },
-            {
-              "location": "Lawanga",
-              "longitude": 120.7657356,
-              "latitude": -1.377973,
-              "displayName": "Lawanga, Poso, Sulawesi Tengah, 94619, Indonesia"
-            },
-            {
-              "location": "Tegal Rejo",
-              "longitude": 120.7927869,
-              "latitude": -1.3801916,
-              "displayName": "Tegal Rejo, Poso, Sulawesi Tengah, 94619, Indonesia"
+              "longitude": 120.7393006,
+              "displayName": "kasintuwu"
             },
             {
               "location": "Gebang Rejo",
-              "longitude": 120.7127907,
               "latitude": -1.4249776,
-              "displayName": "Gebang Rejo, Poso, Sulawesi Tengah, 94619, Indonesia"
+              "longitude": 120.7127907,
+              "displayName": "gebang rejo"
             },
             {
               "location": "Kawua",
-              "longitude": 120.7382432,
               "latitude": -1.4273181,
-              "displayName": "Kawua, Poso, Sulawesi Tengah, 94619, Indonesia"
+              "longitude": 120.7382432,
+              "displayName": "kawua"
             },
             {
               "location": "Bukit Bambu",
-              "longitude": 120.7816953,
               "latitude": -1.4164127,
-              "displayName": "Bukit Bambu, Poso, Sulawesi Tengah, 94661, Indonesia"
+              "longitude": 120.7816953,
+              "displayName": "bukit bambu"
             },
             {
               "location": "Ranononcu",
-              "longitude": 120.7425667,
               "latitude": -1.4383295,
-              "displayName": "Ranononcu, Poso, Sulawesi Tengah, 94619, Indonesia"
+              "longitude": 120.7425667,
+              "displayName": "ranononcu"
             },
             {
               "location": "Maliwuko",
-              "longitude": 120.7087962,
               "latitude": -1.4615465,
-              "displayName": "Maliwuko, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.7087962,
+              "displayName": "Maliwuko"
             },
             {
               "location": "Tagolu",
-              "longitude": 120.7172209,
               "latitude": -1.4715618,
-              "displayName": "Tagolu, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.7172209,
+              "displayName": "tagolu"
             },
             {
               "location": "Tambaro",
-              "longitude": 120.7305709,
               "latitude": -1.492287,
-              "displayName": "Tambaro, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.7305709,
+              "displayName": "tambaro"
             },
             {
               "location": "Watuawu",
-              "longitude": 120.7240382,
               "latitude": -1.5086597,
-              "displayName": "Watuawu, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.7240382,
+              "displayName": "watuawu"
             },
             {
               "location": "Pandiri",
-              "longitude": 120.719191,
               "latitude": -1.5275721,
-              "displayName": "Pandiri, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.719191,
+              "displayName": "pandiri"
             },
             {
               "location": "Tampemadoro",
-              "longitude": 120.7159079,
               "latitude": -1.5464001,
-              "displayName": "Tampemadoro, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.7159079,
+              "displayName": "Tampemadoro"
             }
           ]
         },
@@ -428,7 +410,7 @@
       ]
     },
     {
-      "eventId": "c309364b-4206-4dea-b78c-585db57e7abd",
+      "eventId": "f2b38679-639d-4e07-a1a9-5f6a26f75d90",
       "title": "Info Peningkatan Keandalan Kelistrikan",
       "startTime": "2026-11-14T09:00:00+08:00",
       "endTime": "2026-11-14T16:30:00+08:00",
@@ -464,82 +446,82 @@
           "points": [
             {
               "location": "Tofuti",
-              "longitude": 121.9763,
               "latitude": -2.5565,
-              "displayName": "Tofuti, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 121.9763,
+              "displayName": "Tofuti"
             },
             {
               "location": "Bahontobungku",
-              "longitude": 121.979408,
               "latitude": -2.5683371,
-              "displayName": "Bahontobungku, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 121.979408,
+              "displayName": "Bahontobungku"
             },
             {
               "location": "Tudua",
-              "longitude": 121.9860185,
               "latitude": -2.5904125,
-              "displayName": "Tudua, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 121.9860185,
+              "displayName": "Tudua"
             },
             {
               "location": "Puungkoilu",
-              "longitude": 121.9881955,
               "latitude": -2.5969697,
-              "displayName": "Puungkoilu, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 121.9881955,
+              "displayName": "Puungkoilu"
             },
             {
               "location": "Lahuafu",
-              "longitude": 121.9954733,
               "latitude": -2.6143689,
-              "displayName": "Lahuafu, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 121.9954733,
+              "displayName": "Lahuafu"
             },
             {
               "location": "Unsongi",
-              "longitude": 121.9999101,
               "latitude": -2.6267923,
-              "displayName": "Unsongi, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 121.9999101,
+              "displayName": "Unsongi"
             },
             {
               "location": "Nambo",
-              "longitude": 122.0135053,
               "latitude": -2.6437065,
-              "displayName": "Nambo, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 122.0135053,
+              "displayName": "Nambo"
             },
             {
               "location": "Laroue",
-              "longitude": 122.0213684,
               "latitude": -2.6558256,
-              "displayName": "Laroue, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 122.0213684,
+              "displayName": "Laroue"
             },
             {
               "location": "Geresa",
-              "longitude": 122.0144988,
               "latitude": -2.6708933,
-              "displayName": "Geresa, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 122.0144988,
+              "displayName": "Geresa"
             },
             {
               "location": "Kolono",
-              "longitude": 122.004611,
               "latitude": -2.6779043,
-              "displayName": "Kolono, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 122.004611,
+              "displayName": "Kolono"
             },
             {
               "location": "Bahomoahi",
-              "longitude": 121.9943865,
               "latitude": -2.7036583,
-              "displayName": "Bahomoahi, Bungku Timur, Morowali, Sulawesi Tengah, 94973, Indonesia"
+              "longitude": 121.9943865,
+              "displayName": "Bahomoahi"
             },
             {
               "location": "Bahomotefe",
-              "longitude": 122.0071267,
               "latitude": -2.7167628,
-              "displayName": "Bahomotefe, Bungku Timur, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 122.0071267,
+              "displayName": "Bahomotefe"
             }
           ]
         }
       ]
     },
     {
-      "eventId": "6d043cfe-25e9-47a0-9dc0-8e462b8c10f7",
+      "eventId": "b9ab9e84-fd21-4824-b012-08af59ac9dae",
       "title": "Info Peningkatan Keandalan Kelistrikan",
       "startTime": "2026-11-14T13:00:00+08:00",
       "endTime": "2026-11-14T16:30:00+08:00",
@@ -586,45 +568,33 @@
           "points": [
             {
               "location": "Jalan Tekukur",
-              "longitude": 119.909501,
               "latitude": -0.906641,
-              "displayName": "Jalan Tekukur"
+              "longitude": 119.909501,
+              "displayName": "Tekukur"
             },
             {
               "location": "Jalan Bahasa",
-              "longitude": 119.899829,
               "latitude": -0.845003,
+              "longitude": 119.899829,
               "displayName": "Jalan Bahasa"
-            },
-            {
-              "location": "Huntap Tondo",
-              "longitude": 119.902845,
-              "latitude": -0.833682,
-              "displayName": "Huntap Tondo"
-            },
-            {
-              "location": "Tulo",
-              "longitude": 119.8810793,
-              "latitude": -1.0176212,
-              "displayName": "Kantor Desa Tulo, Jalan Poros Palu-Kulawi, Padende, Sigi, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Wera",
-              "longitude": 119.8650175,
-              "latitude": -0.9011786,
-              "displayName": "Jalan Sungai Wera, Kecamatan Ulujadi, Palu, Sulawesi Tengah, 94112, Indonesia"
-            },
-            {
-              "location": "Jalan Guru Tua",
-              "longitude": 119.883923,
-              "latitude": -0.937159,
-              "displayName": "Jalan Guru Tua"
             },
             {
               "location": "Perumdos Untad",
               "latitude": -0.8392,
               "longitude": 119.8978,
               "displayName": "Perumdos Untad"
+            },
+            {
+              "location": "Huntap Tondo",
+              "latitude": -0.833682,
+              "longitude": 119.902845,
+              "displayName": "Huntap Tondo"
+            },
+            {
+              "location": "Jalan Guru Tua",
+              "latitude": -0.937159,
+              "longitude": 119.883923,
+              "displayName": "Jalan Guru Tua"
             },
             {
               "location": "Jalan Poros Palu - Bangga",
@@ -660,33 +630,33 @@
           "points": [
             {
               "location": "Balinggi",
-              "longitude": 120.3081241,
               "latitude": -1.0809031,
-              "displayName": "Balinggi, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 120.3081241,
+              "displayName": "Balinggi"
             },
             {
               "location": "Sausu Trans",
-              "longitude": 120.4231037,
               "latitude": -1.0822455,
-              "displayName": "Sausu Trans, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 120.4231037,
+              "displayName": "Sausu Trans"
             },
             {
               "location": "Torono",
-              "longitude": 120.470598,
               "latitude": -1.0392811,
-              "displayName": "Sausu Torono, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 120.470598,
+              "displayName": "Torono"
             },
             {
               "location": "Pakareme",
-              "longitude": 120.4376479,
               "latitude": -1.1135651,
-              "displayName": "Sausu Pakareme, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 120.4376479,
+              "displayName": "Pakareme"
             },
             {
               "location": "Malakosa",
-              "longitude": 120.4004426,
               "latitude": -0.9652266,
-              "displayName": "Malakosa, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 120.4004426,
+              "displayName": "Malakosa"
             }
           ]
         },
@@ -725,94 +695,16 @@
           ],
           "points": [
             {
-              "location": "Jalan Pulau Batam",
-              "longitude": 120.7023815,
-              "latitude": -1.4108728,
-              "displayName": "Jalan Pulau Batam, Bonesompe, Poso, Sulawesi Tengah, Indonesia"
-            },
-            {
               "location": "Moengko",
-              "longitude": 120.6588934,
               "latitude": -1.4265273,
-              "displayName": "Moengko, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.6588934,
+              "displayName": "moengko"
             },
             {
               "location": "Moengko Baru",
-              "longitude": 120.6588934,
               "latitude": -1.4265273,
-              "displayName": "Moengko, Poso, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Jalan Pulau Sabang",
-              "longitude": 120.7438194,
-              "latitude": -1.3947786,
-              "displayName": "Jalan Pulau Sabang, Poso, Sulawesi Tengah, 94619, Indonesia"
-            },
-            {
-              "location": "Kayamanya",
-              "longitude": 120.6857034,
-              "latitude": -1.4208116,
-              "displayName": "Kayamanya, Poso, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Jalan Pulau Bali",
-              "longitude": 120.7522351,
-              "latitude": -1.3958478,
-              "displayName": "Jalan Pulau Bali, Poso, Sulawesi Tengah, 94619, Indonesia"
-            },
-            {
-              "location": "Jalan Pulau Sumatera",
-              "longitude": 120.7545334,
-              "latitude": -1.3920399,
-              "displayName": "Jalan Pulau Sumatera, Poso, Sulawesi Tengah, 94619, Indonesia"
-            },
-            {
-              "location": "Jalan Pulau Sulawesi",
-              "longitude": 120.7540919,
-              "latitude": -1.3947609,
-              "displayName": "Jalan Pulau Sulawesi, Poso, Sulawesi Tengah, 94619, Indonesia"
-            },
-            {
-              "location": "Pulau Timor",
-              "longitude": 120.7554717,
-              "latitude": -1.3946816,
-              "displayName": "Jalan Pulau Timor, Poso, Sulawesi Tengah, 94619, Indonesia"
-            },
-            {
-              "location": "Pulau Seram",
-              "longitude": 120.7527071,
-              "latitude": -1.3973433,
-              "displayName": "Jalan Pulau Seram, Poso, Sulawesi Tengah, 94619, Indonesia"
-            },
-            {
-              "location": "Pulau Madura",
-              "longitude": 120.7525487,
-              "latitude": -1.3991387,
-              "displayName": "Jalan Pulau Madura, Poso, Sulawesi Tengah, 94619, Indonesia"
-            },
-            {
-              "location": "Pulau Jawa 1",
-              "longitude": 120.7522315,
-              "latitude": -1.3996906,
-              "displayName": "Jalan Pulau Jawa 1, Poso, Sulawesi Tengah, 94619, Indonesia"
-            },
-            {
-              "location": "Pulau Jawa 2",
-              "longitude": 120.7522315,
-              "latitude": -1.3996906,
-              "displayName": "Jalan Pulau Jawa 1, Poso, Sulawesi Tengah, 94619, Indonesia"
-            },
-            {
-              "location": "Pulau Tarakan",
-              "longitude": 120.7584401,
-              "latitude": -1.3942828,
-              "displayName": "Jalan Pulau Tarakan, Poso, Sulawesi Tengah, 94619, Indonesia"
-            },
-            {
-              "location": "Pulau Kalimantan",
-              "longitude": 120.7569217,
-              "latitude": -1.3954618,
-              "displayName": "Jalan Pulau Kalimantan, Poso, Sulawesi Tengah, 94619, Indonesia"
+              "longitude": 120.6588934,
+              "displayName": "moengko Baru"
             }
           ]
         },
@@ -831,15 +723,15 @@
           "points": [
             {
               "location": "Peonea",
-              "longitude": 120.8670816,
               "latitude": -1.9398724,
-              "displayName": "Peonea, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.8670816,
+              "displayName": "Peonea"
             },
             {
               "location": "Kolaka",
-              "longitude": 120.855978,
               "latitude": -1.8092036,
-              "displayName": "Kolaka, Poso, Sulawesi Tengah, Indonesia"
+              "longitude": 120.855978,
+              "displayName": "Kolaka"
             }
           ]
         },
@@ -882,37 +774,12 @@
             "Matano",
             "Tofoiso"
           ],
-          "points": [
-            {
-              "location": "Marsaoleh",
-              "longitude": 121.972,
-              "latitude": -2.5437,
-              "displayName": "Marsaoleh, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Sakita",
-              "longitude": 121.965,
-              "latitude": -2.5584,
-              "displayName": "Sakita, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Matano",
-              "longitude": 121.9662,
-              "latitude": -2.5389,
-              "displayName": "Matano, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Tofoiso",
-              "longitude": 121.969893,
-              "latitude": -2.5968657,
-              "displayName": "Tofoiso, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia"
-            }
-          ]
+          "points": []
         }
       ]
     },
     {
-      "eventId": "4d09b1fe-71ec-432c-859b-d7c3ce5536ff",
+      "eventId": "6b694395-e405-456e-becc-b101173a72ca",
       "title": "Info Peningkatan Keandalan Kelistrikan",
       "startTime": "2026-11-14T16:00:00+08:00",
       "endTime": "2026-11-14T19:30:00+08:00",
@@ -962,124 +829,40 @@
           ],
           "points": [
             {
-              "location": "Jalan Balintuma",
-              "longitude": 119.8644647,
-              "latitude": -0.2652161,
-              "displayName": "Balintuma, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Jalan Tambuli",
-              "longitude": 119.8981766,
-              "latitude": -0.9569837,
-              "displayName": "Jalan Tambuli, RT 10, Dusun 2, Lolu, Sigi, Sulawesi Tengah, 94312, Indonesia"
-            },
-            {
-              "location": "Jalan Lasoso",
-              "longitude": 119.8426595,
-              "latitude": -0.888566,
-              "displayName": "Jalan Lasoso, Balaroa, Kecamatan Ulujadi, Palu, Sulawesi Tengah, 94221, Indonesia"
-            },
-            {
-              "location": "Jalan Poros Palu - Palolo",
-              "longitude": 119.916771,
-              "latitude": -0.967291,
-              "displayName": "Jalan Poros Palu-Palolo (jalan)"
-            },
-            {
-              "location": "Bora",
-              "longitude": 120.0475935,
-              "latitude": -1.1285781,
-              "displayName": "Bora, Sigi, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Sidera",
-              "longitude": 119.9346718,
-              "latitude": -1.0005805,
-              "displayName": "Sidera, Sigi, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Oloboju",
-              "longitude": 120.0433533,
-              "latitude": -1.0996214,
-              "displayName": "Oloboju, Sigi, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Jonooge",
-              "longitude": 120.0076997,
-              "latitude": -1.0670853,
-              "displayName": "Jonooge, Sigi, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Kalukubula",
-              "longitude": 119.96023,
-              "latitude": -1.0176647,
-              "displayName": "Kalukubula, Sigi, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Jalan Dewi Sartika",
-              "longitude": 119.8972647,
-              "latitude": -0.9304648,
-              "displayName": "Jalan Dewi Sartika, RT 04, RW 07, Birobuli Utara, Kecamatan Palu Selatan, Palu, Sulawesi Tengah, 94312, Indonesia"
-            },
-            {
-              "location": "Jalan Merdeka",
-              "longitude": 119.9049702,
-              "latitude": -0.9347099,
-              "displayName": "Jalan Merdeka, Birobuli Selatan, Kecamatan Palu Selatan, Palu, Sulawesi Tengah, 94312, Indonesia"
-            },
-            {
-              "location": "Jalan Lembaga",
-              "longitude": 119.8999994,
-              "latitude": -0.9333196,
-              "displayName": "Jalan Lembaga, Birobuli Selatan, Kecamatan Palu Selatan, Palu, Sulawesi Tengah, 94312, Indonesia"
-            },
-            {
-              "location": "Jalan Adam Malik",
-              "longitude": 119.9045451,
-              "latitude": -0.9321191,
-              "displayName": "Jalan Adam Malik, Birobuli Selatan, Kecamatan Palu Selatan, Palu, Sulawesi Tengah, 94312, Indonesia"
-            },
-            {
-              "location": "Jalan Banteng",
-              "longitude": 119.8912851,
-              "latitude": -0.9313958,
-              "displayName": "Jalan Banteng, Lolu Utara, Kecamatan Palu Selatan, Palu, Sulawesi Tengah, 94312, Indonesia"
-            },
-            {
-              "location": "Jalan Kijang",
-              "longitude": 119.8905775,
-              "latitude": -0.9272704,
-              "displayName": "Jalan Kijang, RT 04, RW 11, Lolu Utara, Kecamatan Palu Selatan, Palu, Sulawesi Tengah, 94312, Indonesia"
-            },
-            {
-              "location": "Jalan Zebra",
-              "longitude": 119.8844643,
-              "latitude": -0.9231086,
-              "displayName": "Jalan Zebra, RT 05, RW 10, Lolu Utara, Kecamatan Palu Selatan, Palu, Sulawesi Tengah, 94113, Indonesia"
-            },
-            {
-              "location": "Jalan Tangkasi Atas",
-              "longitude": 119.8883546,
-              "latitude": -0.9288944,
-              "displayName": "Jalan Tangkasi, Lolu Utara, Kecamatan Palu Selatan, Palu, Sulawesi Tengah, 94312, Indonesia"
-            },
-            {
-              "location": "Birobuli Utara",
-              "longitude": 119.8919961,
-              "latitude": -0.9196778,
-              "displayName": "Birobuli Utara, Kecamatan Palu Selatan, Palu, Sulawesi Tengah, 94113, Indonesia"
-            },
-            {
-              "location": "Pombewe",
-              "longitude": 120.0689224,
-              "latitude": -1.0586375,
-              "displayName": "Pombewe, Sigi, Sulawesi Tengah, Indonesia"
-            },
-            {
               "location": "Jalan Kelapa Gading",
               "latitude": -0.890212,
               "longitude": 119.842533,
               "displayName": "Jalan Kelapa Gading"
+            },
+            {
+              "location": "Jalan Tambuli",
+              "latitude": -0.957478,
+              "longitude": 119.89812,
+              "displayName": "Jalan Tambuli"
+            },
+            {
+              "location": "Jalan Lasoso",
+              "latitude": -0.888529,
+              "longitude": 119.842667,
+              "displayName": "Jalan Lasoso"
+            },
+            {
+              "location": "Jalan Poros Palu - Palolo",
+              "latitude": -0.975,
+              "longitude": 119.925,
+              "displayName": "Jalan Poros Palu - Palolo"
+            },
+            {
+              "location": "Bora",
+              "latitude": -1.0486396,
+              "longitude": 119.9413452,
+              "displayName": "Bora"
+            },
+            {
+              "location": "Sidera",
+              "latitude": -1.0078816,
+              "longitude": 119.9276614,
+              "displayName": "Sidera"
             },
             {
               "location": "RS Torabelo",
@@ -1088,10 +871,64 @@
               "displayName": "RS Torabelo"
             },
             {
+              "location": "Jalan Dewi Sartika",
+              "latitude": -0.930495,
+              "longitude": 119.897198,
+              "displayName": "Jalan Dewi Sartika"
+            },
+            {
+              "location": "Jalan Merdeka",
+              "latitude": -0.932765,
+              "longitude": 119.903321,
+              "displayName": "Jalan Merdeka"
+            },
+            {
+              "location": "Jalan Lembaga",
+              "latitude": -0.933359,
+              "longitude": 119.900003,
+              "displayName": "Jalan Lembaga"
+            },
+            {
+              "location": "Jalan Adam Malik",
+              "latitude": -0.932025,
+              "longitude": 119.904529,
+              "displayName": "Jalan Adam Malik"
+            },
+            {
               "location": "Jalan RS Islam",
               "latitude": -0.9171,
               "longitude": 119.8876,
               "displayName": "RS Islam"
+            },
+            {
+              "location": "Jalan Banteng",
+              "latitude": -0.930299,
+              "longitude": 119.895023,
+              "displayName": "Jalan Banteng"
+            },
+            {
+              "location": "Jalan Kijang",
+              "latitude": -0.92731,
+              "longitude": 119.89056,
+              "displayName": "Jalan Kijang"
+            },
+            {
+              "location": "Jalan Zebra",
+              "latitude": -0.923091,
+              "longitude": 119.884582,
+              "displayName": "Jalan Zebra"
+            },
+            {
+              "location": "Jalan Tangkasi Atas",
+              "latitude": -0.929015,
+              "longitude": 119.892479,
+              "displayName": "Jalan Tangkasi Atas"
+            },
+            {
+              "location": "Birobuli Utara",
+              "latitude": -0.919678,
+              "longitude": 119.891996,
+              "displayName": "Birobuli Utara"
             },
             {
               "location": "Huntap Pombowe",
@@ -1156,81 +993,21 @@
           "points": [
             {
               "location": "Jalan Bunga Raya",
-              "longitude": 119.87141,
               "latitude": -0.732387,
+              "longitude": 119.87141,
               "displayName": "Jalan Bunga Raya"
             },
             {
               "location": "Jalan Ramba",
-              "longitude": 119.86,
               "latitude": -0.7783,
-              "displayName": "Ramba"
+              "longitude": 119.86,
+              "displayName": "Jalan Ramba"
             },
             {
               "location": "Baiya",
-              "longitude": 119.909266,
               "latitude": -0.736209,
+              "longitude": 119.909266,
               "displayName": "Baiya"
-            },
-            {
-              "location": "Jalan S. Lamangkona",
-              "longitude": 119.858922,
-              "latitude": -0.738326,
-              "displayName": "Jalan Sungai Lamangkona"
-            },
-            {
-              "location": "Kayumalue Ngapa",
-              "longitude": 119.954958,
-              "latitude": -0.771633,
-              "displayName": "Kayumalue Ngapa"
-            },
-            {
-              "location": "Kayumalue Pajeko",
-              "longitude": 119.896396,
-              "latitude": -0.784127,
-              "displayName": "Kayumalue Pajeko"
-            },
-            {
-              "location": "Mamboro",
-              "longitude": 119.8733,
-              "latitude": -0.7912,
-              "displayName": "Mamboro"
-            },
-            {
-              "location": "Taipa",
-              "longitude": 119.8695,
-              "latitude": -0.7736,
-              "displayName": "Taipa"
-            },
-            {
-              "location": "Jalan Yodo",
-              "longitude": 119.859889,
-              "latitude": -0.732009,
-              "displayName": "Jalan Yodo"
-            },
-            {
-              "location": "Lambara",
-              "longitude": 119.946778,
-              "latitude": -0.736536,
-              "displayName": "Lambara"
-            },
-            {
-              "location": "Liku",
-              "longitude": 119.8922,
-              "latitude": -0.7275,
-              "displayName": "Liku"
-            },
-            {
-              "location": "Panau",
-              "longitude": 119.886556,
-              "latitude": -0.767904,
-              "displayName": "Panau"
-            },
-            {
-              "location": "Nupabomba",
-              "longitude": 119.998448,
-              "latitude": -0.736149,
-              "displayName": "Nupa Bomba"
             },
             {
               "location": "Pangsarop Bea Cukai",
@@ -1255,6 +1032,66 @@
               "latitude": -0.903093,
               "longitude": 119.888289,
               "displayName": "Jalan M Yamin"
+            },
+            {
+              "location": "Jalan S. Lamangkona",
+              "latitude": -0.738326,
+              "longitude": 119.858922,
+              "displayName": "Jalan S. Lamangkona"
+            },
+            {
+              "location": "Kayumalue Ngapa",
+              "latitude": -0.771633,
+              "longitude": 119.954958,
+              "displayName": "Kayumalue Ngapa"
+            },
+            {
+              "location": "Kayumalue Pajeko",
+              "latitude": -0.784127,
+              "longitude": 119.896396,
+              "displayName": "Kayumalue Pajeko"
+            },
+            {
+              "location": "Mamboro",
+              "latitude": -0.7912,
+              "longitude": 119.8733,
+              "displayName": "Mamboro"
+            },
+            {
+              "location": "Taipa",
+              "latitude": -0.7736,
+              "longitude": 119.8695,
+              "displayName": "Taipa"
+            },
+            {
+              "location": "Jalan Yodo",
+              "latitude": -0.732009,
+              "longitude": 119.859889,
+              "displayName": "Jalan Yodo"
+            },
+            {
+              "location": "Lambara",
+              "latitude": -0.736536,
+              "longitude": 119.946778,
+              "displayName": "Lambara"
+            },
+            {
+              "location": "Liku",
+              "latitude": -0.7275,
+              "longitude": 119.8922,
+              "displayName": "Liku"
+            },
+            {
+              "location": "Panau",
+              "latitude": -0.767904,
+              "longitude": 119.886556,
+              "displayName": "Panau"
+            },
+            {
+              "location": "Nupabomba",
+              "latitude": -0.736149,
+              "longitude": 119.998448,
+              "displayName": "Nupabomba"
             }
           ]
         },
@@ -1343,78 +1180,6 @@
           ],
           "points": [
             {
-              "location": "Tanjung Batu",
-              "longitude": 119.7568043,
-              "latitude": -0.7056028,
-              "displayName": "Tanjung Batu, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Boneoge",
-              "longitude": 119.72,
-              "latitude": -0.6706,
-              "displayName": "Boneoge, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Loli Saluran",
-              "longitude": 119.7939425,
-              "latitude": -0.7826643,
-              "displayName": "Deker 6 Loli Saluran, Lolisaluran, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Loli Tasiburi",
-              "longitude": 119.7897,
-              "latitude": -0.7617,
-              "displayName": "Lolitasiburi, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Kabonga Besar",
-              "longitude": 119.7576372,
-              "latitude": -0.7442179,
-              "displayName": "Kabonga Besar, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Kabonga Kecil",
-              "longitude": 119.7644549,
-              "latitude": -0.7258982,
-              "displayName": "Kabonga Kecil, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Gunung Bale",
-              "longitude": 119.7469066,
-              "latitude": -0.6779786,
-              "displayName": "Gunung Bale, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Ganti",
-              "longitude": 119.7316,
-              "latitude": -0.7011,
-              "displayName": "Ganti, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Limboro",
-              "longitude": 119.7018,
-              "latitude": -0.7201,
-              "displayName": "Limboro, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Kola-Kola",
-              "longitude": 119.7218272,
-              "latitude": -0.7415467,
-              "displayName": "Kola-Kola, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Lambara",
-              "longitude": 119.9467778,
-              "latitude": -0.7365355,
-              "displayName": "Lambara, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Boya",
-              "longitude": 119.7399,
-              "latitude": -0.6707,
-              "displayName": "Boya, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
               "location": "Bahagia",
               "latitude": -0.895253,
               "longitude": 119.841977,
@@ -1427,10 +1192,82 @@
               "displayName": "Jalan Bunga Raya"
             },
             {
+              "location": "Tanjung Batu",
+              "latitude": -0.7056028,
+              "longitude": 119.7568043,
+              "displayName": "Tanjung Batu"
+            },
+            {
               "location": "Tanjung Karang",
               "latitude": -0.90676,
               "longitude": 119.87745,
               "displayName": "Jalan Tg.Karang"
+            },
+            {
+              "location": "Boneoge",
+              "latitude": -0.6706,
+              "longitude": 119.72,
+              "displayName": "Boneoge"
+            },
+            {
+              "location": "Loli Saluran",
+              "latitude": -0.7826643,
+              "longitude": 119.7939425,
+              "displayName": "Loli Saluran"
+            },
+            {
+              "location": "Loli Tasiburi",
+              "latitude": -0.7617,
+              "longitude": 119.7897,
+              "displayName": "Lolitasiburi"
+            },
+            {
+              "location": "Kabonga Besar",
+              "latitude": -0.7442179,
+              "longitude": 119.7576372,
+              "displayName": "Kabonga Besar"
+            },
+            {
+              "location": "Kabonga Kecil",
+              "latitude": -0.7258982,
+              "longitude": 119.7644549,
+              "displayName": "Kabonga Kecil"
+            },
+            {
+              "location": "Gunung Bale",
+              "latitude": -0.6779786,
+              "longitude": 119.7469066,
+              "displayName": "Gunung Bale"
+            },
+            {
+              "location": "Ganti",
+              "latitude": -0.7011,
+              "longitude": 119.7316,
+              "displayName": "ganti"
+            },
+            {
+              "location": "Limboro",
+              "latitude": -0.7201,
+              "longitude": 119.7018,
+              "displayName": "limboro"
+            },
+            {
+              "location": "Kola-Kola",
+              "latitude": -0.7415467,
+              "longitude": 119.7218272,
+              "displayName": "kola-kola"
+            },
+            {
+              "location": "Lambara",
+              "latitude": -0.736536,
+              "longitude": 119.946778,
+              "displayName": "Lambara"
+            },
+            {
+              "location": "Boya",
+              "latitude": -0.6707,
+              "longitude": 119.7399,
+              "displayName": "Boya"
             }
           ]
         },
@@ -1458,40 +1295,40 @@
           "points": [
             {
               "location": "Kasimbar",
-              "longitude": 119.9718371,
               "latitude": -0.2054281,
-              "displayName": "Kasimbar, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 119.9718371,
+              "displayName": "Kasimbar"
             },
             {
               "location": "Posona",
-              "longitude": 119.9963471,
               "latitude": -0.1232733,
-              "displayName": "Posona, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 119.9963471,
+              "displayName": "Posona"
             },
             {
               "location": "Maninili",
-              "longitude": 120.0404445,
               "latitude": 0.0257893,
-              "displayName": "Maninili, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 120.0404445,
+              "displayName": "Maninili"
             },
             {
               "location": "Sigenti",
-              "longitude": 120.0453361,
               "latitude": 0.0658599,
-              "displayName": "Sigenti, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 120.0453361,
+              "displayName": "Sigenti"
             },
             {
               "location": "Sipayo",
-              "longitude": 120.0595352,
               "latitude": 0.1446514,
-              "displayName": "Sipayo, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 120.0595352,
+              "displayName": "Sipayo"
             }
           ]
         }
       ]
     },
     {
-      "eventId": "e3ee8cee-b141-48c6-b232-d73cffb988b2",
+      "eventId": "ad059d3e-c8d7-41a8-9d59-2062a3d5fd86",
       "title": "Info Peningkatan Keandalan Kelistrikan",
       "startTime": "2026-11-14T19:00:00+08:00",
       "endTime": "2026-11-14T22:30:00+08:00",
@@ -1559,165 +1396,117 @@
           "points": [
             {
               "location": "Jalan Kelor",
-              "longitude": 119.847286,
               "latitude": -0.903646,
+              "longitude": 119.847286,
               "displayName": "Jalan Kelor"
             },
             {
               "location": "Jalan S. Manonda",
-              "longitude": 119.849872,
               "latitude": -0.909656,
+              "longitude": 119.849872,
               "displayName": "Jalan Sungai Manonda"
             },
             {
               "location": "Jalan Gawalise",
-              "longitude": 119.838234,
               "latitude": -0.899406,
+              "longitude": 119.838234,
               "displayName": "Jalan Gawalise"
             },
             {
               "location": "Duyu",
-              "longitude": 119.845687,
               "latitude": -0.915648,
-              "displayName": "Jalan Duyu"
+              "longitude": 119.845687,
+              "displayName": "Duyu"
             },
             {
               "location": "Jalan Tagari Lonjo",
-              "longitude": 119.847566,
               "latitude": -0.91459,
+              "longitude": 119.847566,
               "displayName": "Jalan Tagari Lonjo"
             },
             {
               "location": "Jalan Padanjakaya",
-              "longitude": 119.847554,
               "latitude": -0.9221,
+              "longitude": 119.847554,
               "displayName": "Jalan Padanjakaya"
             },
             {
               "location": "Jalan Malontara",
-              "longitude": 119.841372,
               "latitude": -0.931595,
+              "longitude": 119.841372,
               "displayName": "Jalan Malontara"
             },
             {
               "location": "Jalan Tadulako",
-              "longitude": 119.876259,
               "latitude": -0.892865,
+              "longitude": 119.876259,
               "displayName": "Jalan Tadulako"
             },
             {
               "location": "Jalan Tavanjuka",
-              "longitude": 119.863242,
               "latitude": -0.923969,
-              "displayName": "Jalan Tavanjuka Raya"
+              "longitude": 119.863242,
+              "displayName": "Jalan Tavanjuka"
             },
             {
               "location": "BTN Palupi",
-              "longitude": 119.867873,
               "latitude": -0.929879,
-              "displayName": "Jalan BTN Palupi"
+              "longitude": 119.867873,
+              "displayName": "BTN Palupi"
             },
             {
               "location": "Jalan Tavanjuka Mas",
-              "longitude": 119.863784,
               "latitude": -0.925172,
+              "longitude": 119.863784,
               "displayName": "Jalan Tavanjuka Mas"
             },
             {
               "location": "Jalan Kamboja",
-              "longitude": 119.845546,
               "latitude": -0.907378,
-              "displayName": "Jalan Kamboja Lorong I"
+              "longitude": 119.845546,
+              "displayName": "Jalan Kamboja"
             },
             {
               "location": "Jalan Labu",
-              "longitude": 119.84835,
               "latitude": -0.907674,
+              "longitude": 119.84835,
               "displayName": "Jalan Labu"
             },
             {
               "location": "Jalan Keramik",
-              "longitude": 119.840923,
               "latitude": -0.927378,
+              "longitude": 119.840923,
               "displayName": "Jalan Keramik"
             },
             {
               "location": "Binangga",
-              "longitude": 119.8767,
               "latitude": -0.768,
-              "displayName": "Binangga, Kecamatan Palu Utara, Palu, Sulawesi Tengah, Indonesia"
+              "longitude": 119.8767,
+              "displayName": "Binangga"
             },
             {
               "location": "Jalan Pangeran Hidayat",
-              "longitude": 119.856969,
               "latitude": -0.887619,
-              "displayName": "Jalan Pangeran Hidayat"
+              "longitude": 119.856969,
+              "displayName": "Jalan Pangeran hidayat"
             },
             {
               "location": "Jalan Selar",
-              "longitude": 119.855282,
               "latitude": -0.888077,
+              "longitude": 119.855282,
               "displayName": "Jalan Selar"
             },
             {
               "location": "Jalan Lamotu",
-              "longitude": 119.853973,
               "latitude": -0.889328,
+              "longitude": 119.853973,
               "displayName": "Jalan Lamotu"
             },
             {
               "location": "Jalan Rono",
-              "longitude": 119.85097,
               "latitude": -0.886622,
+              "longitude": 119.85097,
               "displayName": "Jalan Rono"
-            },
-            {
-              "location": "Jalan Wahidin",
-              "longitude": 119.866923,
-              "latitude": -0.897362,
-              "displayName": "Jalan Dokter Wahidin"
-            },
-            {
-              "location": "Jalan Muh Hatta",
-              "longitude": 119.875784,
-              "latitude": -0.896864,
-              "displayName": "Jalan Mohammad Hatta"
-            },
-            {
-              "location": "Jalan Gatot Subroto",
-              "longitude": 119.874186,
-              "latitude": -0.894569,
-              "displayName": "Jalan Gatot Subroto"
-            },
-            {
-              "location": "Jalan M. Thamrin Atas",
-              "longitude": 119.882385,
-              "latitude": -0.89556,
-              "displayName": "Jalan M. Thamrin atas (jalan, ULP Kota dan ULP Kamonji)"
-            },
-            {
-              "location": "Jalan Mangunsarkoro",
-              "longitude": 119.883567,
-              "latitude": -0.896912,
-              "displayName": "Jalan Mangunsarkoro"
-            },
-            {
-              "location": "Jalan Dr. Sutomo",
-              "longitude": 119.876203,
-              "latitude": -0.895051,
-              "displayName": "Jalan Sutomo"
-            },
-            {
-              "location": "Jalan Dr. Wahidin",
-              "longitude": 119.866923,
-              "latitude": -0.897362,
-              "displayName": "Jalan Dokter Wahidin"
-            },
-            {
-              "location": "Jalan Sulawesi",
-              "longitude": 119.870836,
-              "latitude": -0.900006,
-              "displayName": "Jalan Sulawesi"
             },
             {
               "location": "Hotel Grand Duta",
@@ -1730,6 +1519,54 @@
               "latitude": -0.8883,
               "longitude": 119.855,
               "displayName": "Universitas IAIN"
+            },
+            {
+              "location": "Jalan Wahidin",
+              "latitude": -0.897362,
+              "longitude": 119.866923,
+              "displayName": "Jalan Wahidin"
+            },
+            {
+              "location": "Jalan Muh Hatta",
+              "latitude": -0.896864,
+              "longitude": 119.875784,
+              "displayName": "Jalan Muh Hatta"
+            },
+            {
+              "location": "Jalan Gatot Subroto",
+              "latitude": -0.894569,
+              "longitude": 119.874186,
+              "displayName": "Jalan Gatot Subroto"
+            },
+            {
+              "location": "Jalan M. Thamrin Atas",
+              "latitude": -0.89556,
+              "longitude": 119.882385,
+              "displayName": "Jalan M. Thamrin atas"
+            },
+            {
+              "location": "Jalan Mangunsarkoro",
+              "latitude": -0.896912,
+              "longitude": 119.883567,
+              "displayName": "Jalan Mangunsarkoro"
+            },
+            {
+              "location": "Jalan Dr. Sutomo",
+              "latitude": -0.895051,
+              "longitude": 119.876203,
+              "displayName": "Jalan Dr. Sutomo"
+            },
+            {
+              "location": "Jalan Dr. Wahidin",
+              "latitude": -0.897362,
+              "longitude": 119.866923,
+              "displayName": "Dr.Wahidin"
+            },
+            {
+              "location": "Jalan Sulawesi",
+              "latitude": -0.900006,
+              "longitude": 119.870836,
+              "displayName": "Jalan Sulawesi"
             }
           ]
         },
@@ -1766,118 +1603,28 @@
           ],
           "points": [
             {
-              "location": "Lalombi",
-              "longitude": 119.6056563,
-              "latitude": -0.8544349,
-              "displayName": "Lalombi, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Lumbulama",
-              "longitude": 119.6324,
-              "latitude": -0.9617,
-              "displayName": "Lumbulama, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Lumbumamara",
-              "longitude": 119.679,
-              "latitude": -0.817,
-              "displayName": "Lumbumamara, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Lumbutarombo",
-              "longitude": 119.6526,
-              "latitude": -0.8226,
-              "displayName": "Lumbutarombo, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
               "location": "Malino",
-              "longitude": 119.5749,
-              "latitude": -0.9414,
-              "displayName": "Malino, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Mbuwu",
-              "longitude": 119.6290392,
-              "latitude": -0.9296516,
-              "displayName": "Mbuwu, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Salumpaku",
-              "longitude": 119.6854716,
-              "latitude": -0.9312492,
-              "displayName": "Salumpaku, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Salungkaenu",
-              "longitude": 119.7157497,
-              "latitude": -0.8591485,
-              "displayName": "Salungkaenu, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Surumana",
-              "longitude": 119.5704,
-              "latitude": -0.8604,
-              "displayName": "Surumana, Donggala, Sulawesi Tengah, Indonesia"
+              "latitude": 0.528614,
+              "longitude": 120.6902581,
+              "displayName": "Malino"
             },
             {
               "location": "Tanahmea",
-              "longitude": 119.641998,
-              "latitude": -0.8404994,
-              "displayName": "Tanahmea, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Tolongano",
-              "longitude": 119.6295,
-              "latitude": -0.8008,
-              "displayName": "Tolongano, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Tosale",
-              "longitude": 119.6824,
-              "latitude": -0.7664,
-              "displayName": "Tosale, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Watatu",
-              "longitude": 119.587,
-              "latitude": -0.8758,
-              "displayName": "Watatu, Donggala, Sulawesi Tengah, Indonesia"
+              "latitude": -0.906555,
+              "longitude": 119.860145,
+              "displayName": "Jalan Tanamea"
             },
             {
               "location": "Kola-Kola",
-              "longitude": 119.7218272,
               "latitude": -0.7415467,
-              "displayName": "Kola-Kola, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Lumbudolo",
-              "longitude": 119.7151,
-              "latitude": -0.7386,
-              "displayName": "Lumbudolo, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Powelua",
-              "longitude": 119.727,
-              "latitude": -0.7935,
-              "displayName": "Powelua, Donggala, Sulawesi Tengah, Indonesia"
+              "longitude": 119.7218272,
+              "displayName": "kola-kola"
             },
             {
               "location": "Limboro",
-              "longitude": 119.7018,
               "latitude": -0.7201,
-              "displayName": "Limboro, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Towale",
-              "longitude": 119.6939388,
-              "latitude": -0.7431826,
-              "displayName": "Towale, Donggala, Sulawesi Tengah, Indonesia"
-            },
-            {
-              "location": "Salubomba",
-              "longitude": 119.6856,
-              "latitude": -0.7432,
-              "displayName": "Salubomba, Donggala, Sulawesi Tengah, Indonesia"
+              "longitude": 119.7018,
+              "displayName": "limboro"
             }
           ]
         },
@@ -1904,57 +1651,57 @@
           "points": [
             {
               "location": "Pelawa",
-              "longitude": 120.0971304,
               "latitude": -0.7632324,
-              "displayName": "Pelawa, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 120.0971304,
+              "displayName": "Pelawa"
             },
             {
               "location": "Petapa",
-              "longitude": 120.1310685,
               "latitude": -0.7761139,
-              "displayName": "Petapa, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 120.1310685,
+              "displayName": "Petapa"
             },
             {
               "location": "Lebo",
-              "longitude": 120.146255,
               "latitude": -0.7791937,
-              "displayName": "Lebo, Parigi Moutong, Sulawesi Tengah, 94471, Indonesia"
+              "longitude": 120.146255,
+              "displayName": "Lebo"
             },
             {
               "location": "Masigi",
-              "longitude": 120.1491278,
               "latitude": -0.8193112,
-              "displayName": "Masigi, Parigi Moutong, Sulawesi Tengah, 94471, Indonesia"
+              "longitude": 120.1491278,
+              "displayName": "masigi"
             },
             {
               "location": "Bambalemo",
-              "longitude": 120.1520074,
               "latitude": -0.7857865,
-              "displayName": "Bambalemo, Parigi Moutong, Sulawesi Tengah, 94471, Indonesia"
+              "longitude": 120.1520074,
+              "displayName": "Bambalemo"
             },
             {
               "location": "Maesa",
-              "longitude": 120.1701437,
               "latitude": -0.8505717,
-              "displayName": "Maesa, Parigi Moutong, Sulawesi Tengah, 94471, Indonesia"
+              "longitude": 120.1701437,
+              "displayName": "Maesa"
             },
             {
               "location": "Bantaya",
-              "longitude": 120.175005,
               "latitude": -0.8086429,
-              "displayName": "Bantaya, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 120.175005,
+              "displayName": "Bantaya"
             },
             {
               "location": "Kampal",
-              "longitude": 120.1508446,
               "latitude": -0.8008763,
-              "displayName": "Kampal, Parigi Moutong, Sulawesi Tengah, 94471, Indonesia"
+              "longitude": 120.1508446,
+              "displayName": "Kampal"
             },
             {
               "location": "Parigimpu'u",
-              "longitude": 120.0828518,
               "latitude": -0.8504372,
-              "displayName": "Parigimpu, Parigi Moutong, Sulawesi Tengah, Indonesia"
+              "longitude": 120.0828518,
+              "displayName": "Parigimpu'u"
             }
           ]
         },
@@ -2036,21 +1783,21 @@
           "points": [
             {
               "location": "Bente",
-              "longitude": 121.9402,
               "latitude": -2.4921,
-              "displayName": "Bente, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 121.9402,
+              "displayName": "Bente"
             },
             {
               "location": "Ipi",
-              "longitude": 121.951,
               "latitude": -2.5056,
-              "displayName": "Ipi, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 121.951,
+              "displayName": "Ipi"
             },
             {
               "location": "Bahoruru",
-              "longitude": 121.9523,
               "latitude": -2.5162,
-              "displayName": "Bahoruru, Bungku Tengah, Morowali, Sulawesi Tengah, Indonesia"
+              "longitude": 121.9523,
+              "displayName": "Bahoruru"
             }
           ]
         }

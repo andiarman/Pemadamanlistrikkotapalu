@@ -1,11 +1,11 @@
 {
   "date": "2026-11-14",
-  "generatedAt": "2026-11-14T06:28:42.217Z",
+  "generatedAt": "2026-11-14T06:38:48.851Z",
   "summary": {
     "totalLocations": 564,
-    "totalMatched": 214,
-    "totalUnmatched": 350,
-    "matchRatePercent": 38
+    "totalMatched": 172,
+    "totalUnmatched": 392,
+    "matchRatePercent": 30
   },
   "unmatchedLocations": [
     {
@@ -333,13 +333,31 @@
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
+      "location": "Bonesompe",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
       "location": "Lawanga Tawongan",
       "ulpName": "ULP Poso",
       "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
+      "location": "Lawanga",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
       "location": "Lombogia",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Tegal Rejo",
       "ulpName": "ULP Poso",
       "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
@@ -543,6 +561,12 @@
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
+      "location": "Tulo",
+      "ulpName": "ULP Palu Kota",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
       "location": "Pincara",
       "ulpName": "ULP Palu Kota",
       "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
@@ -550,6 +574,12 @@
     },
     {
       "location": "Padende",
+      "ulpName": "ULP Palu Kota",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Wera",
       "ulpName": "ULP Palu Kota",
       "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
@@ -723,6 +753,12 @@
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
+      "location": "Jalan Pulau Batam",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
       "location": "Jalan Pulau Nias",
       "ulpName": "ULP Poso",
       "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
@@ -735,7 +771,79 @@
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
+      "location": "Jalan Pulau Sabang",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Kayamanya",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
       "location": "Kayamanya Sentral",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Jalan Pulau Bali",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Jalan Pulau Sumatera",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Jalan Pulau Sulawesi",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Pulau Timor",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Pulau Seram",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Pulau Madura",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Pulau Jawa 1",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Pulau Jawa 2",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Pulau Tarakan",
+      "ulpName": "ULP Poso",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Pulau Kalimantan",
       "ulpName": "ULP Poso",
       "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
@@ -987,6 +1095,36 @@
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
+      "location": "Marsaoleh",
+      "ulpName": "ULP Bungku",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Sakita",
+      "ulpName": "ULP Bungku",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Matano",
+      "ulpName": "ULP Bungku",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Tofoiso",
+      "ulpName": "ULP Bungku",
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Jalan Balintuma",
+      "ulpName": "ULP Kota",
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
       "location": "Jalan Buvu Panda",
       "ulpName": "ULP Kota",
       "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
@@ -1005,6 +1143,12 @@
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
+      "location": "Oloboju",
+      "ulpName": "ULP Kota",
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
       "location": "Sigibiromaru",
       "ulpName": "ULP Kota",
       "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
@@ -1012,6 +1156,18 @@
     },
     {
       "location": "Watononju",
+      "ulpName": "ULP Kota",
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Jonooge",
+      "ulpName": "ULP Kota",
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Kalukubula",
       "ulpName": "ULP Kota",
       "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
@@ -1054,6 +1210,12 @@
     },
     {
       "location": "BTN Bumi Anggur",
+      "ulpName": "ULP Kota",
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Pombewe",
       "ulpName": "ULP Kota",
       "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
@@ -1857,7 +2019,37 @@
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
+      "location": "Lalombi",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
       "location": "Lembasada",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Lumbulama",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Lumbumamara",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Lumbutarombo",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Mbuwu",
       "ulpName": "ULP Donggala",
       "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
@@ -1869,7 +2061,25 @@
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
+      "location": "Salumpaku",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Salungkaenu",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
       "location": "Salusumbu",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Surumana",
       "ulpName": "ULP Donggala",
       "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
@@ -1881,13 +2091,55 @@
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
+      "location": "Tolongano",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Tosale",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Watatu",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
       "location": "Kulolu",
       "ulpName": "ULP Donggala",
       "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
+      "location": "Lumbudolo",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Powelua",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
       "location": "Mekar Baru",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Towale",
+      "ulpName": "ULP Donggala",
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
+    },
+    {
+      "location": "Salubomba",
       "ulpName": "ULP Donggala",
       "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
       "reason": "Belum terdata di OpenStreetMap / Nominatim"
