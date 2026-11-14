@@ -1282,6 +1282,24 @@
       }
 
       /* GPS User Marker & Pulse Animations */
+      .search-pin-wrapper { background: transparent; border: 0; }
+      .search-pin-core {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0b1322;
+        border: 2px solid #38bdf8;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, .65), 0 0 12px rgba(56, 189, 248, .5);
+        font-size: 14px;
+        animation: pulse-pin 1.8s infinite ease-in-out;
+      }
+      @keyframes pulse-pin {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.18); box-shadow: 0 4px 18px rgba(56, 189, 248, .85); }
+      }
       .user-gps-marker-wrap {
         position: relative;
         display: flex;
@@ -3050,6 +3068,23 @@ Ketentuan:
         card.hidden = false;
       }
 
+      let sultengPlacesData = [];
+      let searchPinMarker = null;
+
+      async function initSultengPlaces() {
+        try {
+          const res = await fetch("data/sulteng-places.json");
+          if (!res.ok) return;
+          const json = await res.json();
+          if (Array.isArray(json.places)) {
+            sultengPlacesData = json.places;
+          }
+        } catch {
+          // Non-blocking fallback
+        }
+      }
+      initSultengPlaces();
+
       function setupSearchBar() {
         const input = document.getElementById("street-search-input");
         const clearBtn = document.getElementById("search-clear-btn");
@@ -3061,6 +3096,20 @@ Ketentuan:
         if (cardDismissBtn) cardDismissBtn.addEventListener("click", hideStatusCard);
 
         if (!input || !resultsContainer) return;
+
+        const categoryIcon = {
+          cafe: "☕",
+          kuliner: "🍽️",
+          kesehatan: "🏥",
+          keuangan: "🏧",
+          pendidikan: "🏫",
+          penginapan: "🏨",
+          belanja: "🛒",
+          kantor: "🏢",
+          spbu: "⛽",
+          jalan: "🛣️",
+          tempat: "📍"
+        };
 
         let debounceTimer = 0;
 
@@ -3076,6 +3125,7 @@ Ketentuan:
 
           const now = getCurrentActiveTime();
           const matches = [];
+          const placeMatches = [];
           const seen = new Set();
 
           for (const marker of allPointMarkers) {
@@ -3094,7 +3144,22 @@ Ketentuan:
             }
           }
 
-          if (!matches.length) {
+          if (matches.length < 8 && sultengPlacesData.length) {
+            for (const place of sultengPlacesData) {
+              const [pName, pLat, pLon, pCat, pSub] = place;
+              const lower = pName.toLowerCase();
+              if (lower.includes(term) || (pSub && pSub.toLowerCase().includes(term))) {
+                const key = `place::${pName}::${pLat.toFixed(3)},${pLon.toFixed(3)}`;
+                if (!seen.has(key)) {
+                  seen.add(key);
+                  placeMatches.push(place);
+                  if (matches.length + placeMatches.length >= 8) break;
+                }
+              }
+            }
+          }
+
+          if (!matches.length && !placeMatches.length) {
             resultsContainer.innerHTML = `<div class="search-no-results">Tidak ada lokasi yang cocok dengan "<b>${escapeHtml(query)}</b>"</div>`;
             resultsContainer.hidden = false;
             return;
@@ -3122,7 +3187,7 @@ Ketentuan:
             item.tabIndex = 0;
             item.setAttribute("role", "option");
             item.innerHTML = `
-              <div class="search-result-name">${escapeHtml(props.location || "Lokasi")}</div>
+              <div class="search-result-name">🛣️ ${escapeHtml(props.location || "Lokasi")}</div>
               <div class="search-result-meta">
                 <span class="search-result-area">${escapeHtml(props.ulpName || "PLN")}</span>
                 <span class="search-result-badge ${bClass}">${statusText}</span>
@@ -3183,6 +3248,132 @@ Ketentuan:
             });
             resultsContainer.appendChild(item);
           }
+
+          for (const place of placeMatches) {
+            const [pName, pLat, pLon, pCat, pSub] = place;
+            const icon = categoryIcon[pCat] || "📍";
+            const catLabel = pCat.charAt(0).toUpperCase() + pCat.slice(1);
+
+            let nearestDistKm = Infinity;
+            let nearestMarker = null;
+            for (const marker of allPointMarkers) {
+              const coords = marker.feature?.geometry?.coordinates;
+              if (coords) {
+                const d = distanceKm([pLon, pLat], coords);
+                if (d < nearestDistKm) {
+                  nearestDistKm = d;
+                  nearestMarker = marker;
+                }
+              }
+            }
+
+            const isOutageZone = nearestDistKm <= 0.35 && nearestMarker;
+            const nearestProps = nearestMarker?.feature?.properties;
+            const placeStatus = isOutageZone ? getEventStatus(nearestProps, now) : "safe";
+            const bClass = isOutageZone ? statusClass(placeStatus) : "safe";
+
+            let statusBadgeText = "";
+            if (isOutageZone) {
+              const endStr = formatWita(nearestProps.endTime, false);
+              const startStr = formatWita(nearestProps.startTime, false);
+              if (placeStatus === "ACTIVE") {
+                statusBadgeText = `🔴 Padam (s.d ${endStr})`;
+              } else if (placeStatus === "UPCOMING") {
+                statusBadgeText = `🟡 Padam ${startStr} - ${endStr}`;
+              } else {
+                statusBadgeText = `🟢 Menyala (${endStr})`;
+              }
+            } else {
+              statusBadgeText = `✅ Bebas Padam`;
+            }
+
+            const item = document.createElement("div");
+            item.className = "search-result-item";
+            item.tabIndex = 0;
+            item.setAttribute("role", "option");
+            item.innerHTML = `
+              <div class="search-result-name">${icon} ${escapeHtml(pName)}</div>
+              <div class="search-result-meta">
+                <span class="search-result-area">${catLabel}${pSub ? ` · ${escapeHtml(pSub)}` : ""}</span>
+                <span class="search-result-badge ${bClass}">${statusBadgeText}</span>
+              </div>
+            `;
+
+            const selectPlace = () => {
+              resultsContainer.hidden = true;
+              if (pointFilter !== "all") setPointFilter("all");
+              if (sessionFilter !== "all") setSessionFilter("all");
+
+              if (searchPinMarker) map.removeLayer(searchPinMarker);
+              searchPinMarker = L.marker([pLat, pLon], {
+                icon: L.divIcon({
+                  className: "search-pin-wrapper",
+                  html: `<div class="search-pin-core" title="${escapeHtml(pName)}">${icon}</div>`,
+                  iconSize: [32, 32],
+                  iconAnchor: [16, 16]
+                }),
+                keyboard: true
+              }).addTo(map);
+
+              const popupHtml = `
+                <div style="font-family: inherit; font-size: 13px; line-height: 1.4;">
+                  <strong>${icon} ${escapeHtml(pName)}</strong><br>
+                  <span style="font-size: 11px; color: #94a3b8;">${catLabel}${pSub ? ` · ${escapeHtml(pSub)}` : ""}</span><br>
+                  <div style="margin-top: 5px;">
+                    ${isOutageZone
+                      ? `<span style="color: #f87171; font-weight: 800;">⚡ Berada di area pemadaman listrik</span><br><span style="font-size: 11px; color: #cbd5e1;">Berjarak ~${Math.round(nearestDistKm * 1000)}m dari titik jadwal ${escapeHtml(nearestProps.location || '')}</span>`
+                      : `<span style="color: #4ade80; font-weight: 800;">✅ Lokasi Aman (Di Luar Jadwal Padam)</span>`}
+                  </div>
+                </div>
+              `;
+              searchPinMarker.bindPopup(popupHtml);
+
+              map.flyTo([pLat, pLon], 16, { duration: 1.1 });
+              setTimeout(() => {
+                if (searchPinMarker) searchPinMarker.openPopup();
+              }, 1200);
+
+              let countdownHtml = "";
+              if (isOutageZone) {
+                const endStr = formatWita(nearestProps.endTime, false);
+                const startStr = formatWita(nearestProps.startTime, false);
+                const startMs = Date.parse(nearestProps.startTime);
+                const endMs = Date.parse(nearestProps.endTime);
+                if (placeStatus === "ACTIVE") {
+                  countdownHtml = `💡 Estimasi listrik menyala dalam <b>${formatRemainingTime(endMs)}</b> lagi (pukul ${endStr} WITA)`;
+                } else if (placeStatus === "UPCOMING") {
+                  countdownHtml = `⏳ Listrik akan padam dalam <b>${formatRemainingTime(startMs)}</b> lagi (pukul ${startStr} WITA)`;
+                } else {
+                  countdownHtml = `✅ Jadwal pemadaman telah selesai sejak pukul <b>${endStr} WITA</b>`;
+                }
+              } else {
+                countdownHtml = `✅ Lokasi ini saat ini berada di luar zona pemadaman terdaftar.`;
+              }
+
+              showStatusCard({
+                typeTag: isOutageZone ? "⚡ FASILITAS TERDAMPAK" : "✅ FASILITAS / TEMPAT AMAN",
+                title: `${icon} ${pName}`,
+                sub: `${catLabel}${pSub ? ` · ${pSub}` : " · Sulawesi Tengah"}${isOutageZone ? ` (berjarak ~${Math.round(nearestDistKm * 1000)}m dari ${nearestProps.location})` : ""}`,
+                status: isOutageZone ? placeStatus : "safe",
+                timeRange: isOutageZone ? `${formatWita(nearestProps.startTime, false)} – ${formatWita(nearestProps.endTime, false)} WITA` : "Tidak ada jadwal pemadaman",
+                countdownText: countdownHtml,
+                onFocus: () => {
+                  map.flyTo([pLat, pLon], 16, { duration: 1 });
+                  setTimeout(() => searchPinMarker && searchPinMarker.openPopup(), 1100);
+                }
+              });
+            };
+
+            item.addEventListener("click", selectPlace);
+            item.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                selectPlace();
+              }
+            });
+            resultsContainer.appendChild(item);
+          }
+
           resultsContainer.hidden = false;
         };
 
@@ -3821,6 +4012,33 @@ Ketentuan:
         const cacheKey = `${ulpName.toLocaleLowerCase("id-ID")}:${normalizeStreetName(locationName)}`;
         const cached = cache[cacheKey];
         if (cached && cached.expiresAt > Date.now()) return cached.result;
+
+        if (sultengPlacesData && sultengPlacesData.length) {
+          const locNorm = normalizeStreetName(locationName);
+          let localMatch = null;
+          let localScore = 0;
+          for (const p of sultengPlacesData) {
+            const pNorm = normalizeStreetName(p[0]);
+            const score = streetSimilarity(locNorm, pNorm);
+            if (score > localScore) {
+              localScore = score;
+              localMatch = p;
+            }
+          }
+          if (localScore >= 0.88 && localMatch) {
+            const point = {
+              longitude: localMatch[2],
+              latitude: localMatch[1],
+              displayName: `${localMatch[0]} (${localMatch[3]}${localMatch[4] ? `, ${localMatch[4]}` : ""})`
+            };
+            cache[cacheKey] = {
+              result: point,
+              expiresAt: Date.now() + 30 * 24 * 60 * 60 * 1000
+            };
+            try { localStorage.setItem(localGeocodeCacheKey, JSON.stringify(cache)); } catch {}
+            return point;
+          }
+        }
 
         const result = await fetchGeocodeResult(locationName, ulpName);
         const features = Array.isArray(result.features) ? result.features : [];
