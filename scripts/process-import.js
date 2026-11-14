@@ -7,18 +7,21 @@ const streetAliases = {
   ar: "abdul rahman",
   moh: "muhammad", muh: "muhammad", mohamad: "muhammad", m: "muhammad",
   a: "ahmad", dr: "dokter", prof: "profesor",
+  ir: "insinyur", kh: "kiyai haji",
   i: "1", ii: "2", iii: "3", iv: "4", v: "5", vi: "6"
 };
 
 const streetHonorifics = new Set([
-  "dr", "dokter", "prof", "profesor", "hj", "haji", "h", "ir", "drs",
-  "jendral", "jenderal", "sultan"
+  "dr", "dokter", "prof", "profesor", "hj", "haji", "h", "ir", "insinyur", "drs",
+  "jendral", "jenderal", "sultan", "kh", "kyai", "kiyai", "andi", "dae",
+  "st", "sh", "se", "sos", "skm", "pt", "cv", "ud"
 ]);
 
 const streetIgnoredTokens = new Set([
-  "jalan", "raya", "sebagian", "dalam",
+  "jalan", "raya", "sebagian", "dalam", "wilayah", "kompleks", "komp",
   "gang", "lorong", "dokter", "profesor", "haji", "jenderal", "sultan",
-  "dr", "prof", "hj", "h", "ir", "drs"
+  "dr", "prof", "hj", "h", "ir", "insinyur", "drs", "kh", "kyai", "kiyai",
+  "desa", "kelurahan", "kecamatan", "dusun", "kampung", "btn", "perumahan", "perum", "perumnas", "pulau"
 ]);
 
 function normalizeStreetName(value) {
@@ -26,7 +29,8 @@ function normalizeStreetName(value) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
-    .replace(/^(?:jl\.?|jalan)\s*/, "")
+    .replace(/^(?:desa\s*\/\s*kelurahan|kelurahan\s*\/\s*desa)\s*/i, "")
+    .replace(/^(?:jl\.?|jalan|lorong|gang)\s*/i, "")
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
 }
@@ -41,6 +45,10 @@ function streetNameForms(value) {
   let trimmed = [...raw];
   while (trimmed.length > 1 && isStreetLeadingNoise(trimmed[0])) trimmed = trimmed.slice(1);
   if (trimmed.length !== raw.length) forms.push(trimmed);
+  // Reduplication check (e.g. cumi cumi -> cumi)
+  if (raw.length === 2 && raw[0] === raw[1]) {
+    forms.push([raw[0]]);
+  }
   return forms;
 }
 
@@ -94,21 +102,32 @@ function buildStreetIndex(entries) {
   const points = new Map();
   const squashed = new Map();
   const keep = (map, key, point) => {
-    const current = map.get(key);
-    if (!current || point.kind < current.kind) map.set(key, point);
+    let list = map.get(key);
+    if (!list) {
+      list = [];
+      map.set(key, list);
+    }
+    list.push(point);
   };
   for (const entry of entries) {
-    let name, latitude, longitude, kind;
+    let name, latitude, longitude, kind, ulpName;
     if (Array.isArray(entry)) {
-      [name, latitude, longitude, kind] = entry;
+      [name, latitude, longitude, kind, ulpName] = entry;
     } else if (entry && typeof entry === 'object') {
       name = entry.location || entry.name;
       latitude = entry.latitude;
       longitude = entry.longitude;
       kind = entry.kind || 0;
+      ulpName = entry.ulpName || '';
     }
     if (typeof name !== "string" || typeof latitude !== "number" || typeof longitude !== "number") continue;
-    const point = { name, latitude, longitude, kind: typeof kind === "number" ? kind : 2 };
+    const point = {
+      name,
+      latitude,
+      longitude,
+      kind: typeof kind === "number" ? kind : 2,
+      ulpName: ulpName || ''
+    };
     for (const variant of streetNameVariants(name)) {
       if (!variant) continue;
       if (variant.includes(" ")) keep(points, variant, point);
@@ -123,12 +142,24 @@ function buildStreetIndex(entries) {
   };
 }
 
-function findIndexedStreet(index, locationName) {
+function selectBestUlpCandidate(candidates, targetUlp) {
+  if (!candidates || !candidates.length) return null;
+  if (!targetUlp || candidates.length === 1) return candidates[0];
+  const normTarget = targetUlp.toLowerCase().replace(/^(?:ulp\s*|pln\s*)/, '').trim();
+  const matched = candidates.find(p => {
+    if (!p.ulpName) return false;
+    const normP = p.ulpName.toLowerCase().replace(/^(?:ulp\s*|pln\s*)/, '').trim();
+    return normTarget.includes(normP) || normP.includes(normTarget);
+  });
+  return matched || candidates[0];
+}
+
+function findIndexedStreet(index, locationName, targetUlp) {
   if (!index) return null;
   const variants = streetNameVariants(locationName);
   for (const variant of variants) {
-    const point = variant.includes(" ") ? index.points.get(variant) : index.squashed.get(variant);
-    if (point) return point;
+    const list = variant.includes(" ") ? index.points.get(variant) : index.squashed.get(variant);
+    if (list && list.length) return selectBestUlpCandidate(list, targetUlp);
   }
   for (const variant of variants) {
     if (variant.includes(" ") || variant.length < 6) continue;
@@ -136,19 +167,20 @@ function findIndexedStreet(index, locationName) {
     for (const key of index.squashedKeys) {
       if (key.length <= variant.length || key.length - variant.length > 12) continue;
       if (!key.startsWith(variant)) continue;
-      const point = index.squashed.get(key);
-      if (!best || point.kind < best.kind) best = point;
+      const list = index.squashed.get(key);
+      const point = selectBestUlpCandidate(list, targetUlp);
+      if (point && (!best || point.kind < best.kind)) best = point;
     }
     if (best) return best;
   }
   let best = null;
   let bestScore = 0;
-  const consider = (key, target, point) => {
+  const consider = (key, target, list) => {
     if (Math.abs(key.length - target.length) > 4) return;
     const score = 1 - streetDistance(key, target) / Math.max(key.length, target.length);
     if (score > bestScore) {
       bestScore = score;
-      best = point;
+      best = selectBestUlpCandidate(list, targetUlp);
     }
   };
   for (const variant of variants) {
@@ -296,9 +328,9 @@ async function main() {
       const places = Array.isArray(sultengObj) ? sultengObj : (sultengObj && sultengObj.places) || [];
       for (const item of places) {
         if (Array.isArray(item)) {
-          const [name, lat, lon] = item;
+          const [name, lat, lon, category, address] = item;
           if (name && typeof lat === 'number' && typeof lon === 'number') {
-            knownEntries.push({ location: name, latitude: lat, longitude: lon, displayName: name });
+            knownEntries.push({ location: name, latitude: lat, longitude: lon, displayName: name, ulpName: address || '' });
           }
         }
       }
@@ -364,7 +396,7 @@ async function main() {
         let point = existingPoints.get(loc);
 
         if (!point) {
-          const match = findIndexedStreet(streetIndex, loc);
+          const match = findIndexedStreet(streetIndex, loc, area.ulpName);
           if (match) {
             point = {
               location: loc,

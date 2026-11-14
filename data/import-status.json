@@ -2,13 +2,13 @@
   "status": "done",
   "date": "2026-11-14",
   "totalStreets": 564,
-  "mappedStreets": 172,
+  "mappedStreets": 484,
   "progressPercent": 100,
-  "googleMapsApiDetected": true,
-  "googleMapsDiagnostic": "REQUEST_DENIED: You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started",
+  "googleMapsApiDetected": false,
+  "googleMapsDiagnostic": null,
   "newlyLearnedCount": 0,
-  "startedAt": "2026-11-14T06:38:00.737Z",
-  "completedAt": "2026-11-14T06:38:48.852Z",
-  "updatedAt": "2026-11-14T06:38:48.852Z",
-  "message": "Pemetaan selesai! 172 dari 564 lokasi berhasil dipetakan di server."
+  "startedAt": "2026-11-14T07:29:16.576Z",
+  "completedAt": "2026-11-14T07:29:20.736Z",
+  "updatedAt": "2026-11-14T07:29:20.736Z",
+  "message": "Pemetaan selesai! 484 dari 564 lokasi berhasil dipetakan di server."
 }
