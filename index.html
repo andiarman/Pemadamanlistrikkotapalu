@@ -1846,36 +1846,68 @@ Anda membaca gambar flyer resmi jadwal pemadaman listrik PLN di Sulawesi Tengah.
   "events": [
     {
       "title": "Judul kegiatan sesuai flyer",
-      "start_time": "2026-11-11T09:00:00+08:00",
-      "end_time": "2026-11-11T13:00:00+08:00",
-      "locations": ["Kota Palu"],
+      "start_time": "2026-11-14T09:00:00+08:00",
+      "end_time": "2026-11-14T13:30:00+08:00",
+      "locations": ["Kota Palu", "Donggala"],
       "areas": [
         {
           "ulp_name": "ULP Palu Kota",
-          "locations": ["Jalan Gajah Mada", "Jalan Diponegoro", "Pasar Masomba", "Lolu Selatan"]
+          "locations": [
+            "Jalan M. Thamrin Atas",
+            "Jalan M. Thamrin Bawah",
+            "Jalan Veteran Atas",
+            "Jalan Veteran Bawah",
+            "Hotel Grand Duta",
+            "Universitas IAIN",
+            "Huntap Tondo",
+            "RS Torabelo",
+            "PT Pelabuhan Indonesia Pantoloan",
+            "BTN Graha Mutiara"
+          ]
         }
       ]
     }
   ]
 }
 
-Ketentuan:
-- Buat satu event untuk setiap jadwal/rentang waktu pemadaman yang berbeda; gabungkan jadwal dari semua gambar dalam array events.
-- Salin judul kegiatan dari flyer. Jika judul tidak terbaca, gunakan tepat "Jadwal pemadaman listrik"; jangan menambah keterangan lain.
-- start_time dan end_time harus ISO 8601 lengkap dengan zona WITA +08:00, misalnya 2026-11-11T09:00:00+08:00. Pakai tanggal yang tercetak. Bila jam selesai melewati tengah malam, gunakan tanggal berikutnya.
-- locations hanya berisi kabupaten/kota administratif terdampak yang tercetak, masing-masing sekali, dengan ejaan kanonis: Kota Palu, Sigi, Donggala, Parigi Moutong, Poso, Morowali, Morowali Utara.
-- areas harus mengelompokkan lokasi berdasarkan nama ULP yang tercetak. Salin nama ULP dengan tepat.
-- areas.locations adalah daftar SETIAP nama lokasi yang tercetak di flyer dan dapat dicari di peta sebagai satu titik: nama jalan, nama desa/kelurahan, pasar, toko, gedung, kantor, sekolah, rumah sakit, masjid, gereja, terminal, pelabuhan, kampus, atau landmark lain yang disebut flyer.
-- Khusus nama jalan, selalu tulis awalan "Jalan " (contoh: flyer "Jl. Gajah Mada" menjadi "Jalan Gajah Mada"). Untuk nama tempat, desa, atau kelurahan, salin namanya saja tanpa menambahkan kata "Kelurahan", "Desa", "Kecamatan", "Toko", atau "Pasar" bila kata itu tidak tercetak.
-- Setiap nama harus spesifik dan cukup untuk dicari sebagai titik: gunakan nama diri yang tercetak, bukan kata umum. Jangan menulis "Pasar", "Terminal", "Pelabuhan", "Jalan Poros", "Wilayah ULP", "Beberapa Desa", "RT/RW", atau keterangan waktu sebagai lokasi.
-- Salin hanya nama yang benar-benar terlihat di flyer. Jangan menambahkan lokasi dari ingatan, peta, atau pengetahuan luar, dan jangan mengarang titik untuk melengkapi daftar.
-- Jika satu kelompok ULP tidak memiliki nama lokasi yang dapat diverifikasi, lewati kelompok tersebut; jangan keluarkan "locations": [].
-- Jika data kabupaten/kota tidak terbaca, gunakan "locations": []. Jangan mengarang wilayah.
-- LAKUKAN PEMERIKSAAN ULANG: setelah menyalin seluruh nama lokasi, cocokkan satu per satu kembali dengan gambar asli. Pastikan ejaan benar-benar terlihat pada gambar, tidak tertukar antar-ULP, tidak terduplikasi, dan setiap nama cukup spesifik untuk dicari sebagai satu titik di peta. Jika satu nama tidak terbaca dengan yakin, jangan masukkan nama itu.
-- Jangan menebak tanggal, jam, wilayah, ULP, atau lokasi. Jika tanggal atau jam suatu jadwal tidak terbaca dengan yakin, jangan masukkan event tersebut.
-- Jika setelah pemeriksaan tidak ada kelompok ULP dengan lokasi terverifikasi, lewati seluruh event tersebut.
-- Jangan mengeluarkan skor keyakinan, sumber, warnings, atau properti tambahan. Gunakan hanya properti pada format contoh.
-- Jika tidak ada jadwal lengkap dengan setidaknya satu nama lokasi yang terverifikasi, keluarkan persis {"schema_version":1,"events":[]} tanpa teks tambahan.
+Ketentuan Khusus (Sangat Penting):
+1. PEMISAHAN KATA 'ATAS' & 'BAWAH' / DIFERENSIATOR:
+   - Jika ada nama jalan atau lokasi dengan kata penjelas seperti "Atas", "Bawah", "Ujung", "Induk", "Baru", "Lama", angka romawi ("I", "II"), atau cabang ("1", "2"), WAJIB DIPISAHKAN menjadi dua titik/entitas tersendiri!
+   - Contoh: flyer menulis "Jl M. Thamrin atas" -> tulis "Jalan M. Thamrin Atas" (jangan dipotong jadi "Jalan M. Thamrin").
+   - Contoh: flyer menyebut "Veteran atas" dan "Veteran bawah" -> masukkan KEDUA titiknya secara terpisah: "Jalan Veteran Atas" dan "Jalan Veteran Bawah".
+   - Contoh: "Jl Tangkasi Atas", "Dsn Majulea atas", "Wani I", "Wani II", "Pantoloan", "Pantoloan Boya", "Desa Suli Indah", "Desa Suli Induk" -> pertahankan pembeda tersebut sebagai entitas mandiri.
+
+2. NAMA TEMPAT, FASILITAS, GEDUNG & PERUSAHAAN (BUKAN HANYA NAMA JALAN):
+   - Masukkan seluruh nama tempat, fasilitas publik, kawasan bisnis, dan perumahan yang tertulis di flyer ke dalam array "locations":
+     * Rumah Sakit / Klinik: contoh "RS Torabelo", "RS Islam", "Apotek...".
+     * Kampus / Sekolah: contoh "Universitas IAIN", "Untad", "SPN Labuan".
+     * Hotel / Penginapan: contoh "Hotel Grand Duta", "Andalas Hotel".
+     * Perusahaan / Pabrik / Industri / BUMN: contoh "PT Pelabuhan Indonesia Pantoloan", "PT Semen Tonasa", "PT Duco Food Indonesia", "PT Megah Batu Abadi", "PT Japfa", "PT Haycarb", "PT Agro Manunggal Cocos", "PT Prima Gelora (Big Land)", "CV Mitra Bangun Nusantara", "Pangsarop Bea Cukai".
+     * Kompleks Perumahan / Huntap: contoh "Huntap Tondo", "Huntap Pombowe", "Perumnas Tinggede", "BTN Bumi Roviga", "Perumdos Untad", "BTN Vatutela", "BTN Griya Tadulako Permai", "BTN Graha Mutiara", "Green Baliase", "Griya Baliase", "BTN Puskopad", "BTN Bumi Anggur", "Perumahan Griya Permai".
+     * Wisata / Rekreasi: contoh "Wilayah Taipa Beach".
+     * Kantor Pemerintahan: contoh "Kompleks Perkantoran Parigi".
+
+3. MULTI-SESI WAKTU DALAM SATU LEMBAR FLYER:
+   - Jika dalam satu gambar flyer terdapat beberapa rentang jam pemadaman yang berbeda (misalnya blok jam 09.00 - 13.30 untuk ULP Taweli/Tambu, dan blok jam 09.00 - 16.30 untuk ULP Bungku), buatkan objek "event" TERPISAH untuk masing-masing rentang waktu dengan start_time dan end_time yang sesuai dengan ULP terkait.
+
+4. GABUNGAN ULP (MULTI-ULP):
+   - Jika flyer menuliskan gabungan ULP seperti "ULP Palu Kota dan ULP Kamonji", masukkan nama ULP tersebut ke dalam area secara utuh ("ULP Palu Kota dan ULP Kamonji").
+
+5. PEMBERSIHAN KATA KETERANGAN BUKAN LOKASI:
+   - Buang kata sambung seperti: "dan Sekitarnya", "dan sekitarnya", "sebagian", "sekitarnya".
+   - Contoh: "Beka dan Sekitarnya" -> masukkan "Beka" saja (jangan pernah memasukkan "dan Sekitarnya" sebagai nama lokasi).
+   - "sebagian Kec. Labuan" -> masukkan "Kecamatan Labuan".
+   - "Desa Bahodopi Sebagian" -> masukkan "Desa Bahodopi".
+
+6. FORMAT TANGGAL & ZONA WAKTU WITA (+08:00):
+   - Salin tanggal sesuai flyer (misalnya Sabtu, 14 November 2026 -> 2026-11-14).
+   - Format waktu harus ISO 8601 dengan offset WITA (+08:00), contoh: "2026-11-14T09:00:00+08:00".
+
+7. JALAN POROS PENGHUBUNG:
+   - Pertahankan nama jalan poros antar-wilayah: contoh "Jalan Poros Palu Bangga", "Jalan Pantoloan-Tawaeli", "Jalan Palu-Parigi", "Jalan Kebun Kopi", "Jalan Posor Palu – Palolo".
+
+8. VALIDITAS OUTPUT:
+   - Jawaban akhir HANYA SATU objek JSON murni: tanpa markdown (```json), tanpa teks pengantar, dan tanpa catatan tambahan.
     </script>
 
     <script>
@@ -3669,11 +3701,11 @@ Ketentuan:
         "jendral", "jenderal", "sultan"
       ]);
       const streetIgnoredTokens = new Set([
-        "jalan", "raya", "atas", "bawah", "sebagian", "baru", "lama", "dalam",
+        "jalan", "raya", "sebagian", "dalam",
         "gang", "lorong", "dokter", "profesor", "haji", "jenderal", "sultan",
         "dr", "prof", "hj", "h", "ir", "drs"
       ]);
-      const streetQueryNoise = new Set(["atas", "bawah", "sebagian", "baru", "lama", "dalam"]);
+      const streetQueryNoise = new Set(["sebagian", "dalam"]);
 
       function isStreetLeadingNoise(token) {
         return streetHonorifics.has(token) || /^[a-z]$/.test(token);
