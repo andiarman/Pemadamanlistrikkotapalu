@@ -188,6 +188,7 @@ async function main() {
   const pendingFile = path.join(rootDir, 'data', 'pending-import.json');
   const statusFile = path.join(rootDir, 'data', 'import-status.json');
   const knownLocationsFile = path.join(rootDir, 'data', 'known-locations.json');
+  const sultengPlacesFile = path.join(rootDir, 'data', 'sulteng-places.json');
   const paluIndexFile = path.join(rootDir, 'data', 'osm-index-palu.json');
 
   if (!fs.existsSync(pendingFile)) {
@@ -218,6 +219,20 @@ async function main() {
   if (fs.existsSync(knownLocationsFile)) {
     try {
       knownEntries = JSON.parse(fs.readFileSync(knownLocationsFile, 'utf8'));
+    } catch {}
+  }
+  if (fs.existsSync(sultengPlacesFile)) {
+    try {
+      const sultengObj = JSON.parse(fs.readFileSync(sultengPlacesFile, 'utf8'));
+      const places = Array.isArray(sultengObj) ? sultengObj : (sultengObj && sultengObj.places) || [];
+      for (const item of places) {
+        if (Array.isArray(item)) {
+          const [name, lat, lon] = item;
+          if (name && typeof lat === 'number' && typeof lon === 'number') {
+            knownEntries.push({ location: name, latitude: lat, longitude: lon, displayName: name });
+          }
+        }
+      }
     } catch {}
   }
   if (fs.existsSync(paluIndexFile)) {
