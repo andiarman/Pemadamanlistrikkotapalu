@@ -195,8 +195,13 @@ function getUlpContext(ulpName) {
   return "Sulawesi Tengah, Indonesia";
 }
 
+let lastGoogleDiagnostic = null;
+
 async function resolveWithGoogleMaps(locationName, ulpName, apiKey) {
-  if (!apiKey || !locationName) return null;
+  if (!apiKey || !locationName) {
+    if (!apiKey) lastGoogleDiagnostic = "GOOGLE_MAPS_API_KEY kosong di environment";
+    return null;
+  }
   const context = getUlpContext(ulpName);
   const cleanName = locationName.trim();
   const query = `${cleanName}, ${context}`;
@@ -204,7 +209,10 @@ async function resolveWithGoogleMaps(locationName, ulpName, apiKey) {
 
   try {
     const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
-    if (!res.ok) return null;
+    if (!res.ok) {
+      lastGoogleDiagnostic = `HTTP ${res.status}`;
+      return null;
+    }
     const data = await res.json();
     if (data.status === "OK" && Array.isArray(data.results) && data.results.length > 0) {
       const top = data.results[0];
@@ -212,14 +220,23 @@ async function resolveWithGoogleMaps(locationName, ulpName, apiKey) {
       const lon = top.geometry?.location?.lng;
       if (typeof lat === "number" && typeof lon === "number" &&
           lat >= -4.5 && lat <= 2.0 && lon >= 117.0 && lon <= 125.5) {
+        lastGoogleDiagnostic = "OK";
         return {
           latitude: lat,
           longitude: lon,
           displayName: top.formatted_address || `${cleanName}, ${context}`
         };
+      } else {
+        lastGoogleDiagnostic = `Di luar batas Sulteng (${lat}, ${lon})`;
+      }
+    } else {
+      lastGoogleDiagnostic = `${data.status}: ${data.error_message || '(tanpa pesan)'}`;
+      if (data.status !== "ZERO_RESULTS") {
+        console.warn(`[Google Maps Warning] "${cleanName}": ${lastGoogleDiagnostic}`);
       }
     }
   } catch (err) {
+    lastGoogleDiagnostic = `Error: ${err.message}`;
     console.warn(`[Google Maps Warning] "${cleanName}": ${err.message}`);
   }
   return null;
@@ -533,6 +550,9 @@ async function main() {
     totalStreets,
     mappedStreets: mappedCount,
     progressPercent: 100,
+    googleMapsApiDetected: !!googleApiKey,
+    googleMapsDiagnostic: lastGoogleDiagnostic,
+    newlyLearnedCount: newlyLearnedPlaces.length,
     startedAt: initialStatus.startedAt,
     completedAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
