@@ -1845,7 +1845,7 @@ Anda membaca gambar flyer resmi jadwal pemadaman listrik PLN di Sulawesi Tengah.
   "schema_version": 1,
   "events": [
     {
-      "title": "Judul kegiatan sesuai flyer",
+      "title": "Info Peningkatan Keandalan Kelistrikan",
       "start_time": "2026-11-14T09:00:00+08:00",
       "end_time": "2026-11-14T13:30:00+08:00",
       "locations": ["Kota Palu", "Donggala"],
@@ -1857,12 +1857,24 @@ Anda membaca gambar flyer resmi jadwal pemadaman listrik PLN di Sulawesi Tengah.
             "Jalan M. Thamrin Bawah",
             "Jalan Veteran Atas",
             "Jalan Veteran Bawah",
+            "Jalan Basuki Rahmat Bawah",
+            "Palu Grand Mall",
+            "Ramayana",
+            "Hotel Santika",
             "Hotel Grand Duta",
-            "Universitas IAIN",
-            "Huntap Tondo",
+            "Sriti Ballroom",
+            "RSUD Anutapura",
+            "RS Islam",
             "RS Torabelo",
+            "UIN Datokarama Palu - Kampus I Palu",
+            "Untad",
+            "Stadion Gawalise",
+            "Huntap Balaroa",
+            "Huntap Duyu",
+            "Huntap Tondo",
+            "Huntap Pombowe",
             "PT Pelabuhan Indonesia Pantoloan",
-            "BTN Graha Mutiara"
+            "PT CONCH"
           ]
         }
       ]
@@ -1870,41 +1882,58 @@ Anda membaca gambar flyer resmi jadwal pemadaman listrik PLN di Sulawesi Tengah.
   ]
 }
 
-Ketentuan Khusus (Sangat Penting):
-1. PEMISAHAN KATA 'ATAS' & 'BAWAH' / DIFERENSIATOR:
-   - Jika ada nama jalan atau lokasi dengan kata penjelas seperti "Atas", "Bawah", "Ujung", "Induk", "Baru", "Lama", angka romawi ("I", "II"), atau cabang ("1", "2"), WAJIB DIPISAHKAN menjadi dua titik/entitas tersendiri!
-   - Contoh: flyer menulis "Jl M. Thamrin atas" -> tulis "Jalan M. Thamrin Atas" (jangan dipotong jadi "Jalan M. Thamrin").
-   - Contoh: flyer menyebut "Veteran atas" dan "Veteran bawah" -> masukkan KEDUA titiknya secara terpisah: "Jalan Veteran Atas" dan "Jalan Veteran Bawah".
-   - Contoh: "Jl Tangkasi Atas", "Dsn Majulea atas", "Wani I", "Wani II", "Pantoloan", "Pantoloan Boya", "Desa Suli Indah", "Desa Suli Induk" -> pertahankan pembeda tersebut sebagai entitas mandiri.
+Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
 
-2. NAMA TEMPAT, FASILITAS, GEDUNG & PERUSAHAAN (BUKAN HANYA NAMA JALAN):
-   - Masukkan seluruh nama tempat, fasilitas publik, kawasan bisnis, dan perumahan yang tertulis di flyer ke dalam array "locations":
-     * Rumah Sakit / Klinik: contoh "RS Torabelo", "RS Islam", "Apotek...".
-     * Kampus / Sekolah: contoh "Universitas IAIN", "Untad", "SPN Labuan".
-     * Hotel / Penginapan: contoh "Hotel Grand Duta", "Andalas Hotel".
-     * Perusahaan / Pabrik / Industri / BUMN: contoh "PT Pelabuhan Indonesia Pantoloan", "PT Semen Tonasa", "PT Duco Food Indonesia", "PT Megah Batu Abadi", "PT Japfa", "PT Haycarb", "PT Agro Manunggal Cocos", "PT Prima Gelora (Big Land)", "CV Mitra Bangun Nusantara", "Pangsarop Bea Cukai".
-     * Kompleks Perumahan / Huntap: contoh "Huntap Tondo", "Huntap Pombowe", "Perumnas Tinggede", "BTN Bumi Roviga", "Perumdos Untad", "BTN Vatutela", "BTN Griya Tadulako Permai", "BTN Graha Mutiara", "Green Baliase", "Griya Baliase", "BTN Puskopad", "BTN Bumi Anggur", "Perumahan Griya Permai".
-     * Wisata / Rekreasi: contoh "Wilayah Taipa Beach".
-     * Kantor Pemerintahan: contoh "Kompleks Perkantoran Parigi".
+1. PEMISAHAN KATA 'ATAS' & 'BAWAH' / DIFERENSIATOR LOKASI:
+   - Jika flyer menuliskan lokasi dengan penjelas seperti "Atas", "Bawah", "Ujung", "Induk", "Baru", "Lama", angka romawi ("I", "II"), atau cabang ("1", "2"), WAJIB DIPISAHKAN menjadi titik tersendiri!
+   - Contoh nyata dari flyer:
+     * "Jl. MH. Thamrin bawah" dan "Jl M. Thamrin atas" -> pisahkan menjadi DUA titik: "Jalan M. Thamrin Bawah" dan "Jalan M. Thamrin Atas" (JANGAN PERNAH dipotong hanya menjadi "Jalan M. Thamrin").
+     * "Veteran atas" dan "Veteran bawah" -> masukkan KEDUA titiknya: "Jalan Veteran Atas" dan "Jalan Veteran Bawah".
+     * "Jl. Basuki Rahmat bawah" -> masukkan "Jalan Basuki Rahmat Bawah".
+     * "Jl Tangkasi Atas" -> masukkan "Jalan Tangkasi Atas".
+     * "Asam I" dan "Asam II" -> pisahkan menjadi "Jalan Asam I" dan "Jalan Asam II".
+     * "Wani I" dan "Wani II" -> pisahkan menjadi "Wani I" dan "Wani II".
+     * "Dsn Majulea atas" -> masukkan "Dusun Majulea Atas".
+     * "Loli Oge", "Loli Saluran", "Loli Tasiburi" -> pisahkan masing-masing.
+     * "Sidole Induk", "Sidole Barat", "Sidole Timur" -> pisahkan masing-masing.
+     * "Ampibabo Induk", "Ampibabo Timur", "Ampibabo Utara" -> pisahkan masing-masing.
+     * "Lemo Induk", "Lemo Tengah", "Lemo Utara" -> pisahkan masing-masing.
+     * "Tomoli Selatan", "Tomoli Induk", "Tomoli Utara" -> pisahkan masing-masing.
 
-3. MULTI-SESI WAKTU DALAM SATU LEMBAR FLYER:
-   - Jika dalam satu gambar flyer terdapat beberapa rentang jam pemadaman yang berbeda (misalnya blok jam 09.00 - 13.30 untuk ULP Taweli/Tambu, dan blok jam 09.00 - 16.30 untuk ULP Bungku), buatkan objek "event" TERPISAH untuk masing-masing rentang waktu dengan start_time dan end_time yang sesuai dengan ULP terkait.
+2. NAMA FASILITAS, BANGUNAN, BISNIS & TITIK NON-JALAN (BUKAN HANYA NAMA JALAN):
+   - Masukkan seluruh nama tempat, fasilitas publik, landmark, hotel, rumah sakit, kampus, dan kawasan industri yang tertulis di flyer ke dalam array "locations":
+     * Mal & Pusat Belanja: "Palu Grand Mall", "Ramayana", "Kompleks Palu Plaza", "Palu Square", "Kompleks Pasar Bambaru", "Kompleks Pergudangan", "Kompleks Gudang Wings".
+     * Hotel, Ballroom & Penginapan: "Hotel Santika", "Villa Sutan Raja", "Sriti Ballroom", "Vila Doda", "Hotel Grand Duta", "Andalas Hotel".
+     * Rumah Sakit & Kesehatan: "RSUD Anutapura", "RS Islam", "RS Torabelo", "RS Budi Agung", apotek/klinik.
+     * Fasilitas Publik, Pemerintahan & Militer: "Asrama Korem", "Kompleks TNI AL", "SPN Labuan", "Terminal Tipo", "Pangsarop Bea Cukai", "Kantor Lurah Kabonena", "Kantor Lurah Balaroa", "Kantor Lurah Donggala Kodi", "Kantor Desa Tinggedhe", "Kantor Polres Parigi", "Kuburan Cina".
+     * Kampus & Sekolah: "UIN Datokarama Palu - Kampus I Palu", "Untad", "Perumdos Untad", "Universitas IAIN".
+     * Sarana Olahraga & Taman: "Stadion Gawalise", "Taman Lasoso", "Taman Bundaran Hasanudin", "Bundaran STQ", "Masjid Raya", "Wilayah Taipa Beach".
+     * Kompleks Perumahan, BTN & Huntap: "Huntap Balaroa", "Huntap Duyu", "Huntap Tondo", "Huntap Pombowe", "Perum Silae Hills", "BTN Silae Permai", "Perum Taman Ria Estate", "Perum Banua Nagaya", "BTN Mitra Punjidi", "Perum Bukit Nirwana", "BTN Bumi Roviga", "BTN Vatutela", "BTN Griya Tadulako Permai", "BTN Graha Mutiara", "Green Baliase", "Griya Baliase", "BTN Puskopad", "BTN Bumi Anggur", "Perumahan Griya Permai", "Perumnas Tinggede", "BTN Revima", "BTN Griya Alam", "BTN Berlian", "BTN Graha Cipta", "BTN Kurnia".
+     * Industri & Pabrik: "PT Pelabuhan Indonesia Pantoloan", "PT CONCH", "PT Semen Tonasa", "PT Duco Food Indonesia", "PT Megah Batu Abadi", "PT Japfa", "PT Haycarb", "PT Agro Manunggal Cocos", "PT Prima Gelora (Big Land)", "PT Cipta Agro Nusantara", "PT Putra Labuan Mandiri", "PT Sentra Labuan Tegar", "CV Mitra Bangun Nusantara", "Kawasan Fonuasingko".
 
-4. GABUNGAN ULP (MULTI-ULP):
-   - Jika flyer menuliskan gabungan ULP seperti "ULP Palu Kota dan ULP Kamonji", masukkan nama ULP tersebut ke dalam area secara utuh ("ULP Palu Kota dan ULP Kamonji").
+3. PERBAIKAN FORMAT & TYPO DARI FLYER:
+   - Singkatan Lorong ("Lrg" atau "Irg"): Ubah menjadi "Lorong ..." (contoh: "Irg Perjuangan" -> "Lorong Perjuangan", "Lrg Saleko" -> "Lorong Saleko", "Lrg Permata Hijau" -> "Lorong Permata Hijau", "Lrg Sintuvu" -> "Lorong Sintuvu", "Lorong Bakso" -> "Lorong Bakso").
+   - Titik dua / Penjelasan wilayah: Jika tertulis "Jl Malonda Wilayah : Perum Silae Hills...", pisahkan menjadi DUA entitas terpisah: "Jalan Malonda" dan "Perum Silae Hills".
+   - Tanda garis miring ("/"): Jika ada "Jl. Terong/Palola", masukkan sebagai dua titik ("Jalan Terong" dan "Jalan Palola") atau pertahankan nama jalannya.
+   - Typo Jalan Poros: "Posor Palu - Palolo" adalah typo flyer untuk "Jalan Poros Palu - Palolo".
+   - Pertahankan jalan poros penghubung: "Jalan Poros Palu - Bangga", "Jalan Poros Palu - Donggala", "Jalan Pantoloan-Tawaeli", "Jalan Palu-Parigi", "Jalan Kebun Kopi".
 
-5. PEMBERSIHAN KATA KETERANGAN BUKAN LOKASI:
-   - Buang kata sambung seperti: "dan Sekitarnya", "dan sekitarnya", "sebagian", "sekitarnya".
-   - Contoh: "Beka dan Sekitarnya" -> masukkan "Beka" saja (jangan pernah memasukkan "dan Sekitarnya" sebagai nama lokasi).
+4. PEMBERSIHAN KATA KETERANGAN BUKAN LOKASI:
+   - Buang kata sambung di akhir seperti: "dan Sekitarnya", "dan sekitarnya", "sebagian", "sekitarnya".
+   - Contoh: "Kuburan Cina dan sekitarnya" -> masukkan "Kuburan Cina".
+   - Contoh: "Beka dan Sekitarnya" -> masukkan "Beka" (jangan masukkan "dan Sekitarnya" sebagai nama lokasi).
    - "sebagian Kec. Labuan" -> masukkan "Kecamatan Labuan".
    - "Desa Bahodopi Sebagian" -> masukkan "Desa Bahodopi".
 
-6. FORMAT TANGGAL & ZONA WAKTU WITA (+08:00):
-   - Salin tanggal sesuai flyer (misalnya Sabtu, 14 November 2026 -> 2026-11-14).
-   - Format waktu harus ISO 8601 dengan offset WITA (+08:00), contoh: "2026-11-14T09:00:00+08:00".
+5. MULTI-SESI WAKTU DALAM SATU LEMBAR FLYER:
+   - Jika dalam satu flyer terdapat beberapa blok jam pemadaman yang berbeda (misalnya blok 09.00 - 13.30, blok 09.00 - 16.30, dan blok 19.00 - 22.30), buatkan objek "event" TERPISAH untuk masing-masing rentang waktu dengan start_time dan end_time yang presisi beserta ULP dan daftar lokasi yang ada di blok jam tersebut.
 
-7. JALAN POROS PENGHUBUNG:
-   - Pertahankan nama jalan poros antar-wilayah: contoh "Jalan Poros Palu Bangga", "Jalan Pantoloan-Tawaeli", "Jalan Palu-Parigi", "Jalan Kebun Kopi", "Jalan Posor Palu – Palolo".
+6. GABUNGAN ULP (MULTI-ULP):
+   - Jika flyer menuliskan gabungan ULP seperti "ULP Palu Kota dan ULP Kamonji", masukkan nama ULP tersebut secara utuh ("ULP Palu Kota dan ULP Kamonji").
+
+7. FORMAT TANGGAL & ZONA WAKTU WITA (+08:00):
+   - Salin tanggal sesuai header flyer (contoh: Sabtu, 14 November 2026 -> 2026-11-14).
+   - Format waktu harus ISO 8601 dengan offset WITA (+08:00), contoh: "2026-11-14T09:00:00+08:00".
 
 8. VALIDITAS OUTPUT:
    - Jawaban akhir HANYA SATU objek JSON murni: tanpa markdown (```json), tanpa teks pengantar, dan tanpa catatan tambahan.
@@ -4366,10 +4395,30 @@ Ketentuan Khusus (Sangat Penting):
               continue;
             }
             const seenStreets = new Set();
-            const streets = area.locations.filter((street) => typeof street === "string").map((street) => {
-              const value = street.trim().replace(/\s+/g, " ")
+            const rawItems = (Array.isArray(area.locations) ? area.locations : [])
+              .filter((street) => typeof street === "string")
+              .flatMap((item) => {
+                if (/wilayah\s*:/i.test(item)) {
+                  return item.split(/wilayah\s*:/i);
+                }
+                if (item.includes(";")) {
+                  return item.split(";");
+                }
+                return [item];
+              });
+
+            const streets = rawItems.map((street) => {
+              let value = street.trim().replace(/\s+/g, " ")
+                .replace(/\s*(?:dan\s+sekitarnya|dan\s+sekitarnya\.?|sekitarnya\.?)$/i, "")
                 .replace(/^jl\.?\s+/i, "Jalan ")
-                .replace(/^(?:kel\.?|kelurahan|desa|kec\.?|kecamatan)\s+/i, "");
+                .replace(/^(?:lrg\.?|irg\.?)\s+/i, "Lorong ")
+                .replace(/^dsn\.?\s+/i, "Dusun ");
+
+              const strippedAdmin = value.replace(/^(?:kel\.?|kelurahan|desa|kec\.?|kecamatan)\s+/i, "");
+              if (strippedAdmin.length >= 3) {
+                value = strippedAdmin;
+              }
+
               if (value.length < 3 || value.length > 150 || !/[\p{L}]/u.test(value)) return "";
               if (/^(?:rt|rw)\b/i.test(value)) return "";
               const key = value.toLocaleLowerCase("id-ID");

@@ -2595,5 +2595,425 @@
     "longitude": 121.7259036,
     "displayName": "Wata, Bungku Barat, Morowali, Sulawesi Tengah, Indonesia",
     "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Palu Grand Mall",
+    "latitude": -0.8872,
+    "longitude": 119.8519,
+    "displayName": "Palu Grand Mall, Jl. Diponegoro No.1, Lere",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Ramayana Palu",
+    "latitude": -0.9064,
+    "longitude": 119.8821,
+    "displayName": "Ramayana Palu, Jl. Wolter Monginsidi, Lolu Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Ramayana",
+    "latitude": -0.9064,
+    "longitude": 119.8821,
+    "displayName": "Ramayana, Jl. Wolter Monginsidi, Lolu Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Palu Plaza",
+    "latitude": -0.8932,
+    "longitude": 119.8576,
+    "displayName": "Palu Plaza, Jl. Danau Poso / Sis Al Jufri, Siranindi",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Kompleks Palu Plaza",
+    "latitude": -0.8932,
+    "longitude": 119.8576,
+    "displayName": "Kompleks Palu Plaza, Jl. Danau Poso / Sis Al Jufri, Siranindi",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Palu Square",
+    "latitude": -0.9042,
+    "longitude": 119.8775,
+    "displayName": "Palu Square, Jl. Monginsidi / Hasanuddin",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Kompleks Pasar Bambaru",
+    "latitude": -0.8902,
+    "longitude": 119.8588,
+    "displayName": "Kompleks Pasar Bambaru, Jl. Teuku Umar / Bambaru, Palu",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Kompleks Pergudangan",
+    "latitude": -0.854,
+    "longitude": 119.895,
+    "displayName": "Kompleks Pergudangan, Jl. Soekarno Hatta, Tondo",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Kompleks Gudang Wings",
+    "latitude": -0.8715,
+    "longitude": 119.822,
+    "displayName": "Kompleks Gudang Wings, Jl. Malonda, Tipo",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Hotel Santika Palu",
+    "latitude": -0.8974,
+    "longitude": 119.8768,
+    "displayName": "Hotel Santika Palu, Jl. Moh. Hatta No.18, Lolu Utara",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Hotel Santika",
+    "latitude": -0.8974,
+    "longitude": 119.8768,
+    "displayName": "Hotel Santika, Jl. Moh. Hatta No.18, Lolu Utara",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Villa Sutan Raja",
+    "latitude": -0.9168,
+    "longitude": 119.8975,
+    "displayName": "Villa Sutan Raja, Jl. Dr. Abdurrahman Saleh No.45, Birobuli Utara",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Sutan Raja Hotel",
+    "latitude": -0.9168,
+    "longitude": 119.8975,
+    "displayName": "Sutan Raja Hotel, Jl. Dr. Abdurrahman Saleh No.45, Birobuli Utara",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Sriti Ballroom",
+    "latitude": -0.8953,
+    "longitude": 119.8529,
+    "displayName": "Sriti Ballroom, Jl. Durian No.88, Kamonji",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Vila Doda",
+    "latitude": -0.9167,
+    "longitude": 119.8315,
+    "displayName": "Vila Doda, Doda, Kinovaro",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Villa Doda",
+    "latitude": -0.9167,
+    "longitude": 119.8315,
+    "displayName": "Villa Doda, Doda, Kinovaro",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Hotel Grand Duta",
+    "latitude": -0.8928,
+    "longitude": 119.8795,
+    "displayName": "Hotel Grand Duta, Jl. Dr. Sutomo No.77, Besusu Tengah",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "RSUD Anutapura",
+    "latitude": -0.9038,
+    "longitude": 119.8492,
+    "displayName": "RSUD Anutapura, Jl. Kangkung No.1, Donggala Kodi",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "RSUD Anutapura Palu",
+    "latitude": -0.9038,
+    "longitude": 119.8492,
+    "displayName": "RSUD Anutapura Palu, Jl. Kangkung No.1, Donggala Kodi",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "RS Islam",
+    "latitude": -0.9171,
+    "longitude": 119.8876,
+    "displayName": "RS Islam, Jl. Banteng No.1, Birobuli Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "RS Islam Siti Maryam",
+    "latitude": -0.9171,
+    "longitude": 119.8876,
+    "displayName": "RS Islam Siti Maryam, Jl. Banteng No.1, Birobuli Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "RS Torabelo",
+    "latitude": -0.9858,
+    "longitude": 119.9231,
+    "displayName": "RS Torabelo, Jl. Trans Palu - Kulawi, Desa Sidera, Sigi",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "RSUD Torabelo Sigi",
+    "latitude": -0.9858,
+    "longitude": 119.9231,
+    "displayName": "RSUD Torabelo Sigi, Jl. Trans Palu - Kulawi, Desa Sidera, Sigi",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Asrama Korem",
+    "latitude": -0.8877,
+    "longitude": 119.8552,
+    "displayName": "Asrama Korem, Jl. WR Supratman, Lere",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Kompleks TNI AL",
+    "latitude": -0.8755,
+    "longitude": 119.8402,
+    "displayName": "Kompleks TNI AL, Watusampu / Lere",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Kantor Lurah Kabonena",
+    "latitude": -0.8876,
+    "longitude": 119.8368,
+    "displayName": "Kantor Lurah Kabonena, Kabonena, Ulujadi",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Kantor Lurah Balaroa",
+    "latitude": -0.8955,
+    "longitude": 119.8451,
+    "displayName": "Kantor Lurah Balaroa, Balaroa, Palu Barat",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Kantor Desa Tinggede",
+    "latitude": -0.9288,
+    "longitude": 119.8662,
+    "displayName": "Kantor Desa Tinggede, Tinggede, Marawola, Sigi",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Kantor Polres Parigi",
+    "latitude": -0.8062,
+    "longitude": 120.1912,
+    "displayName": "Kantor Polres Parigi, Jl. Trans Sulawesi, Parigi",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "SPN Labuan",
+    "latitude": -0.6628,
+    "longitude": 119.8698,
+    "displayName": "SPN Labuan, Labuan Panimba, Kec. Labuan, Donggala",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "UIN Datokarama Palu - Kampus I Palu",
+    "latitude": -0.8883,
+    "longitude": 119.855,
+    "displayName": "UIN Datokarama Palu - Kampus I Palu, Jl. Diponegoro No.23, Lere",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Universitas IAIN",
+    "latitude": -0.8883,
+    "longitude": 119.855,
+    "displayName": "Universitas IAIN, Jl. Diponegoro No.23, Lere",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Untad",
+    "latitude": -0.8358,
+    "longitude": 119.8942,
+    "displayName": "Untad, Kampus Bumi Tadulako Tondo",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Universitas Tadulako",
+    "latitude": -0.8358,
+    "longitude": 119.8942,
+    "displayName": "Universitas Tadulako, Kampus Bumi Tadulako Tondo",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Perumdos Untad",
+    "latitude": -0.8392,
+    "longitude": 119.8978,
+    "displayName": "Perumdos Untad, Tondo, Kec. Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Stadion Gawalise",
+    "latitude": -0.9126,
+    "longitude": 119.8435,
+    "displayName": "Stadion Gawalise, Kelurahan Duyu, Tatanga",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Bundaran STQ",
+    "latitude": -0.8527,
+    "longitude": 119.8903,
+    "displayName": "Bundaran STQ, Jl. Soekarno-Hatta, Tondo",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Taman Bundaran Hasanudin",
+    "latitude": -0.903,
+    "longitude": 119.877,
+    "displayName": "Taman Bundaran Hasanudin, Bundaran Hasanuddin, Palu",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Kuburan Cina",
+    "latitude": -0.8712,
+    "longitude": 119.8925,
+    "displayName": "Kuburan Cina, Talise / Poboya, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Huntap Balaroa",
+    "latitude": -0.8986,
+    "longitude": 119.8395,
+    "displayName": "Huntap Balaroa, Kelurahan Balaroa, Palu Barat",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Huntap Duyu",
+    "latitude": -0.9185,
+    "longitude": 119.8412,
+    "displayName": "Huntap Duyu, Kelurahan Duyu, Tatanga",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Huntap Pombowe",
+    "latitude": -0.9842,
+    "longitude": 119.9535,
+    "displayName": "Huntap Pombowe, Desa Pombowe, Sigi Biromaru",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Perum Silae Hills",
+    "latitude": -0.8752,
+    "longitude": 119.8285,
+    "displayName": "Perum Silae Hills, Kelurahan Silae, Ulujadi",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "BTN Silae Permai",
+    "latitude": -0.8785,
+    "longitude": 119.832,
+    "displayName": "BTN Silae Permai, Kelurahan Silae, Ulujadi",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Perum Taman Ria Estate",
+    "latitude": -0.8805,
+    "longitude": 119.8355,
+    "displayName": "Perum Taman Ria Estate, Silae / Kabonena",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Perum Bukit Nirwana",
+    "latitude": -0.914,
+    "longitude": 119.839,
+    "displayName": "Perum Bukit Nirwana, Duyu / Balaroa",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "PT Pelabuhan Indonesia Pantoloan",
+    "latitude": -0.7061,
+    "longitude": 119.8556,
+    "displayName": "PT Pelabuhan Indonesia Pantoloan, Pelabuhan Pantoloan, Tawaeli",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "PT CONCH",
+    "latitude": -0.6925,
+    "longitude": 119.8672,
+    "displayName": "PT CONCH, Baiya, Tawaeli",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "PT Semen Tonasa",
+    "latitude": -0.7015,
+    "longitude": 119.858,
+    "displayName": "PT Semen Tonasa, Pantoloan, Tawaeli",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Pangsarop Bea Cukai",
+    "latitude": -0.7095,
+    "longitude": 119.8542,
+    "displayName": "Pangsarop Bea Cukai, Pantoloan, Tawaeli",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Jalan Basuki Rahmat Bawah",
+    "latitude": -0.9085,
+    "longitude": 119.885,
+    "displayName": "Jalan Basuki Rahmat Bawah, Birobuli Utara / Lolu Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Basuki Rahmat Atas",
+    "latitude": -0.912,
+    "longitude": 119.878,
+    "displayName": "Jalan Basuki Rahmat Atas, Tatura Selatan / Palu Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan M. Thamrin Bawah",
+    "latitude": -0.8905,
+    "longitude": 119.8745,
+    "displayName": "Jalan M. Thamrin Bawah, Besusu Tengah / Besusu Barat",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan MH. Thamrin Bawah",
+    "latitude": -0.8905,
+    "longitude": 119.8745,
+    "displayName": "Jalan MH. Thamrin Bawah, Besusu Tengah / Besusu Barat",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Veteran Bawah",
+    "latitude": -0.9002,
+    "longitude": 119.8805,
+    "displayName": "Jalan Veteran Bawah, Lolu Utara / Lolu Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Veteran Atas",
+    "latitude": -0.9075,
+    "longitude": 119.8835,
+    "displayName": "Jalan Veteran Atas, Lolu Selatan / Tatura",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Poros Palu - Palolo",
+    "latitude": -0.975,
+    "longitude": 119.925,
+    "displayName": "Jalan Poros Palu - Palolo, Sigi Biromaru",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Lorong Bakso",
+    "latitude": -0.8965,
+    "longitude": 119.871,
+    "displayName": "Lorong Bakso, Palu Barat",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Lorong Perjuangan",
+    "latitude": -0.915,
+    "longitude": 119.868,
+    "displayName": "Lorong Perjuangan, Palu Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Lorong Permata Hijau",
+    "latitude": -0.9125,
+    "longitude": 119.872,
+    "displayName": "Lorong Permata Hijau, Palu Selatan",
+    "ulpName": "ULP Palu Kota"
   }
 ]
