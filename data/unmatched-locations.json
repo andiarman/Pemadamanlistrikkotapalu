@@ -1,3161 +1,2112 @@
 {
   "date": "2026-11-14",
-  "generatedAt": "2026-11-14T05:58:50.671Z",
+  "generatedAt": "2026-11-14T06:26:09.908Z",
   "summary": {
     "totalLocations": 564,
-    "totalMatched": 172,
-    "totalUnmatched": 392,
-    "matchRatePercent": 30,
-    "unmatchedByUlp": {
-      "ULP Taweli": 51,
-      "ULP Tambu": 29,
-      "ULP Poso": 54,
-      "ULP Tentena": 15,
-      "ULP Bungku": 13,
-      "ULP Palu Kota": 26,
-      "ULP Parigi": 33,
-      "ULP Kolonedale": 42,
-      "ULP Kota": 18,
-      "ULP Donggala": 87,
-      "ULP Palu Kota dan ULP Kamonji": 24
-    }
+    "totalMatched": 214,
+    "totalUnmatched": 350,
+    "matchRatePercent": 38
   },
   "unmatchedLocations": [
     {
       "location": "Jalan Pantoloan-Tawaeli",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan H. Sabange",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Pengga Lembah",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Tompotika",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tawaeli",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pantoloan-Lero",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan H. Patilla",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Kayu Riya",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Makagili",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Pueboya",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Labuan Lumbubaka",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pantoloan Boya",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Wombo Kalonggo",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tanantovea",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "CV Mitra Bangun Nusantara",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "industri",
-      "reason": "Fasilitas industri/perusahaan swasta belum tercatat di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "PT Cipta Agro Nusantara",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "industri",
-      "reason": "Fasilitas industri/perusahaan swasta belum tercatat di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "PT Megah Batu Abadi",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "industri",
-      "reason": "Fasilitas industri/perusahaan swasta belum tercatat di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "PT Putra Labuan Mandiri",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "industri",
-      "reason": "Fasilitas industri/perusahaan swasta belum tercatat di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "PT Sentra Labuan Tegar",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "industri",
-      "reason": "Fasilitas industri/perusahaan swasta belum tercatat di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sisere",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lende",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Labean",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Meli",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tambu",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Mapane Tambu",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tovia",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Siweli",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sibualong",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Simagaya",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Roras",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sipure",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sibayu",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kampung Baru",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Siopi",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Budi Mukti",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Karya Mukti",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Mukti Agung",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Parisan Agung",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kambayang",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sabang",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lombonga",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Walandano",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Palau",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lewonu",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Malei",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pomolulu",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Awesang",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Ketong",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Manimbaya",
       "ulpName": "ULP Tambu",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Petiro Bajo",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Ratolene",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tabalu",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Betalemba",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Gantinadi",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
-    },
-    {
-      "location": "Bonesompe",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lawanga Tawongan",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
-    },
-    {
-      "location": "Lawanga",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lombogia",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
-    },
-    {
-      "location": "Tegal Rejo",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Madale",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Dusun Majulea Atas",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lembo Mawo",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sayo",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Silanca",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Labuadago",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Batugencu",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sepe",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sintuwu Lemba",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Ratuombu",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pamona Utara",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pamona Puselemba",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pamona Barat",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lore Barat",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lore Selatan",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T13:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kapala",
       "ulpName": "ULP Bungku",
-      "region": "Kab. Morowali",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Onepute Jaya",
       "ulpName": "ULP Bungku",
-      "region": "Kab. Morowali",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lele",
       "ulpName": "ULP Bungku",
-      "region": "Kab. Morowali",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Dampala",
       "ulpName": "ULP Bungku",
-      "region": "Kab. Morowali",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Siumbatu",
       "ulpName": "ULP Bungku",
-      "region": "Kab. Morowali",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lalampu",
       "ulpName": "ULP Bungku",
-      "region": "Kab. Morowali",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bahodopi",
       "ulpName": "ULP Bungku",
-      "region": "Kab. Morowali",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Keurea",
       "ulpName": "ULP Bungku",
-      "region": "Kab. Morowali",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bahomakmur",
       "ulpName": "ULP Bungku",
-      "region": "Kab. Morowali",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T09:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Untad I Bumi Roviga",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Sosiologi",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan DR. H. Andi Mattulada",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "BTN Bumi Roviga",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "perumahan",
-      "reason": "Kompleks perumahan/komersial baru belum ada tag POI di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "BTN Vatutela",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "perumahan",
-      "reason": "Kompleks perumahan/komersial baru belum ada tag POI di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "BTN Griya Tadulako Permai",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "perumahan",
-      "reason": "Kompleks perumahan/komersial baru belum ada tag POI di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Potoya",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Langaleso",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kota Arindau",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Tulo",
-      "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pincara",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Padende",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Wera",
-      "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Balumpewa",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Parampadende",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pesaku",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bobo",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bangga",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kalukubula",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Dae Matalu",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pewunu",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lebanu",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kaleke",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Rarampadende",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bomba",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Beka",
       "ulpName": "ULP Palu Kota",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Suli Indah",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Gandasari",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Beraban",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Catur Karya",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Suli Induk",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sausu Taliabo",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sausu Salubanga",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Auma",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sausu Tambu",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sausu Peore",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Maleali",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Balinggi Jati",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lebagu",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tumpapa Indah",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lantojaya",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Jalan Pulau Batam",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Pulau Nias",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Pulau Irian",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Jalan Pulau Sabang",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Kayamanya",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kayamanya Sentral",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Jalan Pulau Bali",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Jalan Pulau Sumatera",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Jalan Pulau Sulawesi",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Pulau Timor",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Pulau Seram",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Pulau Madura",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Pulau Jawa 1",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Pulau Jawa 2",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Pulau Tarakan",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Pulau Kalimantan",
-      "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sandada",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tojo",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pancuma",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Ueloba",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tongku",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Podi",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Padapu",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kaynyole",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Buyung Taripa",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Soyojaya",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Londi",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Taende",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lanumor",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Ensa",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Koromonto",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Korowasu",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tompira",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bunta",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Koya",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bungini",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Korololama",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Korololaki",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bahontula",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kolonodale",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bungintimbe",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Towara",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Molino",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Mohoni",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Peboa",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Towara Pantai",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Ungkea",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Molores",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bimor Jaya",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Keuno",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Solonsa",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Solonsa Jaya",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Ungkaya",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bumi Harapan",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Moahino",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Emea",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sampeantaba",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Marsaoleh",
-      "ulpName": "ULP Bungku",
-      "region": "Kab. Morowali",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Sakita",
-      "ulpName": "ULP Bungku",
-      "region": "Kab. Morowali",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Matano",
-      "ulpName": "ULP Bungku",
-      "region": "Kab. Morowali",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Tofoiso",
-      "ulpName": "ULP Bungku",
-      "region": "Kab. Morowali",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00"
-    },
-    {
-      "location": "Jalan Balintuma",
-      "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T13:00:00+08:00 s/d 2026-11-14T16:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Buvu Panda",
       "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Sandjo",
       "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Liweinda",
       "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
-    },
-    {
-      "location": "Oloboju",
-      "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sigibiromaru",
       "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Watononju",
       "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
-    },
-    {
-      "location": "Jonooge",
-      "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
-    },
-    {
-      "location": "Kalukubula",
-      "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Hamengkubuwono",
       "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Peladuk",
       "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Mawasm",
       "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Pintu Air",
       "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Purnabakti",
       "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Perumahan Griya Permai",
       "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "perumahan",
-      "reason": "Kompleks perumahan/komersial baru belum ada tag POI di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "BTN Bumi Anggur",
       "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "perumahan",
-      "reason": "Kompleks perumahan/komersial baru belum ada tag POI di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
-    },
-    {
-      "location": "Pombewe",
-      "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sigi Biromaru",
       "ulpName": "ULP Kota",
-      "region": "Sulawesi Tengah",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Pantoloan-Tawaeli",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Marjuni",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Andudana",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Vatamoento",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Tanah Nolo",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Moh Nasir",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Logo",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Vinase",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Uevuku",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tawaeli",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "PT Duco Food Indonesia",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "industri",
-      "reason": "Fasilitas industri/perusahaan swasta belum tercatat di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "PT Maleo Paksi Ayu",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "industri",
-      "reason": "Fasilitas industri/perusahaan swasta belum tercatat di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "PT Artakindo Multi Perkasa",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "industri",
-      "reason": "Fasilitas industri/perusahaan swasta belum tercatat di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Ino Toa",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Kayu Rampe",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Kekentina",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Lamarani",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Pagaru Lemba",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Pantai Taipa",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Rata Lemba",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Rende Lele",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Palu Utara",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Wilayah Taipa Beach",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "PT Agro Manunggal Cocos",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "industri",
-      "reason": "Fasilitas industri/perusahaan swasta belum tercatat di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "PT Haycarb",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "industri",
-      "reason": "Fasilitas industri/perusahaan swasta belum tercatat di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "PT Japfa",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "industri",
-      "reason": "Fasilitas industri/perusahaan swasta belum tercatat di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "PT SPO Agro Resources",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "industri",
-      "reason": "Fasilitas industri/perusahaan swasta belum tercatat di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "PT Prima Gelora (Big Land)",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "industri",
-      "reason": "Fasilitas industri/perusahaan swasta belum tercatat di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Kebun Kopi",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Palu-Parigi",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tanantovea",
       "ulpName": "ULP Taweli",
-      "region": "Kota Palu (Tawaeli)",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Desa/Kelurahan Ampera",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bakubakulu",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Berdikasi",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bobo",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kapiroe",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Karunia",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lembatangoa",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Makmur",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Paloloan",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Patimbe",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Rahmat",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Ranteleda",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Rejeki",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sarumana",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sejahtera",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sigimpum Sintuwu",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tanah Harapan",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tongoa",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Ue Rani",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Uwe Nuni",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bilili",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kadidia",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kamarora",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sopu",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Wuasa",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Napu",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bariri",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kelurahan/Desa Boya",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Dusun Rumah Tujuh",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Dusun Pangga",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Maleni",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lapaloang",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kulolu",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Solowe",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Maranatha",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sidondo",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sibowi",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sibalaya",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kalawara",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pandere",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pakuli",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Simoro",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Saluki",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tuwa",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Salua",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pangana",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lili",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pobia",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bolapapu",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Mataue",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sungku",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Boladangko",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tangkulowi",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Toro",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Makuhi",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Watukilo",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lawua",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Salutome",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tompi Bugis",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tomua",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Gimpu",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lempe Lero",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pilimakujawa",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Padende",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Peningka",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Laemanta Utara",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tovalo",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sumber Tani",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tinombo Selatan",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Siney",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Khatulistiwa",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sidoan",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lado",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kasimbar Palapi",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Ogodopi",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kasimbar Barat",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00"
+      "timeSlot": "2026-11-14T16:00:00+08:00 s/d 2026-11-14T19:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Timbarante",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Angsana Raya",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "BTN Pengau",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "perumahan",
-      "reason": "Kompleks perumahan/komersial baru belum ada tag POI di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Kinta Baru",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kawole",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "BTN Saweli Gading",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "perumahan",
-      "reason": "Kompleks perumahan/komersial baru belum ada tag POI di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Perumnas Tinggede",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "perumahan",
-      "reason": "Kompleks perumahan/komersial baru belum ada tag POI di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Green Baliase",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "BTN Graha Mutiara",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "perumahan",
-      "reason": "Kompleks perumahan/komersial baru belum ada tag POI di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Mira Baliase",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Griya Baliase",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "BTN Puskopad",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "perumahan",
-      "reason": "Kompleks perumahan/komersial baru belum ada tag POI di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Baliase",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Padende",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Marawola Barat",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Porame",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Beka",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kinovaro",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sibedi",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "desa/wilayah",
-      "reason": "Belum terdata di OpenStreetMap / Nominatim dunia",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Cumi-cumi",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Mas Mansyur",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Tembang",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Cut Nyak Dien",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jalan Juanda",
       "ulpName": "ULP Palu Kota dan ULP Kamonji",
-      "region": "Kota Palu",
-      "type": "jalan/lorong",
-      "reason": "Jalan/lorong lokal belum memiliki geometri garis di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Desa/Kelurahan Bambarimi",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Lalombi",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lembasada",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Lumbulama",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Lumbumamara",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Lumbutarombo",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Mbuwu",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Ongulaara",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Salumpaku",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Salungkaenu",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Salusumbu",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Surumana",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tanampuru",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Tolongano",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Tosale",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Watatu",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kulolu",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Lumbudolo",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Powelua",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Mekar Baru",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Towale",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
-    },
-    {
-      "location": "Salubomba",
-      "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Polege",
       "ulpName": "ULP Donggala",
-      "region": "Kab. Donggala",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Matolele",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jononunu",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Loji",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bambalemo Ranomaisi",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lobu Mandiri",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Jono Kalora",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kompleks Perkantoran Parigi",
       "ulpName": "ULP Parigi",
-      "region": "Kab. Parigi Moutong",
-      "type": "perumahan",
-      "reason": "Kompleks perumahan/komersial baru belum ada tag POI di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Uekuli",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Betaua",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Uedele",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Tojo",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pacuma",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Podi",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Kayunyole",
       "ulpName": "ULP Poso",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pamona Selatan",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pamona Timur",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pamona Tenggara",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Mori Atas",
       "ulpName": "ULP Tentena",
-      "region": "Kab. Poso",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Sampeantaba",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lantula Jaya",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Puntari Makmur",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Atananga",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Bahonsuai",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Beringin Jaya",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Harapan Jaya",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Karaupa",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lambelu",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Lasampi",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Limbo Makmur",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Parilangke",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pebatae",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Pebotoa",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Samarenda",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Umbele",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     },
     {
       "location": "Marga Mulya",
       "ulpName": "ULP Kolonedale",
-      "region": "Kab. Morowali Utara",
-      "type": "desa/pedalaman",
-      "reason": "Desa/dusun di pedalaman belum memiliki node permukiman di OSM",
-      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00"
+      "timeSlot": "2026-11-14T19:00:00+08:00 s/d 2026-11-14T22:30:00+08:00",
+      "reason": "Belum terdata di OpenStreetMap / Nominatim"
     }
   ]
 }
