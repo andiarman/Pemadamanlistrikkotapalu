@@ -35,6 +35,7 @@ jobs:
       - name: Process import on server
         env:
           WORKER_URL: https://outage-map-app.vaultman.workers.dev
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
         run: |
           node scripts/process-import.js
 
@@ -46,7 +47,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Auto-process schedule on server"
+            git commit -m "Auto-process schedule on server & auto-learn places [skip ci]"
             git push
           fi
 

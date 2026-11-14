@@ -183,6 +183,48 @@ async function notifyWorkerStatus(statusData) {
   }
 }
 
+function getUlpContext(ulpName) {
+  const value = (ulpName || "").toLowerCase();
+  if (value.includes("palu") || value.includes("kamonji")) return "Kota Palu, Sulawesi Tengah";
+  if (value.includes("taweli")) return "Tawaeli, Kota Palu, Sulawesi Tengah";
+  if (value.includes("tamb") || value.includes("donggala")) return "Kabupaten Donggala, Sulawesi Tengah";
+  if (value.includes("parigi")) return "Kabupaten Parigi Moutong, Sulawesi Tengah";
+  if (value.includes("poso") || value.includes("tentena")) return "Kabupaten Poso, Sulawesi Tengah";
+  if (value.includes("kolonedale")) return "Kabupaten Morowali Utara, Sulawesi Tengah";
+  if (value.includes("bungku")) return "Kabupaten Morowali, Sulawesi Tengah";
+  return "Sulawesi Tengah, Indonesia";
+}
+
+async function resolveWithGoogleMaps(locationName, ulpName, apiKey) {
+  if (!apiKey || !locationName) return null;
+  const context = getUlpContext(ulpName);
+  const cleanName = locationName.trim();
+  const query = `${cleanName}, ${context}`;
+  const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(query)}&key=${apiKey}`;
+
+  try {
+    const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (data.status === "OK" && Array.isArray(data.results) && data.results.length > 0) {
+      const top = data.results[0];
+      const lat = top.geometry?.location?.lat;
+      const lon = top.geometry?.location?.lng;
+      if (typeof lat === "number" && typeof lon === "number" &&
+          lat >= -4.5 && lat <= 2.0 && lon >= 117.0 && lon <= 125.5) {
+        return {
+          latitude: lat,
+          longitude: lon,
+          displayName: top.formatted_address || `${cleanName}, ${context}`
+        };
+      }
+    }
+  } catch (err) {
+    console.warn(`[Google Maps Warning] "${cleanName}": ${err.message}`);
+  }
+  return null;
+}
+
 async function main() {
   const rootDir = path.resolve(__dirname, '..');
   const pendingFile = path.join(rootDir, 'data', 'pending-import.json');
@@ -191,25 +233,35 @@ async function main() {
   const sultengPlacesFile = path.join(rootDir, 'data', 'sulteng-places.json');
   const paluIndexFile = path.join(rootDir, 'data', 'osm-index-palu.json');
 
-  if (!fs.existsSync(pendingFile)) {
-    console.log('[Info] No data/pending-import.json found. Nothing to process.');
+  let dateKey, events = [], pendingData = {};
+
+  if (fs.existsSync(pendingFile)) {
+    try {
+      pendingData = JSON.parse(fs.readFileSync(pendingFile, 'utf8'));
+      dateKey = pendingData.date;
+      events = pendingData.events || [];
+    } catch (err) {
+      console.error('[Error] Invalid pending-import.json:', err.message);
+      process.exit(1);
+    }
+  } else {
+    // Mode pengkayaan (enrichment) bila ada file jadwal aktif di data/
+    const dataDir = path.join(rootDir, 'data');
+    const scheduleFiles = fs.readdirSync(dataDir).filter(f => /^\d{4}-\d{2}-\d{2}\.json$/.test(f));
+    if (scheduleFiles.length > 0) {
+      const activeFile = path.join(dataDir, scheduleFiles[0]);
+      try {
+        const activeData = JSON.parse(fs.readFileSync(activeFile, 'utf8'));
+        dateKey = activeData.date;
+        events = activeData.events || [];
+        console.log(`[Info] Memproses pengkayaan untuk jadwal aktif: ${scheduleFiles[0]}`);
+      } catch {}
+    }
+  }
+
+  if (!dateKey || !events.length) {
+    console.log('[Info] Tidak ada data/pending-import.json atau jadwal aktif. Selesai.');
     return;
-  }
-
-  const rawPending = fs.readFileSync(pendingFile, 'utf8');
-  let pendingData;
-  try {
-    pendingData = JSON.parse(rawPending);
-  } catch (err) {
-    console.error('[Error] Invalid pending-import.json:', err.message);
-    process.exit(1);
-  }
-
-  const dateKey = pendingData.date;
-  const events = pendingData.events || [];
-  if (!dateKey || !/^\d{4}-\d{2}-\d{2}$/.test(dateKey) || !events.length) {
-    console.error('[Error] Pending import missing valid date (YYYY-MM-DD) or events.');
-    process.exit(1);
   }
 
   console.log(`[Start] Processing import for date: ${dateKey} with ${events.length} events...`);
@@ -276,6 +328,14 @@ async function main() {
   let mappedCount = 0;
   let processedCount = 0;
   let lastReportedTime = Date.now();
+  const googleApiKey = process.env.GOOGLE_MAPS_API_KEY || '';
+  const newlyLearnedPlaces = [];
+
+  if (googleApiKey) {
+    console.log('[Google Maps] GOOGLE_MAPS_API_KEY terdeteksi. Fitur auto-learn lokasi aktif!');
+  } else {
+    console.log('[Google Maps] GOOGLE_MAPS_API_KEY tidak disetel. Menggunakan indeks lokal & OSM saja.');
+  }
 
   for (const ev of events) {
     for (const area of (ev.affectedAreas || [])) {
@@ -297,6 +357,33 @@ async function main() {
             };
             area.points.push(point);
             existingPoints.set(loc, point);
+          } else if (googleApiKey) {
+            const gMatch = await resolveWithGoogleMaps(loc, area.ulpName, googleApiKey);
+            if (gMatch) {
+              point = {
+                location: loc,
+                latitude: gMatch.latitude,
+                longitude: gMatch.longitude,
+                displayName: gMatch.displayName
+              };
+              area.points.push(point);
+              existingPoints.set(loc, point);
+              newlyLearnedPlaces.push({
+                location: loc,
+                latitude: gMatch.latitude,
+                longitude: gMatch.longitude,
+                displayName: gMatch.displayName,
+                ulpName: area.ulpName
+              });
+              streetIndex.points.set(loc.toLowerCase().trim(), {
+                name: loc,
+                latitude: gMatch.latitude,
+                longitude: gMatch.longitude,
+                kind: 1
+              });
+              console.log(`[Google Maps Auto-Learn] "${loc}" (${area.ulpName}) -> ${gMatch.latitude.toFixed(4)}, ${gMatch.longitude.toFixed(4)}`);
+              await new Promise((r) => setTimeout(r, 60));
+            }
           }
         }
 
@@ -323,6 +410,57 @@ async function main() {
           await notifyWorkerStatus(liveStatus);
         }
       }
+    }
+  }
+
+  // Simpan lokasi baru hasil auto-learn Google Maps ke database repo
+  if (newlyLearnedPlaces.length > 0) {
+    try {
+      if (fs.existsSync(knownLocationsFile)) {
+        const knownList = JSON.parse(fs.readFileSync(knownLocationsFile, 'utf8'));
+        const knownSet = new Set(knownList.map((k) => (k.location || '').toLowerCase().trim()));
+        let addedToKnown = 0;
+        for (const item of newlyLearnedPlaces) {
+          const key = item.location.toLowerCase().trim();
+          if (!knownSet.has(key)) {
+            knownList.push({
+              location: item.location,
+              latitude: item.latitude,
+              longitude: item.longitude,
+              displayName: item.displayName,
+              ulpName: item.ulpName,
+              source: "google-maps-auto-learn",
+              addedAt: new Date().toISOString()
+            });
+            knownSet.add(key);
+            addedToKnown++;
+          }
+        }
+        fs.writeFileSync(knownLocationsFile, JSON.stringify(knownList, null, 2), 'utf8');
+        console.log(`[Auto-Learn] Menambahkan ${addedToKnown} lokasi baru ke data/known-locations.json.`);
+      }
+
+      if (fs.existsSync(sultengPlacesFile)) {
+        const sultengObj = JSON.parse(fs.readFileSync(sultengPlacesFile, 'utf8'));
+        if (Array.isArray(sultengObj.places)) {
+          const sultengSet = new Set(sultengObj.places.map((p) => (p[0] || '').toLowerCase().trim()));
+          let addedToSulteng = 0;
+          for (const item of newlyLearnedPlaces) {
+            const key = item.location.toLowerCase().trim();
+            if (!sultengSet.has(key)) {
+              sultengObj.places.push([item.location, item.latitude, item.longitude, "terverifikasi", item.displayName]);
+              sultengSet.add(key);
+              addedToSulteng++;
+            }
+          }
+          sultengObj.total = sultengObj.places.length;
+          sultengObj.updatedAt = new Date().toISOString();
+          fs.writeFileSync(sultengPlacesFile, JSON.stringify(sultengObj, null, 2), 'utf8');
+          console.log(`[Auto-Learn] Menambahkan ${addedToSulteng} tempat baru ke data/sulteng-places.json. Total tempat: ${sultengObj.total}`);
+        }
+      }
+    } catch (saveErr) {
+      console.warn('[Warning] Gagal menyimpan data auto-learn:', saveErr.message);
     }
   }
 

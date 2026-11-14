@@ -2,10 +2,10 @@
   "status": "done",
   "date": "2026-11-14",
   "totalStreets": 564,
-  "mappedStreets": 172,
+  "mappedStreets": 214,
   "progressPercent": 100,
-  "startedAt": "2026-11-14T05:48:12.668Z",
-  "completedAt": "2026-11-14T05:48:29.371Z",
-  "updatedAt": "2026-11-14T05:48:29.371Z",
-  "message": "Pemetaan selesai! 172 dari 564 lokasi berhasil dipetakan di server."
+  "startedAt": "2026-11-14T06:26:05.607Z",
+  "completedAt": "2026-11-14T06:26:09.910Z",
+  "updatedAt": "2026-11-14T06:26:09.910Z",
+  "message": "Pemetaan selesai! 214 dari 564 lokasi berhasil dipetakan di server."
 }
