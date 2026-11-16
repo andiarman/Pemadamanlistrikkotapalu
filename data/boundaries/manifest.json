@@ -1,0 +1,223 @@
+[
+  {
+    "code": "72.01",
+    "name": "Kabupaten Banggai",
+    "slug": "banggai",
+    "file": "data/boundaries/72.01-banggai.geojson",
+    "villagesCount": 336,
+    "center": [
+      -1.0366,
+      122.672
+    ],
+    "bbox": [
+      121.9124,
+      -1.5875,
+      123.4317,
+      -0.4858
+    ]
+  },
+  {
+    "code": "72.02",
+    "name": "Kabupaten Poso",
+    "slug": "poso",
+    "file": "data/boundaries/72.02-poso.geojson",
+    "villagesCount": 169,
+    "center": [
+      -1.6685,
+      120.5281
+    ],
+    "bbox": [
+      120.1421,
+      -2.1863,
+      120.9141,
+      -1.1507
+    ]
+  },
+  {
+    "code": "72.03",
+    "name": "Kabupaten Donggala",
+    "slug": "donggala",
+    "file": "data/boundaries/72.03-donggala.geojson",
+    "villagesCount": 164,
+    "center": [
+      -0.3406,
+      119.826
+    ],
+    "bbox": [
+      119.4659,
+      -1.3969,
+      120.186,
+      0.7157
+    ]
+  },
+  {
+    "code": "72.04",
+    "name": "Kabupaten Tolitoli",
+    "slug": "tolitoli",
+    "file": "data/boundaries/72.04-tolitoli.geojson",
+    "villagesCount": 109,
+    "center": [
+      0.9954,
+      120.6572
+    ],
+    "bbox": [
+      120.1774,
+      0.6506,
+      121.137,
+      1.3403
+    ]
+  },
+  {
+    "code": "72.05",
+    "name": "Kabupaten Buol",
+    "slug": "buol",
+    "file": "data/boundaries/72.05-buol.geojson",
+    "villagesCount": 115,
+    "center": [
+      1.0797,
+      121.6436
+    ],
+    "bbox": [
+      121.1057,
+      0.8785,
+      122.1814,
+      1.281
+    ]
+  },
+  {
+    "code": "72.06",
+    "name": "Kabupaten Morowali",
+    "slug": "morowali",
+    "file": "data/boundaries/72.06-morowali.geojson",
+    "villagesCount": 130,
+    "center": [
+      -2.9061,
+      122.3423
+    ],
+    "bbox": [
+      121.5125,
+      -3.6168,
+      123.1722,
+      -2.1954
+    ]
+  },
+  {
+    "code": "72.07",
+    "name": "Kabupaten Banggai Kepulauan",
+    "slug": "banggai-kepulauan",
+    "file": "data/boundaries/72.07-banggai-kepulauan.geojson",
+    "villagesCount": 144,
+    "center": [
+      -1.4021,
+      123.1624
+    ],
+    "bbox": [
+      122.8012,
+      -1.63,
+      123.5236,
+      -1.1743
+    ]
+  },
+  {
+    "code": "72.08",
+    "name": "Kabupaten Parigi Moutong",
+    "slug": "parigi-moutong",
+    "file": "data/boundaries/72.08-parigi-moutong.geojson",
+    "villagesCount": 281,
+    "center": [
+      -0.2437,
+      120.6308
+    ],
+    "bbox": [
+      119.9323,
+      -1.1264,
+      121.3293,
+      0.639
+    ]
+  },
+  {
+    "code": "72.09",
+    "name": "Kabupaten Tojo Una-Una",
+    "slug": "tojo-una-una",
+    "file": "data/boundaries/72.09-tojo-una-una.geojson",
+    "villagesCount": 145,
+    "center": [
+      -0.8541,
+      121.6401
+    ],
+    "bbox": [
+      120.9094,
+      -1.5557,
+      122.3708,
+      -0.1525
+    ]
+  },
+  {
+    "code": "72.10",
+    "name": "Kabupaten Sigi",
+    "slug": "sigi",
+    "file": "data/boundaries/72.10-sigi.geojson",
+    "villagesCount": 175,
+    "center": [
+      -1.4261,
+      119.9688
+    ],
+    "bbox": [
+      119.6712,
+      -1.9761,
+      120.2665,
+      -0.8762
+    ]
+  },
+  {
+    "code": "72.11",
+    "name": "Kabupaten Banggai Laut",
+    "slug": "banggai-laut",
+    "file": "data/boundaries/72.11-banggai-laut.geojson",
+    "villagesCount": 66,
+    "center": [
+      -1.8339,
+      123.6109
+    ],
+    "bbox": [
+      123.0591,
+      -2.1734,
+      124.1627,
+      -1.4945
+    ]
+  },
+  {
+    "code": "72.12",
+    "name": "Kabupaten Morowali Utara",
+    "slug": "morowali-utara",
+    "file": "data/boundaries/72.12-morowali-utara.geojson",
+    "villagesCount": 121,
+    "center": [
+      -1.8664,
+      121.4361
+    ],
+    "bbox": [
+      120.8467,
+      -2.3447,
+      122.0254,
+      -1.3881
+    ]
+  },
+  {
+    "code": "72.71",
+    "name": "Kota Palu",
+    "slug": "kota-palu",
+    "file": "data/boundaries/72.71-kota-palu.geojson",
+    "villagesCount": 46,
+    "center": [
+      -0.8029,
+      119.8831
+    ],
+    "bbox": [
+      119.7868,
+      -0.9347,
+      119.9794,
+      -0.671
+    ]
+  }
+]

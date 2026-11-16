@@ -364,6 +364,72 @@
         color: #ffffff;
         border-color: rgba(255, 255, 255, .25);
       }
+      .boundary-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: .25rem;
+        padding: .2rem .55rem;
+        border: 1px solid rgba(255, 255, 255, .14);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, .06);
+        color: #cbd5e1;
+        font-family: inherit;
+        font-size: .62rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all .15s ease;
+        user-select: none;
+      }
+      .boundary-toggle-btn:hover {
+        background: rgba(255, 255, 255, .14);
+        color: #ffffff;
+        border-color: rgba(56, 189, 248, .4);
+      }
+      .boundary-toggle-btn[aria-pressed="true"] {
+        background: rgba(14, 165, 233, .22);
+        color: #38bdf8;
+        border-color: rgba(56, 189, 248, .6);
+        box-shadow: 0 0 10px rgba(56, 189, 248, .2);
+      }
+      .boundary-tooltip {
+        background: rgba(11, 18, 32, 0.95);
+        border: 1px solid rgba(56, 189, 248, 0.4);
+        border-radius: 6px;
+        color: #f8fafc;
+        font-family: inherit;
+        font-size: 0.72rem;
+        padding: 5px 8px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.6);
+        pointer-events: none;
+      }
+      .boundary-tooltip strong {
+        color: #38bdf8;
+      }
+      .boundary-popup {
+        font-family: inherit;
+        color: #0f172a;
+        font-size: 0.78rem;
+        line-height: 1.45;
+        padding: 2px 0;
+      }
+      .boundary-popup h4 {
+        margin: 0 0 5px;
+        font-size: 0.88rem;
+        color: #0284c7;
+      }
+      .boundary-popup-badge {
+        display: inline-block;
+        padding: 2px 7px;
+        border-radius: 4px;
+        font-size: 0.68rem;
+        font-weight: 800;
+        margin-top: 5px;
+        letter-spacing: .02em;
+      }
+      .boundary-popup-badge.active { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+      .boundary-popup-badge.upcoming { background: #fef3c7; color: #b45309; border: 1px solid #fcd34d; }
+      .boundary-popup-badge.passed { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+      .boundary-popup-badge.normal { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
       #legend-toggle-icon {
         font-size: .58rem;
         transition: transform .2s ease;
@@ -1972,6 +2038,10 @@
         <div class="legend-head">
           <span class="legend-label">Filter titik</span>
           <div class="legend-head-actions">
+            <button type="button" id="boundary-toggle-btn" class="boundary-toggle-btn" aria-pressed="true" title="Tampilkan/Sembunyikan batas administrasi kelurahan/desa seluruh Sulawesi Tengah">
+              <span class="boundary-btn-icon">🏛️</span>
+              <span id="boundary-toggle-text">Batas Kelurahan</span>
+            </button>
             <button type="button" id="legend-toggle-btn" class="legend-toggle-btn" aria-label="Sembunyikan atau tampilkan filter" title="Sembunyikan/Tampilkan filter">
               <span id="legend-toggle-text">Ciutkan</span>
               <span id="legend-toggle-icon" aria-hidden="true">▾</span>
@@ -2221,6 +2291,200 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       let geoJsonLayer;
       let markerClusterGroup;
       let allPointMarkers = [];
+
+      // ==========================================
+      // Batas Wilayah Administrasi Kelurahan / Desa
+      // ==========================================
+      const boundaryLayerGroup = L.layerGroup().addTo(map);
+      let boundariesEnabled = true;
+      let boundariesManifest = null;
+      const loadedBoundaryGeoJsons = new Map();
+      const boundaryLayersByRegency = new Map();
+      const currentOutagePlaces = new Map();
+
+      function updateOutagePlacesIndex(now) {
+        currentOutagePlaces.clear();
+        for (const ev of (mapEvents || [])) {
+          const status = getEventStatus(ev, now);
+          for (const area of (ev.affectedAreas || [])) {
+            const timeStr = `${formatWita(ev.startTime)} s/d ${formatWita(ev.endTime)} WITA`;
+            for (const pt of (area.points || [])) {
+              const info = { status, event: ev, timeStr, ulpName: area.ulpName };
+              if (pt.location) currentOutagePlaces.set(normalizeStreetName(pt.location), info);
+              if (pt.displayName) currentOutagePlaces.set(normalizeStreetName(pt.displayName), info);
+            }
+            for (const loc of (area.locations || [])) {
+              const info = { status, event: ev, timeStr, ulpName: area.ulpName };
+              currentOutagePlaces.set(normalizeStreetName(loc), info);
+            }
+          }
+        }
+      }
+
+      function getBoundaryStyle(feature) {
+        const kelName = normalizeStreetName(feature?.properties?.name || "");
+        const outage = currentOutagePlaces.get(kelName);
+        if (outage) {
+          if (outage.status === "ACTIVE") {
+            return {
+              color: "#ef4444",
+              weight: 2,
+              opacity: 0.9,
+              fillColor: "#ef4444",
+              fillOpacity: 0.22,
+              dashArray: null
+            };
+          }
+          if (outage.status === "UPCOMING") {
+            return {
+              color: "#f59e0b",
+              weight: 1.8,
+              opacity: 0.85,
+              fillColor: "#f59e0b",
+              fillOpacity: 0.16,
+              dashArray: null
+            };
+          }
+          return {
+            color: "#10b981",
+            weight: 1.3,
+            opacity: 0.65,
+            fillColor: "#10b981",
+            fillOpacity: 0.08,
+            dashArray: null
+          };
+        }
+        return {
+          color: "#38bdf8",
+          weight: 1,
+          opacity: 0.35,
+          fillColor: "#38bdf8",
+          fillOpacity: 0.02,
+          dashArray: "3, 4"
+        };
+      }
+
+      function bboxIntersects(bbox, mapBounds) {
+        const [minLng, minLat, maxLng, maxLat] = bbox;
+        return !(
+          minLng > mapBounds.getEast() ||
+          maxLng < mapBounds.getWest() ||
+          minLat > mapBounds.getNorth() ||
+          maxLat < mapBounds.getSouth()
+        );
+      }
+
+      async function syncBoundariesForViewport(forceRestyle = false) {
+        if (!boundariesEnabled) return;
+        if (!boundariesManifest) {
+          try {
+            const res = await fetch("data/boundaries/manifest.json");
+            if (!res.ok) return;
+            boundariesManifest = await res.json();
+          } catch (e) {
+            console.warn("Gagal memuat manifest batas wilayah:", e.message);
+            return;
+          }
+        }
+
+        const mapBounds = map.getBounds();
+        for (const reg of boundariesManifest) {
+          const visible = bboxIntersects(reg.bbox, mapBounds);
+          if (visible) {
+            if (boundaryLayersByRegency.has(reg.code)) {
+              const layer = boundaryLayersByRegency.get(reg.code);
+              if (!boundaryLayerGroup.hasLayer(layer)) {
+                boundaryLayerGroup.addLayer(layer);
+              }
+              if (forceRestyle) {
+                layer.setStyle(getBoundaryStyle);
+              }
+            } else if (!loadedBoundaryGeoJsons.has(reg.code)) {
+              loadedBoundaryGeoJsons.set(reg.code, "loading");
+              try {
+                const res = await fetch(reg.file);
+                if (!res.ok) continue;
+                const geojson = await res.json();
+                loadedBoundaryGeoJsons.set(reg.code, geojson);
+
+                const layer = L.geoJSON(geojson, {
+                  style: getBoundaryStyle,
+                  onEachFeature: (feature, l) => {
+                    l.on("mouseover", (e) => {
+                      const cur = e.target;
+                      cur.setStyle({ weight: 2.4, opacity: 0.95, fillOpacity: 0.3 });
+                      if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+                        cur.bringToFront();
+                      }
+                    });
+                    l.on("mouseout", (e) => {
+                      e.target.setStyle(getBoundaryStyle(feature));
+                    });
+
+                    l.bindTooltip(
+                      `<strong>${escapeHtml(feature?.properties?.name || "")}</strong><br><small style="color:#94a3b8;">Kec. ${escapeHtml(feature?.properties?.kecamatan || "")} · ${escapeHtml(feature?.properties?.regency || "")}</small>`,
+                      { className: "boundary-tooltip", sticky: true }
+                    );
+
+                    l.bindPopup(() => {
+                      const norm = normalizeStreetName(feature?.properties?.name || "");
+                      const outage = currentOutagePlaces.get(norm);
+                      let badgeHtml = '<span class="boundary-popup-badge normal">🟢 Normal / Tidak Ada Pemadaman</span>';
+                      let extraHtml = '';
+                      if (outage) {
+                        if (outage.status === "ACTIVE") {
+                          badgeHtml = '<span class="boundary-popup-badge active">🔴 SEDANG PADAM</span>';
+                        } else if (outage.status === "UPCOMING") {
+                          badgeHtml = '<span class="boundary-popup-badge upcoming">🟡 AKAN PADAM</span>';
+                        } else {
+                          badgeHtml = '<span class="boundary-popup-badge passed">🟢 SUDAH MENYALA</span>';
+                        }
+                        extraHtml = `<div style="margin-top:4px;">⏰ Jadwal: <strong>${outage.timeStr}</strong></div><div style="font-size:0.7rem; color:#64748b;">ULP: ${escapeHtml(outage.ulpName || '')}</div>`;
+                      }
+                      return `
+                        <div class="boundary-popup">
+                          <h4>🏛️ ${escapeHtml(feature?.properties?.name || "")}</h4>
+                          <div>📍 Kecamatan: <strong>${escapeHtml(feature?.properties?.kecamatan || "")}</strong></div>
+                          <div>🏛️ Wilayah: <strong>${escapeHtml(feature?.properties?.regency || "")}</strong></div>
+                          ${badgeHtml}
+                          ${extraHtml}
+                        </div>
+                      `;
+                    });
+                  }
+                });
+
+                boundaryLayersByRegency.set(reg.code, layer);
+                if (boundariesEnabled) {
+                  boundaryLayerGroup.addLayer(layer);
+                }
+              } catch (err) {
+                console.warn(`Gagal memuat batas ${reg.name}:`, err.message);
+              }
+            }
+          } else {
+            if (boundaryLayersByRegency.has(reg.code)) {
+              const layer = boundaryLayersByRegency.get(reg.code);
+              if (boundaryLayerGroup.hasLayer(layer)) {
+                boundaryLayerGroup.removeLayer(layer);
+              }
+            }
+          }
+        }
+      }
+
+      function toggleBoundaries() {
+        boundariesEnabled = !boundariesEnabled;
+        const btn = document.getElementById("boundary-toggle-btn");
+        if (btn) {
+          btn.setAttribute("aria-pressed", boundariesEnabled ? "true" : "false");
+        }
+        if (!boundariesEnabled) {
+          boundaryLayerGroup.clearLayers();
+        } else {
+          syncBoundariesForViewport(true);
+        }
+      }
       function getCurrentActiveTime() {
         return Date.now();
       }
@@ -2868,6 +3132,13 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         });
       }
 
+      const boundaryToggleBtn = document.getElementById("boundary-toggle-btn");
+      if (boundaryToggleBtn) {
+        boundaryToggleBtn.addEventListener("click", () => {
+          toggleBoundaries();
+        });
+      }
+
       function stopMapEventInterference(element) {
         if (!element) return;
         if (typeof L !== "undefined" && L.DomEvent) {
@@ -3141,6 +3412,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       function renderMapLayers() {
         const now = Date.now();
         for (const event of mapEvents) event.status = getEventStatus(event, now);
+        updateOutagePlacesIndex(now);
         const allPoints = buildStreetPointFeatures(now);
         const shapes = buildAreaShapes(allPoints);
         const visiblePoints = allPoints.filter((feature) => featureMatchesFilter(feature, now));
@@ -3243,6 +3515,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         updateEmptyState(allPoints, visiblePoints);
         updateStatusCounts(mapEvents);
         updateSessionFilter(mapEvents);
+        if (boundariesEnabled) syncBoundariesForViewport(true);
       }
 
       function updateBadgeProgressBars(now = Date.now()) {
@@ -3873,6 +4146,9 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         container.classList.toggle("zoom-detail", z >= 14);
       }
       map.on("zoomend", syncMapZoomClasses);
+      map.on("moveend", () => {
+        if (boundariesEnabled) syncBoundariesForViewport();
+      });
       syncMapZoomClasses();
 
       async function fetchMapLayers() {
