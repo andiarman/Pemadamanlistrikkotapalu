@@ -85,6 +85,10 @@
         background: linear-gradient(135deg, #ff6b35 0%, #f59e0b 55%, #ef4444 100%);
         box-shadow: 0 4px 14px rgba(245, 158, 11, .42), inset 0 1px 0 rgba(255, 255, 255, .3);
       }
+      .brand-icon.mode-disaster {
+        background: linear-gradient(135deg, #dc2626 0%, #ea580c 55%, #f59e0b 100%);
+        box-shadow: 0 4px 14px rgba(220, 38, 38, .45), inset 0 1px 0 rgba(255, 255, 255, .3);
+      }
       .brand-icon.mode-empty {
         background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         border: 1.5px dashed rgba(148, 163, 184, 0.5);
@@ -189,6 +193,15 @@
         width: 17px;
         height: 17px;
       }
+      .mode-badge-icon.disaster {
+        background: linear-gradient(135deg, #dc2626 0%, #ea580c 55%, #f59e0b 100%);
+        color: #ffffff;
+        box-shadow: 0 2px 8px rgba(220, 38, 38, .35);
+      }
+      .mode-badge-icon.disaster svg {
+        width: 17px;
+        height: 17px;
+      }
       .mode-badge-icon.empty {
         background: rgba(255, 255, 255, 0.06);
         border: 1px dashed rgba(148, 163, 184, 0.5);
@@ -231,6 +244,120 @@
       }
       body:not([data-app-mode="outage"]) .outage-only-ui {
         display: none !important;
+      }
+      /* Disaster Mode Styles */
+      .evac-marker-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .evac-marker-pin {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        border: 2px solid #ffffff;
+        color: #ffffff;
+        display: grid;
+        place-items: center;
+        font-size: 16px;
+        box-shadow: 0 4px 14px rgba(16, 185, 129, 0.55);
+        z-index: 2;
+        transition: transform .15s ease;
+      }
+      .evac-marker-wrap:hover .evac-marker-pin {
+        transform: scale(1.15);
+      }
+      .evac-marker-pulse {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: rgba(16, 185, 129, 0.28);
+        animation: evacRing 2s infinite ease-out;
+        z-index: 1;
+        pointer-events: none;
+      }
+      @keyframes evacRing {
+        0% { transform: scale(0.6); opacity: 0.9; }
+        100% { transform: scale(1.35); opacity: 0; }
+      }
+      .disaster-legend {
+        position: absolute;
+        bottom: 24px;
+        left: 14px;
+        z-index: 1000;
+        background: rgba(15, 23, 42, 0.94);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 14px;
+        padding: 10px 14px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(16px);
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 0.76rem;
+        color: #f1f5f9;
+        max-width: 260px;
+        animation: fadeIn 0.2s ease-out;
+      }
+      body[data-app-mode="disaster"] .disaster-legend {
+        display: flex !important;
+      }
+      .disaster-legend-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 800;
+        font-size: 0.8rem;
+        color: #f87171;
+        letter-spacing: -0.01em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 5px;
+      }
+      .disaster-legend-items {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .disaster-legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .disaster-legend-item input[type="checkbox"] {
+        accent-color: #ef4444;
+        cursor: pointer;
+      }
+      .legend-swatch {
+        display: inline-block;
+        flex: 0 0 auto;
+      }
+      .legend-swatch.fault-swatch {
+        width: 18px;
+        height: 3px;
+        background: #ef4444;
+        border-radius: 2px;
+      }
+      .legend-swatch.hazard-swatch {
+        width: 14px;
+        height: 14px;
+        background: rgba(239, 68, 68, 0.35);
+        border: 1.5px dashed #ef4444;
+        border-radius: 3px;
+      }
+      .legend-swatch.evac-swatch {
+        font-size: 13px;
+        line-height: 1;
+      }
+      .disaster-popup {
+        font-family: inherit;
+        color: #f8fafc;
+        max-width: 280px;
       }
       h1 {
         margin: 0;
@@ -2099,7 +2226,7 @@
           </button>
 
           <div id="mode-dropdown-menu" class="mode-dropdown-menu" hidden role="menu" aria-label="Pilih Mode Peta">
-            <div class="mode-dropdown-header">Mode Peta Utama</div>
+            <div class="mode-dropdown-header">Mode Peta Aktif</div>
             <button type="button" class="mode-dropdown-item active" data-mode="outage" role="menuitem">
               <span class="mode-badge-icon outage">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.2 2 4.6 13.3h6.1L9.6 22l8.8-11.6h-6.1z"/></svg>
@@ -2111,21 +2238,22 @@
               <span class="mode-item-active-dot" aria-hidden="true">●</span>
             </button>
 
-            <div class="mode-dropdown-header">Mode Perencanaan (Kosong)</div>
-            <button type="button" class="mode-dropdown-item" data-mode="empty-1" role="menuitem">
-              <span class="mode-badge-icon empty">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="4" stroke-dasharray="3 3"></rect>
-                  <text x="12" y="16.5" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor" stroke="none">1</text>
+            <button type="button" class="mode-dropdown-item" data-mode="disaster" role="menuitem">
+              <span class="mode-badge-icon disaster">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="M12 8v4"/>
+                  <circle cx="12" cy="16" r="1"/>
                 </svg>
               </span>
               <div class="mode-item-text">
-                <span class="mode-item-title">Mode Kosong 1</span>
-                <span class="mode-item-subtitle">Slot perencanaan peta #1</span>
+                <span class="mode-item-title">Mitigasi & Evakuasi Bencana</span>
+                <span class="mode-item-subtitle">Sesar Palu-Koro, Titik Kumpul & Shelter</span>
               </div>
               <span class="mode-item-active-dot" aria-hidden="true">●</span>
             </button>
 
+            <div class="mode-dropdown-header">Mode Perencanaan (Kosong)</div>
             <button type="button" class="mode-dropdown-item" data-mode="empty-2" role="menuitem">
               <span class="mode-badge-icon empty">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2220,7 +2348,7 @@
         <div id="gps-status-toast" class="gps-status-toast" hidden role="status" aria-live="polite"></div>
 
         <!-- Kartu Status Langsung (Cari Jalan / Cek Rumah Saya) -->
-        <div id="street-status-card" class="street-status-card outage-only-ui" hidden>
+        <div id="street-status-card" class="street-status-card" hidden>
           <div class="card-head">
             <div class="card-badge-row">
               <span class="card-type-tag" id="card-type-tag">🏠 Status Rumah / Jalan</span>
@@ -2342,6 +2470,29 @@
           <div class="session-list" id="session-list" role="group" aria-label="Saring menurut sesi jam jadwal"></div>
         </div>
         <span class="legend-note">🔴 Badge merah (s.d jam) = sedang padam · bar progres. 🟡 Badge oranye (jam) = akan padam · bar countdown. 🟢 Hijau = sudah menyala. Klik sesi untuk menyaring wilayah.</span>
+      </div>
+
+      <div id="disaster-legend" class="disaster-legend" aria-label="Legenda mitigasi bencana">
+        <div class="disaster-legend-head">
+          <span>🚨 Mitigasi Bencana Palu</span>
+        </div>
+        <div class="disaster-legend-items">
+          <label class="disaster-legend-item">
+            <input type="checkbox" id="chk-fault" checked />
+            <span class="legend-swatch fault-swatch"></span>
+            <span>Sesar Palu-Koro (Patahan)</span>
+          </label>
+          <label class="disaster-legend-item">
+            <input type="checkbox" id="chk-evac" checked />
+            <span class="legend-swatch evac-swatch">🏃‍♂️</span>
+            <span>Titik Kumpul & Shelter</span>
+          </label>
+          <label class="disaster-legend-item">
+            <input type="checkbox" id="chk-hazard" checked />
+            <span class="legend-swatch hazard-swatch"></span>
+            <span>Zona Rawan (ZRB / Tsunami)</span>
+          </label>
+        </div>
       </div>
     </main>
 
@@ -2550,7 +2701,190 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       let geoJsonLayer;
       let markerClusterGroup;
       let allPointMarkers = [];
-      let currentAppMode = "outage"; // "outage" | "empty"
+      let currentAppMode = "outage"; // "outage" | "disaster" | "empty-2" ...
+      const disasterLayers = {
+        fault: null,
+        hazard: null,
+        evacuation: null,
+        evacuationPointsData: null,
+        loaded: false
+      };
+
+      async function loadDisasterLayers() {
+        if (disasterLayers.loaded) {
+          if (disasterLayers.fault && !map.hasLayer(disasterLayers.fault) && document.getElementById("chk-fault")?.checked !== false) {
+            map.addLayer(disasterLayers.fault);
+          }
+          if (disasterLayers.hazard && !map.hasLayer(disasterLayers.hazard) && document.getElementById("chk-hazard")?.checked !== false) {
+            map.addLayer(disasterLayers.hazard);
+          }
+          if (disasterLayers.evacuation && !map.hasLayer(disasterLayers.evacuation) && document.getElementById("chk-evac")?.checked !== false) {
+            map.addLayer(disasterLayers.evacuation);
+          }
+          return;
+        }
+
+        try {
+          // 1. Sesar Palu-Koro
+          const faultRes = await fetch("data/disaster/palu-koro-fault.geojson");
+          if (faultRes.ok) {
+            const faultData = await faultRes.json();
+            disasterLayers.fault = L.geoJSON(faultData, {
+              style: {
+                color: "#ef4444",
+                weight: 4,
+                opacity: 0.9,
+                dashArray: "10, 7",
+                lineCap: "round"
+              },
+              onEachFeature: (feature, layer) => {
+                const props = feature.properties || {};
+                layer.bindTooltip(`<strong>⚡ ${escapeHtml(props.name)}</strong><br><small style="color:#fca5a5;">${escapeHtml(props.type)}</small>`, { sticky: true });
+                layer.bindPopup(`
+                  <div class="disaster-popup">
+                    <h4 style="color:#ef4444; margin:0 0 6px;">⚡ ${escapeHtml(props.name)}</h4>
+                    <div style="font-size:0.8rem; line-height:1.45; color:#cbd5e1;">
+                      <div><b>Tipe:</b> ${escapeHtml(props.type)}</div>
+                      <div><b>Pergeseran:</b> ${escapeHtml(props.slipRate)}</div>
+                      <div><b>Gempa Signifikan:</b> ${escapeHtml(props.lastMajorEvent)}</div>
+                      <div style="margin-top:6px; color:#94a3b8; font-size:0.75rem;">${escapeHtml(props.description)}</div>
+                    </div>
+                  </div>
+                `);
+              }
+            });
+            if (currentAppMode === "disaster" && document.getElementById("chk-fault")?.checked !== false) {
+              disasterLayers.fault.addTo(map);
+            }
+          }
+
+          // 2. Hazard Zones
+          const hazardRes = await fetch("data/disaster/hazard-zones.geojson");
+          if (hazardRes.ok) {
+            const hazardData = await hazardRes.json();
+            disasterLayers.hazard = L.geoJSON(hazardData, {
+              style: (feature) => ({
+                color: feature.properties.color || "#ef4444",
+                weight: 2,
+                opacity: 0.85,
+                fillColor: feature.properties.color || "#ef4444",
+                fillOpacity: 0.18,
+                dashArray: "4, 4"
+              }),
+              onEachFeature: (feature, layer) => {
+                const props = feature.properties || {};
+                layer.bindTooltip(`<strong>⚠️ ${escapeHtml(props.name)}</strong><br><small style="color:#fca5a5;">${escapeHtml(props.type)}</small>`, { sticky: true });
+                layer.bindPopup(`
+                  <div class="disaster-popup">
+                    <h4 style="color:${props.color || '#ef4444'}; margin:0 0 6px;">⚠️ ${escapeHtml(props.name)}</h4>
+                    <div style="font-size:0.8rem; line-height:1.45; color:#cbd5e1;">
+                      <div><b>Kategori:</b> ${escapeHtml(props.type)}</div>
+                      <div><b>Ancaman:</b> ${escapeHtml(props.hazard)}</div>
+                      <div style="margin-top:6px; padding:6px 8px; background:rgba(239,68,68,0.12); border-left:3px solid ${props.color || '#ef4444'}; border-radius:4px; font-size:0.75rem; color:#f8fafc;">
+                        <b>Rekomendasi / Jalur:</b> ${escapeHtml(props.recommendation)}
+                      </div>
+                    </div>
+                  </div>
+                `);
+              }
+            });
+            if (currentAppMode === "disaster" && document.getElementById("chk-hazard")?.checked !== false) {
+              disasterLayers.hazard.addTo(map);
+            }
+          }
+
+          // 3. Evacuation Points
+          const evacRes = await fetch("data/disaster/evacuation-points.json");
+          if (evacRes.ok) {
+            const evacData = await evacRes.json();
+            const evacMarkers = [];
+            for (const p of evacData) {
+              const iconEmoji = p.category === "vertical_evac" ? "🏢" : (p.category === "safe_hill" ? "⛰️" : "🏃‍♂️");
+              const m = L.marker([p.lat, p.lon], {
+                icon: L.divIcon({
+                  className: "evac-marker-wrap",
+                  html: `<div class="evac-marker-pulse"></div><div class="evac-marker-pin" title="${escapeHtml(p.name)}">${iconEmoji}</div>`,
+                  iconSize: [36, 36],
+                  iconAnchor: [18, 18]
+                })
+              });
+
+              const facilitiesHtml = (p.facilities || []).map(f => `<span style="display:inline-block; font-size:0.68rem; background:rgba(16,185,129,0.15); color:#34d399; padding:2px 6px; border-radius:4px; margin:2px 3px 2px 0;">✓ ${escapeHtml(f)}</span>`).join("");
+
+              m.bindPopup(`
+                <div class="disaster-popup" style="min-width:240px;">
+                  <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
+                    <span style="font-size:18px;">${iconEmoji}</span>
+                    <h4 style="margin:0; font-size:0.92rem; color:#34d399;">${escapeHtml(p.name)}</h4>
+                  </div>
+                  <div style="font-size:0.78rem; color:#94a3b8; margin-bottom:8px;">Kel. ${escapeHtml(p.kelurahan)}, Kec. ${escapeHtml(p.kecamatan)}</div>
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px; font-size:0.75rem; margin-bottom:8px; padding:6px; background:rgba(255,255,255,0.04); border-radius:6px;">
+                    <div>Elevasi: <b style="color:#f8fafc;">${p.elevationM} mdpl</b></div>
+                    <div>Kapasitas: <b style="color:#f8fafc;">~${p.capacity.toLocaleString()} jiwa</b></div>
+                    <div>Aman Tsunami: <b style="color:#34d399;">${p.safeFromTsunami ? 'YA' : 'Perhatikan Elevasi'}</b></div>
+                    <div>Tipe: <b style="color:#f8fafc;">${p.type}</b></div>
+                  </div>
+                  <div style="margin-bottom:6px;">${facilitiesHtml}</div>
+                  <div style="font-size:0.75rem; color:#cbd5e1; line-height:1.4; border-top:1px solid rgba(255,255,255,0.08); padding-top:6px;">${escapeHtml(p.notes)}</div>
+                </div>
+              `);
+              evacMarkers.push(m);
+            }
+            disasterLayers.evacuation = L.featureGroup(evacMarkers);
+            disasterLayers.evacuationPointsData = evacData;
+            if (currentAppMode === "disaster" && document.getElementById("chk-evac")?.checked !== false) {
+              disasterLayers.evacuation.addTo(map);
+            }
+          }
+
+          disasterLayers.loaded = true;
+        } catch (err) {
+          console.error("Gagal memuat layer bencana:", err);
+        }
+      }
+
+      function hideDisasterLayers() {
+        if (disasterLayers.fault && map.hasLayer(disasterLayers.fault)) map.removeLayer(disasterLayers.fault);
+        if (disasterLayers.hazard && map.hasLayer(disasterLayers.hazard)) map.removeLayer(disasterLayers.hazard);
+        if (disasterLayers.evacuation && map.hasLayer(disasterLayers.evacuation)) map.removeLayer(disasterLayers.evacuation);
+      }
+
+      function setupDisasterControls() {
+        const chkFault = document.getElementById("chk-fault");
+        const chkEvac = document.getElementById("chk-evac");
+        const chkHazard = document.getElementById("chk-hazard");
+
+        if (chkFault) {
+          chkFault.addEventListener("change", () => {
+            if (!disasterLayers.fault) return;
+            if (chkFault.checked) {
+              if (!map.hasLayer(disasterLayers.fault)) disasterLayers.fault.addTo(map);
+            } else {
+              if (map.hasLayer(disasterLayers.fault)) map.removeLayer(disasterLayers.fault);
+            }
+          });
+        }
+        if (chkEvac) {
+          chkEvac.addEventListener("change", () => {
+            if (!disasterLayers.evacuation) return;
+            if (chkEvac.checked) {
+              if (!map.hasLayer(disasterLayers.evacuation)) disasterLayers.evacuation.addTo(map);
+            } else {
+              if (map.hasLayer(disasterLayers.evacuation)) map.removeLayer(disasterLayers.evacuation);
+            }
+          });
+        }
+        if (chkHazard) {
+          chkHazard.addEventListener("change", () => {
+            if (!disasterLayers.hazard) return;
+            if (chkHazard.checked) {
+              if (!map.hasLayer(disasterLayers.hazard)) disasterLayers.hazard.addTo(map);
+            } else {
+              if (map.hasLayer(disasterLayers.hazard)) map.removeLayer(disasterLayers.hazard);
+            }
+          });
+        }
+      }
 
       function updateBoundaryStyles() {
         for (const layer of boundaryLayersByRegency.values()) {
@@ -2619,6 +2953,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
           });
 
           if (mode === "outage") {
+            hideDisasterLayers();
             modeBtn.className = "brand-icon mode-selector-btn mode-outage";
             modeBtn.title = "Mode: Peta Pemadaman Listrik (Klik untuk ganti mode)";
             currentModeIcon.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor" focusable="false"><path d="M13.2 2 4.6 13.3h6.1L9.6 22l8.8-11.6h-6.1z"/></svg>`;
@@ -2628,8 +2963,36 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             renderMapLayers();
             refreshDynamic();
             updateBoundaryStyles();
+          } else if (mode === "disaster") {
+            if (geoJsonLayer) {
+              map.removeLayer(geoJsonLayer);
+              geoJsonLayer = null;
+            }
+            if (markerClusterGroup) {
+              map.removeLayer(markerClusterGroup);
+              markerClusterGroup = null;
+            }
+            allPointMarkers = [];
+
+            modeBtn.className = "brand-icon mode-selector-btn mode-disaster";
+            modeBtn.title = "Mode: Mitigasi & Evakuasi Bencana (Klik untuk ganti mode)";
+            currentModeIcon.innerHTML = `
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M12 8v4"/>
+                <circle cx="12" cy="16" r="1"/>
+              </svg>
+            `;
+            if (brandTitle) brandTitle.textContent = "Peta Mitigasi Bencana — Kota Palu";
+            if (searchInput) searchInput.placeholder = "Cari shelter, titik kumpul, atau kelurahan...";
+
+            loadDisasterLayers();
+            updateBoundaryStyles();
+            hideStatusCard();
+            map.flyTo([-0.895, 119.865], 13, { duration: 1.2 });
           } else {
-            const emptyNum = mode.replace(/^empty-?/, "") || "1";
+            hideDisasterLayers();
+            const emptyNum = mode.replace(/^empty-?/, "") || "2";
             modeBtn.className = "brand-icon mode-selector-btn mode-empty";
             modeBtn.title = `Mode: Mode Kosong ${emptyNum} (Klik untuk ganti mode)`;
             currentModeIcon.innerHTML = `
@@ -4097,7 +4460,20 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
           const now = getCurrentActiveTime();
           const matches = [];
           const placeMatches = [];
+          const evacMatches = [];
           const seen = new Set();
+
+          if (currentAppMode === "disaster" && disasterLayers.evacuationPointsData) {
+            for (const pt of disasterLayers.evacuationPointsData) {
+              const nameLower = pt.name.toLowerCase();
+              const kelLower = (pt.kelurahan || "").toLowerCase();
+              const kecLower = (pt.kecamatan || "").toLowerCase();
+              if (nameLower.includes(term) || kelLower.includes(term) || kecLower.includes(term)) {
+                evacMatches.push(pt);
+                if (evacMatches.length >= 5) break;
+              }
+            }
+          }
 
           for (const marker of allPointMarkers) {
             const props = marker.feature?.properties || {};
@@ -4130,13 +4506,49 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             }
           }
 
-          if (!matches.length && !placeMatches.length) {
+          if (!matches.length && !placeMatches.length && !evacMatches.length) {
             resultsContainer.innerHTML = `<div class="search-no-results">Tidak ada lokasi yang cocok dengan "<b>${escapeHtml(query)}</b>"</div>`;
             resultsContainer.hidden = false;
             return;
           }
 
           resultsContainer.innerHTML = "";
+
+          for (const pt of evacMatches) {
+            const iconEmoji = pt.category === "vertical_evac" ? "🏢" : (pt.category === "safe_hill" ? "⛰️" : "🏃‍♂️");
+            const item = document.createElement("div");
+            item.className = "search-result-item";
+            item.tabIndex = 0;
+            item.setAttribute("role", "option");
+            item.innerHTML = `
+              <div class="search-result-name">${iconEmoji} ${escapeHtml(pt.name)}</div>
+              <div class="search-result-meta">
+                <span class="search-result-area">Kel. ${escapeHtml(pt.kelurahan)} · Elevasi ${pt.elevationM} mdpl</span>
+                <span class="search-result-badge safe">🛡️ Titik Kumpul</span>
+              </div>
+            `;
+            const selectEvac = () => {
+              resultsContainer.hidden = true;
+              map.flyTo([pt.lat, pt.lon], 16, { duration: 1.1 });
+              if (disasterLayers.evacuation) {
+                disasterLayers.evacuation.eachLayer(l => {
+                  const ll = l.getLatLng();
+                  if (Math.abs(ll.lat - pt.lat) < 0.0001 && Math.abs(ll.lng - pt.lon) < 0.0001) {
+                    setTimeout(() => l.openPopup(), 1200);
+                  }
+                });
+              }
+            };
+            item.addEventListener("click", selectEvac);
+            item.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                selectEvac();
+              }
+            });
+            resultsContainer.appendChild(item);
+          }
+
           for (const marker of matches) {
             const props = marker.feature.properties;
             const currentStatus = getEventStatus(props, now);
@@ -4480,6 +4892,53 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                 fillColor: "#38bdf8",
                 fillOpacity: 0.12
               }).addTo(map);
+
+              if (currentAppMode === "disaster") {
+                let nearestEvac = null;
+                let minEvacDist = Infinity;
+                if (disasterLayers.evacuationPointsData) {
+                  for (const pt of disasterLayers.evacuationPointsData) {
+                    const dist = haversineDistance(userLat, userLon, pt.lat, pt.lon);
+                    if (dist < minEvacDist) {
+                      minEvacDist = dist;
+                      nearestEvac = pt;
+                    }
+                  }
+                }
+
+                map.flyTo([userLat, userLon], 16, { duration: 1.1 });
+                setTimeout(() => {
+                  if (userGpsMarker) userGpsMarker.openPopup();
+                }, 1200);
+
+                if (nearestEvac) {
+                  const distStr = minEvacDist < 1000 ? `${Math.round(minEvacDist)} meter` : `${(minEvacDist / 1000).toFixed(2)} km`;
+                  const focusEvac = () => {
+                    map.flyTo([nearestEvac.lat, nearestEvac.lon], 16, { duration: 1.1 });
+                    if (disasterLayers.evacuation) {
+                      disasterLayers.evacuation.eachLayer(l => {
+                        const ll = l.getLatLng();
+                        if (Math.abs(ll.lat - nearestEvac.lat) < 0.0001 && Math.abs(ll.lng - nearestEvac.lon) < 0.0001) {
+                          setTimeout(() => l.openPopup(), 1200);
+                        }
+                      });
+                    }
+                  };
+
+                  showStatusCard({
+                    typeTag: "🚨 KESIAPSIAGAAN BENCANA (GPS)",
+                    title: `Titik Kumpul: ${nearestEvac.name}`,
+                    sub: `Jarak ~${distStr} dari lokasi Anda saat ini (Kel. ${nearestEvac.kelurahan})`,
+                    status: "ACTIVE",
+                    timeRange: `Elevasi: ${nearestEvac.elevationM} mdpl · Kapasitas: ~${nearestEvac.capacity.toLocaleString()} jiwa`,
+                    countdownText: `🛡️ <b>Rekomendasi Evakuasi:</b> ${escapeHtml(nearestEvac.notes)}`,
+                    onFocus: focusEvac
+                  });
+                } else {
+                  showGpsToast("📍 Lokasi Anda berhasil ditemukan!", 3000);
+                }
+                return;
+              }
 
               if (currentAppMode !== "outage") {
                 map.flyTo([userLat, userLon], 16, { duration: 1.1 });
@@ -5989,6 +6448,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       }
 
       setupModeSwitcher();
+      setupDisasterControls();
       setupSearchBar();
       setupMyLocation();
       updateClock();

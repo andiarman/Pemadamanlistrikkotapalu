@@ -1,0 +1,107 @@
+{
+  "type": "FeatureCollection",
+  "name": "PaluHazardZones",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "zone-petobo",
+        "name": "Zona Memorial & RTH Likuifaksi Petobo",
+        "type": "Zona Likuifaksi 2018 (ZRB 4 - Zona Terlarang Bangun)",
+        "hazard": "Likuifaksi (Tanah Bergerak)",
+        "recommendation": "Ditetapkan sebagai Ruang Terbuka Hijau (RTH) dan monumen memorial. Tidak diizinkan pemukiman baru.",
+        "areaHectares": 180,
+        "color": "#ef4444"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [119.9050, -0.9250],
+            [119.9200, -0.9280],
+            [119.9250, -0.9400],
+            [119.9120, -0.9450],
+            [119.9030, -0.9350],
+            [119.9050, -0.9250]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "zone-balaroa",
+        "name": "Zona Memorial & RTH Likuifaksi Balaroa",
+        "type": "Zona Likuifaksi 2018 (ZRB 4 - Zona Terlarang Bangun)",
+        "hazard": "Likuifaksi & Patahan Aktif",
+        "recommendation": "Kawasan lindung & memorial. Pemukiman dialihkan ke Huntap Balaroa Atas atau Huntap Duyu.",
+        "areaHectares": 47,
+        "color": "#ef4444"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [119.8410, -0.8980],
+            [119.8475, -0.8990],
+            [119.8480, -0.9080],
+            [119.8420, -0.9075],
+            [119.8410, -0.8980]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "zone-coastal-talise",
+        "name": "Zona Sempadan Pantai Talise – Besusu",
+        "type": "Zona Waspada Tsunami (Sempadan Pantai)",
+        "hazard": "Gelombang Tsunami (Pesisir 0 - 150m)",
+        "recommendation": "Jika gempa bumi kuat dirasakan >10 detik atau air laut surut tiba-tiba, segera evakuasi ke arah perbukitan Talise/Untad tanpa menunggu sirine.",
+        "areaHectares": 65,
+        "color": "#f97316"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [119.8650, -0.8840],
+            [119.8780, -0.8750],
+            [119.8880, -0.8600],
+            [119.8850, -0.8580],
+            [119.8740, -0.8730],
+            [119.8620, -0.8820],
+            [119.8650, -0.8840]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "zone-coastal-tondo-mamboro",
+        "name": "Zona Sempadan Pantai Tondo – Mamboro",
+        "type": "Zona Waspada Tsunami (Pesisir Teluk)",
+        "hazard": "Gelombang Tsunami Teluk Palu",
+        "recommendation": "Evakuasi ke arah barat (Kawasan Kampus Untad & Huntap Tondo) atau Gedung TES Mamboro.",
+        "areaHectares": 90,
+        "color": "#f97316"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [119.8880, -0.8600],
+            [119.8820, -0.8300],
+            [119.8680, -0.7900],
+            [119.8640, -0.7920],
+            [119.8780, -0.8320],
+            [119.8840, -0.8620],
+            [119.8880, -0.8600]
+          ]
+        ]
+      }
+    }
+  ]
+}
