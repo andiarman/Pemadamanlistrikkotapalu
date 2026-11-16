@@ -1,8 +1,8 @@
 {
   "version": 1,
   "region": "Sulawesi Tengah (Palu, Sigi, Donggala, Parimo)",
-  "updatedAt": "2026-11-14T07:23:10.803Z",
-  "total": 6857,
+  "updatedAt": "2026-11-16T06:01:45.231Z",
+  "total": 6953,
   "places": [
     [
       "Agen BRI Link Ranita",
@@ -48002,6 +48002,678 @@
       119.92272240450481,
       "kecamatan",
       "Kota Palu, Sulawesi Tengah"
+    ],
+    [
+      "Jalan Pieretendean",
+      -0.8893,
+      119.8743,
+      "jalan",
+      "Jalan Pierre Tendean, Palu"
+    ],
+    [
+      "Jalan Pierre Tendean",
+      -0.8893,
+      119.8743,
+      "jalan",
+      "Jalan Pierre Tendean, Palu"
+    ],
+    [
+      "Jalan Mulawarman",
+      -0.892,
+      119.864,
+      "jalan",
+      "Jalan Mulawarman, Palu"
+    ],
+    [
+      "Jalan Sempati Air",
+      -0.923,
+      119.905,
+      "jalan",
+      "Jalan Sempati Air, Birobuli, Palu Selatan"
+    ],
+    [
+      "Jalan Batavia",
+      -0.924,
+      119.906,
+      "jalan",
+      "Jalan Batavia, Birobuli, Palu Selatan"
+    ],
+    [
+      "Pincara",
+      -0.8875,
+      119.858,
+      "jalan",
+      "Penyeberangan Pincara Sungai Palu, Palu"
+    ],
+    [
+      "Jalan Dae Matalu",
+      -0.842,
+      119.897,
+      "jalan",
+      "Jalan Dae Matalu, Tondo, Palu"
+    ],
+    [
+      "Jalan Sigma",
+      -0.8385,
+      119.8965,
+      "jalan",
+      "Jalan Sigma Untad, Tondo, Palu"
+    ],
+    [
+      "Jalan Monginsidi",
+      -0.9085,
+      119.8785,
+      "jalan",
+      "Jalan Wolter Monginsidi, Palu Selatan"
+    ],
+    [
+      "Jalan Wolter Monginsidi",
+      -0.9085,
+      119.8785,
+      "jalan",
+      "Jalan Wolter Monginsidi, Palu Selatan"
+    ],
+    [
+      "Jalan Darusalam",
+      -0.8935,
+      119.8528,
+      "jalan",
+      "Jalan Darussalam / Kompleks Masjid Agung, Palu Barat"
+    ],
+    [
+      "Jalan Darussalam",
+      -0.8935,
+      119.8528,
+      "jalan",
+      "Jalan Darussalam, Palu Barat"
+    ],
+    [
+      "Loru Biromaru",
+      -0.9439,
+      120.0061,
+      "jalan",
+      "Desa Loru, Sigi Biromaru, Sigi"
+    ],
+    [
+      "Jalan Pramuka Sigi",
+      -0.955,
+      119.89,
+      "jalan",
+      "Jalan Pramuka Sigi, Mpanau, Sigi Biromaru"
+    ],
+    [
+      "Jalan Touwa",
+      -0.915,
+      119.892,
+      "jalan",
+      "Jalan Touwa, Palu Selatan"
+    ],
+    [
+      "Jalan Cokro Aminoto",
+      -0.8925,
+      119.858,
+      "jalan",
+      "Jalan H.O.S Cokroaminoto, Palu Barat"
+    ],
+    [
+      "Jalan Cokroaminoto",
+      -0.8925,
+      119.858,
+      "jalan",
+      "Jalan Cokroaminoto, Palu Barat"
+    ],
+    [
+      "Jalan S. Mili",
+      -0.896,
+      119.851,
+      "jalan",
+      "Jalan Sungai Mili, Palu Barat"
+    ],
+    [
+      "Jalan Sungai Mili",
+      -0.896,
+      119.851,
+      "jalan",
+      "Jalan Sungai Mili, Palu Barat"
+    ],
+    [
+      "Jalan S. Kinore",
+      -0.897,
+      119.852,
+      "jalan",
+      "Jalan Sungai Kinore, Palu Barat"
+    ],
+    [
+      "Jalan Sungai Kinore",
+      -0.897,
+      119.852,
+      "jalan",
+      "Jalan Sungai Kinore, Palu Barat"
+    ],
+    [
+      "Jalan Semanggi",
+      -0.894,
+      119.853,
+      "jalan",
+      "Jalan Semanggi, Kamonji, Palu Barat"
+    ],
+    [
+      "Jalan Kramat Jati",
+      -0.895,
+      119.854,
+      "jalan",
+      "Jalan Kramat Jati, Kamonji, Palu Barat"
+    ],
+    [
+      "Jalan Ogomojolo",
+      -0.902,
+      119.86,
+      "jalan",
+      "Jalan Ogomojolo, Palu Barat"
+    ],
+    [
+      "Jalan Sungai Tanamea",
+      -0.898,
+      119.853,
+      "jalan",
+      "Jalan Sungai Tanamea, Palu Barat"
+    ],
+    [
+      "Jalan Bungi Indah",
+      -0.899,
+      119.845,
+      "jalan",
+      "Jalan Bungi Indah, Duyu, Palu Barat"
+    ],
+    [
+      "Jalan Palola",
+      -0.893,
+      119.856,
+      "jalan",
+      "Jalan Palola, Kamonji, Palu Barat"
+    ],
+    [
+      "Jalan Tamaco",
+      -0.8945,
+      119.857,
+      "jalan",
+      "Jalan Tamaco / Tamako, Kamonji, Palu Barat"
+    ],
+    [
+      "Jalan Timbarante",
+      -0.8955,
+      119.855,
+      "jalan",
+      "Jalan Timbarante, Kamonji, Palu Barat"
+    ],
+    [
+      "Jalan Angsana Raya",
+      -0.932,
+      119.869,
+      "jalan",
+      "Jalan Angsana Raya, Tinggede / Marawola"
+    ],
+    [
+      "Jalan Kinta Baru",
+      -0.8965,
+      119.856,
+      "jalan",
+      "Jalan Kinta Baru, Kamonji, Palu Barat"
+    ],
+    [
+      "Kawole",
+      -0.958,
+      119.882,
+      "jalan",
+      "Dusun Kawole, Kalukubula, Sigi"
+    ],
+    [
+      "Jalan Poros Palu - Donggala",
+      -0.875,
+      119.835,
+      "jalan",
+      "Jalan Poros Palu - Donggala, Buluri"
+    ],
+    [
+      "Jalan Datu Adam",
+      -0.891,
+      119.848,
+      "jalan",
+      "Jalan Datu Adam, Donggala Kodi, Palu Barat"
+    ],
+    [
+      "Jalan Hamengkubuwono",
+      -0.912,
+      119.885,
+      "jalan",
+      "Jalan Hamengkubuwono, Palu Selatan"
+    ],
+    [
+      "Jalan Peladuk",
+      -0.922,
+      119.896,
+      "jalan",
+      "Jalan Peladuk, Birobuli Selatan, Palu Selatan"
+    ],
+    [
+      "Jalan Mawasm",
+      -0.921,
+      119.895,
+      "jalan",
+      "Jalan Mawas, Birobuli Selatan, Palu Selatan"
+    ],
+    [
+      "Jalan Mawas",
+      -0.921,
+      119.895,
+      "jalan",
+      "Jalan Mawas, Birobuli Selatan, Palu Selatan"
+    ],
+    [
+      "Jalan Pintu Air",
+      -0.918,
+      119.88,
+      "jalan",
+      "Jalan Pintu Air, Tatura Selatan, Palu Selatan"
+    ],
+    [
+      "Jalan Purnabakti",
+      -0.938,
+      119.892,
+      "jalan",
+      "Jalan Purnabakti, Palu Selatan"
+    ],
+    [
+      "Perumahan Griya Permai",
+      -0.935,
+      119.886,
+      "jalan",
+      "Perumahan Griya Permai, Palu Selatan"
+    ],
+    [
+      "PT Duco Food Indonesia",
+      -0.718,
+      119.862,
+      "jalan",
+      "PT Duco Food Indonesia, KIP Pantoloan, Palu"
+    ],
+    [
+      "PT Maleo Paksi Ayu",
+      -0.719,
+      119.863,
+      "jalan",
+      "PT Maleo Paksi Ayu, KIP Pantoloan, Palu"
+    ],
+    [
+      "PT Artakindo Multi Perkasa",
+      -0.72,
+      119.864,
+      "jalan",
+      "PT Artakindo Multi Perkasa, KIP Pantoloan, Palu"
+    ],
+    [
+      "PT Agro Manunggal Cocos",
+      -0.721,
+      119.865,
+      "jalan",
+      "PT Agro Manunggal Cocos, KIP Pantoloan, Palu"
+    ],
+    [
+      "PT Haycarb",
+      -0.722,
+      119.866,
+      "jalan",
+      "PT Haycarb, KIP Pantoloan, Palu"
+    ],
+    [
+      "PT Japfa",
+      -0.723,
+      119.867,
+      "jalan",
+      "PT Japfa, KIP Pantoloan, Palu"
+    ],
+    [
+      "PT SPO Agro Resources",
+      -0.724,
+      119.868,
+      "jalan",
+      "PT SPO Agro Resources, KIP Pantoloan, Palu"
+    ],
+    [
+      "PT Prima Gelora (Big Land)",
+      -0.725,
+      119.869,
+      "jalan",
+      "PT Prima Gelora (Big Land), KIP Pantoloan, Palu"
+    ],
+    [
+      "CV Mitra Bangun Nusantara",
+      -0.726,
+      119.87,
+      "jalan",
+      "CV Mitra Bangun Nusantara, KIP Pantoloan, Palu"
+    ],
+    [
+      "PT Cipta Agro Nusantara",
+      -0.727,
+      119.871,
+      "jalan",
+      "PT Cipta Agro Nusantara, KIP Pantoloan, Palu"
+    ],
+    [
+      "PT Megah Batu Abadi",
+      -0.728,
+      119.872,
+      "jalan",
+      "PT Megah Batu Abadi, KIP Pantoloan, Palu"
+    ],
+    [
+      "PT Putra Labuan Mandiri",
+      -0.685,
+      119.845,
+      "jalan",
+      "PT Putra Labuan Mandiri, Labuan, Palu Utara"
+    ],
+    [
+      "PT Sentra Labuan Tegar",
+      -0.686,
+      119.846,
+      "jalan",
+      "PT Sentra Labuan Tegar, Labuan, Palu Utara"
+    ],
+    [
+      "Jalan Marjuni",
+      -0.715,
+      119.868,
+      "jalan",
+      "Jalan Marjuni, Pantoloan, Tawaeli"
+    ],
+    [
+      "Jalan Andudana",
+      -0.716,
+      119.869,
+      "jalan",
+      "Jalan Andudana, Pantoloan, Tawaeli"
+    ],
+    [
+      "Jalan Vatamoento",
+      -0.717,
+      119.87,
+      "jalan",
+      "Jalan Vatamoento, Pantoloan, Tawaeli"
+    ],
+    [
+      "Jalan Tanah Nolo",
+      -0.718,
+      119.871,
+      "jalan",
+      "Jalan Tanah Nolo, Pantoloan, Tawaeli"
+    ],
+    [
+      "Jalan Moh Nasir",
+      -0.719,
+      119.872,
+      "jalan",
+      "Jalan Moh Nasir, Pantoloan, Tawaeli"
+    ],
+    [
+      "Jalan Logo",
+      -0.714,
+      119.867,
+      "jalan",
+      "Jalan Logo, Pantoloan, Tawaeli"
+    ],
+    [
+      "Jalan Vinase",
+      -0.713,
+      119.866,
+      "jalan",
+      "Jalan Vinase, Pantoloan, Tawaeli"
+    ],
+    [
+      "Jalan Uevuku",
+      -0.712,
+      119.865,
+      "jalan",
+      "Jalan Uevuku, Pantoloan, Tawaeli"
+    ],
+    [
+      "Jalan Ino Toa",
+      -0.782,
+      119.861,
+      "jalan",
+      "Jalan Ino Toa, Taipa, Palu Utara"
+    ],
+    [
+      "Jalan Kayu Rampe",
+      -0.783,
+      119.862,
+      "jalan",
+      "Jalan Kayu Rampe, Taipa, Palu Utara"
+    ],
+    [
+      "Jalan Kekentina",
+      -0.784,
+      119.863,
+      "jalan",
+      "Jalan Kekentina, Taipa, Palu Utara"
+    ],
+    [
+      "Jalan Lamarani",
+      -0.785,
+      119.864,
+      "jalan",
+      "Jalan Lamarani, Taipa, Palu Utara"
+    ],
+    [
+      "Jalan Pagaru Lemba",
+      -0.786,
+      119.865,
+      "jalan",
+      "Jalan Pagaru Lemba, Taipa, Palu Utara"
+    ],
+    [
+      "Jalan Rata Lemba",
+      -0.787,
+      119.866,
+      "jalan",
+      "Jalan Rata Lemba, Taipa, Palu Utara"
+    ],
+    [
+      "Jalan Rende Lele",
+      -0.788,
+      119.867,
+      "jalan",
+      "Jalan Rende Lele, Taipa, Palu Utara"
+    ],
+    [
+      "Jalan H. Sabange",
+      -0.72,
+      119.873,
+      "jalan",
+      "Jalan H. Sabange, Tawaeli"
+    ],
+    [
+      "Jalan Pengga Lembah",
+      -0.721,
+      119.874,
+      "jalan",
+      "Jalan Pengga Lembah, Tawaeli"
+    ],
+    [
+      "Jalan H. Patilla",
+      -0.722,
+      119.875,
+      "jalan",
+      "Jalan H. Patilla, Tawaeli"
+    ],
+    [
+      "Jalan Kayu Riya",
+      -0.723,
+      119.876,
+      "jalan",
+      "Jalan Kayu Riya, Tawaeli"
+    ],
+    [
+      "Jalan Makagili",
+      -0.724,
+      119.877,
+      "jalan",
+      "Jalan Makagili, Tawaeli"
+    ],
+    [
+      "Jalan Pueboya",
+      -0.725,
+      119.878,
+      "jalan",
+      "Jalan Pueboya, Pantoloan Boya, Tawaeli"
+    ],
+    [
+      "Sisere",
+      -0.71,
+      119.88,
+      "jalan",
+      "Dusun Sisere, Tawaeli, Palu Utara"
+    ],
+    [
+      "Saluki",
+      -1.284,
+      119.985,
+      "jalan",
+      "Desa Saluki, Gumbasa, Sigi"
+    ],
+    [
+      "Pangana",
+      -1.295,
+      119.992,
+      "jalan",
+      "Dusun Pangana, Gumbasa, Sigi"
+    ],
+    [
+      "Lili",
+      -1.31,
+      120.015,
+      "jalan",
+      "Desa Bulili / Lili, Nokilalaki, Sigi"
+    ],
+    [
+      "Pobia",
+      -1.325,
+      120.025,
+      "jalan",
+      "Dusun Pobia, Nokilalaki, Sigi"
+    ],
+    [
+      "Makuhi",
+      -1.45,
+      119.95,
+      "jalan",
+      "Desa Poleroa Makuhi, Kulawi, Sigi"
+    ],
+    [
+      "Lembatangoa",
+      -1.1776,
+      120.2665,
+      "jalan",
+      "Desa Lembantongoa, Palolo, Sigi"
+    ],
+    [
+      "Paloloan",
+      -1.1214,
+      120.1583,
+      "jalan",
+      "Kecamatan Palolo, Sigi"
+    ],
+    [
+      "Sigimpum Sintuwu",
+      -1.135,
+      120.17,
+      "jalan",
+      "Desa Sigimpu & Sintuwu, Palolo, Sigi"
+    ],
+    [
+      "Bilili",
+      -1.33,
+      120.03,
+      "jalan",
+      "Dusun Bilili, Nokilalaki, Sigi"
+    ],
+    [
+      "Napu",
+      -1.365,
+      120.285,
+      "jalan",
+      "Dataran Napu, Lore Utara"
+    ],
+    [
+      "Dusun Rumah Tujuh",
+      -0.68,
+      119.74,
+      "jalan",
+      "Dusun Rumah Tujuh, Banawa, Donggala"
+    ],
+    [
+      "Dusun Pangga",
+      -0.92,
+      119.72,
+      "jalan",
+      "Dusun Taipanggabe / Pangga, Marawola Barat"
+    ],
+    [
+      "Lapaloang",
+      -1.25,
+      119.55,
+      "jalan",
+      "Dusun Lapaloang, Rio Pakava, Donggala"
+    ],
+    [
+      "Kulolu",
+      -1.26,
+      119.56,
+      "jalan",
+      "Dusun Kulolu, Rio Pakava, Donggala"
+    ],
+    [
+      "Petiro Bajo",
+      -1.82,
+      120.73,
+      "jalan",
+      "Desa Petiro / Petiro Bajo, Pamona Timur, Poso"
+    ],
+    [
+      "Ratolene",
+      -1.415,
+      120.65,
+      "jalan",
+      "Desa Ratolene, Poso Pesisir, Poso"
+    ],
+    [
+      "Gantinadi",
+      -1.425,
+      120.66,
+      "jalan",
+      "Dusun Gantinadi, Poso Pesisir, Poso"
+    ],
+    [
+      "Ratuombu",
+      -1.435,
+      120.67,
+      "jalan",
+      "Dusun Ratuombu, Poso Pesisir, Poso"
+    ],
+    [
+      "Auma",
+      -0.845,
+      120.135,
+      "jalan",
+      "Desa Auma, Parigi Tengah, Parigi Moutong"
+    ],
+    [
+      "Sidole Induk",
+      -0.63,
+      120.05,
+      "jalan",
+      "Desa Sidole Induk, Ampibabo, Parigi Moutong"
     ]
   ]
 }
