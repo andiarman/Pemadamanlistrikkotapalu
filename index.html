@@ -116,7 +116,10 @@
         position: absolute;
         top: calc(100% + 10px);
         left: 0;
-        min-width: 270px;
+        min-width: 285px;
+        max-height: calc(100vh - 85px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
         z-index: 2200;
         background: linear-gradient(165deg, rgba(15, 23, 42, 0.98), rgba(11, 18, 32, 0.98));
         border: 1px solid rgba(255, 255, 255, 0.12);
@@ -226,7 +229,7 @@
       .mode-dropdown-item.active .mode-item-active-dot {
         opacity: 1;
       }
-      body[data-app-mode="empty"] .outage-only-ui {
+      body:not([data-app-mode="outage"]) .outage-only-ui {
         display: none !important;
       }
       h1 {
@@ -2084,7 +2087,7 @@
     <script src="vendor/leaflet/leaflet.js"></script>
     <script src="vendor/leaflet.markercluster/leaflet.markercluster.js"></script>
   </head>
-  <body>
+  <body data-app-mode="outage">
     <header>
       <div class="brand">
         <div class="brand-mode-wrapper">
@@ -2096,7 +2099,7 @@
           </button>
 
           <div id="mode-dropdown-menu" class="mode-dropdown-menu" hidden role="menu" aria-label="Pilih Mode Peta">
-            <div class="mode-dropdown-header">Mode Peta</div>
+            <div class="mode-dropdown-header">Mode Peta Utama</div>
             <button type="button" class="mode-dropdown-item active" data-mode="outage" role="menuitem">
               <span class="mode-badge-icon outage">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.2 2 4.6 13.3h6.1L9.6 22l8.8-11.6h-6.1z"/></svg>
@@ -2107,16 +2110,74 @@
               </div>
               <span class="mode-item-active-dot" aria-hidden="true">●</span>
             </button>
-            <button type="button" class="mode-dropdown-item" data-mode="empty" role="menuitem">
+
+            <div class="mode-dropdown-header">Mode Perencanaan (Kosong)</div>
+            <button type="button" class="mode-dropdown-item" data-mode="empty-1" role="menuitem">
               <span class="mode-badge-icon empty">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="3" y="3" width="18" height="18" rx="4" stroke-dasharray="3 3"></rect>
-                  <circle cx="12" cy="12" r="3"></circle>
+                  <text x="12" y="16.5" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor" stroke="none">1</text>
                 </svg>
               </span>
               <div class="mode-item-text">
-                <span class="mode-item-title">Mode Kosong</span>
-                <span class="mode-item-subtitle">Peta dasar Sulawesi Tengah (Siap dikembangkan)</span>
+                <span class="mode-item-title">Mode Kosong 1</span>
+                <span class="mode-item-subtitle">Slot perencanaan peta #1</span>
+              </div>
+              <span class="mode-item-active-dot" aria-hidden="true">●</span>
+            </button>
+
+            <button type="button" class="mode-dropdown-item" data-mode="empty-2" role="menuitem">
+              <span class="mode-badge-icon empty">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="4" stroke-dasharray="3 3"></rect>
+                  <text x="12" y="16.5" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor" stroke="none">2</text>
+                </svg>
+              </span>
+              <div class="mode-item-text">
+                <span class="mode-item-title">Mode Kosong 2</span>
+                <span class="mode-item-subtitle">Slot perencanaan peta #2</span>
+              </div>
+              <span class="mode-item-active-dot" aria-hidden="true">●</span>
+            </button>
+
+            <button type="button" class="mode-dropdown-item" data-mode="empty-3" role="menuitem">
+              <span class="mode-badge-icon empty">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="4" stroke-dasharray="3 3"></rect>
+                  <text x="12" y="16.5" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor" stroke="none">3</text>
+                </svg>
+              </span>
+              <div class="mode-item-text">
+                <span class="mode-item-title">Mode Kosong 3</span>
+                <span class="mode-item-subtitle">Slot perencanaan peta #3</span>
+              </div>
+              <span class="mode-item-active-dot" aria-hidden="true">●</span>
+            </button>
+
+            <button type="button" class="mode-dropdown-item" data-mode="empty-4" role="menuitem">
+              <span class="mode-badge-icon empty">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="4" stroke-dasharray="3 3"></rect>
+                  <text x="12" y="16.5" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor" stroke="none">4</text>
+                </svg>
+              </span>
+              <div class="mode-item-text">
+                <span class="mode-item-title">Mode Kosong 4</span>
+                <span class="mode-item-subtitle">Slot perencanaan peta #4</span>
+              </div>
+              <span class="mode-item-active-dot" aria-hidden="true">●</span>
+            </button>
+
+            <button type="button" class="mode-dropdown-item" data-mode="empty-5" role="menuitem">
+              <span class="mode-badge-icon empty">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="4" stroke-dasharray="3 3"></rect>
+                  <text x="12" y="16.5" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor" stroke="none">5</text>
+                </svg>
+              </span>
+              <div class="mode-item-text">
+                <span class="mode-item-title">Mode Kosong 5</span>
+                <span class="mode-item-subtitle">Slot perencanaan peta #5</span>
               </div>
               <span class="mode-item-active-dot" aria-hidden="true">●</span>
             </button>
@@ -2567,17 +2628,18 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             renderMapLayers();
             refreshDynamic();
             updateBoundaryStyles();
-          } else if (mode === "empty") {
+          } else {
+            const emptyNum = mode.replace(/^empty-?/, "") || "1";
             modeBtn.className = "brand-icon mode-selector-btn mode-empty";
-            modeBtn.title = "Mode: Mode Kosong (Klik untuk ganti mode)";
+            modeBtn.title = `Mode: Mode Kosong ${emptyNum} (Klik untuk ganti mode)`;
             currentModeIcon.innerHTML = `
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
                 <rect x="3" y="3" width="18" height="18" rx="4" stroke-dasharray="3 3"></rect>
-                <circle cx="12" cy="12" r="3"></circle>
+                <text x="12" y="16.5" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor" stroke="none">${emptyNum}</text>
               </svg>
             `;
-            if (brandTitle) brandTitle.textContent = "Peta Sulawesi Tengah";
-            if (searchInput) searchInput.placeholder = "Cari desa / jalan / tempat di Sulteng...";
+            if (brandTitle) brandTitle.textContent = `Peta Sulawesi Tengah — Mode Kosong ${emptyNum}`;
+            if (searchInput) searchInput.placeholder = `Cari desa / jalan / tempat di Sulteng...`;
 
             if (geoJsonLayer) {
               map.removeLayer(geoJsonLayer);
@@ -2625,7 +2687,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       }
 
       function getBoundaryStyle(feature) {
-        if (currentAppMode === "empty") {
+        if (currentAppMode !== "outage") {
           return {
             color: "#38bdf8",
             weight: 1,
@@ -2740,12 +2802,14 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                     );
 
                     l.bindPopup(() => {
-                      if (currentAppMode === "empty") {
+                      if (currentAppMode !== "outage") {
+                        const emptyNum = currentAppMode.replace(/^empty-?/, "") || "1";
                         return `
                           <div class="boundary-popup">
                             <h4>🏛️ ${escapeHtml(feature?.properties?.name || "")}</h4>
                             <div>📍 Kecamatan: <strong>${escapeHtml(feature?.properties?.kecamatan || "")}</strong></div>
                             <div>🏛️ Wilayah: <strong>${escapeHtml(feature?.properties?.regency || "")}</strong></div>
+                            <div style="margin-top:6px; font-size:0.75rem; color:#38bdf8;">📂 Mode Kosong ${emptyNum}</div>
                           </div>
                         `;
                       }
@@ -3732,7 +3796,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       }
 
       function renderMapLayers() {
-        if (currentAppMode === "empty") {
+        if (currentAppMode !== "outage") {
           if (geoJsonLayer) { map.removeLayer(geoJsonLayer); geoJsonLayer = null; }
           if (markerClusterGroup) { map.removeLayer(markerClusterGroup); markerClusterGroup = null; }
           allPointMarkers = [];
@@ -4161,7 +4225,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             const icon = categoryIcon[pCat] || "📍";
             const catLabel = pCat.charAt(0).toUpperCase() + pCat.slice(1);
 
-            if (currentAppMode === "empty") {
+            if (currentAppMode !== "outage") {
               const item = document.createElement("div");
               item.className = "search-result-item";
               item.tabIndex = 0;
@@ -4417,7 +4481,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                 fillOpacity: 0.12
               }).addTo(map);
 
-              if (currentAppMode === "empty") {
+              if (currentAppMode !== "outage") {
                 map.flyTo([userLat, userLon], 16, { duration: 1.1 });
                 setTimeout(() => {
                   if (userGpsMarker) userGpsMarker.openPopup();
