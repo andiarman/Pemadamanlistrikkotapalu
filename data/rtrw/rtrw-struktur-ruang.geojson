@@ -1,0 +1,506 @@
+{
+  "type": "FeatureCollection",
+  "name": "RTRW_Kota_Palu_Struktur_Ruang_2021_2041",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.875165,
+          -0.899464
+        ]
+      },
+      "properties": {
+        "id": "ppk-lolu-besusu",
+        "nama": "PPK Lolu - Besusu",
+        "kategori": "Pusat Pelayanan Kota (PPK)",
+        "tingkat": "Hierarki I",
+        "kecamatan": "Palu Timur",
+        "fungsi": "Pemerintahan Kota, Perdagangan Regional, Perbankan/Jasa, Pendidikan Tinggi, Kesehatan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 8 Ayat (2) Huruf a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.897692,
+          -0.855
+        ]
+      },
+      "properties": {
+        "id": "ppk-tondo-talise",
+        "nama": "PPK Tondo - Talise",
+        "kategori": "Pusat Pelayanan Kota (PPK)",
+        "tingkat": "Hierarki I",
+        "kecamatan": "Mantikulore",
+        "fungsi": "Pusat Pemerintahan Provinsi, Pendidikan Tinggi & Riset (Untad), Pariwisata, Permukiman Skala Kota",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 8 Ayat (2) Huruf b"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.875,
+          -0.71
+        ]
+      },
+      "properties": {
+        "id": "sppk-tawaeli",
+        "nama": "SPPK I Tawaeli",
+        "kategori": "Sub Pusat Pelayanan Kota (SPPK)",
+        "tingkat": "Hierarki II",
+        "kecamatan": "Tawaeli",
+        "fungsi": "Industri Pengolahan / KEK, Pergudangan & Logistik Pelabuhan, Perdagangan Skala Grosir",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 8 Ayat (3) Huruf a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.891212,
+          -0.92
+        ]
+      },
+      "properties": {
+        "id": "sppk-palu-selatan",
+        "nama": "SPPK II Palu Selatan - Palu Timur",
+        "kategori": "Sub Pusat Pelayanan Kota (SPPK)",
+        "tingkat": "Hierarki II",
+        "kecamatan": "Palu Selatan",
+        "fungsi": "Pintu Gerbang Udara (Bandara), Perdagangan & Jasa Modern, Rekreasi, Permukiman Terencana",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 8 Ayat (3) Huruf b"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.855,
+          -0.9
+        ]
+      },
+      "properties": {
+        "id": "sppk-palu-barat",
+        "nama": "SPPK III Palu Barat",
+        "kategori": "Sub Pusat Pelayanan Kota (SPPK)",
+        "tingkat": "Hierarki II",
+        "kecamatan": "Palu Barat",
+        "fungsi": "Perdagangan & Jasa Tradisional/Komersial, Pelayanan Umum, Permukiman Kepadatan Tinggi",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 8 Ayat (3) Huruf c"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.869584,
+          -0.77557
+        ]
+      },
+      "properties": {
+        "id": "pl-taipa",
+        "nama": "PL Taipa",
+        "kategori": "Pusat Lingkungan (PL)",
+        "tingkat": "Hierarki III",
+        "kecamatan": "Palu Utara",
+        "fungsi": "Pelayanan Perikanan, Pendaratan Ikan, Feri Penyeberangan Taipa, Permukiman Pesisir",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 8 Ayat (4) Huruf a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.88881,
+          -0.79368
+        ]
+      },
+      "properties": {
+        "id": "pl-mamboro",
+        "nama": "PL Mamboro",
+        "kategori": "Pusat Lingkungan (PL)",
+        "tingkat": "Hierarki III",
+        "kecamatan": "Palu Utara",
+        "fungsi": "Terminal Regional Penumpang, Distribusi Barang & Logistik, Permukiman Nelayan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 8 Ayat (4) Huruf b"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.908285,
+          -0.900487
+        ]
+      },
+      "properties": {
+        "id": "pl-lasoani",
+        "nama": "PL Lasoani",
+        "kategori": "Pusat Lingkungan (PL)",
+        "tingkat": "Hierarki III",
+        "kecamatan": "Mantikulore",
+        "fungsi": "Pertanian Perkotaan, Permukiman Kepadatan Sedang, Pelayanan Lingkungan Timur",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 8 Ayat (4) Huruf c"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.919433,
+          -0.937462
+        ]
+      },
+      "properties": {
+        "id": "pl-petobo",
+        "nama": "PL Petobo",
+        "kategori": "Pusat Lingkungan (PL)",
+        "tingkat": "Hierarki III",
+        "kecamatan": "Palu Selatan",
+        "fungsi": "Permukiman Baru Pasca Bencana, Pelayanan Lingkungan Selatan, Zona Memorial",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 8 Ayat (4) Huruf d"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.863988,
+          -0.920986
+        ]
+      },
+      "properties": {
+        "id": "pl-tavanjuka",
+        "nama": "PL Tavanjuka",
+        "kategori": "Pusat Lingkungan (PL)",
+        "tingkat": "Hierarki III",
+        "kecamatan": "Tatanga",
+        "fungsi": "Perdagangan Lokal, Pasar Tradisional, Permukiman Kepadatan Tinggi, Pelayanan Tatanga",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 8 Ayat (4) Huruf e"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.820778,
+          -0.860223
+        ]
+      },
+      "properties": {
+        "id": "pl-tipo",
+        "nama": "PL Tipo",
+        "kategori": "Pusat Lingkungan (PL)",
+        "tingkat": "Hierarki III",
+        "kecamatan": "Ulujadi",
+        "fungsi": "Terminal Barat Antar-Kota, Gerbang Barat Palu-Donggala, Logistik & Permukiman",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 8 Ayat (4) Huruf f"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.8556,
+          -0.7061
+        ]
+      },
+      "properties": {
+        "id": "pelabuhan-pantoloan",
+        "nama": "Pelabuhan Utama Pantoloan",
+        "kategori": "Transportasi Laut",
+        "tipe": "Pelabuhan Utama Nasional",
+        "lokasi": "Kel. Pantoloan, Kec. Tawaeli",
+        "fungsi": "Hub Peti Kemas & Logistik Internasional, Pelayaran Domestik & Internasional",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 13 Ayat (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.8665,
+          -0.7812
+        ]
+      },
+      "properties": {
+        "id": "pelabuhan-taipa",
+        "nama": "Pelabuhan Penyeberangan Taipa",
+        "kategori": "Transportasi Laut",
+        "tipe": "Pelabuhan Penyeberangan",
+        "lokasi": "Kel. Taipa, Kec. Palu Utara",
+        "fungsi": "Penyeberangan Feri Palu - Kariangau (Balikpapan/IKN) & Antar-Pulau",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 13 Ayat (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.908,
+          -0.9165
+        ]
+      },
+      "properties": {
+        "id": "bandara-mutiara",
+        "nama": "Bandar Udara Mutiara Sis Al-Jufri",
+        "kategori": "Transportasi Udara",
+        "tipe": "Bandara Pengumpul Sekunder (BPS)",
+        "lokasi": "Kel. Birobuli Selatan, Kec. Palu Selatan",
+        "fungsi": "Pintu Gerbang Udara Sulawesi Tengah, Panjang Runway 2.500m",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 14 Ayat (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.8735,
+          -0.7915
+        ]
+      },
+      "properties": {
+        "id": "terminal-mamboro",
+        "nama": "Terminal Penumpang Tipe A Mamboro",
+        "kategori": "Transportasi Darat",
+        "tipe": "Terminal Tipe A",
+        "lokasi": "Kel. Mamboro, Kec. Palu Utara",
+        "fungsi": "Terminal Angkutan Antar Kota Antar Provinsi (AKAP) & AKDP Utama",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 Ayat (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.826383,
+          -0.861831
+        ]
+      },
+      "properties": {
+        "id": "terminal-tipo",
+        "nama": "Terminal Penumpang Tipe B Tipo",
+        "kategori": "Transportasi Darat",
+        "tipe": "Terminal Tipe B",
+        "lokasi": "Kel. Tipo, Kec. Ulujadi",
+        "fungsi": "Terminal Angkutan Antar Kota Dalam Provinsi (AKDP) Lintas Barat Palu-Donggala",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 Ayat (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.850844,
+          -0.903346
+        ]
+      },
+      "properties": {
+        "id": "terminal-manonda",
+        "nama": "Terminal Penumpang Tipe C Manonda",
+        "kategori": "Transportasi Darat",
+        "tipe": "Terminal Tipe C",
+        "lokasi": "Kel. Kamonji / Baru, Kec. Palu Barat",
+        "fungsi": "Pusat Trayek Angkutan Perkotaan (Mikrolet) & Angkutan Perdesaan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 Ayat (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.865,
+          -0.72
+        ]
+      },
+      "properties": {
+        "id": "rencana-stasiun-palu-utara",
+        "nama": "Rencana Stasiun KA Palu Utara",
+        "kategori": "Perkeretaapian",
+        "tipe": "Stasiun Kereta Api Barang & Penumpang",
+        "lokasi": "Kec. Palu Utara / Tawaeli",
+        "fungsi": "Simpul Jaringan Jalur Kereta Api Trans Sulawesi & Kawasan Industri",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 12 Ayat (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.822,
+          -0.865
+        ]
+      },
+      "properties": {
+        "id": "rencana-stasiun-ulujadi",
+        "nama": "Rencana Stasiun KA Ulujadi",
+        "kategori": "Perkeretaapian",
+        "tipe": "Stasiun Kereta Api Penumpang & Barang",
+        "lokasi": "Kel. Tipo, Kec. Ulujadi",
+        "fungsi": "Simpul Jalur Kereta Api Pesisir Barat Sulawesi Tengah",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 12 Ayat (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.8556,
+            -0.7061
+          ],
+          [
+            119.88,
+            -0.72
+          ],
+          [
+            119.92,
+            -0.73
+          ],
+          [
+            119.96,
+            -0.745
+          ],
+          [
+            120.01,
+            -0.76
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rencana-tol-toboli-pantoloan",
+        "nama": "Rencana Tol Toboli - Pantoloan",
+        "kategori": "Jalan Bebas Hambatan (Tol)",
+        "status": "Rencana Jangka Panjang",
+        "panjang": "± 35 km (Koridor Palu - Parigi)",
+        "fungsi": "Konektivitas Cepat Selat Makassar - Teluk Tomini (Kawasan IKN ke Wilayah Timur)",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 Ayat (2) Huruf b"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.86,
+            -0.71
+          ],
+          [
+            119.87,
+            -0.74
+          ],
+          [
+            119.88,
+            -0.78
+          ],
+          [
+            119.89,
+            -0.81
+          ],
+          [
+            119.91,
+            -0.835
+          ],
+          [
+            119.905,
+            -0.86
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rencana-tol-pantoloan-palu",
+        "nama": "Rencana Tol Pantoloan - Palu",
+        "kategori": "Jalan Bebas Hambatan (Tol)",
+        "status": "Rencana Koridor Utara",
+        "panjang": "± 22 km",
+        "fungsi": "Akses Khusus Pelabuhan Pantoloan - Kawasan Industri KEK ke Inti Perkotaan Palu",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 Ayat (2) Huruf b"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.89,
+            -0.72
+          ],
+          [
+            119.91,
+            -0.76
+          ],
+          [
+            119.925,
+            -0.81
+          ],
+          [
+            119.935,
+            -0.85
+          ],
+          [
+            119.93,
+            -0.89
+          ],
+          [
+            119.925,
+            -0.93
+          ],
+          [
+            119.91,
+            -0.95
+          ],
+          [
+            119.87,
+            -0.95
+          ],
+          [
+            119.84,
+            -0.93
+          ],
+          [
+            119.825,
+            -0.9
+          ],
+          [
+            119.815,
+            -0.86
+          ]
+        ]
+      },
+      "properties": {
+        "id": "outer-ring-road",
+        "nama": "Rencana Jalan Lingkar Luar (Outer Ring Road)",
+        "kategori": "Jaringan Jalan Lingkar",
+        "status": "Rencana Pengembangan RTRW",
+        "panjang": "± 45 km",
+        "fungsi": "Pengalihan Lalu Lintas Angkutan Berat Memutari Wilayah Perkotaan Padat Penduduk",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 Ayat (2) Huruf e"
+      }
+    }
+  ]
+}

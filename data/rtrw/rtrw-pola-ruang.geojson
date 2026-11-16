@@ -1,0 +1,410 @@
+{
+  "type": "FeatureCollection",
+  "name": "RTRW_Kota_Palu_Pola_Ruang_2021_2041",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.77,
+              -0.81
+            ],
+            [
+              119.805,
+              -0.81
+            ],
+            [
+              119.815,
+              -0.865
+            ],
+            [
+              119.79,
+              -0.875
+            ],
+            [
+              119.765,
+              -0.835
+            ],
+            [
+              119.77,
+              -0.81
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "hl-ulujadi",
+        "nama": "Hutan Lindung (HL) Perbukitan Barat Ulujadi",
+        "zona": "Kawasan Lindung",
+        "sub_zona": "Kawasan Hutan Lindung",
+        "luas_perda": "6.380 Ha (Total HL Kota Palu)",
+        "lokasi": "Perbukitan Barat Kec. Ulujadi (Buluri, Watusampu, Tipo)",
+        "ketentuan": "Dilarang kegiatan budidaya yang mengurangi fungsi hidrologis dan tutupan vegetasi",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.93,
+              -0.84
+            ],
+            [
+              119.995,
+              -0.84
+            ],
+            [
+              119.995,
+              -0.89
+            ],
+            [
+              119.935,
+              -0.89
+            ],
+            [
+              119.93,
+              -0.84
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "tahura-palu",
+        "nama": "Taman Hutan Raya (Tahura) Sulawesi Tengah KBA",
+        "zona": "Kawasan Lindung",
+        "sub_zona": "Kawasan Suaka Alam, Pelestarian Alam & Cagar Budaya",
+        "luas_perda": "2.559 Ha",
+        "lokasi": "Lereng Perbukitan Timur Kec. Mantikulore (Poboya & Kawatuna)",
+        "ketentuan": "Konservasi keanekaragaman hayati, koleksi tumbuhan & satwa endemik Wallacea, riset ekologi & eduwisata",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 21"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.85,
+              -0.7
+            ],
+            [
+              119.865,
+              -0.7
+            ],
+            [
+              119.88,
+              -0.79
+            ],
+            [
+              119.89,
+              -0.84
+            ],
+            [
+              119.87,
+              -0.875
+            ],
+            [
+              119.845,
+              -0.885
+            ],
+            [
+              119.825,
+              -0.86
+            ],
+            [
+              119.785,
+              -0.82
+            ],
+            [
+              119.775,
+              -0.823
+            ],
+            [
+              119.815,
+              -0.865
+            ],
+            [
+              119.84,
+              -0.89
+            ],
+            [
+              119.865,
+              -0.88
+            ],
+            [
+              119.875,
+              -0.84
+            ],
+            [
+              119.865,
+              -0.79
+            ],
+            [
+              119.85,
+              -0.7
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "sempadan-pantai",
+        "nama": "Kawasan Sempadan Pantai Teluk Palu",
+        "zona": "Kawasan Lindung",
+        "sub_zona": "Kawasan Perlindungan Setempat",
+        "luas_perda": "270 Ha",
+        "lokasi": "Pesisir Pantai Teluk Palu (Kec. Tawaeli, Palu Utara, Mantikulore, Palu Barat, Ulujadi)",
+        "ketentuan": "Sempadan pantai min 100 meter dari titik pasang tertinggi, tanggul laut penahan tsunami, sabuk mangrove, dan ruang terbuka publik non-hunian permanen",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 22"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.865,
+              -0.675
+            ],
+            [
+              119.895,
+              -0.675
+            ],
+            [
+              119.895,
+              -0.725
+            ],
+            [
+              119.868,
+              -0.725
+            ],
+            [
+              119.865,
+              -0.675
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kpi-kek-tawaeli",
+        "nama": "Kawasan Peruntukan Industri (KPI) & KEK Palu",
+        "zona": "Kawasan Budidaya",
+        "sub_zona": "Kawasan Industri",
+        "luas_perda": "1.395 Ha",
+        "lokasi": "Kel. Pantoloan, Pantoloan Boya, Baiya (Kec. Tawaeli)",
+        "ketentuan": "Pusat industri manufaktur, agroindustri, pengolahan mineral terpadu, pergudangan modern & logistik terintegrasi pelabuhan laut",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 30"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.89,
+              -0.665
+            ],
+            [
+              119.935,
+              -0.665
+            ],
+            [
+              119.935,
+              -0.73
+            ],
+            [
+              119.895,
+              -0.73
+            ],
+            [
+              119.89,
+              -0.665
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "hpt-tawaeli",
+        "nama": "Hutan Produksi Terbatas (HPT)",
+        "zona": "Kawasan Budidaya",
+        "sub_zona": "Kawasan Hutan Produksi",
+        "luas_perda": "5.137 Ha",
+        "lokasi": "Bagian Timur Kec. Tawaeli & Palu Utara",
+        "ketentuan": "Pemanfaatan hasil hutan kayu dan bukan kayu dengan tebang pilih ramah lingkungan serta rehabilitasi hutan berkesinambungan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.835,
+              -0.925
+            ],
+            [
+              119.855,
+              -0.925
+            ],
+            [
+              119.855,
+              -0.945
+            ],
+            [
+              119.835,
+              -0.945
+            ],
+            [
+              119.835,
+              -0.925
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kp2b-tatanga",
+        "nama": "Kawasan Pertanian Pangan Berkelanjutan (KP2B)",
+        "zona": "Kawasan Budidaya",
+        "sub_zona": "Kawasan Pertanian Tanaman Pangan",
+        "luas_perda": "427 Ha",
+        "lokasi": "Kec. Tatanga (Duyu, Pengawu), Palu Selatan & Mantikulore",
+        "ketentuan": "Lahan sawah irigasi teknis dilindungi mutlak dari alih fungsi perumahan/komersial guna menjamin ketahanan pangan perkotaan Palu",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 29"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.845,
+              -0.885
+            ],
+            [
+              119.885,
+              -0.885
+            ],
+            [
+              119.885,
+              -0.915
+            ],
+            [
+              119.845,
+              -0.915
+            ],
+            [
+              119.845,
+              -0.885
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "permukiman-kepadatan-tinggi",
+        "nama": "Kawasan Permukiman Kepadatan Tinggi",
+        "zona": "Kawasan Budidaya",
+        "sub_zona": "Kawasan Permukiman Perkotaan",
+        "luas_perda": "Bagian dari 9.044 Ha Perumahan",
+        "lokasi": "Kec. Palu Barat, Palu Timur, dan Tatanga Utara",
+        "ketentuan": "Pengembangan hunian vertikal/kompak, penyediaan sarana air bersih, sanitasi terpusat, dan ruang evakuasi gempa",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 33"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.89,
+              -0.825
+            ],
+            [
+              119.925,
+              -0.825
+            ],
+            [
+              119.925,
+              -0.865
+            ],
+            [
+              119.89,
+              -0.865
+            ],
+            [
+              119.89,
+              -0.825
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "permukiman-tondo-talise",
+        "nama": "Kawasan Permukiman Baru Terencana & Huntap Tondo-Talise",
+        "zona": "Kawasan Budidaya",
+        "sub_zona": "Kawasan Permukiman Perkotaan",
+        "luas_perda": "Kepadatan Sedang/Rendah (Penyangga Pascabencana)",
+        "lokasi": "Kec. Mantikulore (Tondo & Talise Valangguni)",
+        "ketentuan": "Kawasan relokasi aman bencana sesar dan tsunami, perumahan teratur tahan gempa dengan RTH lingkungan memadai",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 33"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.885,
+              -0.89
+            ],
+            [
+              119.905,
+              -0.89
+            ],
+            [
+              119.905,
+              -0.905
+            ],
+            [
+              119.885,
+              -0.905
+            ],
+            [
+              119.885,
+              -0.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "hankam-palu",
+        "nama": "Kawasan Pertahanan dan Keamanan (Hankam)",
+        "zona": "Kawasan Budidaya",
+        "sub_zona": "Kawasan Pertahanan dan Keamanan",
+        "luas_perda": "265 Ha",
+        "lokasi": "Korem 132/Tadulako, Polda Sulteng, Yonif 711/Raksatama, Lanal, Lanud",
+        "ketentuan": "Penyediaan sarana pertahanan terpadu komando militer dan kepolisian daerah dalam menjaga stabilitas keamanan regional",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 35"
+      }
+    }
+  ]
+}

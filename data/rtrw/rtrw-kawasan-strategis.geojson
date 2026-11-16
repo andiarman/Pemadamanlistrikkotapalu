@@ -1,0 +1,206 @@
+{
+  "type": "FeatureCollection",
+  "name": "RTRW_Kota_Palu_Kawasan_Strategis_2021_2041",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.86,
+              -0.67
+            ],
+            [
+              119.89,
+              -0.67
+            ],
+            [
+              119.895,
+              -0.725
+            ],
+            [
+              119.865,
+              -0.725
+            ],
+            [
+              119.86,
+              -0.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "ksp-kek-palu",
+        "nama": "KSP Kawasan Ekonomi Khusus (KEK) Palu",
+        "kategori": "Kawasan Strategis Provinsi (KSP)",
+        "sudut_kepentingan": "Pertumbuhan Ekonomi",
+        "luas_ha": "± 1.500 Ha",
+        "lokasi": "Kel. Pantoloan, Pantoloan Boya, Baiya (Kec. Tawaeli)",
+        "fungsi": "Pusat Industri Manufaktur, Smelter, Logistik Ekspor Selat Makassar & Penyangga IKN Nusantara",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 38 Ayat (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.875,
+              -0.835
+            ],
+            [
+              119.925,
+              -0.835
+            ],
+            [
+              119.925,
+              -0.875
+            ],
+            [
+              119.875,
+              -0.875
+            ],
+            [
+              119.875,
+              -0.835
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "ksk-tondo-talise",
+        "nama": "KSK Kawasan Tondo - Talise",
+        "kategori": "Kawasan Strategis Kota (KSK)",
+        "sudut_kepentingan": "Pertumbuhan Ekonomi, Pendidikan Tinggi & Riset",
+        "luas_ha": "± 850 Ha",
+        "lokasi": "Kel. Tondo & Talise (Kec. Mantikulore)",
+        "fungsi": "Pengembangan Kampus Universitas Tadulako (Untad), Pusat Riset Kebencanaan & Pemukiman Modern Baru",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 39 Ayat (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.845,
+              -0.885
+            ],
+            [
+              119.865,
+              -0.885
+            ],
+            [
+              119.865,
+              -0.908
+            ],
+            [
+              119.845,
+              -0.908
+            ],
+            [
+              119.845,
+              -0.885
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "ksk-kota-tua-palu-barat",
+        "nama": "KSK Kawasan Kota Tua Palu Barat",
+        "kategori": "Kawasan Strategis Kota (KSK)",
+        "sudut_kepentingan": "Sosial Budaya & Nilai Sejarah",
+        "luas_ha": "± 210 Ha",
+        "lokasi": "Kel. Baru, Kamonji, Siranindi, Ujuna (Kec. Palu Barat)",
+        "fungsi": "Revitalisasi Kawasan Bersejarah, Perdagangan Tradisional, Nilai Arsitektur Kolonial & Kebudayaan Lokal",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 39 Ayat (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.851,
+              -0.885
+            ],
+            [
+              119.856,
+              -0.885
+            ],
+            [
+              119.856,
+              -0.89
+            ],
+            [
+              119.851,
+              -0.89
+            ],
+            [
+              119.851,
+              -0.885
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "ksk-istana-raja-palu",
+        "nama": "KSK Cagar Budaya Istana Raja Palu (Sou Raja)",
+        "kategori": "Kawasan Strategis Kota (KSK)",
+        "sudut_kepentingan": "Cagar Budaya & Warisan Sejarah",
+        "luas_ha": "± 12 Ha",
+        "lokasi": "Kel. Lere (Kec. Palu Barat)",
+        "fungsi": "Pelestarian Cagar Budaya Bersejarah Kerajaan Palu, Rumah Adat Suku Kaili & Wisata Pusaka Edukatif",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 39 Ayat (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.825,
+              -0.82
+            ],
+            [
+              119.84,
+              -0.82
+            ],
+            [
+              119.88,
+              -0.95
+            ],
+            [
+              119.86,
+              -0.95
+            ],
+            [
+              119.825,
+              -0.82
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "ksk-koridor-palu-koro",
+        "nama": "KSK Koridor Tangguh Bencana Sesar Palu-Koro",
+        "kategori": "Kawasan Strategis Lingkungan Hidup & Kebencanaan",
+        "sudut_kepentingan": "Daya Dukung Lingkungan Hidup & Penanggulangan Bencana",
+        "luas_ha": "Sempadan Aktif Patahan",
+        "lokasi": "Koridor Sesar Aktif Melintasi Ulujadi, Palu Barat, Tatanga, Palu Selatan",
+        "fungsi": "Zona Pengendalian Ketat Non-Hunian (ZRB 4), Sabuk Hijau Penahan Gempa & Jalur Mitigasi Terbuka",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 39 Ayat (4)"
+      }
+    }
+  ]
+}
