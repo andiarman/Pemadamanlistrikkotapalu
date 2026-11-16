@@ -432,6 +432,13 @@
         font-size: 10px;
         flex-shrink: 0;
       }
+      .rtrw-swatch.jalan-swatch {
+        background: #dc2626;
+        border: 1px solid #fca5a5;
+        height: 4px;
+        width: 16px;
+        border-radius: 2px;
+      }
       .rtrw-swatch.pusat-swatch {
         background: #dc2626;
         border: 1.5px solid #fecaca;
@@ -2637,6 +2644,16 @@
         </div>
         <div class="rtrw-legend-items">
           <label class="rtrw-legend-item">
+            <input type="checkbox" id="chk-rtrw-jalan" checked />
+            <span class="rtrw-swatch jalan-swatch"></span>
+            <span>Jaringan Jalan & Sempadan (GSB / Rumija)</span>
+          </label>
+          <label class="rtrw-legend-item">
+            <input type="checkbox" id="chk-rtrw-pola" checked />
+            <span class="rtrw-swatch pola-swatch"></span>
+            <span>Pola Ruang (Zonasi Lindung & Budidaya)</span>
+          </label>
+          <label class="rtrw-legend-item">
             <input type="checkbox" id="chk-rtrw-pusat" checked />
             <span class="rtrw-swatch pusat-swatch"></span>
             <span>Pusat Pelayanan (PPK, SPPK, PL)</span>
@@ -2647,14 +2664,9 @@
             <span>Transportasi (Tol, Pelabuhan, Bandara)</span>
           </label>
           <label class="rtrw-legend-item">
-            <input type="checkbox" id="chk-rtrw-pola" checked />
-            <span class="rtrw-swatch pola-swatch"></span>
-            <span>Pola Ruang (Lindung & Budidaya)</span>
-          </label>
-          <label class="rtrw-legend-item">
             <input type="checkbox" id="chk-rtrw-strategis" checked />
             <span class="rtrw-swatch strategis-swatch"></span>
-            <span>Kawasan Strategis (KEK, KSK)</span>
+            <span>Kawasan Strategis (KEK, KSK Kota Tua)</span>
           </label>
         </div>
       </div>
@@ -3054,6 +3066,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       // Mode RTRW Kota Palu 2021-2041 (Perda 2/2021)
       // ==========================================
       const rtrwLayers = {
+        jalan: null,
         pusat: null,
         transport: null,
         pola: null,
@@ -3063,14 +3076,17 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
 
       async function loadRtrwLayers() {
         if (rtrwLayers.loaded) {
+          if (rtrwLayers.jalan && !map.hasLayer(rtrwLayers.jalan) && document.getElementById("chk-rtrw-jalan")?.checked !== false) {
+            map.addLayer(rtrwLayers.jalan);
+          }
+          if (rtrwLayers.pola && !map.hasLayer(rtrwLayers.pola) && document.getElementById("chk-rtrw-pola")?.checked !== false) {
+            map.addLayer(rtrwLayers.pola);
+          }
           if (rtrwLayers.pusat && !map.hasLayer(rtrwLayers.pusat) && document.getElementById("chk-rtrw-pusat")?.checked !== false) {
             map.addLayer(rtrwLayers.pusat);
           }
           if (rtrwLayers.transport && !map.hasLayer(rtrwLayers.transport) && document.getElementById("chk-rtrw-transport")?.checked !== false) {
             map.addLayer(rtrwLayers.transport);
-          }
-          if (rtrwLayers.pola && !map.hasLayer(rtrwLayers.pola) && document.getElementById("chk-rtrw-pola")?.checked !== false) {
-            map.addLayer(rtrwLayers.pola);
           }
           if (rtrwLayers.strategis && !map.hasLayer(rtrwLayers.strategis) && document.getElementById("chk-rtrw-strategis")?.checked !== false) {
             map.addLayer(rtrwLayers.strategis);
@@ -3079,7 +3095,104 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         }
 
         try {
-          // 1. Pola Ruang (Kawasan Lindung & Budidaya)
+          // 1. Jaringan Jalan & Sempadan (Rumija & GSB)
+          const jalanRes = await fetch("data/rtrw/rtrw-jaringan-jalan.geojson");
+          if (jalanRes.ok) {
+            const jalanData = await jalanRes.json();
+            rtrwLayers.jalan = L.geoJSON(jalanData, {
+              style: (f) => {
+                const p = f.properties || {};
+                const kat = p.kategori || "";
+                let color = "#3b82f6";
+                let weight = 3;
+                let dashArray = null;
+                let opacity = 0.92;
+
+                if (kat.includes("Arteri Primer")) {
+                  color = "#dc2626"; // Crimson red
+                  weight = 4.5;
+                } else if (kat.includes("Kolektor Primer Satu")) {
+                  color = "#ea580c"; // Deep orange
+                  weight = 3.8;
+                } else if (kat.includes("Kolektor Primer Dua") || kat.includes("Strategis Provinsi")) {
+                  color = "#f59e0b"; // Amber
+                  weight = 3.2;
+                } else if (kat.includes("Tol")) {
+                  color = "#6366f1"; // Indigo
+                  weight = 5;
+                  dashArray = "6, 4";
+                } else if (kat.includes("Lingkar")) {
+                  color = "#a855f7"; // Purple
+                  weight = 3.5;
+                  dashArray = "8, 5";
+                } else if (kat.includes("Arteri Sekunder")) {
+                  color = "#0ea5e9"; // Sky blue
+                  weight = 3.0;
+                } else if (kat.includes("Kolektor Sekunder")) {
+                  color = "#10b981"; // Emerald
+                  weight = 2.6;
+                } else {
+                  color = "#14b8a6"; // Teal
+                  weight = 2.2;
+                }
+
+                return {
+                  color: color,
+                  weight: weight,
+                  opacity: opacity,
+                  dashArray: dashArray,
+                  lineCap: "round",
+                  lineJoin: "round"
+                };
+              },
+              onEachFeature: (f, layer) => {
+                const p = f.properties || {};
+                layer.bindTooltip(
+                  `<strong>🛣️ ${escapeHtml(p.nama)}</strong><br>` +
+                  `<small style="color:#fde047;">${escapeHtml(p.kategori)} (${escapeHtml(p.kewenangan)})</small><br>` +
+                  `<small style="color:#cbd5e1;">Rumija: <b>${escapeHtml(p.rumija)}</b> | GSB: <b>${escapeHtml(p.gsb?.split('/')[0] || p.gsb)}</b></small>`,
+                  { sticky: true }
+                );
+                layer.bindPopup(`
+                  <div class="rtrw-popup" style="max-width:320px;">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:6px; margin-bottom:6px;">
+                      <span class="rtrw-badge" style="background:rgba(234,88,12,0.2); color:#fb923c; border:1px solid rgba(251,146,60,0.3);">${escapeHtml(p.kategori)}</span>
+                      <span style="font-size:0.7rem; font-weight:700; color:#38bdf8; background:rgba(56,189,248,0.15); padding:2px 6px; border-radius:4px;">${escapeHtml(p.kewenangan)}</span>
+                    </div>
+                    <h4 style="margin:0 0 8px; font-size:0.94rem; color:#f8fafc; font-weight:700;">🛣️ ${escapeHtml(p.nama)}</h4>
+                    
+                    <div style="font-size:0.78rem; line-height:1.45; color:#cbd5e1; display:flex; flex-direction:column; gap:5px;">
+                      <div style="background:rgba(255,255,255,0.04); padding:6px 8px; border-radius:5px; border-left:3px solid #f59e0b;">
+                        <div style="color:#94a3b8; font-size:0.7rem; font-weight:600; text-transform:uppercase;">Ruang Milik Jalan (Rumija)</div>
+                        <div style="color:#fef08a; font-weight:700; font-size:0.84rem;">📏 ${escapeHtml(p.rumija)}</div>
+                      </div>
+                      
+                      <div style="background:rgba(255,255,255,0.04); padding:6px 8px; border-radius:5px; border-left:3px solid #ef4444;">
+                        <div style="color:#94a3b8; font-size:0.7rem; font-weight:600; text-transform:uppercase;">Garis Sempadan Bangunan (GSB Rumah / Gedung)</div>
+                        <div style="color:#fca5a5; font-weight:700; font-size:0.82rem;">📐 ${escapeHtml(p.gsb)}</div>
+                      </div>
+
+                      <div style="background:rgba(255,255,255,0.04); padding:6px 8px; border-radius:5px; border-left:3px solid #38bdf8;">
+                        <div style="color:#94a3b8; font-size:0.7rem; font-weight:600; text-transform:uppercase;">Ruang Pengawasan Jalan (Ruwasja)</div>
+                        <div style="color:#e2e8f0; font-size:0.76rem;">👁️ ${escapeHtml(p.ruwasja)}</div>
+                      </div>
+
+                      <div style="margin-top:2px; padding:6px 8px; background:rgba(239,68,68,0.1); border-radius:4px; font-size:0.73rem; color:#fca5a5; line-height:1.35;">
+                        <b>⚠️ Ketentuan Larangan:</b><br>${escapeHtml(p.larangan)}
+                      </div>
+
+                      <div style="margin-top:2px; font-size:0.69rem; color:#94a3b8;"><b>Dasar Hukum:</b> ${escapeHtml(p.regulasi)}</div>
+                    </div>
+                  </div>
+                `);
+              }
+            });
+            if (currentAppMode === "rtrw" && document.getElementById("chk-rtrw-jalan")?.checked !== false) {
+              rtrwLayers.jalan.addTo(map);
+            }
+          }
+
+          // 2. Pola Ruang (Kawasan Lindung & Budidaya Berbasis Kelurahan Presisi)
           const polaRes = await fetch("data/rtrw/rtrw-pola-ruang.geojson");
           if (polaRes.ok) {
             const polaData = await polaRes.json();
@@ -3095,7 +3208,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                 } else if (sub.includes("Suaka") || sub.includes("Tahura")) {
                   color = "#059669"; fillOpacity = 0.32;
                 } else if (sub.includes("Perlindungan Setempat") || sub.includes("Pantai")) {
-                  color = "#0284c7"; fillOpacity = 0.25; dashArray = "4, 3";
+                  color = "#0284c7"; fillOpacity = 0.28; dashArray = "4, 3";
                 } else if (sub.includes("Industri")) {
                   color = "#7e22ce"; fillOpacity = 0.30;
                 } else if (sub.includes("Hutan Produksi")) {
@@ -3121,14 +3234,21 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                 const p = f.properties || {};
                 layer.bindTooltip(`<strong>${escapeHtml(p.nama)}</strong><br><small style="color:#93c5fd;">${escapeHtml(p.zona)} · ${escapeHtml(p.luas_perda)}</small>`, { sticky: true });
                 layer.bindPopup(`
-                  <div class="rtrw-popup">
-                    <span class="rtrw-badge" style="background:rgba(22,163,74,0.25); color:#4ade80; border:1px solid rgba(74,222,128,0.3);">${escapeHtml(p.zona)}</span>
+                  <div class="rtrw-popup" style="max-width:320px;">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:6px; margin-bottom:6px;">
+                      <span class="rtrw-badge" style="background:rgba(22,163,74,0.25); color:#4ade80; border:1px solid rgba(74,222,128,0.3);">${escapeHtml(p.zona)}</span>
+                      <span style="font-size:0.7rem; font-weight:600; color:#cbd5e1;">${escapeHtml(p.kelurahan ? p.kelurahan + ' (' + p.kecamatan + ')' : '')}</span>
+                    </div>
                     <h4 style="margin:0 0 6px; font-size:0.92rem; color:#f8fafc;">${escapeHtml(p.nama)}</h4>
                     <div style="font-size:0.78rem; line-height:1.45; color:#cbd5e1; display:flex; flex-direction:column; gap:4px;">
-                      <div><b>Sub Zona:</b> ${escapeHtml(p.sub_zona)}</div>
+                      <div><b>Sub-Zona:</b> <span style="color:#86efac;">${escapeHtml(p.sub_zona)}</span></div>
                       <div><b>Luas / Alokasi:</b> <span style="color:#facc15;">${escapeHtml(p.luas_perda)}</span></div>
-                      <div><b>Lokasi:</b> ${escapeHtml(p.lokasi)}</div>
-                      <div style="margin-top:6px; padding:6px 8px; background:rgba(255,255,255,0.05); border-left:3px solid #38bdf8; border-radius:4px; font-size:0.75rem;">
+                      ${p.gsb_info ? `
+                      <div style="background:rgba(245,158,11,0.12); padding:5px 8px; border-left:3px solid #f59e0b; border-radius:4px; font-size:0.74rem;">
+                        <b style="color:#fde047;">📐 Sempadan & GSB:</b><br>${escapeHtml(p.gsb_info)}
+                      </div>` : ''}
+                      ${p.kdb_klb ? `<div><b>Kepadatan (KDB/KLB):</b> ${escapeHtml(p.kdb_klb)}</div>` : ''}
+                      <div style="margin-top:2px; padding:6px 8px; background:rgba(255,255,255,0.05); border-left:3px solid #38bdf8; border-radius:4px; font-size:0.74rem;">
                         <b>Ketentuan Zonasi:</b><br>${escapeHtml(p.ketentuan)}
                       </div>
                       <div style="margin-top:4px; font-size:0.7rem; color:#94a3b8;"><b>Dasar Regulasi:</b> ${escapeHtml(p.regulasi)}</div>
@@ -3142,7 +3262,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             }
           }
 
-          // 2. Kawasan Strategis
+          // 3. Kawasan Strategis
           const stratRes = await fetch("data/rtrw/rtrw-kawasan-strategis.geojson");
           if (stratRes.ok) {
             const stratData = await stratRes.json();
@@ -3159,13 +3279,13 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                 const p = f.properties || {};
                 layer.bindTooltip(`<strong>⭐ ${escapeHtml(p.nama)}</strong><br><small style="color:#f0abfc;">${escapeHtml(p.kategori)}</small>`, { sticky: true });
                 layer.bindPopup(`
-                  <div class="rtrw-popup">
+                  <div class="rtrw-popup" style="max-width:320px;">
                     <span class="rtrw-badge" style="background:rgba(192,38,211,0.25); color:#f0abfc; border:1px solid rgba(240,171,252,0.3);">${escapeHtml(p.kategori)}</span>
                     <h4 style="margin:0 0 6px; font-size:0.92rem; color:#f8fafc;">${escapeHtml(p.nama)}</h4>
                     <div style="font-size:0.78rem; line-height:1.45; color:#cbd5e1; display:flex; flex-direction:column; gap:4px;">
                       <div><b>Sudut Kepentingan:</b> <span style="color:#f0abfc;">${escapeHtml(p.sudut_kepentingan)}</span></div>
-                      <div><b>Luas / Lingkup:</b> ${escapeHtml(p.luas_ha)}</div>
-                      <div><b>Lokasi:</b> ${escapeHtml(p.lokasi)}</div>
+                      <div><b>Luas / Lingkup:</b> <span style="color:#facc15;">${escapeHtml(p.luas_ha)}</span></div>
+                      <div><b>Lokasi:</b> ${escapeHtml(p.kelurahan ? p.kelurahan + ' (' + p.kecamatan + ')' : p.lokasi || 'Kota Palu')}</div>
                       <div style="margin-top:6px; padding:6px 8px; background:rgba(192,38,211,0.12); border-left:3px solid #c026d3; border-radius:4px; font-size:0.75rem;">
                         <b>Arahan Penataan:</b><br>${escapeHtml(p.fungsi)}
                       </div>
@@ -3180,7 +3300,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             }
           }
 
-          // 3. Struktur Ruang (Pusat Pelayanan & Simpul Transportasi)
+          // 4. Struktur Ruang (Pusat Pelayanan & Simpul Transportasi)
           const structRes = await fetch("data/rtrw/rtrw-struktur-ruang.geojson");
           if (structRes.ok) {
             const structData = await structRes.json();
@@ -3314,6 +3434,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       }
 
       function hideRtrwLayers() {
+        if (rtrwLayers.jalan && map.hasLayer(rtrwLayers.jalan)) map.removeLayer(rtrwLayers.jalan);
         if (rtrwLayers.pusat && map.hasLayer(rtrwLayers.pusat)) map.removeLayer(rtrwLayers.pusat);
         if (rtrwLayers.transport && map.hasLayer(rtrwLayers.transport)) map.removeLayer(rtrwLayers.transport);
         if (rtrwLayers.pola && map.hasLayer(rtrwLayers.pola)) map.removeLayer(rtrwLayers.pola);
@@ -3321,11 +3442,22 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       }
 
       function setupRtrwControls() {
+        const chkJalan = document.getElementById("chk-rtrw-jalan");
         const chkPusat = document.getElementById("chk-rtrw-pusat");
         const chkTransport = document.getElementById("chk-rtrw-transport");
         const chkPola = document.getElementById("chk-rtrw-pola");
         const chkStrategis = document.getElementById("chk-rtrw-strategis");
 
+        if (chkJalan) {
+          chkJalan.addEventListener("change", () => {
+            if (!rtrwLayers.jalan) return;
+            if (chkJalan.checked) {
+              if (!map.hasLayer(rtrwLayers.jalan)) rtrwLayers.jalan.addTo(map);
+            } else {
+              if (map.hasLayer(rtrwLayers.jalan)) map.removeLayer(rtrwLayers.jalan);
+            }
+          });
+        }
         if (chkPusat) {
           chkPusat.addEventListener("change", () => {
             if (!rtrwLayers.pusat) return;

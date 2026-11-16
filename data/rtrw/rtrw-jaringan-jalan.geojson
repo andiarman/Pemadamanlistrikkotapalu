@@ -1,0 +1,1598 @@
+{
+  "type": "FeatureCollection",
+  "name": "RTRW_Kota_Palu_Jaringan_Jalan_2021_2041",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.852,
+            -0.675
+          ],
+          [
+            119.856,
+            -0.695
+          ],
+          [
+            119.858,
+            -0.715
+          ],
+          [
+            119.862,
+            -0.73
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-0",
+        "nama": "Pantoloan (Bts. Donggala) – Tawaeli",
+        "kategori": "Jalan Arteri Primer",
+        "kewenangan": "Nasional",
+        "rumija": "25 meter",
+        "gsb": "Minimal 15 meter dari tepi perkerasan / 20 meter dari as jalan",
+        "ruwasja": "Ruang pengawasan bebas pandang min 10 meter",
+        "larangan": "Dilarang mendirikan bangunan permanen, pagar tembok tinggi, reklame tiang dalam Rumija",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf a angka 1 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.862,
+            -0.73
+          ],
+          [
+            119.868,
+            -0.76
+          ],
+          [
+            119.878,
+            -0.785
+          ],
+          [
+            119.885,
+            -0.815
+          ],
+          [
+            119.89,
+            -0.84
+          ],
+          [
+            119.882,
+            -0.87
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-1",
+        "nama": "Kebonsari (Talise) – Tawaeli",
+        "kategori": "Jalan Arteri Primer",
+        "kewenangan": "Nasional",
+        "rumija": "25 meter",
+        "gsb": "Minimal 15 meter dari tepi jalan / 20 meter dari as jalan",
+        "ruwasja": "Ruang pengawasan bebas pandang min 10 meter",
+        "larangan": "Akses masuk langsung dari persil perumahan dibatasi dengan jalur lambat (frontage road)",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf a angka 2 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.882,
+            -0.87
+          ],
+          [
+            119.878,
+            -0.878
+          ],
+          [
+            119.873,
+            -0.883
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-2",
+        "nama": "Kebonsari (Palu) – Tanah Runtuh",
+        "kategori": "Jalan Arteri Primer",
+        "kewenangan": "Nasional",
+        "rumija": "25 meter",
+        "gsb": "Minimal 15 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan bebas pandang min 10 meter",
+        "larangan": "Dilarang pembangunan di zona rawan abrasi / longsor tebing",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf a angka 3 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.873,
+            -0.883
+          ],
+          [
+            119.867,
+            -0.886
+          ],
+          [
+            119.862,
+            -0.889
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-3",
+        "nama": "Jalan Yos Sudarso",
+        "kategori": "Jalan Arteri Primer",
+        "kewenangan": "Nasional",
+        "rumija": "25 meter",
+        "gsb": "Minimal 15 meter dari tepi jalan",
+        "ruwasja": "Bebas pandang simpul persimpangan",
+        "larangan": "Dilarang parkir di badan jalan utama (on-street), wajib parkir off-street",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf a angka 4 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.872,
+            -0.884
+          ],
+          [
+            119.873,
+            -0.89
+          ],
+          [
+            119.874,
+            -0.896
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-4",
+        "nama": "Jalan Sam Ratulangi",
+        "kategori": "Jalan Arteri Primer",
+        "kewenangan": "Nasional",
+        "rumija": "25 meter",
+        "gsb": "Minimal 15 meter dari tepi jalan / 20 meter dari as jalan",
+        "ruwasja": "Ruang pengawasan jalan protokol min 10 meter",
+        "larangan": "Bangunan perkantoran/komersial wajib menyediakan trotoar pedestrian terintegrasi",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf a angka 5 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.874,
+            -0.896
+          ],
+          [
+            119.872,
+            -0.899
+          ],
+          [
+            119.87,
+            -0.902
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-5",
+        "nama": "Jalan Sudirman",
+        "kategori": "Jalan Arteri Primer",
+        "kewenangan": "Nasional",
+        "rumija": "25 meter",
+        "gsb": "Minimal 15 meter dari tepi jalan",
+        "ruwasja": "Koridor pusat perkotaan bebas hambatan",
+        "larangan": "Dilarang pedagang kaki lima di badan jalan dan trotoar utama",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf a angka 6 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.875,
+            -0.902
+          ],
+          [
+            119.878,
+            -0.906
+          ],
+          [
+            119.88,
+            -0.912
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-6",
+        "nama": "Jalan Wolter Monginsidi",
+        "kategori": "Jalan Arteri Primer",
+        "kewenangan": "Nasional",
+        "rumija": "25 meter",
+        "gsb": "Minimal 15 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan jalan arteri min 10 meter",
+        "larangan": "Bangunan toko/ruko dilarang memotong garis sempadan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf a angka 7 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.88,
+            -0.912
+          ],
+          [
+            119.882,
+            -0.92
+          ],
+          [
+            119.885,
+            -0.928
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-7",
+        "nama": "Jalan Emmy Saelan",
+        "kategori": "Jalan Arteri Primer",
+        "kewenangan": "Nasional",
+        "rumija": "25 meter",
+        "gsb": "Minimal 15 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan jalan min 10 meter",
+        "larangan": "Akses keluar masuk kendaraan wajib memprioritaskan arus arteri",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf a angka 8 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.875,
+            -0.908
+          ],
+          [
+            119.887,
+            -0.919
+          ],
+          [
+            119.896,
+            -0.925
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-8",
+        "nama": "Jalan Basuki Rahmat",
+        "kategori": "Jalan Arteri Primer",
+        "kewenangan": "Nasional",
+        "rumija": "25 meter",
+        "gsb": "Minimal 15 meter dari tepi perkerasan jalan",
+        "ruwasja": "Ruang pengawasan min 10 meter",
+        "larangan": "Wajib menyediakan ruang terbuka hijau (RTH) halaman min 30%",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf a angka 9 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.896,
+            -0.925
+          ],
+          [
+            119.902,
+            -0.921
+          ],
+          [
+            119.908,
+            -0.918
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-9",
+        "nama": "Jalan Abdul Rahman Saleh",
+        "kategori": "Jalan Arteri Primer",
+        "kewenangan": "Nasional",
+        "rumija": "25 meter",
+        "gsb": "Minimal 15 meter dari tepi jalan (akses bandara)",
+        "ruwasja": "Koridor pintu gerbang udara steril pandang",
+        "larangan": "Batas ketinggian bangunan mengikuti KKOP Kawasan Bandara Mutiara Sis Al-Jufri",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf a angka 10 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.87,
+            -0.901
+          ],
+          [
+            119.874,
+            -0.904
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-10",
+        "nama": "Jalan Hasanuddin II",
+        "kategori": "Jalan Arteri Primer",
+        "kewenangan": "Nasional",
+        "rumija": "25 meter",
+        "gsb": "Minimal 15 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 10 meter",
+        "larangan": "Dilarang alih fungsi trotoar pedestrian",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf a angka 11 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.78,
+            -0.815
+          ],
+          [
+            119.8,
+            -0.835
+          ],
+          [
+            119.815,
+            -0.843
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-11",
+        "nama": "Watusampu (Bts. Donggala) – Ampera",
+        "kategori": "Jalan Kolektor Primer Satu (KP-1)",
+        "kewenangan": "Nasional",
+        "rumija": "18 meter",
+        "gsb": "Minimal 12 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan lereng pesisir min 7 meter",
+        "larangan": "Dilarang mendirikan bangunan di tebing lereng curam rawan runtuhan batu",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf b angka 1 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.815,
+            -0.843
+          ],
+          [
+            119.825,
+            -0.865
+          ],
+          [
+            119.835,
+            -0.878
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-12",
+        "nama": "Jalan Malonda",
+        "kategori": "Jalan Kolektor Primer Satu (KP-1)",
+        "kewenangan": "Nasional",
+        "rumija": "18 meter",
+        "gsb": "Minimal 10 meter dari tepi perkerasan jalan",
+        "ruwasja": "Ruang pengawasan min 7 meter",
+        "larangan": "Sisi pantai wajib mematuhi sempadan pantai 100m",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf b angka 6 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.835,
+            -0.878
+          ],
+          [
+            119.845,
+            -0.887
+          ],
+          [
+            119.855,
+            -0.892
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-13",
+        "nama": "Jalan Diponegoro",
+        "kategori": "Jalan Kolektor Primer Satu (KP-1)",
+        "kewenangan": "Nasional",
+        "rumija": "18 meter",
+        "gsb": "Minimal 10 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 7 meter",
+        "larangan": "Pusat perbelanjaan wajib menyediakan drop-off zone dan kantong parkir mandiri",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf b angka 5 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.855,
+            -0.892
+          ],
+          [
+            119.858,
+            -0.896
+          ],
+          [
+            119.86,
+            -0.9
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-14",
+        "nama": "Jalan Imam Bonjol",
+        "kategori": "Jalan Kolektor Primer Satu (KP-1)",
+        "kewenangan": "Nasional",
+        "rumija": "18 meter",
+        "gsb": "Minimal 10 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 7 meter",
+        "larangan": "Dilarang mempersempit saluran drainase pinggir jalan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf b angka 4 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.856,
+            -0.894
+          ],
+          [
+            119.861,
+            -0.897
+          ],
+          [
+            119.865,
+            -0.903
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-15",
+        "nama": "Jalan Gajah Mada",
+        "kategori": "Jalan Kolektor Primer Satu (KP-1)",
+        "kewenangan": "Nasional",
+        "rumija": "18 meter",
+        "gsb": "Minimal 10 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan jalan bersejarah min 7 meter",
+        "larangan": "Dilarang mengubah fasad cagar budaya secara sepihak",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf b angka 3 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.865,
+            -0.903
+          ],
+          [
+            119.87,
+            -0.901
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-16",
+        "nama": "Jalan Hasanuddin I",
+        "kategori": "Jalan Kolektor Primer Satu (KP-1)",
+        "kewenangan": "Nasional",
+        "rumija": "18 meter",
+        "gsb": "Minimal 10 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 7 meter",
+        "larangan": "Wajib mempertahankan trotoar pedestrian",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf b angka 2 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.865,
+            -0.91
+          ],
+          [
+            119.875,
+            -0.915
+          ],
+          [
+            119.885,
+            -0.918
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-17",
+        "nama": "Jalan Towua",
+        "kategori": "Jalan Kolektor Primer Satu (KP-1)",
+        "kewenangan": "Nasional",
+        "rumija": "18 meter",
+        "gsb": "Minimal 10 meter dari tepi perkerasan jalan",
+        "ruwasja": "Ruang pengawasan min 7 meter",
+        "larangan": "Dilarang bongkar muat barang di badan jalan saat jam sibuk",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf b angka 7 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.885,
+            -0.835
+          ],
+          [
+            119.895,
+            -0.854
+          ],
+          [
+            119.905,
+            -0.875
+          ],
+          [
+            119.9,
+            -0.895
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-18",
+        "nama": "Jalan Soekarno – Hatta (By Pass Timur)",
+        "kategori": "Jalan Kolektor Primer Dua (KP-2)",
+        "kewenangan": "Provinsi",
+        "rumija": "20 meter",
+        "gsb": "Minimal 12 meter dari tepi jalan / 15 meter dari as jalan",
+        "ruwasja": "Jalur hijau pembatas min 5 meter",
+        "larangan": "Dilarang mendirikan bangunan tanpa akses frontage di jalur cepat",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf a angka 6 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.875,
+            -0.895
+          ],
+          [
+            119.882,
+            -0.894
+          ],
+          [
+            119.888,
+            -0.893
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-19",
+        "nama": "Jalan Moh. Hatta",
+        "kategori": "Jalan Kolektor Primer Dua (KP-2)",
+        "kewenangan": "Provinsi",
+        "rumija": "15 meter",
+        "gsb": "Minimal 8 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Bangunan perkantoran/jasa wajib KDH min 30%",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf a angka 1 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.877,
+            -0.897
+          ],
+          [
+            119.885,
+            -0.896
+          ],
+          [
+            119.892,
+            -0.895
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-20",
+        "nama": "Jalan Juanda",
+        "kategori": "Jalan Kolektor Primer Dua (KP-2)",
+        "kewenangan": "Provinsi",
+        "rumija": "15 meter",
+        "gsb": "Minimal 8 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Dilarang menutup jalur drainase jalan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf a angka 2 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.888,
+            -0.903
+          ],
+          [
+            119.893,
+            -0.908
+          ],
+          [
+            119.898,
+            -0.915
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-21",
+        "nama": "Jalan M. Yamin",
+        "kategori": "Jalan Kolektor Primer Dua (KP-2)",
+        "kewenangan": "Provinsi",
+        "rumija": "15 meter",
+        "gsb": "Minimal 8 meter dari tepi perkerasan jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Pagar halaman depan tembus pandang min 50%, tinggi maks 1.5m",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf a angka 3 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.896,
+            -0.915
+          ],
+          [
+            119.897,
+            -0.93
+          ],
+          [
+            119.898,
+            -0.945
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-22",
+        "nama": "Jalan Dewi Sartika",
+        "kategori": "Jalan Kolektor Primer Dua (KP-2)",
+        "kewenangan": "Provinsi",
+        "rumija": "15 meter",
+        "gsb": "Minimal 8 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Akses masuk perumahan BTN wajib izin Andalalin",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf a angka 4 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.882,
+            -0.898
+          ],
+          [
+            119.888,
+            -0.905
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-23",
+        "nama": "Jalan Sisingamangaraja",
+        "kategori": "Jalan Kolektor Primer Dua (KP-2)",
+        "kewenangan": "Provinsi",
+        "rumija": "15 meter",
+        "gsb": "Minimal 8 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Dilarang mendirikan kanopi menjorok ke trotoar Rumija",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf a angka 5 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.852,
+            -0.897
+          ],
+          [
+            119.856,
+            -0.903
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-24",
+        "nama": "Jalan Sis Aljufri I & II",
+        "kategori": "Jalan Kolektor Primer Dua (KP-2)",
+        "kewenangan": "Provinsi",
+        "rumija": "15 meter",
+        "gsb": "Minimal 8 meter dari tepi jalan",
+        "ruwasja": "Kawasan religi Alkhairaat steril hambatan",
+        "larangan": "Dilarang mengubah fungsi ruang yang bertentangan dengan cagar budaya religi",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf a angka 8-9 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.853,
+            -0.915
+          ],
+          [
+            119.858,
+            -0.925
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-25",
+        "nama": "Jalan Pue Bongo",
+        "kategori": "Jalan Kolektor Primer Dua (KP-2)",
+        "kewenangan": "Provinsi",
+        "rumija": "15 meter",
+        "gsb": "Minimal 8 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Dilarang memanfaatkan badan jalan untuk bengkel/bengkel terbuka",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf a angka 10 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.87,
+            -0.912
+          ],
+          [
+            119.875,
+            -0.918
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-26",
+        "nama": "Jalan I Gusti Ngurah Rai",
+        "kategori": "Jalan Kolektor Primer Dua (KP-2)",
+        "kewenangan": "Provinsi",
+        "rumija": "15 meter",
+        "gsb": "Minimal 8 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Wajib menyediakan resapan air hujan di persil pekarangan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf a angka 11 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.865,
+            -0.918
+          ],
+          [
+            119.87,
+            -0.925
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-27",
+        "nama": "Jalan Padanjakaya",
+        "kategori": "Jalan Kolektor Primer Dua (KP-2)",
+        "kewenangan": "Provinsi",
+        "rumija": "15 meter",
+        "gsb": "Minimal 8 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Dilarang menutup saluran pembuangan air lingkungan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf a angka 12 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.84,
+            -0.91
+          ],
+          [
+            119.845,
+            -0.925
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-28",
+        "nama": "Jalan Gunung Gawalise",
+        "kategori": "Jalan Kolektor Primer Dua (KP-2)",
+        "kewenangan": "Provinsi",
+        "rumija": "15 meter",
+        "gsb": "Minimal 8 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan lereng barat min 5 meter",
+        "larangan": "Memperhatikan zonasi rawan patahan Palu-Koro",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf a angka 13 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.835,
+            -0.9
+          ],
+          [
+            119.842,
+            -0.905
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-29",
+        "nama": "Jalan Munif Rahman II",
+        "kategori": "Jalan Kolektor Primer Dua (KP-2)",
+        "kewenangan": "Provinsi",
+        "rumija": "15 meter",
+        "gsb": "Minimal 8 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Dilarang bangunan permanen di sempadan patahan aktif",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf a angka 14 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.885,
+            -0.92
+          ],
+          [
+            119.892,
+            -0.928
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-30",
+        "nama": "Jalan Karanja Lemba I",
+        "kategori": "Jalan Kolektor Primer Dua (KP-2)",
+        "kewenangan": "Provinsi",
+        "rumija": "15 meter",
+        "gsb": "Minimal 8 meter dari tepi perkerasan jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Dilarang alih fungsi trotoar",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf a angka 16 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.858,
+            -0.927
+          ],
+          [
+            119.86,
+            -0.945
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-31",
+        "nama": "Bundaran Palupi – Batas Kabupaten Sigi",
+        "kategori": "Jalan Strategis Provinsi",
+        "kewenangan": "Provinsi",
+        "rumija": "18 meter",
+        "gsb": "Minimal 10 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan koridor selatan min 7 meter",
+        "larangan": "Dilarang mendirikan bangunan di ruang milik jalan koridor aglomerasi Palapas",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (4) huruf b & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.855,
+            -0.898
+          ],
+          [
+            119.859,
+            -0.904
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-32",
+        "nama": "Jalan Wahid Hasyim",
+        "kategori": "Jalan Arteri Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "15 meter",
+        "gsb": "Minimal 7 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan sekunder min 5 meter",
+        "larangan": "Wajib menyediakan area parkir di dalam kapling bangunan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf a angka 1 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.89,
+            -0.912
+          ],
+          [
+            119.898,
+            -0.915
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-33",
+        "nama": "Jalan Garuda",
+        "kategori": "Jalan Arteri Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "15 meter",
+        "gsb": "Minimal 7 meter dari tepi perkerasan jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Dilarang bangunan yang menjorok melewati GSB 7m",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf a angka 2 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.885,
+            -0.914
+          ],
+          [
+            119.892,
+            -0.918
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-34",
+        "nama": "Jalan Maleo",
+        "kategori": "Jalan Arteri Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "15 meter",
+        "gsb": "Minimal 7 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Pagar depan tembus pandang min 50%",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf a angka 3 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.88,
+            -0.892
+          ],
+          [
+            119.885,
+            -0.9
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-35",
+        "nama": "Jalan Veteran",
+        "kategori": "Jalan Arteri Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "15 meter",
+        "gsb": "Minimal 7 meter dari tepi perkerasan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Pertokoan wajib memiliki jalur bongkar muat mandiri",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf a angka 4 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.872,
+            -0.891
+          ],
+          [
+            119.878,
+            -0.895
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-36",
+        "nama": "Jalan H. Hayyun",
+        "kategori": "Jalan Arteri Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "15 meter",
+        "gsb": "Minimal 7 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Dilarang mendirikan bangunan di ruang milik jalan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf a angka 5 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.876,
+            -0.887
+          ],
+          [
+            119.882,
+            -0.891
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-37",
+        "nama": "Jalan Kimaja",
+        "kategori": "Jalan Arteri Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "15 meter",
+        "gsb": "Minimal 7 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Dilarang menutup fasilitas trotoar pedestrian",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf a angka 6 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.858,
+            -0.902
+          ],
+          [
+            119.863,
+            -0.907
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-38",
+        "nama": "Jalan Danau Poso",
+        "kategori": "Jalan Arteri Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "15 meter",
+        "gsb": "Minimal 7 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Dilarang parkir sembarangan yang menghambat laju arteri",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf a angka 7 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.842,
+            -0.883
+          ],
+          [
+            119.848,
+            -0.886
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-39",
+        "nama": "Jalan Cumi-cumi (Taman Ria)",
+        "kategori": "Jalan Arteri Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "15 meter",
+        "gsb": "Minimal 7 meter dari tepi jalan (memperhatikan sempadan pantai 100m)",
+        "ruwasja": "Ruang pengawasan pesisir min 5 meter",
+        "larangan": "Dilarang mendirikan bangunan permanen di bibir pantai",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf a angka 9 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.862,
+            -0.884
+          ],
+          [
+            119.868,
+            -0.887
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-40",
+        "nama": "Jalan Raja Moili",
+        "kategori": "Jalan Arteri Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "15 meter",
+        "gsb": "Minimal 7 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 5 meter",
+        "larangan": "Wajib menyediakan jalur evakuasi tsunami ke arah perbukitan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf a angka 11 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.885,
+            -0.898
+          ],
+          [
+            119.891,
+            -0.9
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-41",
+        "nama": "Jalan Balai Kota & Balai Kota Selatan",
+        "kategori": "Jalan Kolektor Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "12 meter",
+        "gsb": "Minimal 6 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan perkantoran min 4 meter",
+        "larangan": "Kawasan pusat administrasi kota steril dari parkir liar",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf b angka 3-4 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.878,
+            -0.889
+          ],
+          [
+            119.885,
+            -0.894
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-42",
+        "nama": "Jalan Tombolotutu",
+        "kategori": "Jalan Kolektor Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "12 meter",
+        "gsb": "Minimal 5 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 3 meter",
+        "larangan": "Dilarang mendirikan bangunan melebihi garis sempadan 5 meter",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf b angka 8 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.892,
+            -0.84
+          ],
+          [
+            119.9,
+            -0.844
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-43",
+        "nama": "Jalan Pendidikan (depan Kampus Untad)",
+        "kategori": "Jalan Kolektor Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "12 meter",
+        "gsb": "Minimal 6 meter dari tepi jalan",
+        "ruwasja": "Zona pendidikan tinggi bebas kebisingan tinggi",
+        "larangan": "Wajib menyediakan trotoar pejalan kaki lebar min 2 meter",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf b angka 9 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.872,
+            -0.888
+          ],
+          [
+            119.877,
+            -0.892
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-44",
+        "nama": "Jalan S. Parman",
+        "kategori": "Jalan Kolektor Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "12 meter",
+        "gsb": "Minimal 5 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 3 meter",
+        "larangan": "Wajib mempertahankan kanopi peneduh pohon jalan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf b angka 52 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.852,
+            -0.893
+          ],
+          [
+            119.858,
+            -0.897
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-45",
+        "nama": "Jalan WR. Supratman",
+        "kategori": "Jalan Kolektor Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "12 meter",
+        "gsb": "Minimal 5 meter dari tepi perkerasan",
+        "ruwasja": "Ruang pengawasan min 3 meter",
+        "larangan": "Dilarang menutup akses drainase lingkungan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf b angka 70 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.846,
+            -0.902
+          ],
+          [
+            119.852,
+            -0.906
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-46",
+        "nama": "Jalan Sungai Manonda",
+        "kategori": "Jalan Kolektor Sekunder",
+        "kewenangan": "Kota",
+        "rumija": "12 meter",
+        "gsb": "Minimal 5 meter dari tepi jalan (sekitar Pasar Inpres)",
+        "ruwasja": "Kawasan pasar tradisional tertib sirkulasi",
+        "larangan": "Dilarang menggelar dagangan di trotoar dan badan jalan",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf b angka 79 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.878,
+            -0.875
+          ],
+          [
+            119.885,
+            -0.855
+          ],
+          [
+            119.892,
+            -0.835
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-47",
+        "nama": "Jalan Lingkar Pantai Talise – Tondo",
+        "kategori": "Jalan Kolektor Sekunder (Pesisir)",
+        "kewenangan": "Kota",
+        "rumija": "15 meter",
+        "gsb": "Minimal 8 meter dari tepi jalan (adaptif tsunami)",
+        "ruwasja": "Ruang terbuka hijau pencegah abrasi min 10 meter",
+        "larangan": "Konstruksi bangunan adaptif gempa & tsunami, KDH min 50%",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (5) huruf b angka 83 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.8556,
+            -0.7061
+          ],
+          [
+            119.88,
+            -0.72
+          ],
+          [
+            119.92,
+            -0.73
+          ],
+          [
+            119.96,
+            -0.745
+          ],
+          [
+            120.01,
+            -0.76
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-48",
+        "nama": "Rencana Jalan Tol Toboli – Pantoloan",
+        "kategori": "Jalan Bebas Hambatan (Tol)",
+        "kewenangan": "Pemerintah Pusat (Nasional)",
+        "rumija": "30 - 40 meter",
+        "gsb": "Steril total dari permukiman / bangunan non-operasional tol",
+        "ruwasja": "Ruang pengawasan tol min 15 meter dari pagar pembatas",
+        "larangan": "Dilarang keras akses keluar masuk langsung tanpa melalui gerbang tol resmi",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf c angka 1 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.86,
+            -0.71
+          ],
+          [
+            119.87,
+            -0.74
+          ],
+          [
+            119.88,
+            -0.78
+          ],
+          [
+            119.89,
+            -0.81
+          ],
+          [
+            119.91,
+            -0.835
+          ],
+          [
+            119.905,
+            -0.86
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-49",
+        "nama": "Rencana Jalan Tol Pantoloan – Palu",
+        "kategori": "Jalan Bebas Hambatan (Tol)",
+        "kewenangan": "Pemerintah Pusat (Nasional)",
+        "rumija": "30 meter",
+        "gsb": "Steril total dari bangunan hunian",
+        "ruwasja": "Pagar pengaman tertutup sepanjang trase tol",
+        "larangan": "Dilarang aktivitas penyeberangan sebidang oleh pejalan kaki atau ternak",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf c angka 2 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.89,
+            -0.72
+          ],
+          [
+            119.91,
+            -0.76
+          ],
+          [
+            119.925,
+            -0.81
+          ],
+          [
+            119.935,
+            -0.85
+          ],
+          [
+            119.93,
+            -0.89
+          ],
+          [
+            119.925,
+            -0.93
+          ],
+          [
+            119.91,
+            -0.95
+          ],
+          [
+            119.87,
+            -0.95
+          ],
+          [
+            119.84,
+            -0.93
+          ],
+          [
+            119.825,
+            -0.9
+          ],
+          [
+            119.815,
+            -0.86
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-50",
+        "nama": "Rencana Jalan Lingkar Luar (Outer Ring Road)",
+        "kategori": "Jalan Lingkar Kota (Bypass)",
+        "kewenangan": "Nasional & Daerah",
+        "rumija": "25 meter",
+        "gsb": "Minimal 15 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan angkutan berat min 10 meter",
+        "larangan": "Dilarang bangunan yang mempersempit rencana pelebaran jalan lingkar luar",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf b angka 8 & Pasal 48"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.885,
+            -0.86
+          ],
+          [
+            119.905,
+            -0.88
+          ],
+          [
+            119.9,
+            -0.915
+          ],
+          [
+            119.865,
+            -0.925
+          ],
+          [
+            119.845,
+            -0.915
+          ],
+          [
+            119.84,
+            -0.88
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rtrw-road-51",
+        "nama": "Rencana Jalan Lingkar Dalam (Inner Ring Road)",
+        "kategori": "Jalan Lingkar Kota (Distributor)",
+        "kewenangan": "Daerah (Kota & Provinsi)",
+        "rumija": "18 meter",
+        "gsb": "Minimal 10 meter dari tepi jalan",
+        "ruwasja": "Ruang pengawasan min 7 meter",
+        "larangan": "Dilarang bangunan liar di sempadan persimpangan jalan lingkar dalam",
+        "regulasi": "Perda Kota Palu No. 2/2021 Pasal 11 ayat (3) huruf b angka 9 & Pasal 48"
+      }
+    }
+  ]
+}
