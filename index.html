@@ -1510,6 +1510,263 @@
       }
       .unmatched-action-link:hover { background: rgba(56, 189, 248, .2); color: #bae6fd; }
 
+      /* Share Modal & Actions */
+      .header-share-btn {
+        min-height: 36px;
+        display: inline-flex;
+        align-items: center;
+        gap: .4rem;
+        padding: .38rem .85rem;
+        border: 1px solid rgba(56, 189, 248, .45);
+        border-radius: 999px;
+        background: rgba(14, 165, 233, .15);
+        color: #38bdf8;
+        font-size: .72rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all .16s ease;
+      }
+      .header-share-btn:hover {
+        background: rgba(14, 165, 233, .28);
+        color: #bae6fd;
+        border-color: rgba(56, 189, 248, .7);
+        transform: translateY(-1px);
+      }
+      .btn-share {
+        display: inline-flex;
+        align-items: center;
+        gap: .35rem;
+        padding: .35rem .75rem;
+        border: 1px solid rgba(168, 85, 247, .45);
+        border-radius: 11px;
+        background: linear-gradient(135deg, #7c3aed, #6d28d9);
+        color: #ffffff;
+        font-family: inherit;
+        font-size: .72rem;
+        font-weight: 700;
+        white-space: nowrap;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(124, 58, 237, .35), inset 0 1px 0 rgba(255, 255, 255, .2);
+        transition: all .16s ease;
+        flex: 0 0 auto;
+      }
+      .btn-share:hover {
+        background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        box-shadow: 0 6px 18px rgba(124, 58, 237, .5);
+        transform: translateY(-1px);
+      }
+
+      #share-modal {
+        width: min(840px, calc(100vw - 24px));
+        max-width: 840px;
+        max-height: calc(100dvh - 28px);
+        margin: auto;
+        padding: 1.1rem;
+        overflow: hidden;
+        border: 1px solid rgba(56, 189, 248, .35);
+        border-radius: 18px;
+        background: #0b1320;
+        color: #e6edf7;
+        box-shadow: 0 25px 80px rgba(0, 0, 0, .85);
+      }
+      #share-modal::backdrop { background: rgba(2, 6, 14, .85); backdrop-filter: blur(6px); }
+      .share-modal-layout { display: flex; flex-direction: column; gap: .85rem; max-height: calc(100dvh - 60px); }
+      .share-modal-header { display: flex; align-items: flex-start; justify-content: space-between; gap: .7rem; border-bottom: 1px solid rgba(255, 255, 255, .08); padding-bottom: .75rem; }
+      .share-modal-header h2 { margin: 0; color: #38bdf8; font-size: 1.1rem; font-weight: 800; display: flex; align-items: center; gap: .45rem; }
+      .share-modal-header p { margin: .2rem 0 0; color: #94a3b8; font-size: .74rem; }
+      .share-close-btn { width: 34px; height: 34px; border: 1px solid rgba(255, 255, 255, .15); border-radius: 8px; background: rgba(255, 255, 255, .05); color: #cbd5e1; font-size: 1.25rem; line-height: 1; cursor: pointer; display: grid; place-items: center; transition: all .15s ease; }
+      .share-close-btn:hover { background: rgba(239, 68, 68, .2); color: #fca5a5; border-color: rgba(239, 68, 68, .4); }
+
+      .share-tabs-nav { display: flex; gap: .4rem; background: rgba(15, 23, 42, .75); padding: .3rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, .08); }
+      .share-tab-trigger { flex: 1; padding: .45rem .6rem; border: none; border-radius: 8px; background: transparent; color: #94a3b8; font-size: .75rem; font-weight: 700; cursor: pointer; transition: all .15s ease; text-align: center; }
+      .share-tab-trigger:hover { color: #f8fafc; background: rgba(255, 255, 255, .05); }
+      .share-tab-trigger.active { background: linear-gradient(135deg, rgba(14, 165, 233, .25), rgba(56, 189, 248, .15)); color: #38bdf8; border: 1px solid rgba(56, 189, 248, .3); box-shadow: 0 2px 8px rgba(0, 0, 0, .2); }
+
+      .share-tab-body { overflow-y: auto; max-height: calc(100dvh - 180px); padding-right: .2rem; }
+      .share-tab-pane { display: none; }
+      .share-tab-pane.active { display: block; }
+
+      /* Story Tab */
+      .story-tab-grid { display: grid; grid-template-columns: 260px 1fr; gap: 1.25rem; align-items: start; }
+      .story-preview-col { display: flex; flex-direction: column; align-items: center; gap: .5rem; }
+      .story-preview-wrapper { width: 220px; aspect-ratio: 9 / 16; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 36px rgba(0, 0, 0, .7), 0 0 0 1px rgba(255, 255, 255, .15); background: #000; position: relative; }
+      #story-canvas { width: 100%; height: 100%; object-fit: contain; display: block; }
+      .story-preview-caption { font-size: .65rem; color: #64748b; text-align: center; }
+      .story-actions-col { display: flex; flex-direction: column; gap: .85rem; }
+      .story-info-card { padding: .85rem 1rem; border-radius: 12px; background: rgba(30, 41, 59, .6); border: 1px solid rgba(255, 255, 255, .08); }
+      .story-info-title { font-size: .82rem; font-weight: 800; color: #38bdf8; margin-bottom: .25rem; }
+      .story-info-desc { margin: 0; font-size: .73rem; color: #94a3b8; line-height: 1.45; }
+      .story-info-desc strong { color: #f1f5f9; }
+      .story-btn-group { display: flex; flex-direction: column; gap: .55rem; }
+      .btn-story-share {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        padding: .75rem 1.2rem;
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #e11d48, #c026d3, #7c3aed);
+        color: #ffffff;
+        font-family: inherit;
+        font-size: .84rem;
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow: 0 4px 18px rgba(192, 38, 211, .45);
+        transition: all .16s ease;
+      }
+      .btn-story-share:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 24px rgba(192, 38, 211, .6);
+        filter: brightness(1.08);
+      }
+      .btn-story-download {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .45rem;
+        padding: .65rem 1.1rem;
+        border: 1px solid rgba(56, 189, 248, .4);
+        border-radius: 12px;
+        background: rgba(14, 165, 233, .12);
+        color: #38bdf8;
+        font-family: inherit;
+        font-size: .78rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all .15s ease;
+      }
+      .btn-story-download:hover {
+        background: rgba(14, 165, 233, .22);
+        color: #bae6fd;
+        border-color: rgba(56, 189, 248, .7);
+      }
+      .btn-story-copy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .45rem;
+        padding: .55rem 1rem;
+        border: 1px solid rgba(255, 255, 255, .15);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, .05);
+        color: #cbd5e1;
+        font-family: inherit;
+        font-size: .74rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all .15s ease;
+      }
+      .btn-story-copy:hover {
+        background: rgba(255, 255, 255, .1);
+        color: #ffffff;
+      }
+      .share-status-toast {
+        padding: .55rem .85rem;
+        border-radius: 8px;
+        border: 1px solid rgba(52, 211, 153, .4);
+        background: rgba(16, 185, 129, .15);
+        color: #6ee7b7;
+        font-size: .74rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      /* Social Tab */
+      .social-tab-layout { display: flex; flex-direction: column; gap: .9rem; }
+      .social-intro { margin: 0; font-size: .76rem; color: #94a3b8; }
+      .social-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .65rem; }
+      .social-card {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        padding: .75rem .95rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, .08);
+        text-decoration: none;
+        color: inherit;
+        transition: all .15s ease;
+      }
+      .social-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 0, 0, .4); }
+      .social-wa { background: rgba(37, 211, 102, .12); border-color: rgba(37, 211, 102, .3); }
+      .social-wa:hover { background: rgba(37, 211, 102, .22); }
+      .social-tg { background: rgba(0, 136, 204, .12); border-color: rgba(0, 136, 204, .3); }
+      .social-tg:hover { background: rgba(0, 136, 204, .22); }
+      .social-x { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .2); }
+      .social-x:hover { background: rgba(255, 255, 255, .15); }
+      .social-fb { background: rgba(24, 119, 242, .12); border-color: rgba(24, 119, 242, .3); }
+      .social-fb:hover { background: rgba(24, 119, 242, .22); }
+      .social-icon { font-size: 1.5rem; }
+      .social-info { flex: 1; }
+      .social-info strong { display: block; font-size: .84rem; color: #f1f5f9; }
+      .social-info span { font-size: .68rem; color: #94a3b8; }
+      .social-arrow { font-size: 1rem; color: #64748b; }
+      .share-link-box { display: flex; flex-direction: column; gap: .35rem; margin-top: .4rem; }
+      .share-link-box label { font-size: .72rem; font-weight: 700; color: #cbd5e1; }
+      .share-link-input-shell { display: flex; gap: .45rem; }
+      #share-url-input {
+        flex: 1;
+        padding: .45rem .75rem;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, .15);
+        background: #070f1c;
+        color: #f1f5f9;
+        font-size: .74rem;
+        outline: none;
+      }
+      .btn-copy-action {
+        padding: .45rem .95rem;
+        border-radius: 8px;
+        border: 1px solid rgba(56, 189, 248, .45);
+        background: #0284c7;
+        color: #ffffff;
+        font-family: inherit;
+        font-size: .74rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all .15s ease;
+        white-space: nowrap;
+      }
+      .btn-copy-action:hover { background: #0369a1; }
+
+      /* Embed Tab */
+      .embed-tab-layout { display: flex; flex-direction: column; gap: .85rem; }
+      .embed-intro { margin: 0; font-size: .76rem; color: #94a3b8; }
+      .embed-code-wrapper { display: flex; flex-direction: column; gap: .4rem; }
+      .embed-code-wrapper label { font-size: .72rem; font-weight: 700; color: #cbd5e1; }
+      #embed-code-textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: .5rem .75rem;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, .15);
+        background: #070f1c;
+        color: #38bdf8;
+        font-family: ui-monospace, SFMono-Regular, monospace;
+        font-size: .72rem;
+        line-height: 1.4;
+        resize: none;
+        outline: none;
+      }
+      .embed-actions { display: flex; align-items: center; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
+      .embed-tip { font-size: .68rem; color: #64748b; }
+      .embed-preview-wrapper { display: flex; flex-direction: column; gap: .35rem; margin-top: .4rem; }
+      .embed-preview-label { font-size: .72rem; font-weight: 700; color: #cbd5e1; }
+      .embed-mock-container {
+        width: 100%;
+        height: 240px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, .1);
+        background: #091525;
+      }
+      #embed-preview-iframe { width: 100%; height: 100%; border: none; }
+
+      @media (max-width: 650px) {
+        .story-tab-grid { grid-template-columns: 1fr; justify-items: center; }
+        .social-grid { grid-template-columns: 1fr; }
+      }
+
       .leaflet-container { background: #091525; }
       .leaflet-bottom.leaflet-right { bottom: 36px; }
       .leaflet-control-attribution {
@@ -2275,6 +2532,13 @@
           border-radius: 999px;
         }
         .btn-my-location span { display: inline; font-size: .64rem; font-weight: 700; }
+        .btn-share {
+          padding: .24rem .5rem;
+          font-size: .64rem;
+          gap: .22rem;
+          border-radius: 999px;
+        }
+        .btn-share span { display: inline; font-size: .64rem; font-weight: 700; }
         .map-legend {
           left: 8px;
           right: 8px;
@@ -2623,6 +2887,16 @@
             </svg>
             <span class="btn-loc-text">Cek Rumah</span>
           </button>
+          <button type="button" id="btn-share" class="btn-share outage-only-ui" title="Bagikan ke Instagram Story, WhatsApp, atau Embed Web">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"/>
+              <circle cx="6" cy="12" r="3"/>
+              <circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+            <span class="btn-share-text">Bagikan</span>
+          </button>
         </div>
         <div id="search-results-list" class="search-results-list" hidden role="listbox"></div>
         <div id="gps-status-toast" class="gps-status-toast" hidden role="status" aria-live="polite"></div>
@@ -2656,6 +2930,7 @@
 
       <div class="header-actions">
         <span id="status-counts" class="outage-only-ui" role="status" aria-live="polite">Memuat jadwal…</span>
+        <button id="open-share-modal-btn" class="outage-only-ui header-share-btn" type="button" title="Bagikan jadwal pemadaman ke medsos / Story / embed">📤 Bagikan</button>
         <button id="open-activity-log" class="outage-only-ui" type="button">Log aktivitas</button>
         <button id="open-unmatched-modal" class="outage-only-ui" type="button" title="Lihat daftar jalan/desa yang belum terpetakan">⚠️ <span id="unmatched-badge">0</span> Belum cocok</button>
         <button id="open-import" class="outage-only-ui" type="button">＋ Impor hasil AI</button>
@@ -2854,6 +3129,145 @@
         </div>
       </div>
     </main>
+
+    <!-- Dialog Bagikan (Instagram Story, Chat Medsos, Embed Website) -->
+    <dialog id="share-modal" aria-labelledby="share-title">
+      <div class="share-modal-layout">
+        <div class="share-modal-header">
+          <div>
+            <h2 id="share-title">📤 Bagikan Peta Pemadaman</h2>
+            <p>Bagikan status pemadaman listrik Sulawesi Tengah ke medsos atau pasang widget di situs Anda.</p>
+          </div>
+          <button id="close-share-modal" class="share-close-btn" type="button" aria-label="Tutup">×</button>
+        </div>
+
+        <nav class="share-tabs-nav" role="tablist">
+          <button type="button" class="share-tab-trigger active" data-tab="story" role="tab" aria-selected="true">📱 Story IG / WA</button>
+          <button type="button" class="share-tab-trigger" data-tab="social" role="tab" aria-selected="false">💬 Chat &amp; Medsos</button>
+          <button type="button" class="share-tab-trigger" data-tab="embed" role="tab" aria-selected="false">🌐 Embed di Web</button>
+        </nav>
+
+        <div class="share-tab-body">
+          <!-- TAB 1: STORY IG / WA (Spotify-Style) -->
+          <div id="tab-story" class="share-tab-pane active" role="tabpanel">
+            <div class="story-tab-grid">
+              <div class="story-preview-col">
+                <div class="story-preview-wrapper">
+                  <canvas id="story-canvas" width="1080" height="1920"></canvas>
+                </div>
+                <div class="story-preview-caption">Pratinjau Story 9:16 (Resolusi Tinggi 1080×1920)</div>
+              </div>
+              <div class="story-actions-col">
+                <div class="story-info-card">
+                  <div class="story-info-title">✨ Spotify-Style Direct Share</div>
+                  <p class="story-info-desc">
+                    Di HP (iOS / Android), tekan tombol di bawah untuk langsung membuka <strong>Instagram Story</strong> atau <strong>WhatsApp Status</strong> dengan gambar info pemadaman terpasang otomatis.
+                  </p>
+                </div>
+                <div class="story-btn-group">
+                  <button type="button" id="btn-share-story" class="btn-story-share">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="18" cy="5" r="3"/>
+                      <circle cx="6" cy="12" r="3"/>
+                      <circle cx="18" cy="19" r="3"/>
+                      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                    </svg>
+                    <span>Bagikan ke IG Story / WA</span>
+                  </button>
+                  <button type="button" id="btn-download-story" class="btn-story-download">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                      <polyline points="7 10 12 15 17 10"/>
+                      <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    <span>Unduh Gambar HD (1080×1920)</span>
+                  </button>
+                  <button type="button" id="btn-copy-story-text" class="btn-story-copy">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                    </svg>
+                    <span>Salin Teks Ringkasan Jadwal</span>
+                  </button>
+                </div>
+                <div id="story-share-status" class="share-status-toast" hidden></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: CHAT & MEDSOS -->
+          <div id="tab-social" class="share-tab-pane" role="tabpanel">
+            <div class="social-tab-layout">
+              <p class="social-intro">Kirim info pemadaman langsung ke grup chat warga atau akun media sosial Anda:</p>
+              <div class="social-grid">
+                <a id="share-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="social-card social-wa">
+                  <div class="social-icon">💬</div>
+                  <div class="social-info">
+                    <strong>WhatsApp</strong>
+                    <span>Kirim ke grup keluarga / RT / tetangga</span>
+                  </div>
+                  <span class="social-arrow">↗</span>
+                </a>
+                <a id="share-tg-btn" href="#" target="_blank" rel="noopener noreferrer" class="social-card social-tg">
+                  <div class="social-icon">✈️</div>
+                  <div class="social-info">
+                    <strong>Telegram</strong>
+                    <span>Bagikan ke channel &amp; obrolan</span>
+                  </div>
+                  <span class="social-arrow">↗</span>
+                </a>
+                <a id="share-x-btn" href="#" target="_blank" rel="noopener noreferrer" class="social-card social-x">
+                  <div class="social-icon">𝕏</div>
+                  <div class="social-info">
+                    <strong>X (Twitter)</strong>
+                    <span>Posting cuitan ringkasan pemadaman</span>
+                  </div>
+                  <span class="social-arrow">↗</span>
+                </a>
+                <a id="share-fb-btn" href="#" target="_blank" rel="noopener noreferrer" class="social-card social-fb">
+                  <div class="social-icon">📘</div>
+                  <div class="social-info">
+                    <strong>Facebook</strong>
+                    <span>Bagikan tautan peta ke beranda / grup</span>
+                  </div>
+                  <span class="social-arrow">↗</span>
+                </a>
+              </div>
+
+              <div class="share-link-box">
+                <label for="share-url-input">Tautan Langsung Peta:</label>
+                <div class="share-link-input-shell">
+                  <input type="text" id="share-url-input" readonly />
+                  <button type="button" id="btn-copy-url" class="btn-copy-action">Salin Link</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: EMBED DI WEB -->
+          <div id="tab-embed" class="share-tab-pane" role="tabpanel">
+            <div class="embed-tab-layout">
+              <p class="embed-intro">Pasang widget peta pemadaman interaktif ini langsung di portal berita, website desa/instansi, atau blog Anda:</p>
+              <div class="embed-code-wrapper">
+                <label for="embed-code-textarea">Kode Embed (HTML Iframe):</label>
+                <textarea id="embed-code-textarea" readonly rows="4"></textarea>
+                <div class="embed-actions">
+                  <button type="button" id="btn-copy-embed" class="btn-copy-action">📋 Salin Kode Iframe</button>
+                  <span class="embed-tip">Otomatis responsive dan mendukung GPS cek lokasi rumah.</span>
+                </div>
+              </div>
+              <div class="embed-preview-wrapper">
+                <div class="embed-preview-label">Contoh Tampilan Widget (Pratinjau Mini):</div>
+                <div class="embed-mock-container">
+                  <iframe id="embed-preview-iframe" src="about:blank" title="Pratinjau Embed"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
 
     <dialog id="unmatched-modal" aria-labelledby="unmatched-title">
       <div class="unmatched-layout">
@@ -7320,6 +7734,433 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       });
 
       // ==========================================
+      // SHARE MODAL (STORY IG/WA, MEDSOS, EMBED)
+      // ==========================================
+      function renderStoryCanvas(canvas, schedule) {
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+
+        const W = 1080;
+        const H = 1920;
+        canvas.width = W;
+        canvas.height = H;
+
+        // Background gradient
+        const bg = ctx.createLinearGradient(0, 0, W, H);
+        bg.addColorStop(0, "#060d19");
+        bg.addColorStop(0.4, "#0b162c");
+        bg.addColorStop(0.85, "#121235");
+        bg.addColorStop(1, "#1a0f30");
+        ctx.fillStyle = bg;
+        ctx.fillRect(0, 0, W, H);
+
+        // Glow orbs
+        const drawGlow = (cx, cy, r, color) => {
+          const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
+          g.addColorStop(0, color);
+          g.addColorStop(1, "transparent");
+          ctx.fillStyle = g;
+          ctx.beginPath();
+          ctx.arc(cx, cy, r, 0, Math.PI * 2);
+          ctx.fill();
+        };
+        drawGlow(200, 220, 380, "rgba(14, 165, 233, 0.22)");
+        drawGlow(920, 480, 420, "rgba(245, 158, 11, 0.18)");
+        drawGlow(250, 1550, 450, "rgba(168, 85, 247, 0.22)");
+        drawGlow(850, 1700, 380, "rgba(56, 189, 248, 0.15)");
+
+        function roundRect(x, y, w, h, r) {
+          if (w < 2 * r) r = w / 2;
+          if (h < 2 * r) r = h / 2;
+          ctx.beginPath();
+          ctx.moveTo(x + r, y);
+          ctx.arcTo(x + w, y, x + w, y + h, r);
+          ctx.arcTo(x + w, y + h, x, y + h, r);
+          ctx.arcTo(x, y + h, x, y, r);
+          ctx.arcTo(x, y, x + w, y, r);
+          ctx.closePath();
+        }
+
+        // Header pill badge
+        const pillY = 130;
+        ctx.fillStyle = "rgba(245, 158, 11, 0.15)";
+        ctx.strokeStyle = "rgba(245, 158, 11, 0.5)";
+        ctx.lineWidth = 3;
+        roundRect(W / 2 - 270, pillY, 540, 58, 29);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.font = "bold 26px system-ui, -apple-system, sans-serif";
+        ctx.fillStyle = "#fbbf24";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("⚡ INFORMASI PEMADAMAN LISTRIK PLN", W / 2, pillY + 29);
+
+        // Big Title
+        ctx.font = "900 68px system-ui, -apple-system, sans-serif";
+        ctx.fillStyle = "#ffffff";
+        ctx.fillText("SULAWESI TENGAH", W / 2, 260);
+
+        // Subtitle
+        ctx.font = "500 32px system-ui, -apple-system, sans-serif";
+        ctx.fillStyle = "#94a3b8";
+        ctx.fillText("Jadwal Pemeliharaan Jaringan & Wilayah Terdampak", W / 2, 320);
+
+        // Date banner
+        const dateStr = (schedule && schedule.date) ? schedule.date : "Hari Ini";
+        const bannerY = 380;
+        const bannerGrad = ctx.createLinearGradient(W / 2 - 380, bannerY, W / 2 + 380, bannerY + 80);
+        bannerGrad.addColorStop(0, "rgba(14, 165, 233, 0.25)");
+        bannerGrad.addColorStop(1, "rgba(56, 189, 248, 0.12)");
+        ctx.fillStyle = bannerGrad;
+        ctx.strokeStyle = "rgba(56, 189, 248, 0.4)";
+        ctx.lineWidth = 2;
+        roundRect(W / 2 - 380, bannerY, 760, 80, 20);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.font = "bold 36px system-ui, -apple-system, sans-serif";
+        ctx.fillStyle = "#38bdf8";
+        ctx.fillText("📅 " + dateStr, W / 2, bannerY + 40);
+
+        // Main Metric Card (Total Locations)
+        const metricY = 495;
+        const cardW = 900;
+        const cardX = (W - cardW) / 2;
+        ctx.fillStyle = "rgba(15, 23, 42, 0.7)";
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.12)";
+        ctx.lineWidth = 3;
+        roundRect(cardX, metricY, cardW, 280, 32);
+        ctx.fill();
+        ctx.stroke();
+
+        const totalLocations = schedule && schedule.events ? schedule.events.length : 0;
+        ctx.font = "900 120px system-ui, -apple-system, sans-serif";
+        const numGrad = ctx.createLinearGradient(0, metricY + 50, 0, metricY + 160);
+        numGrad.addColorStop(0, "#fef08a");
+        numGrad.addColorStop(1, "#f59e0b");
+        ctx.fillStyle = numGrad;
+        ctx.fillText(String(totalLocations), W / 2, metricY + 115);
+
+        ctx.font = "bold 32px system-ui, -apple-system, sans-serif";
+        ctx.fillStyle = "#e2e8f0";
+        ctx.fillText("TITIK LOKASI TERENCANA PADAM", W / 2, metricY + 195);
+
+        ctx.font = "500 24px system-ui, -apple-system, sans-serif";
+        ctx.fillStyle = "#94a3b8";
+        ctx.fillText("Data diperbarui otomatis dari PLN UP3 Palu & Cabang", W / 2, metricY + 235);
+
+        // ULP Breakdown Card
+        const ulpY = 810;
+        ctx.fillStyle = "rgba(15, 23, 42, 0.6)";
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.08)";
+        ctx.lineWidth = 2;
+        roundRect(cardX, ulpY, cardW, 490, 32);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.font = "bold 30px system-ui, -apple-system, sans-serif";
+        ctx.fillStyle = "#cbd5e1";
+        ctx.textAlign = "left";
+        ctx.fillText("🏢 DAERAH / ULP TERDAMPAK:", cardX + 45, ulpY + 55);
+
+        const ulpCounts = {};
+        if (schedule && schedule.events) {
+          schedule.events.forEach((ev) => {
+            const u = ev.ulp || "Lainnya";
+            ulpCounts[u] = (ulpCounts[u] || 0) + 1;
+          });
+        }
+        const ulpList = Object.entries(ulpCounts).sort((a, b) => b[1] - a[1]);
+
+        const pillCols = 2;
+        const colW = (cardW - 120) / 2;
+        const itemH = 68;
+        const startListY = ulpY + 85;
+
+        const maxPills = Math.min(8, ulpList.length);
+        for (let i = 0; i < maxPills; i++) {
+          const col = i % pillCols;
+          const row = Math.floor(i / pillCols);
+          const px = cardX + 45 + col * (colW + 30);
+          const py = startListY + row * (itemH + 18);
+
+          ctx.fillStyle = "rgba(30, 41, 59, 0.85)";
+          ctx.strokeStyle = "rgba(56, 189, 248, 0.25)";
+          ctx.lineWidth = 1.5;
+          roundRect(px, py, colW, itemH, 16);
+          ctx.fill();
+          ctx.stroke();
+
+          const [name, count] = ulpList[i];
+          ctx.font = "bold 24px system-ui, -apple-system, sans-serif";
+          ctx.fillStyle = "#ffffff";
+          ctx.textAlign = "left";
+          ctx.textBaseline = "middle";
+          ctx.fillText(name.length > 18 ? name.slice(0, 16) + "…" : name, px + 20, py + itemH / 2);
+
+          ctx.font = "900 24px system-ui, -apple-system, sans-serif";
+          ctx.fillStyle = "#38bdf8";
+          ctx.textAlign = "right";
+          ctx.fillText(count + " titik", px + colW - 20, py + itemH / 2);
+        }
+
+        // Interactive Map Preview CTA Box
+        const ctaY = 1335;
+        const ctaGrad = ctx.createLinearGradient(cardX, ctaY, cardX + cardW, ctaY + 360);
+        ctaGrad.addColorStop(0, "rgba(14, 165, 233, 0.2)");
+        ctaGrad.addColorStop(0.5, "rgba(124, 58, 237, 0.2)");
+        ctaGrad.addColorStop(1, "rgba(245, 158, 11, 0.2)");
+        ctx.fillStyle = ctaGrad;
+        ctx.strokeStyle = "rgba(56, 189, 248, 0.4)";
+        ctx.lineWidth = 2.5;
+        roundRect(cardX, ctaY, cardW, 360, 32);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.font = "72px system-ui, sans-serif";
+        ctx.fillText("🗺️", W / 2, ctaY + 80);
+
+        ctx.font = "900 36px system-ui, -apple-system, sans-serif";
+        ctx.fillStyle = "#ffffff";
+        ctx.fillText("CEK STATUS RUMAHMU DI PETA INTERAKTIF", W / 2, ctaY + 160);
+
+        ctx.font = "500 26px system-ui, -apple-system, sans-serif";
+        ctx.fillStyle = "#cbd5e1";
+        ctx.fillText("Ketik nama jalan atau gunakan tombol GPS Cek Rumah", W / 2, ctaY + 210);
+
+        const linkPillY = ctaY + 255;
+        const linkPillW = 680;
+        ctx.fillStyle = "#0284c7";
+        roundRect((W - linkPillW) / 2, linkPillY, linkPillW, 64, 32);
+        ctx.fill();
+
+        ctx.font = "bold 28px system-ui, -apple-system, sans-serif";
+        ctx.fillStyle = "#ffffff";
+        ctx.fillText("🔗 Buka Link di Bio / Story Ini", W / 2, linkPillY + 32);
+
+        // Bottom Footer
+        ctx.font = "500 24px system-ui, -apple-system, sans-serif";
+        ctx.fillStyle = "#64748b";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "alphabetic";
+        ctx.fillText("Peta Pemadaman Terpadu Sulawesi Tengah • Realtime Web App", W / 2, 1780);
+        ctx.fillText("Bagikan info ini ke warga dan keluarga yang membutuhkan", W / 2, 1820);
+      }
+
+      function setupShareModal() {
+        const shareModal = document.getElementById("share-modal");
+        const openShareBtns = [
+          document.getElementById("btn-share"),
+          document.getElementById("open-share-modal-btn")
+        ].filter(Boolean);
+        const closeShareBtn = document.getElementById("close-share-modal");
+        const tabTriggers = Array.from(document.querySelectorAll(".share-tab-trigger"));
+        const tabPanes = Array.from(document.querySelectorAll(".share-tab-pane"));
+
+        const storyCanvas = document.getElementById("story-canvas");
+        const btnShareStory = document.getElementById("btn-share-story");
+        const btnDownloadStory = document.getElementById("btn-download-story");
+        const btnCopyStoryText = document.getElementById("btn-copy-story-text");
+        const storyShareStatus = document.getElementById("story-share-status");
+
+        const shareWaBtn = document.getElementById("share-wa-btn");
+        const shareTgBtn = document.getElementById("share-tg-btn");
+        const shareXBtn = document.getElementById("share-x-btn");
+        const shareFbBtn = document.getElementById("share-fb-btn");
+        const shareUrlInput = document.getElementById("share-url-input");
+        const btnCopyUrl = document.getElementById("btn-copy-url");
+
+        const embedCodeTextarea = document.getElementById("embed-code-textarea");
+        const btnCopyEmbed = document.getElementById("btn-copy-embed");
+        const embedPreviewIframe = document.getElementById("embed-preview-iframe");
+
+        if (!shareModal) return;
+
+        function showStatusToast(msg, isSuccess = true) {
+          if (!storyShareStatus) return;
+          storyShareStatus.textContent = msg;
+          storyShareStatus.style.background = isSuccess ? "rgba(16, 185, 129, .2)" : "rgba(239, 68, 68, .2)";
+          storyShareStatus.style.borderColor = isSuccess ? "rgba(16, 185, 129, .5)" : "rgba(239, 68, 68, .5)";
+          storyShareStatus.style.color = isSuccess ? "#6ee7b7" : "#fca5a5";
+          storyShareStatus.hidden = false;
+          setTimeout(() => {
+            storyShareStatus.hidden = true;
+          }, 4500);
+        }
+
+        function getShareData() {
+          const shareUrl = window.location.href.split("#")[0];
+          const dateStr = (typeof currentSchedule !== "undefined" && currentSchedule?.date) ? currentSchedule.date : "Hari Ini";
+          const total = (typeof currentSchedule !== "undefined" && currentSchedule?.events) ? currentSchedule.events.length : 0;
+
+          const ulpCounts = {};
+          if (typeof currentSchedule !== "undefined" && currentSchedule?.events) {
+            currentSchedule.events.forEach((ev) => {
+              const u = ev.ulp || "Lainnya";
+              ulpCounts[u] = (ulpCounts[u] || 0) + 1;
+            });
+          }
+          const topUlps = Object.entries(ulpCounts)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 4)
+            .map(([name, count]) => `${name} (${count})`)
+            .join(", ");
+
+          const textSummary = `⚡ INFO PEMADAMAN LISTRIK SULTENG\n📅 Tanggal: ${dateStr}\n📍 Total: ${total} Lokasi Terdampak PLN\n🏢 Daerah: ${topUlps || "Sulawesi Tengah"}\n\n🔍 Cek apakah jalan/rumahmu padam di peta interaktif:\n👉 ${shareUrl}`;
+          const xSummary = `⚡ Cek info jadwal pemadaman listrik Sulawesi Tengah (${dateStr}): ${total} titik terdampak. Cari jalan & cek GPS rumahmu di:`;
+
+          return { shareUrl, dateStr, total, textSummary, xSummary };
+        }
+
+        function updateModalContents() {
+          const { shareUrl, dateStr, total, textSummary, xSummary } = getShareData();
+
+          if (storyCanvas && typeof renderStoryCanvas === "function") {
+            renderStoryCanvas(storyCanvas, typeof currentSchedule !== "undefined" ? currentSchedule : null);
+          }
+
+          if (shareUrlInput) shareUrlInput.value = shareUrl;
+          if (shareWaBtn) shareWaBtn.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(textSummary)}`;
+          if (shareTgBtn) shareTgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(textSummary)}`;
+          if (shareXBtn) shareXBtn.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(xSummary)}&url=${encodeURIComponent(shareUrl)}`;
+          if (shareFbBtn) shareFbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+
+          const embedCode = `<iframe src="${shareUrl}" width="100%" height="600" style="border:0; border-radius:12px; box-shadow:0 4px 24px rgba(0,0,0,0.35);" allow="geolocation" loading="lazy" title="Peta Pemadaman Listrik Sulawesi Tengah"></iframe>`;
+          if (embedCodeTextarea) embedCodeTextarea.value = embedCode;
+          if (embedPreviewIframe && (!embedPreviewIframe.src || embedPreviewIframe.src === "about:blank")) {
+            embedPreviewIframe.src = shareUrl;
+          }
+        }
+
+        tabTriggers.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            tabTriggers.forEach((t) => {
+              t.classList.remove("active");
+              t.setAttribute("aria-selected", "false");
+            });
+            tabPanes.forEach((p) => p.classList.remove("active"));
+
+            btn.classList.add("active");
+            btn.setAttribute("aria-selected", "true");
+            const targetPane = document.getElementById("tab-" + btn.dataset.tab);
+            if (targetPane) targetPane.classList.add("active");
+          });
+        });
+
+        openShareBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            updateModalContents();
+            shareModal.showModal();
+          });
+        });
+        if (closeShareBtn) {
+          closeShareBtn.addEventListener("click", () => shareModal.close());
+        }
+        shareModal.addEventListener("click", (e) => {
+          if (e.target === shareModal) shareModal.close();
+        });
+
+        if (btnShareStory && storyCanvas) {
+          btnShareStory.addEventListener("click", async () => {
+            const { shareUrl, textSummary, dateStr } = getShareData();
+            try {
+              if (!storyCanvas.toBlob) {
+                throw new Error("Canvas toBlob tidak didukung");
+              }
+              storyCanvas.toBlob(async (blob) => {
+                if (!blob) {
+                  showStatusToast("Gagal menghasilkan gambar story", false);
+                  return;
+                }
+                const file = new File([blob], `pemadaman-sulteng-${dateStr.replace(/[^a-zA-Z0-9]/g, "-")}.png`, { type: "image/png" });
+                if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                  try {
+                    await navigator.share({
+                      title: "Info Pemadaman Listrik Sulteng",
+                      text: `Cek jadwal pemadaman listrik Sulteng di: ${shareUrl}`,
+                      files: [file]
+                    });
+                    showStatusToast("Berhasil membagikan ke Story / Medsos!");
+                    return;
+                  } catch (err) {
+                    if (err.name === "AbortError") return;
+                  }
+                }
+
+                // Fallback for browsers without direct file Web Share
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = `pemadaman-sulteng-${dateStr}.png`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                if (navigator.clipboard) {
+                  await navigator.clipboard.writeText(textSummary);
+                }
+                showStatusToast("Gambar Story diunduh & teks tersalin! Buka Instagram / WhatsApp untuk pasang Story.");
+              }, "image/png");
+            } catch (err) {
+              showStatusToast("Error: " + (err.message || "Gagal membagikan"), false);
+            }
+          });
+        }
+
+        if (btnDownloadStory && storyCanvas) {
+          btnDownloadStory.addEventListener("click", () => {
+            const { dateStr } = getShareData();
+            const a = document.createElement("a");
+            a.href = storyCanvas.toDataURL("image/png");
+            a.download = `pemadaman-sulteng-${dateStr}.png`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            showStatusToast("Gambar resolusi tinggi 1080×1920 berhasil diunduh!");
+          });
+        }
+
+        if (btnCopyStoryText) {
+          btnCopyStoryText.addEventListener("click", async () => {
+            const { textSummary } = getShareData();
+            if (navigator.clipboard) {
+              await navigator.clipboard.writeText(textSummary);
+              showStatusToast("Teks ringkasan berhasil disalin ke clipboard!");
+            }
+          });
+        }
+
+        if (btnCopyUrl && shareUrlInput) {
+          btnCopyUrl.addEventListener("click", async () => {
+            if (navigator.clipboard) {
+              await navigator.clipboard.writeText(shareUrlInput.value);
+              btnCopyUrl.textContent = "Tersalin! ✓";
+              setTimeout(() => {
+                btnCopyUrl.textContent = "Salin Link";
+              }, 2000);
+            }
+          });
+        }
+
+        if (btnCopyEmbed && embedCodeTextarea) {
+          btnCopyEmbed.addEventListener("click", async () => {
+            if (navigator.clipboard) {
+              await navigator.clipboard.writeText(embedCodeTextarea.value);
+              btnCopyEmbed.textContent = "Kode Iframe Tersalin! ✓";
+              setTimeout(() => {
+                btnCopyEmbed.textContent = "📋 Salin Kode Iframe";
+              }, 2000);
+            }
+          });
+        }
+      }
+
+      // ==========================================
       // SERVER-SIDE IMPORT & LIVE BANNER
       // ==========================================
       let serverBannerDismissed = false;
@@ -7607,6 +8448,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       setupContourControls();
       setupSearchBar();
       setupMyLocation();
+      setupShareModal();
       updateClock();
       initialLoadSchedule();
       startServerStatusPolling(true);
