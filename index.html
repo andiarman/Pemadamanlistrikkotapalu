@@ -93,6 +93,10 @@
         background: linear-gradient(135deg, #0284c7 0%, #0369a1 55%, #075985 100%);
         box-shadow: 0 4px 14px rgba(2, 132, 199, .45), inset 0 1px 0 rgba(255, 255, 255, .3);
       }
+      .brand-icon.mode-contour {
+        background: linear-gradient(135deg, #059669 0%, #0d9488 55%, #0284c7 100%);
+        box-shadow: 0 4px 14px rgba(13, 148, 136, .45), inset 0 1px 0 rgba(255, 255, 255, .3);
+      }
       .brand-icon.mode-empty {
         background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         border: 1.5px dashed rgba(148, 163, 184, 0.5);
@@ -212,6 +216,15 @@
         box-shadow: 0 2px 8px rgba(2, 132, 199, .35);
       }
       .mode-badge-icon.rtrw svg {
+        width: 17px;
+        height: 17px;
+      }
+      .mode-badge-icon.contour {
+        background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+        color: #ffffff;
+        box-shadow: 0 2px 8px rgba(13, 148, 136, .35);
+      }
+      .mode-badge-icon.contour svg {
         width: 17px;
         height: 17px;
       }
@@ -500,6 +513,128 @@
         font-weight: 700;
         letter-spacing: 0.02em;
         margin-bottom: 6px;
+      }
+      /* Contour / Topo Mode Styles */
+      .contour-legend {
+        position: absolute;
+        bottom: 24px;
+        left: 14px;
+        z-index: 1000;
+        background: rgba(15, 23, 42, 0.94);
+        border: 1px solid rgba(16, 185, 129, 0.35);
+        border-radius: 12px;
+        padding: 10px 14px;
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        color: #f1f5f9;
+        font-size: 0.78rem;
+        max-width: 310px;
+        animation: fadeIn 0.2s ease-out;
+      }
+      body[data-app-mode="contour"] .contour-legend {
+        display: flex !important;
+      }
+      .contour-legend-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 0.82rem;
+        color: #34d399;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 5px;
+      }
+      .contour-legend-items {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .contour-legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        user-select: none;
+        font-size: 0.76rem;
+      }
+      .contour-legend-item input[type="checkbox"] {
+        accent-color: #10b981;
+        cursor: pointer;
+      }
+      .contour-swatch {
+        width: 14px;
+        height: 14px;
+        border-radius: 3px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        flex-shrink: 0;
+      }
+      .contour-swatch.peak-swatch {
+        background: #ef4444;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+      .contour-swatch.line-swatch {
+        background: #f59e0b;
+        height: 3px;
+        border-radius: 1px;
+      }
+      .contour-hypsometry-bar {
+        height: 10px;
+        border-radius: 4px;
+        background: linear-gradient(to right, #15803d, #84cc16, #eab308, #ea580c, #78350f, #f8fafc);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin-top: 3px;
+      }
+      .contour-hypsometry-labels {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.68rem;
+        color: #94a3b8;
+        margin-top: 2px;
+      }
+      .contour-peak-marker {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+      }
+      .contour-peak-triangle {
+        width: 0;
+        height: 0;
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        border-bottom: 15px solid #dc2626;
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+      }
+      .contour-peak-badge {
+        background: rgba(15, 23, 42, 0.9);
+        color: #facc15;
+        font-size: 9px;
+        font-weight: 800;
+        padding: 1px 4px;
+        border-radius: 3px;
+        border: 1px solid rgba(250, 204, 21, 0.4);
+        margin-top: -2px;
+        white-space: nowrap;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      }
+      .contour-lake-marker {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        background: rgba(2, 132, 199, 0.9);
+        border: 2px solid #38bdf8;
+        border-radius: 50%;
+        color: white;
+        font-size: 13px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.4);
       }
       h1 {
         margin: 0;
@@ -2409,21 +2544,23 @@
               <span class="mode-item-active-dot" aria-hidden="true">●</span>
             </button>
 
-            <div class="mode-dropdown-header">Mode Perencanaan (Kosong)</div>
+            <div class="mode-dropdown-header">Topografi & Lingkungan</div>
 
-            <button type="button" class="mode-dropdown-item" data-mode="empty-3" role="menuitem">
-              <span class="mode-badge-icon empty">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="4" stroke-dasharray="3 3"></rect>
-                  <text x="12" y="16.5" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor" stroke="none">3</text>
+            <button type="button" class="mode-dropdown-item" data-mode="contour" role="menuitem">
+              <span class="mode-badge-icon contour">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+                  <path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.24.19"/>
                 </svg>
               </span>
               <div class="mode-item-text">
-                <span class="mode-item-title">Mode Kosong 3</span>
-                <span class="mode-item-subtitle">Slot perencanaan peta #3</span>
+                <span class="mode-item-title">Peta Kontur & Topografi Sulteng</span>
+                <span class="mode-item-subtitle">Garis Kontur Resmi DEMNAS/BIG & Puncak Gunung</span>
               </div>
               <span class="mode-item-active-dot" aria-hidden="true">●</span>
             </button>
+
+            <div class="mode-dropdown-header">Mode Perencanaan (Kosong)</div>
 
             <button type="button" class="mode-dropdown-item" data-mode="empty-4" role="menuitem">
               <span class="mode-badge-icon empty">
@@ -2670,6 +2807,52 @@
           </label>
         </div>
       </div>
+
+      <div id="contour-legend" class="contour-legend" aria-label="Legenda Topografi dan Kontur">
+        <div class="contour-legend-head">
+          <span>🏔️ Topografi & Kontur Sulteng</span>
+          <span style="font-size:0.68rem; color:#94a3b8; font-weight:normal;">SRTM / DEMNAS</span>
+        </div>
+        <div class="contour-legend-items">
+          <label class="contour-legend-item">
+            <input type="checkbox" id="chk-contour-tile" checked />
+            <span class="contour-swatch" style="border:1.5px solid #10b981; background:rgba(16,185,129,0.3);"></span>
+            <span>Garis Kontur Berlabel (OpenTopoMap)</span>
+          </label>
+          <label class="contour-legend-item">
+            <input type="checkbox" id="chk-contour-lines" checked />
+            <span class="contour-swatch line-swatch"></span>
+            <span>Garis Kontur Indeks Vektor (BIG/DEMNAS)</span>
+          </label>
+          <label class="contour-legend-item">
+            <input type="checkbox" id="chk-contour-peaks" checked />
+            <span class="contour-swatch peak-swatch"></span>
+            <span>Puncak Gunung & Titik Ketinggian (▲ mdpl)</span>
+          </label>
+          <label class="contour-legend-item">
+            <input type="checkbox" id="chk-contour-inspector" checked />
+            <span style="font-size:12px;">📍</span>
+            <span>Altimeter Aktif (Klik Peta Cek Elevasi)</span>
+          </label>
+
+          <div style="margin-top:4px; padding-top:6px; border-top:1px solid rgba(255,255,255,0.08);">
+            <div style="font-size:0.7rem; color:#94a3b8; margin-bottom:2px;">Rentang Ketinggian Hypsometri (mdpl):</div>
+            <div class="contour-hypsometry-bar"></div>
+            <div class="contour-hypsometry-labels">
+              <span>0 m</span>
+              <span>200 m</span>
+              <span>500 m</span>
+              <span>1.000 m</span>
+              <span>2.000 m</span>
+              <span>3.000+ m</span>
+            </div>
+          </div>
+
+          <div style="margin-top:4px; padding:5px 8px; background:rgba(16,185,129,0.12); border-left:3px solid #10b981; border-radius:4px; font-size:0.72rem; color:#a7f3d0; line-height:1.35;">
+            💡 <i>Tips:</i> Zoom lebih dekat untuk membaca garis kontur rapat (interval 10m–50m) beserta angka ketinggian.
+          </div>
+        </div>
+      </div>
     </main>
 
     <dialog id="unmatched-modal" aria-labelledby="unmatched-title">
@@ -2848,13 +3031,25 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         zoomAnimationThreshold: 8
       }).setView([-0.8917, 119.8707], 12);
       L.control.zoom({ position: "bottomright" }).addTo(map);
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      const defaultTileLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "&copy; OpenStreetMap contributors",
         updateWhenZooming: false,
         updateWhenIdle: true,
         keepBuffer: 3
       }).addTo(map);
+
+      const topoTileLayer = L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
+        maxZoom: 17,
+        attribution: 'Peta Kontur & Topografi: &copy; <a href="https://opentopomap.org" target="_blank">OpenTopoMap</a> (CC-BY-SA) | Data Kontur: SRTM 30m / DEMNAS / BIG',
+        keepBuffer: 3
+      });
+
+      const esriTopoTileLayer = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", {
+        maxZoom: 18,
+        attribution: 'Tiles &copy; Esri &mdash; USGS, Esri, Garmin',
+        keepBuffer: 3
+      });
 
       const badge = document.getElementById("status-counts");
       const importDialog = document.getElementById("import-dialog");
@@ -3500,6 +3695,270 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         }
       }
 
+      // ==========================================
+      // Mode Topografi & Kontur Sulawesi Tengah
+      // ==========================================
+      const contourLayers = {
+        peaks: null,
+        lines: null,
+        inspectorActive: true,
+        loaded: false
+      };
+
+      async function loadContourLayers() {
+        if (map.hasLayer(defaultTileLayer)) {
+          map.removeLayer(defaultTileLayer);
+        }
+        if (!map.hasLayer(topoTileLayer)) {
+          topoTileLayer.addTo(map);
+        }
+
+        if (contourLayers.loaded) {
+          if (contourLayers.peaks && !map.hasLayer(contourLayers.peaks) && document.getElementById("chk-contour-peaks")?.checked !== false) {
+            map.addLayer(contourLayers.peaks);
+          }
+          if (contourLayers.lines && !map.hasLayer(contourLayers.lines) && document.getElementById("chk-contour-lines")?.checked !== false) {
+            map.addLayer(contourLayers.lines);
+          }
+          return;
+        }
+
+        try {
+          // 1. Puncak Gunung & Titik Ketinggian
+          const res = await fetch("data/contour/sulteng-puncak-gunung.geojson");
+          if (res.ok) {
+            const data = await res.json();
+            const markers = [];
+
+            for (const f of data.features) {
+              const p = f.properties;
+              const [lon, lat] = f.geometry.coordinates;
+              const isLake = p.kategori.includes("Danau");
+
+              let iconHtml;
+              if (isLake) {
+                iconHtml = `<div class="contour-lake-marker" title="${escapeHtml(p.nama)} (${p.elevasi_label})">💧</div>`;
+              } else {
+                iconHtml = `
+                  <div class="contour-peak-marker" title="${escapeHtml(p.nama)} (${p.elevasi_label})">
+                    <div class="contour-peak-triangle"></div>
+                    <div class="contour-peak-badge">${escapeHtml(p.elevasi.toLocaleString('id-ID'))} m</div>
+                  </div>
+                `;
+              }
+
+              const m = L.marker([lat, lon], {
+                icon: L.divIcon({
+                  className: "",
+                  html: iconHtml,
+                  iconSize: isLake ? [26, 26] : [48, 30],
+                  iconAnchor: isLake ? [13, 13] : [24, 20]
+                })
+              });
+
+              m.bindTooltip(`<strong>${escapeHtml(p.nama)}</strong><br><small style="color:#fde047;">${escapeHtml(p.elevasi_label)} · ${escapeHtml(p.kategori)}</small>`, { sticky: true });
+              m.bindPopup(`
+                <div class="contour-popup" style="max-width:300px;">
+                  <span style="font-size:0.7rem; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">${escapeHtml(p.kategori)}</span>
+                  <h4 style="margin:4px 0 6px; font-size:0.95rem; color:#f8fafc;">${isLake ? '💧' : '▲'} ${escapeHtml(p.nama)}</h4>
+                  <div style="font-size:0.78rem; line-height:1.45; color:#cbd5e1; display:flex; flex-direction:column; gap:4px;">
+                    <div><b>Ketinggian Resmi:</b> <span style="color:#facc15; font-weight:800; font-size:0.9rem;">${escapeHtml(p.elevasi_label)}</span></div>
+                    <div><b>Wilayah:</b> ${escapeHtml(p.kabupaten)}</div>
+                    <div><b>Zona Vegetasi / Ekosistem:</b> ${escapeHtml(p.vegetasi)}</div>
+                    <div><b>Karakteristik Tektonik:</b> ${escapeHtml(p.status_vulkanik)}</div>
+                    <div style="margin-top:4px; padding:6px 8px; background:rgba(255,255,255,0.05); border-left:3px solid #10b981; border-radius:4px; font-size:0.74rem;">
+                      ${escapeHtml(p.deskripsi)}
+                    </div>
+                    <div style="font-size:0.68rem; color:#94a3b8; margin-top:2px;"><b>Sumber:</b> ${escapeHtml(p.sumber)}</div>
+                  </div>
+                </div>
+              `);
+
+              markers.push(m);
+            }
+
+            contourLayers.peaks = L.featureGroup(markers);
+            if (currentAppMode === "contour" && document.getElementById("chk-contour-peaks")?.checked !== false) {
+              contourLayers.peaks.addTo(map);
+            }
+          }
+
+          // 2. Garis Kontur Indeks Vektor
+          const lineRes = await fetch("data/contour/sulteng-garis-kontur.geojson");
+          if (lineRes.ok) {
+            const lineData = await lineRes.json();
+            contourLayers.lines = L.geoJSON(lineData, {
+              style: (f) => {
+                const elev = f.properties.elevasi || 100;
+                let color = "#eab308";
+                let weight = 2.5;
+                if (elev >= 2000) { color = "#e11d48"; weight = 3.2; }
+                else if (elev >= 1500) { color = "#9a3412"; weight = 2.8; }
+                else if (elev >= 1000) { color = "#ea580c"; weight = 2.6; }
+                else if (elev >= 500) { color = "#f97316"; weight = 2.4; }
+                else if (elev >= 250) { color = "#eab308"; weight = 2.2; }
+                else { color = "#84cc16"; weight = 2.0; }
+
+                return {
+                  color: color,
+                  weight: weight,
+                  opacity: 0.88,
+                  dashArray: elev >= 1000 ? null : "4, 3"
+                };
+              },
+              onEachFeature: (f, layer) => {
+                const p = f.properties || {};
+                layer.bindTooltip(`<strong>〰️ ${escapeHtml(p.nama)}</strong><br><small style="color:#fde047;">${escapeHtml(p.kategori)} (${escapeHtml(p.wilayah)})</small>`, { sticky: true });
+                layer.bindPopup(`
+                  <div class="contour-popup" style="max-width:280px;">
+                    <span style="font-size:0.7rem; font-weight:700; color:#fde047; background:rgba(250,204,21,0.15); padding:2px 6px; border-radius:4px;">${escapeHtml(p.tipe)}</span>
+                    <h4 style="margin:4px 0 6px; font-size:0.92rem; color:#f8fafc;">〰️ ${escapeHtml(p.nama)}</h4>
+                    <div style="font-size:0.78rem; line-height:1.45; color:#cbd5e1; display:flex; flex-direction:column; gap:4px;">
+                      <div><b>Ketinggian Garis:</b> <span style="color:#facc15; font-weight:800;">${escapeHtml(p.elevasi_label)}</span></div>
+                      <div><b>Morfologi:</b> ${escapeHtml(p.kategori)}</div>
+                      <div><b>Wilayah:</b> ${escapeHtml(p.wilayah)}</div>
+                      <div style="font-size:0.68rem; color:#94a3b8; margin-top:2px;"><b>Sumber:</b> ${escapeHtml(p.sumber)}</div>
+                    </div>
+                  </div>
+                `);
+              }
+            });
+            if (currentAppMode === "contour" && document.getElementById("chk-contour-lines")?.checked !== false) {
+              contourLayers.lines.addTo(map);
+            }
+          }
+
+          contourLayers.loaded = true;
+        } catch (err) {
+          console.error("Gagal memuat layer kontur/topografi:", err);
+        }
+      }
+
+      function hideContourLayers() {
+        if (map.hasLayer(topoTileLayer)) map.removeLayer(topoTileLayer);
+        if (map.hasLayer(esriTopoTileLayer)) map.removeLayer(esriTopoTileLayer);
+        if (!map.hasLayer(defaultTileLayer)) defaultTileLayer.addTo(map);
+        if (contourLayers.peaks && map.hasLayer(contourLayers.peaks)) map.removeLayer(contourLayers.peaks);
+        if (contourLayers.lines && map.hasLayer(contourLayers.lines)) map.removeLayer(contourLayers.lines);
+      }
+
+      function setupContourControls() {
+        const chkTile = document.getElementById("chk-contour-tile");
+        const chkLines = document.getElementById("chk-contour-lines");
+        const chkPeaks = document.getElementById("chk-contour-peaks");
+        const chkInspector = document.getElementById("chk-contour-inspector");
+
+        if (chkTile) {
+          chkTile.addEventListener("change", () => {
+            if (currentAppMode !== "contour") return;
+            if (chkTile.checked) {
+              if (map.hasLayer(defaultTileLayer)) map.removeLayer(defaultTileLayer);
+              if (!map.hasLayer(topoTileLayer)) topoTileLayer.addTo(map);
+            } else {
+              if (map.hasLayer(topoTileLayer)) map.removeLayer(topoTileLayer);
+              if (!map.hasLayer(defaultTileLayer)) defaultTileLayer.addTo(map);
+            }
+          });
+        }
+
+        if (chkLines) {
+          chkLines.addEventListener("change", () => {
+            if (!contourLayers.lines) return;
+            if (chkLines.checked) {
+              if (!map.hasLayer(contourLayers.lines)) contourLayers.lines.addTo(map);
+            } else {
+              if (map.hasLayer(contourLayers.lines)) map.removeLayer(contourLayers.lines);
+            }
+          });
+        }
+
+        if (chkPeaks) {
+          chkPeaks.addEventListener("change", () => {
+            if (!contourLayers.peaks) return;
+            if (chkPeaks.checked) {
+              if (!map.hasLayer(contourLayers.peaks)) contourLayers.peaks.addTo(map);
+            } else {
+              if (map.hasLayer(contourLayers.peaks)) map.removeLayer(contourLayers.peaks);
+            }
+          });
+        }
+
+        if (chkInspector) {
+          chkInspector.addEventListener("change", () => {
+            contourLayers.inspectorActive = chkInspector.checked;
+          });
+        }
+
+        map.on("click", async (e) => {
+          if (currentAppMode !== "contour" || !contourLayers.inspectorActive) return;
+          const lat = e.latlng.lat;
+          const lng = e.latlng.lng;
+
+          if (lat < -4.5 || lat > 2.5 || lng < 118 || lng > 125) return;
+
+          const popup = L.popup({ minWidth: 220 })
+            .setLatLng(e.latlng)
+            .setContent(`
+              <div style="padding:6px; font-size:0.78rem; color:#cbd5e1; display:flex; align-items:center; gap:6px;">
+                <span class="loading-spinner" style="display:inline-block; width:12px; height:12px; border:2px solid #34d399; border-top-color:transparent; border-radius:50%; animation:spin 0.8s linear infinite;"></span>
+                <span>Mengukur elevasi resmi (DEMNAS/SRTM)...</span>
+              </div>
+            `)
+            .openOn(map);
+
+          try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 4000);
+            const res = await fetch(`https://api.open-elevation.com/api/v1/lookup?locations=${lat.toFixed(5)},${lng.toFixed(5)}`, {
+              signal: controller.signal
+            });
+            clearTimeout(timeoutId);
+
+            if (res.ok) {
+              const data = await res.json();
+              const elev = Math.round(data.results[0].elevation);
+              let morfo = "Dataran Rendah Pesisir";
+              let morfoColor = "#4ade80";
+              let slope = "Datar (0–8%)";
+              if (elev > 2000) { morfo = "Pegunungan Sangat Tinggi (Alpin)"; morfoColor = "#f43f5e"; slope = "Sangat Curam (>45%)"; }
+              else if (elev > 1000) { morfo = "Pegunungan Sedang / Hutan Lumut"; morfoColor = "#fb923c"; slope = "Curam (25–45%)"; }
+              else if (elev > 500) { morfo = "Dataran Tinggi / Perbukitan Terjal"; morfoColor = "#facc15"; slope = "Agak Curam (15–25%)"; }
+              else if (elev > 200) { morfo = "Perbukitan Sedang"; morfoColor = "#a3e635"; slope = "Landai - Agak Curam (15%)"; }
+              else if (elev > 50) { morfo = "Perbukitan Rendah"; morfoColor = "#86efac"; slope = "Landai (8–15%)"; }
+
+              const temp = (31 - (0.0065 * Math.max(0, elev))).toFixed(1);
+
+              popup.setContent(`
+                <div class="contour-inspector-popup" style="min-width:220px; font-size:0.78rem; color:#f1f5f9;">
+                  <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+                    <span style="font-size:0.68rem; font-weight:700; color:${morfoColor}; background:rgba(255,255,255,0.08); padding:2px 6px; border-radius:4px;">${morfo}</span>
+                    <span style="font-size:0.68rem; color:#94a3b8;">Altimeter DEMNAS</span>
+                  </div>
+                  <div style="font-size:1.15rem; font-weight:800; color:#fde047; margin:4px 0;">
+                    ⛰️ ${elev.toLocaleString('id-ID')} <span style="font-size:0.8rem; font-weight:600; color:#cbd5e1;">mdpl</span>
+                  </div>
+                  <div style="display:flex; flex-direction:column; gap:3px; font-size:0.74rem; color:#cbd5e1; border-top:1px solid rgba(255,255,255,0.1); padding-top:4px;">
+                    <div><b>Kemiringan Lereng:</b> ${slope}</div>
+                    <div><b>Estimasi Suhu:</b> <span style="color:#38bdf8;">± ${temp} °C</span></div>
+                    <div><b>Koordinat:</b> <span style="font-family:monospace; color:#94a3b8;">${lat.toFixed(4)}, ${lng.toFixed(4)}</span></div>
+                  </div>
+                </div>
+              `);
+            } else {
+              throw new Error("Gagal mengambil data");
+            }
+          } catch(err) {
+            popup.setContent(`
+              <div style="font-size:0.75rem; color:#cbd5e1; padding:4px;">
+                <div style="color:#fde047; font-weight:700; margin-bottom:2px;">📍 Titik Koordinat:</div>
+                <div style="font-family:monospace; color:#94a3b8; margin-bottom:4px;">${lat.toFixed(4)}, ${lng.toFixed(4)}</div>
+                <div style="font-size:0.7rem; color:#94a3b8;">Zoom lebih dekat untuk membaca kontur garis berlabel di peta.</div>
+              </div>
+            `);
+          }
+        });
+      }
+
       function updateBoundaryStyles() {
         for (const layer of boundaryLayersByRegency.values()) {
           layer.setStyle(getBoundaryStyle);
@@ -3569,6 +4028,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
           if (mode === "outage") {
             hideDisasterLayers();
             hideRtrwLayers();
+            hideContourLayers();
             modeBtn.className = "brand-icon mode-selector-btn mode-outage";
             modeBtn.title = "Mode: Peta Pemadaman Listrik (Klik untuk ganti mode)";
             currentModeIcon.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor" focusable="false"><path d="M13.2 2 4.6 13.3h6.1L9.6 22l8.8-11.6h-6.1z"/></svg>`;
@@ -3580,6 +4040,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             updateBoundaryStyles();
           } else if (mode === "disaster") {
             hideRtrwLayers();
+            hideContourLayers();
             if (geoJsonLayer) {
               map.removeLayer(geoJsonLayer);
               geoJsonLayer = null;
@@ -3608,6 +4069,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             map.flyTo([-0.895, 119.865], 13, { duration: 1.2 });
           } else if (mode === "rtrw") {
             hideDisasterLayers();
+            hideContourLayers();
             if (geoJsonLayer) {
               map.removeLayer(geoJsonLayer);
               geoJsonLayer = null;
@@ -3632,9 +4094,38 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             updateBoundaryStyles();
             hideStatusCard();
             map.flyTo([-0.835, 119.885], 12, { duration: 1.2 });
+          } else if (mode === "contour" || mode === "empty-3") {
+            hideDisasterLayers();
+            hideRtrwLayers();
+            if (geoJsonLayer) {
+              map.removeLayer(geoJsonLayer);
+              geoJsonLayer = null;
+            }
+            if (markerClusterGroup) {
+              map.removeLayer(markerClusterGroup);
+              markerClusterGroup = null;
+            }
+            allPointMarkers = [];
+
+            modeBtn.className = "brand-icon mode-selector-btn mode-contour";
+            modeBtn.title = "Mode: Peta Kontur & Topografi Sulteng (Klik untuk ganti mode)";
+            currentModeIcon.innerHTML = `
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+                <path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.24.19"/>
+              </svg>
+            `;
+            if (brandTitle) brandTitle.textContent = "Peta Kontur & Topografi Sulawesi Tengah";
+            if (searchInput) searchInput.placeholder = "Cari puncak gunung, dataran, atau elevasi...";
+
+            loadContourLayers();
+            updateBoundaryStyles();
+            hideStatusCard();
+            map.flyTo([-1.2, 120.3], 9, { duration: 1.4 });
           } else {
             hideDisasterLayers();
             hideRtrwLayers();
+            hideContourLayers();
             const emptyNum = mode.replace(/^empty-?/, "") || "2";
             modeBtn.className = "brand-icon mode-selector-btn mode-empty";
             modeBtn.title = `Mode: Mode Kosong ${emptyNum} (Klik untuk ganti mode)`;
@@ -3701,6 +4192,16 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             fillColor: "#0284c7",
             fillOpacity: 0.03,
             dashArray: "3, 4"
+          };
+        }
+        if (currentAppMode === "contour") {
+          return {
+            color: "#10b981",
+            weight: 1,
+            opacity: 0.35,
+            fillColor: "#10b981",
+            fillOpacity: 0.01,
+            dashArray: "2, 4"
           };
         }
         if (currentAppMode !== "outage") {
@@ -7103,6 +7604,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       setupModeSwitcher();
       setupDisasterControls();
       setupRtrwControls();
+      setupContourControls();
       setupSearchBar();
       setupMyLocation();
       updateClock();

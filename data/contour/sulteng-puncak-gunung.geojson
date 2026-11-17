@@ -1,0 +1,401 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "peak-1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1794,
+          0.6517
+        ]
+      },
+      "properties": {
+        "nama": "Gunung Sojol",
+        "elevasi": 3030,
+        "elevasi_label": "3.030 mdpl",
+        "kategori": "Puncak Tertinggi (Semenanjung Barat)",
+        "kabupaten": "Kabupaten Donggala / Tolitoli",
+        "deskripsi": "Puncak tertinggi di Semenanjung Barat laut Sulawesi Tengah. Kawasan hulu DAS Dampelas dan suaka margasatwa alami beriklim pegunungan atas (montane forest).",
+        "vegetasi": "Hutan Lumut & Hutan Hujan Pegunungan Atas",
+        "status_vulkanik": "Non-aktif (Pegunungan Lipatan Tektonik)",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.7283,
+          -1.1967
+        ]
+      },
+      "properties": {
+        "nama": "Gunung Katopasa",
+        "elevasi": 2835,
+        "elevasi_label": "2.835 mdpl",
+        "kategori": "Pegunungan Timur",
+        "kabupaten": "Kabupaten Tojo Una-Una",
+        "deskripsi": "Puncak tertinggi di Semenanjung Timur Sulawesi Tengah, memisahkan Teluk Tomini dan Teluk Tolo. Habitat satwa endemik babirusa dan anoa pegunungan.",
+        "vegetasi": "Hutan Pegunungan Tinggi",
+        "status_vulkanik": "Non-aktif (Batuan Metamorfik & Ofiolit)",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.285,
+          -1.688
+        ]
+      },
+      "properties": {
+        "nama": "Puncak Padatadji (Peg. Pompangeo)",
+        "elevasi": 2590,
+        "elevasi_label": "2.590 mdpl",
+        "kategori": "Pegunungan Tengah-Timur",
+        "kabupaten": "Kabupaten Morowali Utara / Poso",
+        "deskripsi": "Puncak jajaran Pegunungan Pompangeo yang memanjang utara-selatan di jantung Sulawesi Tengah. Kawasan tangkapan air Danau Poso dan Sungai Laa.",
+        "vegetasi": "Hutan Montane & Sub-Alpin",
+        "status_vulkanik": "Kompleks Tektonik & Ofiolit",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3128,
+          -1.2858
+        ]
+      },
+      "properties": {
+        "nama": "Gunung Rorekatimbo",
+        "elevasi": 2508,
+        "elevasi_label": "2.508 mdpl",
+        "kategori": "Kawasan Konservasi TN Lore Lindu",
+        "kabupaten": "Kabupaten Poso / Sigi",
+        "deskripsi": "Salah satu puncak paling ikonik di Lembah Napu/Sedoa. Terletak di perbatasan barat Danau Lindu dan Lembah Napu, pusat keanekaragaman flora Nepenthes (kantong semar pegunungan).",
+        "vegetasi": "Hutan Pegunungan Atas Lumut",
+        "status_vulkanik": "Non-aktif (Kompleks Granitik & Metamorf)",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.845,
+          -2.512
+        ]
+      },
+      "properties": {
+        "nama": "Gunung Malino",
+        "elevasi": 2443,
+        "elevasi_label": "2.443 mdpl",
+        "kategori": "Pegunungan Tenggara",
+        "kabupaten": "Kabupaten Morowali",
+        "deskripsi": "Puncak tertinggi di semenanjung Morowali. Menjulang di atas garis pesisir Teluk Tolo dan kawasan industri nikel Bahodopi/Bungku.",
+        "vegetasi": "Hutan Pegunungan & Savana Tinggi",
+        "status_vulkanik": "Kompleks Ofiolit Morowali",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.165,
+          -1.2483
+        ]
+      },
+      "properties": {
+        "nama": "Gunung Nokilalaki",
+        "elevasi": 2355,
+        "elevasi_label": "2.355 mdpl",
+        "kategori": "Kawasan Inti TN Lore Lindu",
+        "kabupaten": "Kabupaten Sigi",
+        "deskripsi": "Gunung megah di sebelah timur Palolo dan selatan Danau Lindu. Menjadi menara air raksasa bagi Sungai Gumbasa dan persawahan irigasi Lembah Palu.",
+        "vegetasi": "Hutan Primer Pegunungan",
+        "status_vulkanik": "Non-aktif (Patahan Palu-Koro Splay)",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.932,
+          1.082
+        ]
+      },
+      "properties": {
+        "nama": "Gunung Dako",
+        "elevasi": 2260,
+        "elevasi_label": "2.260 mdpl",
+        "kategori": "Semenanjung Utara",
+        "kabupaten": "Kabupaten Tolitoli",
+        "deskripsi": "Puncak cagar alam Gunung Dako di utara Sulawesi Tengah. Berfungsi sebagai kawasan resapan air utama bagi kota Tolitoli dan Galang.",
+        "vegetasi": "Cagar Alam Hutan Pegunungan",
+        "status_vulkanik": "Non-aktif",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.582,
+          0.495
+        ]
+      },
+      "properties": {
+        "nama": "Gunung Tinombala",
+        "elevasi": 2183,
+        "elevasi_label": "2.183 mdpl",
+        "kategori": "Pegunungan Teluk Tomini",
+        "kabupaten": "Kabupaten Parigi Moutong",
+        "deskripsi": "Puncak pegunungan di utara Parigi Moutong (Kec. Tinombo). Membentengi pesisir Teluk Tomini dari Selat Makassar.",
+        "vegetasi": "Hutan Tropis Pegunungan",
+        "status_vulkanik": "Non-aktif",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-9",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.521,
+          -1.395
+        ]
+      },
+      "properties": {
+        "nama": "Gunung Tokorondo",
+        "elevasi": 2100,
+        "elevasi_label": "2.100 mdpl",
+        "kategori": "Pegunungan Pesisir Poso",
+        "kabupaten": "Kabupaten Poso",
+        "deskripsi": "Jajaran pegunungan terjal di pesisir barat Teluk Tomini dekat Poso Kota dan Poso Pesisir. Memisahkan dataran pantai dengan pedalaman Lore.",
+        "vegetasi": "Hutan Lebat Perbukitan Curam",
+        "status_vulkanik": "Non-aktif",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-10",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.782,
+          -0.952
+        ]
+      },
+      "properties": {
+        "nama": "Gunung Gawalise",
+        "elevasi": 2022,
+        "elevasi_label": "2.022 mdpl",
+        "kategori": "Pegunungan Barat Lembah Palu",
+        "kabupaten": "Kota Palu / Kabupaten Sigi",
+        "deskripsi": "Benteng alam di sebelah barat Kota Palu. Menjulang dari 0 mdpl di Teluk Palu hingga 2.022 mdpl di puncaknya, menciptakan fenomena bayangan hujan (rain shadow) bagi Lembah Palu.",
+        "vegetasi": "Hutan Pegunungan Rendah - Sedang",
+        "status_vulkanik": "Blok Horst Sesar Palu-Koro",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-11",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.825,
+          -1.025
+        ]
+      },
+      "properties": {
+        "nama": "Puncak Matantimali",
+        "elevasi": 1450,
+        "elevasi_label": "1.450 mdpl",
+        "kategori": "Puncak Paralayang Dunia & Menara Pemancar",
+        "kabupaten": "Kabupaten Sigi / Palu",
+        "deskripsi": "Spot lepas landas paralayang kelas dunia di punggungan Pegunungan Gawalise. Menghadap langsung ke seluruh panorama Lembah Palu dan Teluk Palu dengan termal angin ideal sepanjang tahun.",
+        "vegetasi": "Padang Rumput & Semak Pegunungan",
+        "status_vulkanik": "Punggungan Sesar Aktif",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-12",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.988,
+          -0.795
+        ]
+      },
+      "properties": {
+        "nama": "Puncak Kebun Kopi (Toboli Pass)",
+        "elevasi": 920,
+        "elevasi_label": "920 mdpl",
+        "kategori": "Celah Jalan Lintas Pegunungan",
+        "kabupaten": "Kab. Parigi Moutong / Kota Palu",
+        "deskripsi": "Celah pegunungan utama yang dilintasi Jalan Nasional Trans Sulawesi poros Palu–Parigi. Titik tertinggi penghubung Selat Makassar (barat) dan Teluk Tomini (timur).",
+        "vegetasi": "Hutan Perbukitan Basah",
+        "status_vulkanik": "Zona Patahan & Kerawanan Longsor",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-13",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.315,
+          -1.412
+        ]
+      },
+      "properties": {
+        "nama": "Lembah Napu (Dataran Tinggi)",
+        "elevasi": 1150,
+        "elevasi_label": "1.150 mdpl",
+        "kategori": "Dataran Tinggi Tektonik & Megalitik",
+        "kabupaten": "Kabupaten Poso (Lore Utara)",
+        "deskripsi": "Dataran tinggi vulkano-tektonik subur di ketinggian 1.150 mdpl dengan iklim sejuk, sentra hortikultura sayuran, kentang, dan situs megalitikum dunia.",
+        "vegetasi": "Pertanian Dataran Tinggi & Savana",
+        "status_vulkanik": "Lembah Graben Kuno",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-14",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.245,
+          -1.615
+        ]
+      },
+      "properties": {
+        "nama": "Lembah Besoa (Dataran Tinggi)",
+        "elevasi": 1100,
+        "elevasi_label": "1.100 mdpl",
+        "kategori": "Dataran Tinggi Megalitik",
+        "kabupaten": "Kabupaten Poso (Lore Tengah)",
+        "deskripsi": "Dataran tinggi terisolasi indah di ketinggian 1.100 mdpl yang menyimpan peninggalan kalamba megalitikum berukir tertua di Sulawesi.",
+        "vegetasi": "Savana Lembah & Hutan Rawa Gambut Pegunungan",
+        "status_vulkanik": "Lembah Graben Tektonik",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-15",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.185,
+          -1.825
+        ]
+      },
+      "properties": {
+        "nama": "Lembah Bada (Dataran Tinggi)",
+        "elevasi": 850,
+        "elevasi_label": "850 mdpl",
+        "kategori": "Dataran Tinggi Megalitik",
+        "kabupaten": "Kabupaten Poso (Lore Selatan)",
+        "deskripsi": "Lembah indah di hulu Sungai Lariang pada elevasi 850 mdpl, rumah bagi patung megalitikum manusia purba 'Watu Palindo'.",
+        "vegetasi": "Lembah Aluvial & Persawahan Ketinggian",
+        "status_vulkanik": "Lembah Aliran Sungai Purba",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-16",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.075,
+          -1.315
+        ]
+      },
+      "properties": {
+        "nama": "Danau Lindu (Permukaan Air)",
+        "elevasi": 960,
+        "elevasi_label": "960 mdpl",
+        "kategori": "Danau Dataran Tinggi Tektonik",
+        "kabupaten": "Kabupaten Sigi (Kec. Lindu)",
+        "deskripsi": "Danau tektonik seluas 3.150 Ha di ketinggian 960 mdpl di tengah kaldera pegunungan Taman Nasional Lore Lindu. Danau terisolasi berair jernih sumber perikanan endemik.",
+        "vegetasi": "Perairan Tawar Pegunungan & Rawa",
+        "status_vulkanik": "Danau Amblasan Sesar Aktif",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-17",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.615,
+          -1.885
+        ]
+      },
+      "properties": {
+        "nama": "Danau Poso (Permukaan Air)",
+        "elevasi": 485,
+        "elevasi_label": "485 mdpl",
+        "kategori": "Danau Tektonik Raksasa",
+        "kabupaten": "Kabupaten Poso",
+        "deskripsi": "Danau tektonik terdalam ke-3 di Indonesia (kedalaman hingga 450 m) di ketinggian 485 mdpl dengan luas 32.000 Ha. Memiliki pasir putih keemasan dan ekosistem sidat endemik.",
+        "vegetasi": "Perairan Danau Oligotrofik",
+        "status_vulkanik": "Danau Graben Patahan Poso",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peak-18",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.865,
+          -0.895
+        ]
+      },
+      "properties": {
+        "nama": "Lembah Palu (Dataran Aluvial)",
+        "elevasi": 18,
+        "elevasi_label": "18 mdpl",
+        "kategori": "Dataran Rendah & Cekungan Graben",
+        "kabupaten": "Kota Palu",
+        "deskripsi": "Cekungan aluvial sempit di antara dua blok sesar geser Palu-Koro (Barat: Gawalise, Timur: Palu Timur/Mantikulore). Wilayah beriklim semi-arid terkering di Indonesia.",
+        "vegetasi": "Dataran Aluvial & Hutan Gugur Tropis Kering",
+        "status_vulkanik": "Zona Pull-Apart Basin Aktif",
+        "sumber": "Badan Informasi Geospasial (BIG) & PVMBG / DEMNAS"
+      }
+    }
+  ]
+}
