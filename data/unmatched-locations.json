@@ -1,11 +1,12 @@
 {
-  "date": "2026-11-16",
-  "generatedAt": "2026-11-16T06:01:56.184Z",
+  "date": "2026-11-17",
+  "generatedAt": "2026-11-17T01:32:01.178Z",
   "summary": {
-    "totalLocations": 663,
-    "totalMatched": 663,
+    "totalLocations": 86,
+    "totalMatched": 86,
     "totalUnmatched": 0,
-    "matchRatePercent": 100
+    "matchRatePercent": 100,
+    "unmatchedByUlp": {}
   },
   "unmatchedLocations": []
 }

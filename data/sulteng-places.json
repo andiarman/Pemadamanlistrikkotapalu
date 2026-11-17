@@ -2,7 +2,7 @@
   "version": 1,
   "region": "Sulawesi Tengah (Palu, Sigi, Donggala, Parimo)",
   "updatedAt": "2026-11-16T06:01:45.231Z",
-  "total": 6953,
+  "total": 7039,
   "places": [
     [
       "Agen BRI Link Ranita",
@@ -48674,6 +48674,694 @@
       120.05,
       "jalan",
       "Desa Sidole Induk, Ampibabo, Parigi Moutong"
-    ]
+    ],
+    {
+      "name": "Jalan Pieretendean",
+      "lat": -0.8893,
+      "lon": 119.8743,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Pierre Tendean, Besusu / Tondo, Palu Timur"
+    },
+    {
+      "name": "Jalan Jovokodi",
+      "lat": -0.8925,
+      "lon": 119.8785,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Jovo Kodi, Besusu Timur, Palu Timur"
+    },
+    {
+      "name": "Jalan Mulawarman",
+      "lat": -0.892,
+      "lon": 119.864,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Mulawarman, Lolu Utara / Besusu, Palu Timur"
+    },
+    {
+      "name": "Bumi Roviga",
+      "lat": -0.834,
+      "lon": 119.897,
+      "type": "place",
+      "regency": "Kota Palu",
+      "display": "Perumahan Bumi Roviga, Tondo, Mantikulore"
+    },
+    {
+      "name": "Jalan Sosiologi",
+      "lat": -0.836,
+      "lon": 119.895,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Sosiologi (Kompleks Dosen Untad), Tondo, Mantikulore"
+    },
+    {
+      "name": "Jalan DR. H. Andi Mattulada",
+      "lat": -0.8375,
+      "lon": 119.894,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Dr. H. Andi Mattulada, Kampus Tadulako / Tondo"
+    },
+    {
+      "name": "BTN Bumi Roviga",
+      "lat": -0.834,
+      "lon": 119.897,
+      "type": "residential",
+      "regency": "Kota Palu",
+      "display": "BTN Bumi Roviga, Tondo, Mantikulore"
+    },
+    {
+      "name": "BTN Vatutela",
+      "lat": -0.839,
+      "lon": 119.901,
+      "type": "residential",
+      "regency": "Kota Palu",
+      "display": "BTN Vatutela, Tondo, Mantikulore"
+    },
+    {
+      "name": "BTN Griya Tadulako Permai",
+      "lat": -0.841,
+      "lon": 119.902,
+      "type": "residential",
+      "regency": "Kota Palu",
+      "display": "BTN Griya Tadulako Permai, Tondo, Mantikulore"
+    },
+    {
+      "name": "Jalan Suprapto",
+      "lat": -0.8935,
+      "lon": 119.8715,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Suprapto, Besusu Tengah, Palu Timur"
+    },
+    {
+      "name": "Jalan MT Haryono",
+      "lat": -0.895,
+      "lon": 119.873,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan MT Haryono, Besusu Tengah, Palu Timur"
+    },
+    {
+      "name": "Jalan Dr. Soetomo",
+      "lat": -0.8965,
+      "lon": 119.8725,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Dr. Soetomo, Besusu Tengah, Palu Timur"
+    },
+    {
+      "name": "Jalan Perintis",
+      "lat": -0.908,
+      "lon": 119.912,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Perintis, Kawatuna / Lasoani, Mantikulore"
+    },
+    {
+      "name": "Bandes",
+      "lat": -0.903,
+      "lon": 119.92,
+      "type": "place",
+      "regency": "Kota Palu",
+      "display": "Jalan Bandes (Bantuan Desa), Lasoani, Mantikulore"
+    },
+    {
+      "name": "Perintis",
+      "lat": -0.908,
+      "lon": 119.912,
+      "type": "place",
+      "regency": "Kota Palu",
+      "display": "Kawasan Perintis, Kawatuna, Mantikulore"
+    },
+    {
+      "name": "Pue Salanga",
+      "lat": -0.925,
+      "lon": 119.915,
+      "type": "place",
+      "regency": "Kota Palu",
+      "display": "Jalan Pue Salanga, Petobo / Palu Selatan"
+    },
+    {
+      "name": "BTN Lasoani Bawah",
+      "lat": -0.902,
+      "lon": 119.915,
+      "type": "residential",
+      "regency": "Kota Palu",
+      "display": "BTN Lasoani Bawah, Lasoani, Mantikulore"
+    },
+    {
+      "name": "BTN Lasoani Atas",
+      "lat": -0.899,
+      "lon": 119.921,
+      "type": "residential",
+      "regency": "Kota Palu",
+      "display": "BTN Lasoani Atas, Lasoani, Mantikulore"
+    },
+    {
+      "name": "Perum Graha Khayangan",
+      "lat": -0.9045,
+      "lon": 119.918,
+      "type": "place",
+      "regency": "Kota Palu",
+      "display": "Perumahan Graha Khayangan, Lasoani / Kawatuna"
+    },
+    {
+      "name": "BTN Korpri",
+      "lat": -0.912,
+      "lon": 119.916,
+      "type": "residential",
+      "regency": "Kota Palu",
+      "display": "BTN Korpri, Kawatuna, Mantikulore"
+    },
+    {
+      "name": "Perum Mutiara Permai",
+      "lat": -0.928,
+      "lon": 119.911,
+      "type": "place",
+      "regency": "Kota Palu",
+      "display": "Perum Mutiara Permai, Petobo, Palu Selatan"
+    },
+    {
+      "name": "BTN Taman Sari Petobo",
+      "lat": -0.932,
+      "lon": 119.908,
+      "type": "residential",
+      "regency": "Kota Palu",
+      "display": "BTN Taman Sari Petobo, Petobo, Palu Selatan"
+    },
+    {
+      "name": "Perumahan Graha Nambo Nabelo",
+      "lat": -0.924,
+      "lon": 119.919,
+      "type": "place",
+      "regency": "Kota Palu",
+      "display": "Perum Graha Nambo Nabelo, Petobo / Kawatuna"
+    },
+    {
+      "name": "Petobo Green View",
+      "lat": -0.93,
+      "lon": 119.914,
+      "type": "place",
+      "regency": "Kota Palu",
+      "display": "Perumahan Petobo Green View, Petobo, Palu Selatan"
+    },
+    {
+      "name": "Jalan Kenangan",
+      "lat": -0.9015,
+      "lon": 119.914,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Kenangan, Lasoani, Mantikulore"
+    },
+    {
+      "name": "Buili",
+      "lat": -0.914,
+      "lon": 119.918,
+      "type": "place",
+      "regency": "Kota Palu",
+      "display": "Kawasan Buili, Kawatuna, Mantikulore"
+    },
+    {
+      "name": "Lasaganti",
+      "lat": -0.907,
+      "lon": 119.9165,
+      "type": "place",
+      "regency": "Kota Palu",
+      "display": "Jalan Lasaganti, Kawatuna / Lasoani, Mantikulore"
+    },
+    {
+      "name": "BTN Griya Exotic",
+      "lat": -0.91,
+      "lon": 119.921,
+      "type": "residential",
+      "regency": "Kota Palu",
+      "display": "BTN Griya Exotic, Kawatuna, Mantikulore"
+    },
+    {
+      "name": "BTN Revima",
+      "lat": -0.905,
+      "lon": 119.917,
+      "type": "residential",
+      "regency": "Kota Palu",
+      "display": "BTN Revima, Lasoani, Mantikulore"
+    },
+    {
+      "name": "BTN Griya Alam",
+      "lat": -0.9135,
+      "lon": 119.9175,
+      "type": "residential",
+      "regency": "Kota Palu",
+      "display": "BTN Griya Alam, Kawatuna, Mantikulore"
+    },
+    {
+      "name": "BTN Berlian",
+      "lat": -0.915,
+      "lon": 119.919,
+      "type": "residential",
+      "regency": "Kota Palu",
+      "display": "BTN Berlian, Kawatuna, Mantikulore"
+    },
+    {
+      "name": "BTN Graha Cipta",
+      "lat": -0.916,
+      "lon": 119.915,
+      "type": "residential",
+      "regency": "Kota Palu",
+      "display": "BTN Graha Cipta, Kawatuna, Mantikulore"
+    },
+    {
+      "name": "BTN Kurnia",
+      "lat": -0.922,
+      "lon": 119.914,
+      "type": "residential",
+      "regency": "Kota Palu",
+      "display": "BTN Kurnia, Petobo / Kawatuna, Palu Selatan"
+    },
+    {
+      "name": "Jalan Panggona Raya",
+      "lat": -0.867,
+      "lon": 119.896,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Panggona Raya (Kawasan Sirkuit Panggona), Talise"
+    },
+    {
+      "name": "Jalan Wisata",
+      "lat": -0.865,
+      "lon": 119.892,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Wisata, Talise / Mantikulore"
+    },
+    {
+      "name": "Panggona",
+      "lat": -0.8675,
+      "lon": 119.8955,
+      "type": "place",
+      "regency": "Kota Palu",
+      "display": "Kawasan Wisata & Sirkuit Panggona, Talise"
+    },
+    {
+      "name": "Jalan L Gadi",
+      "lat": -0.904,
+      "lon": 119.913,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan L Gadi (Pue Gadi), Lasoani, Mantikulore"
+    },
+    {
+      "name": "Jalan Kayu Pio",
+      "lat": -0.911,
+      "lon": 119.919,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Kayu Pio, Kawatuna, Mantikulore"
+    },
+    {
+      "name": "Jalan Rinda Permai",
+      "lat": -0.906,
+      "lon": 119.9145,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Rinda Permai, Lasoani, Mantikulore"
+    },
+    {
+      "name": "Sidole Induk",
+      "lat": -0.63,
+      "lon": 120.05,
+      "type": "place",
+      "regency": "Kabupaten Parigi Moutong",
+      "display": "Desa Sidole Induk, Kec. Ampibabo, Parigi Moutong"
+    },
+    {
+      "name": "Gandasari",
+      "lat": -0.92,
+      "lon": 120.35,
+      "type": "place",
+      "regency": "Kabupaten Parigi Moutong",
+      "display": "Desa Gandasari, Kec. Sausu, Parigi Moutong"
+    },
+    {
+      "name": "Suli Induk",
+      "lat": -0.86,
+      "lon": 120.25,
+      "type": "place",
+      "regency": "Kabupaten Parigi Moutong",
+      "display": "Desa Suli Induk, Kec. Balinggi, Parigi Moutong"
+    },
+    {
+      "name": "Sausu Taliabo",
+      "lat": -0.95,
+      "lon": 120.38,
+      "type": "place",
+      "regency": "Kabupaten Parigi Moutong",
+      "display": "Desa Sausu Taliabo, Kec. Sausu, Parigi Moutong"
+    },
+    {
+      "name": "Auma",
+      "lat": -0.845,
+      "lon": 120.135,
+      "type": "place",
+      "regency": "Kabupaten Parigi Moutong",
+      "display": "Desa Auma, Kec. Parigi Tengah, Parigi Moutong"
+    },
+    {
+      "name": "Ampibabo Induk",
+      "lat": -0.605,
+      "lon": 120.035,
+      "type": "place",
+      "regency": "Kabupaten Parigi Moutong",
+      "display": "Desa Ampibabo Induk, Kec. Ampibabo, Parigi Moutong"
+    },
+    {
+      "name": "Lemo Induk",
+      "lat": -0.575,
+      "lon": 120.015,
+      "type": "place",
+      "regency": "Kabupaten Parigi Moutong",
+      "display": "Desa Lemo Induk, Kec. Ampibabo, Parigi Moutong"
+    },
+    {
+      "name": "Tomoli Induk",
+      "lat": -0.525,
+      "lon": 119.975,
+      "type": "place",
+      "regency": "Kabupaten Parigi Moutong",
+      "display": "Desa Tomoli Induk, Kec. Toribulu, Parigi Moutong"
+    },
+    {
+      "name": "Donggulu Induk",
+      "lat": -0.245,
+      "lon": 120.035,
+      "type": "place",
+      "regency": "Kabupaten Parigi Moutong",
+      "display": "Desa Donggulu Induk, Kec. Kasimbar, Parigi Moutong"
+    },
+    {
+      "name": "Ratuombu",
+      "lat": -1.435,
+      "lon": 120.67,
+      "type": "place",
+      "regency": "Kabupaten Poso",
+      "display": "Desa Ratuombu, Kec. Lage, Kab. Poso"
+    },
+    {
+      "name": "Puna",
+      "lat": -1.432,
+      "lon": 120.635,
+      "type": "place",
+      "regency": "Kabupaten Poso",
+      "display": "Kawasan Puna / Kasiguncu, Kec. Poso Pesisir, Poso"
+    },
+    {
+      "name": "Tamanjeka",
+      "lat": -1.385,
+      "lon": 120.615,
+      "type": "place",
+      "regency": "Kabupaten Poso",
+      "display": "Dusun Tamanjeka, Desa Masani, Kec. Poso Pesisir"
+    },
+    {
+      "name": "Kameasi",
+      "lat": -1.365,
+      "lon": 120.595,
+      "type": "place",
+      "regency": "Kabupaten Poso",
+      "display": "Dusun Kameasi, Kec. Poso Pesisir, Poso"
+    },
+    {
+      "name": "Sipatuwo",
+      "lat": -1.412,
+      "lon": 120.622,
+      "type": "place",
+      "regency": "Kabupaten Poso",
+      "display": "Desa Sipatuwo, Kec. Poso Pesisir / Pamona, Poso"
+    },
+    {
+      "name": "Mimbuke",
+      "lat": -1.352,
+      "lon": 120.582,
+      "type": "place",
+      "regency": "Kabupaten Poso",
+      "display": "Dusun Mimbuke, Kec. Poso Pesisir, Poso"
+    },
+    {
+      "name": "Ueloba",
+      "lat": -1.745,
+      "lon": 120.625,
+      "type": "place",
+      "regency": "Kabupaten Poso",
+      "display": "Desa Ueloba, Kec. Pamona Utara, Kab. Poso"
+    },
+    {
+      "name": "Kaynyole",
+      "lat": -1.455,
+      "lon": 120.685,
+      "type": "place",
+      "regency": "Kabupaten Poso",
+      "display": "Desa Kayunyole / Kaynyole, Kec. Lage, Kab. Poso"
+    },
+    {
+      "name": "Pacuma",
+      "lat": -1.445,
+      "lon": 120.612,
+      "type": "place",
+      "regency": "Kabupaten Poso",
+      "display": "Dusun Pacuma, Desa Padalembara, Poso Pesisir Selatan"
+    },
+    {
+      "name": "Kayunyole",
+      "lat": -1.455,
+      "lon": 120.685,
+      "type": "place",
+      "regency": "Kabupaten Poso",
+      "display": "Desa Kayunyole, Kec. Lage, Kab. Poso"
+    },
+    {
+      "name": "Dusun Majulea Atas",
+      "lat": -1.465,
+      "lon": 120.695,
+      "type": "place",
+      "regency": "Kabupaten Poso",
+      "display": "Dusun Majulea Atas, Desa Maliwuko / Lage, Poso"
+    },
+    {
+      "name": "Kulolu",
+      "lat": -1.26,
+      "lon": 119.56,
+      "type": "place",
+      "regency": "Kabupaten Donggala",
+      "display": "Desa Kulolu, Kec. Banawa Selatan, Donggala"
+    },
+    {
+      "name": "Polege",
+      "lat": -1.315,
+      "lon": 119.545,
+      "type": "place",
+      "regency": "Kabupaten Donggala",
+      "display": "Desa Polege, Kec. Banawa Selatan, Donggala"
+    },
+    {
+      "name": "Solowe",
+      "lat": -1.035,
+      "lon": 119.865,
+      "type": "place",
+      "regency": "Kabupaten Donggala",
+      "display": "Desa Solowe, Kec. Dolo Selatan / Sigi, Donggala"
+    },
+    {
+      "name": "Sibalaya",
+      "lat": -1.115,
+      "lon": 119.905,
+      "type": "place",
+      "regency": "Kabupaten Donggala",
+      "display": "Desa Sibalaya (Utara/Selatan), Kec. Tanambulava, Sigi"
+    },
+    {
+      "name": "Saluki",
+      "lat": -1.284,
+      "lon": 119.985,
+      "type": "place",
+      "regency": "Kabupaten Donggala",
+      "display": "Desa Saluki, Kec. Gumbasa, Sigi"
+    },
+    {
+      "name": "Pangana",
+      "lat": -1.295,
+      "lon": 119.992,
+      "type": "place",
+      "regency": "Kabupaten Donggala",
+      "display": "Desa Pangana, Kec. Pipikoro, Sigi"
+    },
+    {
+      "name": "Lili",
+      "lat": -1.31,
+      "lon": 120.015,
+      "type": "place",
+      "regency": "Kabupaten Donggala",
+      "display": "Desa Lili, Kec. Kulawi / Banawa"
+    },
+    {
+      "name": "Pobia",
+      "lat": -1.325,
+      "lon": 120.025,
+      "type": "place",
+      "regency": "Kabupaten Donggala",
+      "display": "Desa Pobia, Kec. Pipikoro, Sigi"
+    },
+    {
+      "name": "Makuhi",
+      "lat": -1.45,
+      "lon": 119.95,
+      "type": "place",
+      "regency": "Kabupaten Donggala",
+      "display": "Desa Makuhi, Kec. Pipikoro, Sigi"
+    },
+    {
+      "name": "Loli",
+      "lat": -0.815,
+      "lon": 119.785,
+      "type": "place",
+      "regency": "Kabupaten Donggala",
+      "display": "Kawasan Loli (Loli Oge / Dondo / Saluran), Banawa, Donggala"
+    },
+    {
+      "name": "Koromonto",
+      "lat": -1.825,
+      "lon": 120.735,
+      "type": "place",
+      "regency": "Sulawesi Tengah",
+      "display": "Desa Koromonto, Kec. Pamona Tenggara, Kab. Poso"
+    },
+    {
+      "name": "Korowasu",
+      "lat": -1.885,
+      "lon": 120.615,
+      "type": "place",
+      "regency": "Sulawesi Tengah",
+      "display": "Desa Korowasu, Kec. Pamona Barat, Kab. Poso"
+    },
+    {
+      "name": "Kapala",
+      "lat": -2.52,
+      "lon": 121.9,
+      "type": "place",
+      "regency": "Sulawesi Tengah",
+      "display": "Desa Kapala, Kec. Menui Kepulauan / Bungku, Morowali"
+    },
+    {
+      "name": "Kawasan Fonuasingko",
+      "lat": -2.545,
+      "lon": 121.955,
+      "type": "place",
+      "regency": "Sulawesi Tengah",
+      "display": "Kawasan Fonuasingko (Perkantoran Pemkab), Bungku Tengah, Morowali"
+    },
+    {
+      "name": "Salena",
+      "lat": -0.865,
+      "lon": 119.795,
+      "type": "place",
+      "regency": "Kota Palu",
+      "display": "Dusun Salena (Wisata Paralayang), Buluri, Ulujadi, Palu Barat"
+    },
+    {
+      "name": "Jalan Penanda",
+      "lat": -0.915,
+      "lon": 119.865,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Penanda, Tavanjuka / Tatanga, Palu"
+    },
+    {
+      "name": "Perum Banua Nagaya",
+      "lat": -0.9125,
+      "lon": 119.8635,
+      "type": "place",
+      "regency": "Kota Palu",
+      "display": "Perumahan Banua Nagaya, Tavanjuka, Tatanga, Palu"
+    },
+    {
+      "name": "Jalan Mitra Punjidi",
+      "lat": -0.8885,
+      "lon": 119.8275,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Mitra Punjidi (Puenjidi), Palu Barat"
+    },
+    {
+      "name": "Jalan Uwnumpu",
+      "lat": -0.898,
+      "lon": 119.841,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Uwenumpu / Uwnumpu, Donggala Kodi, Palu Barat"
+    },
+    {
+      "name": "Jalan Pandanjakaya Atas",
+      "lat": -0.905,
+      "lon": 119.839,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Pandan Jakaya Atas, Duyu, Palu Barat"
+    },
+    {
+      "name": "Jalan Rantogau",
+      "lat": -0.902,
+      "lon": 119.852,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Rantogau / Rantegau, Nunu / Tatanga, Palu"
+    },
+    {
+      "name": "Jalan Palola",
+      "lat": -0.893,
+      "lon": 119.856,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Palola, Balaroa / Donggala Kodi, Palu Barat"
+    },
+    {
+      "name": "Jalan Kangkung",
+      "lat": -0.896,
+      "lon": 119.849,
+      "type": "street",
+      "regency": "Kota Palu",
+      "display": "Jalan Kangkung, Donggala Kodi, Palu Barat"
+    },
+    {
+      "name": "Jalan Lero-Pantoloan",
+      "lat": -0.725,
+      "lon": 119.855,
+      "type": "street",
+      "regency": "Sulawesi Tengah",
+      "display": "Jalan Lero – Pantoloan, Tawaeli, Palu Utara"
+    },
+    {
+      "name": "Labuan Induk",
+      "lat": -0.675,
+      "lon": 119.895,
+      "type": "place",
+      "regency": "Sulawesi Tengah",
+      "display": "Desa Labuan Induk, Kec. Labuan, Kab. Donggala"
+    },
+    {
+      "name": "PT Samator Indo",
+      "lat": -0.705,
+      "lon": 119.862,
+      "type": "place",
+      "regency": "Sulawesi Tengah",
+      "display": "PT Aneka Gas Industri (Samator), KEK Palu, Pantoloan"
+    },
+    {
+      "name": "PT Shuang Ying",
+      "lat": -0.702,
+      "lon": 119.868,
+      "type": "place",
+      "regency": "Sulawesi Tengah",
+      "display": "PT Shuang Ying International, KEK Pantoloan, Palu Utara"
+    }
   ]
 }

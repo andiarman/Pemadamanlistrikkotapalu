@@ -31300,35 +31300,35 @@
     "location": "Jalan Sosiologi",
     "latitude": -0.836,
     "longitude": 119.895,
-    "displayName": "Jalan Sosiologi Untad, Tondo, Palu",
+    "displayName": "Jalan Sosiologi (Kompleks Dosen Untad), Tondo, Mantikulore",
     "ulpName": "ULP Palu Kota"
   },
   {
     "location": "Jalan DR. H. Andi Mattulada",
     "latitude": -0.8375,
     "longitude": 119.894,
-    "displayName": "Jalan DR. H. Andi Mattulada Untad, Tondo, Palu",
+    "displayName": "Jalan Dr. H. Andi Mattulada, Kampus Tadulako / Tondo",
     "ulpName": "ULP Palu Kota"
   },
   {
     "location": "BTN Bumi Roviga",
     "latitude": -0.834,
     "longitude": 119.897,
-    "displayName": "BTN Bumi Roviga, Tondo, Palu",
+    "displayName": "BTN Bumi Roviga, Tondo, Mantikulore",
     "ulpName": "ULP Palu Kota"
   },
   {
     "location": "BTN Vatutela",
     "latitude": -0.839,
     "longitude": 119.901,
-    "displayName": "BTN Vatutela, Tondo, Palu",
+    "displayName": "BTN Vatutela, Tondo, Mantikulore",
     "ulpName": "ULP Palu Kota"
   },
   {
     "location": "BTN Griya Tadulako Permai",
     "latitude": -0.841,
     "longitude": 119.902,
-    "displayName": "BTN Griya Tadulako Permai, Tondo, Palu",
+    "displayName": "BTN Griya Tadulako Permai, Tondo, Mantikulore",
     "ulpName": "ULP Palu Kota"
   },
   {
@@ -31496,21 +31496,21 @@
     "location": "Gandasari",
     "latitude": -0.92,
     "longitude": 120.35,
-    "displayName": "Desa Gandasari, Sausu, Parigi Moutong",
+    "displayName": "Desa Gandasari, Kec. Sausu, Parigi Moutong",
     "ulpName": "ULP Parigi"
   },
   {
     "location": "Suli Induk",
     "latitude": -0.86,
     "longitude": 120.25,
-    "displayName": "Desa Suli, Balinggi, Parigi Moutong",
+    "displayName": "Desa Suli Induk, Kec. Balinggi, Parigi Moutong",
     "ulpName": "ULP Parigi"
   },
   {
     "location": "Sausu Taliabo",
     "latitude": -0.95,
     "longitude": 120.38,
-    "displayName": "Desa Sausu Taliabo, Parigi Moutong",
+    "displayName": "Desa Sausu Taliabo, Kec. Sausu, Parigi Moutong",
     "ulpName": "ULP Parigi"
   },
   {
@@ -31538,14 +31538,14 @@
     "location": "Kapala",
     "latitude": -2.52,
     "longitude": 121.9,
-    "displayName": "Desa Kapala, Menui Kepulauan, Morowali",
+    "displayName": "Desa Kapala, Kec. Menui Kepulauan / Bungku, Morowali",
     "ulpName": "ULP Bungku"
   },
   {
     "location": "Jalan Pieretendean",
     "latitude": -0.8893,
     "longitude": 119.8743,
-    "displayName": "Jalan Pierre Tendean, Palu",
+    "displayName": "Jalan Pierre Tendean, Besusu / Tondo, Palu Timur",
     "ulpName": "ULP Palu Kota"
   },
   {
@@ -31559,7 +31559,7 @@
     "location": "Jalan Mulawarman",
     "latitude": -0.892,
     "longitude": 119.864,
-    "displayName": "Jalan Mulawarman, Palu",
+    "displayName": "Jalan Mulawarman, Lolu Utara / Besusu, Palu Timur",
     "ulpName": "ULP Palu Kota"
   },
   {
@@ -31727,7 +31727,7 @@
     "location": "Jalan Palola",
     "latitude": -0.893,
     "longitude": 119.856,
-    "displayName": "Jalan Palola, Kamonji, Palu Barat",
+    "displayName": "Jalan Palola, Balaroa / Donggala Kodi, Palu Barat",
     "ulpName": "ULP Kamonji"
   },
   {
@@ -32077,35 +32077,35 @@
     "location": "Saluki",
     "latitude": -1.284,
     "longitude": 119.985,
-    "displayName": "Desa Saluki, Gumbasa, Sigi",
+    "displayName": "Desa Saluki, Kec. Gumbasa, Sigi",
     "ulpName": "ULP Donggala"
   },
   {
     "location": "Pangana",
     "latitude": -1.295,
     "longitude": 119.992,
-    "displayName": "Dusun Pangana, Gumbasa, Sigi",
+    "displayName": "Desa Pangana, Kec. Pipikoro, Sigi",
     "ulpName": "ULP Donggala"
   },
   {
     "location": "Lili",
     "latitude": -1.31,
     "longitude": 120.015,
-    "displayName": "Desa Bulili / Lili, Nokilalaki, Sigi",
+    "displayName": "Desa Lili, Kec. Kulawi / Banawa",
     "ulpName": "ULP Donggala"
   },
   {
     "location": "Pobia",
     "latitude": -1.325,
     "longitude": 120.025,
-    "displayName": "Dusun Pobia, Nokilalaki, Sigi",
+    "displayName": "Desa Pobia, Kec. Pipikoro, Sigi",
     "ulpName": "ULP Donggala"
   },
   {
     "location": "Makuhi",
     "latitude": -1.45,
     "longitude": 119.95,
-    "displayName": "Desa Poleroa Makuhi, Kulawi, Sigi",
+    "displayName": "Desa Makuhi, Kec. Pipikoro, Sigi",
     "ulpName": "ULP Donggala"
   },
   {
@@ -32168,7 +32168,7 @@
     "location": "Kulolu",
     "latitude": -1.26,
     "longitude": 119.56,
-    "displayName": "Dusun Kulolu, Rio Pakava, Donggala",
+    "displayName": "Desa Kulolu, Kec. Banawa Selatan, Donggala",
     "ulpName": "ULP Donggala"
   },
   {
@@ -32196,21 +32196,476 @@
     "location": "Ratuombu",
     "latitude": -1.435,
     "longitude": 120.67,
-    "displayName": "Dusun Ratuombu, Poso Pesisir, Poso",
+    "displayName": "Desa Ratuombu, Kec. Lage, Kab. Poso",
     "ulpName": "ULP Poso"
   },
   {
     "location": "Auma",
     "latitude": -0.845,
     "longitude": 120.135,
-    "displayName": "Desa Auma, Parigi Tengah, Parigi Moutong",
+    "displayName": "Desa Auma, Kec. Parigi Tengah, Parigi Moutong",
     "ulpName": "ULP Parigi"
   },
   {
     "location": "Sidole Induk",
     "latitude": -0.63,
     "longitude": 120.05,
-    "displayName": "Desa Sidole Induk, Ampibabo, Parigi Moutong",
+    "displayName": "Desa Sidole Induk, Kec. Ampibabo, Parigi Moutong",
     "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Jalan Jovokodi",
+    "latitude": -0.8925,
+    "longitude": 119.8785,
+    "displayName": "Jalan Jovo Kodi, Besusu Timur, Palu Timur",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Bumi Roviga",
+    "latitude": -0.834,
+    "longitude": 119.897,
+    "displayName": "Perumahan Bumi Roviga, Tondo, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Suprapto",
+    "latitude": -0.8935,
+    "longitude": 119.8715,
+    "displayName": "Jalan Suprapto, Besusu Tengah, Palu Timur",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan MT Haryono",
+    "latitude": -0.895,
+    "longitude": 119.873,
+    "displayName": "Jalan MT Haryono, Besusu Tengah, Palu Timur",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Dr. Soetomo",
+    "latitude": -0.8965,
+    "longitude": 119.8725,
+    "displayName": "Jalan Dr. Soetomo, Besusu Tengah, Palu Timur",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Perintis",
+    "latitude": -0.908,
+    "longitude": 119.912,
+    "displayName": "Jalan Perintis, Kawatuna / Lasoani, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Bandes",
+    "latitude": -0.903,
+    "longitude": 119.92,
+    "displayName": "Jalan Bandes (Bantuan Desa), Lasoani, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Perintis",
+    "latitude": -0.908,
+    "longitude": 119.912,
+    "displayName": "Kawasan Perintis, Kawatuna, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Pue Salanga",
+    "latitude": -0.925,
+    "longitude": 119.915,
+    "displayName": "Jalan Pue Salanga, Petobo / Palu Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "BTN Lasoani Bawah",
+    "latitude": -0.902,
+    "longitude": 119.915,
+    "displayName": "BTN Lasoani Bawah, Lasoani, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "BTN Lasoani Atas",
+    "latitude": -0.899,
+    "longitude": 119.921,
+    "displayName": "BTN Lasoani Atas, Lasoani, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Perum Graha Khayangan",
+    "latitude": -0.9045,
+    "longitude": 119.918,
+    "displayName": "Perumahan Graha Khayangan, Lasoani / Kawatuna",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "BTN Korpri",
+    "latitude": -0.912,
+    "longitude": 119.916,
+    "displayName": "BTN Korpri, Kawatuna, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Perum Mutiara Permai",
+    "latitude": -0.928,
+    "longitude": 119.911,
+    "displayName": "Perum Mutiara Permai, Petobo, Palu Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "BTN Taman Sari Petobo",
+    "latitude": -0.932,
+    "longitude": 119.908,
+    "displayName": "BTN Taman Sari Petobo, Petobo, Palu Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Perumahan Graha Nambo Nabelo",
+    "latitude": -0.924,
+    "longitude": 119.919,
+    "displayName": "Perum Graha Nambo Nabelo, Petobo / Kawatuna",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Petobo Green View",
+    "latitude": -0.93,
+    "longitude": 119.914,
+    "displayName": "Perumahan Petobo Green View, Petobo, Palu Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Kenangan",
+    "latitude": -0.9015,
+    "longitude": 119.914,
+    "displayName": "Jalan Kenangan, Lasoani, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Buili",
+    "latitude": -0.914,
+    "longitude": 119.918,
+    "displayName": "Kawasan Buili, Kawatuna, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Lasaganti",
+    "latitude": -0.907,
+    "longitude": 119.9165,
+    "displayName": "Jalan Lasaganti, Kawatuna / Lasoani, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "BTN Griya Exotic",
+    "latitude": -0.91,
+    "longitude": 119.921,
+    "displayName": "BTN Griya Exotic, Kawatuna, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "BTN Revima",
+    "latitude": -0.905,
+    "longitude": 119.917,
+    "displayName": "BTN Revima, Lasoani, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "BTN Griya Alam",
+    "latitude": -0.9135,
+    "longitude": 119.9175,
+    "displayName": "BTN Griya Alam, Kawatuna, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "BTN Berlian",
+    "latitude": -0.915,
+    "longitude": 119.919,
+    "displayName": "BTN Berlian, Kawatuna, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "BTN Graha Cipta",
+    "latitude": -0.916,
+    "longitude": 119.915,
+    "displayName": "BTN Graha Cipta, Kawatuna, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "BTN Kurnia",
+    "latitude": -0.922,
+    "longitude": 119.914,
+    "displayName": "BTN Kurnia, Petobo / Kawatuna, Palu Selatan",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Panggona Raya",
+    "latitude": -0.867,
+    "longitude": 119.896,
+    "displayName": "Jalan Panggona Raya (Kawasan Sirkuit Panggona), Talise",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Wisata",
+    "latitude": -0.865,
+    "longitude": 119.892,
+    "displayName": "Jalan Wisata, Talise / Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Panggona",
+    "latitude": -0.8675,
+    "longitude": 119.8955,
+    "displayName": "Kawasan Wisata & Sirkuit Panggona, Talise",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan L Gadi",
+    "latitude": -0.904,
+    "longitude": 119.913,
+    "displayName": "Jalan L Gadi (Pue Gadi), Lasoani, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Kayu Pio",
+    "latitude": -0.911,
+    "longitude": 119.919,
+    "displayName": "Jalan Kayu Pio, Kawatuna, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Jalan Rinda Permai",
+    "latitude": -0.906,
+    "longitude": 119.9145,
+    "displayName": "Jalan Rinda Permai, Lasoani, Mantikulore",
+    "ulpName": "ULP Palu Kota"
+  },
+  {
+    "location": "Ampibabo Induk",
+    "latitude": -0.605,
+    "longitude": 120.035,
+    "displayName": "Desa Ampibabo Induk, Kec. Ampibabo, Parigi Moutong",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Lemo Induk",
+    "latitude": -0.575,
+    "longitude": 120.015,
+    "displayName": "Desa Lemo Induk, Kec. Ampibabo, Parigi Moutong",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Tomoli Induk",
+    "latitude": -0.525,
+    "longitude": 119.975,
+    "displayName": "Desa Tomoli Induk, Kec. Toribulu, Parigi Moutong",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Donggulu Induk",
+    "latitude": -0.245,
+    "longitude": 120.035,
+    "displayName": "Desa Donggulu Induk, Kec. Kasimbar, Parigi Moutong",
+    "ulpName": "ULP Parigi"
+  },
+  {
+    "location": "Puna",
+    "latitude": -1.432,
+    "longitude": 120.635,
+    "displayName": "Kawasan Puna / Kasiguncu, Kec. Poso Pesisir, Poso",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Tamanjeka",
+    "latitude": -1.385,
+    "longitude": 120.615,
+    "displayName": "Dusun Tamanjeka, Desa Masani, Kec. Poso Pesisir",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Kameasi",
+    "latitude": -1.365,
+    "longitude": 120.595,
+    "displayName": "Dusun Kameasi, Kec. Poso Pesisir, Poso",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Sipatuwo",
+    "latitude": -1.412,
+    "longitude": 120.622,
+    "displayName": "Desa Sipatuwo, Kec. Poso Pesisir / Pamona, Poso",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Mimbuke",
+    "latitude": -1.352,
+    "longitude": 120.582,
+    "displayName": "Dusun Mimbuke, Kec. Poso Pesisir, Poso",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Ueloba",
+    "latitude": -1.745,
+    "longitude": 120.625,
+    "displayName": "Desa Ueloba, Kec. Pamona Utara, Kab. Poso",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Kaynyole",
+    "latitude": -1.455,
+    "longitude": 120.685,
+    "displayName": "Desa Kayunyole / Kaynyole, Kec. Lage, Kab. Poso",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Pacuma",
+    "latitude": -1.445,
+    "longitude": 120.612,
+    "displayName": "Dusun Pacuma, Desa Padalembara, Poso Pesisir Selatan",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Kayunyole",
+    "latitude": -1.455,
+    "longitude": 120.685,
+    "displayName": "Desa Kayunyole, Kec. Lage, Kab. Poso",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Dusun Majulea Atas",
+    "latitude": -1.465,
+    "longitude": 120.695,
+    "displayName": "Dusun Majulea Atas, Desa Maliwuko / Lage, Poso",
+    "ulpName": "ULP Poso"
+  },
+  {
+    "location": "Polege",
+    "latitude": -1.315,
+    "longitude": 119.545,
+    "displayName": "Desa Polege, Kec. Banawa Selatan, Donggala",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Solowe",
+    "latitude": -1.035,
+    "longitude": 119.865,
+    "displayName": "Desa Solowe, Kec. Dolo Selatan / Sigi, Donggala",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Sibalaya",
+    "latitude": -1.115,
+    "longitude": 119.905,
+    "displayName": "Desa Sibalaya (Utara/Selatan), Kec. Tanambulava, Sigi",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Loli",
+    "latitude": -0.815,
+    "longitude": 119.785,
+    "displayName": "Kawasan Loli (Loli Oge / Dondo / Saluran), Banawa, Donggala",
+    "ulpName": "ULP Donggala"
+  },
+  {
+    "location": "Koromonto",
+    "latitude": -1.825,
+    "longitude": 120.735,
+    "displayName": "Desa Koromonto, Kec. Pamona Tenggara, Kab. Poso",
+    "ulpName": "ULP Tentena"
+  },
+  {
+    "location": "Korowasu",
+    "latitude": -1.885,
+    "longitude": 120.615,
+    "displayName": "Desa Korowasu, Kec. Pamona Barat, Kab. Poso",
+    "ulpName": "ULP Tentena"
+  },
+  {
+    "location": "Kawasan Fonuasingko",
+    "latitude": -2.545,
+    "longitude": 121.955,
+    "displayName": "Kawasan Fonuasingko (Perkantoran Pemkab), Bungku Tengah, Morowali",
+    "ulpName": "ULP Bungku"
+  },
+  {
+    "location": "Salena",
+    "latitude": -0.865,
+    "longitude": 119.795,
+    "displayName": "Dusun Salena (Wisata Paralayang), Buluri, Ulujadi, Palu Barat",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Penanda",
+    "latitude": -0.915,
+    "longitude": 119.865,
+    "displayName": "Jalan Penanda, Tavanjuka / Tatanga, Palu",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Perum Banua Nagaya",
+    "latitude": -0.9125,
+    "longitude": 119.8635,
+    "displayName": "Perumahan Banua Nagaya, Tavanjuka, Tatanga, Palu",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Mitra Punjidi",
+    "latitude": -0.8885,
+    "longitude": 119.8275,
+    "displayName": "Jalan Mitra Punjidi (Puenjidi), Palu Barat",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Uwnumpu",
+    "latitude": -0.898,
+    "longitude": 119.841,
+    "displayName": "Jalan Uwenumpu / Uwnumpu, Donggala Kodi, Palu Barat",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Pandanjakaya Atas",
+    "latitude": -0.905,
+    "longitude": 119.839,
+    "displayName": "Jalan Pandan Jakaya Atas, Duyu, Palu Barat",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Rantogau",
+    "latitude": -0.902,
+    "longitude": 119.852,
+    "displayName": "Jalan Rantogau / Rantegau, Nunu / Tatanga, Palu",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Kangkung",
+    "latitude": -0.896,
+    "longitude": 119.849,
+    "displayName": "Jalan Kangkung, Donggala Kodi, Palu Barat",
+    "ulpName": "ULP Kamonji"
+  },
+  {
+    "location": "Jalan Lero-Pantoloan",
+    "latitude": -0.725,
+    "longitude": 119.855,
+    "displayName": "Jalan Lero – Pantoloan, Tawaeli, Palu Utara",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "Labuan Induk",
+    "latitude": -0.675,
+    "longitude": 119.895,
+    "displayName": "Desa Labuan Induk, Kec. Labuan, Kab. Donggala",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "PT Samator Indo",
+    "latitude": -0.705,
+    "longitude": 119.862,
+    "displayName": "PT Aneka Gas Industri (Samator), KEK Palu, Pantoloan",
+    "ulpName": "ULP Taweli"
+  },
+  {
+    "location": "PT Shuang Ying",
+    "latitude": -0.702,
+    "longitude": 119.868,
+    "displayName": "PT Shuang Ying International, KEK Pantoloan, Palu Utara",
+    "ulpName": "ULP Taweli"
   }
 ]
