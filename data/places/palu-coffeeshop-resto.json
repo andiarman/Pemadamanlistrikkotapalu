@@ -120,7 +120,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJl3sgbvLtiy0R4hvSS9f-Hp0",
@@ -229,7 +230,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJKWUDn2Ltiy0RdWN9sTTGAJU",
@@ -352,7 +354,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJT_us2Wjxiy0RIxse4cAJ6_Q",
@@ -475,7 +478,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJX-mCXADtiy0RraU5Z29p0Jk",
@@ -522,6 +526,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "sin-coffee",
+      "name": "Sin Coffee",
+      "shortName": "Sin",
+      "badgeColor": "#1e3a8a",
+      "borderColor": "#3b82f6",
+      "textColor": "#93c5fd",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#1E3A8A\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FBBF24\" font-family=\"sans-serif\">SIN</text></svg>"
     }
   },
   {
@@ -646,7 +659,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJwUFyD_Lviy0RECL7Ag83FCw",
@@ -769,7 +783,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJqQbuXgDtiy0RVvZ_8MfcRqA",
@@ -892,7 +907,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ7WZKu8Ltiy0R7wt56p6y7hw",
@@ -1015,7 +1031,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJNWlYvantiy0RG4UuTZSmVRo",
@@ -1138,7 +1155,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJpbUQn1friy0RxaTIEtAKUMA",
@@ -1262,7 +1280,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJxTlLQDrriy0RNmyMDuXoMJA",
@@ -1385,7 +1404,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ72w7De_riy0R_sf4IqQ1YNg",
@@ -1432,7 +1452,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJK0MBhjztiy0RLuot1eyKF4s",
@@ -1556,7 +1577,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJwTdnDcTviy0RVxcFwfv4UcI",
@@ -1680,7 +1702,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJlXN4r63tiy0RzGjQyVuhQ-w",
@@ -1803,7 +1826,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ43V_GmHtiy0RCRPlqPOLbuk",
@@ -1831,7 +1855,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJl5ELoKHviy0RxPoQNv2Xb08",
@@ -1942,7 +1967,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJoUM2B67tiy0RqtaAXU0-KLY",
@@ -2065,7 +2091,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ82J3xRvtiy0R1nFZRPvOObo",
@@ -2187,7 +2214,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJnYwMMALtiy0Rw3YkU-N1mc8",
@@ -2308,7 +2336,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJt2LpdLnviy0ReA4rHfMtTjI",
@@ -2417,7 +2446,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJLQ2iqRnpiy0RMOaUSeUGKL4",
@@ -2541,6 +2571,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "kopi-arobi",
+      "name": "Kopi Arobi",
+      "shortName": "Arobi",
+      "badgeColor": "#78350f",
+      "borderColor": "#f59e0b",
+      "textColor": "#fde68a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#78350F\"/><circle cx=\"12\" cy=\"12\" r=\"8.5\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"1.2\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.5\" font-weight=\"900\" fill=\"#FDE68A\" font-family=\"sans-serif\">AROBI</text></svg>"
     }
   },
   {
@@ -2664,7 +2703,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJo1g1agbqiy0RfekTqQBlCFo",
@@ -2692,7 +2732,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ79kpgffpiy0Rk__8bPlj3Fg",
@@ -2720,7 +2761,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJsfZFXwDriy0R-mcy9IsiftE",
@@ -2748,7 +2790,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ7aAlTbLBiy0RpoLbReExqLQ",
@@ -2795,7 +2838,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJcT9qY-PBiy0RK4L-0FbJTwc",
@@ -2870,7 +2914,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ3XFkpvzriy0R4UzbtOAUYD8",
@@ -2970,7 +3015,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJGwk4pbrriy0RDYK9Zf7ItuE",
@@ -3079,7 +3125,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJr8T4oe3Biy0RCQVlcQyXv_g",
@@ -3105,7 +3152,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJHa3vCobHiy0RL6IJndsPxHA",
@@ -3205,7 +3253,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJaTPDM0PBiy0Ri-qZrm6nOjc",
@@ -3232,7 +3281,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJHZRYBzXDiy0Ri1ewPydGC7A",
@@ -3355,7 +3405,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJkZthzxnBiy0RMaHl3mJvnHA",
@@ -3383,7 +3434,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJa-DocRXBiy0R75vObA25OV4",
@@ -3482,7 +3534,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJlcI_5EbBiy0RwiHvMts23kU",
@@ -3510,7 +3563,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJMWi8dL7Biy0RlotxwcCO3Do",
@@ -3538,7 +3592,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJb9tcGgDHiy0R3klYydOKOKQ",
@@ -3660,7 +3715,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ01sjSLDHiy0RH0T_vJVj7fQ",
@@ -3781,7 +3837,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJr19z9pXDiy0RNX6rh7tFn7s",
@@ -3807,7 +3864,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJb4ojDmrBiy0ROr3S9X3yw90",
@@ -3833,7 +3891,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJhwLUbwDBiy0RJ0HQQPO3uUg",
@@ -3859,7 +3918,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ2YZVRvbtiy0R-5oxw9uamHU",
@@ -3890,7 +3950,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJt2YhW5ntiy0Ro9qLi1VQdwo",
@@ -4013,7 +4074,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJUR8LGADtiy0RW7KSNJXTrAg",
@@ -4060,6 +4122,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "sin-coffee",
+      "name": "Sin Coffee",
+      "shortName": "Sin",
+      "badgeColor": "#1e3a8a",
+      "borderColor": "#3b82f6",
+      "textColor": "#93c5fd",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#1E3A8A\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FBBF24\" font-family=\"sans-serif\">SIN</text></svg>"
     }
   },
   {
@@ -4183,7 +4254,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJOb28Zbrtiy0R4NMuuSSxW-A",
@@ -4307,7 +4379,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJEy3pAADtiy0RByLywKl9IpY",
@@ -4430,7 +4503,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ-zZ2BgDtiy0R7V1agLM9eWc",
@@ -4553,7 +4627,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJAU_WAQjtiy0RvF8ZE7cw3fU",
@@ -4676,7 +4751,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJLfDGmqHviy0RbCdFwVB7w8U",
@@ -4787,7 +4863,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJVW4gOADviy0RqzwLMmZFSsc",
@@ -4818,7 +4895,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJzQ03_tzxiy0RCFSzCugdmxE",
@@ -4941,7 +5019,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJWeVraADxiy0RPw_rntmTFWQ",
@@ -5064,7 +5143,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJGdVY7K3xiy0RlSq2uDdl1-Q",
@@ -5187,7 +5267,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ79Np4rztiy0R3UWqe9rdVpw",
@@ -5218,7 +5299,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJh6-zWQDtiy0R4TiXqIgzOIU",
@@ -5249,7 +5331,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJay-LIADtiy0Rx4Nlg1KiKR0",
@@ -5296,7 +5379,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJhRwA0pntiy0RoiYZ-vAiZJ4",
@@ -5419,7 +5503,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ6YRYYQDtiy0RJq6WA_H4trw",
@@ -5450,7 +5535,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ5ZyXKfvtiy0ROMpjAQXMBhQ",
@@ -5561,7 +5647,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ4XL1LgDtiy0R13ltnNPfgqw",
@@ -5592,7 +5679,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJgaKYusnviy0R9U4oWkyqplg",
@@ -5715,6 +5803,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "sin-coffee",
+      "name": "Sin Coffee",
+      "shortName": "Sin",
+      "badgeColor": "#1e3a8a",
+      "borderColor": "#3b82f6",
+      "textColor": "#93c5fd",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#1E3A8A\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FBBF24\" font-family=\"sans-serif\">SIN</text></svg>"
     }
   },
   {
@@ -5762,7 +5859,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJi4DdZgDtiy0R1X9bETpKsvs",
@@ -5885,7 +5983,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJL97G7FDtiy0R7J-utaF1dcE",
@@ -5916,7 +6015,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJD9IBEQDtiy0RU1iQFVO_F1I",
@@ -6039,7 +6139,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJT5vJH-Hxiy0Rp1y9mwtem98",
@@ -6162,7 +6263,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJgZ71mzvtiy0Rp5sfenULcNk",
@@ -6261,7 +6363,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ_2Xgd5ftiy0R360QglpxMDs",
@@ -6308,7 +6411,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ4zVMWgDtiy0RQqvX0P1vWWo",
@@ -6419,7 +6523,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJfWWS7L3tiy0RHQtyo9NW-9g",
@@ -6542,7 +6647,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJqYt6OwDtiy0R7DQxRZS4f_U",
@@ -6665,7 +6771,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJtZ1rEDjtiy0RaZIMNLiE8F8",
@@ -6788,7 +6895,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJIe7Xb9Ltiy0R3_ZpB8p-Lrg",
@@ -6911,7 +7019,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJReznFADtiy0RXW7_hAV_NUM",
@@ -6942,7 +7051,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ0SCSPADviy0RsALRF3qGVSM",
@@ -7065,7 +7175,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ7XVgZgDxiy0RMzJmT2FymeE",
@@ -7096,7 +7207,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJCUS-RQDxiy0RIREoIAoTAgs",
@@ -7219,7 +7331,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ7Wi_zXTxiy0R4KjvKLIv_CE",
@@ -7318,7 +7431,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJR4oHu7Xxiy0RDnQpueMUMnQ",
@@ -7441,7 +7555,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJMToxjJDxiy0R2_BlitYVXkQ",
@@ -7564,7 +7679,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ3wrWbwDxiy0RcMI-rs4QVZY",
@@ -7595,7 +7711,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ75whY0Hxiy0R8TDLy5QyB-E",
@@ -7705,7 +7822,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJn4v1I9Txiy0RlFwiE2caYIk",
@@ -7828,7 +7946,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJMR68ix7tiy0R-A9ngOS10m0",
@@ -7859,7 +7978,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJtQscZC7tiy0R2LESNVYWgdM",
@@ -7971,7 +8091,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJGwVAMgDtiy0Ry-J10ac5xC0",
@@ -8094,7 +8215,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJV1GJ_MDviy0RYiZvhnmZEH0",
@@ -8217,7 +8339,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJuUbfFADviy0Rbm-LysciWh4",
@@ -8248,7 +8371,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJtUroFQDviy0RqcbCEJPBs6o",
@@ -8279,7 +8403,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJN_FkDBjviy0R56_1Xi-pYHQ",
@@ -8390,7 +8515,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJyXkik3jviy0RTVlz-KJ2K-Y",
@@ -8501,7 +8627,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ47t3VgDviy0R72WwpBiy-Xs",
@@ -8624,7 +8751,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJQZVzFADviy0RidnJlhBmf60",
@@ -8671,7 +8799,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ7VWmCQDtiy0Rk-UnIJPm6SI",
@@ -8794,7 +8923,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJRbhuPc3tiy0RpkrYIK3KZpw",
@@ -8917,7 +9047,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJgdcgmoPtiy0Rol1DF0gXppY",
@@ -9028,7 +9159,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJF9gCV1jviy0R8yZ2q8cxu-g",
@@ -9059,7 +9191,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ0Ugnb-vtiy0R1wwzNPWuPzY",
@@ -9090,7 +9223,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJq1FHervviy0R-TMr7QsI080",
@@ -9121,7 +9255,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJH2e5YA3tiy0RUY9Ec6N8UMU",
@@ -9232,7 +9367,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJP3jPHADriy0RlYq5q5vxueA",
@@ -9343,7 +9479,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ73qeCADtiy0R8ofy5MocPVE",
@@ -9374,7 +9511,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJmSXo_fbsiy0R8b9APlhOEXk",
@@ -9485,7 +9623,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ2akRGgDviy0RImzWYFFW5UM",
@@ -9608,6 +9747,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "sin-coffee",
+      "name": "Sin Coffee",
+      "shortName": "Sin",
+      "badgeColor": "#1e3a8a",
+      "borderColor": "#3b82f6",
+      "textColor": "#93c5fd",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#1E3A8A\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FBBF24\" font-family=\"sans-serif\">SIN</text></svg>"
     }
   },
   {
@@ -9731,7 +9879,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJiz33oeztiy0RX0ylECdYSjI",
@@ -9854,7 +10003,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJDZmWOPrtiy0RHi-IkM80Kp4",
@@ -9977,7 +10127,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJd39H8Gjtiy0Rk5dZauYG4_Q",
@@ -10088,7 +10239,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJIQQsJU7tiy0RyYuJ19QG-io",
@@ -10199,7 +10351,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJg1rtKQDtiy0Rw0pMARGzdFk",
@@ -10322,7 +10475,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJz3k3EgDtiy0RRu2Vr1-_7MM",
@@ -10445,7 +10599,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJTU-x5ijtiy0RNyIcHpE2aGw",
@@ -10568,7 +10723,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJw75pewDviy0R4tGtvpn2jpw",
@@ -10691,7 +10847,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJh-IpIw_tiy0R57CP1qIR1V0",
@@ -10814,7 +10971,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJYYONagDtiy0RMUsU4JAeBnw",
@@ -10845,7 +11003,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJsUvERADtiy0RY0upxspKCbA",
@@ -10968,7 +11127,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ90Mnprvviy0Rr5W21rqOQ_Y",
@@ -11091,7 +11251,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJEbCEjXvtiy0RvnNjQeKYXIo",
@@ -11214,7 +11375,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ6-7SfwDviy0RIo91mw_gL8M",
@@ -11337,7 +11499,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJHdog4Pfviy0RUdlgxIKWAVI",
@@ -11460,7 +11623,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ0avHewDziy0R3WCFzdyJbAA",
@@ -11583,7 +11747,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJy0B-i1vziy0Rdwf_-wPAfD0",
@@ -11706,7 +11871,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJFTXEGADxiy0RYZnaRVR7XKc",
@@ -11829,7 +11995,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJrZojoYbziy0Rnu6sad_ou1s",
@@ -11860,7 +12027,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJxSrMSQDtiy0R90G9gF40o9M",
@@ -11983,7 +12151,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ70eo-M7tiy0RAlNdO5swTgE",
@@ -12106,7 +12275,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ2xKJVHPxiy0RCMmfZP4Q0L8",
@@ -12217,7 +12387,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJbX9CHwDxiy0R5uxYw3WfaWQ",
@@ -12328,7 +12499,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJCafwJcPxiy0RB0pzUmlmPqw",
@@ -12439,7 +12611,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJAQAAAOPxiy0RqPj1-V4-2sU",
@@ -12562,7 +12735,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJGScfhBDriy0Ro-Joe_eX_vA",
@@ -12673,7 +12847,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ6Y3zDQDxiy0Rv5w9L1AHXrM",
@@ -12796,7 +12971,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJE7VRHwDpiy0RDUs6B9cxeJ0",
@@ -12843,7 +13019,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJUQeUlgbpiy0RPdJzJkr52ZU",
@@ -12954,7 +13131,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJw5MvrC3piy0RJjumDfw7NuI",
@@ -13077,7 +13255,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ8UhExPPpiy0RcSuzRgpng1g",
@@ -13200,7 +13379,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJW4dKzfDpiy0R_CY7QCPT450",
@@ -13247,7 +13427,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ3eYlFxrpiy0ROMN6GSh0Wzs",
@@ -13370,6 +13551,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "sin-coffee",
+      "name": "Sin Coffee",
+      "shortName": "Sin",
+      "badgeColor": "#1e3a8a",
+      "borderColor": "#3b82f6",
+      "textColor": "#93c5fd",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#1E3A8A\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FBBF24\" font-family=\"sans-serif\">SIN</text></svg>"
     }
   },
   {
@@ -13401,7 +13591,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJD-lgsz_tiy0RCG40LaziRpU",
@@ -13524,7 +13715,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJp9r-ls3tiy0Rclf26aZs2lo",
@@ -13648,7 +13840,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJHzU82F3tiy0RByHWRNowrpA",
@@ -13759,7 +13952,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ9c5zJQDtiy0RNow_dULMl00",
@@ -13787,6 +13981,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "malam-pagi",
+      "name": "Malam Pagi",
+      "shortName": "MalamPagi",
+      "badgeColor": "#4c1d95",
+      "borderColor": "#a855f7",
+      "textColor": "#f3e8ff",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#4C1D95\"/><path d=\"M12 6a6 6 0 0 0 0 12V6z\" fill=\"#F59E0B\"/><path d=\"M12 6a6 6 0 1 1 0 12V6z\" fill=\"#FFF\"/></svg>"
     }
   },
   {
@@ -13910,7 +14113,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJm9AIIQDtiy0R_s8DYBPuLbI",
@@ -14033,7 +14237,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJByFpSWbtiy0RcAP0ycXTR6A",
@@ -14080,7 +14285,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJI57xJgDtiy0R9KvsNE6Pydw",
@@ -14203,7 +14409,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ3bW1w8vtiy0RxyUFPBzbKmg",
@@ -14326,7 +14533,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJcQ_wxQvtiy0R9dfIjJa4V_A",
@@ -14450,7 +14658,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ1cpfgqXtiy0RTyFT1EucWdk",
@@ -14478,7 +14687,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJPQHjjvHtiy0RiycBVQ6SV90",
@@ -14601,7 +14811,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJaevXMQDriy0RQPQmvk9koT4",
@@ -14724,7 +14935,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJBwZCo4_piy0RsaQULNra6ZE",
@@ -14847,7 +15059,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJPY6zMf_Biy0RmpxHUWD2TMQ",
@@ -14875,7 +15088,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJcy2nqwLtiy0Rmst7IGrjX-M",
@@ -14999,7 +15213,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJWaCAlyHtiy0RX9fEs1RLnds",
@@ -15122,7 +15337,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJkS9lFwDviy0RSZMEwd4o6zY",
@@ -15148,7 +15364,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ459jTQHtiy0RqSwqnPmK5dE",
@@ -15270,7 +15487,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ7x7WDgDtiy0RWdcH9sTpyQI",
@@ -15391,7 +15609,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ6WaoNcftiy0Rnn-GjE2jl3c",
@@ -15512,6 +15731,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "yaku",
+      "name": "Yaku Signature",
+      "shortName": "Yaku",
+      "badgeColor": "#312e81",
+      "borderColor": "#6366f1",
+      "textColor": "#e0e7ff",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#312E81\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.5\" font-weight=\"900\" fill=\"#FDE047\" font-family=\"sans-serif\">YAKU</text></svg>"
     }
   },
   {
@@ -15621,7 +15849,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJpYnaCgDviy0RSEyuzFyaEDk",
@@ -15649,6 +15878,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "kopi-arobi",
+      "name": "Kopi Arobi",
+      "shortName": "Arobi",
+      "badgeColor": "#78350f",
+      "borderColor": "#f59e0b",
+      "textColor": "#fde68a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#78350F\"/><circle cx=\"12\" cy=\"12\" r=\"8.5\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"1.2\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.5\" font-weight=\"900\" fill=\"#FDE68A\" font-family=\"sans-serif\">AROBI</text></svg>"
     }
   },
   {
@@ -15772,6 +16010,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "yaku",
+      "name": "Yaku Signature",
+      "shortName": "Yaku",
+      "badgeColor": "#312e81",
+      "borderColor": "#6366f1",
+      "textColor": "#e0e7ff",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#312E81\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.5\" font-weight=\"900\" fill=\"#FDE047\" font-family=\"sans-serif\">YAKU</text></svg>"
     }
   },
   {
@@ -15882,7 +16129,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJRx6ONHHriy0RDYa8NdZmkJY",
@@ -15927,7 +16175,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ3wt5WETDiy0RzyDDOclHmKE",
@@ -15955,7 +16204,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJhRhgeOzviy0R_NhDGc70oKg",
@@ -16078,7 +16328,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJudB1_43tiy0RdPQv_r_-wkc",
@@ -16125,7 +16376,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJKwur5wPtiy0R04-xxrlzXN0",
@@ -16177,7 +16429,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJe7wIsDjviy0R7KvQEZhHUEQ",
@@ -16224,7 +16477,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJnRXGPgzviy0RHpd3snzyovc",
@@ -16347,7 +16601,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ6RY8bJftiy0RSQpmAQRcjwI",
@@ -16470,7 +16725,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJccT5ekrtiy0RPBPa9xRYoPA",
@@ -16501,7 +16757,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJqzO2FwDtiy0RWyMUYuThiZg",
@@ -16532,7 +16789,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ-YxyRADtiy0ReZ-eIZ5jOXo",
@@ -16655,7 +16913,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJS8PkCQDtiy0RGyoN0aDs6ks",
@@ -16778,7 +17037,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJS45cDnTviy0RXDhmbsPiJy8",
@@ -16809,7 +17069,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ15QvbL_xiy0RvhdWVUM47jI",
@@ -16932,7 +17193,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJCVv1oGDviy0R0A-okn3zQXQ",
@@ -17055,7 +17317,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJVyCaLQDtiy0R9lYLgrB6N9E",
@@ -17102,7 +17365,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ0TqKXQDziy0RriDbqBJvoNI",
@@ -17225,7 +17489,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJa-3G3Z3ziy0RVOszL-pLY6M",
@@ -17348,7 +17613,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJBUpiP8Ltiy0RVXbAJ90F5fY",
@@ -17471,7 +17737,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJtT8ZO0Hxiy0RQrXM43sKx1s",
@@ -17582,7 +17849,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJv1zlhIntiy0R8t7BH74MVxQ",
@@ -17705,7 +17973,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJKStzeMbtiy0Rcdv6f9mP7wg",
@@ -17828,7 +18097,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJoa2kyMTtiy0R3J6TXdcvPqc",
@@ -17875,7 +18145,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJS2LeAQDtiy0RELJc55KsOEg",
@@ -17999,7 +18270,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJs9gsEgrtiy0ReNptCXjmHqE",
@@ -18122,7 +18394,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJpSnVrpLtiy0RqmXT19Gamwk",
@@ -18246,7 +18519,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ9y-AJrPtiy0RkwRvrnj4pEs",
@@ -18369,7 +18643,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ3cHlqUbtiy0Re6vvc5XpPIc",
@@ -18416,7 +18691,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJwzSXJwDtiy0R_04RoeuZxvI",
@@ -18540,7 +18816,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJBf5IYiXtiy0RYiSQyWTAZgw",
@@ -18663,7 +18940,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJGXc7MwDtiy0Ro1IbrJVyfRY",
@@ -18710,6 +18988,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "koriru",
+      "name": "Koriru Coffee",
+      "shortName": "Koriru",
+      "badgeColor": "#3e2723",
+      "borderColor": "#a1887f",
+      "textColor": "#d7ccc8",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#3E2723\"/><text x=\"12\" y=\"16\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">k.</text></svg>"
     }
   },
   {
@@ -18833,7 +19120,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJS0LwWwDviy0RGZUwIGMKCQg",
@@ -18861,7 +19149,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJFRnzvzrviy0RfwCEK4HWGbs",
@@ -18984,7 +19273,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ6864C_3tiy0R6mwO1UxZ0AY",
@@ -19012,7 +19302,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJuSOVXcLtiy0RiY88FFsGj2o",
@@ -19135,7 +19426,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJGSpaPQbtiy0RrTpGxWqbeWE",
@@ -19256,7 +19548,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ02LxPQDtiy0R5OWqRapwj-M",
@@ -19378,7 +19671,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJI1CntD7viy0RZfavavh0ip4",
@@ -19499,7 +19793,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJy1eMdTfviy0RSvYlv2jlZTQ",
@@ -19620,7 +19915,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJsTNQSuHtiy0RVWQ2ZTH9BUE",
@@ -19731,7 +20027,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJeY6e47Ltiy0Rf8-zqPMRSvg",
@@ -19852,7 +20149,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJZa1ih7Dtiy0R6XK5kuNUct8",
@@ -19973,7 +20271,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJVcjB3RTtiy0RI0dGKP3BHjc",
@@ -20096,7 +20395,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJacqPbP3tiy0RlXzswx3Td5M",
@@ -20122,7 +20422,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJybHFMgDxiy0RuGBpKjrCYuU",
@@ -20246,7 +20547,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ904TZgDxiy0RxlQgvh-kroo",
@@ -20367,7 +20669,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJj68lUsHviy0RBzL5xQsN1Nc",
@@ -20491,7 +20794,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJE-9aGdbpiy0RncYVrq0SJYI",
@@ -20614,7 +20918,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJXaaDFwDpiy0RQcVQPimKMFw",
@@ -20736,6 +21041,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "mie-gacoan",
+      "name": "Mie Gacoan",
+      "shortName": "Gacoan",
+      "badgeColor": "#db2777",
+      "borderColor": "#f472b6",
+      "textColor": "#fce7f3",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#DB2777\"/><path d=\"M6 12a6 6 0 0 0 12 0H6z\" fill=\"#FFF\"/><path d=\"M8 8c1-1 1-2 1-2m3 2c1-1 1-2 1-2m3 2c1-1 1-2 1-2\" stroke=\"#FFF\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><line x1=\"5\" y1=\"9\" x2=\"19\" y2=\"11\" stroke=\"#FDE047\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg>"
     }
   },
   {
@@ -20762,7 +21076,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJD1ub5uHviy0Ry1eK25MkPlY",
@@ -20788,7 +21103,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ8y0t8rPpiy0RoiF6vmf9-pk",
@@ -20909,7 +21225,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJu2HzQCHpiy0RAQkm9-fsjIc",
@@ -20935,7 +21252,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJEYnDdQDriy0R7DgV6i_5SjY",
@@ -20961,7 +21279,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJn-AHEwDBiy0R1HhVfwnvasg",
@@ -21083,7 +21402,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJg4hZS-DBiy0ReWrCilVqrAs",
@@ -21182,7 +21502,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJE-ibaNvHiy0Rr1t1BNryHww",
@@ -21303,7 +21624,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJOQM7DwDtiy0RsVwjmJtvTuU",
@@ -21426,7 +21748,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJA71BTADxiy0RbKcv_PHQ6hM",
@@ -21549,7 +21872,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJDXCugjztiy0RZ8aSZho6WQQ",
@@ -21672,7 +21996,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJFa8ju8vziy0RcD3YD4gHYUo",
@@ -21795,6 +22120,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "sin-coffee",
+      "name": "Sin Coffee",
+      "shortName": "Sin",
+      "badgeColor": "#1e3a8a",
+      "borderColor": "#3b82f6",
+      "textColor": "#93c5fd",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#1E3A8A\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FBBF24\" font-family=\"sans-serif\">SIN</text></svg>"
     }
   },
   {
@@ -21906,7 +22240,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJeTSP0Njtiy0RTTABuz86FB0",
@@ -22029,7 +22364,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJMxpyHrftiy0R7r8ZaHFOwGc",
@@ -22140,7 +22476,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJd7keLQDviy0RcoE8cN6-BgE",
@@ -22262,7 +22599,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJA8Rxmk3viy0R84SvCTWYR2s",
@@ -22385,7 +22723,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ0x5pHZzviy0Raj8MiPx5QDY",
@@ -22508,6 +22847,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "kopi-kenangan",
+      "name": "Kopi Kenangan",
+      "shortName": "Kenangan",
+      "badgeColor": "#8b0000",
+      "borderColor": "#f87171",
+      "textColor": "#fee2e2",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#8B0000\"/><path d=\"M12 7.5c-1.2-1.5-3.2-1.2-4 0-.8 1.2-.4 2.8 1.2 4.2L12 14.5l2.8-2.8c1.6-1.4 2-3 1.2-4.2-.8-1.2-2.8-1.5-4 0z\" fill=\"#FFF\"/><path d=\"M8 15h8v1a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-1z\" fill=\"#FFF\"/></svg>"
     }
   },
   {
@@ -22619,7 +22967,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJQe_1iePtiy0RXY5BUR8Ppfg",
@@ -22742,7 +23091,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ83OaPbntiy0R9q6TW1YfbL0",
@@ -22865,7 +23215,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJMTrmkU3ziy0R39RMXA389VU",
@@ -22912,7 +23263,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJHQLQYe3tiy0RgXpdr7Or2Do",
@@ -23036,7 +23388,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJDzHFm-ztiy0RjoRTEwrwvo0",
@@ -23159,7 +23512,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJrbfn6cntiy0Rw1hzdXbm8iA",
@@ -23187,7 +23541,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJk249ACDxiy0RBaMpGHku9fI",
@@ -23310,7 +23665,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJc4769O7viy0RPJQhG0FgY94",
@@ -23421,7 +23777,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJCU_cOgDtiy0RLRcuhIyFQe8",
@@ -23468,7 +23825,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJU68egz7ziy0RNjeqTcQ5OUE",
@@ -23591,7 +23949,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJscLzewDtiy0R3bWuc2qUztg",
@@ -23714,7 +24073,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJPfCn7zTviy0RJ5CIWEX8B6w",
@@ -23824,7 +24184,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJD63EyOrtiy0RSV1H2Zm7CDE",
@@ -23945,7 +24306,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJD-I9pOTtiy0RmbeDPGdCgZ8",
@@ -24066,7 +24428,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ31r29Bntiy0RSkA7ZVTDHaM",
@@ -24187,7 +24550,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJnZWIP7zxiy0RrPI8ecU41-k",
@@ -24309,7 +24673,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJjWKbyF7tiy0R6OyiOVhiU4Q",
@@ -24433,7 +24798,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJpb8O3uHtiy0ReDVqUSJU1Jc",
@@ -24542,7 +24908,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJv3wSRJ3tiy0RQpLYjp0zYGo",
@@ -24664,7 +25031,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJOxjsFQDtiy0Rf4TyT5SEO_4",
@@ -24775,7 +25143,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJb2GEFgDziy0RiXVAq-VZH-o",
@@ -24896,7 +25265,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJL-VIPJ_tiy0R-x161zC5x20",
@@ -25019,7 +25389,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJQ8qBhvnriy0RAzs_p34n6wM",
@@ -25140,7 +25511,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ41fjpR7ziy0ROWp70as0Q4o",
@@ -25263,7 +25635,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJXe8eBTrziy0RfBojk1c1eds",
@@ -25386,7 +25759,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJgyszoo3tiy0RCTG34MQzB40",
@@ -25509,7 +25883,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ391trKbtiy0RBDc_JEqCuaY",
@@ -25630,7 +26005,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJl5puRwDBiy0R1CtJfY3d_pA",
@@ -25658,7 +26034,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJJyzCfVHriy0RL--ftcF4t3Y",
@@ -25781,7 +26158,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ20FKYEHBiy0ROrwITKcBJG8",
@@ -25904,7 +26282,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJw2ecq9zBiy0RLbKv9sExbVE",
@@ -25930,7 +26309,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJz94HMwDBiy0R0eGmKMO80uU",
@@ -25956,7 +26336,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJkzvmI3Ttiy0RIlajEWmjGJY",
@@ -26067,7 +26448,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJr5SIHa3tiy0RpapOUOSetNI",
@@ -26190,7 +26572,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJg4Kwj4Htiy0RiZ033kDRm_4",
@@ -26301,7 +26684,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJR1-Dg03tiy0RV5YzSXz1wkI",
@@ -26332,7 +26716,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJtdnBgsTtiy0R5SWM3FPqmpA",
@@ -26443,7 +26828,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ11tDCADtiy0RADW0XJBan68",
@@ -26566,7 +26952,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJG4tMGYPviy0RucStfFJnJ64",
@@ -26689,7 +27076,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJy2k6k0jziy0R76Z6Jyi1sT8",
@@ -26812,7 +27200,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJEfya_fzxiy0RIta3_JeekUE",
@@ -26935,7 +27324,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJeVgObADtiy0RviajG4Hid68",
@@ -27058,7 +27448,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ9_WeVgDtiy0R6XgcWnVBIRc",
@@ -27089,7 +27480,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJucEsW7Htiy0RzhZLb76euEg",
@@ -27212,7 +27604,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJV3Ro--ztiy0Rq63aBCgar0E",
@@ -27323,7 +27716,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJi5E3BD7tiy0RrL-aERQA82I",
@@ -27354,7 +27748,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJZScCMlrtiy0R5GtqMXmd-SE",
@@ -27477,7 +27872,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJWR968tztiy0RKyifu5ig6U8",
@@ -27600,7 +27996,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJUSZYUUrviy0RAjviWmAOd6g",
@@ -27711,7 +28108,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJzTnlcADxiy0RSV4lc76A2Ps",
@@ -27742,7 +28140,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJVVEGPgDtiy0RAFSTLNnPIJQ",
@@ -27773,7 +28172,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJEVvFfgDviy0RYTOJAd_4nYE",
@@ -27884,7 +28284,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJEdFNecbviy0Rza-GFJB4VTs",
@@ -28007,7 +28408,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJl5LyJc3tiy0RLY2ViXW4Ssw",
@@ -28038,6 +28440,15 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
+    },
+    "franchise": {
+      "id": "point-coffee",
+      "name": "Point Coffee",
+      "shortName": "Point",
+      "badgeColor": "#059669",
+      "borderColor": "#34d399",
+      "textColor": "#d1fae5",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#059669\"/><path d=\"M12 4a5 5 0 0 0-5 5c0 3.8 5 11 5 11s5-7.2 5-11a5 5 0 0 0-5-5zm0 7.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z\" fill=\"#FFF\"/><circle cx=\"12\" cy=\"9\" r=\"1.3\" fill=\"#059669\"/></svg>"
     }
   },
   {
@@ -28161,7 +28572,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJxypJQ03viy0RNKGVQLv74q4",
@@ -28284,7 +28696,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJo1_WCADtiy0R-tem6Ldb2aM",
@@ -28331,7 +28744,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ2zuYCl3ziy0RQZ0LSBNggJg",
@@ -28430,7 +28844,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJv4Mn8o_tiy0RhjflV0K4t4U",
@@ -28553,7 +28968,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ35u6Njfxiy0RsR0VbbTnHKY",
@@ -28676,7 +29092,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJU9WkUgDxiy0RGDlOhWGA6lg",
@@ -28723,6 +29140,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "koriru",
+      "name": "Koriru Coffee",
+      "shortName": "Koriru",
+      "badgeColor": "#3e2723",
+      "borderColor": "#a1887f",
+      "textColor": "#d7ccc8",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#3E2723\"/><text x=\"12\" y=\"16\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">k.</text></svg>"
     }
   },
   {
@@ -28846,7 +29272,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ86bbAWLtiy0RbtuVqZEtLeo",
@@ -28969,7 +29396,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ8zneRhXtiy0Rd-vfFXvTQNY",
@@ -29092,7 +29520,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ41_vZ7Xtiy0RU5G04kaXO8w",
@@ -29216,7 +29645,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJbSR8_63tiy0Rwl-blpTrbaY",
@@ -29339,7 +29769,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ79IXu7Ltiy0RPXawu2pjg9M",
@@ -29386,7 +29817,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJpY8bb_vtiy0Rub4EBhcTGvI",
@@ -29509,7 +29941,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJayFz31Dviy0R2JfYH8jsvLM",
@@ -29535,7 +29968,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJAUMGDtTtiy0RveyJDamsbUs",
@@ -29646,6 +30080,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "warkop-harapan",
+      "name": "Warkop Harapan",
+      "shortName": "Harapan",
+      "badgeColor": "#b45309",
+      "borderColor": "#fbbf24",
+      "textColor": "#fef3c7",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#B45309\"/><path d=\"M8 8h8v7a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V8z\" fill=\"#FFF\"/><text x=\"12\" y=\"14\" text-anchor=\"middle\" font-size=\"6\" font-weight=\"900\" fill=\"#B45309\" font-family=\"sans-serif\">H</text></svg>"
     }
   },
   {
@@ -29674,7 +30117,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJc8bRbCPtiy0RQW2XcEp5RTk",
@@ -29700,7 +30144,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJsa65IQDtiy0RIgxJk2Q79zM",
@@ -29726,7 +30171,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJd-sUGhztiy0RL-x8juGQjOo",
@@ -29835,7 +30281,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJOw1bwV7xiy0Rtq2YVGRk3F4",
@@ -29956,7 +30403,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJeS5rBB7viy0RTSO6hR2D5W8",
@@ -29984,7 +30432,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJw6T-fAvtiy0RaHWNP3j_eis",
@@ -30106,7 +30555,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJX7giOQjuiy0RF-SDV1kgsMY",
@@ -30227,7 +30677,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJUacXSQDtiy0RehqW5K78Skc",
@@ -30253,7 +30704,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJvbbaPADtiy0Rob7VQ8stKTQ",
@@ -30374,7 +30826,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJz3aOhsvtiy0RSfrvWGH4Agg",
@@ -30496,6 +30949,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "kaledo-stereo",
+      "name": "Kaledo Stereo",
+      "shortName": "Stereo",
+      "badgeColor": "#c2410c",
+      "borderColor": "#fb923c",
+      "textColor": "#ffedd5",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#C2410C\"/><path d=\"M6 13a6 6 0 0 0 12 0H6z\" fill=\"#FFF\"/><path d=\"M9 7c1-1 1-2 1-2m4 2c1-1 1-2 1-2\" stroke=\"#FFF\" stroke-width=\"1.2\"/><circle cx=\"15.5\" cy=\"8.5\" r=\"1\" fill=\"#FDE047\"/><path d=\"M16.5 8.5V6h2\" stroke=\"#FDE047\" stroke-width=\"1\"/></svg>"
     }
   },
   {
@@ -30606,7 +31068,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ-x8NZsjriy0RxFPtA1YTUIE",
@@ -30633,7 +31096,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJX7_Ap3Tyiy0RHUAvu_QqEd4",
@@ -30754,7 +31218,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJk-yIhdDtiy0RF1Vb3E-xIZc",
@@ -30863,7 +31328,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJQcF8pgDyiy0RLNf_Ee6LhlY",
@@ -30889,7 +31355,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJLbxCAZntiy0RT5qcYnN3bDw",
@@ -31001,7 +31468,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ_5NMz7ntiy0ROEZUD3MXJT4",
@@ -31027,7 +31495,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ2ehca7fviy0RFpGN0QEp_AI",
@@ -31148,7 +31617,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJXUMzDQDtiy0RuG27i2Fh8Yk",
@@ -31193,6 +31663,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "mie-gacoan",
+      "name": "Mie Gacoan",
+      "shortName": "Gacoan",
+      "badgeColor": "#db2777",
+      "borderColor": "#f472b6",
+      "textColor": "#fce7f3",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#DB2777\"/><path d=\"M6 12a6 6 0 0 0 12 0H6z\" fill=\"#FFF\"/><path d=\"M8 8c1-1 1-2 1-2m3 2c1-1 1-2 1-2m3 2c1-1 1-2 1-2\" stroke=\"#FFF\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><line x1=\"5\" y1=\"9\" x2=\"19\" y2=\"11\" stroke=\"#FDE047\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg>"
     }
   },
   {
@@ -31219,6 +31698,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "pizza-hut",
+      "name": "Pizza Hut",
+      "shortName": "PizzaHut",
+      "badgeColor": "#b91c1c",
+      "borderColor": "#ef4444",
+      "textColor": "#fee2e2",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#B91C1C\"/><path d=\"M5 14h14l-2.5-3.5h-9z\" fill=\"#FACC15\"/><path d=\"M12 7l-5 4h10z\" fill=\"#FFF\"/><line x1=\"4\" y1=\"15.5\" x2=\"20\" y2=\"15.5\" stroke=\"#FFF\" stroke-width=\"1.5\"/></svg>"
     }
   },
   {
@@ -31245,7 +31733,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJm1DL9Pnziy0RKJNdRClTCig",
@@ -31366,7 +31855,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJo4RjtIvpiy0Rh-tZewwuaTY",
@@ -31489,6 +31979,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "brkh",
+      "name": "BRKH / Sepertiga",
+      "shortName": "BRKH",
+      "badgeColor": "#0f172a",
+      "borderColor": "#eab308",
+      "textColor": "#fef08a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F172A\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.2\" font-weight=\"900\" fill=\"#F59E0B\" font-family=\"sans-serif\">BRKH</text></svg>"
     }
   },
   {
@@ -31613,7 +32112,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJe0HBp9npiy0RjfVgdMao1sQ",
@@ -31639,7 +32139,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJayHJmZLtiy0R3IBuAwBtgvA",
@@ -31760,7 +32261,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJF9oaSebtiy0RFmHJ6OJeFeE",
@@ -31786,7 +32288,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJa5Bpt_vtiy0RD29_APw1D54",
@@ -31812,7 +32315,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJp-DJTUntiy0R6LS2hGYeS7k",
@@ -31838,7 +32342,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJbYkmLADtiy0RX_BagykQDwI",
@@ -31866,6 +32371,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "kopi-arobi",
+      "name": "Kopi Arobi",
+      "shortName": "Arobi",
+      "badgeColor": "#78350f",
+      "borderColor": "#f59e0b",
+      "textColor": "#fde68a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#78350F\"/><circle cx=\"12\" cy=\"12\" r=\"8.5\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"1.2\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.5\" font-weight=\"900\" fill=\"#FDE68A\" font-family=\"sans-serif\">AROBI</text></svg>"
     }
   },
   {
@@ -31999,7 +32513,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJv9lFVvPriy0RsLXXHVF6VJk",
@@ -32120,7 +32635,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJNW3Kle3Biy0R5FTYDfK92C4",
@@ -32241,7 +32757,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJoTLtwUbBiy0RzhMAMheKiAU",
@@ -32268,7 +32785,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJn1VpZU3tiy0RTSGrFhmvdLI",
@@ -32391,7 +32909,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJt9_ZoGvtiy0R2cjFCUGIYVk",
@@ -32514,7 +33033,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJIw79BwDtiy0RS1vkurBRywQ",
@@ -32637,7 +33157,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ-8yjdA3tiy0RKv23xNBofoo",
@@ -32760,7 +33281,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJmzA-agDviy0RHLpq4rlg4Dg",
@@ -32791,7 +33313,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJV6m070fxiy0R47RVAoBRbYE",
@@ -32914,7 +33437,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJu-BTZEbviy0RjmbNPAPDYg8",
@@ -33037,7 +33561,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJBeb6Wnzxiy0R8N3RIxJBhfI",
@@ -33160,7 +33685,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJC24M-Crviy0R89ZP8FhgQw8",
@@ -33271,7 +33797,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJY6-CoILviy0R8o7XvhHnd_E",
@@ -33394,7 +33921,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ22kk83_viy0Rx3BrjPqhSqs",
@@ -33517,7 +34045,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJXazN0GDtiy0R3O7TTJAtwxs",
@@ -33548,7 +34077,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJi0ZSZADviy0Rm76buA6EGFw",
@@ -33671,7 +34201,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJL2SIUcTtiy0R5dmT9fT1CSs",
@@ -33718,7 +34249,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJlYTX4LHtiy0RR4jEWm5BuAg",
@@ -33765,7 +34297,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ07zcxE_tiy0Rxo_fNKSK-pQ",
@@ -33888,6 +34421,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "sin-coffee",
+      "name": "Sin Coffee",
+      "shortName": "Sin",
+      "badgeColor": "#1e3a8a",
+      "borderColor": "#3b82f6",
+      "textColor": "#93c5fd",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#1E3A8A\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FBBF24\" font-family=\"sans-serif\">SIN</text></svg>"
     }
   },
   {
@@ -33916,7 +34458,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJIWi22e_viy0RGyhBrckTBwI",
@@ -34039,7 +34582,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJV0yCFQDtiy0RT3z-AQlJQGE",
@@ -34162,7 +34706,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJK6q3OEntiy0RdFu-ujNmuKg",
@@ -34190,7 +34735,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJRd_3OgDBiy0RDDSV8OEQt0Q",
@@ -34218,6 +34764,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "ribelv",
+      "name": "Ribelv Coffee",
+      "shortName": "Ribelv",
+      "badgeColor": "#0f766e",
+      "borderColor": "#14b8a6",
+      "textColor": "#99f6e4",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F766E\"/><text x=\"12\" y=\"16\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">R</text></svg>"
     }
   },
   {
@@ -34246,7 +34801,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ9d6gdwDviy0RaP9dzHfQ-Hk",
@@ -34274,7 +34830,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ2ZbQatrtiy0RNrjsO3NGih4",
@@ -34301,6 +34858,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "warkop-harapan",
+      "name": "Warkop Harapan",
+      "shortName": "Harapan",
+      "badgeColor": "#b45309",
+      "borderColor": "#fbbf24",
+      "textColor": "#fef3c7",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#B45309\"/><path d=\"M8 8h8v7a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V8z\" fill=\"#FFF\"/><text x=\"12\" y=\"14\" text-anchor=\"middle\" font-size=\"6\" font-weight=\"900\" fill=\"#B45309\" font-family=\"sans-serif\">H</text></svg>"
     }
   },
   {
@@ -34412,6 +34978,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "warkop-harapan",
+      "name": "Warkop Harapan",
+      "shortName": "Harapan",
+      "badgeColor": "#b45309",
+      "borderColor": "#fbbf24",
+      "textColor": "#fef3c7",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#B45309\"/><path d=\"M8 8h8v7a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V8z\" fill=\"#FFF\"/><text x=\"12\" y=\"14\" text-anchor=\"middle\" font-size=\"6\" font-weight=\"900\" fill=\"#B45309\" font-family=\"sans-serif\">H</text></svg>"
     }
   },
   {
@@ -34440,7 +35015,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJNT6Mstvtiy0Rv_I6RxCbWDI",
@@ -34561,7 +35137,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJUw7Wm8_tiy0RUvDrGUhuJVM",
@@ -34587,7 +35164,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJYyNTVT7tiy0R3GiN_Mt5x3I",
@@ -34709,7 +35287,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJgSPLxKntiy0RG_Bzm33ZzYA",
@@ -34831,7 +35410,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJe1meVQDtiy0RZbnSF2E8Tx8",
@@ -34952,7 +35532,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJOUsKn9rtiy0Rb8bvJvh4yn8",
@@ -34978,7 +35559,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJm_qNz1Ttiy0RgtHzTaR88bg",
@@ -35101,7 +35683,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJJaLXJE3tiy0Rqbgq24fwf3o",
@@ -35222,7 +35805,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ74f32ertiy0RnLDTJDINcb0",
@@ -35249,6 +35833,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "kaledo-stereo",
+      "name": "Kaledo Stereo",
+      "shortName": "Stereo",
+      "badgeColor": "#c2410c",
+      "borderColor": "#fb923c",
+      "textColor": "#ffedd5",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#C2410C\"/><path d=\"M6 13a6 6 0 0 0 12 0H6z\" fill=\"#FFF\"/><path d=\"M9 7c1-1 1-2 1-2m4 2c1-1 1-2 1-2\" stroke=\"#FFF\" stroke-width=\"1.2\"/><circle cx=\"15.5\" cy=\"8.5\" r=\"1\" fill=\"#FDE047\"/><path d=\"M16.5 8.5V6h2\" stroke=\"#FDE047\" stroke-width=\"1\"/></svg>"
     }
   },
   {
@@ -35371,6 +35964,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "kaledo-stereo",
+      "name": "Kaledo Stereo",
+      "shortName": "Stereo",
+      "badgeColor": "#c2410c",
+      "borderColor": "#fb923c",
+      "textColor": "#ffedd5",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#C2410C\"/><path d=\"M6 13a6 6 0 0 0 12 0H6z\" fill=\"#FFF\"/><path d=\"M9 7c1-1 1-2 1-2m4 2c1-1 1-2 1-2\" stroke=\"#FFF\" stroke-width=\"1.2\"/><circle cx=\"15.5\" cy=\"8.5\" r=\"1\" fill=\"#FDE047\"/><path d=\"M16.5 8.5V6h2\" stroke=\"#FDE047\" stroke-width=\"1\"/></svg>"
     }
   },
   {
@@ -35492,7 +36094,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJRZ6L0m3Biy0R9XZgwwl5hcI",
@@ -35613,7 +36216,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJXWbdQgDviy0RnMc4hRpgm1c",
@@ -35639,7 +36243,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJkZR8z-Tviy0RZIQ52Xb24To",
@@ -35667,7 +36272,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ27WyJPnviy0RdaZAg7zpOog",
@@ -35695,7 +36301,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJqRBJer7tiy0R6n_DPKwcsf0",
@@ -35723,7 +36330,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJC98YTTftiy0Rf0b2oqR4PM8",
@@ -35847,7 +36455,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ0QodV9rtiy0RDL8m7Zzv5ZE",
@@ -35968,7 +36577,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJdb-048btiy0RMoDDjZkz1Bo",
@@ -36089,7 +36699,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJRXWsvsDtiy0RI4BjS55QCko",
@@ -36210,7 +36821,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJiYxl8Nrxiy0RQE0jjEvvwnQ",
@@ -36333,7 +36945,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ-zm3LwDtiy0RXpuUGdrjqNM",
@@ -36361,7 +36974,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJgbodagDviy0RaigUCzstI6w",
@@ -36389,7 +37003,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJl3WUTwDpiy0RDf58LoFOB4g",
@@ -36512,7 +37127,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJVVz-cQDpiy0Ru8pmG1OeVNI",
@@ -36540,7 +37156,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJU2K0mr7tiy0ROOwvmJ4KVIQ",
@@ -36568,7 +37185,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJETPmVY7piy0RTHA6rQPOOeI",
@@ -36594,7 +37212,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJARhE-BHyiy0R3wCEWUM5iI0",
@@ -36620,7 +37239,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ5RZ95kDtiy0Rva7bMXsv_p8",
@@ -36744,7 +37364,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJtd7R1jntiy0RztNPszZ3des",
@@ -36772,7 +37393,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJwfEUub_tiy0R8pDs4VL_Y6M",
@@ -36882,7 +37504,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJQS65zCbBiy0RUZI9G_qaINY",
@@ -37005,7 +37628,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJU2qvt1nBiy0RCi_YBYm12vg",
@@ -37033,7 +37657,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ1xdTi0jriy0RVbmR9Qdom5M",
@@ -37061,7 +37686,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJIRRhTHfriy0RoRr_NFWvgDk",
@@ -37089,6 +37715,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "kopi-kenangan",
+      "name": "Kopi Kenangan",
+      "shortName": "Kenangan",
+      "badgeColor": "#8b0000",
+      "borderColor": "#f87171",
+      "textColor": "#fee2e2",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#8B0000\"/><path d=\"M12 7.5c-1.2-1.5-3.2-1.2-4 0-.8 1.2-.4 2.8 1.2 4.2L12 14.5l2.8-2.8c1.6-1.4 2-3 1.2-4.2-.8-1.2-2.8-1.5-4 0z\" fill=\"#FFF\"/><path d=\"M8 15h8v1a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-1z\" fill=\"#FFF\"/></svg>"
     }
   },
   {
@@ -37117,7 +37752,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJSXPhLu7Biy0RYxmZrhTBMMg",
@@ -37145,7 +37781,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ878QXR_qiy0RED-_LnqyQZ8",
@@ -37171,7 +37808,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJIafNZCDriy0RTFmF3Uv-fCc",
@@ -37197,7 +37835,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJwyGfSuXriy0RK4LTjSRnSRU",
@@ -37223,7 +37862,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJqxf-j0bBiy0R7qWkJOHV2j8",
@@ -37251,7 +37891,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJobpNdOnHiy0RYhUI3ZpFPHM",
@@ -37279,7 +37920,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJYXC9NjLEiy0RksgFKV0h5ng",
@@ -37307,7 +37949,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJGYevlEHBiy0R99sxwMCebB8",
@@ -37333,7 +37976,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJQ6C3ILvBiy0Rrdg5EYeepuM",
@@ -37359,7 +38003,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJb4ulhbjGiy0RYmclqH6pKQc",
@@ -37385,7 +38030,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJV4STRwDtiy0RyVrCpaeGUGg",
@@ -37416,7 +38062,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJyfRct2ntiy0Rm1dbDccUrgo",
@@ -37539,7 +38186,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJcSjfxLDviy0RZkFlF8k93G0",
@@ -37662,7 +38310,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJp0Bmi__viy0RjzDq1dZ8PzA",
@@ -37785,7 +38434,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJiWleyy3viy0RuoZeE66tk10",
@@ -37908,7 +38558,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJPcctNNHtiy0RrYolhRBEELk",
@@ -37939,7 +38590,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJYcEb0sDziy0RTUrZ4Vkr3V4",
@@ -38062,7 +38714,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJWQElXpjziy0Rf12Si_Uza5Q",
@@ -38093,6 +38746,15 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
+    },
+    "franchise": {
+      "id": "kopi-arobi",
+      "name": "Kopi Arobi",
+      "shortName": "Arobi",
+      "badgeColor": "#78350f",
+      "borderColor": "#f59e0b",
+      "textColor": "#fde68a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#78350F\"/><circle cx=\"12\" cy=\"12\" r=\"8.5\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"1.2\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.5\" font-weight=\"900\" fill=\"#FDE68A\" font-family=\"sans-serif\">AROBI</text></svg>"
     }
   },
   {
@@ -38216,7 +38878,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJh3a88Efxiy0R5_yTrbtsh9I",
@@ -38339,7 +39002,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJvQmmqvXviy0RPq2ic5FY0Y0",
@@ -38370,7 +39034,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ14W_ZwDtiy0RxhoNuQEzSCk",
@@ -38470,6 +39135,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "ribelv",
+      "name": "Ribelv Coffee",
+      "shortName": "Ribelv",
+      "badgeColor": "#0f766e",
+      "borderColor": "#14b8a6",
+      "textColor": "#99f6e4",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F766E\"/><text x=\"12\" y=\"16\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">R</text></svg>"
     }
   },
   {
@@ -38593,7 +39267,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJj8vmAQDtiy0RKJVhQYv3gYM",
@@ -38624,7 +39299,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ9yYvDgDtiy0RrJ51G5yf3xg",
@@ -38735,7 +39411,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJjVErDgDtiy0RPUrgD-RnvZ0",
@@ -38846,7 +39523,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJF3SWBI7tiy0Ra8sCnP14fCM",
@@ -38969,6 +39647,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "kopi-kenangan",
+      "name": "Kopi Kenangan",
+      "shortName": "Kenangan",
+      "badgeColor": "#8b0000",
+      "borderColor": "#f87171",
+      "textColor": "#fee2e2",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#8B0000\"/><path d=\"M12 7.5c-1.2-1.5-3.2-1.2-4 0-.8 1.2-.4 2.8 1.2 4.2L12 14.5l2.8-2.8c1.6-1.4 2-3 1.2-4.2-.8-1.2-2.8-1.5-4 0z\" fill=\"#FFF\"/><path d=\"M8 15h8v1a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-1z\" fill=\"#FFF\"/></svg>"
     }
   },
   {
@@ -39000,7 +39687,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJm9S2yLTtiy0RovNd8xK80-M",
@@ -39123,7 +39811,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJK-gcoo3tiy0RN2i8Q6uZ_CY",
@@ -39154,7 +39843,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ3w0SCwDtiy0RotBHyJ2MiC4",
@@ -39201,7 +39891,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJvSfUIgDtiy0RpSAkbrMo-UY",
@@ -39232,7 +39923,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ92BjVLftiy0RNBraCaWGuGU",
@@ -39355,7 +40047,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ9wmiBADtiy0Rfd5oSSPF6fs",
@@ -39478,7 +40171,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJBy-dJJftiy0RHny_uF-OCc8",
@@ -39601,7 +40295,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJDWVar6Ttiy0ROWDTVeVeE9I",
@@ -39724,7 +40419,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJoZmrFk3viy0RfFW_hT1qUcw",
@@ -39847,7 +40543,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJk45jBADviy0Rt4xXi9yov54",
@@ -39878,7 +40575,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJfQK2OgDviy0RGz7p4XqaIRc",
@@ -39909,7 +40607,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJe51AuLfpiy0R1mql383esRQ",
@@ -40032,7 +40731,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJW50RAgDviy0RhgipFm6ZeBk",
@@ -40143,7 +40843,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJd-ndBQDviy0RQIryJFqN2SI",
@@ -40174,7 +40875,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJg19_NgDviy0RD5NpW6Nagig",
@@ -40205,7 +40907,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJDchzQWruiy0RhLqfQ4nJRNw",
@@ -40236,7 +40939,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJvdbcctnviy0Reol7GhcZn-Q",
@@ -40267,7 +40971,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJSRHhqIDviy0RIYVeB0HuYNY",
@@ -40378,7 +41083,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJd9wb_DLxiy0RKAMWJG-lGcU",
@@ -40465,7 +41171,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ7YDmHgDxiy0RdHu5d0ziCes",
@@ -40496,7 +41203,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJS7NvZqHxiy0RFx8_KsLdFHU",
@@ -40619,7 +41327,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJMdgxf8ftiy0RQiHNAVGQ0wo",
@@ -40742,7 +41451,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJU1mbTMrtiy0RcMgV-FOlZe4",
@@ -40865,7 +41575,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJs4NE5J_tiy0RtY9nQ4Y9dsU",
@@ -40988,7 +41699,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ485ZHgDtiy0RAbdZhKtNp28",
@@ -41019,7 +41731,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ5YK5bADviy0RSbjKxyBmjGY",
@@ -41142,7 +41855,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJh3fVHgvtiy0Rup-8_EWOztM",
@@ -41253,7 +41967,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ750qBwjtiy0R0Lqg5VNuMms",
@@ -41376,7 +42091,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJFwtsSvrtiy0RC6_nYKWf9S0",
@@ -41407,7 +42123,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ-9h7zhHtiy0R_itrSaaCmMU",
@@ -41530,7 +42247,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJm0avUADtiy0Ra1gXX9BvcFM",
@@ -41653,7 +42371,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJbze1Quzxiy0R5TXx9oh30jw",
@@ -41684,7 +42403,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJPcf5HQDxiy0RXXDrEYvkHP4",
@@ -41807,6 +42527,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "sin-coffee",
+      "name": "Sin Coffee",
+      "shortName": "Sin",
+      "badgeColor": "#1e3a8a",
+      "borderColor": "#3b82f6",
+      "textColor": "#93c5fd",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#1E3A8A\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FBBF24\" font-family=\"sans-serif\">SIN</text></svg>"
     }
   },
   {
@@ -41854,6 +42583,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "koriru",
+      "name": "Koriru Coffee",
+      "shortName": "Koriru",
+      "badgeColor": "#3e2723",
+      "borderColor": "#a1887f",
+      "textColor": "#d7ccc8",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#3E2723\"/><text x=\"12\" y=\"16\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">k.</text></svg>"
     }
   },
   {
@@ -41965,7 +42703,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ-3oxJljpiy0RJ1WOBOL1Jic",
@@ -42088,7 +42827,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJEVCccwDtiy0R37ZP8RLoo_I",
@@ -42118,7 +42858,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJaWPBAgDtiy0RTiVdrHQPCow",
@@ -42146,7 +42887,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ99RdShPtiy0R4FaIlGRwHbw",
@@ -42174,7 +42916,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJZ8oic4Ltiy0RYYF1XO2uoqQ",
@@ -42202,7 +42945,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJFaQMwXXviy0Rw4NLR8L7Cik",
@@ -42230,7 +42974,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJpVeuDgDviy0R0UDHc82n50Y",
@@ -42258,7 +43003,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJx0nwbQDtiy0RFA5IcpGUEW0",
@@ -42286,6 +43032,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "brkh",
+      "name": "BRKH / Sepertiga",
+      "shortName": "BRKH",
+      "badgeColor": "#0f172a",
+      "borderColor": "#eab308",
+      "textColor": "#fef08a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F172A\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.2\" font-weight=\"900\" fill=\"#F59E0B\" font-family=\"sans-serif\">BRKH</text></svg>"
     }
   },
   {
@@ -42314,7 +43069,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJF0ZOR_vtiy0Rt9Qvu7bLKio",
@@ -42341,7 +43097,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJKX3413buiy0RCuS93fsaAIg",
@@ -42368,7 +43125,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJq6qqqtntiy0R0LzWTIg6GZo",
@@ -42394,7 +43152,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJzxxWdADtiy0ReJkeFsgDgUM",
@@ -42422,7 +43181,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJAQg_MC3siy0RKteI3LZjKYY",
@@ -42448,7 +43208,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJOZm2mNDtiy0RrKvvU0Qc7_c",
@@ -42474,7 +43235,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJtQyTQtztiy0RFWJf8HudriE",
@@ -42500,7 +43262,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJsRl8o8Xtiy0R54aaMXNU7lk",
@@ -42527,7 +43290,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ3XMD5-Ltiy0RJSMLXMUCKfY",
@@ -42553,7 +43317,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJhbb_vNztiy0RxuIKIC34tu0",
@@ -42579,7 +43344,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJO0CZcz3xiy0RPniIjH6f-3Y",
@@ -42605,7 +43371,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJF6mZEtvtiy0Rc-QUOOTZQkY",
@@ -42631,7 +43398,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJMVtZOcbtiy0RSnnA097Gab8",
@@ -42658,7 +43426,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ6wODh0_tiy0R1-RaezbNGAQ",
@@ -42684,7 +43453,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJFZ0by7jtiy0Rpkt_q-HILn4",
@@ -42711,7 +43481,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ8WK0P8Xtiy0Ru-3aXhcQq88",
@@ -42737,7 +43508,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJW2cYOwLuiy0Ra54eERPTkJ4",
@@ -42763,7 +43535,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJp2jNpm3uiy0RHV60oXAn7Gc",
@@ -42790,7 +43563,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJs_cNVtjtiy0RAtYshZMa6Lk",
@@ -42816,7 +43590,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJwXM1SFbsiy0RujUUEyo0P4A",
@@ -42843,7 +43618,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ62JNAB_piy0RRWh0AzDfYXc",
@@ -42870,7 +43646,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJw5Jqq3Tuiy0R9KkQrqbqXXQ",
@@ -42896,7 +43673,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ1Ufpkc7tiy0RGpACUpesOm8",
@@ -42922,7 +43700,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJL_ONFhHtiy0RMpDHOCA4a34",
@@ -42948,7 +43727,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJhWNuEdntiy0RsvukqPEG34o",
@@ -42976,7 +43756,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ98mKMADtiy0Rp31f1sdQfl4",
@@ -43004,6 +43785,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "brkh",
+      "name": "BRKH / Sepertiga",
+      "shortName": "BRKH",
+      "badgeColor": "#0f172a",
+      "borderColor": "#eab308",
+      "textColor": "#fef08a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F172A\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.2\" font-weight=\"900\" fill=\"#F59E0B\" font-family=\"sans-serif\">BRKH</text></svg>"
     }
   },
   {
@@ -43032,7 +43822,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJjTjdZFjviy0RJ94ZQsytAn8",
@@ -43058,6 +43849,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "mcdonalds",
+      "name": "McDonald's",
+      "shortName": "McD",
+      "badgeColor": "#dc2626",
+      "borderColor": "#facc15",
+      "textColor": "#fef08a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#DC2626\"/><path d=\"M7 16V9.5a2.5 2.5 0 0 1 5 0V16m0-6.5a2.5 2.5 0 0 1 5 0V16\" stroke=\"#FACC15\" stroke-width=\"2.2\" stroke-linecap=\"round\" fill=\"none\"/></svg>"
     }
   },
   {
@@ -43084,7 +43884,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJDyAmuArtiy0RKtdSkH0Czj0",
@@ -43112,7 +43913,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJe1gqgb_tiy0R5EDjjSAZJNg",
@@ -43140,6 +43942,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "kopi-arobi",
+      "name": "Kopi Arobi",
+      "shortName": "Arobi",
+      "badgeColor": "#78350f",
+      "borderColor": "#f59e0b",
+      "textColor": "#fde68a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#78350F\"/><circle cx=\"12\" cy=\"12\" r=\"8.5\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"1.2\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.5\" font-weight=\"900\" fill=\"#FDE68A\" font-family=\"sans-serif\">AROBI</text></svg>"
     }
   },
   {
@@ -43168,7 +43979,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJS0u87qntiy0Rj0q3Mq4w_2Y",
@@ -43194,7 +44006,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ14s_nbjtiy0Rt6Jm-LHjQJ4",
@@ -43220,7 +44033,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ61-SscXtiy0RmSdCiXv0pbQ",
@@ -43246,7 +44060,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ9TFizT_uiy0R3V85vCX9Z3E",
@@ -43274,7 +44089,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJqeTAf37xiy0RCMhAJeBLgA0",
@@ -43302,7 +44118,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ6RrPF-ftiy0RGkZrteHfM0s",
@@ -43330,7 +44147,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJlTziYOftiy0RucgZpsaBRQw",
@@ -43356,7 +44174,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJuxMHtE3viy0RetPag5WGfkc",
@@ -43382,6 +44201,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "kfc",
+      "name": "KFC",
+      "shortName": "KFC",
+      "badgeColor": "#dc2626",
+      "borderColor": "#ef4444",
+      "textColor": "#fee2e2",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#DC2626\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">KFC</text></svg>"
     }
   },
   {
@@ -43410,6 +44238,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "malam-pagi",
+      "name": "Malam Pagi",
+      "shortName": "MalamPagi",
+      "badgeColor": "#4c1d95",
+      "borderColor": "#a855f7",
+      "textColor": "#f3e8ff",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#4C1D95\"/><path d=\"M12 6a6 6 0 0 0 0 12V6z\" fill=\"#F59E0B\"/><path d=\"M12 6a6 6 0 1 1 0 12V6z\" fill=\"#FFF\"/></svg>"
     }
   },
   {
@@ -43436,7 +44273,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ80DHJAbyiy0RxmW6sM4H2a4",
@@ -43464,7 +44302,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJwWb8PIDziy0R5fs4FQ_MnpU",
@@ -43492,7 +44331,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJgScIusLtiy0RXPZIvs1vKB0",
@@ -43518,7 +44358,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJBYkzqurtiy0R03UVowAAglo",
@@ -43544,7 +44385,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJhzLb7xvqiy0R_4s90x9MmaI",
@@ -43571,7 +44413,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJM4gYTGXDiy0RKGGTyHojJ6I",
@@ -43598,7 +44441,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJb7e-7kvBiy0RJRYbo_rDgyw",
@@ -43626,7 +44470,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJQawEzWXHiy0RsTdh64OMwDQ",
@@ -43652,7 +44497,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ1_XV-DzHiy0RuXs8sI3iyrU",
@@ -43678,7 +44524,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJrS6KNQDtiy0RXN1iA3GwhZ8",
@@ -43709,7 +44556,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJMRy_ytXtiy0R6I6lBCttRv4",
@@ -43832,7 +44680,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJQ1YETQDtiy0RvlwVsofeebc",
@@ -43879,7 +44728,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJnZkJYs3tiy0RxSBKtf9IlXs",
@@ -44002,7 +44852,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ9Zp48JXtiy0R4Ip2TPlsA_s",
@@ -44125,7 +44976,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJZdZheQDtiy0RyStmi4FGtm4",
@@ -44172,6 +45024,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "brkh",
+      "name": "BRKH / Sepertiga",
+      "shortName": "BRKH",
+      "badgeColor": "#0f172a",
+      "borderColor": "#eab308",
+      "textColor": "#fef08a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F172A\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.2\" font-weight=\"900\" fill=\"#F59E0B\" font-family=\"sans-serif\">BRKH</text></svg>"
     }
   },
   {
@@ -44295,7 +45156,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJvU_1thvxiy0RzZljk-Lt5RU",
@@ -44326,7 +45188,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJgSRSR1nxiy0RIr_6khGlaBE",
@@ -44449,6 +45312,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "kopi-arobi",
+      "name": "Kopi Arobi",
+      "shortName": "Arobi",
+      "badgeColor": "#78350f",
+      "borderColor": "#f59e0b",
+      "textColor": "#fde68a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#78350F\"/><circle cx=\"12\" cy=\"12\" r=\"8.5\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"1.2\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.5\" font-weight=\"900\" fill=\"#FDE68A\" font-family=\"sans-serif\">AROBI</text></svg>"
     }
   },
   {
@@ -44572,7 +45444,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJaYWRh9bviy0RY3eyChwVenM",
@@ -44695,7 +45568,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJdVLKSWztiy0RZiMuKDm7_e4",
@@ -44818,7 +45692,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJJ6BR0uLtiy0RSzlzy6g2s9A",
@@ -44941,6 +45816,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "kulo",
+      "name": "Kedai Kopi Kulo",
+      "shortName": "Kulo",
+      "badgeColor": "#5d4037",
+      "borderColor": "#8d6e63",
+      "textColor": "#efebe9",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#5D4037\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.2\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">KULO</text></svg>"
     }
   },
   {
@@ -45052,7 +45936,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJe7qhsTvviy0RdehFJfQaoXk",
@@ -45175,6 +46060,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "sin-coffee",
+      "name": "Sin Coffee",
+      "shortName": "Sin",
+      "badgeColor": "#1e3a8a",
+      "borderColor": "#3b82f6",
+      "textColor": "#93c5fd",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#1E3A8A\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FBBF24\" font-family=\"sans-serif\">SIN</text></svg>"
     }
   },
   {
@@ -45298,7 +46192,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJzUZVdQDpiy0RIHmMEf6LGuU",
@@ -45345,6 +46240,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "brkh",
+      "name": "BRKH / Sepertiga",
+      "shortName": "BRKH",
+      "badgeColor": "#0f172a",
+      "borderColor": "#eab308",
+      "textColor": "#fef08a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F172A\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.2\" font-weight=\"900\" fill=\"#F59E0B\" font-family=\"sans-serif\">BRKH</text></svg>"
     }
   },
   {
@@ -45392,6 +46296,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "koriru",
+      "name": "Koriru Coffee",
+      "shortName": "Koriru",
+      "badgeColor": "#3e2723",
+      "borderColor": "#a1887f",
+      "textColor": "#d7ccc8",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#3E2723\"/><text x=\"12\" y=\"16\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">k.</text></svg>"
     }
   },
   {
@@ -45515,7 +46428,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJud73PwDtiy0RDeuRxWpMSBc",
@@ -45562,7 +46476,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJx8nAxCbtiy0RWiRiQ_S1EXc",
@@ -45609,6 +46524,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "brkh",
+      "name": "BRKH / Sepertiga",
+      "shortName": "BRKH",
+      "badgeColor": "#0f172a",
+      "borderColor": "#eab308",
+      "textColor": "#fef08a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F172A\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.2\" font-weight=\"900\" fill=\"#F59E0B\" font-family=\"sans-serif\">BRKH</text></svg>"
     }
   },
   {
@@ -45732,7 +46656,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJc7nWydDxiy0RMFKQ_9ciiWs",
@@ -45760,7 +46685,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJWTEGmWrtiy0RReul4l9Na2o",
@@ -45788,7 +46714,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ73n4vpLtiy0R143GPFKL8nc",
@@ -45816,7 +46743,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJG0J5OADtiy0RIh7HJtc87nI",
@@ -45843,7 +46771,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJu-ZuD7ntiy0RdsBnFrN47Wc",
@@ -45870,7 +46799,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ_YY2YADyiy0R-RkbL6rY9vM",
@@ -45897,7 +46827,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJGSZsDNHtiy0R88IzWz61c24",
@@ -45925,7 +46856,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJhQ6Wh9Dtiy0RkUXlVwvv_Kw",
@@ -45951,7 +46883,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJpU5w-oztiy0RE0HhtD3kBfM",
@@ -45977,7 +46910,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJb8KPpertiy0RxYa-7MCGpWw",
@@ -46003,7 +46937,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJd9Houtztiy0RIL3Z6JEhBTY",
@@ -46031,7 +46966,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ7_qkkeHxiy0R7pjIhQuXZWY",
@@ -46059,7 +46995,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJFxdtiPTtiy0RKR2CQcqIU08",
@@ -46085,7 +47022,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJUTibbLztiy0RzIPfui3AZOI",
@@ -46111,7 +47049,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJfZvW_Nztiy0R2qrLNxk-D00",
@@ -46137,7 +47076,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJDTiuqADyiy0RqTlQUTF8NeM",
@@ -46163,7 +47103,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJvQIjnNftiy0RN9wR5D3ReSQ",
@@ -46189,7 +47130,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJx5saSf7xiy0Rwe3A5CrA1ns",
@@ -46216,7 +47158,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ0cH_odDtiy0RMemcRIJbrM8",
@@ -46244,7 +47187,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJOT6B19ntiy0REWiUy0uw7X8",
@@ -46271,7 +47215,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ7RzrbLLtiy0RrWdDv4wkULI",
@@ -46298,6 +47243,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "kaledo-stereo",
+      "name": "Kaledo Stereo",
+      "shortName": "Stereo",
+      "badgeColor": "#c2410c",
+      "borderColor": "#fb923c",
+      "textColor": "#ffedd5",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#C2410C\"/><path d=\"M6 13a6 6 0 0 0 12 0H6z\" fill=\"#FFF\"/><path d=\"M9 7c1-1 1-2 1-2m4 2c1-1 1-2 1-2\" stroke=\"#FFF\" stroke-width=\"1.2\"/><circle cx=\"15.5\" cy=\"8.5\" r=\"1\" fill=\"#FDE047\"/><path d=\"M16.5 8.5V6h2\" stroke=\"#FDE047\" stroke-width=\"1\"/></svg>"
     }
   },
   {
@@ -46325,7 +47279,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJsWrvUAvuiy0RORCrToB0ghM",
@@ -46351,7 +47306,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ5-OxbBftiy0Rbf2KL2vK6Bw",
@@ -46377,7 +47333,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJrY5kBAzyiy0RSDZh9LHlNkc",
@@ -46403,7 +47360,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJJT5uUt_tiy0RS-_GAY0xNdc",
@@ -46431,7 +47389,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJtc0dMSvtiy0R-UBeei6CPQI",
@@ -46459,6 +47418,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "tomoro",
+      "name": "Tomoro Coffee",
+      "shortName": "Tomoro",
+      "badgeColor": "#ea580c",
+      "borderColor": "#fb923c",
+      "textColor": "#ffedd5",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#EA580C\"/><path d=\"M7 8h10v2h-4v8h-2v-8H7V8z\" fill=\"#FFF\"/><circle cx=\"17\" cy=\"7\" r=\"1.5\" fill=\"#FFF\"/></svg>"
     }
   },
   {
@@ -46487,6 +47455,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "kopi-arobi",
+      "name": "Kopi Arobi",
+      "shortName": "Arobi",
+      "badgeColor": "#78350f",
+      "borderColor": "#f59e0b",
+      "textColor": "#fde68a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#78350F\"/><circle cx=\"12\" cy=\"12\" r=\"8.5\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"1.2\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.5\" font-weight=\"900\" fill=\"#FDE68A\" font-family=\"sans-serif\">AROBI</text></svg>"
     }
   },
   {
@@ -46513,6 +47490,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "kfc",
+      "name": "KFC",
+      "shortName": "KFC",
+      "badgeColor": "#dc2626",
+      "borderColor": "#ef4444",
+      "textColor": "#fee2e2",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#DC2626\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">KFC</text></svg>"
     }
   },
   {
@@ -46539,7 +47525,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJVfuOiQjtiy0RSGmax0_wgOk",
@@ -46565,7 +47552,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ71xyCfrxiy0Raq7zd1E077A",
@@ -46591,7 +47579,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJFRRDNADviy0ReDWN6Ihn3Q0",
@@ -46619,7 +47608,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJr3EvdwDtiy0RhHGIJ1arR_8",
@@ -46647,7 +47637,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJweMrCUzpiy0R7X58fPqYIOE",
@@ -46675,7 +47666,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJk7cPtNLpiy0RY5PAz2lqOBw",
@@ -46701,7 +47693,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJb7yqE13piy0RQlKHVOn1laA",
@@ -46727,7 +47720,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ7ZIbxwrtiy0RHCVvrLpKke4",
@@ -46755,7 +47749,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJCTYXSJbDiy0RyJ9whwLS_50",
@@ -46781,7 +47776,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ_7XWmzLtiy0R-rJ1pRsvHmQ",
@@ -46904,7 +47900,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJXb-jJQDtiy0RXswXcj6UD-k",
@@ -46951,7 +47948,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ78GTUXDtiy0RUrVnXdN6Soo",
@@ -46998,7 +47996,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ43mEa-7viy0R5Q644xLnWxM",
@@ -47121,6 +48120,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "ribelv",
+      "name": "Ribelv Coffee",
+      "shortName": "Ribelv",
+      "badgeColor": "#0f766e",
+      "borderColor": "#14b8a6",
+      "textColor": "#99f6e4",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F766E\"/><text x=\"12\" y=\"16\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">R</text></svg>"
     }
   },
   {
@@ -47168,6 +48176,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "brkh",
+      "name": "BRKH / Sepertiga",
+      "shortName": "BRKH",
+      "badgeColor": "#0f172a",
+      "borderColor": "#eab308",
+      "textColor": "#fef08a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F172A\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.2\" font-weight=\"900\" fill=\"#F59E0B\" font-family=\"sans-serif\">BRKH</text></svg>"
     }
   },
   {
@@ -47291,7 +48308,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJh1gvcADtiy0RSGSIRp4RXhM",
@@ -47322,7 +48340,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJTejQGwDtiy0RUT0IlpWhcNs",
@@ -47445,6 +48464,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "ribelv",
+      "name": "Ribelv Coffee",
+      "shortName": "Ribelv",
+      "badgeColor": "#0f766e",
+      "borderColor": "#14b8a6",
+      "textColor": "#99f6e4",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F766E\"/><text x=\"12\" y=\"16\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">R</text></svg>"
     }
   },
   {
@@ -47568,7 +48596,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJvTne3-_tiy0R5ifHlPXFxAo",
@@ -47615,7 +48644,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ0WQJagDtiy0Re6b_Egq3o08",
@@ -47662,7 +48692,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJYe9FGQDviy0RDLVK-NyLZ_k",
@@ -47785,7 +48816,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJe_8VTmPtiy0RV1_K9DkUI4Y",
@@ -47908,7 +48940,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ00BbOFbsiy0RolbstEGpUAk",
@@ -48031,7 +49064,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJqxwVX17tiy0RuLe8DCekxKI",
@@ -48154,7 +49188,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJj82vN3btiy0Rc4bKej-685Q",
@@ -48185,7 +49220,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJrQ3pYgDziy0RjpHgTMDzeCY",
@@ -48308,7 +49344,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ52vClvLtiy0R7qKkfWdp8kc",
@@ -48336,7 +49373,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ5xDYRADtiy0ReIuQvWbK30c",
@@ -48362,7 +49400,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJH4P6xtrxiy0Rgne1ENZazvc",
@@ -48388,7 +49427,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJMTsgyfnxiy0RbKf398eCVYU",
@@ -48414,7 +49454,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJUZEZLdXtiy0RfUxdk4COqEs",
@@ -48442,7 +49483,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJOdGi_Kftiy0RTiLRH6e6gWo",
@@ -48470,7 +49512,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJi1raj8Dtiy0R6K60NONFSqo",
@@ -48496,7 +49539,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJpaufC_3xiy0RoZNZF65ecVE",
@@ -48523,7 +49567,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ_xyRPl-4iy0RheBS9GUXxE8",
@@ -48550,7 +49595,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJHYr9IlPsiy0RUqk9DMBdCMw",
@@ -48577,7 +49623,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJj_GNRX3riy0ROGrPGu3R6ok",
@@ -48604,7 +49651,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJz0lYYsfGiy0Rt2J6_5V2nB4",
@@ -48630,7 +49678,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJya9E1Nbviy0RHSPmffemSso",
@@ -48658,7 +49707,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJMYXpmx_tiy0RmM_KohYCWiY",
@@ -48686,7 +49736,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ2zgTJtPtiy0RsJwLKRjpUec",
@@ -48712,7 +49763,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJUdHoTgLtiy0RG_WnAC8dLOY",
@@ -48740,7 +49792,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJrUFJNwDriy0R5OA86ew4LLI",
@@ -48768,6 +49821,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "kopi-arobi",
+      "name": "Kopi Arobi",
+      "shortName": "Arobi",
+      "badgeColor": "#78350f",
+      "borderColor": "#f59e0b",
+      "textColor": "#fde68a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#78350F\"/><circle cx=\"12\" cy=\"12\" r=\"8.5\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"1.2\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.5\" font-weight=\"900\" fill=\"#FDE68A\" font-family=\"sans-serif\">AROBI</text></svg>"
     }
   },
   {
@@ -48794,7 +49856,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJjeLkqJTtiy0RNPVjyu0S_Fw",
@@ -48822,7 +49885,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ6wKAKgTqiy0RfDbxN56yYJ0",
@@ -48848,7 +49912,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJPw_ANmrBiy0RKuXz3fFx5cU",
@@ -48874,7 +49939,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJv0qRgWztiy0RlPK9QT4xDFU",
@@ -48997,7 +50063,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJQXAy0U_tiy0RCcQdJmWBc9Y",
@@ -49044,6 +50111,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "brkh",
+      "name": "BRKH / Sepertiga",
+      "shortName": "BRKH",
+      "badgeColor": "#0f172a",
+      "borderColor": "#eab308",
+      "textColor": "#fef08a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F172A\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.2\" font-weight=\"900\" fill=\"#F59E0B\" font-family=\"sans-serif\">BRKH</text></svg>"
     }
   },
   {
@@ -49167,7 +50243,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ_7HDKHTuiy0RmCRBiidpA-o",
@@ -49290,7 +50367,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJSbZYZQDxiy0RutV_X1Z5Fss",
@@ -49337,6 +50415,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "koriru",
+      "name": "Koriru Coffee",
+      "shortName": "Koriru",
+      "badgeColor": "#3e2723",
+      "borderColor": "#a1887f",
+      "textColor": "#d7ccc8",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#3E2723\"/><text x=\"12\" y=\"16\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">k.</text></svg>"
     }
   },
   {
@@ -49459,6 +50546,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "warkop-harapan",
+      "name": "Warkop Harapan",
+      "shortName": "Harapan",
+      "badgeColor": "#b45309",
+      "borderColor": "#fbbf24",
+      "textColor": "#fef3c7",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#B45309\"/><path d=\"M8 8h8v7a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V8z\" fill=\"#FFF\"/><text x=\"12\" y=\"14\" text-anchor=\"middle\" font-size=\"6\" font-weight=\"900\" fill=\"#B45309\" font-family=\"sans-serif\">H</text></svg>"
     }
   },
   {
@@ -49582,7 +50678,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ84r4ep7tiy0RV0o3QbRd29Y",
@@ -49705,7 +50802,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJV3hrgOztiy0Rebe_H7xrlWQ",
@@ -49828,7 +50926,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ92SyNwDtiy0R31pcD-pMPDw",
@@ -49951,7 +51050,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJTcsRdgDtiy0ReU2rU4lOnJE",
@@ -49982,6 +51082,15 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
+    },
+    "franchise": {
+      "id": "sin-coffee",
+      "name": "Sin Coffee",
+      "shortName": "Sin",
+      "badgeColor": "#1e3a8a",
+      "borderColor": "#3b82f6",
+      "textColor": "#93c5fd",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#1E3A8A\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FBBF24\" font-family=\"sans-serif\">SIN</text></svg>"
     }
   },
   {
@@ -50105,7 +51214,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJLzRF5Hnuiy0ReOdW4T2fNQc",
@@ -50228,7 +51338,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJjxIGPADxiy0RzzaHunC83n4",
@@ -50259,7 +51370,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJt829lWrpiy0RIGxuOAf650k",
@@ -50306,7 +51418,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJDYyWCQDpiy0R2AVx8rv6HTc",
@@ -50337,7 +51450,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJuRNyCgjtiy0RxP0jllFb-n8",
@@ -50365,7 +51479,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJP-wEKgDviy0RsLC_9qxH1Ac",
@@ -50393,6 +51508,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "koriru",
+      "name": "Koriru Coffee",
+      "shortName": "Koriru",
+      "badgeColor": "#3e2723",
+      "borderColor": "#a1887f",
+      "textColor": "#d7ccc8",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#3E2723\"/><text x=\"12\" y=\"16\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">k.</text></svg>"
     }
   },
   {
@@ -50421,7 +51545,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJJxNqwt3tiy0Rv3KPoherR2o",
@@ -50448,7 +51573,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJz6aEJNTtiy0R4RNJf2qIl4E",
@@ -50474,7 +51600,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJGXFCj3btiy0R0F45mdL_gxw",
@@ -50500,7 +51627,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJWXOp37btiy0RImCG4xRvpck",
@@ -50527,7 +51655,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJWayAQuLtiy0RsYb-a7ubj_w",
@@ -50555,7 +51684,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJB4Ovu-ntiy0Rn5AbhfAj02w",
@@ -50581,6 +51711,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "richeese",
+      "name": "Richeese Factory",
+      "shortName": "Richeese",
+      "badgeColor": "#e11d48",
+      "borderColor": "#fb7185",
+      "textColor": "#ffe4e6",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#E11D48\"/><path d=\"M6 15l12-3v3H6z\" fill=\"#FACC15\"/><circle cx=\"13\" cy=\"13.5\" r=\"1\" fill=\"#E11D48\"/><circle cx=\"9\" cy=\"14\" r=\"0.8\" fill=\"#E11D48\"/></svg>"
     }
   },
   {
@@ -50607,7 +51746,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJrQ6-q_Ppiy0RW6Q1FIRGS9M",
@@ -50635,6 +51775,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "sin-coffee",
+      "name": "Sin Coffee",
+      "shortName": "Sin",
+      "badgeColor": "#1e3a8a",
+      "borderColor": "#3b82f6",
+      "textColor": "#93c5fd",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#1E3A8A\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FBBF24\" font-family=\"sans-serif\">SIN</text></svg>"
     }
   },
   {
@@ -50662,7 +51811,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJyb1Gb3buiy0RjFFHvsZN9mA",
@@ -50785,7 +51935,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJq6oK5oDviy0RW6Aew841iVY",
@@ -50908,6 +52059,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "kopi-arobi",
+      "name": "Kopi Arobi",
+      "shortName": "Arobi",
+      "badgeColor": "#78350f",
+      "borderColor": "#f59e0b",
+      "textColor": "#fde68a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#78350F\"/><circle cx=\"12\" cy=\"12\" r=\"8.5\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"1.2\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.5\" font-weight=\"900\" fill=\"#FDE68A\" font-family=\"sans-serif\">AROBI</text></svg>"
     }
   },
   {
@@ -51031,7 +52191,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ7Xw9cQDtiy0RSVNysbztHcI",
@@ -51078,7 +52239,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJDd7GRKXtiy0Rso30MS0wvdc",
@@ -51189,7 +52351,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJb1QoRgDxiy0RHgncMHA6SgA",
@@ -51312,7 +52475,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJRWvjnaXtiy0R-f4_VKGt-n8",
@@ -51340,7 +52504,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJObduPQDtiy0R5ec8We4FZ_0",
@@ -51366,7 +52531,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJeZ01BMvtiy0REQFz0dSn0zw",
@@ -51392,7 +52558,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJy3Xn97_tiy0RWzE6cc7I9l0",
@@ -51418,7 +52585,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJtY13IQDziy0R2QvwA9WgLuw",
@@ -51444,7 +52612,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ6Wf21lnpiy0Riv1kNjdoEvY",
@@ -51471,7 +52640,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ9wcoOd7tiy0Rr847_DxLkUo",
@@ -51499,7 +52669,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJT18yIFjpiy0REttVBtkIfCk",
@@ -51525,7 +52696,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJn-tBcq7uiy0RiiTRqq4ao9Y",
@@ -51551,7 +52723,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ0QgDnZntiy0RQY52B7oe8ck",
@@ -51579,7 +52752,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJg9QyYyfBiy0RBF94DQXaeJM",
@@ -51607,7 +52781,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJAYLo75Ltiy0RalcGnsgvfH4",
@@ -51633,7 +52808,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJuafcFNzBiy0RwRHqrQfi3Ys",
@@ -51661,7 +52837,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJe-jXMVPBiy0RRyKEVNKSMyQ",
@@ -51688,7 +52865,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJWWd7qMfBiy0R4k6UkiMde3w",
@@ -51714,7 +52892,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJGZYtWbDBiy0RM01ftTRw2yY",
@@ -51740,7 +52919,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJxxypMgDtiy0R46DQSzvInxg",
@@ -51787,6 +52967,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "kopi-arobi",
+      "name": "Kopi Arobi",
+      "shortName": "Arobi",
+      "badgeColor": "#78350f",
+      "borderColor": "#f59e0b",
+      "textColor": "#fde68a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#78350F\"/><circle cx=\"12\" cy=\"12\" r=\"8.5\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"1.2\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.5\" font-weight=\"900\" fill=\"#FDE68A\" font-family=\"sans-serif\">AROBI</text></svg>"
     }
   },
   {
@@ -51909,7 +53098,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ6SCj7tztiy0Ri0kEOK9QZIc",
@@ -52019,7 +53209,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ25jFFwDxiy0R0Mc3pTOBgMI",
@@ -52050,6 +53241,15 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
+    },
+    "franchise": {
+      "id": "point-coffee",
+      "name": "Point Coffee",
+      "shortName": "Point",
+      "badgeColor": "#059669",
+      "borderColor": "#34d399",
+      "textColor": "#d1fae5",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#059669\"/><path d=\"M12 4a5 5 0 0 0-5 5c0 3.8 5 11 5 11s5-7.2 5-11a5 5 0 0 0-5-5zm0 7.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z\" fill=\"#FFF\"/><circle cx=\"12\" cy=\"9\" r=\"1.3\" fill=\"#059669\"/></svg>"
     }
   },
   {
@@ -52097,7 +53297,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJp7eMs-rtiy0Ra-KPw0kpALA",
@@ -52220,7 +53421,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJlwX5PgDviy0Rl7X4qg584TM",
@@ -52267,7 +53469,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJd57P-PLtiy0RJo2GvdegrHw",
@@ -52294,7 +53497,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ5f0klfTxiy0RgymGJDMZk5Q",
@@ -52320,7 +53524,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJt4P4GgDtiy0RYDYUDr6neNk",
@@ -52348,7 +53553,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJxz3Tro7tiy0R-oyTxuL8lbE",
@@ -52471,7 +53677,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJLUAyjnntiy0ROSdqfCMLGPA",
@@ -52499,7 +53706,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ492MsPzviy0RFo1rfrn7MOg",
@@ -52525,7 +53733,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJEYqy4TDtiy0RJ8Z7wuTv-1s",
@@ -52553,7 +53762,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJhf4j2NXtiy0RBe1V1w9ue2E",
@@ -52579,7 +53789,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJH087A57tiy0RFPO43qorqf8",
@@ -52607,7 +53818,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ873RnyXxiy0RddmtYudJmh4",
@@ -52635,7 +53847,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJm5RDTwDxiy0RXBFwqxvRo48",
@@ -52661,7 +53874,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJB3ixMQDpiy0REaNk67t23KE",
@@ -52689,6 +53903,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "ribelv",
+      "name": "Ribelv Coffee",
+      "shortName": "Ribelv",
+      "badgeColor": "#0f766e",
+      "borderColor": "#14b8a6",
+      "textColor": "#99f6e4",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F766E\"/><text x=\"12\" y=\"16\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"900\" fill=\"#FFF\" font-family=\"sans-serif\">R</text></svg>"
     }
   },
   {
@@ -52715,7 +53938,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ4fkh7Rztiy0R5haeHWoCTKM",
@@ -52743,7 +53967,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJMxGKHQDviy0RE64hXyqQBDw",
@@ -52774,6 +53999,15 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
+    },
+    "franchise": {
+      "id": "fore",
+      "name": "Fore Coffee",
+      "shortName": "Fore",
+      "badgeColor": "#064e3b",
+      "borderColor": "#10b981",
+      "textColor": "#d1fae5",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#064E3B\"/><path d=\"M12 5C8 5 6 9 6 13c0 3 2 6 6 6s6-3 6-6c0-4-2-8-6-8zm-1 12c-2.5 0-3.8-1.8-3.8-4 0-2.5 1.5-5 3.8-6.5v10.5z\" fill=\"#FFF\"/></svg>"
     }
   },
   {
@@ -52897,7 +54131,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ_4RUIQDtiy0R911WuuVWp1Y",
@@ -52928,6 +54163,15 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
+    },
+    "franchise": {
+      "id": "point-coffee",
+      "name": "Point Coffee",
+      "shortName": "Point",
+      "badgeColor": "#059669",
+      "borderColor": "#34d399",
+      "textColor": "#d1fae5",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#059669\"/><path d=\"M12 4a5 5 0 0 0-5 5c0 3.8 5 11 5 11s5-7.2 5-11a5 5 0 0 0-5-5zm0 7.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z\" fill=\"#FFF\"/><circle cx=\"12\" cy=\"9\" r=\"1.3\" fill=\"#059669\"/></svg>"
     }
   },
   {
@@ -53051,7 +54295,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ6QG3GGvtiy0R8OZZziKteG8",
@@ -53079,6 +54324,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "brkh",
+      "name": "BRKH / Sepertiga",
+      "shortName": "BRKH",
+      "badgeColor": "#0f172a",
+      "borderColor": "#eab308",
+      "textColor": "#fef08a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#0F172A\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.2\" font-weight=\"900\" fill=\"#F59E0B\" font-family=\"sans-serif\">BRKH</text></svg>"
     }
   },
   {
@@ -53107,7 +54361,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJU4vWo4nriy0RrH0XdbqouWc",
@@ -53133,7 +54388,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJZdTIL2_tiy0RQdmLvrfR2gU",
@@ -53256,6 +54512,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "mixue",
+      "name": "Mixue",
+      "shortName": "Mixue",
+      "badgeColor": "#e11d48",
+      "borderColor": "#fb7185",
+      "textColor": "#ffe4e6",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#E11D48\"/><circle cx=\"12\" cy=\"14\" r=\"4\" fill=\"#FFF\"/><circle cx=\"12\" cy=\"8.5\" r=\"3\" fill=\"#FFF\"/><path d=\"M10 6l2-2 2 2z\" fill=\"#FACC15\"/></svg>"
     }
   },
   {
@@ -53283,7 +54548,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJb6T2Ih_Biy0R6eYoJSEL86Y",
@@ -53311,7 +54577,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJcbeSYADxiy0RWcD7-_41-F4",
@@ -53342,7 +54609,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ7Vh7agDviy0RCGg8MUSlJjE",
@@ -53389,7 +54657,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJwxhqIgDtiy0RRfokEkjl9gc",
@@ -53417,7 +54686,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ-VD6EQXtiy0RGe1Wgsindlc",
@@ -53445,6 +54715,15 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
+    },
+    "franchise": {
+      "id": "kopi-arobi",
+      "name": "Kopi Arobi",
+      "shortName": "Arobi",
+      "badgeColor": "#78350f",
+      "borderColor": "#f59e0b",
+      "textColor": "#fde68a",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#78350F\"/><circle cx=\"12\" cy=\"12\" r=\"8.5\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"1.2\"/><text x=\"12\" y=\"14.5\" text-anchor=\"middle\" font-size=\"6.5\" font-weight=\"900\" fill=\"#FDE68A\" font-family=\"sans-serif\">AROBI</text></svg>"
     }
   },
   {
@@ -53473,7 +54752,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJzZG-CPTBiy0REaef61lpeyA",
@@ -53499,7 +54779,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJH0eLd5bviy0Rpa1SBtFvrDU",
@@ -53530,7 +54811,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJC35-QQDviy0RRdmv39f-oGU",
@@ -53653,7 +54935,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJVdR_LQDtiy0RgG7v8drt_MY",
@@ -53679,7 +54962,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ7TELSgDviy0RxXwtAg91088",
@@ -53802,7 +55086,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJtXJVU-Ltiy0R-95kmK7bung",
@@ -53849,7 +55134,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJDYZWS0Ttiy0RIBEaXXMdQds",
@@ -53972,7 +55258,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJS1l6pirriy0R0ESbSHzuXiQ",
@@ -53998,7 +55285,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJoUKRvgbviy0Rs09ISppUhWo",
@@ -54045,7 +55333,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJKfTUXH7xiy0RZosjmsU7Elk",
@@ -54072,7 +55361,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJR2venIrziy0RNsseN9t29F8",
@@ -54098,7 +55388,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJm52O1Zjpiy0RmeEigPDJpSE",
@@ -54124,7 +55415,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJIc3LRQDriy0RV1y7kHrlk94",
@@ -54152,7 +55444,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJNyS24tbtiy0R-c22TooSkrc",
@@ -54275,7 +55568,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ8_Tr-Rftiy0RXFPNvVW-Sq8",
@@ -54386,7 +55680,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJA5LHDQDziy0RY-UaB_u8nLk",
@@ -54414,7 +55709,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJT9HmVJrxiy0RWh26QZrzgWw",
@@ -54537,7 +55833,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ6fzWIgDtiy0RtJFyeHzVQag",
@@ -54563,7 +55860,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJfZ1MXgDtiy0RL344WihsZQ8",
@@ -54686,6 +55984,15 @@
           }
         }
       ]
+    },
+    "franchise": {
+      "id": "sin-coffee",
+      "name": "Sin Coffee",
+      "shortName": "Sin",
+      "badgeColor": "#1e3a8a",
+      "borderColor": "#3b82f6",
+      "textColor": "#93c5fd",
+      "logoSvg": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#1E3A8A\"/><text x=\"12\" y=\"15\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"900\" fill=\"#FBBF24\" font-family=\"sans-serif\">SIN</text></svg>"
     }
   },
   {
@@ -54714,7 +56021,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJb2L_F5ntiy0RVr4nIAwqGr8",
@@ -54742,7 +56050,8 @@
       "openTime": null,
       "closeTime": null,
       "periods": []
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJA-X2TwDtiy0RzH9gLnDQ6pc",
@@ -54773,7 +56082,8 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJfSE5ZQDviy0RxA6mE8Dni4M",
@@ -54820,7 +56130,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJyZRHyvzviy0RUNk8xPMYDwU",
@@ -54943,7 +56254,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJ5RIjXgDxiy0RsiHd_IKbBxk",
@@ -55066,7 +56378,8 @@
           }
         }
       ]
-    }
+    },
+    "franchise": null
   },
   {
     "id": "ChIJAaZmDwDxiy0RRt3PwSpjnyI",
@@ -55097,6 +56410,7 @@
       "weekdayDescriptions": [
         "Jam buka bervariasi"
       ]
-    }
+    },
+    "franchise": null
   }
 ]

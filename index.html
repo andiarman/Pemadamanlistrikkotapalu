@@ -276,17 +276,17 @@
         display: none !important;
       }
       #culinary-legend {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
       }
       @media (min-width: 621px) and (max-width: 980px) {
         #culinary-legend {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          width: min(560px, calc(100vw - 120px));
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          width: min(660px, calc(100vw - 120px));
         }
       }
       @media (max-width: 620px) {
         #culinary-legend {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
         }
       }
       #culinary-legend .legend-item[data-cat="cafe"][aria-pressed="true"] {
@@ -300,6 +300,56 @@
         background: rgba(56, 189, 248, .15);
         color: #bae6fd;
         box-shadow: 0 0 14px rgba(56, 189, 248, .25);
+      }
+      #culinary-legend .legend-item[data-cat="franchise"][aria-pressed="true"] {
+        border-color: rgba(168, 85, 247, .75);
+        background: rgba(168, 85, 247, .15);
+        color: #e9d5ff;
+        box-shadow: 0 0 14px rgba(168, 85, 247, .25);
+      }
+      .brand-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .brand-chip-logo {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        flex: 0 0 16px;
+      }
+      .brand-chip-logo svg {
+        width: 16px;
+        height: 16px;
+        display: block;
+      }
+      .map-badge-marker.is-franchise {
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+        border-width: 1.5px;
+      }
+      .map-badge-marker.is-franchise .badge-glyph {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .map-badge-marker.is-franchise .badge-glyph svg {
+        width: 13px;
+        height: 13px;
+        display: block;
+      }
+      .culinary-popup-franchise-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 3px 8px;
+        border-radius: 6px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.14);
       }
       .map-badge-marker.status-cafe {
         border: 1px solid #f59e0b;
@@ -3040,6 +3090,7 @@
           </div>
         </div>
 
+        <!-- Row 1: Kategori Filter Utama -->
         <button class="legend-item culinary-cat-btn" type="button" data-cat="all" aria-pressed="true">
           <i class="legend-icon legend-icon-all" aria-hidden="true"></i>
           <span>Semua <b id="cul-count-all">0</b></span>
@@ -3052,7 +3103,12 @@
           <i class="legend-icon" aria-hidden="true">🍽️</i>
           <span>Resto <b id="cul-count-resto">0</b></span>
         </button>
+        <button class="legend-item culinary-cat-btn" type="button" data-cat="franchise" aria-pressed="false">
+          <i class="legend-icon" aria-hidden="true">🏢</i>
+          <span>Franchise <b id="cul-count-franchise">0</b></span>
+        </button>
 
+        <!-- Row 2: Jam Buka -->
         <div class="session-filter" id="culinary-session-filter">
           <span class="legend-label">Jam Buka</span>
           <div class="session-list" id="culinary-session-list" role="group" aria-label="Saring menurut jam buka operasional">
@@ -3071,7 +3127,15 @@
           </div>
         </div>
 
-        <span class="legend-note">☕ Badge cokelat = Coffeeshop & Cafe · 🍽️ Badge biru = Resto & Rumah Makan · 🟢 Label hijau = Buka saat ini (Live WITA) · ⚡ 24 Jam = Buka nonstop.</span>
+        <!-- Row 3: Franchise & Multi-Cabang Populer Palu -->
+        <div class="session-filter" id="culinary-brand-filter">
+          <span class="legend-label">Brand</span>
+          <div class="session-list" id="culinary-brand-list" role="group" aria-label="Saring menurut brand franchise">
+            <!-- Diisi otomatis oleh JavaScript dengan logo brand dan jumlah cabang -->
+          </div>
+        </div>
+
+        <span class="legend-note">🏢 Logo brand = Jaringan resmi/franchise · ☕ Cokelat = Cafe · 🍽️ Biru = Resto · 🟢 Hijau = Buka sekarang (Live WITA) · ⚡ 24 Jam = Buka nonstop.</span>
       </div>
 
       <div id="rtrw-legend" class="rtrw-legend" aria-label="Legenda RTRW Kota Palu">
@@ -3414,8 +3478,9 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       };
 
       const culinaryFilterState = {
-        category: "all", // "all" | "cafe" | "resto"
-        time: "all" // "all" | "open-now" | "24h" | "scheduled"
+        category: "all", // "all" | "cafe" | "resto" | "franchise"
+        time: "all", // "all" | "open-now" | "24h" | "scheduled"
+        brand: "all" // "all" | brand id
       };
 
       function getWitaHour() {
@@ -3456,11 +3521,17 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       }
 
       function matchesCulinaryFilter(p) {
-        // 1. Kategori (Metode tombol identik peta padam: Semua / Cafe / Resto)
+        // 1. Kategori (Semua / Cafe / Resto / Franchise)
         if (culinaryFilterState.category === "cafe" && p.category !== "cafe") return false;
         if (culinaryFilterState.category === "resto" && p.category !== "resto") return false;
+        if (culinaryFilterState.category === "franchise" && !p.franchise) return false;
 
-        // 2. Jam Buka (Live Time Jam Sekarang, Buka 24 Jam, Jam Tertentu)
+        // 2. Filter Spesifik Brand / Franchise
+        if (culinaryFilterState.brand !== "all") {
+          if (!p.franchise || p.franchise.id !== culinaryFilterState.brand) return false;
+        }
+
+        // 3. Jam Buka (Live Time Jam Sekarang, Buka 24 Jam, Jam Tertentu)
         if (culinaryFilterState.time === "open-now") {
           if (!isPlaceOpenNow(p)) return false;
         } else if (culinaryFilterState.time === "24h") {
@@ -3477,18 +3548,31 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       function buildCulinaryBadgeHtml(p) {
         const isCafe = p.category === "cafe";
         const catClass = isCafe ? "cafe" : "resto";
-        const glyphIcon = isCafe
+        const f = p.franchise;
+
+        let glyphIcon = isCafe
           ? `<svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>`
           : `<svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2v20M18 8a3 3 0 0 1 0-6M6 2v20M3 2v6a3 3 0 0 0 6 0V2"/></svg>`;
+
+        let badgeExtraClass = "";
+        let badgeStyle = "";
+        let labelText = p.rating ? `${Number(p.rating).toFixed(1)} ⭐` : "4.5 ⭐";
+
+        if (f) {
+          glyphIcon = f.logoSvg;
+          badgeExtraClass = "is-franchise";
+          badgeStyle = `border-color:${f.borderColor || '#a855f7'}; background:rgba(11,18,32,0.95);`;
+          labelText = f.shortName;
+        }
 
         const ratingVal = p.rating ? Number(p.rating).toFixed(1) : "4.5";
         const barPct = Math.min(100, Math.max(10, Math.round((Number(ratingVal) / 5) * 100)));
 
         return `
-          <div class="map-badge-marker status-${catClass}" title="${escapeHtml(p.name)}: ${escapeHtml(p.address)}">
+          <div class="map-badge-marker status-${catClass} ${badgeExtraClass}" style="${badgeStyle}" title="${escapeHtml(p.name)}: ${escapeHtml(p.address)}">
             <div class="badge-row">
               <span class="badge-glyph" aria-hidden="true">${glyphIcon}</span>
-              <span class="badge-time-text">${ratingVal} ⭐</span>
+              <span class="badge-time-text">${escapeHtml(labelText)}</span>
             </div>
             <div class="badge-bar-track" aria-hidden="true">
               <div class="badge-bar-fill" style="width: ${barPct}%;"></div>
@@ -3497,12 +3581,71 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         `;
       }
 
+      function renderCulinaryBrandFilterList() {
+        const brandListEl = document.getElementById("culinary-brand-list");
+        if (!brandListEl || !culinaryLayers.allPlaces || !culinaryLayers.allPlaces.length) return;
+
+        // Hitung frekuensi per brand
+        const brandMap = new Map();
+        for (const p of culinaryLayers.allPlaces) {
+          if (p.franchise) {
+            const f = p.franchise;
+            if (!brandMap.has(f.id)) {
+              brandMap.set(f.id, {
+                id: f.id,
+                name: f.name,
+                shortName: f.shortName,
+                logoSvg: f.logoSvg,
+                count: 0
+              });
+            }
+            brandMap.get(f.id).count++;
+          }
+        }
+
+        const brands = Array.from(brandMap.values()).sort((a, b) => b.count - a.count);
+
+        let html = `
+          <button class="session-item brand-chip ${culinaryFilterState.brand === 'all' ? 'active' : ''}" type="button" data-brand="all" aria-pressed="${culinaryFilterState.brand === 'all' ? 'true' : 'false'}">
+            <b>Semua Brand</b>
+          </button>
+        `;
+
+        for (const b of brands) {
+          const isActive = culinaryFilterState.brand === b.id;
+          html += `
+            <button class="session-item brand-chip ${isActive ? 'active' : ''}" type="button" data-brand="${escapeHtml(b.id)}" aria-pressed="${isActive ? 'true' : 'false'}" title="Lihat ${b.count} cabang ${escapeHtml(b.name)} di Palu">
+              <span class="brand-chip-logo">${b.logoSvg}</span>
+              <span>${escapeHtml(b.name)} <b style="opacity:0.85;">(${b.count})</b></span>
+            </button>
+          `;
+        }
+
+        brandListEl.innerHTML = html;
+
+        // Pasang event listener untuk tiap brand chip
+        const chips = brandListEl.querySelectorAll(".brand-chip");
+        chips.forEach(chip => {
+          chip.addEventListener("click", () => {
+            const targetBrand = chip.dataset.brand || "all";
+            if (culinaryFilterState.brand === targetBrand && targetBrand !== "all") {
+              culinaryFilterState.brand = "all";
+            } else {
+              culinaryFilterState.brand = targetBrand;
+            }
+            renderCulinaryBrandFilterList();
+            applyCulinaryFilter();
+          });
+        });
+      }
+
       function updateCulinaryCounts() {
         if (!culinaryLayers.allPlaces || !culinaryLayers.allPlaces.length) return;
 
         let totalPlaces = culinaryLayers.allPlaces.length;
         let totalCafe = 0;
         let totalResto = 0;
+        let totalFranchise = 0;
         let totalOpenNow = 0;
         let total24h = 0;
         let totalScheduled = 0;
@@ -3510,6 +3653,8 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         for (const p of culinaryLayers.allPlaces) {
           if (p.category === "cafe") totalCafe++;
           else totalResto++;
+
+          if (p.franchise) totalFranchise++;
 
           const is24 = p.operatingHours?.isOpen24Hours || (p.name || "").toLowerCase().includes("24 jam");
           if (is24) total24h++;
@@ -3521,6 +3666,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         const allEl = document.getElementById("cul-count-all");
         const cafeEl = document.getElementById("cul-count-cafe");
         const restoEl = document.getElementById("cul-count-resto");
+        const franEl = document.getElementById("cul-count-franchise");
         const chipOpenEl = document.getElementById("cul-chip-opennow");
         const chip24hEl = document.getElementById("cul-chip-24h");
         const chipSchedEl = document.getElementById("cul-chip-scheduled");
@@ -3528,6 +3674,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         if (allEl) allEl.textContent = totalPlaces;
         if (cafeEl) cafeEl.textContent = totalCafe;
         if (restoEl) restoEl.textContent = totalResto;
+        if (franEl) franEl.textContent = totalFranchise;
         if (chipOpenEl) chipOpenEl.textContent = `(${totalOpenNow})`;
         if (chip24hEl) chip24hEl.textContent = `(${total24h})`;
         if (chipSchedEl) chipSchedEl.textContent = `(${totalScheduled})`;
@@ -3596,13 +3743,14 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             const isCafe = p.category === "cafe";
             const iconEmoji = isCafe ? "☕" : "🍽️";
             const tagClass = isCafe ? "cafe" : "resto";
+            const f = p.franchise;
 
             const marker = L.marker([p.lat, p.lon], {
               icon: L.divIcon({
                 className: `street-marker-icon culinary-marker-icon`,
                 html: buildCulinaryBadgeHtml(p),
-                iconSize: [58, 22],
-                iconAnchor: [29, 11]
+                iconSize: [64, 22],
+                iconAnchor: [32, 11]
               }),
               keyboard: true
             });
@@ -3610,15 +3758,23 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             marker.feature = { properties: p };
             marker.culinaryCategory = p.category;
 
-            marker.bindTooltip(`<b>${escapeHtml(p.name)}</b><br><small style="color:#94a3b8;">${escapeHtml(p.categoryLabel)} · ⭐ ${p.rating}</small>`, {
+            const tooltipTitle = f ? `[${f.shortName}] ${p.name}` : p.name;
+            marker.bindTooltip(`<b>${escapeHtml(tooltipTitle)}</b><br><small style="color:#94a3b8;">${escapeHtml(p.categoryLabel)} · ⭐ ${p.rating}</small>`, {
               permanent: false,
               direction: "top",
               className: "street-tooltip-shell",
               offset: [0, -10]
             });
 
-            const featuresHtml = (p.features || []).map(f => `<span class="culinary-chip">${escapeHtml(f)}</span>`).join("");
+            const featuresHtml = (p.features || []).map(feat => `<span class="culinary-chip">${escapeHtml(feat)}</span>`).join("");
             const gmapsUrl = p.googleMapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name + ' ' + p.address)}`;
+
+            const franchiseBanner = f ? `
+              <div class="culinary-popup-franchise-tag" style="border-color:${f.borderColor || '#a855f7'}; color:${f.textColor || '#fff'};">
+                <span style="display:inline-flex; align-items:center;">${f.logoSvg}</span>
+                <span>Jaringan Resmi: <b>${escapeHtml(f.name)}</b></span>
+              </div>
+            ` : '';
 
             marker.bindPopup(`
               <div class="culinary-popup">
@@ -3626,6 +3782,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                   <h4 class="culinary-popup-title">${iconEmoji} ${escapeHtml(p.name)}</h4>
                   <span class="culinary-rating-badge">⭐ ${p.rating}</span>
                 </div>
+                ${franchiseBanner}
                 <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
                   <span class="culinary-category-tag ${tagClass}">${escapeHtml(p.categoryLabel)}</span>
                   <span style="font-size:0.7rem; color:#94a3b8;">${escapeHtml(p.reviewsCount || '')}</span>
@@ -3652,6 +3809,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
           }
 
           culinaryLayers.allMarkers = markers;
+          renderCulinaryBrandFilterList();
           updateCulinaryCounts();
 
           if (currentAppMode === "culinary") {
@@ -3672,7 +3830,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       }
 
       function setupCulinaryControls() {
-        // 1. Kategori Buttons (Semua / Cafe / Resto) — Identik Peta Pemadaman
+        // 1. Kategori Buttons (Semua / Cafe / Resto / Franchise) — Identik Peta Pemadaman
         const catBtns = document.querySelectorAll(".culinary-cat-btn");
         catBtns.forEach(btn => {
           btn.addEventListener("click", () => {
