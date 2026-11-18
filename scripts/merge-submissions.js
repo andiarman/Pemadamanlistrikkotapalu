@@ -58,9 +58,10 @@ function run() {
       continue;
     }
 
-    // Pastikan tidak ada rating bintang
+    // Pastikan tidak ada rating bintang atau kontak pemilik
     delete item.rating;
     delete item.userRatingCount;
+    delete item.contact;
 
     currentPlaces.push(item);
     existingIds.add(item.id);

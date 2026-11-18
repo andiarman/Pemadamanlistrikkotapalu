@@ -3506,19 +3506,13 @@
             </div>
           </div>
 
-          <div class="submit-form-row">
-            <div class="submit-form-group">
-              <label for="sub-price">Kisaran Harga</label>
-              <select id="sub-price" class="submit-form-select">
-                <option value="Terjangkau (< Rp 30.000)">Terjangkau (&lt; Rp 30.000)</option>
-                <option value="Sedang (Rp 30.000 - Rp 75.000)">Sedang (Rp 30.000 - Rp 75.000)</option>
-                <option value="Premium (> Rp 75.000)">Premium (&gt; Rp 75.000)</option>
-              </select>
-            </div>
-            <div class="submit-form-group">
-              <label for="sub-contact">No. WhatsApp / Kontak Pemilik</label>
-              <input type="text" id="sub-contact" class="submit-form-input" placeholder="08xxxxxxxxxx" />
-            </div>
+          <div class="submit-form-group">
+            <label for="sub-price">Kisaran Harga</label>
+            <select id="sub-price" class="submit-form-select">
+              <option value="Terjangkau (< Rp 30.000)">Terjangkau (&lt; Rp 30.000)</option>
+              <option value="Sedang (Rp 30.000 - Rp 75.000)">Sedang (Rp 30.000 - Rp 75.000)</option>
+              <option value="Premium (> Rp 75.000)">Premium (&gt; Rp 75.000)</option>
+            </select>
           </div>
 
           <div class="submit-form-group">
@@ -4281,7 +4275,6 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             const openTime = document.getElementById("sub-opentime").value;
             const closeTime = document.getElementById("sub-closetime").value;
             const priceRange = document.getElementById("sub-price").value;
-            const contact = document.getElementById("sub-contact").value.trim();
             const featuresStr = document.getElementById("sub-features").value.trim();
             const gmapsUrl = document.getElementById("sub-gmaps").value.trim();
 
@@ -4317,8 +4310,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                 weekdayDescriptions: [is24h ? "Setiap hari: Buka 24 jam" : `Setiap hari: ${openTime} - ${closeTime}`]
               },
               franchise: brandId !== "none" ? { id: brandId, name: brandId } : null,
-              submittedAt: new Date().toISOString(),
-              contact: contact
+              submittedAt: new Date().toISOString()
             };
 
             // Simpan ke localStorage
@@ -4352,8 +4344,6 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                 `*Jam Buka:* ${hoursText}
 ` +
                 `*Harga:* ${priceRange}
-` +
-                `*Kontak:* ${contact || '-'}
 ` +
                 `*Tautan Maps:* ${gmapsUrl || '-'}
 
