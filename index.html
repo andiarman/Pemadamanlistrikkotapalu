@@ -681,97 +681,194 @@
       .culinary-popup {
         font-family: inherit;
         color: #f8fafc;
-        max-width: 290px;
+        max-width: 310px;
         line-height: 1.4;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
       }
-      .culinary-popup-head {
+      .culinary-popup-header {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        gap: 8px;
-        margin-bottom: 4px;
+        gap: 6px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
       .culinary-popup-title {
-        font-size: 0.95rem;
-        font-weight: 700;
-        color: #f8fafc;
+        font-size: 0.96rem;
+        font-weight: 800;
+        color: #ffffff;
         margin: 0;
+        line-height: 1.35;
+        letter-spacing: -0.01em;
       }
-      .culinary-rating-badge {
+      .culinary-popup-badges {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .culinary-badge-cat {
         display: inline-flex;
         align-items: center;
-        gap: 3px;
-        background: #fef08a;
-        color: #713f12;
-        font-weight: 700;
-        font-size: 0.72rem;
-        padding: 2px 6px;
-        border-radius: 999px;
-        flex-shrink: 0;
-      }
-      .culinary-category-tag {
-        display: inline-block;
+        gap: 4px;
         font-size: 0.68rem;
-        font-weight: 600;
-        padding: 2px 7px;
-        border-radius: 4px;
-        margin-bottom: 6px;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 6px;
       }
-      .culinary-category-tag.cafe {
-        background: rgba(245, 158, 11, 0.18);
+      .culinary-badge-cat.cafe {
+        background: rgba(245, 158, 11, 0.16);
         color: #fbbf24;
         border: 1px solid rgba(245, 158, 11, 0.35);
       }
-      .culinary-category-tag.resto {
-        background: rgba(239, 68, 68, 0.18);
+      .culinary-badge-cat.resto {
+        background: rgba(239, 68, 68, 0.16);
         color: #f87171;
         border: 1px solid rgba(239, 68, 68, 0.35);
       }
-      .culinary-addr {
-        font-size: 0.75rem;
+      .culinary-tag-franchise {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 6px;
+        background: rgba(168, 85, 247, 0.14);
+        border: 1px solid rgba(168, 85, 247, 0.35);
+        color: #e9d5ff;
+      }
+      .culinary-tag-franchise svg {
+        width: 13px;
+        height: 13px;
+        display: block;
+      }
+      .culinary-tag-local {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.68rem;
+        font-weight: 600;
+        padding: 2px 7px;
+        border-radius: 6px;
+        background: rgba(148, 163, 184, 0.1);
+        border: 1px solid rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+      .culinary-popup-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 10px;
+        padding: 8px 10px;
+      }
+      .culinary-field-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 0.74rem;
+      }
+      .culinary-field-icon {
+        font-size: 0.85rem;
+        line-height: 1.2;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .culinary-field-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        flex: 1;
+        min-width: 0;
+      }
+      .culinary-field-label {
+        font-size: 0.63rem;
+        font-weight: 700;
         color: #94a3b8;
-        margin-bottom: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+      .culinary-field-val {
+        font-size: 0.74rem;
+        color: #f1f5f9;
+        line-height: 1.35;
+        word-break: break-word;
+      }
+      .culinary-coord-text {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 0.69rem;
+        color: #94a3b8;
+        letter-spacing: 0.02em;
+      }
+      .culinary-status-pill {
+        display: inline-flex;
+        align-items: center;
+        font-size: 0.65rem;
+        font-weight: 700;
+        padding: 1px 6px;
+        border-radius: 4px;
+        line-height: 1.4;
+      }
+      .culinary-status-pill.open {
+        background: rgba(34, 197, 94, 0.18);
+        color: #86efac;
+        border: 1px solid rgba(34, 197, 94, 0.4);
+      }
+      .culinary-status-pill.closed {
+        background: rgba(239, 68, 68, 0.18);
+        color: #fca5a5;
+        border: 1px solid rgba(239, 68, 68, 0.4);
       }
       .culinary-features {
         display: flex;
         flex-wrap: wrap;
         gap: 4px;
-        margin-bottom: 8px;
       }
       .culinary-chip {
         font-size: 0.65rem;
         background: rgba(255, 255, 255, 0.06);
-        color: #cbd5e1;
-        padding: 2px 5px;
+        color: #e2e8f0;
+        padding: 2px 6px;
         border-radius: 4px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        font-weight: 500;
       }
-      .culinary-desc {
-        font-size: 0.74rem;
-        color: #cbd5e1;
-        line-height: 1.42;
-        margin-bottom: 10px;
-        padding-top: 6px;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-      }
+      .leaflet-popup-content a.culinary-gmaps-btn,
       .culinary-gmaps-btn {
-        display: inline-flex;
+        display: inline-flex !important;
         align-items: center;
         justify-content: center;
-        gap: 6px;
+        gap: 7px;
         width: 100%;
-        padding: 7px 10px;
-        background: linear-gradient(135deg, #2563eb, #1d4ed8);
-        color: #ffffff;
-        font-size: 0.75rem;
-        font-weight: 600;
-        border-radius: 6px;
-        text-decoration: none;
-        transition: opacity .15s;
-        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+        padding: 8px 12px;
+        background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+        color: #ffffff !important;
+        font-size: 0.77rem;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none !important;
+        transition: all .15s ease;
+        box-shadow: 0 3px 10px rgba(37, 99, 235, 0.45);
+        box-sizing: border-box;
       }
+      .leaflet-popup-content a.culinary-gmaps-btn *,
+      .culinary-gmaps-btn * {
+        color: #ffffff !important;
+      }
+      .leaflet-popup-content a.culinary-gmaps-btn svg,
+      .culinary-gmaps-btn svg {
+        stroke: #ffffff !important;
+      }
+      .leaflet-popup-content a.culinary-gmaps-btn:hover,
       .culinary-gmaps-btn:hover {
-        opacity: 0.92;
+        background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.65);
       }
       /* RTRW Mode Styles */
       .rtrw-legend {
@@ -4128,40 +4225,125 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
               offset: [0, -10]
             });
 
-            const featuresHtml = (p.features || []).map(feat => `<span class="culinary-chip">${escapeHtml(feat)}</span>`).join("");
+            const featuresHtml = (p.features && p.features.length > 0)
+              ? p.features.map(feat => `<span class="culinary-chip">${escapeHtml(feat)}</span>`).join("")
+              : "";
             const gmapsUrl = p.googleMapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name + ' ' + p.address)}`;
 
-            const franchiseBanner = f ? `
-              <div class="culinary-popup-franchise-tag" style="border-color:${f.borderColor || '#a855f7'}; color:${f.textColor || '#fff'};">
+            // 1. Kategori & Jaringan/Franchise (sesuai Form Daftarkan Usaha)
+            const catLabel = p.category === "cafe"
+              ? "☕ Coffeeshop & Cafe"
+              : (p.category === "resto" ? "🍽️ Restoran & Kuliner" : (p.categoryLabel || "Kuliner Palu"));
+
+            const franchiseBadgeHtml = f ? `
+              <span class="culinary-tag-franchise" style="border-color:${f.borderColor || '#a855f7'}; color:${f.textColor || '#f3e8ff'};">
                 <span style="display:inline-flex; align-items:center;">${f.logoSvg}</span>
-                <span>Jaringan Resmi: <b>${escapeHtml(f.name)}</b></span>
-              </div>
-            ` : '';
+                <span>Cabang <b>${escapeHtml(f.shortName || f.name)}</b></span>
+              </span>
+            ` : `
+              <span class="culinary-tag-local">
+                <span>🏢 Usaha Mandiri</span>
+              </span>
+            `;
+
+            // 2. Jam Operasional & Status WITA
+            const is24h = p.operatingHours?.isOpen24Hours || (p.name || "").toLowerCase().includes("24 jam");
+            const hoursBadge = is24h
+              ? `<span style="background:rgba(14,165,233,0.2); color:#38bdf8; font-weight:700; padding:1px 6px; border-radius:4px; font-size:0.68rem; border:1px solid rgba(14,165,233,0.35);">⚡ BUKA 24 JAM PENUH</span>`
+              : (p.operatingHours?.hoursText ? `<span><b>${escapeHtml(p.operatingHours.hoursText)}</b></span>` : `<span>Jam buka fleksibel</span>`);
+
+            const isOpen = isPlaceOpenNow(p);
+            const statusBadge = isOpen
+              ? `<span class="culinary-status-pill open">🟢 BUKA SEKARANG</span>`
+              : `<span class="culinary-status-pill closed">🔴 SEDANG TUTUP</span>`;
+
+            // 3. Kisaran Harga
+            const priceText = (() => {
+              const pr = p.priceRange || "Terjangkau";
+              const low = pr.toLowerCase();
+              if (low.includes("terjangkau") || low.includes("<") || low.includes("murah")) {
+                return "Terjangkau (< Rp 30.000)";
+              }
+              if (low.includes("sedang") || low.includes("30.000") || low.includes("30rb") || low.includes("50")) {
+                return "Sedang (Rp 30.000 - Rp 75.000)";
+              }
+              if (low.includes("premium") || low.includes(">") || low.includes("mahal") || low.includes("75.000")) {
+                return "Premium (> Rp 75.000)";
+              }
+              return pr;
+            })();
+
+            // 4. Koordinat Lokasi Presisi
+            const coordsStr = (p.lat && p.lon)
+              ? `${Number(p.lat).toFixed(5)}, ${Number(p.lon).toFixed(5)}`
+              : "-";
 
             marker.bindPopup(`
               <div class="culinary-popup">
-                <div class="culinary-popup-head">
-                  <h4 class="culinary-popup-title">${iconEmoji} ${escapeHtml(p.name)}</h4>
+                <div class="culinary-popup-header">
+                  <div class="culinary-popup-title">${iconEmoji} ${escapeHtml(p.name)}</div>
                 </div>
-                ${franchiseBanner}
-                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
-                  <span class="culinary-category-tag ${tagClass}">${escapeHtml(p.categoryLabel)}</span>
-                  <span style="font-size:0.7rem; color:#38bdf8;">📍 ${escapeHtml(p.kecamatan || 'Kota Palu')}</span>
+
+                <div class="culinary-popup-badges">
+                  <span class="culinary-badge-cat ${tagClass}">${catLabel}</span>
+                  ${franchiseBadgeHtml}
                 </div>
-                <div class="culinary-addr">📍 ${escapeHtml(p.address)}</div>
-                <div style="font-size:0.73rem; color:#f1f5f9; margin-bottom:6px; display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
-                  ${p.operatingHours?.isOpen24Hours ? '<span style="background:rgba(14,165,233,0.2); color:#38bdf8; font-weight:700; padding:1px 6px; border-radius:4px; font-size:0.68rem;">⚡ BUKA 24 JAM</span>' : (p.operatingHours?.hoursText ? '<span>⏰ <b>' + escapeHtml(p.operatingHours.hoursText) + '</b></span>' : '<span>⏰ Jam buka bervariasi</span>')}
-                  <span style="font-size:0.66rem; font-weight:700; padding:1px 5px; border-radius:4px; background:${isPlaceOpenNow(p) ? 'rgba(34,197,94,0.2)' : 'rgba(239,68,68,0.2)'}; color:${isPlaceOpenNow(p) ? '#86efac' : '#fca5a5'};">${isPlaceOpenNow(p) ? '🟢 BUKA SEKARANG' : '🔴 TUTUP'}</span>
+
+                <div class="culinary-popup-fields">
+                  <div class="culinary-field-row">
+                    <span class="culinary-field-icon">📍</span>
+                    <div class="culinary-field-content">
+                      <span class="culinary-field-label">Alamat & Wilayah</span>
+                      <div class="culinary-field-val">${escapeHtml(p.address)}</div>
+                    </div>
+                  </div>
+
+                  <div class="culinary-field-row">
+                    <span class="culinary-field-icon">⏰</span>
+                    <div class="culinary-field-content">
+                      <span class="culinary-field-label">Jam Operasional (WITA)</span>
+                      <div class="culinary-field-val" style="display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-top:2px;">
+                        ${hoursBadge}
+                        ${statusBadge}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="culinary-field-row">
+                    <span class="culinary-field-icon">💰</span>
+                    <div class="culinary-field-content">
+                      <span class="culinary-field-label">Kisaran Harga</span>
+                      <div class="culinary-field-val" style="color:#38bdf8; font-weight:600;">${escapeHtml(priceText)}</div>
+                    </div>
+                  </div>
+
+                  ${featuresHtml ? `
+                  <div class="culinary-field-row">
+                    <span class="culinary-field-icon">✨</span>
+                    <div class="culinary-field-content">
+                      <span class="culinary-field-label">Fasilitas / Menu Andalan</span>
+                      <div class="culinary-features" style="margin-top:3px;">
+                        ${featuresHtml}
+                      </div>
+                    </div>
+                  </div>
+                  ` : ''}
+
+                  <div class="culinary-field-row">
+                    <span class="culinary-field-icon">🧭</span>
+                    <div class="culinary-field-content">
+                      <span class="culinary-field-label">Titik Koordinat Presisi</span>
+                      <div class="culinary-field-val culinary-coord-text">${coordsStr}</div>
+                    </div>
+                  </div>
                 </div>
-                <div style="font-size:0.73rem; color:#38bdf8; margin-bottom:6px;">💰 ${escapeHtml(p.priceRange || 'Terjangkau')}</div>
-                <div class="culinary-features">${featuresHtml}</div>
-                <div class="culinary-desc">${escapeHtml(p.description)}</div>
+
                 <a href="${gmapsUrl}" target="_blank" rel="noopener noreferrer" class="culinary-gmaps-btn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 2a8 8 0 0 0-8 8c0 5.4 7 11.5 7.6 12a.6.6 0 0 0 .8 0c.6-.5 7.6-6.6 7.6-12a8 8 0 0 0-8-8z"/>
                     <circle cx="12" cy="10" r="3"/>
                   </svg>
-                  Buka di Google Maps ↗
+                  <span>Buka Rute di Google Maps ↗</span>
                 </a>
               </div>
             `);
@@ -7176,11 +7358,11 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
 
                   showStatusCard({
                     typeTag: isCafe ? "☕ COFFEESHOP TERDEKAT (GPS)" : "🍽️ KULINER TERDEKAT (GPS)",
-                    title: `${nearestPlace.name} (⭐ ${nearestPlace.rating})`,
-                    sub: `Jarak ~${distStr} · ${nearestPlace.categoryLabel}`,
+                    title: `${isCafe ? '☕' : '🍽️'} ${nearestPlace.name}`,
+                    sub: `Jarak ~${distStr} · ${nearestPlace.categoryLabel || (isCafe ? 'Coffeeshop & Cafe' : 'Restoran & Kuliner')}`,
                     status: "ACTIVE",
                     timeRange: `📍 ${nearestPlace.address}`,
-                    countdownText: `💰 ${nearestPlace.priceRange || 'Terjangkau'} · ${escapeHtml(nearestPlace.description)}`,
+                    countdownText: `⏰ ${nearestPlace.operatingHours?.hoursText || 'Jam buka reguler'} · 💰 ${nearestPlace.priceRange || 'Terjangkau'}`,
                     onFocus: focusPlace
                   });
                 } else {
