@@ -1509,24 +1509,6 @@
         color: #94a3b8;
         font-weight: 600;
       }
-      .heat-markers-btn {
-        border-color: rgba(56, 189, 248, .4) !important;
-        background: rgba(56, 189, 248, .12) !important;
-        color: #7dd3fc !important;
-        font-weight: 700 !important;
-        transition: all .15s ease;
-      }
-      .heat-markers-btn:hover {
-        background: rgba(56, 189, 248, .25) !important;
-        color: #ffffff !important;
-      }
-      .heat-markers-btn.is-off,
-      .heat-markers-btn[aria-pressed="false"] {
-        border-color: rgba(148, 163, 184, .3) !important;
-        background: rgba(15, 23, 42, .6) !important;
-        color: #94a3b8 !important;
-        opacity: 0.85;
-      }
       .heat-legend-toggle-row {
         margin-top: 8px;
         padding-top: 6px;
@@ -3507,10 +3489,6 @@
               <span class="boundary-btn-icon">🔥</span>
               <span id="culinary-heat-toggle-text">Heatmap</span>
             </button>
-            <button type="button" id="culinary-markers-toggle-btn" class="boundary-toggle-btn heat-markers-btn" aria-pressed="true" style="display:none;" title="Tampilkan atau sembunyikan ikon titik coffeeshop & resto saat heatmap aktif">
-              <span class="boundary-btn-icon">📍</span>
-              <span id="culinary-markers-toggle-text">Ikon Titik: On</span>
-            </button>
             <button type="button" id="culinary-boundary-toggle-btn" class="boundary-toggle-btn" aria-pressed="true" title="Tampilkan/Sembunyikan batas administrasi kelurahan">
               <span class="boundary-btn-icon">🏛️</span>
               <span id="culinary-boundary-toggle-text">Batas Kelurahan</span>
@@ -4525,25 +4503,13 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         }
         const heatLeg = document.getElementById("culinary-heat-legend");
         if (heatLeg) heatLeg.style.display = "none";
-        const btnHeaderMarkers = document.getElementById("culinary-markers-toggle-btn");
-        if (btnHeaderMarkers) btnHeaderMarkers.style.display = "none";
       }
 
       function setCulinaryMarkersVisible(visible) {
         culinaryMarkersVisible = visible;
 
-        const btnHeader = document.getElementById("culinary-markers-toggle-btn");
-        const txtHeader = document.getElementById("culinary-markers-toggle-text");
         const btnFloating = document.getElementById("btn-toggle-heat-markers");
         const txtFloating = document.getElementById("text-toggle-heat-markers");
-
-        if (btnHeader) {
-          btnHeader.setAttribute("aria-pressed", visible ? "true" : "false");
-          btnHeader.classList.toggle("is-off", !visible);
-        }
-        if (txtHeader) {
-          txtHeader.textContent = visible ? "Ikon Titik: On" : "Ikon Titik: Off";
-        }
 
         if (btnFloating) {
           btnFloating.setAttribute("aria-pressed", visible ? "true" : "false");
@@ -4625,20 +4591,15 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       function toggleCulinaryHeatmap() {
         culinaryHeatmapEnabled = !culinaryHeatmapEnabled;
         const btn = document.getElementById("culinary-heat-toggle-btn");
-        const btnHeaderMarkers = document.getElementById("culinary-markers-toggle-btn");
 
         if (btn) {
           btn.setAttribute("aria-pressed", culinaryHeatmapEnabled ? "true" : "false");
         }
 
-        if (btnHeaderMarkers) {
-          btnHeaderMarkers.style.display = culinaryHeatmapEnabled ? "inline-flex" : "none";
-        }
-
         syncCulinaryHeatmap();
 
         if (culinaryHeatmapEnabled) {
-          showGpsToast("🔥 Heatmap Kepadatan Aktif: Gunakan tombol 'Ikon Titik' untuk sembunyikan/tampilkan titik", 4000);
+          showGpsToast("🔥 Heatmap Kepadatan Aktif: Gunakan tombol di kartu bawah untuk sembunyikan/tampilkan titik", 4000);
         } else {
           // Ketika heatmap dimatikan, pastikan marker kembali tampil seperti semula
           setCulinaryMarkersVisible(true);
@@ -4900,13 +4861,7 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
           });
         }
 
-        // Toggle Ikon Titik (aktif saat heatmap aktif)
-        const culMarkersBtn = document.getElementById("culinary-markers-toggle-btn");
-        if (culMarkersBtn) {
-          culMarkersBtn.addEventListener("click", () => {
-            toggleCulinaryMarkers();
-          });
-        }
+        // Toggle Ikon Titik di kartu floating heatmap
         const heatMarkersBtnFloating = document.getElementById("btn-toggle-heat-markers");
         if (heatMarkersBtnFloating) {
           heatMarkersBtnFloating.addEventListener("click", () => {
