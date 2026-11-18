@@ -4809,93 +4809,16 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
 
       function updateOutagePlacesIndex(now) {
         currentOutagePlaces.clear();
-        for (const ev of (mapEvents || [])) {
-          const status = getEventStatus(ev, now);
-          for (const area of (ev.affectedAreas || [])) {
-            const timeStr = `${formatWita(ev.startTime)} s/d ${formatWita(ev.endTime)} WITA`;
-            for (const pt of (area.points || [])) {
-              const info = { status, event: ev, timeStr, ulpName: area.ulpName };
-              if (pt.location) currentOutagePlaces.set(normalizeStreetName(pt.location), info);
-              if (pt.displayName) currentOutagePlaces.set(normalizeStreetName(pt.displayName), info);
-            }
-            for (const loc of (area.locations || [])) {
-              const info = { status, event: ev, timeStr, ulpName: area.ulpName };
-              currentOutagePlaces.set(normalizeStreetName(loc), info);
-            }
-          }
-        }
       }
 
       function getBoundaryStyle(feature) {
-        if (currentAppMode === "rtrw") {
-          return {
-            color: "#0284c7",
-            weight: 1.2,
-            opacity: 0.55,
-            fillColor: "#0284c7",
-            fillOpacity: 0.03,
-            dashArray: "3, 4"
-          };
-        }
-        if (currentAppMode === "contour") {
-          return {
-            color: "#10b981",
-            weight: 1,
-            opacity: 0.35,
-            fillColor: "#10b981",
-            fillOpacity: 0.01,
-            dashArray: "2, 4"
-          };
-        }
-        if (currentAppMode !== "outage") {
-          return {
-            color: "#38bdf8",
-            weight: 1,
-            opacity: 0.35,
-            fillColor: "#38bdf8",
-            fillOpacity: 0.02,
-            dashArray: "3, 4"
-          };
-        }
-        const kelName = normalizeStreetName(feature?.properties?.name || "");
-        const outage = currentOutagePlaces.get(kelName);
-        if (outage) {
-          if (outage.status === "ACTIVE") {
-            return {
-              color: "#ef4444",
-              weight: 2,
-              opacity: 0.9,
-              fillColor: "#ef4444",
-              fillOpacity: 0.22,
-              dashArray: null
-            };
-          }
-          if (outage.status === "UPCOMING") {
-            return {
-              color: "#f59e0b",
-              weight: 1.8,
-              opacity: 0.85,
-              fillColor: "#f59e0b",
-              fillOpacity: 0.16,
-              dashArray: null
-            };
-          }
-          return {
-            color: "#10b981",
-            weight: 1.3,
-            opacity: 0.65,
-            fillColor: "#10b981",
-            fillOpacity: 0.08,
-            dashArray: null
-          };
-        }
         return {
           color: "#38bdf8",
-          weight: 1,
-          opacity: 0.35,
-          fillColor: "#38bdf8",
-          fillOpacity: 0.02,
-          dashArray: "3, 4"
+          weight: 1.8,
+          opacity: 0.8,
+          fill: false,
+          fillOpacity: 0,
+          dashArray: "6, 4"
         };
       }
 
@@ -4943,61 +4866,8 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                 loadedBoundaryGeoJsons.set(reg.code, geojson);
 
                 const layer = L.geoJSON(geojson, {
-                  style: getBoundaryStyle,
-                  onEachFeature: (feature, l) => {
-                    l.on("mouseover", (e) => {
-                      const cur = e.target;
-                      cur.setStyle({ weight: 2.4, opacity: 0.95, fillOpacity: 0.3 });
-                      if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-                        cur.bringToFront();
-                      }
-                    });
-                    l.on("mouseout", (e) => {
-                      e.target.setStyle(getBoundaryStyle(feature));
-                    });
-
-                    l.bindTooltip(
-                      `<strong>${escapeHtml(feature?.properties?.name || "")}</strong><br><small style="color:#94a3b8;">Kec. ${escapeHtml(feature?.properties?.kecamatan || "")} · ${escapeHtml(feature?.properties?.regency || "")}</small>`,
-                      { className: "boundary-tooltip", sticky: true }
-                    );
-
-                    l.bindPopup(() => {
-                      if (currentAppMode !== "outage") {
-                        const emptyNum = currentAppMode.replace(/^empty-?/, "") || "1";
-                        return `
-                          <div class="boundary-popup">
-                            <h4>🏛️ ${escapeHtml(feature?.properties?.name || "")}</h4>
-                            <div>📍 Kecamatan: <strong>${escapeHtml(feature?.properties?.kecamatan || "")}</strong></div>
-                            <div>🏛️ Wilayah: <strong>${escapeHtml(feature?.properties?.regency || "")}</strong></div>
-                            <div style="margin-top:6px; font-size:0.75rem; color:#38bdf8;">📂 Mode Kosong ${emptyNum}</div>
-                          </div>
-                        `;
-                      }
-                      const norm = normalizeStreetName(feature?.properties?.name || "");
-                      const outage = currentOutagePlaces.get(norm);
-                      let badgeHtml = '<span class="boundary-popup-badge normal">🟢 Normal / Tidak Ada Pemadaman</span>';
-                      let extraHtml = '';
-                      if (outage) {
-                        if (outage.status === "ACTIVE") {
-                          badgeHtml = '<span class="boundary-popup-badge active">🔴 SEDANG PADAM</span>';
-                        } else if (outage.status === "UPCOMING") {
-                          badgeHtml = '<span class="boundary-popup-badge upcoming">🟡 AKAN PADAM</span>';
-                        } else {
-                          badgeHtml = '<span class="boundary-popup-badge passed">🟢 SUDAH MENYALA</span>';
-                        }
-                        extraHtml = `<div style="margin-top:4px;">⏰ Jadwal: <strong>${outage.timeStr}</strong></div><div style="font-size:0.7rem; color:#64748b;">ULP: ${escapeHtml(outage.ulpName || '')}</div>`;
-                      }
-                      return `
-                        <div class="boundary-popup">
-                          <h4>🏛️ ${escapeHtml(feature?.properties?.name || "")}</h4>
-                          <div>📍 Kecamatan: <strong>${escapeHtml(feature?.properties?.kecamatan || "")}</strong></div>
-                          <div>🏛️ Wilayah: <strong>${escapeHtml(feature?.properties?.regency || "")}</strong></div>
-                          ${badgeHtml}
-                          ${extraHtml}
-                        </div>
-                      `;
-                    });
-                  }
+                  interactive: false,
+                  style: getBoundaryStyle
                 });
 
                 boundaryLayersByRegency.set(reg.code, layer);
