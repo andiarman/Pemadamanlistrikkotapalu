@@ -271,55 +271,48 @@
       body:not([data-app-mode="outage"]) .outage-only-ui {
         display: none !important;
       }
-      /* Coffeeshop & Resto (Culinary) Mode Styles */
-      .culinary-marker-wrap {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
+      /* Coffeeshop & Resto (Culinary) Badge Styles — Identik Peta Pemadaman */
+      .map-badge-marker.status-cafe {
+        border: 1px solid #f59e0b;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .6);
       }
-      .culinary-marker-pin {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        border: 2px solid #ffffff;
-        color: #ffffff;
-        display: grid;
-        place-items: center;
-        font-size: 17px;
-        z-index: 2;
-        transition: transform .18s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow .18s ease;
+      .map-badge-marker.status-cafe .badge-glyph {
+        color: #fde047;
+        font-size: 10px;
+        line-height: 1;
       }
-      .culinary-marker-pin.cafe-pin {
-        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-        box-shadow: 0 4px 14px rgba(217, 119, 6, 0.6);
+      .map-badge-marker.status-cafe .badge-time-text {
+        color: #fef08a;
       }
-      .culinary-marker-pin.resto-pin {
-        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-        box-shadow: 0 4px 14px rgba(220, 38, 38, 0.6);
+      .map-badge-marker.status-cafe .badge-bar-fill {
+        background: linear-gradient(90deg, #f59e0b, #fbbf24);
       }
-      .culinary-marker-wrap:hover .culinary-marker-pin {
-        transform: scale(1.18);
+
+      .map-badge-marker.status-resto {
+        border: 1px solid #ef4444;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .6);
       }
-      .culinary-marker-pulse {
-        position: absolute;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        animation: culinaryRing 2.2s infinite ease-out;
-        z-index: 1;
-        pointer-events: none;
+      .map-badge-marker.status-resto .badge-glyph {
+        color: #f87171;
+        font-size: 10px;
+        line-height: 1;
       }
-      .culinary-marker-pulse.cafe-pulse {
-        background: rgba(245, 158, 11, 0.28);
+      .map-badge-marker.status-resto .badge-time-text {
+        color: #fecaca;
       }
-      .culinary-marker-pulse.resto-pulse {
-        background: rgba(239, 68, 68, 0.28);
+      .map-badge-marker.status-resto .badge-bar-fill {
+        background: linear-gradient(90deg, #ef4444, #f97316);
       }
-      @keyframes culinaryRing {
-        0% { transform: scale(0.6); opacity: 0.9; }
-        100% { transform: scale(1.4); opacity: 0; }
+
+      .cluster-bubble.culinary-cafe {
+        border: 2px solid #f59e0b;
+        color: #fef08a;
+        box-shadow: 0 0 12px rgba(245, 158, 11, .5), 0 3px 8px rgba(0, 0, 0, .5);
+      }
+      .cluster-bubble.culinary-resto {
+        border: 2px solid #ef4444;
+        color: #fee2e2;
+        box-shadow: 0 0 12px rgba(239, 68, 68, .5), 0 3px 8px rgba(0, 0, 0, .5);
       }
       .culinary-legend {
         position: absolute;
@@ -3341,19 +3334,54 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       let allPointMarkers = [];
       let currentAppMode = "outage"; // "outage" | "culinary" | "rtrw" | "contour" ...
       const culinaryLayers = {
-        cafeGroup: null,
-        restoGroup: null,
+        clusterGroup: null,
+        allMarkers: [],
         allPlaces: [],
         loaded: false
       };
 
+      function buildCulinaryBadgeHtml(p) {
+        const isCafe = p.category === "cafe";
+        const catClass = isCafe ? "cafe" : "resto";
+        const glyphIcon = isCafe
+          ? `<svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>`
+          : `<svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2v20M18 8a3 3 0 0 1 0-6M6 2v20M3 2v6a3 3 0 0 0 6 0V2"/></svg>`;
+
+        const ratingVal = p.rating ? Number(p.rating).toFixed(1) : "4.5";
+        const barPct = Math.min(100, Math.max(10, Math.round((Number(ratingVal) / 5) * 100)));
+
+        return `
+          <div class="map-badge-marker status-${catClass}" title="${escapeHtml(p.name)}: ${escapeHtml(p.address)}">
+            <div class="badge-row">
+              <span class="badge-glyph" aria-hidden="true">${glyphIcon}</span>
+              <span class="badge-time-text">${ratingVal} ⭐</span>
+            </div>
+            <div class="badge-bar-track" aria-hidden="true">
+              <div class="badge-bar-fill" style="width: ${barPct}%;"></div>
+            </div>
+          </div>
+        `;
+      }
+
+      function applyCulinaryFilter() {
+        if (!culinaryLayers.clusterGroup) return;
+        const showCafe = document.getElementById("chk-culinary-cafe")?.checked !== false;
+        const showResto = document.getElementById("chk-culinary-resto")?.checked !== false;
+
+        culinaryLayers.clusterGroup.clearLayers();
+        const visible = culinaryLayers.allMarkers.filter(m => {
+          if (m.culinaryCategory === "cafe" && !showCafe) return false;
+          if (m.culinaryCategory === "resto" && !showResto) return false;
+          return true;
+        });
+        culinaryLayers.clusterGroup.addLayers(visible);
+      }
+
       async function loadCulinaryLayers() {
         if (culinaryLayers.loaded) {
-          if (culinaryLayers.cafeGroup && !map.hasLayer(culinaryLayers.cafeGroup) && document.getElementById("chk-culinary-cafe")?.checked !== false) {
-            map.addLayer(culinaryLayers.cafeGroup);
-          }
-          if (culinaryLayers.restoGroup && !map.hasLayer(culinaryLayers.restoGroup) && document.getElementById("chk-culinary-resto")?.checked !== false) {
-            map.addLayer(culinaryLayers.restoGroup);
+          if (culinaryLayers.clusterGroup && !map.hasLayer(culinaryLayers.clusterGroup)) {
+            map.addLayer(culinaryLayers.clusterGroup);
+            applyCulinaryFilter();
           }
           return;
         }
@@ -3364,26 +3392,68 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
           const places = await res.json();
           culinaryLayers.allPlaces = places;
 
-          const cafeMarkers = [];
-          const restoMarkers = [];
+          // Inisialisasi cluster group identik dengan sistem peta pemadaman
+          if (typeof L.markerClusterGroup === "function") {
+            culinaryLayers.clusterGroup = L.markerClusterGroup({
+              maxClusterRadius: 42,
+              spiderfyOnMaxZoom: true,
+              showCoverageOnHover: false,
+              zoomToBoundsOnClick: true,
+              disableClusteringAtZoom: 16,
+              animate: true,
+              animateAddingMarkers: false,
+              iconCreateFunction: (cluster) => {
+                const children = cluster.getAllChildMarkers();
+                let cafeCount = 0;
+                let restoCount = 0;
+                for (const m of children) {
+                  if (m.culinaryCategory === "cafe") cafeCount++;
+                  else restoCount++;
+                }
+                const isDominantCafe = cafeCount >= restoCount;
+                const type = isDominantCafe ? "culinary-cafe" : "culinary-resto";
+                const count = cluster.getChildCount();
+                return L.divIcon({
+                  html: `<div class="cluster-bubble ${type}"><span>${count}</span></div>`,
+                  className: `custom-cluster-wrapper cluster-${type}`,
+                  iconSize: [36, 36],
+                  iconAnchor: [18, 18]
+                });
+              }
+            });
+          } else {
+            culinaryLayers.clusterGroup = L.featureGroup();
+          }
+
+          const markers = [];
+          let cafeCount = 0;
+          let restoCount = 0;
 
           for (const p of places) {
             const isCafe = p.category === "cafe";
             const iconEmoji = isCafe ? "☕" : "🍽️";
-            const pinClass = isCafe ? "cafe-pin" : "resto-pin";
-            const pulseClass = isCafe ? "cafe-pulse" : "resto-pulse";
             const tagClass = isCafe ? "cafe" : "resto";
+            if (isCafe) cafeCount++; else restoCount++;
 
             const marker = L.marker([p.lat, p.lon], {
               icon: L.divIcon({
-                className: "culinary-marker-wrap",
-                html: `<div class="culinary-marker-pulse ${pulseClass}"></div><div class="culinary-marker-pin ${pinClass}" title="${escapeHtml(p.name)}">${iconEmoji}</div>`,
-                iconSize: [36, 36],
-                iconAnchor: [18, 18]
-              })
+                className: `street-marker-icon culinary-marker-icon`,
+                html: buildCulinaryBadgeHtml(p),
+                iconSize: [58, 22],
+                iconAnchor: [29, 11]
+              }),
+              keyboard: true
             });
 
             marker.feature = { properties: p };
+            marker.culinaryCategory = p.category;
+
+            marker.bindTooltip(`<b>${escapeHtml(p.name)}</b><br><small style="color:#94a3b8;">${escapeHtml(p.categoryLabel)} · ⭐ ${p.rating}</small>`, {
+              permanent: false,
+              direction: "top",
+              className: "street-tooltip-shell",
+              offset: [0, -10]
+            });
 
             const featuresHtml = (p.features || []).map(f => `<span class="culinary-chip">${escapeHtml(f)}</span>`).join("");
             const gmapsUrl = p.googleMapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name + ' ' + p.address)}`;
@@ -3412,28 +3482,19 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
               </div>
             `);
 
-            if (isCafe) {
-              cafeMarkers.push(marker);
-            } else {
-              restoMarkers.push(marker);
-            }
+            markers.push(marker);
           }
 
-          culinaryLayers.cafeGroup = L.featureGroup(cafeMarkers);
-          culinaryLayers.restoGroup = L.featureGroup(restoMarkers);
+          culinaryLayers.allMarkers = markers;
 
           const countCafeEl = document.getElementById("count-cafe");
           const countRestoEl = document.getElementById("count-resto");
-          if (countCafeEl) countCafeEl.textContent = cafeMarkers.length;
-          if (countRestoEl) countRestoEl.textContent = restoMarkers.length;
+          if (countCafeEl) countCafeEl.textContent = cafeCount;
+          if (countRestoEl) countRestoEl.textContent = restoCount;
 
           if (currentAppMode === "culinary") {
-            if (document.getElementById("chk-culinary-cafe")?.checked !== false) {
-              culinaryLayers.cafeGroup.addTo(map);
-            }
-            if (document.getElementById("chk-culinary-resto")?.checked !== false) {
-              culinaryLayers.restoGroup.addTo(map);
-            }
+            applyCulinaryFilter();
+            map.addLayer(culinaryLayers.clusterGroup);
           }
 
           culinaryLayers.loaded = true;
@@ -3443,8 +3504,9 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       }
 
       function hideCulinaryLayers() {
-        if (culinaryLayers.cafeGroup && map.hasLayer(culinaryLayers.cafeGroup)) map.removeLayer(culinaryLayers.cafeGroup);
-        if (culinaryLayers.restoGroup && map.hasLayer(culinaryLayers.restoGroup)) map.removeLayer(culinaryLayers.restoGroup);
+        if (culinaryLayers.clusterGroup && map.hasLayer(culinaryLayers.clusterGroup)) {
+          map.removeLayer(culinaryLayers.clusterGroup);
+        }
       }
 
       function setupCulinaryControls() {
@@ -3452,24 +3514,10 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         const chkResto = document.getElementById("chk-culinary-resto");
 
         if (chkCafe) {
-          chkCafe.addEventListener("change", () => {
-            if (!culinaryLayers.cafeGroup) return;
-            if (chkCafe.checked) {
-              if (!map.hasLayer(culinaryLayers.cafeGroup)) culinaryLayers.cafeGroup.addTo(map);
-            } else {
-              if (map.hasLayer(culinaryLayers.cafeGroup)) map.removeLayer(culinaryLayers.cafeGroup);
-            }
-          });
+          chkCafe.addEventListener("change", applyCulinaryFilter);
         }
         if (chkResto) {
-          chkResto.addEventListener("change", () => {
-            if (!culinaryLayers.restoGroup) return;
-            if (chkResto.checked) {
-              if (!map.hasLayer(culinaryLayers.restoGroup)) culinaryLayers.restoGroup.addTo(map);
-            } else {
-              if (map.hasLayer(culinaryLayers.restoGroup)) map.removeLayer(culinaryLayers.restoGroup);
-            }
-          });
+          chkResto.addEventListener("change", applyCulinaryFilter);
         }
       }
 
@@ -5775,15 +5823,18 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             `;
             const selectCulinary = () => {
               resultsContainer.hidden = true;
-              map.flyTo([pt.lat, pt.lon], 16, { duration: 1.1 });
-              const targetGroup = isCafe ? culinaryLayers.cafeGroup : culinaryLayers.restoGroup;
-              if (targetGroup) {
-                targetGroup.eachLayer(l => {
-                  const ll = l.getLatLng();
-                  if (Math.abs(ll.lat - pt.lat) < 0.0001 && Math.abs(ll.lng - pt.lon) < 0.0001) {
-                    setTimeout(() => l.openPopup(), 1200);
-                  }
+              const targetMarker = culinaryLayers.allMarkers.find(m => {
+                const ll = m.getLatLng();
+                return Math.abs(ll.lat - pt.lat) < 0.0001 && Math.abs(ll.lng - pt.lon) < 0.0001;
+              });
+
+              if (targetMarker && culinaryLayers.clusterGroup && typeof culinaryLayers.clusterGroup.zoomToShowLayer === "function") {
+                culinaryLayers.clusterGroup.zoomToShowLayer(targetMarker, () => {
+                  targetMarker.openPopup();
                 });
+              } else {
+                map.flyTo([pt.lat, pt.lon], 16, { duration: 1.1 });
+                if (targetMarker) setTimeout(() => targetMarker.openPopup(), 1200);
               }
             };
             item.addEventListener("click", selectCulinary);
@@ -6162,15 +6213,18 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                   const isCafe = nearestPlace.category === "cafe";
                   const distStr = minPlaceDist < 1000 ? `${Math.round(minPlaceDist)} meter` : `${(minPlaceDist / 1000).toFixed(2)} km`;
                   const focusPlace = () => {
-                    map.flyTo([nearestPlace.lat, nearestPlace.lon], 16, { duration: 1.1 });
-                    const targetGroup = isCafe ? culinaryLayers.cafeGroup : culinaryLayers.restoGroup;
-                    if (targetGroup) {
-                      targetGroup.eachLayer(l => {
-                        const ll = l.getLatLng();
-                        if (Math.abs(ll.lat - nearestPlace.lat) < 0.0001 && Math.abs(ll.lng - nearestPlace.lon) < 0.0001) {
-                          setTimeout(() => l.openPopup(), 1200);
-                        }
+                    const targetMarker = culinaryLayers.allMarkers.find(m => {
+                      const ll = m.getLatLng();
+                      return Math.abs(ll.lat - nearestPlace.lat) < 0.0001 && Math.abs(ll.lng - nearestPlace.lon) < 0.0001;
+                    });
+
+                    if (targetMarker && culinaryLayers.clusterGroup && typeof culinaryLayers.clusterGroup.zoomToShowLayer === "function") {
+                      culinaryLayers.clusterGroup.zoomToShowLayer(targetMarker, () => {
+                        targetMarker.openPopup();
                       });
+                    } else {
+                      map.flyTo([nearestPlace.lat, nearestPlace.lon], 16, { duration: 1.1 });
+                      if (targetMarker) setTimeout(() => targetMarker.openPopup(), 1200);
                     }
                   };
 
