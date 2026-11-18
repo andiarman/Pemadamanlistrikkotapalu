@@ -271,162 +271,35 @@
       body:not([data-app-mode="outage"]) .outage-only-ui {
         display: none !important;
       }
-      /* Coffeeshop & Resto (Culinary) Badge Styles — Identik Peta Pemadaman */
-      .culinary-legend {
-        position: absolute;
-        bottom: 24px;
-        left: 14px;
-        z-index: 1000;
-        background: rgba(11, 18, 32, 0.94);
-        border: 1px solid rgba(245, 158, 11, 0.35);
-        border-radius: 14px;
-        padding: 10px 14px;
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(16px);
-        display: none;
-        flex-direction: column;
-        gap: 8px;
-        font-size: 0.76rem;
-        color: #f1f5f9;
-        width: min(320px, calc(100vw - 28px));
-        max-height: calc(100dvh - 120px);
-        overflow-y: auto;
-        animation: fadeIn 0.2s ease-out;
-        scrollbar-width: thin;
-      }
-      body[data-app-mode="culinary"] .culinary-legend {
-        display: flex !important;
-      }
-      .culinary-legend.is-collapsed {
-        padding-bottom: 6px;
-      }
-      .culinary-legend.is-collapsed .culinary-legend-body {
+      /* Coffeeshop & Resto (Culinary) — Visual & Mekanisme Identik Peta Pemadaman */
+      body:not([data-app-mode="culinary"]) .culinary-only-ui {
         display: none !important;
       }
-      .culinary-legend.is-collapsed #culinary-legend-toggle-icon {
-        transform: rotate(180deg);
+      #culinary-legend {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
-      .culinary-legend-head {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-weight: 800;
-        font-size: 0.8rem;
-        color: #f59e0b;
-        letter-spacing: -0.01em;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        padding-bottom: 5px;
+      @media (min-width: 621px) and (max-width: 980px) {
+        #culinary-legend {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          width: min(560px, calc(100vw - 120px));
+        }
       }
-      .culinary-legend-body {
-        display: flex;
-        flex-direction: column;
-        gap: 9px;
+      @media (max-width: 620px) {
+        #culinary-legend {
+          grid-template-columns: repeat(3, 1fr);
+        }
       }
-      .culinary-quick-filters {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5px;
-      }
-      .culinary-filter-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 6px;
-        padding: 5px 8px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.04);
-        color: #cbd5e1;
-        font-family: inherit;
-        font-size: 0.68rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.15s ease;
-        user-select: none;
-      }
-      .culinary-filter-btn:hover {
-        background: rgba(255, 255, 255, 0.1);
-        color: #ffffff;
-        border-color: rgba(245, 158, 11, 0.4);
-      }
-      .culinary-filter-btn.active {
-        background: rgba(245, 158, 11, 0.18);
-        border-color: #f59e0b;
+      #culinary-legend .legend-item[data-cat="cafe"][aria-pressed="true"] {
+        border-color: rgba(245, 158, 11, .75);
+        background: rgba(245, 158, 11, .15);
         color: #fef08a;
-        box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+        box-shadow: 0 0 14px rgba(245, 158, 11, .25);
       }
-      .culinary-legend-items {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 6px;
-        padding: 5px 8px;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.07);
-        border-radius: 8px;
-      }
-      .culinary-legend-item {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        cursor: pointer;
-        user-select: none;
-        font-size: 0.72rem;
-      }
-      .culinary-legend-item input[type="checkbox"] {
-        accent-color: #f59e0b;
-        cursor: pointer;
-      }
-      .culinary-session-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
-        margin-top: 3px;
-      }
-      .culinary-session-chip {
-        padding: 3px 8px;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.05);
-        color: #cbd5e1;
-        font-family: inherit;
-        font-size: 0.65rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all 0.15s ease;
-        user-select: none;
-      }
-      .culinary-session-chip:hover {
-        background: rgba(255, 255, 255, 0.12);
-        color: #ffffff;
-      }
-      .culinary-session-chip.active {
-        background: linear-gradient(135deg, #d97706, #b45309);
-        border-color: #f59e0b;
-        color: #fffbeb;
-        box-shadow: 0 2px 8px rgba(217, 119, 6, 0.35);
-      }
-      .culinary-feat-chip {
-        padding: 3px 7px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 6px;
-        background: rgba(255, 255, 255, 0.04);
-        color: #94a3b8;
-        font-family: inherit;
-        font-size: 0.64rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.15s ease;
-        user-select: none;
-      }
-      .culinary-feat-chip:hover {
-        background: rgba(255, 255, 255, 0.08);
-        color: #cbd5e1;
-      }
-      .culinary-feat-chip.active {
-        background: rgba(56, 189, 248, 0.18);
-        border-color: #38bdf8;
-        color: #7dd3fc;
+      #culinary-legend .legend-item[data-cat="resto"][aria-pressed="true"] {
+        border-color: rgba(56, 189, 248, .75);
+        background: rgba(56, 189, 248, .15);
+        color: #bae6fd;
+        box-shadow: 0 0 14px rgba(56, 189, 248, .25);
       }
       .map-badge-marker.status-cafe {
         border: 1px solid #f59e0b;
@@ -3139,93 +3012,66 @@
         <span class="legend-note">🔴 Badge merah (s.d jam) = sedang padam · bar progres. 🟡 Badge oranye (jam) = akan padam · bar countdown. 🟢 Hijau = sudah menyala. Klik sesi untuk menyaring wilayah.</span>
       </div>
 
-      <div id="culinary-legend" class="culinary-legend" aria-label="Legenda dan Filter Coffeeshop & Resto Palu">
-        <div class="culinary-legend-head">
-          <span class="legend-label">☕ Filter Kuliner Palu</span>
+      <div id="culinary-legend" class="map-legend culinary-only-ui" aria-label="Legenda dan filter coffeeshop & resto">
+        <div class="legend-head">
+          <span class="legend-label">Filter Kuliner</span>
           <div class="legend-head-actions">
+            <button type="button" id="culinary-boundary-toggle-btn" class="boundary-toggle-btn" aria-pressed="true" title="Tampilkan/Sembunyikan batas administrasi kelurahan">
+              <span class="boundary-btn-icon">🏛️</span>
+              <span id="culinary-boundary-toggle-text">Batas Kelurahan</span>
+            </button>
             <button type="button" id="culinary-legend-toggle-btn" class="legend-toggle-btn" aria-label="Sembunyikan atau tampilkan filter" title="Sembunyikan/Tampilkan filter">
               <span id="culinary-legend-toggle-text">Ciutkan</span>
               <span id="culinary-legend-toggle-icon" aria-hidden="true">▾</span>
             </button>
+            <a
+              class="threads-link"
+              href="https://www.threads.com/@andiarman___"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Buka akun Threads @andiarman___ di tab baru"
+              title="Threads @andiarman___"
+            >
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+                <path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/>
+              </svg>
+              <span>@andiarman___</span>
+            </a>
           </div>
         </div>
 
-        <div class="culinary-legend-body">
-          <!-- Quick Status Filter (Mirip Semua/Padam/Akan Padam/Nyala) -->
-          <div class="culinary-quick-filters" role="group" aria-label="Filter Cepat Status">
-            <button class="culinary-filter-btn active" type="button" data-filter="all">
-              <span>● Semua (<b id="cul-all-count">416</b>)</span>
-            </button>
-            <button class="culinary-filter-btn" type="button" data-filter="open-now">
-              <span>🟢 Buka Sekarang (<b id="cul-open-count">0</b>)</span>
-            </button>
-            <button class="culinary-filter-btn" type="button" data-filter="24h">
-              <span>⚡ 24 Jam (<b id="cul-24h-count">14</b>)</span>
-            </button>
-            <button class="culinary-filter-btn" type="button" data-filter="top-rated">
-              <span>⭐ Rating 4.6+ (<b id="cul-top-count">0</b>)</span>
-            </button>
-          </div>
+        <button class="legend-item culinary-cat-btn" type="button" data-cat="all" aria-pressed="true">
+          <i class="legend-icon legend-icon-all" aria-hidden="true"></i>
+          <span>Semua <b id="cul-count-all">0</b></span>
+        </button>
+        <button class="legend-item culinary-cat-btn" type="button" data-cat="cafe" aria-pressed="false">
+          <i class="legend-icon" aria-hidden="true">☕</i>
+          <span>Cafe <b id="cul-count-cafe">0</b></span>
+        </button>
+        <button class="legend-item culinary-cat-btn" type="button" data-cat="resto" aria-pressed="false">
+          <i class="legend-icon" aria-hidden="true">🍽️</i>
+          <span>Resto <b id="cul-count-resto">0</b></span>
+        </button>
 
-          <!-- Kategori Tempat (Checkbox) -->
-          <div class="culinary-legend-items">
-            <label class="culinary-legend-item">
-              <input type="checkbox" id="chk-culinary-cafe" checked />
-              <span class="legend-swatch cafe-swatch">☕</span>
-              <span>Cafe (<b id="count-cafe">220</b>)</span>
-            </label>
-            <label class="culinary-legend-item">
-              <input type="checkbox" id="chk-culinary-resto" checked />
-              <span class="legend-swatch resto-swatch">🍽️</span>
-              <span>Resto (<b id="count-resto">196</b>)</span>
-            </label>
-          </div>
-
-          <!-- Sesi Jam Operasional (Mirip Sesi Jadwal Peta Padam) -->
-          <div class="culinary-session-filter">
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2px;">
-              <span class="legend-label" style="font-size:0.7rem; color:#94a3b8;">Sesi Jam Buka:</span>
-              <span id="culinary-active-time-clock" style="font-size:0.67rem; color:#f59e0b; font-weight:700;">WITA</span>
-            </div>
-            <div class="culinary-session-list" role="group" aria-label="Saring menurut sesi jam operasional">
-              <button type="button" class="culinary-session-chip active" data-time-session="all">Semua Jam</button>
-              <button type="button" class="culinary-session-chip" data-time-session="pagi" title="Buka pagi hari untuk sarapan atau ngopi (06:00 - 11:00)">🌅 Pagi (06-11)</button>
-              <button type="button" class="culinary-session-chip" data-time-session="siang" title="Buka siang hari untuk makan siang (11:00 - 17:00)">☀️ Siang (11-17)</button>
-              <button type="button" class="culinary-session-chip" data-time-session="malam" title="Buka sore dan malam untuk nongkrong (17:00 - 23:00)">🌙 Malam (17-23)</button>
-              <button type="button" class="culinary-session-chip" data-time-session="begadang" title="Buka larut malam hingga dini hari atau 24 jam (23:00+)">🦉 Begadang (23+)</button>
-            </div>
-          </div>
-
-          <!-- Filter Waktu Khusus (Jam Buka Spesifik) -->
-          <div class="culinary-hour-slider-wrap" style="background:rgba(255,255,255,0.03); padding:6px 8px; border-radius:8px; border:1px solid rgba(255,255,255,0.06);">
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
-              <span style="font-size:0.68rem; color:#94a3b8;">Tempat Buka Pada Jam:</span>
-              <span id="slider-hour-display" style="font-weight:800; color:#f59e0b; font-size:0.72rem;">Jam Sekarang</span>
-            </div>
-            <div style="display:flex; align-items:center; gap:8px;">
-              <input type="range" id="culinary-hour-range" min="-1" max="23" value="-1" step="1" style="flex:1; accent-color:#f59e0b; cursor:pointer; height:4px;" />
-              <button type="button" id="btn-reset-hour" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; font-size:0.62rem; border-radius:4px; padding:2px 5px; cursor:pointer;" title="Kembali ke jam realtime">Reset</button>
-            </div>
-            <div style="display:flex; justify-content:space-between; font-size:0.6rem; color:#64748b; margin-top:3px;">
-              <span>00:00</span>
-              <span>06:00</span>
-              <span>12:00</span>
-              <span>18:00</span>
-              <span>23:00</span>
-            </div>
-          </div>
-
-          <!-- Fasilitas & Menu Khas -->
-          <div class="culinary-feature-filter">
-            <span style="font-size:0.68rem; color:#94a3b8; display:block; margin-bottom:3px;">Fasilitas & Pilihan Menu:</span>
-            <div style="display:flex; flex-wrap:wrap; gap:4px;">
-              <button type="button" class="culinary-feat-chip" data-feat="wfc">💻 WiFi / WFC</button>
-              <button type="button" class="culinary-feat-chip" data-feat="kaledo">🥩 Kaledo</button>
-              <button type="button" class="culinary-feat-chip" data-feat="seafood">🐟 Seafood</button>
-              <button type="button" class="culinary-feat-chip" data-feat="warkop">☕ Warkop</button>
-            </div>
+        <div class="session-filter" id="culinary-session-filter">
+          <span class="legend-label">Jam Buka</span>
+          <div class="session-list" id="culinary-session-list" role="group" aria-label="Saring menurut jam buka operasional">
+            <button class="session-item culinary-time-btn active" type="button" data-time="all" aria-pressed="true">
+              <b>Semua</b>
+            </button>
+            <button class="session-item culinary-time-btn" type="button" data-time="open-now" aria-pressed="false">
+              <span>🟢 Buka Sekarang <b id="cul-chip-opennow" style="font-weight:700; opacity:0.9;"></b></span>
+            </button>
+            <button class="session-item culinary-time-btn" type="button" data-time="24h" aria-pressed="false">
+              <span>⚡ Buka 24 Jam <b id="cul-chip-24h" style="font-weight:700; opacity:0.9;"></b></span>
+            </button>
+            <button class="session-item culinary-time-btn" type="button" data-time="scheduled" aria-pressed="false">
+              <span>⏰ Jam Tertentu <b id="cul-chip-scheduled" style="font-weight:700; opacity:0.9;"></b></span>
+            </button>
           </div>
         </div>
+
+        <span class="legend-note">☕ Badge cokelat = Coffeeshop & Cafe · 🍽️ Badge biru = Resto & Rumah Makan · 🟢 Label hijau = Buka saat ini (Live WITA) · ⚡ 24 Jam = Buka nonstop.</span>
       </div>
 
       <div id="rtrw-legend" class="rtrw-legend" aria-label="Legenda RTRW Kota Palu">
@@ -3568,12 +3414,8 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       };
 
       const culinaryFilterState = {
-        quick: "all", // "all" | "open-now" | "24h" | "top-rated"
-        showCafe: true,
-        showResto: true,
-        timeSession: "all", // "all" | "pagi" | "siang" | "malam" | "begadang"
-        targetHour: -1, // -1 means realtime / current hour
-        activeFeatures: new Set()
+        category: "all", // "all" | "cafe" | "resto"
+        time: "all" // "all" | "open-now" | "24h" | "scheduled"
       };
 
       function getWitaHour() {
@@ -3597,7 +3439,6 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
           }
         }
 
-        // Estimasi cerdas bila belum ada jam operasional eksplisit di Google Maps
         const isCafe = p.category === "cafe";
         const name = (p.name || "").toLowerCase();
         if (name.includes("warkop")) return hour >= 6 && hour <= 23;
@@ -3615,54 +3456,19 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       }
 
       function matchesCulinaryFilter(p) {
-        // 1. Kategori
-        if (p.category === "cafe" && !culinaryFilterState.showCafe) return false;
-        if (p.category === "resto" && !culinaryFilterState.showResto) return false;
+        // 1. Kategori (Metode tombol identik peta padam: Semua / Cafe / Resto)
+        if (culinaryFilterState.category === "cafe" && p.category !== "cafe") return false;
+        if (culinaryFilterState.category === "resto" && p.category !== "resto") return false;
 
-        // 2. Filter Cepat (Quick Filter)
-        if (culinaryFilterState.quick === "open-now" && !isPlaceOpenNow(p)) return false;
-        if (culinaryFilterState.quick === "24h") {
+        // 2. Jam Buka (Live Time Jam Sekarang, Buka 24 Jam, Jam Tertentu)
+        if (culinaryFilterState.time === "open-now") {
+          if (!isPlaceOpenNow(p)) return false;
+        } else if (culinaryFilterState.time === "24h") {
           const is24 = p.operatingHours?.isOpen24Hours || (p.name || "").toLowerCase().includes("24 jam");
           if (!is24) return false;
-        }
-        if (culinaryFilterState.quick === "top-rated" && (p.rating || 0) < 4.6) return false;
-
-        // 3. Jam Khusus (Slider)
-        if (culinaryFilterState.targetHour !== -1) {
-          if (!isPlaceOpenAtHour(p, culinaryFilterState.targetHour)) return false;
-        }
-
-        // 4. Sesi Jam Buka
-        if (culinaryFilterState.timeSession !== "all") {
-          const sess = culinaryFilterState.timeSession;
-          if (sess === "pagi") {
-            if (!isPlaceOpenAtHour(p, 8)) return false;
-          } else if (sess === "siang") {
-            if (!isPlaceOpenAtHour(p, 13)) return false;
-          } else if (sess === "malam") {
-            if (!isPlaceOpenAtHour(p, 20)) return false;
-          } else if (sess === "begadang") {
-            const is24 = p.operatingHours?.isOpen24Hours;
-            const openLate = isPlaceOpenAtHour(p, 23) || isPlaceOpenAtHour(p, 1);
-            if (!is24 && !openLate) return false;
-          }
-        }
-
-        // 5. Fitur & Menu Khas
-        if (culinaryFilterState.activeFeatures.size > 0) {
-          const feats = (p.features || []).join(" ").toLowerCase();
-          const name = (p.name || "").toLowerCase();
-          for (const f of culinaryFilterState.activeFeatures) {
-            if (f === "wfc") {
-              if (!feats.includes("wfc") && !feats.includes("wifi")) return false;
-            } else if (f === "kaledo") {
-              if (!name.includes("kaledo") && !feats.includes("kaledo")) return false;
-            } else if (f === "seafood") {
-              if (!name.includes("seafood") && !name.includes("ikan") && !feats.includes("seafood")) return false;
-            } else if (f === "warkop") {
-              if (!name.includes("warkop") && !feats.includes("warkop")) return false;
-            }
-          }
+        } else if (culinaryFilterState.time === "scheduled") {
+          const is24 = p.operatingHours?.isOpen24Hours || (p.name || "").toLowerCase().includes("24 jam");
+          if (is24) return false;
         }
 
         return true;
@@ -3692,45 +3498,43 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       }
 
       function updateCulinaryCounts() {
-        let totalOpen = 0;
+        if (!culinaryLayers.allPlaces || !culinaryLayers.allPlaces.length) return;
+
+        let totalPlaces = culinaryLayers.allPlaces.length;
+        let totalCafe = 0;
+        let totalResto = 0;
+        let totalOpenNow = 0;
         let total24h = 0;
-        let totalTop = 0;
-        let visibleCafe = 0;
-        let visibleResto = 0;
+        let totalScheduled = 0;
 
         for (const p of culinaryLayers.allPlaces) {
-          if (isPlaceOpenNow(p)) totalOpen++;
-          if (p.operatingHours?.isOpen24Hours || (p.name || '').toLowerCase().includes('24 jam')) total24h++;
-          if ((p.rating || 0) >= 4.6) totalTop++;
+          if (p.category === "cafe") totalCafe++;
+          else totalResto++;
+
+          const is24 = p.operatingHours?.isOpen24Hours || (p.name || "").toLowerCase().includes("24 jam");
+          if (is24) total24h++;
+          else totalScheduled++;
+
+          if (isPlaceOpenNow(p)) totalOpenNow++;
         }
 
-        for (const m of culinaryLayers.allMarkers) {
-          if (matchesCulinaryFilter(m.feature.properties)) {
-            if (m.culinaryCategory === "cafe") visibleCafe++;
-            else visibleResto++;
-          }
-        }
+        const allEl = document.getElementById("cul-count-all");
+        const cafeEl = document.getElementById("cul-count-cafe");
+        const restoEl = document.getElementById("cul-count-resto");
+        const chipOpenEl = document.getElementById("cul-chip-opennow");
+        const chip24hEl = document.getElementById("cul-chip-24h");
+        const chipSchedEl = document.getElementById("cul-chip-scheduled");
 
-        const openEl = document.getElementById("cul-open-count");
-        const h24El = document.getElementById("cul-24h-count");
-        const topEl = document.getElementById("cul-top-count");
-        const cafeEl = document.getElementById("count-cafe");
-        const restoEl = document.getElementById("count-resto");
-        const allEl = document.getElementById("cul-all-count");
-
-        if (openEl) openEl.textContent = totalOpen;
-        if (h24El) h24El.textContent = total24h;
-        if (topEl) topEl.textContent = totalTop;
-        if (cafeEl) cafeEl.textContent = visibleCafe;
-        if (restoEl) restoEl.textContent = visibleResto;
-        if (allEl) allEl.textContent = culinaryLayers.allPlaces.length;
+        if (allEl) allEl.textContent = totalPlaces;
+        if (cafeEl) cafeEl.textContent = totalCafe;
+        if (restoEl) restoEl.textContent = totalResto;
+        if (chipOpenEl) chipOpenEl.textContent = `(${totalOpenNow})`;
+        if (chip24hEl) chip24hEl.textContent = `(${total24h})`;
+        if (chipSchedEl) chipSchedEl.textContent = `(${totalScheduled})`;
       }
 
       function applyCulinaryFilter() {
         if (!culinaryLayers.clusterGroup) return;
-
-        culinaryFilterState.showCafe = document.getElementById("chk-culinary-cafe")?.checked !== false;
-        culinaryFilterState.showResto = document.getElementById("chk-culinary-resto")?.checked !== false;
 
         culinaryLayers.clusterGroup.clearLayers();
         const visible = culinaryLayers.allMarkers.filter(m => matchesCulinaryFilter(m.feature.properties));
@@ -3787,14 +3591,11 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
           }
 
           const markers = [];
-          let cafeCount = 0;
-          let restoCount = 0;
 
           for (const p of places) {
             const isCafe = p.category === "cafe";
             const iconEmoji = isCafe ? "☕" : "🍽️";
             const tagClass = isCafe ? "cafe" : "resto";
-            if (isCafe) cafeCount++; else restoCount++;
 
             const marker = L.marker([p.lat, p.lon], {
               icon: L.divIcon({
@@ -3851,11 +3652,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
           }
 
           culinaryLayers.allMarkers = markers;
-
-          const countCafeEl = document.getElementById("count-cafe");
-          const countRestoEl = document.getElementById("count-resto");
-          if (countCafeEl) countCafeEl.textContent = cafeCount;
-          if (countRestoEl) countRestoEl.textContent = restoCount;
+          updateCulinaryCounts();
 
           if (currentAppMode === "culinary") {
             applyCulinaryFilter();
@@ -3875,93 +3672,56 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       }
 
       function setupCulinaryControls() {
-        const chkCafe = document.getElementById("chk-culinary-cafe");
-        const chkResto = document.getElementById("chk-culinary-resto");
-        if (chkCafe) chkCafe.addEventListener("change", applyCulinaryFilter);
-        if (chkResto) chkResto.addEventListener("change", applyCulinaryFilter);
+        // 1. Kategori Buttons (Semua / Cafe / Resto) — Identik Peta Pemadaman
+        const catBtns = document.querySelectorAll(".culinary-cat-btn");
+        catBtns.forEach(btn => {
+          btn.addEventListener("click", () => {
+            catBtns.forEach(b => b.setAttribute("aria-pressed", "false"));
+            btn.setAttribute("aria-pressed", "true");
+            culinaryFilterState.category = btn.dataset.cat || "all";
+            applyCulinaryFilter();
+          });
+        });
 
-        // Toggle collapse
-        const toggleBtn = document.getElementById("culinary-legend-toggle-btn");
-        const panel = document.getElementById("culinary-legend");
-        if (toggleBtn && panel) {
-          toggleBtn.addEventListener("click", () => {
-            const isCol = panel.classList.toggle("is-collapsed");
+        // 2. Jam Buka Session Buttons (Semua / Buka Sekarang / 24 Jam / Jam Tertentu)
+        const timeBtns = document.querySelectorAll(".culinary-time-btn");
+        timeBtns.forEach(btn => {
+          btn.addEventListener("click", () => {
+            timeBtns.forEach(b => {
+              b.setAttribute("aria-pressed", "false");
+              b.classList.remove("active");
+            });
+            btn.setAttribute("aria-pressed", "true");
+            btn.classList.add("active");
+            culinaryFilterState.time = btn.dataset.time || "all";
+            applyCulinaryFilter();
+          });
+        });
+
+        // 3. Batas Kelurahan Button
+        const culBoundaryBtn = document.getElementById("culinary-boundary-toggle-btn");
+        if (culBoundaryBtn) {
+          culBoundaryBtn.addEventListener("click", () => {
+            toggleBoundaries();
+            culBoundaryBtn.setAttribute("aria-pressed", boundariesEnabled ? "true" : "false");
+          });
+        }
+
+        // 4. Toggle Collapse Legend
+        const culLegendToggleBtn = document.getElementById("culinary-legend-toggle-btn");
+        const culLegendPanel = document.getElementById("culinary-legend");
+        if (culLegendToggleBtn && culLegendPanel) {
+          culLegendToggleBtn.addEventListener("click", () => {
+            const isCol = culLegendPanel.classList.toggle("is-collapsed");
             const txt = document.getElementById("culinary-legend-toggle-text");
             if (txt) txt.textContent = isCol ? "Buka" : "Ciutkan";
           });
         }
 
-        // Quick filter buttons
-        const quickBtns = document.querySelectorAll(".culinary-filter-btn");
-        quickBtns.forEach(btn => {
-          btn.addEventListener("click", () => {
-            quickBtns.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            culinaryFilterState.quick = btn.dataset.filter || "all";
-            applyCulinaryFilter();
-          });
-        });
-
-        // Time session chips
-        const sessionChips = document.querySelectorAll(".culinary-session-chip");
-        sessionChips.forEach(chip => {
-          chip.addEventListener("click", () => {
-            sessionChips.forEach(c => c.classList.remove("active"));
-            chip.classList.add("active");
-            culinaryFilterState.timeSession = chip.dataset.timeSession || "all";
-            applyCulinaryFilter();
-          });
-        });
-
-        // Hour range slider
-        const hourSlider = document.getElementById("culinary-hour-range");
-        const hourDisplay = document.getElementById("slider-hour-display");
-        const resetBtn = document.getElementById("btn-reset-hour");
-
-        if (hourSlider && hourDisplay) {
-          hourSlider.addEventListener("input", () => {
-            const val = parseInt(hourSlider.value, 10);
-            culinaryFilterState.targetHour = val;
-            if (val === -1) {
-              hourDisplay.textContent = "Jam Sekarang";
-            } else {
-              const hStr = String(val).padStart(2, "0") + ":00 WITA";
-              let label = "Pagi";
-              if (val >= 11 && val < 15) label = "Siang";
-              else if (val >= 15 && val < 18) label = "Sore";
-              else if (val >= 18 && val < 23) label = "Malam";
-              else if (val >= 23 || val < 5) label = "Dini Hari";
-              hourDisplay.textContent = `${hStr} (${label})`;
-            }
-            applyCulinaryFilter();
-          });
+        // Hindari event click / scroll tembus ke peta Leaflet
+        if (culLegendPanel) {
+          stopMapEventInterference(culLegendPanel);
         }
-
-        if (resetBtn && hourSlider && hourDisplay) {
-          resetBtn.addEventListener("click", () => {
-            hourSlider.value = "-1";
-            culinaryFilterState.targetHour = -1;
-            hourDisplay.textContent = "Jam Sekarang";
-            applyCulinaryFilter();
-          });
-        }
-
-        // Feature chips
-        const featChips = document.querySelectorAll(".culinary-feat-chip");
-        featChips.forEach(chip => {
-          chip.addEventListener("click", () => {
-            const feat = chip.dataset.feat;
-            if (!feat) return;
-            if (culinaryFilterState.activeFeatures.has(feat)) {
-              culinaryFilterState.activeFeatures.delete(feat);
-              chip.classList.remove("active");
-            } else {
-              culinaryFilterState.activeFeatures.add(feat);
-              chip.classList.add("active");
-            }
-            applyCulinaryFilter();
-          });
-        });
       }
 
       // ==========================================
@@ -4960,6 +4720,10 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         const btn = document.getElementById("boundary-toggle-btn");
         if (btn) {
           btn.setAttribute("aria-pressed", boundariesEnabled ? "true" : "false");
+        }
+        const culBtn = document.getElementById("culinary-boundary-toggle-btn");
+        if (culBtn) {
+          culBtn.setAttribute("aria-pressed", boundariesEnabled ? "true" : "false");
         }
         if (!boundariesEnabled) {
           boundaryLayerGroup.clearLayers();
