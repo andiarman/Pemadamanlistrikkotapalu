@@ -1,0 +1,3366 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "generated_at": "2026-11-18T07:35:32.832Z",
+  "events": [
+    {
+      "eventId": "5530c9d4-481f-4744-9460-5c88f4306654",
+      "title": "Info Peningkatan Keandalan Kelistrikan",
+      "startTime": "2026-11-18T09:00:00+08:00",
+      "endTime": "2026-11-18T13:30:00+08:00",
+      "locations": [
+        "Kota Palu"
+      ],
+      "affectedAreas": [
+        {
+          "ulpName": "ULP Palu Kota",
+          "locations": [
+            "Pombewe",
+            "Ngata Baru",
+            "Petobo",
+            "Loru Biromaru",
+            "Jalan Pramuka Sigi",
+            "Jalan Karanja Lemba",
+            "Jalan Kelapa Gading",
+            "Lorong Permata Hijau",
+            "Jalan Touwa",
+            "Jalan Tangkasi",
+            "Jalan Lembu",
+            "Lorong Sintuvu"
+          ],
+          "points": [
+            {
+              "location": "Pombewe",
+              "latitude": -0.9761308375118378,
+              "longitude": 119.99149036735626,
+              "displayName": "Pombewe"
+            },
+            {
+              "location": "Ngata Baru",
+              "latitude": -0.9095793440717712,
+              "longitude": 120.00143856105849,
+              "displayName": "Ngatabaru"
+            },
+            {
+              "location": "Petobo",
+              "latitude": -0.9347137278988928,
+              "longitude": 119.92032654901207,
+              "displayName": "Petobo"
+            },
+            {
+              "location": "Loru Biromaru",
+              "latitude": -0.9439,
+              "longitude": 120.0061,
+              "displayName": "Loru Biromaru"
+            },
+            {
+              "location": "Jalan Pramuka Sigi",
+              "latitude": -0.955,
+              "longitude": 119.89,
+              "displayName": "Jalan Pramuka Sigi"
+            },
+            {
+              "location": "Jalan Karanja Lemba",
+              "latitude": -0.937389,
+              "longitude": 119.89317,
+              "displayName": "Jalan Karanja Lemba"
+            },
+            {
+              "location": "Jalan Kelapa Gading",
+              "latitude": -0.890212,
+              "longitude": 119.842533,
+              "displayName": "Jalan Kelapa Gading"
+            },
+            {
+              "location": "Lorong Permata Hijau",
+              "latitude": -0.9125,
+              "longitude": 119.872,
+              "displayName": "Lorong Permata Hijau"
+            },
+            {
+              "location": "Jalan Touwa",
+              "latitude": -0.915,
+              "longitude": 119.892,
+              "displayName": "Jalan Touwa"
+            },
+            {
+              "location": "Jalan Tangkasi",
+              "latitude": -0.929015,
+              "longitude": 119.892479,
+              "displayName": "Jalan Tangkasi"
+            },
+            {
+              "location": "Jalan Lembu",
+              "latitude": -0.923587,
+              "longitude": 119.878277,
+              "displayName": "Jalan Lembu"
+            },
+            {
+              "location": "Lorong Sintuvu",
+              "latitude": -0.928255,
+              "longitude": 119.880149,
+              "displayName": "Lorong Sintuvu"
+            }
+          ]
+        },
+        {
+          "ulpName": "ULP Taweli",
+          "locations": [
+            "Jalan Pantoloan-Tawaeli",
+            "Jalan Bunga Raya",
+            "Jalan Ramba",
+            "Jalan Marjuni",
+            "Jalan Andudana",
+            "Jalan Vatamoento",
+            "Jalan Tanah Nolo",
+            "Jalan Moh Nasir",
+            "Jalan Logo",
+            "Jalan Vinase",
+            "Jalan Uevuku",
+            "Baiya",
+            "Tawaeli",
+            "Pangsarop Bea Cukai",
+            "PT Duco Food Indonesia",
+            "PT Maleo Paksi Ayu",
+            "PT Artakindo Multi Perkasa",
+            "Jalan Baruga",
+            "Jalan Ino Toa",
+            "Jalan Kayu Rampe",
+            "Jalan Kekentina",
+            "Jalan Lamarani",
+            "Jalan Malino",
+            "Jalan Moh. Amin",
+            "Jalan Pagaru Lemba",
+            "Jalan Pantai Taipa",
+            "Jalan Rata Lemba",
+            "Jalan Rende Lele",
+            "Jalan S. Lamangkona",
+            "Kayumalue Ngapa",
+            "Kayumalue Pajeko",
+            "Mamboro",
+            "Taipa",
+            "Palu Utara",
+            "Wilayah Taipa Beach",
+            "PT Agro Manunggal Cocos",
+            "PT Haycarb",
+            "PT Japfa",
+            "PT SPO Agro Resources",
+            "PT Prima Gelora (Big Land)",
+            "Jalan Kebun Kopi",
+            "Jalan Palu-Parigi",
+            "Jalan Yodo",
+            "Lambara",
+            "Liku",
+            "Panau",
+            "Nupabomba",
+            "Tanantovea",
+            "Jalan H. Sabange",
+            "Jalan Pengga Lembah",
+            "Jalan Sultan Alaudin",
+            "Jalan Tompotika",
+            "Pantoloan",
+            "PT Pelabuhan Indonesia Pantoloan",
+            "Pantoloan-Lero",
+            "Jalan Buteta",
+            "Jalan H. Patilla",
+            "Jalan Kayu Riya",
+            "Jalan Makagili",
+            "Jalan Pueboya",
+            "Labuan",
+            "Labuan Kungguma",
+            "Labuan Lelea",
+            "Labuan Lumbubaka",
+            "Pantoloan Boya",
+            "Wombo Kalonggo",
+            "Wombo Mpanau",
+            "Kayumaboko",
+            "Wani I",
+            "Wani II",
+            "Lero",
+            "Dalaka",
+            "CV. Mitra Bangun Nusantara",
+            "PT Cipta Agro Nusantara",
+            "PT Megah Batu Abadi",
+            "PT Putra Labuan Mandiri",
+            "PT Semen Tonasa",
+            "PT Sentra Labuan Tegar",
+            "SPN Labuan",
+            "Labuan Panimba",
+            "Labuan Toposo",
+            "Sisere"
+          ],
+          "points": [
+            {
+              "location": "Jalan Pantoloan-Tawaeli",
+              "latitude": -0.73,
+              "longitude": 119.865,
+              "displayName": "Jalan Pantoloan-Tawaeli"
+            },
+            {
+              "location": "Jalan Bunga Raya",
+              "latitude": -0.732387,
+              "longitude": 119.87141,
+              "displayName": "Jalan Bunga Raya"
+            },
+            {
+              "location": "Jalan Ramba",
+              "latitude": -0.7783,
+              "longitude": 119.86,
+              "displayName": "Jalan Ramba"
+            },
+            {
+              "location": "Jalan Marjuni",
+              "latitude": -0.715,
+              "longitude": 119.868,
+              "displayName": "Jalan Marjuni"
+            },
+            {
+              "location": "Jalan Andudana",
+              "latitude": -0.716,
+              "longitude": 119.869,
+              "displayName": "Jalan Andudana"
+            },
+            {
+              "location": "Jalan Vatamoento",
+              "latitude": -0.717,
+              "longitude": 119.87,
+              "displayName": "Jalan Vatamoento"
+            },
+            {
+              "location": "Jalan Tanah Nolo",
+              "latitude": -0.718,
+              "longitude": 119.871,
+              "displayName": "Jalan Tanah Nolo"
+            },
+            {
+              "location": "Jalan Moh Nasir",
+              "latitude": -0.719,
+              "longitude": 119.872,
+              "displayName": "Jalan Moh Nasir"
+            },
+            {
+              "location": "Jalan Logo",
+              "latitude": -0.714,
+              "longitude": 119.867,
+              "displayName": "Jalan Logo"
+            },
+            {
+              "location": "Jalan Vinase",
+              "latitude": -0.713,
+              "longitude": 119.866,
+              "displayName": "Jalan Vinase"
+            },
+            {
+              "location": "Jalan Uevuku",
+              "latitude": -0.712,
+              "longitude": 119.865,
+              "displayName": "Jalan Uevuku"
+            },
+            {
+              "location": "Baiya",
+              "latitude": -0.736209,
+              "longitude": 119.909266,
+              "displayName": "Baiya"
+            },
+            {
+              "location": "Tawaeli",
+              "latitude": -0.7126085376915583,
+              "longitude": 119.87264640747412,
+              "displayName": "Tawaeli"
+            },
+            {
+              "location": "Pangsarop Bea Cukai",
+              "latitude": -0.7095,
+              "longitude": 119.8542,
+              "displayName": "Pangsarop Bea Cukai"
+            },
+            {
+              "location": "PT Duco Food Indonesia",
+              "latitude": -0.718,
+              "longitude": 119.862,
+              "displayName": "PT Duco Food Indonesia"
+            },
+            {
+              "location": "PT Maleo Paksi Ayu",
+              "latitude": -0.719,
+              "longitude": 119.863,
+              "displayName": "PT Maleo Paksi Ayu"
+            },
+            {
+              "location": "PT Artakindo Multi Perkasa",
+              "latitude": -0.72,
+              "longitude": 119.864,
+              "displayName": "PT Artakindo Multi Perkasa"
+            },
+            {
+              "location": "Jalan Baruga",
+              "latitude": -0.8795092445735221,
+              "longitude": 123.16659790072727,
+              "displayName": "Baruga"
+            },
+            {
+              "location": "Jalan Ino Toa",
+              "latitude": -0.782,
+              "longitude": 119.861,
+              "displayName": "Jalan Ino Toa"
+            },
+            {
+              "location": "Jalan Kayu Rampe",
+              "latitude": -0.783,
+              "longitude": 119.862,
+              "displayName": "Jalan Kayu Rampe"
+            },
+            {
+              "location": "Jalan Kekentina",
+              "latitude": -0.784,
+              "longitude": 119.863,
+              "displayName": "Jalan Kekentina"
+            },
+            {
+              "location": "Jalan Lamarani",
+              "latitude": -0.785,
+              "longitude": 119.864,
+              "displayName": "Jalan Lamarani"
+            },
+            {
+              "location": "Jalan Malino",
+              "latitude": 0.528614,
+              "longitude": 120.6902581,
+              "displayName": "Malino"
+            },
+            {
+              "location": "Jalan Moh. Amin",
+              "latitude": -0.903093,
+              "longitude": 119.888289,
+              "displayName": "Jalan M Yamin"
+            },
+            {
+              "location": "Jalan Pagaru Lemba",
+              "latitude": -0.786,
+              "longitude": 119.865,
+              "displayName": "Jalan Pagaru Lemba"
+            },
+            {
+              "location": "Jalan Pantai Taipa",
+              "latitude": -0.787,
+              "longitude": 119.862,
+              "displayName": "Jalan Pantai Taipa"
+            },
+            {
+              "location": "Jalan Rata Lemba",
+              "latitude": -0.787,
+              "longitude": 119.866,
+              "displayName": "Jalan Rata Lemba"
+            },
+            {
+              "location": "Jalan Rende Lele",
+              "latitude": -0.788,
+              "longitude": 119.867,
+              "displayName": "Jalan Rende Lele"
+            },
+            {
+              "location": "Jalan S. Lamangkona",
+              "latitude": -0.738326,
+              "longitude": 119.858922,
+              "displayName": "Jalan S. Lamangkona"
+            },
+            {
+              "location": "Kayumalue Ngapa",
+              "latitude": -0.771633,
+              "longitude": 119.954958,
+              "displayName": "Kayumalue Ngapa"
+            },
+            {
+              "location": "Kayumalue Pajeko",
+              "latitude": -0.784127,
+              "longitude": 119.896396,
+              "displayName": "Kayumalue Pajeko"
+            },
+            {
+              "location": "Mamboro",
+              "latitude": -0.7912,
+              "longitude": 119.8733,
+              "displayName": "Mamboro"
+            },
+            {
+              "location": "Taipa",
+              "latitude": -0.7736,
+              "longitude": 119.8695,
+              "displayName": "Taipa"
+            },
+            {
+              "location": "Palu Utara",
+              "latitude": -0.7753425602405087,
+              "longitude": 119.87416939635929,
+              "displayName": "Palu Utara"
+            },
+            {
+              "location": "Wilayah Taipa Beach",
+              "latitude": -0.785,
+              "longitude": 119.86,
+              "displayName": "Wilayah Taipa Beach"
+            },
+            {
+              "location": "PT Agro Manunggal Cocos",
+              "latitude": -0.721,
+              "longitude": 119.865,
+              "displayName": "PT Agro Manunggal Cocos"
+            },
+            {
+              "location": "PT Haycarb",
+              "latitude": -0.722,
+              "longitude": 119.866,
+              "displayName": "PT Haycarb"
+            },
+            {
+              "location": "PT Japfa",
+              "latitude": -0.723,
+              "longitude": 119.867,
+              "displayName": "PT Japfa"
+            },
+            {
+              "location": "PT SPO Agro Resources",
+              "latitude": -0.724,
+              "longitude": 119.868,
+              "displayName": "PT SPO Agro Resources"
+            },
+            {
+              "location": "PT Prima Gelora (Big Land)",
+              "latitude": -0.725,
+              "longitude": 119.869,
+              "displayName": "PT Prima Gelora (Big Land)"
+            },
+            {
+              "location": "Jalan Kebun Kopi",
+              "latitude": -0.83,
+              "longitude": 119.98,
+              "displayName": "Jalan Kebun Kopi"
+            },
+            {
+              "location": "Jalan Palu-Parigi",
+              "latitude": -0.835,
+              "longitude": 119.975,
+              "displayName": "Jalan Palu-Parigi"
+            },
+            {
+              "location": "Jalan Yodo",
+              "latitude": -0.732009,
+              "longitude": 119.859889,
+              "displayName": "Jalan Yodo"
+            },
+            {
+              "location": "Lambara",
+              "latitude": -0.736536,
+              "longitude": 119.946778,
+              "displayName": "Lambara"
+            },
+            {
+              "location": "Liku",
+              "latitude": -0.7275,
+              "longitude": 119.8922,
+              "displayName": "Liku"
+            },
+            {
+              "location": "Panau",
+              "latitude": -0.767904,
+              "longitude": 119.886556,
+              "displayName": "Panau"
+            },
+            {
+              "location": "Nupabomba",
+              "latitude": -0.736149,
+              "longitude": 119.998448,
+              "displayName": "Nupabomba"
+            },
+            {
+              "location": "Tanantovea",
+              "latitude": -0.692880462868924,
+              "longitude": 119.91001796250252,
+              "displayName": "Tanantovea"
+            },
+            {
+              "location": "Jalan H. Sabange",
+              "latitude": -0.72,
+              "longitude": 119.873,
+              "displayName": "Jalan H. Sabange"
+            },
+            {
+              "location": "Jalan Pengga Lembah",
+              "latitude": -0.721,
+              "longitude": 119.874,
+              "displayName": "Jalan Pengga Lembah"
+            },
+            {
+              "location": "Jalan Sultan Alaudin",
+              "latitude": -0.921367,
+              "longitude": 119.866158,
+              "displayName": "Jalan Alauddin Lorong 1"
+            },
+            {
+              "location": "Jalan Tompotika",
+              "latitude": -0.785980405136429,
+              "longitude": 123.11993974741934,
+              "displayName": "Tompotika Makmur"
+            },
+            {
+              "location": "Pantoloan",
+              "latitude": -0.694517,
+              "longitude": 119.924588,
+              "displayName": "Pantoloan"
+            },
+            {
+              "location": "PT Pelabuhan Indonesia Pantoloan",
+              "latitude": -0.7061,
+              "longitude": 119.8556,
+              "displayName": "PT Pelabuhan Indonesia Pantoloan"
+            },
+            {
+              "location": "Pantoloan-Lero",
+              "latitude": -0.71,
+              "longitude": 119.855,
+              "displayName": "Pantoloan-Lero"
+            },
+            {
+              "location": "Jalan Buteta",
+              "latitude": -0.677838,
+              "longitude": 119.841527,
+              "displayName": "Jalan Buteta"
+            },
+            {
+              "location": "Jalan H. Patilla",
+              "latitude": -0.722,
+              "longitude": 119.875,
+              "displayName": "Jalan H. Patilla"
+            },
+            {
+              "location": "Jalan Kayu Riya",
+              "latitude": -0.723,
+              "longitude": 119.876,
+              "displayName": "Jalan Kayu Riya"
+            },
+            {
+              "location": "Jalan Makagili",
+              "latitude": -0.724,
+              "longitude": 119.877,
+              "displayName": "Jalan Makagili"
+            },
+            {
+              "location": "Jalan Pueboya",
+              "latitude": -0.725,
+              "longitude": 119.878,
+              "displayName": "Jalan Pueboya"
+            },
+            {
+              "location": "Labuan",
+              "latitude": -0.698487,
+              "longitude": 119.84993,
+              "displayName": "Labuan"
+            },
+            {
+              "location": "Labuan Kungguma",
+              "latitude": -0.687913,
+              "longitude": 119.901302,
+              "displayName": "Labuan Kungguma"
+            },
+            {
+              "location": "Labuan Lelea",
+              "latitude": -0.708893,
+              "longitude": 119.868415,
+              "displayName": "Labuan Lelea"
+            },
+            {
+              "location": "Labuan Lumbubaka",
+              "latitude": -0.6130305459621405,
+              "longitude": 119.92989005581624,
+              "displayName": "Labuan Lumbubaka"
+            },
+            {
+              "location": "Pantoloan Boya",
+              "latitude": -0.6709932580116769,
+              "longitude": 119.88068639937987,
+              "displayName": "Pantoloan Boya"
+            },
+            {
+              "location": "Wombo Kalonggo",
+              "latitude": -0.6678229584188201,
+              "longitude": 119.95410486796187,
+              "displayName": "Wombo Kalonggo"
+            },
+            {
+              "location": "Wombo Mpanau",
+              "latitude": -0.698738,
+              "longitude": 119.950068,
+              "displayName": "Wombo Mpanau"
+            },
+            {
+              "location": "Kayumaboko",
+              "latitude": -0.6899,
+              "longitude": 119.8575,
+              "displayName": "Kayumaboko"
+            },
+            {
+              "location": "Wani I",
+              "latitude": -0.728183,
+              "longitude": 119.872214,
+              "displayName": "Wani I"
+            },
+            {
+              "location": "Wani II",
+              "latitude": -0.723943,
+              "longitude": 119.865481,
+              "displayName": "Wani II"
+            },
+            {
+              "location": "Lero",
+              "latitude": -0.648669,
+              "longitude": 119.920058,
+              "displayName": "Lero"
+            },
+            {
+              "location": "Dalaka",
+              "latitude": -0.665002,
+              "longitude": 119.839297,
+              "displayName": "Dalaka"
+            },
+            {
+              "location": "CV. Mitra Bangun Nusantara",
+              "latitude": -0.726,
+              "longitude": 119.87,
+              "displayName": "CV Mitra Bangun Nusantara"
+            },
+            {
+              "location": "PT Cipta Agro Nusantara",
+              "latitude": -0.727,
+              "longitude": 119.871,
+              "displayName": "PT Cipta Agro Nusantara"
+            },
+            {
+              "location": "PT Megah Batu Abadi",
+              "latitude": -0.728,
+              "longitude": 119.872,
+              "displayName": "PT Megah Batu Abadi"
+            },
+            {
+              "location": "PT Putra Labuan Mandiri",
+              "latitude": -0.685,
+              "longitude": 119.845,
+              "displayName": "PT Putra Labuan Mandiri"
+            },
+            {
+              "location": "PT Semen Tonasa",
+              "latitude": -0.7015,
+              "longitude": 119.858,
+              "displayName": "PT Semen Tonasa"
+            },
+            {
+              "location": "PT Sentra Labuan Tegar",
+              "latitude": -0.686,
+              "longitude": 119.846,
+              "displayName": "PT Sentra Labuan Tegar"
+            },
+            {
+              "location": "SPN Labuan",
+              "latitude": -0.6628,
+              "longitude": 119.8698,
+              "displayName": "SPN Labuan"
+            },
+            {
+              "location": "Labuan Panimba",
+              "latitude": -0.694493,
+              "longitude": 119.86499,
+              "displayName": "Labuan Panimba"
+            },
+            {
+              "location": "Labuan Toposo",
+              "latitude": -0.638973,
+              "longitude": 119.847599,
+              "displayName": "Labuan Toposo"
+            },
+            {
+              "location": "Sisere",
+              "latitude": -0.71,
+              "longitude": 119.88,
+              "displayName": "Sisere"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "445996b9-4453-4720-a5ab-eec89cc91c16",
+      "title": "Info Peningkatan Keandalan Kelistrikan",
+      "startTime": "2026-11-18T09:00:00+08:00",
+      "endTime": "2026-11-18T16:30:00+08:00",
+      "locations": [
+        "Kota Palu"
+      ],
+      "affectedAreas": [
+        {
+          "ulpName": "ULP Parigi",
+          "locations": [
+            "Peningka",
+            "Kasimbar",
+            "Laemanta Utara",
+            "Tovalo",
+            "Posona",
+            "Sumber Tani",
+            "Tinombo Selatan",
+            "Siney",
+            "Khatulistiwa",
+            "Maninili",
+            "Sigenti",
+            "Sidoan",
+            "Lado",
+            "Sipayo",
+            "Kasimbar Palapi",
+            "Ogodopi",
+            "Kasimbar Barat",
+            "Ampibabo Induk",
+            "Ampibabo Timur",
+            "Ampibabo Utara",
+            "Lemo Induk",
+            "Lemo Tengah",
+            "Lemo Utara",
+            "Buranga",
+            "Tomoli Selatan",
+            "Tomoli Induk",
+            "Tomoli Utara",
+            "Toribulu Selatan",
+            "Toribulu",
+            "Singura",
+            "Sibalago",
+            "Sienjo",
+            "Pinotu",
+            "Donggulu Selatan",
+            "Donggulu Induk",
+            "Labuan Donggulu"
+          ],
+          "points": [
+            {
+              "location": "Peningka",
+              "latitude": -0.203787718098556,
+              "longitude": 119.98300619567765,
+              "displayName": "Peningka"
+            },
+            {
+              "location": "Kasimbar",
+              "latitude": -0.2054281,
+              "longitude": 119.9718371,
+              "displayName": "Kasimbar"
+            },
+            {
+              "location": "Laemanta Utara",
+              "latitude": -0.16302360200448973,
+              "longitude": 120.00208229559418,
+              "displayName": "Laemanta Utara"
+            },
+            {
+              "location": "Tovalo",
+              "latitude": -0.16383318676121494,
+              "longitude": 119.96322053035635,
+              "displayName": "Tovalo"
+            },
+            {
+              "location": "Posona",
+              "latitude": -0.1232733,
+              "longitude": 119.9963471,
+              "displayName": "Posona"
+            },
+            {
+              "location": "Sumber Tani",
+              "latitude": -0.0525509448014473,
+              "longitude": 119.99387996016438,
+              "displayName": "Sumber Tani"
+            },
+            {
+              "location": "Tinombo Selatan",
+              "latitude": 0.048422605669726816,
+              "longitude": 120.06436409556329,
+              "displayName": "Tinombo Selatan"
+            },
+            {
+              "location": "Siney",
+              "latitude": -0.73,
+              "longitude": 120.18,
+              "displayName": "Siney"
+            },
+            {
+              "location": "Khatulistiwa",
+              "latitude": 0.031845384643725654,
+              "longitude": 120.0224825550701,
+              "displayName": "Khatulistiwa"
+            },
+            {
+              "location": "Maninili",
+              "latitude": 0.0257893,
+              "longitude": 120.0404445,
+              "displayName": "Maninili"
+            },
+            {
+              "location": "Sigenti",
+              "latitude": 0.0658599,
+              "longitude": 120.0453361,
+              "displayName": "Sigenti"
+            },
+            {
+              "location": "Sidoan",
+              "latitude": 0.27429234833990124,
+              "longitude": 120.1972295399759,
+              "displayName": "Sidoan"
+            },
+            {
+              "location": "Lado",
+              "latitude": 0.18294318975485654,
+              "longitude": 120.09903782882644,
+              "displayName": "Lado"
+            },
+            {
+              "location": "Sipayo",
+              "latitude": 0.1446514,
+              "longitude": 120.0595352,
+              "displayName": "Sipayo"
+            },
+            {
+              "location": "Kasimbar Palapi",
+              "latitude": -0.10905836787448904,
+              "longitude": 119.976054955646,
+              "displayName": "Kasimbar Palapi"
+            },
+            {
+              "location": "Ogodopi",
+              "latitude": -0.14695603957581624,
+              "longitude": 119.9657794160838,
+              "displayName": "Ogodopi Kasimbar"
+            },
+            {
+              "location": "Kasimbar Barat",
+              "latitude": -0.1271463486592681,
+              "longitude": 119.93234968190937,
+              "displayName": "Kasimbar Barat"
+            },
+            {
+              "location": "Ampibabo Induk",
+              "latitude": -0.605,
+              "longitude": 120.035,
+              "displayName": "Ampibabo Induk"
+            },
+            {
+              "location": "Ampibabo Timur",
+              "latitude": -0.4640629902913478,
+              "longitude": 120.06668593820032,
+              "displayName": "Ampibabo Timur"
+            },
+            {
+              "location": "Ampibabo Utara",
+              "latitude": -0.45019608564147223,
+              "longitude": 120.0579033822048,
+              "displayName": "Ampibabo Utara"
+            },
+            {
+              "location": "Lemo Induk",
+              "latitude": -0.575,
+              "longitude": 120.015,
+              "displayName": "Lemo Induk"
+            },
+            {
+              "location": "Lemo Tengah",
+              "latitude": -0.43814761753183895,
+              "longitude": 120.0561630589755,
+              "displayName": "Lemo Tengah"
+            },
+            {
+              "location": "Lemo Utara",
+              "latitude": -0.4258877411933384,
+              "longitude": 120.0537622362242,
+              "displayName": "Lemo Utara"
+            },
+            {
+              "location": "Buranga",
+              "latitude": -0.4401181,
+              "longitude": 119.9977657,
+              "displayName": "Buranga"
+            },
+            {
+              "location": "Tomoli Selatan",
+              "latitude": -0.41474753129311104,
+              "longitude": 119.97985843009478,
+              "displayName": "Tomoli Selatan"
+            },
+            {
+              "location": "Tomoli Induk",
+              "latitude": -0.525,
+              "longitude": 119.975,
+              "displayName": "Tomoli Induk"
+            },
+            {
+              "location": "Tomoli Utara",
+              "latitude": -0.35254508385222,
+              "longitude": 120.01944456270216,
+              "displayName": "Tomoli Utara"
+            },
+            {
+              "location": "Toribulu Selatan",
+              "latitude": -0.34098029876951425,
+              "longitude": 120.02142485623365,
+              "displayName": "Toribulu Selatan"
+            },
+            {
+              "location": "Toribulu",
+              "latitude": -0.3594977,
+              "longitude": 119.9868671,
+              "displayName": "Toribulu"
+            },
+            {
+              "location": "Singura",
+              "latitude": -0.3468941577005427,
+              "longitude": 119.96305460366379,
+              "displayName": "Singura"
+            },
+            {
+              "location": "Sibalago",
+              "latitude": -0.32319947743161187,
+              "longitude": 119.9585548223816,
+              "displayName": "Sibalago"
+            },
+            {
+              "location": "Sienjo",
+              "latitude": -0.3262317,
+              "longitude": 119.9891284,
+              "displayName": "Sienjo"
+            },
+            {
+              "location": "Pinotu",
+              "latitude": -0.2987962,
+              "longitude": 119.9744976,
+              "displayName": "pinotu"
+            },
+            {
+              "location": "Donggulu Selatan",
+              "latitude": -0.2638851719128755,
+              "longitude": 119.9841174238276,
+              "displayName": "Donggulu Selatan"
+            },
+            {
+              "location": "Donggulu Induk",
+              "latitude": -0.245,
+              "longitude": 120.035,
+              "displayName": "Donggulu Induk"
+            },
+            {
+              "location": "Labuan Donggulu",
+              "latitude": -0.2241287936023088,
+              "longitude": 119.9985427036985,
+              "displayName": "Labuan Donggulu"
+            }
+          ]
+        },
+        {
+          "ulpName": "ULP Taweli dan ULP Tambu",
+          "locations": [
+            "Dalaka",
+            "Lero Tatari",
+            "Toaya Vunta",
+            "Toaya",
+            "Sindue",
+            "Masaingi",
+            "Kavaya",
+            "Marana",
+            "Enu",
+            "Tibo",
+            "Kaliburu",
+            "Tompe",
+            "Sindue Tombusabora",
+            "Batusuya",
+            "Tamarenja",
+            "Sindosa",
+            "Sipeso",
+            "Oti",
+            "Alindau",
+            "Sikara",
+            "Ombo",
+            "Ujumbou",
+            "Tondo",
+            "Dampal",
+            "Tanjung Padang",
+            "Jonooge",
+            "Sipi",
+            "Balintuma",
+            "Sibado",
+            "Lompio",
+            "Lende"
+          ],
+          "points": [
+            {
+              "location": "Dalaka",
+              "latitude": -0.665002,
+              "longitude": 119.839297,
+              "displayName": "Dalaka"
+            },
+            {
+              "location": "Lero Tatari",
+              "latitude": -0.660803,
+              "longitude": 119.883039,
+              "displayName": "Lero Tatari"
+            },
+            {
+              "location": "Toaya Vunta",
+              "latitude": -0.650791,
+              "longitude": 119.879249,
+              "displayName": "Toaya Vunta"
+            },
+            {
+              "location": "Toaya",
+              "latitude": -0.612294,
+              "longitude": 119.863573,
+              "displayName": "Toaya"
+            },
+            {
+              "location": "Sindue",
+              "latitude": -0.5811034599731497,
+              "longitude": 119.83715011342923,
+              "displayName": "Sindue"
+            },
+            {
+              "location": "Masaingi",
+              "latitude": -0.604853,
+              "longitude": 119.838921,
+              "displayName": "Masaingi"
+            },
+            {
+              "location": "Kavaya",
+              "latitude": -0.5628045783469598,
+              "longitude": 119.8061517818528,
+              "displayName": "Kavaya"
+            },
+            {
+              "location": "Marana",
+              "latitude": -0.5366974205010587,
+              "longitude": 119.86775114561469,
+              "displayName": "Marana"
+            },
+            {
+              "location": "Enu",
+              "latitude": -0.563208,
+              "longitude": 119.823885,
+              "displayName": "Enu"
+            },
+            {
+              "location": "Tibo",
+              "latitude": -0.527424,
+              "longitude": 119.802752,
+              "displayName": "Tibo"
+            },
+            {
+              "location": "Kaliburu",
+              "latitude": -0.4741738468156785,
+              "longitude": 119.84961865447116,
+              "displayName": "Kaliburu"
+            },
+            {
+              "location": "Tompe",
+              "latitude": -0.2087342439793099,
+              "longitude": 119.81729459051441,
+              "displayName": "Tompe"
+            },
+            {
+              "location": "Sindue Tombusabora",
+              "latitude": -0.47293478346511114,
+              "longitude": 119.8354807222776,
+              "displayName": "Sindue Tombusabora"
+            },
+            {
+              "location": "Batusuya",
+              "latitude": -0.4298287912044076,
+              "longitude": 119.83459161220487,
+              "displayName": "Batusuya"
+            },
+            {
+              "location": "Tamarenja",
+              "latitude": -0.411353426561115,
+              "longitude": 119.86321419640797,
+              "displayName": "Tamarenja"
+            },
+            {
+              "location": "Sindosa",
+              "latitude": -0.4002530312484555,
+              "longitude": 119.81907774642652,
+              "displayName": "Sindosa"
+            },
+            {
+              "location": "Sipeso",
+              "latitude": -0.3684807632273491,
+              "longitude": 119.83372922385685,
+              "displayName": "Sipeso"
+            },
+            {
+              "location": "Oti",
+              "latitude": -0.37781712436437015,
+              "longitude": 119.851548799974,
+              "displayName": "Oti"
+            },
+            {
+              "location": "Alindau",
+              "latitude": -0.34688944056046506,
+              "longitude": 119.81123830296633,
+              "displayName": "Alindau"
+            },
+            {
+              "location": "Sikara",
+              "latitude": -0.653773,
+              "longitude": 119.828204,
+              "displayName": "Sikara"
+            },
+            {
+              "location": "Ombo",
+              "latitude": -0.31445055999485094,
+              "longitude": 119.85859523958486,
+              "displayName": "Ombo"
+            },
+            {
+              "location": "Ujumbou",
+              "latitude": -0.2770266849946848,
+              "longitude": 119.81956997912938,
+              "displayName": "Ujumbou"
+            },
+            {
+              "location": "Tondo",
+              "latitude": -0.26768301296304514,
+              "longitude": 119.83301722119954,
+              "displayName": "Desa Tondo"
+            },
+            {
+              "location": "Dampal",
+              "latitude": -0.24183122265080195,
+              "longitude": 119.80704051307879,
+              "displayName": "Dampal"
+            },
+            {
+              "location": "Tanjung Padang",
+              "latitude": -0.23033240501947452,
+              "longitude": 119.80933194083202,
+              "displayName": "Tanjung Padang"
+            },
+            {
+              "location": "Jonooge",
+              "latitude": -0.2529571749672599,
+              "longitude": 119.84140143171699,
+              "displayName": "Jonooge"
+            },
+            {
+              "location": "Sipi",
+              "latitude": -0.2700103793569201,
+              "longitude": 119.88367097663553,
+              "displayName": "Sipi"
+            },
+            {
+              "location": "Balintuma",
+              "latitude": -0.22128039636385216,
+              "longitude": 119.88218357386016,
+              "displayName": "Balintuma"
+            },
+            {
+              "location": "Sibado",
+              "latitude": -0.1971820004679622,
+              "longitude": 119.8804194158625,
+              "displayName": "Sibado"
+            },
+            {
+              "location": "Lompio",
+              "latitude": -0.1940371254597063,
+              "longitude": 119.84058762219236,
+              "displayName": "Lompio"
+            },
+            {
+              "location": "Lende",
+              "latitude": -0.18167919259870344,
+              "longitude": 119.8429099342787,
+              "displayName": "Lende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "48df31f3-564d-4165-b7a5-3db674e5bd5f",
+      "title": "Info Peningkatan Keandalan Kelistrikan",
+      "startTime": "2026-11-18T13:00:00+08:00",
+      "endTime": "2026-11-18T16:30:00+08:00",
+      "locations": [
+        "Kota Palu"
+      ],
+      "affectedAreas": [
+        {
+          "ulpName": "ULP Palu Kota",
+          "locations": [
+            "Jalan Poros Palu - Palolo",
+            "Bora",
+            "Sidera",
+            "Oloboju",
+            "Watononju",
+            "Kalukubula",
+            "RS Torabelo",
+            "Jalan Dewi Sartika",
+            "Jalan Hamengkubuwono",
+            "Jalan Merdeka",
+            "Jalan Lembaga",
+            "Jalan Adam Malik",
+            "Jalan RS Islam",
+            "Jalan Banteng",
+            "Jalan Kijang",
+            "Jalan Zebra",
+            "Jalan Peladuk",
+            "Jalan Mawasm",
+            "Jalan Tangkasi Atas",
+            "Jalan Pintu Air",
+            "Jalan Purnabakti",
+            "Perumahan Griya Permai",
+            "BTN Bumi Anggur",
+            "Birobuli Utara",
+            "Pombewe",
+            "Huntap Pombowe",
+            "Sigi Biromaru"
+          ],
+          "points": [
+            {
+              "location": "Jalan Poros Palu - Palolo",
+              "latitude": -0.975,
+              "longitude": 119.925,
+              "displayName": "Jalan Poros Palu - Palolo"
+            },
+            {
+              "location": "Bora",
+              "latitude": -1.0486396,
+              "longitude": 119.9413452,
+              "displayName": "Bora"
+            },
+            {
+              "location": "Sidera",
+              "latitude": -1.0078816,
+              "longitude": 119.9276614,
+              "displayName": "Sidera"
+            },
+            {
+              "location": "Oloboju",
+              "latitude": -0.985,
+              "longitude": 119.925,
+              "displayName": "Oloboju"
+            },
+            {
+              "location": "Watononju",
+              "latitude": -1.0364693802191858,
+              "longitude": 119.98589765430322,
+              "displayName": "Watunonju"
+            },
+            {
+              "location": "Kalukubula",
+              "latitude": -0.9532282080540349,
+              "longitude": 119.88944053833242,
+              "displayName": "Kalukubula"
+            },
+            {
+              "location": "RS Torabelo",
+              "latitude": -0.9858,
+              "longitude": 119.9231,
+              "displayName": "RS Torabelo"
+            },
+            {
+              "location": "Jalan Dewi Sartika",
+              "latitude": -0.930495,
+              "longitude": 119.897198,
+              "displayName": "Jalan Dewi Sartika"
+            },
+            {
+              "location": "Jalan Hamengkubuwono",
+              "latitude": -0.912,
+              "longitude": 119.885,
+              "displayName": "Jalan Hamengkubuwono"
+            },
+            {
+              "location": "Jalan Merdeka",
+              "latitude": -0.932765,
+              "longitude": 119.903321,
+              "displayName": "Jalan Merdeka"
+            },
+            {
+              "location": "Jalan Lembaga",
+              "latitude": -0.933359,
+              "longitude": 119.900003,
+              "displayName": "Jalan Lembaga"
+            },
+            {
+              "location": "Jalan Adam Malik",
+              "latitude": -0.932025,
+              "longitude": 119.904529,
+              "displayName": "Jalan Adam Malik"
+            },
+            {
+              "location": "Jalan RS Islam",
+              "latitude": -0.9171,
+              "longitude": 119.8876,
+              "displayName": "RS Islam"
+            },
+            {
+              "location": "Jalan Banteng",
+              "latitude": -0.930299,
+              "longitude": 119.895023,
+              "displayName": "Jalan Banteng"
+            },
+            {
+              "location": "Jalan Kijang",
+              "latitude": -0.92731,
+              "longitude": 119.89056,
+              "displayName": "Jalan Kijang"
+            },
+            {
+              "location": "Jalan Zebra",
+              "latitude": -0.923091,
+              "longitude": 119.884582,
+              "displayName": "Jalan Zebra"
+            },
+            {
+              "location": "Jalan Peladuk",
+              "latitude": -0.922,
+              "longitude": 119.896,
+              "displayName": "Jalan Peladuk"
+            },
+            {
+              "location": "Jalan Mawasm",
+              "latitude": -0.921,
+              "longitude": 119.895,
+              "displayName": "Jalan Mawasm"
+            },
+            {
+              "location": "Jalan Tangkasi Atas",
+              "latitude": -0.929015,
+              "longitude": 119.892479,
+              "displayName": "Jalan Tangkasi Atas"
+            },
+            {
+              "location": "Jalan Pintu Air",
+              "latitude": -0.918,
+              "longitude": 119.88,
+              "displayName": "Jalan Pintu Air"
+            },
+            {
+              "location": "Jalan Purnabakti",
+              "latitude": -0.938,
+              "longitude": 119.892,
+              "displayName": "Jalan Purnabakti"
+            },
+            {
+              "location": "Perumahan Griya Permai",
+              "latitude": -0.935,
+              "longitude": 119.886,
+              "displayName": "Perumahan Griya Permai"
+            },
+            {
+              "location": "BTN Bumi Anggur",
+              "latitude": -0.934101,
+              "longitude": 119.895548,
+              "displayName": "Jalan Kompleks Bumi Anggur"
+            },
+            {
+              "location": "Birobuli Utara",
+              "latitude": -0.918636054569726,
+              "longitude": 119.89811387485372,
+              "displayName": "Desa Birobuli Utara"
+            },
+            {
+              "location": "Pombewe",
+              "latitude": -0.9761308375118378,
+              "longitude": 119.99149036735626,
+              "displayName": "Pombewe"
+            },
+            {
+              "location": "Huntap Pombowe",
+              "latitude": -0.9842,
+              "longitude": 119.9535,
+              "displayName": "Huntap Pombowe"
+            },
+            {
+              "location": "Sigi Biromaru",
+              "latitude": -1.0115700020737102,
+              "longitude": 119.9400275980638,
+              "displayName": "Sigi Biromaru"
+            }
+          ]
+        },
+        {
+          "ulpName": "ULP Parigi",
+          "locations": [
+            "Pelawa",
+            "Matolele",
+            "Jononunu",
+            "Petapa",
+            "Lebo",
+            "Masigi",
+            "Bambalemo",
+            "Maesa",
+            "Bantaya",
+            "Kampal",
+            "Loji",
+            "Bambalemo Ranomaisi",
+            "Lobu Mandiri",
+            "Parigimpu'u",
+            "Jono Kalora",
+            "Kompleks Perkantoran Parigi"
+          ],
+          "points": [
+            {
+              "location": "Pelawa",
+              "latitude": -0.7632324,
+              "longitude": 120.0971304,
+              "displayName": "Pelawa"
+            },
+            {
+              "location": "Matolele",
+              "latitude": -0.7600201570177973,
+              "longitude": 120.06119856784707,
+              "displayName": "Matolele"
+            },
+            {
+              "location": "Jononunu",
+              "latitude": -0.7762463668001826,
+              "longitude": 120.09839499676514,
+              "displayName": "Jononunu"
+            },
+            {
+              "location": "Petapa",
+              "latitude": -0.7761139,
+              "longitude": 120.1310685,
+              "displayName": "Petapa"
+            },
+            {
+              "location": "Lebo",
+              "latitude": -0.7791937,
+              "longitude": 120.146255,
+              "displayName": "Lebo"
+            },
+            {
+              "location": "Masigi",
+              "latitude": -0.8193112,
+              "longitude": 120.1491278,
+              "displayName": "masigi"
+            },
+            {
+              "location": "Bambalemo",
+              "latitude": -0.7857865,
+              "longitude": 120.1520074,
+              "displayName": "Bambalemo"
+            },
+            {
+              "location": "Maesa",
+              "latitude": -0.8505717,
+              "longitude": 120.1701437,
+              "displayName": "Maesa"
+            },
+            {
+              "location": "Bantaya",
+              "latitude": -0.8086429,
+              "longitude": 120.175005,
+              "displayName": "Bantaya"
+            },
+            {
+              "location": "Kampal",
+              "latitude": -0.8008763,
+              "longitude": 120.1508446,
+              "displayName": "Kampal"
+            },
+            {
+              "location": "Loji",
+              "latitude": -0.8129012462315761,
+              "longitude": 120.17706637783174,
+              "displayName": "Loji"
+            },
+            {
+              "location": "Bambalemo Ranomaisi",
+              "latitude": -0.7882566673723007,
+              "longitude": 120.15029684656031,
+              "displayName": "Bambalemo Ranomaisi"
+            },
+            {
+              "location": "Lobu Mandiri",
+              "latitude": -0.8262875887474793,
+              "longitude": 120.0874882652668,
+              "displayName": "Lobu Mandiri"
+            },
+            {
+              "location": "Parigimpu'u",
+              "latitude": -0.8504372,
+              "longitude": 120.0828518,
+              "displayName": "Parigimpu'u"
+            },
+            {
+              "location": "Jono Kalora",
+              "latitude": -0.8022129567120578,
+              "longitude": 120.11232810936282,
+              "displayName": "Jono Kalora"
+            },
+            {
+              "location": "Kompleks Perkantoran Parigi",
+              "latitude": -0.805,
+              "longitude": 120.175,
+              "displayName": "Kompleks Perkantoran Parigi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "b5b25ffa-2240-4ec3-8c79-cc394618d4cd",
+      "title": "Info Peningkatan Keandalan Kelistrikan",
+      "startTime": "2026-11-18T16:00:00+08:00",
+      "endTime": "2026-11-18T19:30:00+08:00",
+      "locations": [
+        "Kota Palu"
+      ],
+      "affectedAreas": [
+        {
+          "ulpName": "ULP Palu kota",
+          "locations": [
+            "Jalan Kebun Sari",
+            "Mamara",
+            "Mutiara",
+            "Bandes",
+            "Bulu Masomba",
+            "Tekukur",
+            "Maleo Atas",
+            "Veteran Atas",
+            "Perintis",
+            "Dayodara 2",
+            "Mantikulore",
+            "Pue Salanga",
+            "Nunumbuku",
+            "Nambo",
+            "BTN Lasoani Bawah",
+            "BTN Lasoani Atas",
+            "Perum Graha Khayangan",
+            "BTN Korpri",
+            "Perum Mutiara Permai",
+            "BTN Taman Sari Petobo",
+            "Perumahan Graha Nambo Nabelo",
+            "Petobo Green View",
+            "Jalan Soekarno Hatta",
+            "Kompleks Pergudangan",
+            "Jalan Sigma",
+            "Jalan Ki Hajar Dewantara",
+            "Jalan Veteran",
+            "Jalan Merpati",
+            "Jalan Lagarutu",
+            "Jalan Dayodara",
+            "Jalan Balaikota",
+            "Jalan M. Yamin",
+            "Jalan Kartini",
+            "Jalan Rajawali",
+            "Jalan Gunung Loli",
+            "Jalan Tanjung Tada",
+            "Pasar Masomba"
+          ],
+          "points": [
+            {
+              "location": "Jalan Kebun Sari",
+              "latitude": -0.907523,
+              "longitude": 119.923932,
+              "displayName": "Jalan Kebun sari"
+            },
+            {
+              "location": "Mamara",
+              "latitude": -0.923284,
+              "longitude": 119.919786,
+              "displayName": "Mamara"
+            },
+            {
+              "location": "Mutiara",
+              "latitude": -0.922214,
+              "longitude": 119.89609,
+              "displayName": "Jalan Mutiara"
+            },
+            {
+              "location": "Bandes",
+              "latitude": -0.903,
+              "longitude": 119.92,
+              "displayName": "Bandes"
+            },
+            {
+              "location": "Bulu Masomba",
+              "latitude": -0.901856,
+              "longitude": 119.911049,
+              "displayName": "Bulu Masomba"
+            },
+            {
+              "location": "Tekukur",
+              "latitude": -0.906641,
+              "longitude": 119.909501,
+              "displayName": "Tekukur"
+            },
+            {
+              "location": "Maleo Atas",
+              "latitude": -0.904465,
+              "longitude": 119.898117,
+              "displayName": "Maleo atas"
+            },
+            {
+              "location": "Veteran Atas",
+              "latitude": -0.900625,
+              "longitude": 119.898736,
+              "displayName": "Veteran atas"
+            },
+            {
+              "location": "Perintis",
+              "latitude": -0.908,
+              "longitude": 119.912,
+              "displayName": "Jalan Perintis"
+            },
+            {
+              "location": "Dayodara 2",
+              "latitude": -0.884725,
+              "longitude": 119.888737,
+              "displayName": "Dayodara 2"
+            },
+            {
+              "location": "Mantikulore",
+              "latitude": -0.893515,
+              "longitude": 119.906188,
+              "displayName": "Mantikulore"
+            },
+            {
+              "location": "Pue Salanga",
+              "latitude": -0.925,
+              "longitude": 119.915,
+              "displayName": "Pue Salanga"
+            },
+            {
+              "location": "Nunumbuku",
+              "latitude": -0.887574,
+              "longitude": 119.928647,
+              "displayName": "Nunumbuku"
+            },
+            {
+              "location": "Nambo",
+              "latitude": -2.6437065,
+              "longitude": 122.0135053,
+              "displayName": "Nambo"
+            },
+            {
+              "location": "BTN Lasoani Bawah",
+              "latitude": -0.902,
+              "longitude": 119.915,
+              "displayName": "BTN Lasoani Bawah"
+            },
+            {
+              "location": "BTN Lasoani Atas",
+              "latitude": -0.899,
+              "longitude": 119.921,
+              "displayName": "BTN Lasoani Atas"
+            },
+            {
+              "location": "Perum Graha Khayangan",
+              "latitude": -0.9045,
+              "longitude": 119.918,
+              "displayName": "Perum Graha Khayangan"
+            },
+            {
+              "location": "BTN Korpri",
+              "latitude": -0.912,
+              "longitude": 119.916,
+              "displayName": "BTN Korpri"
+            },
+            {
+              "location": "Perum Mutiara Permai",
+              "latitude": -0.928,
+              "longitude": 119.911,
+              "displayName": "Perum Mutiara Permai"
+            },
+            {
+              "location": "BTN Taman Sari Petobo",
+              "latitude": -0.932,
+              "longitude": 119.908,
+              "displayName": "BTN Taman Sari Petobo"
+            },
+            {
+              "location": "Perumahan Graha Nambo Nabelo",
+              "latitude": -0.924,
+              "longitude": 119.919,
+              "displayName": "Perumahan Graha Nambo Nabelo"
+            },
+            {
+              "location": "Petobo Green View",
+              "latitude": -0.93,
+              "longitude": 119.914,
+              "displayName": "Petobo Green View"
+            },
+            {
+              "location": "Jalan Soekarno Hatta",
+              "latitude": -0.879552,
+              "longitude": 119.886469,
+              "displayName": "Jalan Soekarno Hatta"
+            },
+            {
+              "location": "Kompleks Pergudangan",
+              "latitude": -0.854,
+              "longitude": 119.895,
+              "displayName": "Kompleks Pergudangan"
+            },
+            {
+              "location": "Jalan Sigma",
+              "latitude": -0.8385,
+              "longitude": 119.8965,
+              "displayName": "Jalan Sigma"
+            },
+            {
+              "location": "Jalan Ki Hajar Dewantara",
+              "latitude": -0.891502,
+              "longitude": 119.884068,
+              "displayName": "Jalan Ki Hajar Dewantara"
+            },
+            {
+              "location": "Jalan Veteran",
+              "latitude": -0.949718,
+              "longitude": 119.918434,
+              "displayName": "Jalan Veteran"
+            },
+            {
+              "location": "Jalan Merpati",
+              "latitude": -0.896434,
+              "longitude": 119.890482,
+              "displayName": "Jalan Merpati"
+            },
+            {
+              "location": "Jalan Lagarutu",
+              "latitude": -0.889853,
+              "longitude": 119.894456,
+              "displayName": "Jalan Lagarutu"
+            },
+            {
+              "location": "Jalan Dayodara",
+              "latitude": -0.884725,
+              "longitude": 119.888737,
+              "displayName": "Jalan Dayodara"
+            },
+            {
+              "location": "Jalan Balaikota",
+              "latitude": -0.898668,
+              "longitude": 119.890084,
+              "displayName": "Jalan Balai Kota"
+            },
+            {
+              "location": "Jalan M. Yamin",
+              "latitude": -0.903093,
+              "longitude": 119.888289,
+              "displayName": "Jalan M Yamin"
+            },
+            {
+              "location": "Jalan Kartini",
+              "latitude": -0.901968,
+              "longitude": 119.881226,
+              "displayName": "Jalan R.A.Kartini"
+            },
+            {
+              "location": "Jalan Rajawali",
+              "latitude": -0.899475,
+              "longitude": 119.875914,
+              "displayName": "Jalan Rajawali"
+            },
+            {
+              "location": "Jalan Gunung Loli",
+              "latitude": -0.899099,
+              "longitude": 119.881562,
+              "displayName": "Jalan Gunung Loli"
+            },
+            {
+              "location": "Jalan Tanjung Tada",
+              "latitude": -0.902986,
+              "longitude": 119.883089,
+              "displayName": "Jalan Tanjung Tada"
+            },
+            {
+              "location": "Pasar Masomba",
+              "latitude": -0.907868,
+              "longitude": 119.87876,
+              "displayName": "Pasar Masomba"
+            }
+          ]
+        },
+        {
+          "ulpName": "ULP Kamonji",
+          "locations": [
+            "Jalan Kelor",
+            "Jalan S. Manonda",
+            "Jalan Gawalise",
+            "Duyu",
+            "Jalan Tagari Lonjo",
+            "Jalan Padanjakaya",
+            "Jalan Timbarante",
+            "Jalan Malontara",
+            "Jalan Tadulako",
+            "Jalan Tavanjuka",
+            "BTN Palupi",
+            "Jalan Tavanjuka Mas",
+            "Jalan Angsana Raya",
+            "Jalan Kamboja",
+            "Jalan Labu",
+            "Jalan Keramik",
+            "BTN Pengau",
+            "Jalan Kinta Baru",
+            "Kawole",
+            "BTN Saweli Gading",
+            "Perumnas Tinggede",
+            "Green Baliase",
+            "BTN Graha Mutiara",
+            "Mira Baliase",
+            "Griya Baliase",
+            "BTN Puskopad",
+            "Baliase",
+            "Binangga",
+            "Padende",
+            "Marawola Barat",
+            "Porame",
+            "Beka",
+            "Kinovaro",
+            "Sibedi",
+            "Jalan Jati Baru",
+            "Jalan Jati",
+            "Jalan Kramat Jati",
+            "Jalan Agatis",
+            "Jalan Beringin",
+            "Jalan Kalora",
+            "Jalan Sungai Lariang",
+            "Jalan Danau Talaga",
+            "Jalan Sungai Ogotion",
+            "Jalan Sungai Sausu",
+            "Jalan Ogomojolo",
+            "Jalan Sungai Balantak",
+            "Jalan Sungai Tanamea",
+            "Jalan Bungi Indah",
+            "Jalan Lalove",
+            "Jalan Baligau",
+            "Jalan I Gusti Ngurah Rai",
+            "Jalan Kedondong",
+            "Jalan Palola",
+            "Jalan Tamaco",
+            "Jalan Pipa Air"
+          ],
+          "points": [
+            {
+              "location": "Jalan Kelor",
+              "latitude": -0.903646,
+              "longitude": 119.847286,
+              "displayName": "Jalan Kelor"
+            },
+            {
+              "location": "Jalan S. Manonda",
+              "latitude": -0.909656,
+              "longitude": 119.849872,
+              "displayName": "Jalan Sungai Manonda"
+            },
+            {
+              "location": "Jalan Gawalise",
+              "latitude": -0.899406,
+              "longitude": 119.838234,
+              "displayName": "Jalan Gawalise"
+            },
+            {
+              "location": "Duyu",
+              "latitude": -0.915648,
+              "longitude": 119.845687,
+              "displayName": "Duyu"
+            },
+            {
+              "location": "Jalan Tagari Lonjo",
+              "latitude": -0.91459,
+              "longitude": 119.847566,
+              "displayName": "Jalan Tagari Lonjo"
+            },
+            {
+              "location": "Jalan Padanjakaya",
+              "latitude": -0.9221,
+              "longitude": 119.847554,
+              "displayName": "Jalan Padanjakaya"
+            },
+            {
+              "location": "Jalan Timbarante",
+              "latitude": -0.8955,
+              "longitude": 119.855,
+              "displayName": "Jalan Timbarante"
+            },
+            {
+              "location": "Jalan Malontara",
+              "latitude": -0.931595,
+              "longitude": 119.841372,
+              "displayName": "Jalan Malontara"
+            },
+            {
+              "location": "Jalan Tadulako",
+              "latitude": -0.892865,
+              "longitude": 119.876259,
+              "displayName": "Jalan Tadulako"
+            },
+            {
+              "location": "Jalan Tavanjuka",
+              "latitude": -0.923969,
+              "longitude": 119.863242,
+              "displayName": "Jalan Tavanjuka"
+            },
+            {
+              "location": "BTN Palupi",
+              "latitude": -0.929879,
+              "longitude": 119.867873,
+              "displayName": "BTN Palupi"
+            },
+            {
+              "location": "Jalan Tavanjuka Mas",
+              "latitude": -0.925172,
+              "longitude": 119.863784,
+              "displayName": "Jalan Tavanjuka Mas"
+            },
+            {
+              "location": "Jalan Angsana Raya",
+              "latitude": -0.932,
+              "longitude": 119.869,
+              "displayName": "Jalan Angsana Raya"
+            },
+            {
+              "location": "Jalan Kamboja",
+              "latitude": -0.907378,
+              "longitude": 119.845546,
+              "displayName": "Jalan Kamboja"
+            },
+            {
+              "location": "Jalan Labu",
+              "latitude": -0.907674,
+              "longitude": 119.84835,
+              "displayName": "Jalan Labu"
+            },
+            {
+              "location": "Jalan Keramik",
+              "latitude": -0.927378,
+              "longitude": 119.840923,
+              "displayName": "Jalan Keramik"
+            },
+            {
+              "location": "BTN Pengau",
+              "latitude": -0.925,
+              "longitude": 119.865,
+              "displayName": "BTN Pengau"
+            },
+            {
+              "location": "Jalan Kinta Baru",
+              "latitude": -0.8965,
+              "longitude": 119.856,
+              "displayName": "Jalan Kinta Baru"
+            },
+            {
+              "location": "Kawole",
+              "latitude": -0.958,
+              "longitude": 119.882,
+              "displayName": "Kawole"
+            },
+            {
+              "location": "BTN Saweli Gading",
+              "latitude": -0.903657,
+              "longitude": 119.894845,
+              "displayName": "Jalan Lorong Saweri Gading II"
+            },
+            {
+              "location": "Perumnas Tinggede",
+              "latitude": -0.931,
+              "longitude": 119.87,
+              "displayName": "Perumnas Tinggede"
+            },
+            {
+              "location": "Green Baliase",
+              "latitude": -0.942,
+              "longitude": 119.875,
+              "displayName": "Green Baliase"
+            },
+            {
+              "location": "BTN Graha Mutiara",
+              "latitude": -0.94,
+              "longitude": 119.873,
+              "displayName": "BTN Graha Mutiara"
+            },
+            {
+              "location": "Mira Baliase",
+              "latitude": -0.943,
+              "longitude": 119.874,
+              "displayName": "Mira Baliase"
+            },
+            {
+              "location": "Griya Baliase",
+              "latitude": -0.944,
+              "longitude": 119.876,
+              "displayName": "Griya Baliase"
+            },
+            {
+              "location": "BTN Puskopad",
+              "latitude": -0.935,
+              "longitude": 119.868,
+              "displayName": "BTN Puskopad"
+            },
+            {
+              "location": "Baliase",
+              "latitude": -0.9392908339750363,
+              "longitude": 119.85496451107903,
+              "displayName": "Baliase"
+            },
+            {
+              "location": "Binangga",
+              "latitude": -0.768,
+              "longitude": 119.8767,
+              "displayName": "Binangga"
+            },
+            {
+              "location": "Padende",
+              "latitude": -0.9630147197364173,
+              "longitude": 119.85499734356746,
+              "displayName": "Padende"
+            },
+            {
+              "location": "Marawola Barat",
+              "latitude": -0.9695765717110332,
+              "longitude": 119.75427481691175,
+              "displayName": "Marawola Barat"
+            },
+            {
+              "location": "Porame",
+              "latitude": -0.9557804892488061,
+              "longitude": 119.83967242648764,
+              "displayName": "Porame"
+            },
+            {
+              "location": "Beka",
+              "latitude": -0.9901876968228239,
+              "longitude": 119.85709249898008,
+              "displayName": "Beka"
+            },
+            {
+              "location": "Kinovaro",
+              "latitude": -0.9479481116980173,
+              "longitude": 119.80937506794623,
+              "displayName": "Kinovaro"
+            },
+            {
+              "location": "Sibedi",
+              "latitude": -0.9839973188269451,
+              "longitude": 119.83999185845366,
+              "displayName": "Sibedi"
+            },
+            {
+              "location": "Jalan Jati Baru",
+              "latitude": -0.920278,
+              "longitude": 119.863474,
+              "displayName": "Jalan Jati Baru"
+            },
+            {
+              "location": "Jalan Jati",
+              "latitude": -0.91089,
+              "longitude": 119.863233,
+              "displayName": "Jalan Jati"
+            },
+            {
+              "location": "Jalan Kramat Jati",
+              "latitude": -0.895,
+              "longitude": 119.854,
+              "displayName": "Jalan Kramat Jati"
+            },
+            {
+              "location": "Jalan Agatis",
+              "latitude": -0.913717,
+              "longitude": 119.861071,
+              "displayName": "Jalan Agatis"
+            },
+            {
+              "location": "Jalan Beringin",
+              "latitude": -0.908361,
+              "longitude": 119.859831,
+              "displayName": "Jalan Beringin"
+            },
+            {
+              "location": "Jalan Kalora",
+              "latitude": -0.90867,
+              "longitude": 119.86524,
+              "displayName": "Jalan Kalora"
+            },
+            {
+              "location": "Jalan Sungai Lariang",
+              "latitude": -0.903602,
+              "longitude": 119.863596,
+              "displayName": "Jalan Sungai Lariang"
+            },
+            {
+              "location": "Jalan Danau Talaga",
+              "latitude": -0.904776,
+              "longitude": 119.860571,
+              "displayName": "Jalan Danau Talaga"
+            },
+            {
+              "location": "Jalan Sungai Ogotion",
+              "latitude": -0.906042,
+              "longitude": 119.862643,
+              "displayName": "Jalan Sungai Ogotion"
+            },
+            {
+              "location": "Jalan Sungai Sausu",
+              "latitude": -0.902568,
+              "longitude": 119.861053,
+              "displayName": "Jalan Sungai Sausu"
+            },
+            {
+              "location": "Jalan Ogomojolo",
+              "latitude": -0.902,
+              "longitude": 119.86,
+              "displayName": "Jalan Ogomojolo"
+            },
+            {
+              "location": "Jalan Sungai Balantak",
+              "latitude": -0.904732,
+              "longitude": 119.86489,
+              "displayName": "Jalan Sungai Balantak"
+            },
+            {
+              "location": "Jalan Sungai Tanamea",
+              "latitude": -0.898,
+              "longitude": 119.853,
+              "displayName": "Jalan Sungai Tanamea"
+            },
+            {
+              "location": "Jalan Bungi Indah",
+              "latitude": -0.899,
+              "longitude": 119.845,
+              "displayName": "Jalan Bungi Indah"
+            },
+            {
+              "location": "Jalan Lalove",
+              "latitude": -0.91208,
+              "longitude": 119.868696,
+              "displayName": "Jalan Lalove"
+            },
+            {
+              "location": "Jalan Baligau",
+              "latitude": -0.921452,
+              "longitude": 119.870174,
+              "displayName": "Jalan Baligau"
+            },
+            {
+              "location": "Jalan I Gusti Ngurah Rai",
+              "latitude": -0.922617,
+              "longitude": 119.862198,
+              "displayName": "Jalan I Gusti Ngurah Rai"
+            },
+            {
+              "location": "Jalan Kedondong",
+              "latitude": -0.897632,
+              "longitude": 119.843853,
+              "displayName": "Jalan Kedondong"
+            },
+            {
+              "location": "Jalan Palola",
+              "latitude": -0.893,
+              "longitude": 119.856,
+              "displayName": "Jalan Palola"
+            },
+            {
+              "location": "Jalan Tamaco",
+              "latitude": -0.8945,
+              "longitude": 119.857,
+              "displayName": "Jalan Tamaco"
+            },
+            {
+              "location": "Jalan Pipa Air",
+              "latitude": -0.89878,
+              "longitude": 119.843388,
+              "displayName": "Jalan Pipa Air"
+            }
+          ]
+        },
+        {
+          "ulpName": "ULP Poso",
+          "locations": [
+            "Toini",
+            "Mapane",
+            "Betania",
+            "Malitu",
+            "Petiro Bajo",
+            "Bega",
+            "Kasiguncu",
+            "Ratolene",
+            "Tabalu",
+            "Betalemba",
+            "Patiwunga",
+            "Tangkura",
+            "Dewua",
+            "Sangginora",
+            "Padalembara",
+            "Gantinadi",
+            "Lantojaya",
+            "Jalan Pulau Batam",
+            "Moengko",
+            "Moengko Baru",
+            "Jalan Pulau Nias",
+            "Jalan Pulau Irian",
+            "Jalan Pulau Sabang",
+            "Kayamanya",
+            "Kayamanya Sentral",
+            "Jalan Pulau Bali",
+            "Jalan Pulau Sumatera",
+            "Jalan Pulau Sulawesi",
+            "Pulau Timor",
+            "Pulau Seram",
+            "Pulau Madura",
+            "Pulau Jawa 1",
+            "Pulau Jawa 2",
+            "Pulau Tarakan",
+            "Pulau Kalimantan"
+          ],
+          "points": [
+            {
+              "location": "Toini",
+              "latitude": -1.4121227,
+              "longitude": 120.6382044,
+              "displayName": "Toini"
+            },
+            {
+              "location": "Mapane",
+              "latitude": -1.3829104,
+              "longitude": 120.6296861,
+              "displayName": "Mapane"
+            },
+            {
+              "location": "Betania",
+              "latitude": -1.412273,
+              "longitude": 120.6106342,
+              "displayName": "Betania"
+            },
+            {
+              "location": "Malitu",
+              "latitude": -1.469688,
+              "longitude": 120.6212516,
+              "displayName": "Malitu"
+            },
+            {
+              "location": "Petiro Bajo",
+              "latitude": -1.82,
+              "longitude": 120.73,
+              "displayName": "Petiro Bajo"
+            },
+            {
+              "location": "Bega",
+              "latitude": -1.3838837,
+              "longitude": 120.6072673,
+              "displayName": "Bega"
+            },
+            {
+              "location": "Kasiguncu",
+              "latitude": -1.4078608,
+              "longitude": 120.5727796,
+              "displayName": "Kasiguncu"
+            },
+            {
+              "location": "Ratolene",
+              "latitude": -1.415,
+              "longitude": 120.65,
+              "displayName": "Ratolene"
+            },
+            {
+              "location": "Tabalu",
+              "latitude": -1.4451132794545487,
+              "longitude": 120.6382494788612,
+              "displayName": "Tabalu"
+            },
+            {
+              "location": "Betalemba",
+              "latitude": -1.4557558748038981,
+              "longitude": 120.63842156303085,
+              "displayName": "Betalemba"
+            },
+            {
+              "location": "Patiwunga",
+              "latitude": -1.442883,
+              "longitude": 120.569945,
+              "displayName": "Patiwunga"
+            },
+            {
+              "location": "Tangkura",
+              "latitude": -1.479654,
+              "longitude": 120.5126742,
+              "displayName": "Tangkura"
+            },
+            {
+              "location": "Dewua",
+              "latitude": -1.5461235,
+              "longitude": 120.594547,
+              "displayName": "Dewua"
+            },
+            {
+              "location": "Sangginora",
+              "latitude": -1.5578525,
+              "longitude": 120.5049804,
+              "displayName": "Sangginora"
+            },
+            {
+              "location": "Padalembara",
+              "latitude": -1.4459464,
+              "longitude": 120.48372,
+              "displayName": "Padalembara"
+            },
+            {
+              "location": "Gantinadi",
+              "latitude": -1.425,
+              "longitude": 120.66,
+              "displayName": "Gantinadi"
+            },
+            {
+              "location": "Lantojaya",
+              "latitude": -1.4169173993185933,
+              "longitude": 120.7110247715443,
+              "displayName": "Lanto Jaya"
+            },
+            {
+              "location": "Jalan Pulau Batam",
+              "latitude": -1.397,
+              "longitude": 120.751,
+              "displayName": "Jalan Pulau Batam"
+            },
+            {
+              "location": "Moengko",
+              "latitude": -1.4265273,
+              "longitude": 120.6588934,
+              "displayName": "moengko"
+            },
+            {
+              "location": "Moengko Baru",
+              "latitude": -1.4265273,
+              "longitude": 120.6588934,
+              "displayName": "moengko Baru"
+            },
+            {
+              "location": "Jalan Pulau Nias",
+              "latitude": -1.3965,
+              "longitude": 120.7515,
+              "displayName": "Jalan Pulau Nias"
+            },
+            {
+              "location": "Jalan Pulau Irian",
+              "latitude": -1.396,
+              "longitude": 120.752,
+              "displayName": "Jalan Pulau Irian"
+            },
+            {
+              "location": "Jalan Pulau Sabang",
+              "latitude": -1.3955,
+              "longitude": 120.7525,
+              "displayName": "Jalan Pulau Sabang"
+            },
+            {
+              "location": "Kayamanya",
+              "latitude": -1.3956690252929254,
+              "longitude": 120.73763193992849,
+              "displayName": "Kayamanya"
+            },
+            {
+              "location": "Kayamanya Sentral",
+              "latitude": -1.4030979296403905,
+              "longitude": 120.74024442735528,
+              "displayName": "Kayamanya Sentral"
+            },
+            {
+              "location": "Jalan Pulau Bali",
+              "latitude": -1.395,
+              "longitude": 120.753,
+              "displayName": "Jalan Pulau Bali"
+            },
+            {
+              "location": "Jalan Pulau Sumatera",
+              "latitude": -1.3945,
+              "longitude": 120.7535,
+              "displayName": "Jalan Pulau Sumatera"
+            },
+            {
+              "location": "Jalan Pulau Sulawesi",
+              "latitude": -1.394,
+              "longitude": 120.754,
+              "displayName": "Jalan Pulau Sulawesi"
+            },
+            {
+              "location": "Pulau Timor",
+              "latitude": -1.3935,
+              "longitude": 120.7545,
+              "displayName": "Pulau Timor"
+            },
+            {
+              "location": "Pulau Seram",
+              "latitude": -1.393,
+              "longitude": 120.755,
+              "displayName": "Pulau Seram"
+            },
+            {
+              "location": "Pulau Madura",
+              "latitude": -1.3925,
+              "longitude": 120.7555,
+              "displayName": "Pulau Madura"
+            },
+            {
+              "location": "Pulau Jawa 1",
+              "latitude": -1.392,
+              "longitude": 120.756,
+              "displayName": "Pulau Jawa 1"
+            },
+            {
+              "location": "Pulau Jawa 2",
+              "latitude": -1.3918,
+              "longitude": 120.7565,
+              "displayName": "Pulau Jawa 2"
+            },
+            {
+              "location": "Pulau Tarakan",
+              "latitude": -1.3915,
+              "longitude": 120.757,
+              "displayName": "Pulau Tarakan"
+            },
+            {
+              "location": "Pulau Kalimantan",
+              "latitude": -1.391,
+              "longitude": 120.7575,
+              "displayName": "Pulau Kalimantan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "2ab1e20d-5626-4faf-b9dd-11e41545ee93",
+      "title": "Info Peningkatan Keandalan Kelistrikan",
+      "startTime": "2026-11-18T19:00:00+08:00",
+      "endTime": "2026-11-18T22:30:00+08:00",
+      "locations": [
+        "Kota Palu"
+      ],
+      "affectedAreas": [
+        {
+          "ulpName": "ULP Palu Kota dan ULP Kamonji",
+          "locations": [
+            "Jalan Wahid Hasyim",
+            "Jalan Pumpilido",
+            "Jalan Teuku Umar",
+            "Komplex Pasar Bambaru",
+            "Jalan Agus Salim",
+            "Jalan Cokro Aminoto",
+            "Jalan S. Lewara",
+            "Jalan S. Mili",
+            "Jalan S. Kinore",
+            "Jalan S. Bongka",
+            "Jalan S. Lambangan",
+            "Jalan Imam Bonjol",
+            "Jalan Gajah Mada",
+            "Jalan Danau Poso",
+            "Komplek Palu Plaza",
+            "Jalan Sis Al Jufri",
+            "Jalan Mangga",
+            "Jalan Danau Talaga",
+            "Jalan Sungai Manonda",
+            "Jalan Pue Bongo",
+            "Jalan Beringin",
+            "Jalan Semanggi",
+            "Jalan Jamur",
+            "Jalan Cendana",
+            "Jalan Bambu",
+            "Kompleks Palu Plaza",
+            "Jalan Lekatu",
+            "Jalan Ganogo",
+            "Jalan Anggur",
+            "Jalan Cumi-cumi",
+            "Jalan Pangeran Hidayat",
+            "Jalan Mas Mansyur",
+            "Jalan Tembang",
+            "Jalan Selar",
+            "Jalan Lamotu",
+            "Jalan Rono",
+            "Hotel Grand Duta",
+            "Universitas IAIN",
+            "Jalan Wahidin",
+            "Jalan Cut Nyak Dien",
+            "Jalan Muh Hatta",
+            "Jalan Gatot Subroto",
+            "Jalan M. Thamrin Atas",
+            "Jalan Juanda",
+            "Jalan Mangunsarkoro",
+            "Jalan Dr. Sutomo",
+            "Jalan Dr. Wahidin",
+            "Jalan Sulawesi",
+            "Jalan Poros Palu-Donggala",
+            "Jalan Malonda",
+            "Perum Silae Hills",
+            "Kompleks Gudang Wings",
+            "Terminal Tipo",
+            "Ulujadi",
+            "Jalan Diponegoro",
+            "UIN Datokarama Palu - Kampus I Palu",
+            "Lere",
+            "Jalan Samudra 2",
+            "Jalan WR Supratman",
+            "Jalan Bantilan",
+            "Jalan Asam I",
+            "Jalan Asam II",
+            "Jalan Lasoso",
+            "Taman Lasoso",
+            "Masjid Raya",
+            "Jalan Langsat",
+            "Jalan Nangka",
+            "Jalan Durian",
+            "Jalan Jaelangkara",
+            "Jalan Datu Adam"
+          ],
+          "points": [
+            {
+              "location": "Jalan Wahid Hasyim",
+              "latitude": -0.893104,
+              "longitude": 119.859975,
+              "displayName": "Jalan Wahid Hasyim"
+            },
+            {
+              "location": "Jalan Pumpilido",
+              "latitude": -0.892464,
+              "longitude": 119.857254,
+              "displayName": "Jalan Pumpilido"
+            },
+            {
+              "location": "Jalan Teuku Umar",
+              "latitude": -0.89537,
+              "longitude": 119.860628,
+              "displayName": "Jalan Teuku Umar"
+            },
+            {
+              "location": "Komplex Pasar Bambaru",
+              "latitude": -0.8902,
+              "longitude": 119.8588,
+              "displayName": "Kompleks Pasar Bambaru"
+            },
+            {
+              "location": "Jalan Agus Salim",
+              "latitude": -0.892306,
+              "longitude": 119.857574,
+              "displayName": "Jalan Agus Salim"
+            },
+            {
+              "location": "Jalan Cokro Aminoto",
+              "latitude": -0.8925,
+              "longitude": 119.858,
+              "displayName": "Jalan Cokro Aminoto"
+            },
+            {
+              "location": "Jalan S. Lewara",
+              "latitude": -0.9306846264868236,
+              "longitude": 119.76799395006827,
+              "displayName": "Lewara"
+            },
+            {
+              "location": "Jalan S. Mili",
+              "latitude": -0.896,
+              "longitude": 119.851,
+              "displayName": "Jalan S. Mili"
+            },
+            {
+              "location": "Jalan S. Kinore",
+              "latitude": -0.897,
+              "longitude": 119.852,
+              "displayName": "Jalan S. Kinore"
+            },
+            {
+              "location": "Jalan S. Bongka",
+              "latitude": -0.896568,
+              "longitude": 119.862959,
+              "displayName": "Jalan S. Bongka"
+            },
+            {
+              "location": "Jalan S. Lambangan",
+              "latitude": -0.8718437156089609,
+              "longitude": 122.67090890789697,
+              "displayName": "Lambangan"
+            },
+            {
+              "location": "Jalan Imam Bonjol",
+              "latitude": -0.895032,
+              "longitude": 119.857692,
+              "displayName": "imam bonjol"
+            },
+            {
+              "location": "Jalan Gajah Mada",
+              "latitude": -0.897042,
+              "longitude": 119.860808,
+              "displayName": "Jalan Gajah mada"
+            },
+            {
+              "location": "Jalan Danau Poso",
+              "latitude": -0.90019,
+              "longitude": 119.86184,
+              "displayName": "Jalan Danau Poso"
+            },
+            {
+              "location": "Komplek Palu Plaza",
+              "latitude": -0.8932,
+              "longitude": 119.8576,
+              "displayName": "Kompleks Palu Plaza"
+            },
+            {
+              "location": "Jalan Sis Al Jufri",
+              "latitude": -0.899115,
+              "longitude": 119.859257,
+              "displayName": "Jalan sis al jufri"
+            },
+            {
+              "location": "Jalan Mangga",
+              "latitude": -0.899468,
+              "longitude": 119.853406,
+              "displayName": "Jalan mangga"
+            },
+            {
+              "location": "Jalan Danau Talaga",
+              "latitude": -0.904776,
+              "longitude": 119.860571,
+              "displayName": "Jalan Danau Talaga"
+            },
+            {
+              "location": "Jalan Sungai Manonda",
+              "latitude": -0.909656,
+              "longitude": 119.849872,
+              "displayName": "Jalan Sungai Manonda"
+            },
+            {
+              "location": "Jalan Pue Bongo",
+              "latitude": -0.92598,
+              "longitude": 119.856247,
+              "displayName": "Jalan Pue Bongo"
+            },
+            {
+              "location": "Jalan Beringin",
+              "latitude": -0.908361,
+              "longitude": 119.859831,
+              "displayName": "Jalan Beringin"
+            },
+            {
+              "location": "Jalan Semanggi",
+              "latitude": -0.894,
+              "longitude": 119.853,
+              "displayName": "Jalan Semanggi"
+            },
+            {
+              "location": "Jalan Jamur",
+              "latitude": -0.906557,
+              "longitude": 119.851941,
+              "displayName": "Jalan Jamur"
+            },
+            {
+              "location": "Jalan Cendana",
+              "latitude": -0.911276,
+              "longitude": 119.855122,
+              "displayName": "Jalan Cendana"
+            },
+            {
+              "location": "Jalan Bambu",
+              "latitude": -0.907332,
+              "longitude": 119.85755,
+              "displayName": "Jalan Bambu"
+            },
+            {
+              "location": "Kompleks Palu Plaza",
+              "latitude": -0.8932,
+              "longitude": 119.8576,
+              "displayName": "Kompleks Palu Plaza"
+            },
+            {
+              "location": "Jalan Lekatu",
+              "latitude": -0.917814,
+              "longitude": 119.859963,
+              "displayName": "Lekatu"
+            },
+            {
+              "location": "Jalan Ganogo",
+              "latitude": -0.912694,
+              "longitude": 119.857938,
+              "displayName": "Jalan Ganogo"
+            },
+            {
+              "location": "Jalan Anggur",
+              "latitude": -0.91175,
+              "longitude": 119.85448,
+              "displayName": "Jalan Anggur"
+            },
+            {
+              "location": "Jalan Cumi-cumi",
+              "latitude": -0.885,
+              "longitude": 119.854,
+              "displayName": "Jalan Cumi-cumi"
+            },
+            {
+              "location": "Jalan Pangeran Hidayat",
+              "latitude": -0.887619,
+              "longitude": 119.856969,
+              "displayName": "Jalan Pangeran hidayat"
+            },
+            {
+              "location": "Jalan Mas Mansyur",
+              "latitude": -0.890912,
+              "longitude": 119.856975,
+              "displayName": "Jalan Kiyai Haji Mas Mansyur"
+            },
+            {
+              "location": "Jalan Tembang",
+              "latitude": -0.887,
+              "longitude": 119.852,
+              "displayName": "Jalan Tembang"
+            },
+            {
+              "location": "Jalan Selar",
+              "latitude": -0.888077,
+              "longitude": 119.855282,
+              "displayName": "Jalan Selar"
+            },
+            {
+              "location": "Jalan Lamotu",
+              "latitude": -0.889328,
+              "longitude": 119.853973,
+              "displayName": "Jalan Lamotu"
+            },
+            {
+              "location": "Jalan Rono",
+              "latitude": -0.886622,
+              "longitude": 119.85097,
+              "displayName": "Jalan Rono"
+            },
+            {
+              "location": "Hotel Grand Duta",
+              "latitude": -0.8928,
+              "longitude": 119.8795,
+              "displayName": "Hotel Grand Duta"
+            },
+            {
+              "location": "Universitas IAIN",
+              "latitude": -0.8883,
+              "longitude": 119.855,
+              "displayName": "Universitas IAIN"
+            },
+            {
+              "location": "Jalan Wahidin",
+              "latitude": -0.897362,
+              "longitude": 119.866923,
+              "displayName": "Jalan Wahidin"
+            },
+            {
+              "location": "Jalan Cut Nyak Dien",
+              "latitude": -0.895,
+              "longitude": 119.872,
+              "displayName": "Jalan Cut Nyak Dien"
+            },
+            {
+              "location": "Jalan Muh Hatta",
+              "latitude": -0.896864,
+              "longitude": 119.875784,
+              "displayName": "Jalan Muh Hatta"
+            },
+            {
+              "location": "Jalan Gatot Subroto",
+              "latitude": -0.894569,
+              "longitude": 119.874186,
+              "displayName": "Jalan Gatot Subroto"
+            },
+            {
+              "location": "Jalan M. Thamrin Atas",
+              "latitude": -0.89556,
+              "longitude": 119.882385,
+              "displayName": "Jalan M. Thamrin atas"
+            },
+            {
+              "location": "Jalan Juanda",
+              "latitude": -0.897001,
+              "longitude": 119.877711,
+              "displayName": "Jalan Insinyur Haji Juanda"
+            },
+            {
+              "location": "Jalan Mangunsarkoro",
+              "latitude": -0.896912,
+              "longitude": 119.883567,
+              "displayName": "Jalan Mangunsarkoro"
+            },
+            {
+              "location": "Jalan Dr. Sutomo",
+              "latitude": -0.895051,
+              "longitude": 119.876203,
+              "displayName": "Jalan Dr. Sutomo"
+            },
+            {
+              "location": "Jalan Dr. Wahidin",
+              "latitude": -0.897362,
+              "longitude": 119.866923,
+              "displayName": "Dr.Wahidin"
+            },
+            {
+              "location": "Jalan Sulawesi",
+              "latitude": -0.900006,
+              "longitude": 119.870836,
+              "displayName": "Jalan Sulawesi"
+            },
+            {
+              "location": "Jalan Poros Palu-Donggala",
+              "latitude": -0.875,
+              "longitude": 119.835,
+              "displayName": "Jalan Poros Palu - Donggala"
+            },
+            {
+              "location": "Jalan Malonda",
+              "latitude": -0.842718,
+              "longitude": 119.816927,
+              "displayName": "Jalan Malonda"
+            },
+            {
+              "location": "Perum Silae Hills",
+              "latitude": -0.8752,
+              "longitude": 119.8285,
+              "displayName": "Perum Silae Hills"
+            },
+            {
+              "location": "Kompleks Gudang Wings",
+              "latitude": -0.8715,
+              "longitude": 119.822,
+              "displayName": "Kompleks Gudang Wings"
+            },
+            {
+              "location": "Terminal Tipo",
+              "latitude": -0.8618306,
+              "longitude": 119.8263829,
+              "displayName": "Terminal Tipo"
+            },
+            {
+              "location": "Ulujadi",
+              "latitude": -0.896493,
+              "longitude": 119.8555879,
+              "displayName": "Ulujadi"
+            },
+            {
+              "location": "Jalan Diponegoro",
+              "latitude": -0.887272,
+              "longitude": 119.846626,
+              "displayName": "Jalan Diponegoro"
+            },
+            {
+              "location": "UIN Datokarama Palu - Kampus I Palu",
+              "latitude": -0.8883,
+              "longitude": 119.855,
+              "displayName": "UIN Datokarama Palu - Kampus I Palu"
+            },
+            {
+              "location": "Lere",
+              "latitude": -0.892444,
+              "longitude": 119.817061,
+              "displayName": "Lere"
+            },
+            {
+              "location": "Jalan Samudra 2",
+              "latitude": -0.886472,
+              "longitude": 119.841414,
+              "displayName": "Jalan Samudra 2"
+            },
+            {
+              "location": "Jalan WR Supratman",
+              "latitude": -0.897646,
+              "longitude": 119.852325,
+              "displayName": "Jalan WR Supratman"
+            },
+            {
+              "location": "Jalan Bantilan",
+              "latitude": -0.89117,
+              "longitude": 119.84856,
+              "displayName": "Jalan Bantilan"
+            },
+            {
+              "location": "Jalan Asam I",
+              "latitude": -0.894103,
+              "longitude": 119.849882,
+              "displayName": "Jalan Asam I"
+            },
+            {
+              "location": "Jalan Asam II",
+              "latitude": -0.894009,
+              "longitude": 119.8444,
+              "displayName": "Jalan Asam II"
+            },
+            {
+              "location": "Jalan Lasoso",
+              "latitude": -0.888529,
+              "longitude": 119.842667,
+              "displayName": "Jalan Lasoso"
+            },
+            {
+              "location": "Taman Lasoso",
+              "latitude": -0.8906975,
+              "longitude": 119.8469024,
+              "displayName": "Taman Lasoso"
+            },
+            {
+              "location": "Masjid Raya",
+              "latitude": -0.900366,
+              "longitude": 119.874544,
+              "displayName": "Masjid Raya"
+            },
+            {
+              "location": "Jalan Langsat",
+              "latitude": -0.898514,
+              "longitude": 119.849239,
+              "displayName": "Jalan Langsat"
+            },
+            {
+              "location": "Jalan Nangka",
+              "latitude": -0.897544,
+              "longitude": 119.854528,
+              "displayName": "Jalan Nangka"
+            },
+            {
+              "location": "Jalan Durian",
+              "latitude": -0.89517,
+              "longitude": 119.853668,
+              "displayName": "Jalan Durian"
+            },
+            {
+              "location": "Jalan Jaelangkara",
+              "latitude": -0.894645,
+              "longitude": 119.853032,
+              "displayName": "Jalan Jaelangkara"
+            },
+            {
+              "location": "Jalan Datu Adam",
+              "latitude": -0.891,
+              "longitude": 119.848,
+              "displayName": "Jalan Datu Adam"
+            }
+          ]
+        },
+        {
+          "ulpName": "ULP Donggala",
+          "locations": [
+            "Boya",
+            "Tanjung Batu",
+            "Tanjung Karang",
+            "Boneoge",
+            "Dusun Lolisaluran",
+            "Dusun Lolitasiburi",
+            "Dusun Rumah Tujuh",
+            "Dusun Pangga",
+            "Kabonga Besar",
+            "Kabonga Kecil",
+            "Gunung Bale",
+            "Maleni",
+            "Ganti",
+            "Lapaloang",
+            "Kulolu",
+            "Limboro",
+            "Kola-kola",
+            "Ampera",
+            "Bahagia",
+            "Bakubakulu",
+            "Berdikasi",
+            "Bobo",
+            "Bunga",
+            "Kapiroe",
+            "Karunia",
+            "Lembatangoa",
+            "Makmur",
+            "Paloloan",
+            "Patimbe",
+            "Rahmat",
+            "Ranteleda",
+            "Rejeki",
+            "Sarumana",
+            "Sejahtra",
+            "Sigimpum Sintuwu",
+            "Tanah Harapan",
+            "Tongoa",
+            "Ue Rani",
+            "Uwe Nuni",
+            "Bilili",
+            "Kadidia",
+            "Kamarora",
+            "Sopu",
+            "Wuasa",
+            "Napu",
+            "Bariri"
+          ],
+          "points": [
+            {
+              "location": "Boya",
+              "latitude": -0.6707,
+              "longitude": 119.7399,
+              "displayName": "Boya"
+            },
+            {
+              "location": "Tanjung Batu",
+              "latitude": -0.7056028,
+              "longitude": 119.7568043,
+              "displayName": "Tanjung Batu"
+            },
+            {
+              "location": "Tanjung Karang",
+              "latitude": -0.90676,
+              "longitude": 119.87745,
+              "displayName": "Jalan Tg.Karang"
+            },
+            {
+              "location": "Boneoge",
+              "latitude": -0.6706,
+              "longitude": 119.72,
+              "displayName": "Boneoge"
+            },
+            {
+              "location": "Dusun Lolisaluran",
+              "latitude": -0.7826643,
+              "longitude": 119.7939425,
+              "displayName": "Loli Saluran"
+            },
+            {
+              "location": "Dusun Lolitasiburi",
+              "latitude": -0.7617,
+              "longitude": 119.7897,
+              "displayName": "Lolitasiburi"
+            },
+            {
+              "location": "Dusun Rumah Tujuh",
+              "latitude": -0.68,
+              "longitude": 119.74,
+              "displayName": "Dusun Rumah Tujuh"
+            },
+            {
+              "location": "Dusun Pangga",
+              "latitude": -0.92,
+              "longitude": 119.72,
+              "displayName": "Dusun Pangga"
+            },
+            {
+              "location": "Kabonga Besar",
+              "latitude": -0.7442179,
+              "longitude": 119.7576372,
+              "displayName": "Kabonga Besar"
+            },
+            {
+              "location": "Kabonga Kecil",
+              "latitude": -0.7258982,
+              "longitude": 119.7644549,
+              "displayName": "Kabonga Kecil"
+            },
+            {
+              "location": "Gunung Bale",
+              "latitude": -0.6779786,
+              "longitude": 119.7469066,
+              "displayName": "Gunung Bale"
+            },
+            {
+              "location": "Maleni",
+              "latitude": -0.6815377963302515,
+              "longitude": 119.73600795675844,
+              "displayName": "Maleni"
+            },
+            {
+              "location": "Ganti",
+              "latitude": -0.7011,
+              "longitude": 119.7316,
+              "displayName": "ganti"
+            },
+            {
+              "location": "Lapaloang",
+              "latitude": -1.25,
+              "longitude": 119.55,
+              "displayName": "Lapaloang"
+            },
+            {
+              "location": "Kulolu",
+              "latitude": -1.26,
+              "longitude": 119.56,
+              "displayName": "Kulolu"
+            },
+            {
+              "location": "Limboro",
+              "latitude": -0.7201,
+              "longitude": 119.7018,
+              "displayName": "limboro"
+            },
+            {
+              "location": "Kola-kola",
+              "latitude": -0.7415467,
+              "longitude": 119.7218272,
+              "displayName": "kola-kola"
+            },
+            {
+              "location": "Ampera",
+              "latitude": -0.897871908872671,
+              "longitude": 122.60827366555289,
+              "displayName": "Ampera"
+            },
+            {
+              "location": "Bahagia",
+              "latitude": -1.101847003642157,
+              "longitude": 120.12236440834434,
+              "displayName": "Bahagia"
+            },
+            {
+              "location": "Bakubakulu",
+              "latitude": -1.066041422371169,
+              "longitude": 120.02590573803528,
+              "displayName": "Bakubakulu"
+            },
+            {
+              "location": "Berdikasi",
+              "latitude": -1.086169388498135,
+              "longitude": 120.1166052862377,
+              "displayName": "Berdikari"
+            },
+            {
+              "location": "Bobo",
+              "latitude": -1.1174630155594656,
+              "longitude": 119.99956474270358,
+              "displayName": "Bobo"
+            },
+            {
+              "location": "Bunga",
+              "latitude": -0.732387,
+              "longitude": 119.87141,
+              "displayName": "Jalan Bunga Raya"
+            },
+            {
+              "location": "Kapiroe",
+              "latitude": -1.1370607676299898,
+              "longitude": 120.02275365708171,
+              "displayName": "Kapirowe"
+            },
+            {
+              "location": "Karunia",
+              "latitude": -1.206225966785215,
+              "longitude": 120.06433493641663,
+              "displayName": "Karunia"
+            },
+            {
+              "location": "Lembatangoa",
+              "latitude": -1.1776,
+              "longitude": 120.2665,
+              "displayName": "Lembatangoa"
+            },
+            {
+              "location": "Makmur",
+              "latitude": -1.1458627049991605,
+              "longitude": 120.05590464086598,
+              "displayName": "Makmur"
+            },
+            {
+              "location": "Paloloan",
+              "latitude": -1.1214,
+              "longitude": 120.1583,
+              "displayName": "Paloloan"
+            },
+            {
+              "location": "Patimbe",
+              "latitude": -1.089857454153388,
+              "longitude": 120.05945389984956,
+              "displayName": "Patimbe"
+            },
+            {
+              "location": "Rahmat",
+              "latitude": -1.175123071896381,
+              "longitude": 120.07135890873563,
+              "displayName": "Rahmat"
+            },
+            {
+              "location": "Ranteleda",
+              "latitude": -1.1490418678104322,
+              "longitude": 120.06866771510356,
+              "displayName": "Ranteleda"
+            },
+            {
+              "location": "Rejeki",
+              "latitude": -1.0721283402998498,
+              "longitude": 120.10152786753676,
+              "displayName": "Rejeki"
+            },
+            {
+              "location": "Sarumana",
+              "latitude": -1.157222353281608,
+              "longitude": 120.0807542180266,
+              "displayName": "Sarumana"
+            },
+            {
+              "location": "Sejahtra",
+              "latitude": -1.1061892543799718,
+              "longitude": 120.16928835257225,
+              "displayName": "Sejahtera"
+            },
+            {
+              "location": "Sigimpum Sintuwu",
+              "latitude": -1.135,
+              "longitude": 120.17,
+              "displayName": "Sigimpum Sintuwu"
+            },
+            {
+              "location": "Tanah Harapan",
+              "latitude": -1.1466551295825926,
+              "longitude": 120.08210630709885,
+              "displayName": "Tanah Harapan"
+            },
+            {
+              "location": "Tongoa",
+              "latitude": -1.2226263850843961,
+              "longitude": 120.18418969913013,
+              "displayName": "Tongoa"
+            },
+            {
+              "location": "Ue Rani",
+              "latitude": -1.110704582486516,
+              "longitude": 120.13270529195029,
+              "displayName": "Ue rani"
+            },
+            {
+              "location": "Uwe Nuni",
+              "latitude": -1.1370833338285258,
+              "longitude": 120.19302974667907,
+              "displayName": "Uwe Nuni"
+            },
+            {
+              "location": "Bilili",
+              "latitude": -1.33,
+              "longitude": 120.03,
+              "displayName": "Bilili"
+            },
+            {
+              "location": "Kadidia",
+              "latitude": -1.1951278201100677,
+              "longitude": 120.12134918859334,
+              "displayName": "Kadidia"
+            },
+            {
+              "location": "Kamarora",
+              "latitude": -1.1942662785866867,
+              "longitude": 120.12986524674643,
+              "displayName": "Kamarora A"
+            },
+            {
+              "location": "Sopu",
+              "latitude": -1.1893387484990006,
+              "longitude": 120.10833150317858,
+              "displayName": "Sopu"
+            },
+            {
+              "location": "Wuasa",
+              "latitude": -1.4266777743072483,
+              "longitude": 120.29368967682446,
+              "displayName": "Wuasa"
+            },
+            {
+              "location": "Napu",
+              "latitude": -1.365,
+              "longitude": 120.285,
+              "displayName": "Napu"
+            },
+            {
+              "location": "Bariri",
+              "latitude": -1.68499033336343,
+              "longitude": 120.25027921616743,
+              "displayName": "Bariri"
+            }
+          ]
+        },
+        {
+          "ulpName": "ULP Bungku",
+          "locations": [
+            "Bahomoleo",
+            "Bahomante",
+            "Lanona",
+            "Bahoea",
+            "Wosu",
+            "Larobenu",
+            "Umpanga",
+            "Topogaro",
+            "Tondo",
+            "Ambunu",
+            "Uedago",
+            "Margamulya",
+            "Wata"
+          ],
+          "points": [
+            {
+              "location": "Bahomoleo",
+              "latitude": -2.5352911,
+              "longitude": 121.8077545,
+              "displayName": "Bahomoleo"
+            },
+            {
+              "location": "Bahomante",
+              "latitude": -2.437,
+              "longitude": 121.9014,
+              "displayName": "Bahomante"
+            },
+            {
+              "location": "Lanona",
+              "latitude": -2.4244,
+              "longitude": 121.8936,
+              "displayName": "Lanona"
+            },
+            {
+              "location": "Bahoea",
+              "latitude": -2.4059,
+              "longitude": 121.8733,
+              "displayName": "Bahoea"
+            },
+            {
+              "location": "Wosu",
+              "latitude": -2.3522019,
+              "longitude": 121.8469657,
+              "displayName": "Wosu"
+            },
+            {
+              "location": "Larobenu",
+              "latitude": -2.3789679,
+              "longitude": 121.7473285,
+              "displayName": "Larobenu"
+            },
+            {
+              "location": "Umpanga",
+              "latitude": -2.3155149025852397,
+              "longitude": 121.78497294656776,
+              "displayName": "Umpanga"
+            },
+            {
+              "location": "Topogaro",
+              "latitude": -2.27447,
+              "longitude": 121.77881,
+              "displayName": "Topogaro"
+            },
+            {
+              "location": "Tondo",
+              "latitude": -2.2939201,
+              "longitude": 121.7466168,
+              "displayName": "Tondo"
+            },
+            {
+              "location": "Ambunu",
+              "latitude": -2.3262084,
+              "longitude": 121.7163718,
+              "displayName": "Ambunu"
+            },
+            {
+              "location": "Uedago",
+              "latitude": -2.268262,
+              "longitude": 121.7166286,
+              "displayName": "Uedago"
+            },
+            {
+              "location": "Margamulya",
+              "latitude": -2.267425372380255,
+              "longitude": 121.73913777294811,
+              "displayName": "Marga Mulya"
+            },
+            {
+              "location": "Wata",
+              "latitude": -2.2408803,
+              "longitude": 121.7259036,
+              "displayName": "Wata"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
