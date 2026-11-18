@@ -455,6 +455,49 @@
         cursor: pointer;
       }
       
+      /* Badge Marker Kuliner dengan Nama Tempat Langsung */
+      .culinary-marker-icon {
+        width: auto !important;
+        height: auto !important;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+        transform: translate(-50%, -50%);
+        pointer-events: auto;
+      }
+      .culinary-marker-icon .map-badge-marker {
+        min-width: 50px;
+        max-width: 140px;
+        width: max-content;
+        height: 23px;
+        padding: 1px 7px 2.5px 5px;
+        border-radius: 999px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .culinary-marker-icon .badge-row {
+        display: flex;
+        align-items: center;
+        gap: .3rem;
+        min-width: 0;
+      }
+      .culinary-marker-icon .badge-time-text {
+        max-width: 105px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        letter-spacing: -0.015em;
+        font-weight: 700;
+        font-size: 0.66rem;
+        color: #f8fafc;
+      }
+      .culinary-marker-icon .badge-glyph {
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
       /* Coffeeshop & Resto (Culinary) — Visual & Mekanisme Identik Peta Pemadaman */
       body:not([data-app-mode="culinary"]) .culinary-only-ui {
         display: none !important;
@@ -3876,16 +3919,17 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
 
         let badgeExtraClass = "";
         let badgeStyle = "";
-        let labelText = isCafe ? "Cafe" : "Resto";
         let barColor = isCafe ? "#f59e0b" : "#38bdf8";
 
         if (f) {
           glyphIcon = f.logoSvg;
           badgeExtraClass = "is-franchise";
           badgeStyle = `border-color:${f.borderColor || '#a855f7'}; background:rgba(11,18,32,0.96);`;
-          labelText = f.shortName;
           barColor = f.borderColor || '#a855f7';
         }
+
+        // Tampilkan nama coffeshop dan resto langsung di badge marker!
+        const labelText = p.name || (isCafe ? "Coffeeshop" : "Resto");
 
         return `
           <div class="map-badge-marker status-${catClass} ${badgeExtraClass}" style="${badgeStyle}" title="${escapeHtml(p.name)}: ${escapeHtml(p.address)}">
@@ -4068,8 +4112,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
               icon: L.divIcon({
                 className: `street-marker-icon culinary-marker-icon`,
                 html: buildCulinaryBadgeHtml(p),
-                iconSize: [64, 22],
-                iconAnchor: [32, 11]
+                iconSize: null
               }),
               keyboard: true
             });
