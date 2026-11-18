@@ -271,6 +271,190 @@
       body:not([data-app-mode="outage"]) .outage-only-ui {
         display: none !important;
       }
+      /* Tombol Daftarkan Usaha & Modal Crowdsourcing Kuliner */
+      .btn-submit-place {
+        display: inline-flex;
+        align-items: center;
+        gap: .35rem;
+        padding: .28rem .65rem;
+        border: 1px solid rgba(168, 85, 247, .5);
+        border-radius: 999px;
+        background: linear-gradient(135deg, rgba(168, 85, 247, .25), rgba(126, 34, 206, .35));
+        color: #f3e8ff;
+        font-family: inherit;
+        font-size: .68rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all .16s ease;
+      }
+      .btn-submit-place:hover {
+        background: linear-gradient(135deg, rgba(168, 85, 247, .4), rgba(126, 34, 206, .5));
+        border-color: #c084fc;
+        color: #ffffff;
+        box-shadow: 0 0 14px rgba(168, 85, 247, .4);
+      }
+      #modal-submit-place {
+        border: 1px solid rgba(255, 255, 255, .15);
+        border-top: 1px solid rgba(255, 255, 255, .25);
+        border-radius: 20px;
+        background: linear-gradient(165deg, rgba(15, 23, 42, .96), rgba(8, 14, 26, .98));
+        color: #f8fafc;
+        padding: 0;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, .75);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        max-width: 540px;
+        width: calc(100vw - 32px);
+        max-height: calc(100dvh - 40px);
+        overflow: hidden;
+      }
+      #modal-submit-place::backdrop {
+        background: rgba(3, 7, 18, .75);
+        backdrop-filter: blur(6px);
+      }
+      .submit-modal-layout {
+        display: flex;
+        flex-direction: column;
+        max-height: calc(100dvh - 40px);
+      }
+      .submit-modal-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1rem 1.25rem .75rem;
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+      }
+      .submit-modal-header h2 {
+        margin: 0;
+        font-size: 1.05rem;
+        color: #f59e0b;
+        font-weight: 800;
+      }
+      .submit-modal-header p {
+        margin: .25rem 0 0;
+        font-size: .72rem;
+        color: #94a3b8;
+        line-height: 1.4;
+      }
+      .submit-modal-body {
+        padding: 1rem 1.25rem;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: .85rem;
+        font-size: .76rem;
+      }
+      .submit-form-group {
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+      }
+      .submit-form-group label {
+        font-weight: 700;
+        color: #cbd5e1;
+        font-size: .72rem;
+      }
+      .submit-form-group label span.req {
+        color: #f87171;
+      }
+      .submit-form-input, .submit-form-select {
+        background: rgba(255, 255, 255, .05);
+        border: 1px solid rgba(255, 255, 255, .14);
+        border-radius: 8px;
+        padding: .5rem .7rem;
+        color: #ffffff;
+        font-family: inherit;
+        font-size: .76rem;
+        outline: none;
+        transition: border-color .15s ease;
+      }
+      .submit-form-input:focus, .submit-form-select:focus {
+        border-color: #f59e0b;
+        box-shadow: 0 0 10px rgba(245, 158, 11, .25);
+      }
+      .submit-form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .65rem;
+      }
+      .submit-coord-tools {
+        display: flex;
+        gap: .4rem;
+        margin-top: .2rem;
+      }
+      .btn-coord-tool {
+        flex: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: .3rem;
+        padding: .35rem .5rem;
+        background: rgba(255, 255, 255, .07);
+        border: 1px solid rgba(255, 255, 255, .12);
+        border-radius: 6px;
+        color: #cbd5e1;
+        font-size: .67rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all .15s ease;
+      }
+      .btn-coord-tool:hover {
+        background: rgba(255, 255, 255, .14);
+        color: #ffffff;
+        border-color: rgba(56, 189, 248, .5);
+      }
+      .submit-modal-footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: .6rem;
+        padding: .75rem 1.25rem;
+        border-top: 1px solid rgba(255, 255, 255, .08);
+        background: rgba(7, 13, 24, .6);
+      }
+      .btn-submit-action {
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+        color: #1e1b4b;
+        font-weight: 800;
+        font-size: .78rem;
+        border: none;
+        border-radius: 8px;
+        padding: .5rem 1.1rem;
+        cursor: pointer;
+        transition: all .15s ease;
+      }
+      .btn-submit-action:hover {
+        filter: brightness(1.15);
+        box-shadow: 0 4px 14px rgba(245, 158, 11, .4);
+      }
+      .map-picking-banner {
+        position: absolute;
+        top: 75px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2000;
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+        color: #0b1220;
+        font-weight: 800;
+        font-size: .78rem;
+        padding: .5rem 1rem;
+        border-radius: 999px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .6);
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+        animation: pulse 2s infinite;
+      }
+      .map-picking-banner button {
+        background: rgba(0, 0, 0, .2);
+        border: none;
+        color: #ffffff;
+        border-radius: 999px;
+        padding: 2px 8px;
+        font-size: .68rem;
+        cursor: pointer;
+      }
+      
       /* Coffeeshop & Resto (Culinary) — Visual & Mekanisme Identik Peta Pemadaman */
       body:not([data-app-mode="culinary"]) .culinary-only-ui {
         display: none !important;
@@ -2969,6 +3153,7 @@
         <button id="open-activity-log" class="outage-only-ui" type="button">Log aktivitas</button>
         <button id="open-unmatched-modal" class="outage-only-ui" type="button" title="Lihat daftar jalan/desa yang belum terpetakan">⚠️ <span id="unmatched-badge">0</span> Belum cocok</button>
         <button id="open-import" class="outage-only-ui" type="button">＋ Impor hasil AI</button>
+        <button id="open-submit-place" class="culinary-only-ui btn-submit-place" type="button" title="Daftarkan coffeeshop atau resto Anda ke peta">➕ Daftarkan Usaha</button>
       </div>
     </header>
 
@@ -3069,6 +3254,9 @@
             <button type="button" id="culinary-boundary-toggle-btn" class="boundary-toggle-btn" aria-pressed="true" title="Tampilkan/Sembunyikan batas administrasi kelurahan">
               <span class="boundary-btn-icon">🏛️</span>
               <span id="culinary-boundary-toggle-text">Batas Kelurahan</span>
+            </button>
+            <button type="button" id="culinary-add-btn" class="legend-toggle-btn" style="border-color:rgba(168,85,247,0.4); background:rgba(168,85,247,0.12); color:#e9d5ff;" title="Daftarkan coffeeshop / resto Anda">
+              <span>➕ Daftarkan</span>
             </button>
             <button type="button" id="culinary-legend-toggle-btn" class="legend-toggle-btn" aria-label="Sembunyikan atau tampilkan filter" title="Sembunyikan/Tampilkan filter">
               <span id="culinary-legend-toggle-text">Ciutkan</span>
@@ -3217,6 +3405,144 @@
         </div>
       </div>
     </main>
+
+    <!-- Dialog Formulir Usulan Coffeeshop & Resto Baru -->
+    <dialog id="modal-submit-place" aria-labelledby="submit-place-title">
+      <div class="submit-modal-layout">
+        <div class="submit-modal-header">
+          <div>
+            <h2 id="submit-place-title">☕ Daftarkan Coffeeshop / Resto Anda</h2>
+            <p>Peta kuliner jujur & terbuka Kota Palu. Semua usulan dikurasi dan di-upload secara berkala setiap minggu tanpa biaya.</p>
+          </div>
+          <button id="close-submit-modal" class="share-close-btn" type="button" aria-label="Tutup">×</button>
+        </div>
+
+        <form id="form-submit-place" class="submit-modal-body">
+          <div id="submit-success-box" style="display:none; background:rgba(34,197,94,0.15); border:1px solid #22c55e; border-radius:10px; padding:12px; margin-bottom:8px;">
+            <div style="font-weight:800; color:#86efac; font-size:0.85rem; margin-bottom:4px;">🎉 Usulan Berhasil Disimpan!</div>
+            <div style="font-size:0.72rem; color:#f1f5f9; line-height:1.4; margin-bottom:8px;">
+              Data usaha Anda telah masuk ke antrean kurasi mingguan dan tersimpan di sistem. Anda juga dapat langsung mengirimkan data ini ke WhatsApp Admin untuk percepatan rilis.
+            </div>
+            <div style="display:flex; gap:6px; flex-wrap:wrap;">
+              <a id="btn-wa-submit" href="#" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:5px; background:#22c55e; color:#0f172a; font-weight:800; font-size:0.72rem; padding:6px 10px; border-radius:6px; text-decoration:none;">
+                💬 Kirim via WhatsApp Admin
+              </a>
+              <button type="button" id="btn-copy-submit-json" style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#fff; font-size:0.72rem; padding:6px 10px; border-radius:6px; cursor:pointer;">
+                📋 Salin Format Titik
+              </button>
+            </div>
+          </div>
+
+          <div class="submit-form-group">
+            <label for="sub-name">Nama Usaha / Tempat <span class="req">*</span></label>
+            <input type="text" id="sub-name" class="submit-form-input" placeholder="Contoh: Kopi Senja Bahari" required />
+          </div>
+
+          <div class="submit-form-row">
+            <div class="submit-form-group">
+              <label for="sub-cat">Kategori <span class="req">*</span></label>
+              <select id="sub-cat" class="submit-form-select">
+                <option value="cafe">☕ Coffeeshop & Cafe</option>
+                <option value="resto">🍽️ Restoran & Rumah Makan</option>
+                <option value="warkop">🥪 Warkop / Kedai Santai</option>
+              </select>
+            </div>
+            <div class="submit-form-group">
+              <label for="sub-brand">Jaringan / Franchise</label>
+              <select id="sub-brand" class="submit-form-select">
+                <option value="none">Mandiri (Bukan Franchise)</option>
+                <option value="sin-coffee">Sin Coffee</option>
+                <option value="kopi-arobi">Kopi Arobi</option>
+                <option value="brkh">BRKH / Sepertiga</option>
+                <option value="koriru">Koriru Coffee</option>
+                <option value="ribelv">Ribelv Coffee</option>
+                <option value="warkop-harapan">Warkop Harapan</option>
+                <option value="kaledo-stereo">Kaledo Stereo</option>
+                <option value="kopi-kenangan">Kopi Kenangan</option>
+                <option value="point-coffee">Point Coffee</option>
+                <option value="mie-gacoan">Mie Gacoan</option>
+                <option value="fore">Fore Coffee</option>
+                <option value="tomoro">Tomoro Coffee</option>
+                <option value="kfc">KFC</option>
+                <option value="mcdonalds">McDonald's</option>
+                <option value="pizza-hut">Pizza Hut</option>
+                <option value="other">Franchise Lainnya...</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="submit-form-group">
+            <label for="sub-address">Alamat Lengkap & Kelurahan <span class="req">*</span></label>
+            <input type="text" id="sub-address" class="submit-form-input" placeholder="Contoh: Jl. Sam Ratulangi No. 12, Kel. Besusu Barat" required />
+          </div>
+
+          <div class="submit-form-group">
+            <label>Titik Koordinat Lokasi <span class="req">*</span></label>
+            <div class="submit-form-row">
+              <input type="number" step="any" id="sub-lat" class="submit-form-input" placeholder="Latitude (-0.89...)" required />
+              <input type="number" step="any" id="sub-lon" class="submit-form-input" placeholder="Longitude (119.87...)" required />
+            </div>
+            <div class="submit-coord-tools">
+              <button type="button" id="btn-pick-gps" class="btn-coord-tool">📍 Ambil Lokasi Saya (GPS)</button>
+              <button type="button" id="btn-pick-map" class="btn-coord-tool">🗺️ Tandai Titik di Peta</button>
+            </div>
+          </div>
+
+          <div class="submit-form-group">
+            <label>Jam Operasional</label>
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
+              <input type="checkbox" id="sub-24h" style="accent-color:#f59e0b; cursor:pointer;" />
+              <label for="sub-24h" style="cursor:pointer; font-size:0.75rem; color:#fde68a;">⚡ Buka 24 Jam Penuh Non-Stop</label>
+            </div>
+            <div id="sub-hours-row" class="submit-form-row">
+              <div class="submit-form-group">
+                <label for="sub-opentime" style="font-size:0.68rem; color:#94a3b8;">Jam Buka (WITA)</label>
+                <input type="time" id="sub-opentime" class="submit-form-input" value="10:00" />
+              </div>
+              <div class="submit-form-group">
+                <label for="sub-closetime" style="font-size:0.68rem; color:#94a3b8;">Jam Tutup (WITA)</label>
+                <input type="time" id="sub-closetime" class="submit-form-input" value="23:00" />
+              </div>
+            </div>
+          </div>
+
+          <div class="submit-form-row">
+            <div class="submit-form-group">
+              <label for="sub-price">Kisaran Harga</label>
+              <select id="sub-price" class="submit-form-select">
+                <option value="Terjangkau (< Rp 30.000)">Terjangkau (&lt; Rp 30.000)</option>
+                <option value="Sedang (Rp 30.000 - Rp 75.000)">Sedang (Rp 30.000 - Rp 75.000)</option>
+                <option value="Premium (> Rp 75.000)">Premium (&gt; Rp 75.000)</option>
+              </select>
+            </div>
+            <div class="submit-form-group">
+              <label for="sub-contact">No. WhatsApp / Kontak Pemilik</label>
+              <input type="text" id="sub-contact" class="submit-form-input" placeholder="08xxxxxxxxxx" />
+            </div>
+          </div>
+
+          <div class="submit-form-group">
+            <label for="sub-features">Fasilitas / Menu Andalan</label>
+            <input type="text" id="sub-features" class="submit-form-input" placeholder="Contoh: WiFi kencang, Colokan, Outdoor, Kaledo, Ikan Bakar" />
+          </div>
+
+          <div class="submit-form-group">
+            <label for="sub-gmaps">Tautan Google Maps / Instagram (Opsional)</label>
+            <input type="url" id="sub-gmaps" class="submit-form-input" placeholder="https://maps.app.goo.gl/..." />
+          </div>
+
+          <div class="submit-modal-footer">
+            <button type="button" id="btn-cancel-submit" style="background:transparent; border:none; color:#94a3b8; font-size:0.75rem; cursor:pointer;">Batal</button>
+            <button type="submit" class="btn-submit-action">🚀 Kirim Usulan Titik</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <div id="map-picking-banner" class="map-picking-banner" style="display:none;">
+      <span>📍 Klik lokasi usaha Anda di peta Palu...</span>
+      <button type="button" id="btn-cancel-picking">Batal</button>
+    </div>
 
     <!-- Dialog Embed Website -->
     <dialog id="share-modal" aria-labelledby="share-title">
@@ -3556,17 +3882,16 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
 
         let badgeExtraClass = "";
         let badgeStyle = "";
-        let labelText = p.rating ? `${Number(p.rating).toFixed(1)} ⭐` : "4.5 ⭐";
+        let labelText = isCafe ? "Cafe" : "Resto";
+        let barColor = isCafe ? "#f59e0b" : "#38bdf8";
 
         if (f) {
           glyphIcon = f.logoSvg;
           badgeExtraClass = "is-franchise";
-          badgeStyle = `border-color:${f.borderColor || '#a855f7'}; background:rgba(11,18,32,0.95);`;
+          badgeStyle = `border-color:${f.borderColor || '#a855f7'}; background:rgba(11,18,32,0.96);`;
           labelText = f.shortName;
+          barColor = f.borderColor || '#a855f7';
         }
-
-        const ratingVal = p.rating ? Number(p.rating).toFixed(1) : "4.5";
-        const barPct = Math.min(100, Math.max(10, Math.round((Number(ratingVal) / 5) * 100)));
 
         return `
           <div class="map-badge-marker status-${catClass} ${badgeExtraClass}" style="${badgeStyle}" title="${escapeHtml(p.name)}: ${escapeHtml(p.address)}">
@@ -3575,7 +3900,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
               <span class="badge-time-text">${escapeHtml(labelText)}</span>
             </div>
             <div class="badge-bar-track" aria-hidden="true">
-              <div class="badge-bar-fill" style="width: ${barPct}%;"></div>
+              <div class="badge-bar-fill" style="width: 100%; background: ${barColor};"></div>
             </div>
           </div>
         `;
@@ -3759,7 +4084,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             marker.culinaryCategory = p.category;
 
             const tooltipTitle = f ? `[${f.shortName}] ${p.name}` : p.name;
-            marker.bindTooltip(`<b>${escapeHtml(tooltipTitle)}</b><br><small style="color:#94a3b8;">${escapeHtml(p.categoryLabel)} · ⭐ ${p.rating}</small>`, {
+            marker.bindTooltip(`<b>${escapeHtml(tooltipTitle)}</b><br><small style="color:#94a3b8;">${escapeHtml(p.categoryLabel)} · 📍 ${escapeHtml(p.kecamatan || 'Kota Palu')}</small>`, {
               permanent: false,
               direction: "top",
               className: "street-tooltip-shell",
@@ -3780,12 +4105,11 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
               <div class="culinary-popup">
                 <div class="culinary-popup-head">
                   <h4 class="culinary-popup-title">${iconEmoji} ${escapeHtml(p.name)}</h4>
-                  <span class="culinary-rating-badge">⭐ ${p.rating}</span>
                 </div>
                 ${franchiseBanner}
                 <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
                   <span class="culinary-category-tag ${tagClass}">${escapeHtml(p.categoryLabel)}</span>
-                  <span style="font-size:0.7rem; color:#94a3b8;">${escapeHtml(p.reviewsCount || '')}</span>
+                  <span style="font-size:0.7rem; color:#38bdf8;">📍 ${escapeHtml(p.kecamatan || 'Kota Palu')}</span>
                 </div>
                 <div class="culinary-addr">📍 ${escapeHtml(p.address)}</div>
                 <div style="font-size:0.73rem; color:#f1f5f9; margin-bottom:6px; display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
@@ -3829,7 +4153,231 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
         }
       }
 
+      // Logika Formulir Usulan & Crowdsourcing Titik Baru
+      let mapPickingActive = false;
+      let pickingMarker = null;
+
+      function openSubmitModal() {
+        const modal = document.getElementById("modal-submit-place");
+        if (modal && typeof modal.showModal === "function") {
+          modal.showModal();
+        }
+      }
+
+      function closeSubmitModal() {
+        const modal = document.getElementById("modal-submit-place");
+        if (modal) modal.close();
+      }
+
+      function setupPlaceSubmissionForm() {
+        const openBtn1 = document.getElementById("open-submit-place");
+        const openBtn2 = document.getElementById("culinary-add-btn");
+        const closeBtn = document.getElementById("close-submit-modal");
+        const cancelBtn = document.getElementById("btn-cancel-submit");
+        const form = document.getElementById("form-submit-place");
+        const chk24h = document.getElementById("sub-24h");
+        const hoursRow = document.getElementById("sub-hours-row");
+        const btnGps = document.getElementById("btn-pick-gps");
+        const btnMap = document.getElementById("btn-pick-map");
+        const pickBanner = document.getElementById("map-picking-banner");
+        const cancelPickBtn = document.getElementById("btn-cancel-picking");
+
+        if (openBtn1) openBtn1.addEventListener("click", openSubmitModal);
+        if (openBtn2) openBtn2.addEventListener("click", openSubmitModal);
+        if (closeBtn) closeBtn.addEventListener("click", closeSubmitModal);
+        if (cancelBtn) cancelBtn.addEventListener("click", closeSubmitModal);
+
+        if (chk24h && hoursRow) {
+          chk24h.addEventListener("change", () => {
+            hoursRow.style.opacity = chk24h.checked ? "0.35" : "1";
+            hoursRow.style.pointerEvents = chk24h.checked ? "none" : "auto";
+          });
+        }
+
+        // GPS Geolocation
+        if (btnGps) {
+          btnGps.addEventListener("click", () => {
+            if (!("geolocation" in navigator)) {
+              alert("Perangkat Anda tidak mendukung GPS.");
+              return;
+            }
+            btnGps.textContent = "⌛ Mendeteksi lokasi...";
+            navigator.geolocation.getCurrentPosition(
+              (pos) => {
+                document.getElementById("sub-lat").value = pos.coords.latitude.toFixed(6);
+                document.getElementById("sub-lon").value = pos.coords.longitude.toFixed(6);
+                btnGps.textContent = "✅ Koordinat Terisi!";
+                setTimeout(() => { btnGps.textContent = "📍 Ambil Lokasi Saya (GPS)"; }, 2500);
+              },
+              (err) => {
+                alert("Gagal membaca GPS: " + err.message);
+                btnGps.textContent = "📍 Ambil Lokasi Saya (GPS)";
+              },
+              { enableHighAccuracy: true, timeout: 10000 }
+            );
+          });
+        }
+
+        // Tandai Titik di Peta (Map Click Picker)
+        const stopMapPicking = () => {
+          mapPickingActive = false;
+          if (pickBanner) pickBanner.style.display = "none";
+          map.getContainer().style.cursor = "";
+        };
+
+        if (btnMap) {
+          btnMap.addEventListener("click", () => {
+            closeSubmitModal();
+            mapPickingActive = true;
+            if (pickBanner) pickBanner.style.display = "flex";
+            map.getContainer().style.cursor = "crosshair";
+          });
+        }
+
+        if (cancelPickBtn) {
+          cancelPickBtn.addEventListener("click", () => {
+            stopMapPicking();
+            openSubmitModal();
+          });
+        }
+
+        map.on("click", (e) => {
+          if (!mapPickingActive) return;
+          const lat = e.latlng.lat.toFixed(6);
+          const lon = e.latlng.lng.toFixed(6);
+
+          document.getElementById("sub-lat").value = lat;
+          document.getElementById("sub-lon").value = lon;
+
+          if (pickingMarker) {
+            pickingMarker.setLatLng(e.latlng);
+          } else {
+            pickingMarker = L.marker(e.latlng, {
+              icon: L.divIcon({
+                className: "custom-point-marker",
+                html: '<div style="background:#f59e0b; color:#000; font-size:16px; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; box-shadow:0 0 12px #f59e0b; border:2px solid #fff;">📍</div>',
+                iconSize: [28, 28],
+                iconAnchor: [14, 28]
+              })
+            }).addTo(map);
+          }
+
+          stopMapPicking();
+          openSubmitModal();
+        });
+
+        // Submit Form
+        if (form) {
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById("sub-name").value.trim();
+            const category = document.getElementById("sub-cat").value;
+            const brandId = document.getElementById("sub-brand").value;
+            const address = document.getElementById("sub-address").value.trim();
+            const lat = parseFloat(document.getElementById("sub-lat").value);
+            const lon = parseFloat(document.getElementById("sub-lon").value);
+            const is24h = document.getElementById("sub-24h").checked;
+            const openTime = document.getElementById("sub-opentime").value;
+            const closeTime = document.getElementById("sub-closetime").value;
+            const priceRange = document.getElementById("sub-price").value;
+            const contact = document.getElementById("sub-contact").value.trim();
+            const featuresStr = document.getElementById("sub-features").value.trim();
+            const gmapsUrl = document.getElementById("sub-gmaps").value.trim();
+
+            if (!name || isNaN(lat) || isNaN(lon) || !address) {
+              alert("Mohon lengkapi nama tempat, alamat, dan koordinat titik lokasi.");
+              return;
+            }
+
+            const features = featuresStr ? featuresStr.split(",").map(s => s.trim()).filter(Boolean) : ["Kuliner Palu"];
+            if (is24h) features.unshift("24 Jam");
+
+            const hoursText = is24h ? "Buka 24 Jam" : `${openTime} - ${closeTime}`;
+
+            const submissionObj = {
+              id: "submit-" + Date.now(),
+              name: name,
+              category: category === "resto" ? "resto" : "cafe",
+              categoryLabel: category === "resto" ? "Restoran & Rumah Makan" : "Coffeeshop & Cafe",
+              lat: lat,
+              lon: lon,
+              address: address,
+              kecamatan: extractKecamatan(address),
+              priceRange: priceRange,
+              features: features,
+              description: `Tempat kuliner/kopi di ${address}, Kota Palu (Diusulkan oleh komunitas/pengguna).`,
+              googleMapsUrl: gmapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + ' ' + address)}`,
+              operatingHours: {
+                hasHours: true,
+                isOpen24Hours: is24h,
+                openTime: is24h ? null : openTime,
+                closeTime: is24h ? null : closeTime,
+                hoursText: hoursText,
+                weekdayDescriptions: [is24h ? "Setiap hari: Buka 24 jam" : `Setiap hari: ${openTime} - ${closeTime}`]
+              },
+              franchise: brandId !== "none" ? { id: brandId, name: brandId } : null,
+              submittedAt: new Date().toISOString(),
+              contact: contact
+            };
+
+            // Simpan ke localStorage
+            try {
+              const currentSubs = JSON.parse(localStorage.getItem("palu_pending_submissions") || "[]");
+              currentSubs.push(submissionObj);
+              localStorage.setItem("palu_pending_submissions", JSON.stringify(currentSubs));
+            } catch (err) {
+              console.warn("Gagal simpan ke localStorage:", err);
+            }
+
+            // Tampilkan kotak sukses
+            const successBox = document.getElementById("submit-success-box");
+            if (successBox) {
+              successBox.style.display = "block";
+              successBox.scrollIntoView({ behavior: "smooth" });
+
+              // Set link WA Admin
+              const waText = encodeURIComponent(
+                `Halo Admin Peta Kuliner Palu, saya ingin mendaftarkan titik usaha baru:
+
+` +
+                `*Nama Tempat:* ${name}
+` +
+                `*Kategori:* ${category === 'resto' ? 'Resto/Rumah Makan' : 'Coffeeshop/Cafe'}
+` +
+                `*Alamat:* ${address}
+` +
+                `*Koordinat:* ${lat}, ${lon}
+` +
+                `*Jam Buka:* ${hoursText}
+` +
+                `*Harga:* ${priceRange}
+` +
+                `*Kontak:* ${contact || '-'}
+` +
+                `*Tautan Maps:* ${gmapsUrl || '-'}
+
+Mohon dikurasi untuk upload mingguan. Terima kasih!`
+              );
+              const waBtn = document.getElementById("btn-wa-submit");
+              if (waBtn) waBtn.href = `https://wa.me/?text=${waText}`;
+
+              // Copy JSON button
+              const copyJsonBtn = document.getElementById("btn-copy-submit-json");
+              if (copyJsonBtn) {
+                copyJsonBtn.onclick = () => {
+                  navigator.clipboard.writeText(JSON.stringify(submissionObj, null, 2));
+                  copyJsonBtn.textContent = "✅ Tersalin!";
+                  setTimeout(() => { copyJsonBtn.textContent = "📋 Salin Format Titik"; }, 2000);
+                };
+              }
+            }
+          });
+        }
+      }
+
       function setupCulinaryControls() {
+        setupPlaceSubmissionForm();
         // 1. Kategori Buttons (Semua / Cafe / Resto / Franchise) — Identik Peta Pemadaman
         const catBtns = document.querySelectorAll(".culinary-cat-btn");
         catBtns.forEach(btn => {
@@ -6127,7 +6675,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
               const featLower = (pt.features || []).join(" ").toLowerCase();
               if (nameLower.includes(term) || addrLower.includes(term) || catLower.includes(term) || featLower.includes(term)) {
                 culinaryMatches.push(pt);
-                if (culinaryMatches.length >= 8) break;
+                if (culinaryMatches.length >= 25) break;
               }
             }
           }
@@ -6180,7 +6728,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             item.tabIndex = 0;
             item.setAttribute("role", "option");
             item.innerHTML = `
-              <div class="search-result-name">${iconEmoji} ${escapeHtml(pt.name)} <span style="font-size:0.75rem; color:#fef08a;">⭐ ${pt.rating}</span></div>
+              <div class="search-result-name">${iconEmoji} ${escapeHtml(pt.name)} ${pt.franchise ? '<span style="font-size:0.68rem; color:#c084fc; font-weight:700;">[' + escapeHtml(pt.franchise.shortName) + ']</span>' : ''}</div>
               <div class="search-result-meta">
                 <span class="search-result-area">${escapeHtml(pt.address)}</span>
                 <span class="search-result-badge ${isCafe ? 'outage' : 'safe'}">${badgeText}</span>
