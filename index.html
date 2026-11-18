@@ -477,34 +477,49 @@
         transform: translate(-50%, -50%);
         pointer-events: auto;
       }
-      .culinary-marker-icon .map-badge-marker {
+      .culinary-marker-icon .map-badge-marker,
+      .printing-marker-icon .map-badge-marker {
         min-width: 50px;
-        max-width: 140px;
+        max-width: 240px;
         width: max-content;
-        height: 23px;
-        padding: 1px 7px 2.5px 5px;
+        height: 24px;
+        padding: 1px 8px 2px 6px;
         border-radius: 999px;
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
+        transition: max-width 0.2s ease, box-shadow 0.2s ease;
       }
-      .culinary-marker-icon .badge-row {
+      .culinary-marker-icon .map-badge-marker:hover,
+      .printing-marker-icon .map-badge-marker:hover {
+        max-width: 320px;
+        z-index: 9999;
+      }
+      .culinary-marker-icon .badge-row,
+      .printing-marker-icon .badge-row {
         display: flex;
         align-items: center;
-        gap: .3rem;
+        gap: .32rem;
         min-width: 0;
       }
-      .culinary-marker-icon .badge-time-text {
-        max-width: 105px;
+      .culinary-marker-icon .badge-time-text,
+      .printing-marker-icon .badge-time-text {
+        max-width: 205px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         letter-spacing: -0.015em;
         font-weight: 700;
-        font-size: 0.66rem;
+        font-size: 0.69rem;
         color: #f8fafc;
+        transition: max-width 0.2s ease;
       }
-      .culinary-marker-icon .badge-glyph {
+      .culinary-marker-icon .map-badge-marker:hover .badge-time-text,
+      .printing-marker-icon .map-badge-marker:hover .badge-time-text {
+        max-width: 285px;
+      }
+      .culinary-marker-icon .badge-glyph,
+      .printing-marker-icon .badge-glyph {
         flex: 0 0 auto;
         display: inline-flex;
         align-items: center;
@@ -751,16 +766,7 @@
         color: #fbcfe8;
         box-shadow: 0 0 12px rgba(236, 72, 153, .5), 0 3px 8px rgba(0, 0, 0, .5);
       }
-      .printing-marker-icon .badge-time-text {
-        white-space: nowrap;
-        max-width: 170px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        letter-spacing: -0.015em;
-        font-weight: 700;
-        font-size: 0.66rem;
-        color: #f8fafc;
-      }
+
       .culinary-legend {
         position: absolute;
         bottom: 24px;
@@ -1474,6 +1480,9 @@
         box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .6);
       }
       .legend-note { grid-column: 1 / -1; width: auto; padding: .05rem .2rem 0; color: #8694a7; font-size: .6rem; line-height: 1.5; }
+      @media (max-width: 768px) {
+        .legend-note { display: none !important; }
+      }
       .legend-head { grid-column: 1 / -1; width: auto; display: flex; align-items: center; justify-content: space-between; gap: .5rem; padding: 0 .1rem .08rem; }
       .session-filter {
         grid-column: 1 / -1;
@@ -1539,13 +1548,15 @@
       .legend-head-actions {
         display: inline-flex;
         align-items: center;
-        gap: .35rem;
+        gap: .3rem;
+        flex-shrink: 0;
+        white-space: nowrap;
       }
       .legend-toggle-btn {
         display: inline-flex;
         align-items: center;
         gap: .25rem;
-        padding: .2rem .55rem;
+        padding: .2rem .5rem;
         border: 1px solid rgba(255, 255, 255, .14);
         border-radius: 999px;
         background: rgba(255, 255, 255, .06);
@@ -1556,6 +1567,8 @@
         cursor: pointer;
         transition: all .15s ease;
         user-select: none;
+        white-space: nowrap !important;
+        flex-shrink: 0;
       }
       .legend-toggle-btn:hover {
         background: rgba(255, 255, 255, .14);
@@ -1566,7 +1579,7 @@
         display: inline-flex;
         align-items: center;
         gap: .25rem;
-        padding: .2rem .55rem;
+        padding: .2rem .5rem;
         border: 1px solid rgba(255, 255, 255, .14);
         border-radius: 999px;
         background: rgba(255, 255, 255, .06);
@@ -1577,6 +1590,14 @@
         cursor: pointer;
         transition: all .15s ease;
         user-select: none;
+        white-space: nowrap !important;
+        flex-shrink: 0;
+      }
+      .txt-short {
+        display: none;
+      }
+      .txt-full {
+        display: inline;
       }
       .boundary-toggle-btn:hover {
         background: rgba(255, 255, 255, .14);
@@ -3148,9 +3169,33 @@
           background: linear-gradient(155deg, rgba(11, 18, 32, .95), rgba(7, 13, 24, .98));
           box-shadow: 0 16px 36px rgba(0, 0, 0, .55);
         }
-        .legend-head { grid-column: 1 / -1; padding: 0 .05rem .04rem; }
-        .legend-label { font-size: .54rem; letter-spacing: .06em; }
-        .legend-note { display: none; }
+        .txt-full { display: none !important; }
+        .txt-short { display: inline !important; }
+        .legend-head {
+          grid-column: 1 / -1;
+          padding: 0 .05rem .04rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: .2rem;
+          min-width: 0;
+          overflow: hidden;
+        }
+        .legend-head-actions {
+          gap: .18rem;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+        .legend-head-actions::-webkit-scrollbar { display: none; }
+        .legend-toggle-btn, .boundary-toggle-btn {
+          padding: .16rem .38rem;
+          font-size: .56rem;
+          gap: .15rem;
+        }
+        .legend-label { font-size: .54rem; letter-spacing: .06em; flex: 0 0 auto; }
+        .legend-note { display: none !important; }
         .session-filter { gap: .25rem; padding: .02rem; }
         .session-filter > .legend-label { font-size: .5rem; letter-spacing: .06em; flex: 0 0 auto; }
         .session-list {
@@ -3158,11 +3203,13 @@
           overflow-x: auto;
           overflow-y: hidden;
           gap: .25rem;
-          padding: 2px 16px 3px 2px;
+          padding: 2px 28px 3px 2px !important;
           -webkit-overflow-scrolling: touch;
           touch-action: pan-x;
           overscroll-behavior: contain;
           scrollbar-width: thin;
+          mask-image: linear-gradient(to right, black calc(100% - 24px), transparent 100%);
+          -webkit-mask-image: linear-gradient(to right, black calc(100% - 24px), transparent 100%);
         }
         .session-list::-webkit-scrollbar { height: 3px; }
         .session-list::-webkit-scrollbar-thumb {
@@ -3192,22 +3239,33 @@
         .session-item[aria-pressed="true"] .session-time { color: #fef9c3; }
         .legend-item {
           justify-content: center;
-          min-height: 32px;
-          gap: .22rem;
-          padding: .22rem .26rem;
+          min-height: 33px;
+          gap: .18rem;
+          padding: .2rem .22rem;
           border-radius: 8px;
-          font-size: .62rem;
+          font-size: .60rem;
           font-weight: 600;
+          white-space: nowrap;
         }
-        .legend-item > span { display: flex; flex: 1; align-items: center; justify-content: center; gap: .22rem; min-width: 0; }
+        .legend-item > span {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: .18rem;
+          min-width: 0;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
         .legend-item b {
           margin-left: 2px;
-          padding: 1px 4px;
+          padding: 1px 3.5px;
           border-radius: 999px;
-          background: rgba(255, 255, 255, .09);
+          background: rgba(255, 255, 255, .12);
           color: #ffffff;
-          font-size: .58rem;
+          font-size: .56rem;
           font-variant-numeric: tabular-nums;
+          flex-shrink: 0;
         }
         .legend-icon, .legend-icon svg { width: 14px; height: 14px; flex-basis: 14px; }
         .threads-link {
@@ -3232,7 +3290,7 @@
         .leaflet-control-attribution {
           position: fixed;
           right: 8px;
-          bottom: calc(env(safe-area-inset-bottom, 0px) + 3px);
+          bottom: calc(env(safe-area-inset-bottom, 0px) + var(--legend-height, 130px) + 4px) !important;
           z-index: 1050;
           margin: 0 !important;
           padding: 1px 5px !important;
@@ -3630,17 +3688,17 @@
           <div class="legend-head-actions">
             <button type="button" id="culinary-heat-toggle-btn" class="boundary-toggle-btn heat-toggle-btn" aria-pressed="false" title="Tampilkan/Sembunyikan peta panas kepadatan kuliner di Palu (Default: Nonaktif)">
               <span class="boundary-btn-icon">🔥</span>
-              <span id="culinary-heat-toggle-text">Heatmap</span>
+              <span id="culinary-heat-toggle-text"><span class="txt-full">Heatmap</span><span class="txt-short">Heat</span></span>
             </button>
             <button type="button" id="culinary-boundary-toggle-btn" class="boundary-toggle-btn" aria-pressed="true" title="Tampilkan/Sembunyikan batas administrasi kelurahan">
               <span class="boundary-btn-icon">🏛️</span>
-              <span id="culinary-boundary-toggle-text">Batas Kelurahan</span>
+              <span id="culinary-boundary-toggle-text"><span class="txt-full">Batas Kelurahan</span><span class="txt-short">Batas</span></span>
             </button>
             <button type="button" id="culinary-add-btn" class="legend-toggle-btn" style="border-color:rgba(168,85,247,0.4); background:rgba(168,85,247,0.12); color:#e9d5ff;" title="Daftarkan coffeeshop / resto Anda">
-              <span>➕ Daftarkan</span>
+              <span>➕ <span class="txt-full">Daftarkan</span><span class="txt-short">Daftar</span></span>
             </button>
             <button type="button" id="culinary-legend-toggle-btn" class="legend-toggle-btn" aria-label="Sembunyikan atau tampilkan filter" title="Sembunyikan/Tampilkan filter">
-              <span id="culinary-legend-toggle-text">Ciutkan</span>
+              <span id="culinary-legend-toggle-text" class="txt-full">Ciutkan</span>
               <span id="culinary-legend-toggle-icon" aria-hidden="true">▾</span>
             </button>
             <a
@@ -3734,17 +3792,17 @@
           <div class="legend-head-actions">
             <button type="button" id="printing-heat-toggle-btn" class="boundary-toggle-btn heat-toggle-btn" aria-pressed="false" title="Tampilkan/Sembunyikan heatmap kepadatan percetakan di Palu (Default: Nonaktif)">
               <span class="boundary-btn-icon">🔥</span>
-              <span id="printing-heat-toggle-text">Heatmap</span>
+              <span id="printing-heat-toggle-text"><span class="txt-full">Heatmap</span><span class="txt-short">Heat</span></span>
             </button>
             <button type="button" id="printing-boundary-toggle-btn" class="boundary-toggle-btn" aria-pressed="true" title="Tampilkan/Sembunyikan batas administrasi kelurahan">
               <span class="boundary-btn-icon">🏛️</span>
-              <span id="printing-boundary-toggle-text">Batas Kelurahan</span>
+              <span id="printing-boundary-toggle-text"><span class="txt-full">Batas Kelurahan</span><span class="txt-short">Batas</span></span>
             </button>
             <button type="button" id="printing-add-btn" class="legend-toggle-btn" style="border-color:rgba(6,182,212,0.4); background:rgba(6,182,212,0.12); color:#a5f3fc;" title="Daftarkan fotocopy / percetakan Anda">
-              <span>➕ Daftarkan</span>
+              <span>➕ <span class="txt-full">Daftarkan</span><span class="txt-short">Daftar</span></span>
             </button>
             <button type="button" id="printing-legend-toggle-btn" class="legend-toggle-btn" aria-label="Sembunyikan atau tampilkan filter" title="Sembunyikan/Tampilkan filter">
-              <span id="printing-legend-toggle-text">Ciutkan</span>
+              <span id="printing-legend-toggle-text" class="txt-full">Ciutkan</span>
               <span id="printing-legend-toggle-icon" aria-hidden="true">▾</span>
             </button>
             <a
@@ -5112,6 +5170,7 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
             const isCol = culLegendPanel.classList.toggle("is-collapsed");
             const txt = document.getElementById("culinary-legend-toggle-text");
             if (txt) txt.textContent = isCol ? "Buka" : "Ciutkan";
+            if (typeof syncLegendHeight === "function") syncLegendHeight();
           });
         }
 
@@ -5619,6 +5678,7 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
             const isCol = panel.classList.toggle("is-collapsed");
             const txt = document.getElementById("printing-legend-toggle-text");
             if (txt) txt.textContent = isCol ? "Buka" : "Ciutkan";
+            if (typeof syncLegendHeight === "function") syncLegendHeight();
           });
           stopMapEventInterference(panel);
         }
@@ -6432,11 +6492,16 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
               </svg>
             `;
             if (brandTitle) brandTitle.textContent = "Peta Coffeeshop & Resto — Kota Palu";
-            if (searchInput) searchInput.placeholder = "Cari coffeeshop, cafe, resto, atau kaledo...";
+            if (searchInput) {
+              searchInput.placeholder = window.innerWidth <= 620
+                ? "Cari cafe, resto, kuliner..."
+                : "Cari coffeeshop, cafe, resto, atau kaledo...";
+            }
 
             loadCulinaryLayers();
             updateBoundaryStyles();
             hideStatusCard();
+            if (typeof syncLegendHeight === "function") setTimeout(syncLegendHeight, 50);
             map.flyTo([-0.895, 119.870], 13, { duration: 1.2 });
           } else if (mode === "printing" || mode === "contour") {
             hideCulinaryLayers();
@@ -6462,11 +6527,16 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
               </svg>
             `;
             if (brandTitle) brandTitle.textContent = "Peta Fotocopy & Percetakan — Kota Palu";
-            if (searchInput) searchInput.placeholder = "Cari fotocopy, print, 3D print, percetakan...";
+            if (searchInput) {
+              searchInput.placeholder = window.innerWidth <= 620
+                ? "Cari fotocopy, percetakan..."
+                : "Cari fotocopy, print, 3D print, percetakan...";
+            }
 
             loadPrintingLayers();
             updateBoundaryStyles();
             hideStatusCard();
+            if (typeof syncLegendHeight === "function") setTimeout(syncLegendHeight, 50);
             map.flyTo([-0.895, 119.870], 13, { duration: 1.2 });
           } else if (mode === "rtrw") {
             hideCulinaryLayers();
@@ -7264,15 +7334,45 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
         button.addEventListener("click", () => setPointFilter(button.dataset.filter));
       }
 
-      const legendPanel = document.querySelector(".map-legend");
       const syncLegendHeight = () => {
-        document.documentElement.style.setProperty(
-          "--legend-height",
-          `${Math.round(legendPanel.getBoundingClientRect().height)}px`
-        );
+        let active = null;
+        if (typeof currentAppMode !== "undefined" && currentAppMode === "culinary") {
+          active = document.getElementById("culinary-legend");
+        } else if (typeof currentAppMode !== "undefined" && currentAppMode === "printing") {
+          active = document.getElementById("printing-legend");
+        } else {
+          active = document.getElementById("outage-legend") || document.querySelector(".map-legend");
+        }
+        if (active) {
+          const rect = active.getBoundingClientRect();
+          if (rect.height > 0) {
+            document.documentElement.style.setProperty(
+              "--legend-height",
+              `${Math.round(rect.height)}px`
+            );
+          }
+        }
       };
-      if ("ResizeObserver" in window) new ResizeObserver(syncLegendHeight).observe(legendPanel);
+      if ("ResizeObserver" in window) {
+        document.querySelectorAll(".map-legend").forEach((el) => {
+          new ResizeObserver(syncLegendHeight).observe(el);
+        });
+      }
+      window.syncLegendHeight = syncLegendHeight;
       syncLegendHeight();
+
+      window.addEventListener("resize", () => {
+        syncLegendHeight();
+        const searchInput = document.getElementById("street-search-input");
+        if (searchInput && typeof currentAppMode !== "undefined") {
+          const isMobile = window.innerWidth <= 620;
+          if (currentAppMode === "culinary") {
+            searchInput.placeholder = isMobile ? "Cari cafe, resto, kuliner..." : "Cari coffeeshop, cafe, resto, atau kaledo...";
+          } else if (currentAppMode === "printing") {
+            searchInput.placeholder = isMobile ? "Cari fotocopy, percetakan..." : "Cari fotocopy, print, 3D print, percetakan...";
+          }
+        }
+      });
 
       const legendToggleBtn = document.getElementById("legend-toggle-btn");
       if (legendToggleBtn && legendPanel) {
