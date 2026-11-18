@@ -93,6 +93,10 @@
         background: linear-gradient(135deg, #0284c7 0%, #0369a1 55%, #075985 100%);
         box-shadow: 0 4px 14px rgba(2, 132, 199, .45), inset 0 1px 0 rgba(255, 255, 255, .3);
       }
+      .brand-icon.mode-printing {
+        background: linear-gradient(135deg, #0891b2 0%, #0284c7 55%, #4f46e5 100%);
+        box-shadow: 0 4px 14px rgba(8, 145, 178, .45), inset 0 1px 0 rgba(255, 255, 255, .3);
+      }
       .brand-icon.mode-contour {
         background: linear-gradient(135deg, #059669 0%, #0d9488 55%, #0284c7 100%);
         box-shadow: 0 4px 14px rgba(13, 148, 136, .45), inset 0 1px 0 rgba(255, 255, 255, .3);
@@ -216,6 +220,15 @@
         box-shadow: 0 2px 8px rgba(2, 132, 199, .35);
       }
       .mode-badge-icon.rtrw svg {
+        width: 17px;
+        height: 17px;
+      }
+      .mode-badge-icon.printing {
+        background: linear-gradient(135deg, #0891b2 0%, #4f46e5 100%);
+        color: #ffffff;
+        box-shadow: 0 2px 8px rgba(8, 145, 178, .35);
+      }
+      .mode-badge-icon.printing svg {
         width: 17px;
         height: 17px;
       }
@@ -619,6 +632,134 @@
         border: 2px solid #ef4444;
         color: #fee2e2;
         box-shadow: 0 0 12px rgba(239, 68, 68, .5), 0 3px 8px rgba(0, 0, 0, .5);
+      }
+
+      /* Fotocopy & Percetakan (Printing) — Visual & Mekanisme Identik Peta Kuliner */
+      body:not([data-app-mode="printing"]) .printing-only-ui {
+        display: none !important;
+      }
+      #printing-legend {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+      @media (min-width: 621px) and (max-width: 980px) {
+        #printing-legend {
+          grid-template-columns: repeat(5, minmax(0, 1fr));
+          width: min(720px, calc(100vw - 100px));
+        }
+      }
+      @media (max-width: 620px) {
+        #printing-legend {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      #printing-legend .legend-item[data-cat="fotocopy"][aria-pressed="true"] {
+        border-color: rgba(6, 182, 212, .85);
+        background: rgba(6, 182, 212, .18);
+        color: #a5f3fc;
+        box-shadow: 0 0 14px rgba(6, 182, 212, .3);
+      }
+      #printing-legend .legend-item[data-cat="percetakan"][aria-pressed="true"] {
+        border-color: rgba(99, 102, 241, .85);
+        background: rgba(99, 102, 241, .18);
+        color: #c7d2fe;
+        box-shadow: 0 0 14px rgba(99, 102, 241, .3);
+      }
+      #printing-legend .legend-item[data-cat="3d_print"][aria-pressed="true"] {
+        border-color: rgba(236, 72, 153, .85);
+        background: rgba(236, 72, 153, .18);
+        color: #fbcfe8;
+        box-shadow: 0 0 14px rgba(236, 72, 153, .3);
+      }
+      #printing-legend .legend-item[data-cat="jilid"][aria-pressed="true"] {
+        border-color: rgba(245, 158, 11, .85);
+        background: rgba(245, 158, 11, .18);
+        color: #fef08a;
+        box-shadow: 0 0 14px rgba(245, 158, 11, .3);
+      }
+      .map-badge-marker.status-fotocopy {
+        border: 1px solid #06b6d4;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+      }
+      .map-badge-marker.status-fotocopy .badge-glyph {
+        color: #67e8f9;
+        font-size: 10px;
+        line-height: 1;
+      }
+      .map-badge-marker.status-fotocopy .badge-time-text {
+        color: #e0f2fe;
+      }
+      .map-badge-marker.status-fotocopy .badge-bar-fill {
+        background: linear-gradient(90deg, #06b6d4, #38bdf8);
+      }
+      .map-badge-marker.status-percetakan {
+        border: 1px solid #6366f1;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+      }
+      .map-badge-marker.status-percetakan .badge-glyph {
+        color: #a5b4fc;
+        font-size: 10px;
+        line-height: 1;
+      }
+      .map-badge-marker.status-percetakan .badge-time-text {
+        color: #e0e7ff;
+      }
+      .map-badge-marker.status-percetakan .badge-bar-fill {
+        background: linear-gradient(90deg, #6366f1, #818cf8);
+      }
+      .map-badge-marker.status-3d_print {
+        border: 1px solid #ec4899;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+      }
+      .map-badge-marker.status-3d_print .badge-glyph {
+        color: #f472b6;
+        font-size: 10px;
+        line-height: 1;
+      }
+      .map-badge-marker.status-3d_print .badge-time-text {
+        color: #fce7f3;
+      }
+      .map-badge-marker.status-3d_print .badge-bar-fill {
+        background: linear-gradient(90deg, #ec4899, #f43f5e);
+      }
+      .map-badge-marker.status-jilid {
+        border: 1px solid #f59e0b;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+      }
+      .map-badge-marker.status-jilid .badge-glyph {
+        color: #fde047;
+        font-size: 10px;
+        line-height: 1;
+      }
+      .map-badge-marker.status-jilid .badge-time-text {
+        color: #fef08a;
+      }
+      .map-badge-marker.status-jilid .badge-bar-fill {
+        background: linear-gradient(90deg, #f59e0b, #fbbf24);
+      }
+      .cluster-bubble.printing-fc {
+        border: 2px solid #06b6d4;
+        color: #a5f3fc;
+        box-shadow: 0 0 12px rgba(6, 182, 212, .5), 0 3px 8px rgba(0, 0, 0, .5);
+      }
+      .cluster-bubble.printing-print {
+        border: 2px solid #6366f1;
+        color: #c7d2fe;
+        box-shadow: 0 0 12px rgba(99, 102, 241, .5), 0 3px 8px rgba(0, 0, 0, .5);
+      }
+      .cluster-bubble.printing-3d {
+        border: 2px solid #ec4899;
+        color: #fbcfe8;
+        box-shadow: 0 0 12px rgba(236, 72, 153, .5), 0 3px 8px rgba(0, 0, 0, .5);
+      }
+      .printing-marker-icon .badge-time-text {
+        white-space: nowrap;
+        max-width: 170px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        letter-spacing: -0.015em;
+        font-weight: 700;
+        font-size: 0.66rem;
+        color: #f8fafc;
       }
       .culinary-legend {
         position: absolute;
@@ -3262,18 +3403,19 @@
               <span class="mode-item-active-dot" aria-hidden="true">●</span>
             </button>
 
-            <div class="mode-dropdown-header">Topografi & Lingkungan</div>
+            <div class="mode-dropdown-header">Layanan & Bisnis Lokal</div>
 
-            <button type="button" class="mode-dropdown-item" data-mode="contour" role="menuitem">
-              <span class="mode-badge-icon contour">
+            <button type="button" class="mode-dropdown-item" data-mode="printing" role="menuitem">
+              <span class="mode-badge-icon printing">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
-                  <path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.24.19"/>
+                  <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                  <rect x="6" y="14" width="12" height="8"></rect>
                 </svg>
               </span>
               <div class="mode-item-text">
-                <span class="mode-item-title">Peta Kontur & Topografi Sulteng</span>
-                <span class="mode-item-subtitle">Garis Kontur Resmi DEMNAS/BIG & Puncak Gunung</span>
+                <span class="mode-item-title">Peta Fotocopy & Percetakan Palu</span>
+                <span class="mode-item-subtitle">Fotocopy, Digital Print, 3D Print & Percetakan</span>
               </div>
               <span class="mode-item-active-dot" aria-hidden="true">●</span>
             </button>
@@ -3388,6 +3530,7 @@
         <button id="open-unmatched-modal" class="outage-only-ui" type="button" title="Lihat daftar jalan/desa yang belum terpetakan">⚠️ <span id="unmatched-badge">0</span> Belum cocok</button>
         <button id="open-import" class="outage-only-ui" type="button">＋ Impor hasil AI</button>
         <button id="open-submit-place" class="culinary-only-ui btn-submit-place" type="button" title="Daftarkan coffeeshop atau resto Anda ke peta">➕ Daftarkan Usaha</button>
+        <button id="open-submit-print" class="printing-only-ui btn-submit-place" type="button" title="Daftarkan fotocopy atau percetakan Anda ke peta">➕ Daftarkan Usaha</button>
       </div>
     </header>
 
@@ -3584,6 +3727,106 @@
         </div>
       </div>
 
+      <!-- Legenda dan filter Fotocopy & Percetakan Palu -->
+      <div id="printing-legend" class="map-legend printing-only-ui" aria-label="Legenda dan filter fotocopy dan percetakan">
+        <div class="legend-head">
+          <span class="legend-label">Filter Percetakan</span>
+          <div class="legend-head-actions">
+            <button type="button" id="printing-heat-toggle-btn" class="boundary-toggle-btn heat-toggle-btn" aria-pressed="false" title="Tampilkan/Sembunyikan heatmap kepadatan percetakan di Palu (Default: Nonaktif)">
+              <span class="boundary-btn-icon">🔥</span>
+              <span id="printing-heat-toggle-text">Heatmap</span>
+            </button>
+            <button type="button" id="printing-boundary-toggle-btn" class="boundary-toggle-btn" aria-pressed="true" title="Tampilkan/Sembunyikan batas administrasi kelurahan">
+              <span class="boundary-btn-icon">🏛️</span>
+              <span id="printing-boundary-toggle-text">Batas Kelurahan</span>
+            </button>
+            <button type="button" id="printing-add-btn" class="legend-toggle-btn" style="border-color:rgba(6,182,212,0.4); background:rgba(6,182,212,0.12); color:#a5f3fc;" title="Daftarkan fotocopy / percetakan Anda">
+              <span>➕ Daftarkan</span>
+            </button>
+            <button type="button" id="printing-legend-toggle-btn" class="legend-toggle-btn" aria-label="Sembunyikan atau tampilkan filter" title="Sembunyikan/Tampilkan filter">
+              <span id="printing-legend-toggle-text">Ciutkan</span>
+              <span id="printing-legend-toggle-icon" aria-hidden="true">▾</span>
+            </button>
+            <a
+              class="threads-link"
+              href="https://www.threads.com/@andiarman___"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Buka akun Threads @andiarman___ di tab baru"
+              title="Threads @andiarman___"
+            >
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+                <path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/>
+              </svg>
+              <span>@andiarman___</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Row 1: Kategori Filter Utama -->
+        <button class="legend-item printing-cat-btn" type="button" data-cat="all" aria-pressed="true">
+          <i class="legend-icon legend-icon-all" aria-hidden="true"></i>
+          <span>Semua <b id="print-count-all">0</b></span>
+        </button>
+        <button class="legend-item printing-cat-btn" type="button" data-cat="fotocopy" aria-pressed="false">
+          <i class="legend-icon" aria-hidden="true">📄</i>
+          <span>Fotocopy & ATK <b id="print-count-fc">0</b></span>
+        </button>
+        <button class="legend-item printing-cat-btn" type="button" data-cat="percetakan" aria-pressed="false">
+          <i class="legend-icon" aria-hidden="true">🖨️</i>
+          <span>Percetakan <b id="print-count-print">0</b></span>
+        </button>
+        <button class="legend-item printing-cat-btn" type="button" data-cat="3d_print" aria-pressed="false">
+          <i class="legend-icon" aria-hidden="true">🧊</i>
+          <span>3D Print <b id="print-count-3d">0</b></span>
+        </button>
+        <button class="legend-item printing-cat-btn" type="button" data-cat="jilid" aria-pressed="false">
+          <i class="legend-icon" aria-hidden="true">📚</i>
+          <span>Jilid Skripsi <b id="print-count-jilid">0</b></span>
+        </button>
+
+        <!-- Row 2: Jam Buka -->
+        <div class="session-filter" id="printing-session-filter">
+          <span class="legend-label">Jam Buka</span>
+          <div class="session-list" id="printing-session-list" role="group" aria-label="Saring menurut jam operasional">
+            <button class="session-item printing-time-btn active" type="button" data-time="all" aria-pressed="true">
+              <b>Semua</b>
+            </button>
+            <button class="session-item printing-time-btn" type="button" data-time="open-now" aria-pressed="false">
+              <span>🟢 Buka Sekarang <b id="print-chip-opennow" style="font-weight:700; opacity:0.9;"></b></span>
+            </button>
+            <button class="session-item printing-time-btn" type="button" data-time="24h" aria-pressed="false">
+              <span>⚡ Buka 24 Jam <b id="print-chip-24h" style="font-weight:700; opacity:0.9;"></b></span>
+            </button>
+            <button class="session-item printing-time-btn" type="button" data-time="scheduled" aria-pressed="false">
+              <span>⏰ Jam Tertentu <b id="print-chip-scheduled" style="font-weight:700; opacity:0.9;"></b></span>
+            </button>
+          </div>
+        </div>
+
+        <span class="legend-note">📄 Cyan = Fotocopy & ATK · 🖨️ Indigo = Digital Printing / Percetakan · 🧊 Magenta = 3D Print · 📚 Amber = Jilid Skripsi · 🟢 Hijau = Buka sekarang (Live WITA).</span>
+      </div>
+
+      <!-- Mini Floating Legend Heatmap Kepadatan Percetakan -->
+      <div id="printing-heat-legend" class="culinary-heat-legend" style="display:none;" aria-label="Legenda Peta Panas Kepadatan Percetakan">
+        <div class="heat-legend-head">
+          <span style="color:#06b6d4;">🔥 Kepadatan Percetakan</span>
+          <span class="heat-legend-sub">Heatmap</span>
+        </div>
+        <div class="heat-legend-bar" style="background:linear-gradient(to right, #0284c7, #06b6d4, #10b981, #eab308, #ef4444);"></div>
+        <div class="heat-legend-labels">
+          <span>Rendah</span>
+          <span>Sedang</span>
+          <span>Padat</span>
+        </div>
+        <div class="heat-legend-toggle-row">
+          <button type="button" id="btn-toggle-print-heat-markers" class="heat-marker-toggle-btn" aria-pressed="true" title="Sembunyikan atau tampilkan ikon titik saat melihat heatmap">
+            <span>📍</span>
+            <span id="text-toggle-print-heat-markers">Ikon Titik: Aktif</span>
+          </button>
+        </div>
+      </div>
+
       <div id="rtrw-legend" class="rtrw-legend" aria-label="Legenda RTRW Kota Palu">
         <div class="rtrw-legend-head">
           <span>🏛️ RTRW Kota Palu (Perda 2/2021)</span>
@@ -3617,51 +3860,7 @@
         </div>
       </div>
 
-      <div id="contour-legend" class="contour-legend" aria-label="Legenda Topografi dan Kontur">
-        <div class="contour-legend-head">
-          <span>🏔️ Topografi & Kontur Sulteng</span>
-          <span style="font-size:0.68rem; color:#94a3b8; font-weight:normal;">SRTM / DEMNAS</span>
-        </div>
-        <div class="contour-legend-items">
-          <label class="contour-legend-item">
-            <input type="checkbox" id="chk-contour-tile" checked />
-            <span class="contour-swatch" style="border:1.5px solid #10b981; background:rgba(16,185,129,0.3);"></span>
-            <span>Garis Kontur Berlabel (OpenTopoMap)</span>
-          </label>
-          <label class="contour-legend-item">
-            <input type="checkbox" id="chk-contour-lines" checked />
-            <span class="contour-swatch line-swatch"></span>
-            <span>Garis Kontur Indeks Vektor (BIG/DEMNAS)</span>
-          </label>
-          <label class="contour-legend-item">
-            <input type="checkbox" id="chk-contour-peaks" checked />
-            <span class="contour-swatch peak-swatch"></span>
-            <span>Puncak Gunung & Titik Ketinggian (▲ mdpl)</span>
-          </label>
-          <label class="contour-legend-item">
-            <input type="checkbox" id="chk-contour-inspector" checked />
-            <span style="font-size:12px;">📍</span>
-            <span>Altimeter Aktif (Klik Peta Cek Elevasi)</span>
-          </label>
-
-          <div style="margin-top:4px; padding-top:6px; border-top:1px solid rgba(255,255,255,0.08);">
-            <div style="font-size:0.7rem; color:#94a3b8; margin-bottom:2px;">Rentang Ketinggian Hypsometri (mdpl):</div>
-            <div class="contour-hypsometry-bar"></div>
-            <div class="contour-hypsometry-labels">
-              <span>0 m</span>
-              <span>200 m</span>
-              <span>500 m</span>
-              <span>1.000 m</span>
-              <span>2.000 m</span>
-              <span>3.000+ m</span>
-            </div>
-          </div>
-
-          <div style="margin-top:4px; padding:5px 8px; background:rgba(16,185,129,0.12); border-left:3px solid #10b981; border-radius:4px; font-size:0.72rem; color:#a7f3d0; line-height:1.35;">
-            💡 <i>Tips:</i> Zoom lebih dekat untuk membaca garis kontur rapat (interval 10m–50m) beserta angka ketinggian.
-          </div>
-        </div>
-      </div>
+      <!-- Mode Kontur & Topografi telah digantikan oleh Mode Fotocopy & Percetakan Palu -->
     </main>
 
     <!-- Dialog Formulir Usulan Coffeeshop & Resto Baru -->
@@ -3700,6 +3899,10 @@
             <div class="submit-form-group">
               <label for="sub-cat">Kategori <span class="req">*</span></label>
               <select id="sub-cat" class="submit-form-select">
+                <option value="fotocopy">📄 Fotocopy & ATK</option>
+                <option value="percetakan">🖨️ Percetakan & Digital Print</option>
+                <option value="3d_print">🧊 3D Print & Prototipe</option>
+                <option value="jilid">📚 Jilid Skripsi & Pengetikan</option>
                 <option value="cafe">☕ Coffeeshop & Cafe</option>
                 <option value="resto">🍽️ Restoran & Rumah Makan</option>
                 <option value="warkop">🥪 Warkop / Kedai Santai</option>
@@ -4612,6 +4815,19 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
 
       function openSubmitModal() {
         const modal = document.getElementById("modal-submit-place");
+        const titleEl = document.getElementById("submit-place-title");
+        const catSelect = document.getElementById("sub-cat");
+        if (currentAppMode === "printing") {
+          if (titleEl) titleEl.textContent = "🖨️ Daftarkan Usaha Fotocopy / Percetakan Anda";
+          if (catSelect && !['fotocopy', 'percetakan', '3d_print', 'jilid'].includes(catSelect.value)) {
+            catSelect.value = "fotocopy";
+          }
+        } else {
+          if (titleEl) titleEl.textContent = "☕ Daftarkan Coffeeshop / Resto Anda";
+          if (catSelect && ['fotocopy', 'percetakan', '3d_print', 'jilid'].includes(catSelect.value)) {
+            catSelect.value = "cafe";
+          }
+        }
         if (modal && typeof modal.showModal === "function") {
           modal.showModal();
         }
@@ -4747,18 +4963,28 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
 
             const hoursText = is24h ? "Buka 24 Jam" : `${openTime} - ${closeTime}`;
 
+            let catKey = category;
+            let catLabel = "Fotocopy & ATK";
+            if (category === "resto") catLabel = "Restoran & Rumah Makan";
+            else if (category === "cafe") catLabel = "Coffeeshop & Cafe";
+            else if (category === "warkop") catLabel = "Warkop / Kedai Santai";
+            else if (category === "percetakan") catLabel = "Digital Printing & Percetakan";
+            else if (category === "3d_print") catLabel = "3D Printing & Prototipe";
+            else if (category === "jilid") catLabel = "Jilid Skripsi & Pengetikan";
+            else if (category === "fotocopy") catLabel = "Fotocopy & ATK";
+
             const submissionObj = {
               id: "submit-" + Date.now(),
               name: name,
-              category: category === "resto" ? "resto" : "cafe",
-              categoryLabel: category === "resto" ? "Restoran & Rumah Makan" : "Coffeeshop & Cafe",
+              category: catKey,
+              categoryLabel: catLabel,
               lat: lat,
               lon: lon,
               address: address,
               kecamatan: extractKecamatan(address),
               priceRange: priceRange,
               features: features,
-              description: `Tempat kuliner/kopi di ${address}, Kota Palu (Diusulkan oleh komunitas/pengguna).`,
+              description: `Usaha di ${address}, Kota Palu (Diusulkan oleh komunitas/pengguna).`,
               googleMapsUrl: gmapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + ' ' + address)}`,
               operatingHours: {
                 hasHours: true,
@@ -4892,6 +5118,509 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
         // Hindari event click / scroll tembus ke peta Leaflet
         if (culLegendPanel) {
           stopMapEventInterference(culLegendPanel);
+        }
+      }
+
+      // ==========================================
+      // Mode Fotocopy, Print, 3D Print & Percetakan Palu
+      // ==========================================
+      const printingLayers = {
+        clusterGroup: null,
+        allMarkers: [],
+        allPlaces: [],
+        loaded: false
+      };
+      let printingHeatmapLayer = null;
+      let printingHeatmapEnabled = false; // TIDAK AUTOAKTIF: default nonaktif
+      let printingMarkersVisible = true;
+
+      const printingFilterState = {
+        category: "all", // "all" | "fotocopy" | "percetakan" | "3d_print" | "jilid"
+        time: "all" // "all" | "open-now" | "24h" | "scheduled"
+      };
+
+      function matchesPrintingFilter(p) {
+        if (printingFilterState.category !== "all") {
+          if (p.category !== printingFilterState.category) return false;
+        }
+
+        if (printingFilterState.time === "open-now") {
+          if (!isPlaceOpenNow(p)) return false;
+        } else if (printingFilterState.time === "24h") {
+          const is24 = p.operatingHours?.isOpen24Hours || (p.name || "").toLowerCase().includes("24 jam");
+          if (!is24) return false;
+        } else if (printingFilterState.time === "scheduled") {
+          const is24 = p.operatingHours?.isOpen24Hours || (p.name || "").toLowerCase().includes("24 jam");
+          if (is24) return false;
+        }
+
+        return true;
+      }
+
+      function buildPrintingBadgeHtml(p) {
+        const cat = p.category || "fotocopy";
+        let catClass = "status-fotocopy";
+        let barColor = "#06b6d4";
+        let glyphIcon = "📄";
+
+        if (cat === "percetakan") {
+          catClass = "status-percetakan";
+          barColor = "#6366f1";
+          glyphIcon = "🖨️";
+        } else if (cat === "3d_print") {
+          catClass = "status-3d_print";
+          barColor = "#ec4899";
+          glyphIcon = "🧊";
+        } else if (cat === "jilid") {
+          catClass = "status-jilid";
+          barColor = "#f59e0b";
+          glyphIcon = "📚";
+        }
+
+        const labelText = p.name || p.categoryLabel;
+
+        return `
+          <div class="map-badge-marker ${catClass}" title="${escapeHtml(p.name)}: ${escapeHtml(p.address)}">
+            <div class="badge-row">
+              <span class="badge-glyph" aria-hidden="true" style="font-size:11px; line-height:1;">${glyphIcon}</span>
+              <span class="badge-time-text">${escapeHtml(labelText)}</span>
+            </div>
+            <div class="badge-bar-track" aria-hidden="true">
+              <div class="badge-bar-fill" style="width: 100%; background: ${barColor};"></div>
+            </div>
+          </div>
+        `;
+      }
+
+      function updatePrintingCounts() {
+        if (!printingLayers.allPlaces || !printingLayers.allPlaces.length) return;
+
+        let totalPlaces = printingLayers.allPlaces.length;
+        let totalFc = 0;
+        let totalPrint = 0;
+        let total3D = 0;
+        let totalJilid = 0;
+        let totalOpenNow = 0;
+        let total24h = 0;
+        let totalScheduled = 0;
+
+        for (const p of printingLayers.allPlaces) {
+          if (p.category === "fotocopy") totalFc++;
+          else if (p.category === "percetakan") totalPrint++;
+          else if (p.category === "3d_print") total3D++;
+          else if (p.category === "jilid") totalJilid++;
+
+          const is24 = p.operatingHours?.isOpen24Hours || (p.name || "").toLowerCase().includes("24 jam");
+          if (is24) total24h++;
+          else totalScheduled++;
+
+          if (isPlaceOpenNow(p)) totalOpenNow++;
+        }
+
+        const allEl = document.getElementById("print-count-all");
+        const fcEl = document.getElementById("print-count-fc");
+        const printEl = document.getElementById("print-count-print");
+        const el3d = document.getElementById("print-count-3d");
+        const jilidEl = document.getElementById("print-count-jilid");
+        const chipOpenEl = document.getElementById("print-chip-opennow");
+        const chip24hEl = document.getElementById("print-chip-24h");
+        const chipSchedEl = document.getElementById("print-chip-scheduled");
+
+        if (allEl) allEl.textContent = totalPlaces;
+        if (fcEl) fcEl.textContent = totalFc;
+        if (printEl) printEl.textContent = totalPrint;
+        if (el3d) el3d.textContent = total3D;
+        if (jilidEl) jilidEl.textContent = totalJilid;
+        if (chipOpenEl) chipOpenEl.textContent = `(${totalOpenNow})`;
+        if (chip24hEl) chip24hEl.textContent = `(${total24h})`;
+        if (chipSchedEl) chipSchedEl.textContent = `(${totalScheduled})`;
+      }
+
+      function applyPrintingFilter() {
+        if (!printingLayers.clusterGroup) return;
+
+        printingLayers.clusterGroup.clearLayers();
+        const visible = printingLayers.allMarkers.filter(m => matchesPrintingFilter(m.feature.properties));
+        printingLayers.clusterGroup.addLayers(visible);
+        updatePrintingCounts();
+
+        if (printingHeatmapEnabled) {
+          syncPrintingHeatmap();
+        }
+      }
+
+      async function loadPrintingLayers() {
+        if (printingLayers.loaded) {
+          if (printingLayers.clusterGroup && !map.hasLayer(printingLayers.clusterGroup)) {
+            map.addLayer(printingLayers.clusterGroup);
+            applyPrintingFilter();
+          }
+          if (printingHeatmapEnabled) {
+            syncPrintingHeatmap();
+          }
+          return;
+        }
+
+        try {
+          const res = await fetch("data/places/palu-fotocopy-percetakan.json");
+          if (!res.ok) throw new Error("Gagal mengambil data fotocopy & percetakan");
+          const places = await res.json();
+          printingLayers.allPlaces = places;
+
+          if (typeof L.markerClusterGroup === "function") {
+            printingLayers.clusterGroup = L.markerClusterGroup({
+              maxClusterRadius: 42,
+              spiderfyOnMaxZoom: true,
+              showCoverageOnHover: false,
+              zoomToBoundsOnClick: true,
+              disableClusteringAtZoom: 16,
+              animate: true,
+              animateAddingMarkers: false,
+              iconCreateFunction: (cluster) => {
+                const children = cluster.getAllChildMarkers();
+                let fcCount = 0;
+                let printCount = 0;
+                let d3Count = 0;
+                for (const m of children) {
+                  const cat = m.feature?.properties?.category;
+                  if (cat === "fotocopy") fcCount++;
+                  else if (cat === "percetakan") printCount++;
+                  else if (cat === "3d_print") d3Count++;
+                }
+                let type = "printing-fc";
+                if (d3Count > 0) type = "printing-3d";
+                else if (printCount >= fcCount) type = "printing-print";
+                
+                const count = cluster.getChildCount();
+                return L.divIcon({
+                  html: `<div class="cluster-bubble ${type}"><span>${count}</span></div>`,
+                  className: `custom-cluster-wrapper cluster-${type}`,
+                  iconSize: [36, 36],
+                  iconAnchor: [18, 18]
+                });
+              }
+            });
+          } else {
+            printingLayers.clusterGroup = L.featureGroup();
+          }
+
+          const markers = [];
+
+          for (const p of places) {
+            const marker = L.marker([p.lat, p.lon], {
+              icon: L.divIcon({
+                className: `street-marker-icon printing-marker-icon`,
+                html: buildPrintingBadgeHtml(p),
+                iconSize: null
+              }),
+              keyboard: true
+            });
+
+            marker.feature = { properties: p };
+
+            marker.bindTooltip(`<b>${escapeHtml(p.name)}</b><br><small style="color:#94a3b8;">${escapeHtml(p.categoryLabel)} · 📍 ${escapeHtml(p.kecamatan || 'Kota Palu')}</small>`, {
+              permanent: false,
+              direction: "top",
+              className: "street-tooltip-shell",
+              offset: [0, -10]
+            });
+
+            const featuresHtml = (p.features && p.features.length > 0)
+              ? p.features.map(feat => `<span class="culinary-chip">${escapeHtml(feat)}</span>`).join("")
+              : "";
+            const gmapsUrl = p.googleMapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name + ' ' + p.address)}`;
+
+            // Jam Operasional & Status WITA
+            const is24h = p.operatingHours?.isOpen24Hours || (p.name || "").toLowerCase().includes("24 jam");
+            const hoursBadge = is24h
+              ? `<span style="background:rgba(14,165,233,0.2); color:#38bdf8; font-weight:700; padding:1px 6px; border-radius:4px; font-size:0.68rem; border:1px solid rgba(14,165,233,0.35);">⚡ BUKA 24 JAM PENUH</span>`
+              : (p.operatingHours?.hoursText ? `<span><b>${escapeHtml(p.operatingHours.hoursText)} WITA</b></span>` : `<span>Jam operasional fleksibel</span>`);
+
+            const isOpen = isPlaceOpenNow(p);
+            const statusBadge = isOpen
+              ? `<span class="culinary-status-pill open">🟢 BUKA SEKARANG</span>`
+              : `<span class="culinary-status-pill closed">🔴 SEDANG TUTUP</span>`;
+
+            // Koordinat Presisi
+            const coordsStr = (p.lat && p.lon)
+              ? `${Number(p.lat).toFixed(5)}, ${Number(p.lon).toFixed(5)}`
+              : "-";
+
+            // No telepon jika ada
+            const phoneHtml = p.phone ? `
+              <div class="culinary-field-row">
+                <span class="culinary-field-icon">📞</span>
+                <div class="culinary-field-content">
+                  <span class="culinary-field-label">Kontak / WhatsApp</span>
+                  <div class="culinary-field-val"><a href="tel:${escapeHtml(p.phone)}" style="color:#38bdf8; text-decoration:none; font-weight:600;">${escapeHtml(p.phone)}</a></div>
+                </div>
+              </div>
+            ` : '';
+
+            marker.bindPopup(`
+              <div class="culinary-popup">
+                <div class="culinary-popup-header">
+                  <div class="culinary-popup-title">${p.icon || '🖨️'} ${escapeHtml(p.name)}</div>
+                </div>
+
+                <div class="culinary-popup-badges">
+                  <span class="culinary-badge-cat ${p.category === 'fotocopy' ? 'cafe' : 'resto'}" style="background:rgba(6,182,212,0.16); color:#a5f3fc; border-color:rgba(6,182,212,0.35);">
+                    ${escapeHtml(p.categoryLabel)}
+                  </span>
+                  <span class="culinary-tag-local">
+                    <span>📍 ${escapeHtml(p.kecamatan || 'Kota Palu')}</span>
+                  </span>
+                </div>
+
+                <div class="culinary-popup-fields">
+                  <div class="culinary-field-row">
+                    <span class="culinary-field-icon">📍</span>
+                    <div class="culinary-field-content">
+                      <span class="culinary-field-label">Alamat Lengkap</span>
+                      <div class="culinary-field-val">${escapeHtml(p.address)}</div>
+                    </div>
+                  </div>
+
+                  <div class="culinary-field-row">
+                    <span class="culinary-field-icon">⏰</span>
+                    <div class="culinary-field-content">
+                      <span class="culinary-field-label">Jam Operasional (WITA)</span>
+                      <div class="culinary-field-val" style="display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-top:2px;">
+                        ${hoursBadge}
+                        ${statusBadge}
+                      </div>
+                    </div>
+                  </div>
+
+                  ${phoneHtml}
+
+                  <div class="culinary-field-row">
+                    <span class="culinary-field-icon">💰</span>
+                    <div class="culinary-field-content">
+                      <span class="culinary-field-label">Estimasi Biaya / Tarif</span>
+                      <div class="culinary-field-val" style="color:#38bdf8; font-weight:600;">${escapeHtml(p.priceRange || 'Standar')}</div>
+                    </div>
+                  </div>
+
+                  ${featuresHtml ? `
+                  <div class="culinary-field-row">
+                    <span class="culinary-field-icon">✨</span>
+                    <div class="culinary-field-content">
+                      <span class="culinary-field-label">Layanan & Fasilitas</span>
+                      <div class="culinary-features" style="margin-top:3px;">
+                        ${featuresHtml}
+                      </div>
+                    </div>
+                  </div>
+                  ` : ''}
+
+                  <div class="culinary-field-row">
+                    <span class="culinary-field-icon">🧭</span>
+                    <div class="culinary-field-content">
+                      <span class="culinary-field-label">Titik Koordinat Presisi</span>
+                      <div class="culinary-field-val culinary-coord-text">${coordsStr}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <a href="${gmapsUrl}" target="_blank" rel="noopener noreferrer" class="culinary-gmaps-btn" style="background: linear-gradient(135deg, #0284c7, #2563eb) !important;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a8 8 0 0 0-8 8c0 5.4 7 11.5 7.6 12a.6.6 0 0 0 .8 0c.6-.5 7.6-6.6 7.6-12a8 8 0 0 0-8-8z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  <span>Buka Rute di Google Maps ↗</span>
+                </a>
+              </div>
+            `);
+
+            markers.push(marker);
+          }
+
+          printingLayers.allMarkers = markers;
+          updatePrintingCounts();
+
+          if (currentAppMode === "printing") {
+            applyPrintingFilter();
+            map.addLayer(printingLayers.clusterGroup);
+          }
+
+          printingLayers.loaded = true;
+        } catch (err) {
+          console.error("Gagal memuat data fotocopy & percetakan Palu:", err);
+        }
+      }
+
+      function hidePrintingLayers() {
+        if (printingLayers.clusterGroup && map.hasLayer(printingLayers.clusterGroup)) {
+          map.removeLayer(printingLayers.clusterGroup);
+        }
+        if (printingHeatmapLayer && map.hasLayer(printingHeatmapLayer)) {
+          map.removeLayer(printingHeatmapLayer);
+        }
+        const heatLeg = document.getElementById("printing-heat-legend");
+        if (heatLeg) heatLeg.style.display = "none";
+      }
+
+      function setPrintingMarkersVisible(visible) {
+        printingMarkersVisible = visible;
+        const btnFloating = document.getElementById("btn-toggle-print-heat-markers");
+        const txtFloating = document.getElementById("text-toggle-print-heat-markers");
+
+        if (btnFloating) {
+          btnFloating.setAttribute("aria-pressed", visible ? "true" : "false");
+          btnFloating.classList.toggle("is-off", !visible);
+        }
+        if (txtFloating) {
+          txtFloating.textContent = visible ? "Ikon Titik: Aktif" : "Ikon Titik: Nonaktif";
+        }
+
+        if (!printingLayers.clusterGroup) return;
+
+        if (visible) {
+          if (!map.hasLayer(printingLayers.clusterGroup)) {
+            map.addLayer(printingLayers.clusterGroup);
+            applyPrintingFilter();
+          }
+        } else {
+          if (map.hasLayer(printingLayers.clusterGroup)) {
+            map.removeLayer(printingLayers.clusterGroup);
+          }
+        }
+      }
+
+      function togglePrintingMarkers() {
+        setPrintingMarkersVisible(!printingMarkersVisible);
+      }
+
+      function syncPrintingHeatmap() {
+        const heatLeg = document.getElementById("printing-heat-legend");
+        if (!printingHeatmapEnabled) {
+          if (printingHeatmapLayer && map.hasLayer(printingHeatmapLayer)) {
+            map.removeLayer(printingHeatmapLayer);
+          }
+          if (heatLeg) heatLeg.style.display = "none";
+          return;
+        }
+
+        if (!printingLayers.allPlaces || !printingLayers.allPlaces.length) return;
+
+        const activePlaces = printingLayers.allPlaces.filter(matchesPrintingFilter);
+        const heatPoints = activePlaces.map((p) => {
+          let weight = 1.0;
+          if (p.category === "percetakan") weight = 1.2;
+          if (p.category === "3d_print") weight = 1.4;
+          return [p.lat, p.lon, weight];
+        });
+
+        if (!printingHeatmapLayer) {
+          if (typeof L.heatLayer === "function") {
+            printingHeatmapLayer = L.heatLayer(heatPoints, {
+              radius: 35,
+              blur: 24,
+              maxZoom: 16,
+              max: 2.5,
+              gradient: {
+                0.2: "#0284c7",
+                0.4: "#06b6d4",
+                0.6: "#10b981",
+                0.8: "#eab308",
+                1.0: "#ef4444"
+              }
+            });
+          }
+        } else {
+          printingHeatmapLayer.setLatLngs(heatPoints);
+        }
+
+        if (printingHeatmapLayer && !map.hasLayer(printingHeatmapLayer)) {
+          map.addLayer(printingHeatmapLayer);
+        }
+
+        if (heatLeg) heatLeg.style.display = "flex";
+      }
+
+      function togglePrintingHeatmap() {
+        printingHeatmapEnabled = !printingHeatmapEnabled;
+        const heatBtn = document.getElementById("printing-heat-toggle-btn");
+        if (heatBtn) {
+          heatBtn.setAttribute("aria-pressed", printingHeatmapEnabled ? "true" : "false");
+          heatBtn.classList.toggle("active", printingHeatmapEnabled);
+        }
+        syncPrintingHeatmap();
+      }
+
+      function setupPrintingControls() {
+        // 1. Kategori Buttons
+        const catBtns = document.querySelectorAll(".printing-cat-btn");
+        catBtns.forEach(btn => {
+          btn.addEventListener("click", () => {
+            catBtns.forEach(b => b.setAttribute("aria-pressed", "false"));
+            btn.setAttribute("aria-pressed", "true");
+            printingFilterState.category = btn.dataset.cat || "all";
+            applyPrintingFilter();
+          });
+        });
+
+        // 2. Jam Buka Buttons
+        const timeBtns = document.querySelectorAll(".printing-time-btn");
+        timeBtns.forEach(btn => {
+          btn.addEventListener("click", () => {
+            timeBtns.forEach(b => {
+              b.setAttribute("aria-pressed", "false");
+              b.classList.remove("active");
+            });
+            btn.setAttribute("aria-pressed", "true");
+            btn.classList.add("active");
+            printingFilterState.time = btn.dataset.time || "all";
+            applyPrintingFilter();
+          });
+        });
+
+        // 3. Heatmap Toggle
+        const printHeatBtn = document.getElementById("printing-heat-toggle-btn");
+        if (printHeatBtn) {
+          printHeatBtn.addEventListener("click", togglePrintingHeatmap);
+        }
+
+        const printHeatMarkerBtn = document.getElementById("btn-toggle-print-heat-markers");
+        if (printHeatMarkerBtn) {
+          printHeatMarkerBtn.addEventListener("click", togglePrintingMarkers);
+        }
+
+        // 4. Batas Kelurahan Toggle
+        const boundaryBtn = document.getElementById("printing-boundary-toggle-btn");
+        if (boundaryBtn) {
+          boundaryBtn.addEventListener("click", () => {
+            isBoundaryActive = !isBoundaryActive;
+            boundaryBtn.setAttribute("aria-pressed", isBoundaryActive ? "true" : "false");
+            const txt = document.getElementById("printing-boundary-toggle-text");
+            if (txt) txt.textContent = isBoundaryActive ? "Batas Kelurahan" : "Batas: Nonaktif";
+            for (const layer of boundaryLayersByRegency.values()) {
+              if (isBoundaryActive) {
+                if (!map.hasLayer(layer)) map.addLayer(layer);
+              } else {
+                if (map.hasLayer(layer)) map.removeLayer(layer);
+              }
+            }
+          });
+        }
+
+        // 5. Daftarkan Usaha Button
+        const addBtn1 = document.getElementById("printing-add-btn");
+        const addBtn2 = document.getElementById("open-submit-print");
+        if (addBtn1) addBtn1.addEventListener("click", openSubmitModal);
+        if (addBtn2) addBtn2.addEventListener("click", openSubmitModal);
+
+        // 6. Collapse Toggle
+        const toggleBtn = document.getElementById("printing-legend-toggle-btn");
+        const panel = document.getElementById("printing-legend");
+        if (toggleBtn && panel) {
+          toggleBtn.addEventListener("click", () => {
+            const isCol = panel.classList.toggle("is-collapsed");
+            const txt = document.getElementById("printing-legend-toggle-text");
+            if (txt) txt.textContent = isCol ? "Buka" : "Ciutkan";
+          });
+          stopMapEventInterference(panel);
         }
       }
 
@@ -5665,6 +6394,7 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
 
           if (mode === "outage") {
             hideCulinaryLayers();
+            hidePrintingLayers();
             hideRtrwLayers();
             hideContourLayers();
             modeBtn.className = "brand-icon mode-selector-btn mode-outage";
@@ -5677,6 +6407,7 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
             refreshDynamic();
             updateBoundaryStyles();
           } else if (mode === "culinary") {
+            hidePrintingLayers();
             hideRtrwLayers();
             hideContourLayers();
             if (geoJsonLayer) {
@@ -5707,8 +6438,39 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
             updateBoundaryStyles();
             hideStatusCard();
             map.flyTo([-0.895, 119.870], 13, { duration: 1.2 });
+          } else if (mode === "printing" || mode === "contour") {
+            hideCulinaryLayers();
+            hideRtrwLayers();
+            hideContourLayers();
+            if (geoJsonLayer) {
+              map.removeLayer(geoJsonLayer);
+              geoJsonLayer = null;
+            }
+            if (markerClusterGroup) {
+              map.removeLayer(markerClusterGroup);
+              markerClusterGroup = null;
+            }
+            allPointMarkers = [];
+
+            modeBtn.className = "brand-icon mode-selector-btn mode-printing";
+            modeBtn.title = "Mode: Fotocopy & Percetakan Palu (Google Maps)";
+            currentModeIcon.innerHTML = `
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+              </svg>
+            `;
+            if (brandTitle) brandTitle.textContent = "Peta Fotocopy & Percetakan — Kota Palu";
+            if (searchInput) searchInput.placeholder = "Cari fotocopy, print, 3D print, percetakan...";
+
+            loadPrintingLayers();
+            updateBoundaryStyles();
+            hideStatusCard();
+            map.flyTo([-0.895, 119.870], 13, { duration: 1.2 });
           } else if (mode === "rtrw") {
             hideCulinaryLayers();
+            hidePrintingLayers();
             hideContourLayers();
             if (geoJsonLayer) {
               map.removeLayer(geoJsonLayer);
@@ -5734,36 +6496,9 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
             updateBoundaryStyles();
             hideStatusCard();
             map.flyTo([-0.835, 119.885], 12, { duration: 1.2 });
-          } else if (mode === "contour" || mode === "empty-3") {
-            hideCulinaryLayers();
-            hideRtrwLayers();
-            if (geoJsonLayer) {
-              map.removeLayer(geoJsonLayer);
-              geoJsonLayer = null;
-            }
-            if (markerClusterGroup) {
-              map.removeLayer(markerClusterGroup);
-              markerClusterGroup = null;
-            }
-            allPointMarkers = [];
-
-            modeBtn.className = "brand-icon mode-selector-btn mode-contour";
-            modeBtn.title = "Mode: Peta Kontur & Topografi Sulteng (Klik untuk ganti mode)";
-            currentModeIcon.innerHTML = `
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
-                <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
-                <path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.24.19"/>
-              </svg>
-            `;
-            if (brandTitle) brandTitle.textContent = "Peta Kontur & Topografi Sulawesi Tengah";
-            if (searchInput) searchInput.placeholder = "Cari puncak gunung, dataran, atau elevasi...";
-
-            loadContourLayers();
-            updateBoundaryStyles();
-            hideStatusCard();
-            map.flyTo([-1.2, 120.3], 9, { duration: 1.4 });
           } else {
             hideCulinaryLayers();
+            hidePrintingLayers();
             hideRtrwLayers();
             hideContourLayers();
             const emptyNum = mode.replace(/^empty-?/, "") || "2";
@@ -7145,6 +7880,20 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
             }
           }
 
+          const printingMatches = [];
+          if (currentAppMode === "printing" && printingLayers.allPlaces.length) {
+            for (const pt of printingLayers.allPlaces) {
+              const nameLower = pt.name.toLowerCase();
+              const addrLower = (pt.address || "").toLowerCase();
+              const catLower = (pt.categoryLabel || "").toLowerCase();
+              const featLower = (pt.features || []).join(" ").toLowerCase();
+              if (nameLower.includes(term) || addrLower.includes(term) || catLower.includes(term) || featLower.includes(term)) {
+                printingMatches.push(pt);
+                if (printingMatches.length >= 25) break;
+              }
+            }
+          }
+
           for (const marker of allPointMarkers) {
             const props = marker.feature?.properties || {};
             const loc = (props.location || "").toLowerCase();
@@ -7176,13 +7925,53 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
             }
           }
 
-          if (!matches.length && !placeMatches.length && !culinaryMatches.length) {
+          if (!matches.length && !placeMatches.length && !culinaryMatches.length && !printingMatches.length) {
             resultsContainer.innerHTML = `<div class="search-no-results">Tidak ada lokasi yang cocok dengan "<b>${escapeHtml(query)}</b>"</div>`;
             resultsContainer.hidden = false;
             return;
           }
 
           resultsContainer.innerHTML = "";
+
+          for (const pt of printingMatches) {
+            const iconEmoji = pt.icon || "🖨️";
+            const badgeText = pt.categoryLabel || "Fotocopy & Percetakan";
+            const item = document.createElement("div");
+            item.className = "search-result-item";
+            item.tabIndex = 0;
+            item.setAttribute("role", "option");
+            item.innerHTML = `
+              <div class="search-result-name">${iconEmoji} ${escapeHtml(pt.name)}</div>
+              <div class="search-result-meta">
+                <span class="search-result-area">${escapeHtml(pt.address)}</span>
+                <span class="search-result-badge safe" style="background:rgba(6,182,212,0.18); color:#a5f3fc; border:1px solid rgba(6,182,212,0.4);">${badgeText}</span>
+              </div>
+            `;
+            const selectPrinting = () => {
+              resultsContainer.hidden = true;
+              const targetMarker = printingLayers.allMarkers.find(m => {
+                const ll = m.getLatLng();
+                return Math.abs(ll.lat - pt.lat) < 0.0001 && Math.abs(ll.lng - pt.lon) < 0.0001;
+              });
+
+              if (targetMarker && printingLayers.clusterGroup && typeof printingLayers.clusterGroup.zoomToShowLayer === "function") {
+                printingLayers.clusterGroup.zoomToShowLayer(targetMarker, () => {
+                  targetMarker.openPopup();
+                });
+              } else {
+                map.flyTo([pt.lat, pt.lon], 16, { duration: 1.1 });
+                if (targetMarker) setTimeout(() => targetMarker.openPopup(), 1200);
+              }
+            };
+            item.addEventListener("click", selectPrinting);
+            item.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                selectPrinting();
+              }
+            });
+            resultsContainer.appendChild(item);
+          }
 
           for (const pt of culinaryMatches) {
             const isCafe = pt.category === "cafe";
@@ -9204,6 +9993,7 @@ Mohon dikurasi untuk upload mingguan. Terima kasih!`
 
       setupModeSwitcher();
       setupCulinaryControls();
+      setupPrintingControls();
       setupRtrwControls();
       setupContourControls();
       setupSearchBar();
