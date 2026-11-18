@@ -85,9 +85,9 @@
         background: linear-gradient(135deg, #ff6b35 0%, #f59e0b 55%, #ef4444 100%);
         box-shadow: 0 4px 14px rgba(245, 158, 11, .42), inset 0 1px 0 rgba(255, 255, 255, .3);
       }
-      .brand-icon.mode-disaster {
-        background: linear-gradient(135deg, #dc2626 0%, #ea580c 55%, #f59e0b 100%);
-        box-shadow: 0 4px 14px rgba(220, 38, 38, .45), inset 0 1px 0 rgba(255, 255, 255, .3);
+      .brand-icon.mode-culinary {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #92400e 100%);
+        box-shadow: 0 4px 14px rgba(217, 119, 6, .45), inset 0 1px 0 rgba(255, 255, 255, .3);
       }
       .brand-icon.mode-rtrw {
         background: linear-gradient(135deg, #0284c7 0%, #0369a1 55%, #075985 100%);
@@ -201,12 +201,12 @@
         width: 17px;
         height: 17px;
       }
-      .mode-badge-icon.disaster {
-        background: linear-gradient(135deg, #dc2626 0%, #ea580c 55%, #f59e0b 100%);
+      .mode-badge-icon.culinary {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #92400e 100%);
         color: #ffffff;
-        box-shadow: 0 2px 8px rgba(220, 38, 38, .35);
+        box-shadow: 0 2px 8px rgba(217, 119, 6, .35);
       }
-      .mode-badge-icon.disaster svg {
+      .mode-badge-icon.culinary svg {
         width: 17px;
         height: 17px;
       }
@@ -271,52 +271,63 @@
       body:not([data-app-mode="outage"]) .outage-only-ui {
         display: none !important;
       }
-      /* Disaster Mode Styles */
-      .evac-marker-wrap {
+      /* Coffeeshop & Resto (Culinary) Mode Styles */
+      .culinary-marker-wrap {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
       }
-      .evac-marker-pin {
-        width: 34px;
-        height: 34px;
+      .culinary-marker-pin {
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #059669 0%, #10b981 100%);
         border: 2px solid #ffffff;
         color: #ffffff;
         display: grid;
         place-items: center;
-        font-size: 16px;
-        box-shadow: 0 4px 14px rgba(16, 185, 129, 0.55);
+        font-size: 17px;
         z-index: 2;
-        transition: transform .15s ease;
+        transition: transform .18s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow .18s ease;
       }
-      .evac-marker-wrap:hover .evac-marker-pin {
-        transform: scale(1.15);
+      .culinary-marker-pin.cafe-pin {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        box-shadow: 0 4px 14px rgba(217, 119, 6, 0.6);
       }
-      .evac-marker-pulse {
+      .culinary-marker-pin.resto-pin {
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        box-shadow: 0 4px 14px rgba(220, 38, 38, 0.6);
+      }
+      .culinary-marker-wrap:hover .culinary-marker-pin {
+        transform: scale(1.18);
+      }
+      .culinary-marker-pulse {
         position: absolute;
         width: 48px;
         height: 48px;
         border-radius: 50%;
-        background: rgba(16, 185, 129, 0.28);
-        animation: evacRing 2s infinite ease-out;
+        animation: culinaryRing 2.2s infinite ease-out;
         z-index: 1;
         pointer-events: none;
       }
-      @keyframes evacRing {
-        0% { transform: scale(0.6); opacity: 0.9; }
-        100% { transform: scale(1.35); opacity: 0; }
+      .culinary-marker-pulse.cafe-pulse {
+        background: rgba(245, 158, 11, 0.28);
       }
-      .disaster-legend {
+      .culinary-marker-pulse.resto-pulse {
+        background: rgba(239, 68, 68, 0.28);
+      }
+      @keyframes culinaryRing {
+        0% { transform: scale(0.6); opacity: 0.9; }
+        100% { transform: scale(1.4); opacity: 0; }
+      }
+      .culinary-legend {
         position: absolute;
         bottom: 24px;
         left: 14px;
         z-index: 1000;
         background: rgba(15, 23, 42, 0.94);
-        border: 1px solid rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(245, 158, 11, 0.35);
         border-radius: 14px;
         padding: 10px 14px;
         box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
@@ -326,64 +337,142 @@
         gap: 8px;
         font-size: 0.76rem;
         color: #f1f5f9;
-        max-width: 260px;
+        max-width: 290px;
         animation: fadeIn 0.2s ease-out;
       }
-      body[data-app-mode="disaster"] .disaster-legend {
+      body[data-app-mode="culinary"] .culinary-legend {
         display: flex !important;
       }
-      .disaster-legend-head {
+      .culinary-legend-head {
         display: flex;
         align-items: center;
         justify-content: space-between;
         font-weight: 800;
         font-size: 0.8rem;
-        color: #f87171;
+        color: #f59e0b;
         letter-spacing: -0.01em;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         padding-bottom: 5px;
       }
-      .disaster-legend-items {
+      .culinary-legend-items {
         display: flex;
         flex-direction: column;
         gap: 6px;
       }
-      .disaster-legend-item {
+      .culinary-legend-item {
         display: flex;
         align-items: center;
         gap: 8px;
         cursor: pointer;
         user-select: none;
       }
-      .disaster-legend-item input[type="checkbox"] {
-        accent-color: #ef4444;
+      .culinary-legend-item input[type="checkbox"] {
+        accent-color: #f59e0b;
         cursor: pointer;
       }
       .legend-swatch {
         display: inline-block;
         flex: 0 0 auto;
       }
-      .legend-swatch.fault-swatch {
-        width: 18px;
-        height: 3px;
-        background: #ef4444;
-        border-radius: 2px;
-      }
-      .legend-swatch.hazard-swatch {
-        width: 14px;
-        height: 14px;
-        background: rgba(239, 68, 68, 0.35);
-        border: 1.5px dashed #ef4444;
-        border-radius: 3px;
-      }
-      .legend-swatch.evac-swatch {
-        font-size: 13px;
+      .legend-swatch.cafe-swatch,
+      .legend-swatch.resto-swatch {
+        font-size: 14px;
         line-height: 1;
       }
-      .disaster-popup {
+      .culinary-popup {
         font-family: inherit;
         color: #f8fafc;
-        max-width: 280px;
+        max-width: 290px;
+        line-height: 1.4;
+      }
+      .culinary-popup-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 4px;
+      }
+      .culinary-popup-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #f8fafc;
+        margin: 0;
+      }
+      .culinary-rating-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 3px;
+        background: #fef08a;
+        color: #713f12;
+        font-weight: 700;
+        font-size: 0.72rem;
+        padding: 2px 6px;
+        border-radius: 999px;
+        flex-shrink: 0;
+      }
+      .culinary-category-tag {
+        display: inline-block;
+        font-size: 0.68rem;
+        font-weight: 600;
+        padding: 2px 7px;
+        border-radius: 4px;
+        margin-bottom: 6px;
+      }
+      .culinary-category-tag.cafe {
+        background: rgba(245, 158, 11, 0.18);
+        color: #fbbf24;
+        border: 1px solid rgba(245, 158, 11, 0.35);
+      }
+      .culinary-category-tag.resto {
+        background: rgba(239, 68, 68, 0.18);
+        color: #f87171;
+        border: 1px solid rgba(239, 68, 68, 0.35);
+      }
+      .culinary-addr {
+        font-size: 0.75rem;
+        color: #94a3b8;
+        margin-bottom: 6px;
+      }
+      .culinary-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-bottom: 8px;
+      }
+      .culinary-chip {
+        font-size: 0.65rem;
+        background: rgba(255, 255, 255, 0.06);
+        color: #cbd5e1;
+        padding: 2px 5px;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .culinary-desc {
+        font-size: 0.74rem;
+        color: #cbd5e1;
+        line-height: 1.42;
+        margin-bottom: 10px;
+        padding-top: 6px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .culinary-gmaps-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        width: 100%;
+        padding: 7px 10px;
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: opacity .15s;
+        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+      }
+      .culinary-gmaps-btn:hover {
+        opacity: 0.92;
       }
       /* RTRW Mode Styles */
       .rtrw-legend {
@@ -2652,17 +2741,19 @@
               <span class="mode-item-active-dot" aria-hidden="true">●</span>
             </button>
 
-            <button type="button" class="mode-dropdown-item" data-mode="disaster" role="menuitem">
-              <span class="mode-badge-icon disaster">
+            <button type="button" class="mode-dropdown-item" data-mode="culinary" role="menuitem">
+              <span class="mode-badge-icon culinary">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                  <path d="M12 8v4"/>
-                  <circle cx="12" cy="16" r="1"/>
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                  <line x1="6" y1="1" x2="6" y2="4"></line>
+                  <line x1="10" y1="1" x2="10" y2="4"></line>
+                  <line x1="14" y1="1" x2="14" y2="4"></line>
                 </svg>
               </span>
               <div class="mode-item-text">
-                <span class="mode-item-title">Mitigasi & Evakuasi Bencana</span>
-                <span class="mode-item-subtitle">Sesar Palu-Koro, Titik Kumpul & Shelter</span>
+                <span class="mode-item-title">Peta Coffeeshop & Resto Palu</span>
+                <span class="mode-item-subtitle">Titik kedai kopi & kuliner hits Google Maps</span>
               </div>
               <span class="mode-item-active-dot" aria-hidden="true">●</span>
             </button>
@@ -2899,25 +2990,20 @@
         <span class="legend-note">🔴 Badge merah (s.d jam) = sedang padam · bar progres. 🟡 Badge oranye (jam) = akan padam · bar countdown. 🟢 Hijau = sudah menyala. Klik sesi untuk menyaring wilayah.</span>
       </div>
 
-      <div id="disaster-legend" class="disaster-legend" aria-label="Legenda mitigasi bencana">
-        <div class="disaster-legend-head">
-          <span>🚨 Mitigasi Bencana Palu</span>
+      <div id="culinary-legend" class="culinary-legend" aria-label="Legenda Coffeeshop & Resto Palu">
+        <div class="culinary-legend-head">
+          <span>☕ Coffeeshop & Resto (Google Maps)</span>
         </div>
-        <div class="disaster-legend-items">
-          <label class="disaster-legend-item">
-            <input type="checkbox" id="chk-fault" checked />
-            <span class="legend-swatch fault-swatch"></span>
-            <span>Sesar Palu-Koro (Patahan)</span>
+        <div class="culinary-legend-items">
+          <label class="culinary-legend-item">
+            <input type="checkbox" id="chk-culinary-cafe" checked />
+            <span class="legend-swatch cafe-swatch">☕</span>
+            <span>Coffeeshop & Cafe (<b id="count-cafe">18</b>)</span>
           </label>
-          <label class="disaster-legend-item">
-            <input type="checkbox" id="chk-evac" checked />
-            <span class="legend-swatch evac-swatch">🏃‍♂️</span>
-            <span>Titik Kumpul & Shelter</span>
-          </label>
-          <label class="disaster-legend-item">
-            <input type="checkbox" id="chk-hazard" checked />
-            <span class="legend-swatch hazard-swatch"></span>
-            <span>Zona Rawan (ZRB / Tsunami)</span>
+          <label class="culinary-legend-item">
+            <input type="checkbox" id="chk-culinary-resto" checked />
+            <span class="legend-swatch resto-swatch">🍽️</span>
+            <span>Resto & Rumah Makan (<b id="count-resto">15</b>)</span>
           </label>
         </div>
       </div>
@@ -3253,186 +3339,135 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       let geoJsonLayer;
       let markerClusterGroup;
       let allPointMarkers = [];
-      let currentAppMode = "outage"; // "outage" | "disaster" | "empty-2" ...
-      const disasterLayers = {
-        fault: null,
-        hazard: null,
-        evacuation: null,
-        evacuationPointsData: null,
+      let currentAppMode = "outage"; // "outage" | "culinary" | "rtrw" | "contour" ...
+      const culinaryLayers = {
+        cafeGroup: null,
+        restoGroup: null,
+        allPlaces: [],
         loaded: false
       };
 
-      async function loadDisasterLayers() {
-        if (disasterLayers.loaded) {
-          if (disasterLayers.fault && !map.hasLayer(disasterLayers.fault) && document.getElementById("chk-fault")?.checked !== false) {
-            map.addLayer(disasterLayers.fault);
+      async function loadCulinaryLayers() {
+        if (culinaryLayers.loaded) {
+          if (culinaryLayers.cafeGroup && !map.hasLayer(culinaryLayers.cafeGroup) && document.getElementById("chk-culinary-cafe")?.checked !== false) {
+            map.addLayer(culinaryLayers.cafeGroup);
           }
-          if (disasterLayers.hazard && !map.hasLayer(disasterLayers.hazard) && document.getElementById("chk-hazard")?.checked !== false) {
-            map.addLayer(disasterLayers.hazard);
-          }
-          if (disasterLayers.evacuation && !map.hasLayer(disasterLayers.evacuation) && document.getElementById("chk-evac")?.checked !== false) {
-            map.addLayer(disasterLayers.evacuation);
+          if (culinaryLayers.restoGroup && !map.hasLayer(culinaryLayers.restoGroup) && document.getElementById("chk-culinary-resto")?.checked !== false) {
+            map.addLayer(culinaryLayers.restoGroup);
           }
           return;
         }
 
         try {
-          // 1. Sesar Palu-Koro
-          const faultRes = await fetch("data/disaster/palu-koro-fault.geojson");
-          if (faultRes.ok) {
-            const faultData = await faultRes.json();
-            disasterLayers.fault = L.geoJSON(faultData, {
-              style: {
-                color: "#ef4444",
-                weight: 4,
-                opacity: 0.9,
-                dashArray: "10, 7",
-                lineCap: "round"
-              },
-              onEachFeature: (feature, layer) => {
-                const props = feature.properties || {};
-                layer.bindTooltip(`<strong>⚡ ${escapeHtml(props.name)}</strong><br><small style="color:#fca5a5;">${escapeHtml(props.type)}</small>`, { sticky: true });
-                layer.bindPopup(`
-                  <div class="disaster-popup">
-                    <h4 style="color:#ef4444; margin:0 0 6px;">⚡ ${escapeHtml(props.name)}</h4>
-                    <div style="font-size:0.8rem; line-height:1.45; color:#cbd5e1;">
-                      <div><b>Tipe:</b> ${escapeHtml(props.type)}</div>
-                      <div><b>Pergeseran:</b> ${escapeHtml(props.slipRate)}</div>
-                      <div><b>Gempa Signifikan:</b> ${escapeHtml(props.lastMajorEvent)}</div>
-                      <div style="margin-top:6px; color:#94a3b8; font-size:0.75rem;">${escapeHtml(props.description)}</div>
-                    </div>
-                  </div>
-                `);
-              }
+          const res = await fetch("data/places/palu-coffeeshop-resto.json");
+          if (!res.ok) throw new Error("Gagal mengambil data coffeeshop & resto");
+          const places = await res.json();
+          culinaryLayers.allPlaces = places;
+
+          const cafeMarkers = [];
+          const restoMarkers = [];
+
+          for (const p of places) {
+            const isCafe = p.category === "cafe";
+            const iconEmoji = isCafe ? "☕" : "🍽️";
+            const pinClass = isCafe ? "cafe-pin" : "resto-pin";
+            const pulseClass = isCafe ? "cafe-pulse" : "resto-pulse";
+            const tagClass = isCafe ? "cafe" : "resto";
+
+            const marker = L.marker([p.lat, p.lon], {
+              icon: L.divIcon({
+                className: "culinary-marker-wrap",
+                html: `<div class="culinary-marker-pulse ${pulseClass}"></div><div class="culinary-marker-pin ${pinClass}" title="${escapeHtml(p.name)}">${iconEmoji}</div>`,
+                iconSize: [36, 36],
+                iconAnchor: [18, 18]
+              })
             });
-            if (currentAppMode === "disaster" && document.getElementById("chk-fault")?.checked !== false) {
-              disasterLayers.fault.addTo(map);
-            }
-          }
 
-          // 2. Hazard Zones
-          const hazardRes = await fetch("data/disaster/hazard-zones.geojson");
-          if (hazardRes.ok) {
-            const hazardData = await hazardRes.json();
-            disasterLayers.hazard = L.geoJSON(hazardData, {
-              style: (feature) => ({
-                color: feature.properties.color || "#ef4444",
-                weight: 2,
-                opacity: 0.85,
-                fillColor: feature.properties.color || "#ef4444",
-                fillOpacity: 0.18,
-                dashArray: "4, 4"
-              }),
-              onEachFeature: (feature, layer) => {
-                const props = feature.properties || {};
-                layer.bindTooltip(`<strong>⚠️ ${escapeHtml(props.name)}</strong><br><small style="color:#fca5a5;">${escapeHtml(props.type)}</small>`, { sticky: true });
-                layer.bindPopup(`
-                  <div class="disaster-popup">
-                    <h4 style="color:${props.color || '#ef4444'}; margin:0 0 6px;">⚠️ ${escapeHtml(props.name)}</h4>
-                    <div style="font-size:0.8rem; line-height:1.45; color:#cbd5e1;">
-                      <div><b>Kategori:</b> ${escapeHtml(props.type)}</div>
-                      <div><b>Ancaman:</b> ${escapeHtml(props.hazard)}</div>
-                      <div style="margin-top:6px; padding:6px 8px; background:rgba(239,68,68,0.12); border-left:3px solid ${props.color || '#ef4444'}; border-radius:4px; font-size:0.75rem; color:#f8fafc;">
-                        <b>Rekomendasi / Jalur:</b> ${escapeHtml(props.recommendation)}
-                      </div>
-                    </div>
-                  </div>
-                `);
-              }
-            });
-            if (currentAppMode === "disaster" && document.getElementById("chk-hazard")?.checked !== false) {
-              disasterLayers.hazard.addTo(map);
-            }
-          }
+            marker.feature = { properties: p };
 
-          // 3. Evacuation Points
-          const evacRes = await fetch("data/disaster/evacuation-points.json");
-          if (evacRes.ok) {
-            const evacData = await evacRes.json();
-            const evacMarkers = [];
-            for (const p of evacData) {
-              const iconEmoji = p.category === "vertical_evac" ? "🏢" : (p.category === "safe_hill" ? "⛰️" : "🏃‍♂️");
-              const m = L.marker([p.lat, p.lon], {
-                icon: L.divIcon({
-                  className: "evac-marker-wrap",
-                  html: `<div class="evac-marker-pulse"></div><div class="evac-marker-pin" title="${escapeHtml(p.name)}">${iconEmoji}</div>`,
-                  iconSize: [36, 36],
-                  iconAnchor: [18, 18]
-                })
-              });
+            const featuresHtml = (p.features || []).map(f => `<span class="culinary-chip">${escapeHtml(f)}</span>`).join("");
+            const gmapsUrl = p.googleMapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name + ' ' + p.address)}`;
 
-              const facilitiesHtml = (p.facilities || []).map(f => `<span style="display:inline-block; font-size:0.68rem; background:rgba(16,185,129,0.15); color:#34d399; padding:2px 6px; border-radius:4px; margin:2px 3px 2px 0;">✓ ${escapeHtml(f)}</span>`).join("");
-
-              m.bindPopup(`
-                <div class="disaster-popup" style="min-width:240px;">
-                  <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
-                    <span style="font-size:18px;">${iconEmoji}</span>
-                    <h4 style="margin:0; font-size:0.92rem; color:#34d399;">${escapeHtml(p.name)}</h4>
-                  </div>
-                  <div style="font-size:0.78rem; color:#94a3b8; margin-bottom:8px;">Kel. ${escapeHtml(p.kelurahan)}, Kec. ${escapeHtml(p.kecamatan)}</div>
-                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px; font-size:0.75rem; margin-bottom:8px; padding:6px; background:rgba(255,255,255,0.04); border-radius:6px;">
-                    <div>Elevasi: <b style="color:#f8fafc;">${p.elevationM} mdpl</b></div>
-                    <div>Kapasitas: <b style="color:#f8fafc;">~${p.capacity.toLocaleString()} jiwa</b></div>
-                    <div>Aman Tsunami: <b style="color:#34d399;">${p.safeFromTsunami ? 'YA' : 'Perhatikan Elevasi'}</b></div>
-                    <div>Tipe: <b style="color:#f8fafc;">${p.type}</b></div>
-                  </div>
-                  <div style="margin-bottom:6px;">${facilitiesHtml}</div>
-                  <div style="font-size:0.75rem; color:#cbd5e1; line-height:1.4; border-top:1px solid rgba(255,255,255,0.08); padding-top:6px;">${escapeHtml(p.notes)}</div>
+            marker.bindPopup(`
+              <div class="culinary-popup">
+                <div class="culinary-popup-head">
+                  <h4 class="culinary-popup-title">${iconEmoji} ${escapeHtml(p.name)}</h4>
+                  <span class="culinary-rating-badge">⭐ ${p.rating}</span>
                 </div>
-              `);
-              evacMarkers.push(m);
-            }
-            disasterLayers.evacuation = L.featureGroup(evacMarkers);
-            disasterLayers.evacuationPointsData = evacData;
-            if (currentAppMode === "disaster" && document.getElementById("chk-evac")?.checked !== false) {
-              disasterLayers.evacuation.addTo(map);
+                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+                  <span class="culinary-category-tag ${tagClass}">${escapeHtml(p.categoryLabel)}</span>
+                  <span style="font-size:0.7rem; color:#94a3b8;">${escapeHtml(p.reviewsCount || '')}</span>
+                </div>
+                <div class="culinary-addr">📍 ${escapeHtml(p.address)}</div>
+                <div style="font-size:0.73rem; color:#38bdf8; margin-bottom:6px;">💰 ${escapeHtml(p.priceRange || 'Terjangkau')}</div>
+                <div class="culinary-features">${featuresHtml}</div>
+                <div class="culinary-desc">${escapeHtml(p.description)}</div>
+                <a href="${gmapsUrl}" target="_blank" rel="noopener noreferrer" class="culinary-gmaps-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a8 8 0 0 0-8 8c0 5.4 7 11.5 7.6 12a.6.6 0 0 0 .8 0c.6-.5 7.6-6.6 7.6-12a8 8 0 0 0-8-8z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Buka di Google Maps ↗
+                </a>
+              </div>
+            `);
+
+            if (isCafe) {
+              cafeMarkers.push(marker);
+            } else {
+              restoMarkers.push(marker);
             }
           }
 
-          disasterLayers.loaded = true;
+          culinaryLayers.cafeGroup = L.featureGroup(cafeMarkers);
+          culinaryLayers.restoGroup = L.featureGroup(restoMarkers);
+
+          const countCafeEl = document.getElementById("count-cafe");
+          const countRestoEl = document.getElementById("count-resto");
+          if (countCafeEl) countCafeEl.textContent = cafeMarkers.length;
+          if (countRestoEl) countRestoEl.textContent = restoMarkers.length;
+
+          if (currentAppMode === "culinary") {
+            if (document.getElementById("chk-culinary-cafe")?.checked !== false) {
+              culinaryLayers.cafeGroup.addTo(map);
+            }
+            if (document.getElementById("chk-culinary-resto")?.checked !== false) {
+              culinaryLayers.restoGroup.addTo(map);
+            }
+          }
+
+          culinaryLayers.loaded = true;
         } catch (err) {
-          console.error("Gagal memuat layer bencana:", err);
+          console.error("Gagal memuat data coffeeshop & resto Palu:", err);
         }
       }
 
-      function hideDisasterLayers() {
-        if (disasterLayers.fault && map.hasLayer(disasterLayers.fault)) map.removeLayer(disasterLayers.fault);
-        if (disasterLayers.hazard && map.hasLayer(disasterLayers.hazard)) map.removeLayer(disasterLayers.hazard);
-        if (disasterLayers.evacuation && map.hasLayer(disasterLayers.evacuation)) map.removeLayer(disasterLayers.evacuation);
+      function hideCulinaryLayers() {
+        if (culinaryLayers.cafeGroup && map.hasLayer(culinaryLayers.cafeGroup)) map.removeLayer(culinaryLayers.cafeGroup);
+        if (culinaryLayers.restoGroup && map.hasLayer(culinaryLayers.restoGroup)) map.removeLayer(culinaryLayers.restoGroup);
       }
 
-      function setupDisasterControls() {
-        const chkFault = document.getElementById("chk-fault");
-        const chkEvac = document.getElementById("chk-evac");
-        const chkHazard = document.getElementById("chk-hazard");
+      function setupCulinaryControls() {
+        const chkCafe = document.getElementById("chk-culinary-cafe");
+        const chkResto = document.getElementById("chk-culinary-resto");
 
-        if (chkFault) {
-          chkFault.addEventListener("change", () => {
-            if (!disasterLayers.fault) return;
-            if (chkFault.checked) {
-              if (!map.hasLayer(disasterLayers.fault)) disasterLayers.fault.addTo(map);
+        if (chkCafe) {
+          chkCafe.addEventListener("change", () => {
+            if (!culinaryLayers.cafeGroup) return;
+            if (chkCafe.checked) {
+              if (!map.hasLayer(culinaryLayers.cafeGroup)) culinaryLayers.cafeGroup.addTo(map);
             } else {
-              if (map.hasLayer(disasterLayers.fault)) map.removeLayer(disasterLayers.fault);
+              if (map.hasLayer(culinaryLayers.cafeGroup)) map.removeLayer(culinaryLayers.cafeGroup);
             }
           });
         }
-        if (chkEvac) {
-          chkEvac.addEventListener("change", () => {
-            if (!disasterLayers.evacuation) return;
-            if (chkEvac.checked) {
-              if (!map.hasLayer(disasterLayers.evacuation)) disasterLayers.evacuation.addTo(map);
+        if (chkResto) {
+          chkResto.addEventListener("change", () => {
+            if (!culinaryLayers.restoGroup) return;
+            if (chkResto.checked) {
+              if (!map.hasLayer(culinaryLayers.restoGroup)) culinaryLayers.restoGroup.addTo(map);
             } else {
-              if (map.hasLayer(disasterLayers.evacuation)) map.removeLayer(disasterLayers.evacuation);
-            }
-          });
-        }
-        if (chkHazard) {
-          chkHazard.addEventListener("change", () => {
-            if (!disasterLayers.hazard) return;
-            if (chkHazard.checked) {
-              if (!map.hasLayer(disasterLayers.hazard)) disasterLayers.hazard.addTo(map);
-            } else {
-              if (map.hasLayer(disasterLayers.hazard)) map.removeLayer(disasterLayers.hazard);
+              if (map.hasLayer(culinaryLayers.restoGroup)) map.removeLayer(culinaryLayers.restoGroup);
             }
           });
         }
@@ -4207,7 +4242,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
           });
 
           if (mode === "outage") {
-            hideDisasterLayers();
+            hideCulinaryLayers();
             hideRtrwLayers();
             hideContourLayers();
             modeBtn.className = "brand-icon mode-selector-btn mode-outage";
@@ -4219,7 +4254,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             renderMapLayers();
             refreshDynamic();
             updateBoundaryStyles();
-          } else if (mode === "disaster") {
+          } else if (mode === "culinary") {
             hideRtrwLayers();
             hideContourLayers();
             if (geoJsonLayer) {
@@ -4232,24 +4267,26 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             }
             allPointMarkers = [];
 
-            modeBtn.className = "brand-icon mode-selector-btn mode-disaster";
-            modeBtn.title = "Mode: Mitigasi & Evakuasi Bencana (Klik untuk ganti mode)";
+            modeBtn.className = "brand-icon mode-selector-btn mode-culinary";
+            modeBtn.title = "Mode: Coffeeshop & Resto Palu (Google Maps)";
             currentModeIcon.innerHTML = `
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                <path d="M12 8v4"/>
-                <circle cx="12" cy="16" r="1"/>
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
               </svg>
             `;
-            if (brandTitle) brandTitle.textContent = "Peta Mitigasi Bencana — Kota Palu";
-            if (searchInput) searchInput.placeholder = "Cari shelter, titik kumpul, atau kelurahan...";
+            if (brandTitle) brandTitle.textContent = "Peta Coffeeshop & Resto — Kota Palu";
+            if (searchInput) searchInput.placeholder = "Cari coffeeshop, cafe, resto, atau kaledo...";
 
-            loadDisasterLayers();
+            loadCulinaryLayers();
             updateBoundaryStyles();
             hideStatusCard();
-            map.flyTo([-0.895, 119.865], 13, { duration: 1.2 });
+            map.flyTo([-0.895, 119.870], 13, { duration: 1.2 });
           } else if (mode === "rtrw") {
-            hideDisasterLayers();
+            hideCulinaryLayers();
             hideContourLayers();
             if (geoJsonLayer) {
               map.removeLayer(geoJsonLayer);
@@ -4276,7 +4313,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             hideStatusCard();
             map.flyTo([-0.835, 119.885], 12, { duration: 1.2 });
           } else if (mode === "contour" || mode === "empty-3") {
-            hideDisasterLayers();
+            hideCulinaryLayers();
             hideRtrwLayers();
             if (geoJsonLayer) {
               map.removeLayer(geoJsonLayer);
@@ -4304,7 +4341,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             hideStatusCard();
             map.flyTo([-1.2, 120.3], 9, { duration: 1.4 });
           } else {
-            hideDisasterLayers();
+            hideCulinaryLayers();
             hideRtrwLayers();
             hideContourLayers();
             const emptyNum = mode.replace(/^empty-?/, "") || "2";
@@ -5668,14 +5705,16 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
           const evacMatches = [];
           const seen = new Set();
 
-          if (currentAppMode === "disaster" && disasterLayers.evacuationPointsData) {
-            for (const pt of disasterLayers.evacuationPointsData) {
+          const culinaryMatches = [];
+          if (currentAppMode === "culinary" && culinaryLayers.allPlaces.length) {
+            for (const pt of culinaryLayers.allPlaces) {
               const nameLower = pt.name.toLowerCase();
-              const kelLower = (pt.kelurahan || "").toLowerCase();
-              const kecLower = (pt.kecamatan || "").toLowerCase();
-              if (nameLower.includes(term) || kelLower.includes(term) || kecLower.includes(term)) {
-                evacMatches.push(pt);
-                if (evacMatches.length >= 5) break;
+              const addrLower = (pt.address || "").toLowerCase();
+              const catLower = (pt.categoryLabel || "").toLowerCase();
+              const featLower = (pt.features || []).join(" ").toLowerCase();
+              if (nameLower.includes(term) || addrLower.includes(term) || catLower.includes(term) || featLower.includes(term)) {
+                culinaryMatches.push(pt);
+                if (culinaryMatches.length >= 8) break;
               }
             }
           }
@@ -5711,7 +5750,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
             }
           }
 
-          if (!matches.length && !placeMatches.length && !evacMatches.length) {
+          if (!matches.length && !placeMatches.length && !culinaryMatches.length) {
             resultsContainer.innerHTML = `<div class="search-no-results">Tidak ada lokasi yang cocok dengan "<b>${escapeHtml(query)}</b>"</div>`;
             resultsContainer.hidden = false;
             return;
@@ -5719,24 +5758,27 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
 
           resultsContainer.innerHTML = "";
 
-          for (const pt of evacMatches) {
-            const iconEmoji = pt.category === "vertical_evac" ? "🏢" : (pt.category === "safe_hill" ? "⛰️" : "🏃‍♂️");
+          for (const pt of culinaryMatches) {
+            const isCafe = pt.category === "cafe";
+            const iconEmoji = isCafe ? "☕" : "🍽️";
+            const badgeText = isCafe ? "☕ Cafe / Kopi" : "🍽️ Resto / Kuliner";
             const item = document.createElement("div");
             item.className = "search-result-item";
             item.tabIndex = 0;
             item.setAttribute("role", "option");
             item.innerHTML = `
-              <div class="search-result-name">${iconEmoji} ${escapeHtml(pt.name)}</div>
+              <div class="search-result-name">${iconEmoji} ${escapeHtml(pt.name)} <span style="font-size:0.75rem; color:#fef08a;">⭐ ${pt.rating}</span></div>
               <div class="search-result-meta">
-                <span class="search-result-area">Kel. ${escapeHtml(pt.kelurahan)} · Elevasi ${pt.elevationM} mdpl</span>
-                <span class="search-result-badge safe">🛡️ Titik Kumpul</span>
+                <span class="search-result-area">${escapeHtml(pt.address)}</span>
+                <span class="search-result-badge ${isCafe ? 'outage' : 'safe'}">${badgeText}</span>
               </div>
             `;
-            const selectEvac = () => {
+            const selectCulinary = () => {
               resultsContainer.hidden = true;
               map.flyTo([pt.lat, pt.lon], 16, { duration: 1.1 });
-              if (disasterLayers.evacuation) {
-                disasterLayers.evacuation.eachLayer(l => {
+              const targetGroup = isCafe ? culinaryLayers.cafeGroup : culinaryLayers.restoGroup;
+              if (targetGroup) {
+                targetGroup.eachLayer(l => {
                   const ll = l.getLatLng();
                   if (Math.abs(ll.lat - pt.lat) < 0.0001 && Math.abs(ll.lng - pt.lon) < 0.0001) {
                     setTimeout(() => l.openPopup(), 1200);
@@ -5744,11 +5786,11 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                 });
               }
             };
-            item.addEventListener("click", selectEvac);
+            item.addEventListener("click", selectCulinary);
             item.addEventListener("keydown", (e) => {
               if (e.key === "Enter" || e.key === " ") {
                 e.preventDefault();
-                selectEvac();
+                selectCulinary();
               }
             });
             resultsContainer.appendChild(item);
@@ -6098,15 +6140,15 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                 fillOpacity: 0.12
               }).addTo(map);
 
-              if (currentAppMode === "disaster") {
-                let nearestEvac = null;
-                let minEvacDist = Infinity;
-                if (disasterLayers.evacuationPointsData) {
-                  for (const pt of disasterLayers.evacuationPointsData) {
+              if (currentAppMode === "culinary") {
+                let nearestPlace = null;
+                let minPlaceDist = Infinity;
+                if (culinaryLayers.allPlaces && culinaryLayers.allPlaces.length) {
+                  for (const pt of culinaryLayers.allPlaces) {
                     const dist = haversineDistance(userLat, userLon, pt.lat, pt.lon);
-                    if (dist < minEvacDist) {
-                      minEvacDist = dist;
-                      nearestEvac = pt;
+                    if (dist < minPlaceDist) {
+                      minPlaceDist = dist;
+                      nearestPlace = pt;
                     }
                   }
                 }
@@ -6116,14 +6158,16 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                   if (userGpsMarker) userGpsMarker.openPopup();
                 }, 1200);
 
-                if (nearestEvac) {
-                  const distStr = minEvacDist < 1000 ? `${Math.round(minEvacDist)} meter` : `${(minEvacDist / 1000).toFixed(2)} km`;
-                  const focusEvac = () => {
-                    map.flyTo([nearestEvac.lat, nearestEvac.lon], 16, { duration: 1.1 });
-                    if (disasterLayers.evacuation) {
-                      disasterLayers.evacuation.eachLayer(l => {
+                if (nearestPlace) {
+                  const isCafe = nearestPlace.category === "cafe";
+                  const distStr = minPlaceDist < 1000 ? `${Math.round(minPlaceDist)} meter` : `${(minPlaceDist / 1000).toFixed(2)} km`;
+                  const focusPlace = () => {
+                    map.flyTo([nearestPlace.lat, nearestPlace.lon], 16, { duration: 1.1 });
+                    const targetGroup = isCafe ? culinaryLayers.cafeGroup : culinaryLayers.restoGroup;
+                    if (targetGroup) {
+                      targetGroup.eachLayer(l => {
                         const ll = l.getLatLng();
-                        if (Math.abs(ll.lat - nearestEvac.lat) < 0.0001 && Math.abs(ll.lng - nearestEvac.lon) < 0.0001) {
+                        if (Math.abs(ll.lat - nearestPlace.lat) < 0.0001 && Math.abs(ll.lng - nearestPlace.lon) < 0.0001) {
                           setTimeout(() => l.openPopup(), 1200);
                         }
                       });
@@ -6131,13 +6175,13 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
                   };
 
                   showStatusCard({
-                    typeTag: "🚨 KESIAPSIAGAAN BENCANA (GPS)",
-                    title: `Titik Kumpul: ${nearestEvac.name}`,
-                    sub: `Jarak ~${distStr} dari lokasi Anda saat ini (Kel. ${nearestEvac.kelurahan})`,
+                    typeTag: isCafe ? "☕ COFFEESHOP TERDEKAT (GPS)" : "🍽️ KULINER TERDEKAT (GPS)",
+                    title: `${nearestPlace.name} (⭐ ${nearestPlace.rating})`,
+                    sub: `Jarak ~${distStr} · ${nearestPlace.categoryLabel}`,
                     status: "ACTIVE",
-                    timeRange: `Elevasi: ${nearestEvac.elevationM} mdpl · Kapasitas: ~${nearestEvac.capacity.toLocaleString()} jiwa`,
-                    countdownText: `🛡️ <b>Rekomendasi Evakuasi:</b> ${escapeHtml(nearestEvac.notes)}`,
-                    onFocus: focusEvac
+                    timeRange: `📍 ${nearestPlace.address}`,
+                    countdownText: `💰 ${nearestPlace.priceRange || 'Terjangkau'} · ${escapeHtml(nearestPlace.description)}`,
+                    onFocus: focusPlace
                   });
                 } else {
                   showGpsToast("📍 Lokasi Anda berhasil ditemukan!", 3000);
@@ -7727,7 +7771,7 @@ Ketentuan Khusus & Aturan Ekstraksi (Sangat Penting):
       }
 
       setupModeSwitcher();
-      setupDisasterControls();
+      setupCulinaryControls();
       setupRtrwControls();
       setupContourControls();
       setupSearchBar();
